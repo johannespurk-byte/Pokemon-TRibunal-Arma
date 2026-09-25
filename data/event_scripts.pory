@@ -1,0 +1,142 @@
+
+script LittlerootTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall {
+    return
+}
+
+script LittlerootTown_ProfessorBirchsLab_EventScript_Rival {
+    lock
+    faceplayer
+    msgbox("Hi!", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script LittlerootTown_ProfessorBirchsLab_EventScript_Machine {
+    lock
+    msgbox("Das ist eine komplexe Maschine.", MSGBOX_SIGN)
+    release
+    end
+}
+
+script LittlerootTown_ProfessorBirchsLab_EventScript_Book {
+    lock
+    msgbox("Ein Buch voller Notizen.", MSGBOX_SIGN)
+    release
+    end
+}
+
+text LittlerootTown_ProfessorBirchsLab_Text_BirchWelcome {
+    "Willkommen im Labor!"
+}
+
+// ====================================================================
+// CRASH-FIX: GLOBAL TEXT INJECTIONS
+// ====================================================================
+
+text LittlerootTown_Text_IfYouGoIntoGrassPokemonWillPopOut {
+    "If you go into the tall grass, wild\n"
+    "POKeMON will pop out!"
+}
+
+text LittlerootTown_Text_GoodLuck {
+    "Good luck on your adventure!"
+}
+
+text LittlerootTown_Text_YouSavedBirch {
+    "You saved PROF. BIRCH!\n"
+    "You're amazing!"
+}
+
+text LittlerootTown_Text_GoSaveBirch {
+    "PROF. BIRCH is in trouble!\n"
+    "Go save him!"
+}
+
+text LittlerootTown_Text_CanUsePCToStoreItems {
+    "If you use a PC, you can store items\n"
+    "and POKeMON.\p"
+    "The power of science is staggering!"
+}
+
+text LittlerootTown_Text_BirchSpendsDaysInLab {
+    "PROF. BIRCH spends days in his LAB\n"
+    "studying POKeMON."
+}
+
+text LittlerootTown_Text_OurNewHomeLetsGoInside {
+    "MOM: Look, {PLAYER}!\n"
+    "It's our new home!\p"
+    "It must be tiring riding with our things\n"
+    "in the moving truck.\p"
+    "Come on, lets go inside."
+}
+
+text LittlerootTown_Text_BirchSomethingToShowYouAtLab {
+    "PROF. BIRCH has something to show you\n"
+    "at his POKeMON LAB."
+}
+
+text LittlerootTown_Text_GachaNotReadyText {
+    "Ich bereite meine Gacha-Maschine noch\n"
+    "vor. Komm spaeter wieder!"
+}
+
+text LittlerootTown_Text_GachaJackpot {
+    "Unglaublich! Du hast den Hauptgewinn\n"
+    "gezogen! Ein Pokemon!"
+}
+
+text LittlerootTown_Text_GachaRefuse {
+    "Schade... Komm wieder, wenn du Lust\n"
+    "auf ein Risiko hast!"
+}
+
+text LittlerootTown_Text_GachaNoBerryText {
+    "Du hast keine Beere ausgewaehlt."
+}
+
+text LittlerootTown_Text_GachaReceiveMon {
+    "{PLAYER} erhaelt das Pokemon!"
+}
+
+text LittlerootTown_Text_GachaMonSentPC {
+    "Das Pokemon wurde auf den PC\n"
+    "uebertragen."
+}
+
+text LittlerootTown_Text_GachaBoxFull {
+    "Deine PC-Boxen sind voll?!"
+}
+
+text LittlerootTown_Text_StyleChanger {
+    "I cannot change your style right now!"
+}
+
+text LittlerootTown_Text_TownSign {
+    "LITTLEROOT TOWN\n"
+    "A town that can't be shaded any hue."
+}
+
+text gText_HowMayIBerveYou {
+    "Welcome! How may I serve you?"
+}
+
+// ====================================================================
+// CRASH-FIX: GLOBAL NPC INJECTIONS FOR OLDALE MART
+// ====================================================================
+
+script OldaleTown_Mart_EventScript_Woman {
+    lock
+    faceplayer
+    msgbox("Dieser Supermarkt hat neuerdings ganz\nverrueckte Luxus-Gegenstaende!", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script OldaleTown_Mart_EventScript_Boy {
+    lock
+    faceplayer
+    msgbox("Hast du auch so viel Geld auf der\nhohen Kante wie dieser neue Trainer?", MSGBOX_DEFAULT)
+    release
+    end
+}

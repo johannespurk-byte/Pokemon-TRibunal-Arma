@@ -1,0 +1,31 @@
+=== CODE AUS TRAINER_BATTLE ===
+EventSnippet_ShowTrainerIntroMsg::
+	special ShowTrainerIntroSpeech
+	waitmessage
+	waitbuttonpress
+	return 
+
+EventSnippet_PrepareSecondTrainerApproach::
+	special PrepareSecondApproachingTrainer
+	return
+
+EventSnippet_GotoPostBattleScript::
+	gotopostbattlescript
+	return
+
+
+=== CODE AUS DAY_CARE ===
+	special ShowDaycareLevelMenu
+	copyvar VAR_0x8004, VAR_RESULT
+	goto_if_eq VAR_RESULT, DAYCARE_EXITED_LEVEL_MENU, Route117_PokemonDayCare_EventScript_ComeAgain
+	goto Route117_PokemonDayCare_EventScript_CostPrompt
+	end
+
+Route117_PokemonDayCare_EventScript_CostPrompt::
+	special GetDaycareCostAndPrepareString
+	msgbox Route117_PokemonDayCare_Text_ItWillCostX, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Route117_PokemonDayCare_EventScript_CheckEnoughMoney
+	goto Route117_PokemonDayCare_EventScript_ComeAgain
+	end
+
+Route117_PokemonDayCare_EventScript_CheckEnoughMoney::

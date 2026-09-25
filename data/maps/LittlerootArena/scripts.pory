@@ -1,0 +1,65 @@
+mapscripts LittlerootArena_MapScripts {}
+
+script Littlerootcityarena_EventScript_GymLeaders {
+    lock
+    faceplayer
+    turnobject(2, DIR_SOUTH)
+
+    if (flag(FLAG_BADGE01_GET)) {
+        msgbox(Littlerootcityarena_Text_LeadersPostBattle, MSGBOX_DEFAULT)
+        release
+        end
+    }
+
+    msgbox(Littlerootcityarena_Text_LeadersIntro, MSGBOX_DEFAULT)
+
+    special(SavePlayerParty)
+    
+    // Hier haben wir die fehlenden Parameter am Ende mit Standardwerten befüllt,
+    // damit das Makro in event.inc nicht mehr abstürzt:
+    trainerbattle_two_trainers(TRAINER_KOGA, Littlerootcityarena_Text_KogaIntro, TRAINER_NORMAN_1, Littlerootcityarena_Text_NormanIntro, FALSE, FALSE, FALSE)
+
+    msgbox(Littlerootcityarena_Text_LeadersDefeated, MSGBOX_DEFAULT)
+    setflag(FLAG_BADGE01_GET)
+    release
+    end
+}
+
+script Littlerootcityarena_EventScript_NormanAnsprechen {
+    lock
+    faceplayer
+    turnobject(1, DIR_SOUTH)
+
+    if (flag(FLAG_BADGE01_GET)) {
+        msgbox(Littlerootcityarena_Text_LeadersPostBattle, MSGBOX_DEFAULT)
+        release
+        end
+    }
+
+    goto(Littlerootcityarena_EventScript_GymLeaders)
+}
+
+text Littlerootcityarena_Text_LeadersIntro {
+    "Koga: Willkommen in unserer Arena!\n"
+    "Norman: Bereite dich auf eine\l"
+    "echte Lektion vor!"
+}
+
+text Littlerootcityarena_Text_KogaIntro {
+    "Blicke in die Dunkelheit der Ninja!"
+}
+
+text Littlerootcityarena_Text_NormanIntro {
+    "Wir kämpfen als Einheit!"
+}
+
+text Littlerootcityarena_Text_LeadersDefeated {
+    "Koga: Eine meisterhafte Strategie...\n"
+    "Norman: Du hast uns wahre Stärke\l"
+    "bewiesen. Ein grandioser Sieg!"
+}
+
+text Littlerootcityarena_Text_LeadersPostBattle {
+    "Norman: Du hast das Zeug zu einem\n"
+    "Champion. Zieh weiter voran!"
+}

@@ -187,7 +187,8 @@ SootopolisCity_EventScript_LegendariesSceneFromPokeCenter::
 	setweather WEATHER_ABNORMAL
 	doweather
 	setvar VAR_0x8004, FALSE @ Just do Groudon/Kyogre fight scene
-	special Script_DoRayquazaScene
+	callnative Script_DoRayquazaScene
+	waitstate
 	applymovement LOCALID_SOOTOPOLIS_KYOGRE, Common_Movement_WalkInPlaceFasterLeft
 	applymovement LOCALID_SOOTOPOLIS_GROUDON, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
@@ -245,6 +246,7 @@ SootopolisCity_EventScript_LegendariesSceneFromPokeCenter::
 	releaseall
 	end
 
+
 SootopolisCity_Movement_PanToActionFromPokeCenter:
 	walk_slow_diag_southwest
 	walk_slow_diag_southwest
@@ -286,7 +288,8 @@ SootopolisCity_EventScript_LegendariesSceneFromDive::
 	setweather WEATHER_ABNORMAL
 	doweather
 	setvar VAR_0x8004, FALSE @ Just do Groudon/Kyogre fight scene
-	special Script_DoRayquazaScene
+	callnative Script_DoRayquazaScene
+	waitstate
 	applymovement LOCALID_SOOTOPOLIS_KYOGRE, Common_Movement_WalkInPlaceFasterLeft
 	applymovement LOCALID_SOOTOPOLIS_GROUDON, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
@@ -477,7 +480,8 @@ SootopolisCity_EventScript_RayquazaSceneFromPokeCenter::
 	addobject LOCALID_SOOTOPOLIS_RAYQUAZA
 	hideobjectat LOCALID_SOOTOPOLIS_RAYQUAZA, MAP_SOOTOPOLIS_CITY
 	setvar VAR_0x8004, TRUE
-	special Script_DoRayquazaScene
+	callnative Script_DoRayquazaScene
+	waitstate
 	playse SE_THUNDER
 	special SpawnCameraObject
 	applymovement LOCALID_CAMERA, SootopolisCity_Movement_PanUp
@@ -528,7 +532,8 @@ SootopolisCity_EventScript_RayquazaSceneFromDive::
 	removeobject LOCALID_SOOTOPOLIS_KYOGRE
 	addobject LOCALID_SOOTOPOLIS_RAYQUAZA
 	setvar VAR_0x8004, TRUE
-	special Script_DoRayquazaScene
+	callnative Script_DoRayquazaScene
+	waitstate
 	special SpawnCameraObject
 	applymovement LOCALID_CAMERA, SootopolisCity_Movement_PanUp
 	applymovement LOCALID_PLAYER, SootopolisCity_Movement_PlayerApproachLegendaries

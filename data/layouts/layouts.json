@@ -10271,6 +10271,26 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/LittlerootcityArena/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootcityArena/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_ARENA",
+      "name": "LittlerootArena_Layout",
+      "width": 20,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_PetalburgGym",
+      "border_filepath": "data/layouts/LittlerootArena/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootArena/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOTCITYARENA",
+      "name": "Littlerootcityarena_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Littlerootcityarena/border.bin",
+      "blockdata_filepath": "data/layouts/Littlerootcityarena/map.bin"
     }
   ]
 }

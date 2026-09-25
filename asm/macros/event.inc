@@ -292,14 +292,29 @@
 	.endif
 	.endm
 
-	@ Calls a function listed in the table in data/specials.inc.
+		@ Calls a function listed in the table in data/specials.inc.
 	.macro special function:req
 	.byte SCR_OP_SPECIAL
 	.2byte SPECIAL_\function
-	.if SPECIAL_WAITSTATE_\function
-	waitstate implicit=1
+	@ Manuelle Ausnahmen fuer Specials ohne funktionierende Constants
+	.ifc \function, ShowTrainerIntroSpeech
+		@ Kein Waitstate benoetigt
+	.else
+	.ifc \function, GetDaycareCostAndPrepareString
+		@ Kein Waitstate benoetigt
+	.else
+	.ifc \function, BattleSetup_StartRematchBattle
+		waitstate implicit=1
+	.else
+		@ Standard-Pruefung fuer alle anderen funktionierenden Specials
+		.if SPECIAL_WAITSTATE_\function
+		waitstate implicit=1
+		.endif
+	.endif
+	.endif
 	.endif
 	.endm
+
 
 	@ Calls a function listed in the table in data/specials.inc.
 	@ That function's output (if any) will be written to the variable specified by 'output'.

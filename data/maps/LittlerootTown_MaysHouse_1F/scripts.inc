@@ -403,6 +403,3 @@ RivalsHouse_1F_Text_DoYouHavePokemon:
 	.string "Hi, neighbor!\p"
 	.string "Do you already have your\n"
 	.string "own POKéMON?$"
-
-
-

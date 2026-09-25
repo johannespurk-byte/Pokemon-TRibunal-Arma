@@ -66,11 +66,10 @@
 
 
 
-extern u16 gTrainerBattleOpponentA;
-
 bool8 GiveRandomTrainerEgg(void)
 {
-    u16 trainerId = gTrainerBattleOpponentA; 
+    // Korrigiert: Nutzt direkt die richtige Expansion-Struktur statt der alten Variable
+    u16 trainerId = TRAINER_BATTLE_PARAM.opponentA;
     u8 trainerClass;
 
     if (trainerId == 0 || trainerId >= TRAINERS_COUNT)
@@ -86,8 +85,7 @@ bool8 GiveRandomTrainerEgg(void)
         trainerClass == TRAINER_CLASS_AQUA_LEADER ||
         trainerClass == TRAINER_CLASS_MAGMA_LEADER ||
         trainerClass == TRAINER_CLASS_AQUA_ADMIN ||
-        trainerClass == TRAINER_CLASS_MAGMA_ADMIN ||
-        trainerClass == TRAINER_CLASS_TEAM_ROCKET_FRLG)
+        trainerClass == TRAINER_CLASS_MAGMA_ADMIN)
     {
         return FALSE;
     }
@@ -100,13 +98,12 @@ bool8 GiveRandomTrainerEgg(void)
 
     while (attempts < 100)
     {
-        randomSpecies = (Random() % (NUM_SPECIES - 1)) + 1;
+        randomSpecies = (Random() % (SPECIES_EGG - 1)) + 1; // Nutzt SPECIES_EGG als verlässliches Limit für reguläre Mons
         attempts++;
 
-        if (randomSpecies != SPECIES_EGG &&
-            !gSpeciesInfo[randomSpecies].isSubLegendary &&
-            !gSpeciesInfo[randomSpecies].isMythical &&
-            !gSpeciesInfo[randomSpecies].isUltraBeast &&
+        if (gSpeciesInfo[randomSpecies].isSubLegendary == FALSE &&
+            gSpeciesInfo[randomSpecies].isMythical == FALSE &&
+            gSpeciesInfo[randomSpecies].isUltraBeast == FALSE &&
             gSpeciesInfo[randomSpecies].natDexNum != 0)
         {
             break;
@@ -117,20 +114,27 @@ bool8 GiveRandomTrainerEgg(void)
         randomSpecies = SPECIES_PICHU;
 
     u8 partyIndex = CalculatePlayerPartyCount();
+
+    // Erstellt eine leere, gültige OT-ID Struktur, die der Compiler fordert
     struct OriginalTrainerId emptyOtId = { 0 };
 
-    CreateMon(&gPlayerParty[partyIndex], randomSpecies, 1, 0, emptyOtId);
+    // Korrigierter CreateMon-Aufruf passend zu deiner pokemon.h (erwartet Struct als 5. Argument)
+    CreateMon(&gPlayerParty[partyIndex], randomSpecies, 1, 31, emptyOtId);
 
     bool8 isEgg = TRUE;
     SetMonData(&gPlayerParty[partyIndex], MON_DATA_IS_EGG, &isEgg);
 
-    u8 steps = 1;
-    SetMonData(&gPlayerParty[partyIndex], MON_DATA_FRIENDSHIP, &steps);
+    // Ei-Schritte (Friendship bestimmt bei Eiern die verbleibenden Schritte)
+    u16 eggCycles = 20;
+    SetMonData(&gPlayerParty[partyIndex], MON_DATA_FRIENDSHIP, &eggCycles);
 
     ShowFieldMessage(gText_ReceivedEggFromTrainer);
 
     return TRUE;
 }
+
+
+
 
 
 
