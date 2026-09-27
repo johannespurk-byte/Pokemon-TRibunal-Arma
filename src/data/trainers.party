@@ -231,11 +231,68 @@ Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 
-Poochyena
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Carvanha @ Life Orb
+Level: 17
+Ability: Speed Boost
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Bite
+- Aqua Jet
+- Ice Fang
+- Protect
+
+Grimer @ Black Sludge
+Level: 16
+Ability: Sticky Hold
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Poison Jab
+- Shadow Sneak
+- Mud-Shot
+- Mega Drain
+
+Palpitoad @ Eviolite
+Level: 17
+Ability: Water Absorb
+EVs: 252 HP / 4 Def / 252 SpA
+Modest Nature
+- Water Pulse
+- Mud-Shot
+- Icy Wind
+- Sludge Bomb
+
+Corphish @ Choice Band
+Level: 17
+Ability: Adaptability
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Crabhammer
+- Vice Grip
+- Rock Tomb
+- Aqua Jet
+
+Mareanie @ Rocky Helmet
+Level: 16
+Ability: Regenerator
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Sludge Bomb
+- Chilling Water
+- Recover
+- Toxic Spikes
+
+Poochyena @ Focus Sash
+Level: 18
+Ability: Rattled
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Crunch
+- Sucker Punch
+- Play Rough
+- Fire Fang
+
 
 === TRAINER_MARCEL ===
 Name: MARCEL
@@ -2235,11 +2292,68 @@ Gender: Female
 Music: Female
 Items: Full Restore
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 
-Zigzagoon @ Nugget
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Gible @ Life Orb
+Level: 17
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Dragon Rage
+- Sand Tomb
+- Bulldoze
+- Metal Claw
+
+Cleffa @ Eviolite
+Level: 16
+Ability: Magic Guard
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Moonblast
+- Calm Mind
+- Soft-Boiled
+- Thunder Wave
+
+Bagon @ Choice Band
+Level: 18
+Ability: Rock Head
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Dragon Claw
+- Bite
+- Rock Tomb
+- Fire Punch
+
+Impidimp @ Light Clay
+Level: 17
+Ability: Prankster
+EVs: 252 HP / 4 Def / 252 SpD
+Careful Nature
+- Reflect
+- Light Screen
+- Fairy Wind
+- Fake Out
+
+Tinkatink @ Leftovers
+Level: 17
+Ability: Mold Breaker
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Metal Claw
+- Play Rough
+- Stealth Rock
+- Thunder Wave
+
+Sneasel @ Focus Sash
+Level: 18
+Ability: Inner Focus
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Bite
+- Ice Spinner
+- Ice Shard
+- Quick Attack
+
 
 === TRAINER_DAPHNE ===
 Name: DAPHNE
@@ -11919,23 +12033,69 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 
-Wurmple
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Venonat @ Black Sludge
+Level: 16
+Ability: Compound Eyes
+EVs: 252 HP / 4 Def / 252 Spe
+Timid Nature
+- Sleep Powder
+- Sludge Bomb
+- Bug Buzz
+- Stun Spore
 
-Wurmple
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Foongus @ Rocky Helmet
+Level: 16
+Ability: Regenerator
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Spore
+- Giga Drain
+- Clear Smog
+- Synthesis
 
-Wurmple
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Croagunk @ Life Orb
+Level: 17
+Ability: Dry Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Poison Jab
+- Drain Punch
+- Sucker Punch
+- Fake Out
 
-Wurmple
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Whirlipede @ Eviolite
+Level: 17
+Ability: Speed Boost
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Poison Jab
+- Bug Bite
+- Protect
+- Venoshock
+
+Shroodle @ Focus Sash
+Level: 17
+Ability: Prankster
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Toxic
+- Sludge Bomb
+- Parting Shot
+- Taunt
+
+Roselia @ Choice Specs
+Level: 18
+Ability: Natural Cure
+EVs: 4 Def / 252 SpA / 252 SpD
+Modest Nature
+- Sludge Bomb
+- Giga Drain
+- Shadow Ball
+- Extrasensory
+
+
 
 === TRAINER_JOSE ===
 Name: JOSE
@@ -12008,15 +12168,68 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 
-Nincada
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Dottler @ Eviolite
+Level: 16
+Ability: Compound Eyes
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Light Screen
+- Reflect
+- Bug Buzz
+- Psychic
 
-Nincada
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Venomoth @ Black Sludge
+Level: 17
+Ability: Tinted Lens
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Sleep Powder
+- Psychic
+- Silver Wind
+- Giga Drain
+
+Surskit @ Focus Sash
+Level: 16
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Sticky Web
+- Hydro Pump
+- Psybeam
+- Ice Beam
+
+Cutiefly @ Life Orb
+Level: 17
+Ability: Shield Dust
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Moonblast
+- Struggle Bug
+- Psychic
+- Roost
+
+Orbeetle @ Leftovers
+Level: 18
+Ability: Frisk
+EVs: 252 HP / 4 Def / 252 SpA
+Modest Nature
+- Calm Mind
+- Psychic
+- Bug Buzz
+- Recover
+
+Inkay @ Choice Band
+Level: 17
+Ability: Contrary
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Superpower
+- Knock Off
+- Psycho Cut
+- Pluck
+
 
 === TRAINER_JAMES_2 ===
 Name: JAMES
@@ -13661,16 +13874,74 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DARIAN ===
 Name: DARIAN
-Class: Fisherman
-Pic: Fisherman
+Class: Expert
+Pic: Expert M
 Gender: Male
-Music: Hiker
+Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 
-Magikarp
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Milotic
+Level: 18
+Ability: Marvel Scale
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Water Pulse
+- Icy Wind
+- Recover
+- Hypnosis
+
+Sharpedo
+Level: 18
+Ability: Speed Boost
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Bite
+- Aqua Jet
+- Ice Fang
+- Protect
+
+Kingdra
+Level: 18
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Water Pulse
+- Dragon Breath
+- Icy Wind
+- Flash Cannon
+
+Gyarados
+Level: 18
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Waterfall
+- Bite
+- Dragon Dance
+- Bounce
+
+Lapras
+Level: 18
+Ability: Water Absorb
+EVs: 252 HP / 4 Def / 252 SpA
+Quiet Nature
+- Freeze-Dry
+- Water Pulse
+- Ancient Power
+- Ice Shard
+
+Quagsire
+Level: 18
+Ability: Unaware
+EVs: 252 HP / 252 Def / 4 SpD
+Relaxed Nature
+- Mud-Shot
+- Chilling Water
+- Recover
+- Yawn
+
+
 
 === TRAINER_HAILEY ===
 Name: HAILEY
