@@ -68,7 +68,6 @@
 
 bool8 GiveRandomTrainerEgg(void)
 {
-    // Korrigiert: Nutzt direkt die richtige Expansion-Struktur statt der alten Variable
     u16 trainerId = TRAINER_BATTLE_PARAM.opponentA;
     u8 trainerClass;
 
@@ -85,7 +84,8 @@ bool8 GiveRandomTrainerEgg(void)
         trainerClass == TRAINER_CLASS_AQUA_LEADER ||
         trainerClass == TRAINER_CLASS_MAGMA_LEADER ||
         trainerClass == TRAINER_CLASS_AQUA_ADMIN ||
-        trainerClass == TRAINER_CLASS_MAGMA_ADMIN)
+        trainerClass == TRAINER_CLASS_MAGMA_ADMIN ||
+        trainerClass == TRAINER_CLASS_TEAM_ROCKET_FRLG)
     {
         return FALSE;
     }
@@ -98,12 +98,13 @@ bool8 GiveRandomTrainerEgg(void)
 
     while (attempts < 100)
     {
-        randomSpecies = (Random() % (SPECIES_EGG - 1)) + 1; // Nutzt SPECIES_EGG als verlässliches Limit für reguläre Mons
+        randomSpecies = (Random() % (NUM_SPECIES - 1)) + 1;
         attempts++;
 
-        if (gSpeciesInfo[randomSpecies].isSubLegendary == FALSE &&
-            gSpeciesInfo[randomSpecies].isMythical == FALSE &&
-            gSpeciesInfo[randomSpecies].isUltraBeast == FALSE &&
+        if (randomSpecies != SPECIES_EGG &&
+            !gSpeciesInfo[randomSpecies].isSubLegendary &&
+            !gSpeciesInfo[randomSpecies].isMythical &&
+            !gSpeciesInfo[randomSpecies].isUltraBeast &&
             gSpeciesInfo[randomSpecies].natDexNum != 0)
         {
             break;
@@ -114,27 +115,20 @@ bool8 GiveRandomTrainerEgg(void)
         randomSpecies = SPECIES_PICHU;
 
     u8 partyIndex = CalculatePlayerPartyCount();
-
-    // Erstellt eine leere, gültige OT-ID Struktur, die der Compiler fordert
     struct OriginalTrainerId emptyOtId = { 0 };
 
-    // Korrigierter CreateMon-Aufruf passend zu deiner pokemon.h (erwartet Struct als 5. Argument)
-    CreateMon(&gPlayerParty[partyIndex], randomSpecies, 1, 31, emptyOtId);
+    CreateMon(&gPlayerParty[partyIndex], randomSpecies, 1, 0, emptyOtId);
 
     bool8 isEgg = TRUE;
     SetMonData(&gPlayerParty[partyIndex], MON_DATA_IS_EGG, &isEgg);
 
-    // Ei-Schritte (Friendship bestimmt bei Eiern die verbleibenden Schritte)
-    u16 eggCycles = 20;
-    SetMonData(&gPlayerParty[partyIndex], MON_DATA_FRIENDSHIP, &eggCycles);
+    u8 steps = 1;
+    SetMonData(&gPlayerParty[partyIndex], MON_DATA_FRIENDSHIP, &steps);
 
     ShowFieldMessage(gText_ReceivedEggFromTrainer);
 
     return TRUE;
 }
-
-
-
 
 
 
@@ -533,6 +527,22 @@ static void DoBattlePikeWildBattle(void)
 
 static void DoTrainerBattle(void)
 {
+    // === DYNAMISCHES LEVEL-SCALING START ===
+    // 20 ist hier dein festes Level-Cap fuer den aktuellen Spielstand
+    u32 currentCap = 20;
+    u32 i;
+
+    // Überschreibt die Level direkt im globalen Kampf-Array
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&gEnemyParty[i], MON_DATA_SPECIES_OR_EGG) != 0)
+        {
+            SetMonData(&gEnemyParty[i], MON_DATA_LEVEL, &currentCap);
+            CalculateMonStats(&gEnemyParty[i]);
+        }
+    }
+    // === DYNAMISCHES LEVEL-SCALING ENDE ===
+
     CreateBattleStartTask(GetTrainerBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_TRAINER_BATTLES);
@@ -1458,6 +1468,36 @@ void BattleSetup_StartTrainerBattle(void)
     sShouldCheckTrainerBScript = FALSE;
     gWhichTrainerToFaceAfterBattle = 0;
     gMain.savedCallback = CB2_EndTrainerBattle;
+
+    // === DYNAMISCHES LEVEL-SCALING START ===
+    // 20 ist der feste Standardwert fuer dein aktuelles Level-Cap vor Petalburg City
+    u32 currentCap = 20;
+    u32 i;
+
+    // Skaliert die geladenen Pokémon für den Hauptgegner (Opponent A)
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        // Nutzt GetMonData fuer die korrekte Expansion-Struktur
+        if (GetMonData(&gParties[B_TRAINER_OPPONENT_A][i], MON_DATA_SPECIES_OR_EGG) != 0)
+        {
+            SetMonData(&gParties[B_TRAINER_OPPONENT_A][i], MON_DATA_LEVEL, &currentCap);
+            CalculateMonStats(&gParties[B_TRAINER_OPPONENT_A][i]);
+        }
+    }
+
+    // Skaliert die geladenen Pokémon für den Partner-Gegner (Opponent B), falls aktiv
+    if (TRAINER_BATTLE_PARAM.opponentB != 0 && TRAINER_BATTLE_PARAM.opponentB != 0xFFFF)
+    {
+        for (i = 0; i < PARTY_SIZE; i++)
+        {
+            if (GetMonData(&gParties[B_TRAINER_OPPONENT_B][i], MON_DATA_SPECIES_OR_EGG) != 0)
+            {
+                SetMonData(&gParties[B_TRAINER_OPPONENT_B][i], MON_DATA_LEVEL, &currentCap);
+                CalculateMonStats(&gParties[B_TRAINER_OPPONENT_B][i]);
+            }
+        }
+    }
+    // === DYNAMISCHES LEVEL-SCALING ENDE ===
 
     if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE || InTrainerHillChallenge())
         DoBattlePyramidTrainerHillBattle();

@@ -1335,6 +1335,12 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
     // ERGÄNZUNG: Fehlenden Ablauf wiederherstellen
     // ==========================================
     ResetTasks(); // Bereitet die Task-Struktur vor
+
+    // FIX: Hintergrund-Layer (BG0) war geladen, aber nie sichtbar geschaltet.
+    // InitBgFromTemplate() richtet nur die Register ein, aktiviert den Layer aber nicht -
+    // dafür braucht es zwingend ShowBg(). Deshalb blieb der Bildschirm schwarz.
+    ShowBg(0);
+
     AddBirchSpeechObjects(taskId); // Lädt die Sprites für Birk und Lotad
 
     // NUTZT DIE KORREKTE FUNKTION AUS DEINER MAIN_MENU.C:
@@ -1402,8 +1408,11 @@ static void Task_NewGameBirchSpeech_ThisIsAPokemon(u8 taskId)
         StringExpandPlaceholders(gStringVar4, gText_ThisIsAPokemon);
         NewGameBirchSpeech_ClearWindow(0);
 
-        // Nutzt den Befehl, den dein Projekt fehlerfrei kennt:
-        AddTextPrinterForMessage(TRUE);
+        // FIX: Muss den Callback NewGameBirchSpeech_WaitForThisIsPokemonText mitgeben,
+        // sonst wird der PokéBall mit Beldum während Birchs Satz nie ausgelöst.
+        // ACHTUNG: Bitte Parameterreihenfolge/Namen gegen eure text.h/text_window.h prüfen,
+        // falls der Compiler hier meckert.
+        AddTextPrinterParameterized2(0, FONT_NORMAL, gStringVar4, GetPlayerTextSpeedDelay(), NewGameBirchSpeech_WaitForThisIsPokemonText, TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
 
         gTasks[taskId].func = Task_NewGameBirchSpeech_MainSpeech;
     }

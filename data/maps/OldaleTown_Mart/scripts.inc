@@ -13,12 +13,17 @@ OldaleTown_Mart_EventScript_Clerk::
 
 	.align 2
 OldaleTown_Mart_Pokemart:
-	.2byte ITEM_MASTER_BALL
-	.2byte ITEM_RARE_CANDY
-	.2byte ITEM_NUGGET
-	.2byte ITEM_MAX_POTION
-	.2byte ITEM_FULL_RESTORE
-	.2byte ITEM_NONE
+.2byte ITEM_TM_WATER_PULSE   // TM Aquawelle (Adrian)
+.2byte ITEM_TM_ROCK_TOMB     // TM Felsgrab (Giovanni)
+.2byte ITEM_TM_SECRET_POWER  // TM Geheimpower (Giovanni)
+.2byte ITEM_TM_SHOCK_WAVE    // TM Schockwelle (Marc)
+.2byte ITEM_TM_THIEF         // TM Raub (Marc - Ersatz für Fake Out, funktioniert garantiert!)
+.2byte ITEM_SITRUS_BERRY     // Sitrusbeere
+.2byte ITEM_SILK_SCARF       // Seidenschal
+.2byte ITEM_CHOICE_BAND      // Wahlband
+.2byte ITEM_SOOTHE_BELL      // Sanftglocke
+.2byte ITEM_NONE             // Schließt das Verkaufsregal sicher ab
+
 
 OldaleTown_Mart_EventScript_Woman::
 	lock

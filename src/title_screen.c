@@ -29,6 +29,9 @@ enum {
     TAG_VERSION = 1000,
     TAG_PRESS_START_COPYRIGHT,
     TAG_LOGO_SHINE,
+    TAG_ARCHIE,     // NEU: Team Aqua Anführer
+    TAG_GIOVANNI,   // NEU: Giovanni
+    TAG_MAXIE,      // NEU: Team Magma Anführer
 };
 
 #define VERSION_BANNER_RIGHT_TILEOFFSET 64
@@ -62,10 +65,19 @@ static void SpriteCB_PokemonLogoShine(struct Sprite *sprite);
 // const rom data
 static const u16 sUnusedUnknownPal[] = INCGFX_U16("graphics/title_screen/unused.pal", ".gbapal");
 
-static const u32 sTitleScreenRayquazaGfx[] = INCGFX_U32("graphics/title_screen/rayquaza.png", ".4bpp.smol");
-static const u32 sTitleScreenRayquazaTilemap[] = INCGFX_U32("graphics/title_screen/rayquaza.bin", ".smolTM");
+static const u32 sArmaTitleBgGfx[] = INCGFX_U32("graphics/title_screen/arma_title_bg.png", ".4bpp.smol");
+static const u32 sArmaTitleBgTilemap[] = INCGFX_U32("graphics/title_screen/arma_title_bg.bin", ".smolTM");
+static const u16 sArmaTitleBgPal[] = INCGFX_U16("graphics/title_screen/arma_title_bg.pal", ".gbapal");
 static const u32 sTitleScreenLogoShineGfx[] = INCGFX_U32("graphics/title_screen/logo_shine.png", ".4bpp.smol");
 static const u32 sTitleScreenCloudsGfx[] = INCGFX_U32("graphics/title_screen/clouds.png", ".4bpp.smol");
+
+// NEU: Charakter-Sprites für den Titelscreen
+static const u32 sArchieGfx[] = INCGFX_U32("graphics/title_screen/archie_aqua_leader.png", ".4bpp.smol");
+static const u16 sArchiePal[] = INCGFX_U16("graphics/title_screen/archie_aqua_leader.pal", ".gbapal");
+static const u32 sGiovanniGfx[] = INCGFX_U32("graphics/title_screen/giovanni_placeholder.png", ".4bpp.smol");
+static const u16 sGiovanniPal[] = INCGFX_U16("graphics/title_screen/giovanni_placeholder.pal", ".gbapal");
+static const u32 sMaxieGfx[] = INCGFX_U32("graphics/title_screen/maxie_magma_leader.png", ".4bpp.smol");
+static const u16 sMaxiePal[] = INCGFX_U16("graphics/title_screen/maxie_magma_leader.pal", ".gbapal");
 
 
 
@@ -106,6 +118,119 @@ const u16 gTitleScreenAlphaBlend[64] =
     BLDALPHA_BLEND(1, 16),
     BLDALPHA_BLEND(0, 16),
     [32 ... 63] = BLDALPHA_BLEND(0, 16)
+};
+
+// NEU: Charakter-Sprites (Archie, Giovanni, Maxie) für den Titelscreen
+static const struct OamData sCharacterOamData =
+{
+    .y = DISPLAY_HEIGHT,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .mosaic = FALSE,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(64x64),
+    .x = 0,
+    .matrixNum = 0,
+    .size = SPRITE_SIZE(64x64),
+    .tileNum = 0,
+    .priority = 1,
+    .paletteNum = 0,
+    .affineParam = 0,
+};
+
+static const union AnimCmd sCharacterAnimSequence[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sCharacterAnimTable[] =
+{
+    sCharacterAnimSequence,
+};
+
+static const struct SpriteTemplate sArchieSpriteTemplate =
+{
+    .tileTag = TAG_ARCHIE,
+    .paletteTag = TAG_ARCHIE,
+    .oam = &sCharacterOamData,
+    .anims = sCharacterAnimTable,
+    .callback = SpriteCallbackDummy,
+};
+
+static const struct SpriteTemplate sGiovanniSpriteTemplate =
+{
+    .tileTag = TAG_GIOVANNI,
+    .paletteTag = TAG_GIOVANNI,
+    .oam = &sCharacterOamData,
+    .anims = sCharacterAnimTable,
+    .callback = SpriteCallbackDummy,
+};
+
+static const struct SpriteTemplate sMaxieSpriteTemplate =
+{
+    .tileTag = TAG_MAXIE,
+    .paletteTag = TAG_MAXIE,
+    .oam = &sCharacterOamData,
+    .anims = sCharacterAnimTable,
+    .callback = SpriteCallbackDummy,
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_Archie[] =
+{
+    {
+        .data = sArchieGfx,
+        .size = 0x800,
+        .tag = TAG_ARCHIE
+    },
+    {},
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_Giovanni[] =
+{
+    {
+        .data = sGiovanniGfx,
+        .size = 0x800,
+        .tag = TAG_GIOVANNI
+    },
+    {},
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_Maxie[] =
+{
+    {
+        .data = sMaxieGfx,
+        .size = 0x800,
+        .tag = TAG_MAXIE
+    },
+    {},
+};
+
+static const struct SpritePalette sSpritePalette_Archie[] =
+{
+    {
+        .data = sArchiePal,
+        .tag = TAG_ARCHIE
+    },
+    {},
+};
+
+static const struct SpritePalette sSpritePalette_Giovanni[] =
+{
+    {
+        .data = sGiovanniPal,
+        .tag = TAG_GIOVANNI
+    },
+    {},
+};
+
+static const struct SpritePalette sSpritePalette_Maxie[] =
+{
+    {
+        .data = sMaxiePal,
+        .tag = TAG_MAXIE
+    },
+    {},
 };
 
 static const struct OamData sVersionBannerLeftOamData =
@@ -598,10 +723,11 @@ void CB2_InitTitleScreen(void)
         DecompressDataWithHeaderVram(gTitleScreenPokemonLogoGfx, (void *)(BG_CHAR_ADDR(0)));
         DecompressDataWithHeaderVram(gTitleScreenPokemonLogoTilemap, (void *)(BG_SCREEN_ADDR(9)));
         LoadPalette(gTitleScreenBgPalettes, BG_PLTT_ID(0), 15 * PLTT_SIZE_4BPP);
-        // bg3
-        DecompressDataWithHeaderVram(sTitleScreenRayquazaGfx, (void *)(BG_CHAR_ADDR(2)));
-        DecompressDataWithHeaderVram(sTitleScreenRayquazaTilemap, (void *)(BG_SCREEN_ADDR(26)));
-        // bg1
+        // bg0 - NEU: Arma-Hintergrund (blau/schwarz/rot) statt Rayquaza
+        DecompressDataWithHeaderVram(sArmaTitleBgGfx, (void *)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(sArmaTitleBgTilemap, (void *)(BG_SCREEN_ADDR(26)));
+        LoadPalette(sArmaTitleBgPal, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+        // bg1 (Wolken) - wird geladen, aber nicht mehr angezeigt (siehe DISPCNT weiter unten)
         DecompressDataWithHeaderVram(sTitleScreenCloudsGfx, (void *)(BG_CHAR_ADDR(3)));
         DecompressDataWithHeaderVram(gTitleScreenCloudsTilemap, (void *)(BG_SCREEN_ADDR(27)));
         ScanlineEffect_Stop();
@@ -612,6 +738,13 @@ void CB2_InitTitleScreen(void)
         LoadCompressedSpriteSheet(&sSpriteSheet_EmeraldVersion[0]);
         LoadCompressedSpriteSheet(&sSpriteSheet_PressStart[0]);
         LoadCompressedSpriteSheet(&sPokemonLogoShineSpriteSheet[0]);
+        // NEU: Charakter-Sprites laden
+        LoadCompressedSpriteSheet(&sSpriteSheet_Archie[0]);
+        LoadCompressedSpriteSheet(&sSpriteSheet_Giovanni[0]);
+        LoadCompressedSpriteSheet(&sSpriteSheet_Maxie[0]);
+        LoadSpritePalette(&sSpritePalette_Archie[0]);
+        LoadSpritePalette(&sSpritePalette_Giovanni[0]);
+        LoadSpritePalette(&sSpritePalette_Maxie[0]);
         LoadPalette(gTitleScreenEmeraldVersionPal, OBJ_PLTT_ID(0), PLTT_SIZE_4BPP);
         LoadSpritePalette(&sSpritePalette_PressStart[0]);
         gMain.state = 2;
@@ -719,6 +852,23 @@ static void Task_TitleScreenPhase1(u8 taskId)
         spriteId = CreateSprite(&sVersionBannerRightSpriteTemplate, VERSION_BANNER_RIGHT_X, VERSION_BANNER_Y, 0);
         gSprites[spriteId].sParentTaskId = taskId;
 
+        // NEU: Charaktere platzieren (links = Archie, Mitte = Giovanni, rechts = Maxie)
+        CreateSprite(&sArchieSpriteTemplate, 10, 80, 1);
+        CreateSprite(&sGiovanniSpriteTemplate, 108, 76, 1);
+        CreateSprite(&sMaxieSpriteTemplate, 175, 80, 1);
+
+        // TODO: Sobald dein "TRIBUNAL ARMA"-Logo fertig ist, hier einfügen:
+        // 1. Oben bei den anderen INCGFX-Deklarationen ergänzen:
+        //      static const u32 sArmaLogoGfx[] = INCGFX_U32("graphics/title_screen/arma_logo.png", ".4bpp.smol");
+        //      static const u16 sArmaLogoPal[] = INCGFX_U16("graphics/title_screen/arma_logo.pal", ".gbapal");
+        // 2. Nach demselben Muster wie sArchieSpriteTemplate/sSpriteSheet_Archie/sSpritePalette_Archie
+        //    ein sArmaLogoSpriteTemplate + sSpriteSheet_ArmaLogo + sSpritePalette_ArmaLogo anlegen
+        //    (TAG_ARMA_LOGO zum enum oben hinzufügen)
+        // 3. Hier dann platzieren, z.B. mittig unter dem Pokémon-Logo:
+        //      LoadCompressedSpriteSheet(&sSpriteSheet_ArmaLogo[0]);
+        //      LoadSpritePalette(&sSpritePalette_ArmaLogo[0]);
+        //      CreateSprite(&sArmaLogoSpriteTemplate, 60, 50, 1);
+
         gTasks[taskId].tCounter = 144;
         gTasks[taskId].func = Task_TitleScreenPhase2;
     }
@@ -746,13 +896,13 @@ static void Task_TitleScreenPhase2(u8 taskId)
     else
     {
         gTasks[taskId].tSkipToNext = TRUE;
-        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG1 | BLDCNT_EFFECT_BLEND | BLDCNT_TGT2_BG0 | BLDCNT_TGT2_BD);
-        SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(6, 15));
+        // NEU: Kein Wolken-Blend-Effekt mehr - Hintergrund ist direkt sichtbar
+        SetGpuReg(REG_OFFSET_BLDCNT, 0);
+        SetGpuReg(REG_OFFSET_BLDALPHA, 0);
         SetGpuReg(REG_OFFSET_BLDY, 0);
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1
                                     | DISPCNT_OBJ_1D_MAP
                                     | DISPCNT_BG0_ON
-                                    | DISPCNT_BG1_ON
                                     | DISPCNT_BG2_ON
                                     | DISPCNT_OBJ_ON);
         CreatePressStartBanner(START_BANNER_X, 108);

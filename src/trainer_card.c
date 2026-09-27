@@ -1,4 +1,5 @@
 #include "global.h"
+#include "naming_screen.h"
 #include "scanline_effect.h"
 #include "palette.h"
 #include "task.h"
@@ -436,14 +437,30 @@ static void Task_TrainerCard(u8 taskId)
             sData->mainState++;
         break;
     case STATE_HANDLE_INPUT_FRONT:
-        // Blink the : in play time
         if (!gReceivedRemoteLinkPlayers && sData->timeColonNeedDraw)
         {
             PrintTimeOnCard();
             DrawTrainerCardWindow(WIN_CARD_TEXT);
             sData->timeColonNeedDraw = FALSE;
         }
-        if (JOY_NEW(A_BUTTON))
+        // 1. NAMENSÄNDERUNG MIT SELECT
+        if (JOY_NEW(SELECT_BUTTON))
+        {
+            PlaySE(SE_SELECT);
+            FreeAllWindowBuffers();
+            DoNamingScreen(NAMING_SCREEN_PLAYER, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->playerGender, 0, 0, CB2_InitTrainerCard);
+        }
+        // 2. SKIN-WECHSEL MIT STEUERKREUZ
+        else if (JOY_NEW(DPAD_LEFT) || JOY_NEW(DPAD_RIGHT))
+        {
+            PlaySE(SE_SELECT);
+            gSaveBlock2Ptr->playerGender ^= 1;
+            ResetSpriteData();
+            FreeAllSpritePalettes();
+            FreeAllWindowBuffers();
+            SetMainCallback2(CB2_InitTrainerCard);
+        }
+        else if (JOY_NEW(A_BUTTON))
         {
             FlipTrainerCard();
             PlaySE(SE_RG_CARD_FLIP);
@@ -452,9 +469,7 @@ static void Task_TrainerCard(u8 taskId)
         else if (JOY_NEW(B_BUTTON))
         {
             if (gReceivedRemoteLinkPlayers && sData->isLink && InUnionRoom() == TRUE)
-            {
                 sData->mainState = STATE_WAIT_LINK_PARTNER;
-            }
             else
             {
                 BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, sData->blendColor);
@@ -1024,6 +1039,14 @@ static void PrintNameOnCardFront(void)
         AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 20, 28, sTrainerCardTextColors, TEXT_SKIP_DRAW, buffer);
     else
         AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 16, 33, sTrainerCardTextColors, TEXT_SKIP_DRAW, buffer);
+
+    // --- DEINE NEUE INTERAKTIVE TASTEN-ZUWEISUNG (HORIZONTAL IM WEISSEN BEREICH RECHTS) ---
+    static const u8 sTextSelectName[] = _("SELECT: NAME");
+    static const u8 sTextDpadSkin[]   = _("L/R: SKIN");
+
+    // Beide auf Hoehe 28 (neben dem Namen), aber weit nach rechts versetzt (X: 110 und X: 180)
+    AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_SMALL, 110, 28, sTrainerCardTextColors, TEXT_SKIP_DRAW, sTextSelectName);
+    AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_SMALL, 180, 28, sTrainerCardTextColors, TEXT_SKIP_DRAW, sTextDpadSkin);
 }
 
 static void PrintIdOnCard(void)

@@ -6103,15 +6103,68 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 
-Zigzagoon
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Poochyena @ Silk Scarf
+Level: 16
+Ability: Quick Feet
+EVs: 4 HP / 252 Atk / 252 Spe
+Nature: Adamant
+- Bite
+- Crunch
+- Sucker Punch
+- Play Rough
 
-Seedot
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Shroomish @ Toxic Orb
+Level: 16
+Ability: Poison Heal
+EVs: 252 HP / 252 Def / 4 SpD
+Nature: Impish
+- Spore
+- Seed Bomb
+- Mach Punch
+- Leech Seed
+
+Wooloo @ Leftovers
+Level: 17
+Ability: Fluffy
+EVs: 252 HP / 252 Def / 4 SpD
+Nature: Impish
+- Body Slam
+- Cotton Guard
+- Payback
+- Rest
+
+Sprigatito @ Life Orb
+Level: 17
+Ability: Protean
+EVs: 4 HP / 252 Atk / 252 Spe
+Nature: Jolly
+- Seed Bomb
+- U-turn
+- Play Rough
+- Shadow Sneak
+
+Dratini @ Eviolite
+Level: 18
+Ability: Marvel Scale
+EVs: 252 HP / 252 Atk / 4 Spe
+Nature: Adamant
+- Dragon Dance
+- Dragon Claw
+- Extreme Speed
+- Aqua Jet
+
+Zorua @ Focus Sash
+Level: 18
+Ability: Illusion
+EVs: 4 HP / 252 SpA / 252 Spe
+Nature: Timid
+- Night Daze
+- Sludge Bomb
+- Extrasensory
+- Sucker Punch
+
 
 === TRAINER_JOSH ===
 Name: JOSH
