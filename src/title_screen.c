@@ -25,6 +25,10 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
+// --- TRIBUNAL ARMA: HARDWARE FALLBACK POINTERS ---
+const u32 gTitleScreenEmeraldVersionGfx[] = { 0 };
+const u16 gTitleScreenEmeraldVersionPal[] = { 0 };
+
 enum {
     TAG_VERSION = 1000,
     TAG_PRESS_START_COPYRIGHT,
@@ -32,6 +36,10 @@ enum {
     TAG_ARCHIE,     // NEU: Team Aqua Anführer
     TAG_GIOVANNI,   // NEU: Giovanni
     TAG_MAXIE,      // NEU: Team Magma Anführer
+    TAG_TRIBUNAL_0, // NEU: "TRIBUNAL ARMA" Logo, 4 Kacheln
+    TAG_TRIBUNAL_1,
+    TAG_TRIBUNAL_2,
+    TAG_TRIBUNAL_3,
 };
 
 #define VERSION_BANNER_RIGHT_TILEOFFSET 64
@@ -78,6 +86,13 @@ static const u32 sGiovanniGfx[] = INCGFX_U32("graphics/title_screen/giovanni_pla
 static const u16 sGiovanniPal[] = INCGFX_U16("graphics/title_screen/giovanni_placeholder.pal", ".gbapal");
 static const u32 sMaxieGfx[] = INCGFX_U32("graphics/title_screen/maxie_magma_leader.png", ".4bpp.smol");
 static const u16 sMaxiePal[] = INCGFX_U16("graphics/title_screen/maxie_magma_leader.pal", ".gbapal");
+
+// NEU: "TRIBUNAL ARMA" Logo (4 Kacheln a 32x8)
+static const u32 sTribunalArma0Gfx[] = INCGFX_U32("graphics/title_screen/tribunal_arma_0.png", ".4bpp.smol");
+static const u32 sTribunalArma1Gfx[] = INCGFX_U32("graphics/title_screen/tribunal_arma_1.png", ".4bpp.smol");
+static const u32 sTribunalArma2Gfx[] = INCGFX_U32("graphics/title_screen/tribunal_arma_2.png", ".4bpp.smol");
+static const u32 sTribunalArma3Gfx[] = INCGFX_U32("graphics/title_screen/tribunal_arma_3.png", ".4bpp.smol");
+static const u16 sTribunalArmaPal[] = INCGFX_U16("graphics/title_screen/tribunal_arma_logo.pal", ".gbapal");
 
 
 
@@ -133,7 +148,7 @@ static const struct OamData sCharacterOamData =
     .matrixNum = 0,
     .size = SPRITE_SIZE(64x64),
     .tileNum = 0,
-    .priority = 1,
+    .priority = 0,
     .paletteNum = 0,
     .affineParam = 0,
 };
@@ -230,6 +245,86 @@ static const struct SpritePalette sSpritePalette_Maxie[] =
         .data = sMaxiePal,
         .tag = TAG_MAXIE
     },
+    {},
+};
+
+// NEU: "TRIBUNAL ARMA" Logo-Sprite (4 Kacheln, 32x8 je Kachel)
+static const struct OamData sTribunalArmaOamData =
+{
+    .y = DISPLAY_HEIGHT,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .mosaic = FALSE,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(32x8),
+    .x = 0,
+    .matrixNum = 0,
+    .size = SPRITE_SIZE(32x8),
+    .tileNum = 0,
+    .priority = 0,
+    .paletteNum = 0,
+    .affineParam = 0,
+};
+
+static const union AnimCmd sTribunalArmaAnimSequence[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sTribunalArmaAnimTable[] =
+{
+    sTribunalArmaAnimSequence,
+};
+
+static const struct SpriteTemplate sTribunalArma0Template =
+{
+    .tileTag = TAG_TRIBUNAL_0,
+    .paletteTag = TAG_TRIBUNAL_0,
+    .oam = &sTribunalArmaOamData,
+    .anims = sTribunalArmaAnimTable,
+    .callback = SpriteCallbackDummy,
+};
+
+static const struct SpriteTemplate sTribunalArma1Template =
+{
+    .tileTag = TAG_TRIBUNAL_1,
+    .paletteTag = TAG_TRIBUNAL_0,
+    .oam = &sTribunalArmaOamData,
+    .anims = sTribunalArmaAnimTable,
+    .callback = SpriteCallbackDummy,
+};
+
+static const struct SpriteTemplate sTribunalArma2Template =
+{
+    .tileTag = TAG_TRIBUNAL_2,
+    .paletteTag = TAG_TRIBUNAL_0,
+    .oam = &sTribunalArmaOamData,
+    .anims = sTribunalArmaAnimTable,
+    .callback = SpriteCallbackDummy,
+};
+
+static const struct SpriteTemplate sTribunalArma3Template =
+{
+    .tileTag = TAG_TRIBUNAL_3,
+    .paletteTag = TAG_TRIBUNAL_0,
+    .oam = &sTribunalArmaOamData,
+    .anims = sTribunalArmaAnimTable,
+    .callback = SpriteCallbackDummy,
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_TribunalArma[] =
+{
+    { .data = sTribunalArma0Gfx, .size = 0x80, .tag = TAG_TRIBUNAL_0 },
+    { .data = sTribunalArma1Gfx, .size = 0x80, .tag = TAG_TRIBUNAL_1 },
+    { .data = sTribunalArma2Gfx, .size = 0x80, .tag = TAG_TRIBUNAL_2 },
+    { .data = sTribunalArma3Gfx, .size = 0x80, .tag = TAG_TRIBUNAL_3 },
+    {},
+};
+
+static const struct SpritePalette sSpritePalette_TribunalArma[] =
+{
+    { .data = sTribunalArmaPal, .tag = TAG_TRIBUNAL_0 },
     {},
 };
 
@@ -745,6 +840,12 @@ void CB2_InitTitleScreen(void)
         LoadSpritePalette(&sSpritePalette_Archie[0]);
         LoadSpritePalette(&sSpritePalette_Giovanni[0]);
         LoadSpritePalette(&sSpritePalette_Maxie[0]);
+        // NEU: TRIBUNAL ARMA Logo laden
+        LoadCompressedSpriteSheet(&sSpriteSheet_TribunalArma[0]);
+        LoadCompressedSpriteSheet(&sSpriteSheet_TribunalArma[1]);
+        LoadCompressedSpriteSheet(&sSpriteSheet_TribunalArma[2]);
+        LoadCompressedSpriteSheet(&sSpriteSheet_TribunalArma[3]);
+        LoadSpritePalette(&sSpritePalette_TribunalArma[0]);
         LoadPalette(gTitleScreenEmeraldVersionPal, OBJ_PLTT_ID(0), PLTT_SIZE_4BPP);
         LoadSpritePalette(&sSpritePalette_PressStart[0]);
         gMain.state = 2;
@@ -797,7 +898,7 @@ void CB2_InitTitleScreen(void)
         if (!UpdatePaletteFade())
         {
             StartPokemonLogoShine(SHINE_MODE_SINGLE_NO_BG_COLOR);
-            ScanlineEffect_InitWave(0, DISPLAY_HEIGHT, 4, 4, 0, SCANLINE_EFFECT_REG_BG1HOFS, TRUE);
+            ScanlineEffect_Stop();
             SetMainCallback2(MainCB2);
         }
         break;
@@ -847,27 +948,24 @@ static void Task_TitleScreenPhase1(u8 taskId)
         spriteId = CreateSprite(&sVersionBannerLeftSpriteTemplate, VERSION_BANNER_LEFT_X, VERSION_BANNER_Y, 0);
         gSprites[spriteId].sAlphaBlendIdx = ARRAY_COUNT(gTitleScreenAlphaBlend);
         gSprites[spriteId].sParentTaskId = taskId;
+        gSprites[spriteId].invisible = TRUE; // NEU: "EMERALD VERSION" Banner ausblenden
 
         // Create right side of version banner
         spriteId = CreateSprite(&sVersionBannerRightSpriteTemplate, VERSION_BANNER_RIGHT_X, VERSION_BANNER_Y, 0);
         gSprites[spriteId].sParentTaskId = taskId;
+        gSprites[spriteId].invisible = TRUE; // NEU: "EMERALD VERSION" Banner ausblenden
 
         // NEU: Charaktere platzieren (links = Archie, Mitte = Giovanni, rechts = Maxie)
-        CreateSprite(&sArchieSpriteTemplate, 10, 80, 1);
-        CreateSprite(&sGiovanniSpriteTemplate, 108, 76, 1);
-        CreateSprite(&sMaxieSpriteTemplate, 175, 80, 1);
+        // Achtung: x/y sind die MITTE des 64x64-Sprites
+        CreateSprite(&sArchieSpriteTemplate, 48, 104, 1);
+        CreateSprite(&sGiovanniSpriteTemplate, 138, 112, 1);
+        CreateSprite(&sMaxieSpriteTemplate, 204, 104, 1);
 
-        // TODO: Sobald dein "TRIBUNAL ARMA"-Logo fertig ist, hier einfügen:
-        // 1. Oben bei den anderen INCGFX-Deklarationen ergänzen:
-        //      static const u32 sArmaLogoGfx[] = INCGFX_U32("graphics/title_screen/arma_logo.png", ".4bpp.smol");
-        //      static const u16 sArmaLogoPal[] = INCGFX_U16("graphics/title_screen/arma_logo.pal", ".gbapal");
-        // 2. Nach demselben Muster wie sArchieSpriteTemplate/sSpriteSheet_Archie/sSpritePalette_Archie
-        //    ein sArmaLogoSpriteTemplate + sSpriteSheet_ArmaLogo + sSpritePalette_ArmaLogo anlegen
-        //    (TAG_ARMA_LOGO zum enum oben hinzufügen)
-        // 3. Hier dann platzieren, z.B. mittig unter dem Pokémon-Logo:
-        //      LoadCompressedSpriteSheet(&sSpriteSheet_ArmaLogo[0]);
-        //      LoadSpritePalette(&sSpritePalette_ArmaLogo[0]);
-        //      CreateSprite(&sArmaLogoSpriteTemplate, 60, 50, 1);
+        // NEU: "TRIBUNAL ARMA" Logo (4 Kacheln a 32px, Mitten bei 72/104/136/168 -> mittig auf x=120)
+        CreateSprite(&sTribunalArma0Template, 72, 64, 1);
+        CreateSprite(&sTribunalArma1Template, 104, 64, 1);
+        CreateSprite(&sTribunalArma2Template, 136, 64, 1);
+        CreateSprite(&sTribunalArma3Template, 168, 64, 1);
 
         gTasks[taskId].tCounter = 144;
         gTasks[taskId].func = Task_TitleScreenPhase2;
@@ -960,12 +1058,11 @@ static void Task_TitleScreenPhase3(u8 taskId)
     {
         SetGpuReg(REG_OFFSET_BG2Y_L, 0);
         SetGpuReg(REG_OFFSET_BG2Y_H, 0);
-        if (++gTasks[taskId].tCounter & 1)
-        {
-            gTasks[taskId].tBg1Y++;
-            gBattle_BG1_Y = gTasks[taskId].tBg1Y / 2;
-            gBattle_BG1_X = 0;
-        }
+        // KORREKTUR: Wir frieren den vertikalen Versatz fest auf 0 ein, damit der untere Rand absolut sauber bleibt!
+        gTasks[taskId].tCounter++;
+        gBattle_BG1_Y = 0;
+        SetGpuReg(REG_OFFSET_BG0VOFS, 0);
+        gBattle_BG1_X = 0;
         UpdateLegendaryMarkingColor(gTasks[taskId].tCounter);
         if ((gMPlayInfo_BGM.status & 0xFFFF) == 0)
         {
