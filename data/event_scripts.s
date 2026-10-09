@@ -1820,3 +1820,4 @@ CustomText_SaveConfirm:
 CustomText_RegisterBirch:
 	.string "PROF. BIRK wurde im POKéNAV\n"
 	.string "registriert.$"
+

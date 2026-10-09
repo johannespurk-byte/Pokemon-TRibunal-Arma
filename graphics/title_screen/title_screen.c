@@ -25,10 +25,6 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
-// --- TRIBUNAL ARMA: HARDWARE FALLBACK POINTERS ---
-// const u32 gTitleScreenEmeraldVersionGfx[] = { 0 };
-// const u16 gTitleScreenEmeraldVersionPal[] = { 0 };
-
 enum {
     TAG_VERSION = 1000,
     TAG_PRESS_START_COPYRIGHT,
@@ -77,7 +73,7 @@ static const u32 sArmaTitleBgGfx[] = INCGFX_U32("graphics/title_screen/arma_titl
 static const u32 sArmaTitleBgTilemap[] = INCGFX_U32("graphics/title_screen/arma_title_bg.bin", ".smolTM");
 static const u16 sArmaTitleBgPal[] = INCGFX_U16("graphics/title_screen/arma_title_bg.pal", ".gbapal");
 static const u32 sTitleScreenLogoShineGfx[] = INCGFX_U32("graphics/title_screen/logo_shine.png", ".4bpp.smol");
-
+static const u32 sTitleScreenCloudsGfx[] = INCGFX_U32("graphics/title_screen/clouds.png", ".4bpp.smol");
 
 // NEU: Charakter-Sprites für den Titelscreen
 static const u32 sArchieGfx[] = INCGFX_U32("graphics/title_screen/archie_aqua_leader.png", ".4bpp.smol");
@@ -823,8 +819,8 @@ void CB2_InitTitleScreen(void)
         DecompressDataWithHeaderVram(sArmaTitleBgTilemap, (void *)(BG_SCREEN_ADDR(26)));
         LoadPalette(sArmaTitleBgPal, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
         // bg1 (Wolken) - wird geladen, aber nicht mehr angezeigt (siehe DISPCNT weiter unten)
-        
-        
+        DecompressDataWithHeaderVram(sTitleScreenCloudsGfx, (void *)(BG_CHAR_ADDR(3)));
+        DecompressDataWithHeaderVram(gTitleScreenCloudsTilemap, (void *)(BG_SCREEN_ADDR(27)));
         ScanlineEffect_Stop();
         ResetTasks();
         ResetSpriteData();
@@ -898,7 +894,7 @@ void CB2_InitTitleScreen(void)
         if (!UpdatePaletteFade())
         {
             StartPokemonLogoShine(SHINE_MODE_SINGLE_NO_BG_COLOR);
-            ScanlineEffect_Stop();
+            ScanlineEffect_InitWave(0, DISPLAY_HEIGHT, 4, 4, 0, SCANLINE_EFFECT_REG_BG1HOFS, TRUE);
             SetMainCallback2(MainCB2);
         }
         break;
@@ -1058,11 +1054,12 @@ static void Task_TitleScreenPhase3(u8 taskId)
     {
         SetGpuReg(REG_OFFSET_BG2Y_L, 0);
         SetGpuReg(REG_OFFSET_BG2Y_H, 0);
-        // KORREKTUR: Wir frieren den vertikalen Versatz fest auf 0 ein, damit der untere Rand absolut sauber bleibt!
-        gTasks[taskId].tCounter++;
-        gBattle_BG1_Y = 0;
-        SetGpuReg(REG_OFFSET_BG0VOFS, 0);
-        gBattle_BG1_X = 0;
+        if (++gTasks[taskId].tCounter & 1)
+        {
+            gTasks[taskId].tBg1Y++;
+            gBattle_BG1_Y = gTasks[taskId].tBg1Y / 2;
+            gBattle_BG1_X = 0;
+        }
         UpdateLegendaryMarkingColor(gTasks[taskId].tCounter);
         if ((gMPlayInfo_BGM.status & 0xFFFF) == 0)
         {
