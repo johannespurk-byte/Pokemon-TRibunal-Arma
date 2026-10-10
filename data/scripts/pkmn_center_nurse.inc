@@ -52,7 +52,7 @@ EventScript_PkmnCenterNurse_TakeAndHealPkmn::
 	waitmovement 0
 	special HealPlayerParty
 	@ === modular POKÉVIAL AUTOMATIC RECHARGE START ===
-	setvar VAR_TEMP_D, 1 @ Setzt die Vial-Ladung bei jeder Center-Heilung wieder auf 1!
+	setvar VAR_TEMP_D, 5 @ Setzt die Vial-Ladung bei jeder Center-Heilung wieder auf 1!
 	@ === POKÉVIAL AUTOMATIC RECHARGE ENDE ===
 	callnative UpdateFollowingPokemon
 	return
