@@ -1,15 +1,12 @@
-@ --- GLOBALE ANMELDUNG FÜR DEN LINKER ---
+ @ --- GLOBALE ANMELDUNG FÜR DEN LINKER ---
 .global PetalburgCity_Gym_MapScripts
 .global PetalburgCity_Gym_EventScript_Mom
 .global PetalburgCity_Gym_EventScript_Norman
 
-@ Definition der lokalen Objekt-ID für deine Mom in der Arena
-
 PetalburgCity_Gym_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, PetalburgCity_Gym_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgCity_Gym_OnTransition
-	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PetalburgCity_Gym_OnWarp
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, PetalburgCity_Gym_OnFrame
+	
 	.byte 0
 
 PetalburgCity_Gym_OnLoad:
@@ -71,35 +68,19 @@ PetalburgCity_Gym_EventScript_OpenDachboden:
 
 PetalburgCity_Gym_OnTransition:
 	setflag FLAG_HIDE_PETALBURG_CITY_WALLY
-	call_if_lt VAR_PETALBURG_GYM_STATE, 6, PetalburgCity_Gym_EventScript_MoveMomToEntrance
+	call_if_lt VAR_PETALBURG_GYM_STATE, 2, PetalburgCity_Gym_EventScript_InitializeGymState
+	call PetalburgCity_Gym_EventScript_MoveMomToEntrance
 	end
 
-PetalburgCity_Gym_EventScript_MoveWallyToEntrance::
+PetalburgCity_Gym_EventScript_InitializeGymState::
+	setvar VAR_PETALBURG_GYM_STATE, 2 @ Überspringt das Tutorial vollständig
 	return
 
 PetalburgCity_Gym_EventScript_MoveMomToEntrance::
 	setobjectxyperm LOCALID_PETALBURG_GYM_MOM, 4, 107
 	return
 
-PetalburgCity_Gym_OnWarp:
-	map_script_2 VAR_PETALBURG_GYM_STATE, 1, PetalburgCity_Gym_EventScript_TurnPlayerNorth
-	.2byte 0
 
-PetalburgCity_Gym_EventScript_TurnPlayerNorth::
-	turnobject LOCALID_PLAYER, DIR_NORTH
-	end
-
-PetalburgCity_Gym_OnFrame:
-	map_script_2 VAR_PETALBURG_GYM_STATE, 1, PetalburgCity_Gym_EventScript_ReturnFromWallyTutorial
-	.2byte 0
-
-PetalburgCity_Gym_EventScript_ReturnFromWallyTutorial::
-	lockall
-	fadedefaultbgm
-	special DrawWholeMapView
-	setvar VAR_PETALBURG_GYM_STATE, 2
-	releaseall
-	end
 
 PetalburgCity_Gym_EventScript_Norman::
 	lock
@@ -223,7 +204,6 @@ PetalburgCity_Gym_EventScript_Berke::
 	msgbox PetalburgCity_Gym_Text_BerkePostBattle, MSGBOX_AUTOCLOSE
 	end
 
-@ KORREKTUR: Die Bruchstücke wurden hier lückenlos geflickt!
 PetalburgCity_Gym_EventScript_BerkePost::
 	setvar VAR_0x8005, 1
 	call PetalburgCity_Gym_EventScript_OpenDachboden
@@ -301,19 +281,25 @@ PetalburgCity_Gym_Text_MaryPostBattle:
 
 PetalburgCity_Gym_Text_ParkerIntro:
 	.string "Besetzt! Hier kommt keiner ungefragt\n"
+	.string "ins Bad!$"
 
-.string "ins Bad!$"
 PetalburgCity_Gym_Text_ParkerDefeat:
-.string "Die Zahnpasta ist im Auge gelandet!$"
+	.string "Die Zahnpasta ist im Auge gelandet!$"
+
 PetalburgCity_Gym_Text_ParkerPostBattle:
-.string "Das Badezimmer steht dir jetzt frei.$"
+	.string "Das Badezimmer steht dir jetzt frei.$"
+
 PetalburgCity_Gym_Text_AlexiaIntro:
-.string "Ich wollte gerade einen\n"
-.string "Mittagsschlaf machen!$"
+	.string "Ich wollte gerade einen\n"
+	.string "Mittagsschlaf machen!$"
+
 PetalburgCity_Gym_Text_AlexiaDefeat:
-.string "Jetzt bin ich hellwach...$"
+	.string "Jetzt bin ich hellwach...$"
+
 PetalburgCity_Gym_Text_AlexiaPostBattle:
-.string "Suchst du den Keller?$"
+	.string "ALEXIA: Du bist wirklich stark.\n"
+	.string "Suchst du den Keller? Geh weiter!$"
+
 PetalburgCity_Gym_Text_GeorgeIntro:
 .string "Ich repariere hier unten die\n"
 .string "Heizung.$"
