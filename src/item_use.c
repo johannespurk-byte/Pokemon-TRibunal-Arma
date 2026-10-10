@@ -1887,3 +1887,36 @@ void ItemUseOutOfBattle_Dive(u8 taskId)
 }
 
 #undef tUsingRegisteredKeyItem
+
+// === modular POKÉVIAL ITEM LOGIC START ===
+void HealPlayerParty(void);
+void ItemUseOutOfBattle_CannotUse(u8 taskId);
+
+void ItemUseOutOfBattle_PokeVial(u8 taskId)
+{
+    u16 charges = VarGet(VAR_TEMP_D);
+
+    if (charges == 0)
+    {
+        DisplayItemMessage(taskId, 2, COMPOUND_STRING("Das PokeVial ist komplett leer!\nHeile dein Team im PKMN-Center."), ItemUseOutOfBattle_CannotUse);
+    }
+    else
+    {
+        PlaySE(173); // MUS_SUCCES Hardware-ID (Heil-Soundeffekt)
+        HealPlayerParty();
+
+        charges--;
+        VarSet(VAR_TEMP_D, charges);
+
+        // Nachricht an den Spieler anpassen, damit er sieht, wie viele Ladungen noch übrig sind!
+        if (charges == 0) {
+            DisplayItemMessage(taskId, 2, COMPOUND_STRING("Das PokeVial wurde benutzt!\nEs ist jetzt komplett leer!"), ItemUseOutOfBattle_CannotUse);
+        }
+        else {
+            ConvertIntToDecimalStringN(gStringVar1, charges, STR_CONV_MODE_LEFT_ALIGN, 1);
+            StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Das PokeVial wurde benutzt!\nLadungen uebrig: {STR_VAR_1}."));
+            DisplayItemMessage(taskId, 2, gStringVar4, ItemUseOutOfBattle_CannotUse);
+        }
+    }
+}
+// === POKÉVIAL ITEM LOGIC ENDE ===

@@ -1,6 +1,9 @@
 Common_EventScript_PkmnCenterNurse::
 	lock
 	faceplayer
+	@ === modular POKÉVIAL AUTOMATIC GIFT START ===
+	goto_if_unset 0x264, EventScript_PkmnCenterNurse_GiveVial
+	@ === POKÉVIAL AUTOMATIC GIFT ENDE ===
 	setvar VAR_0x8004, 0
 .if !IS_FRLG
 	specialvar VAR_RESULT, CountPlayerTrainerStars
@@ -48,8 +51,12 @@ EventScript_PkmnCenterNurse_TakeAndHealPkmn::
 	applymovement VAR_0x800B, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	special HealPlayerParty
+	@ === modular POKÉVIAL AUTOMATIC RECHARGE START ===
+	setvar VAR_TEMP_D, 1 @ Setzt die Vial-Ladung bei jeder Center-Heilung wieder auf 1!
+	@ === POKÉVIAL AUTOMATIC RECHARGE ENDE ===
 	callnative UpdateFollowingPokemon
 	return
+
 
 EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom::
 	specialvar VAR_RESULT, PlayerNotAtTrainerHillEntrance
@@ -133,3 +140,18 @@ Movement_PkmnCenterNurse_Bow:
 Movement_PkmnCenterNurse_Turn:
 	walk_in_place_faster_left
 	step_end
+
+	@ --- NEUES EVENT-SKRIPT FÜR DIE EINMALIGE ÜGABE ---
+EventScript_PkmnCenterNurse_GiveVial:
+	msgbox Text_NurseGivesVialText, MSGBOX_DEFAULT
+	giveitem ITEM_POKE_VIAL, 1
+	setflag 0x264
+	setvar VAR_TEMP_D, 1 @ Direkt die erste Ladung aktivieren!
+	closemessage
+	goto Common_EventScript_PkmnCenterNurse @ Führt das normale Heilgespräch fort!
+
+Text_NurseGivesVialText:
+	.string "SCHWESTER JOY: Willkommen! Da du neu\n"
+	.string "bist, nimm bitte das POKeVial mit.\n"
+	.string "Es heilt dein Team von unterwegs!\n"
+	.string "Ich lade es hier jedes Mal auf.$"

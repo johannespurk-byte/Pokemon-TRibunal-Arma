@@ -1661,7 +1661,7 @@ static void HandleChooseMonSelection(u8 taskId, s8 *slotPtr)
     }
 }
 
-static bool8 IsSelectedMonNotEgg(u8 *slotPtr)
+static bool8 IsSelectedMonNotEgg(u8* slotPtr)
 {
     if (GetMonData(&gParties[B_TRAINER_PLAYER][*slotPtr], MON_DATA_IS_EGG) == TRUE)
     {
@@ -1671,18 +1671,23 @@ static bool8 IsSelectedMonNotEgg(u8 *slotPtr)
     return TRUE;
 }
 
-static bool8 DoesSelectedMonKnowHM(u8 *slotPtr)
+bool8 IsMoveHM(u16 move)
 {
-    if (B_CATCH_SWAP_CHECK_HMS == FALSE)
-        return FALSE;
+    return FALSE; // KORREKTUR: Erlaubt das Vergessen aller HMs im gesamten Spiel!
 
-    for (u32 i = 0; i < MAX_MON_MOVES; i++)
-    {
-        if (IsMoveHM(GetMonData(&gParties[B_TRAINER_PLAYER][*slotPtr], MON_DATA_MOVE1 + i)))
-            return TRUE;
-    }
+    if (move == MOVE_CUT
+        || move == MOVE_FLY
+        || move == MOVE_SURF
+        || move == MOVE_STRENGTH
+        || move == MOVE_FLASH
+        || move == MOVE_ROCK_SMASH
+        || move == MOVE_WATERFALL
+        || move == MOVE_DIVE)
+        return TRUE;
+
     return FALSE;
 }
+
 
 static void HandleChooseMonCancel(u8 taskId, s8 *slotPtr)
 {
