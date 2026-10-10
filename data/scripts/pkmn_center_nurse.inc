@@ -51,9 +51,10 @@ EventScript_PkmnCenterNurse_TakeAndHealPkmn::
 	applymovement VAR_0x800B, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	special HealPlayerParty
-	@ === modular POKÉVIAL AUTOMATIC RECHARGE START ===
-	setvar VAR_TEMP_D, 5 @ Setzt die Vial-Ladung bei jeder Center-Heilung wieder auf 1!
-	@ === POKÉVIAL AUTOMATIC RECHARGE ENDE ===
+@ === modular POKÉVIAL AUTOMATIC RECHARGE START ===
+setvar VAR_UNUSED_0x40F7, 5 @ Setzt die echte Variable beim Heilen auf 5!
+@ === POKÉVIAL AUTOMATIC RECHARGE ENDE ===
+
 	callnative UpdateFollowingPokemon
 	return
 
@@ -146,9 +147,10 @@ EventScript_PkmnCenterNurse_GiveVial:
 	msgbox Text_NurseGivesVialText, MSGBOX_DEFAULT
 	giveitem ITEM_POKE_VIAL, 1
 	setflag 0x264
-	setvar VAR_TEMP_D, 1 @ Direkt die erste Ladung aktivieren!
+	setvar VAR_UNUSED_0x40F7, 5 @ Startet direkt mit 5 Ladungen!
 	closemessage
-	goto Common_EventScript_PkmnCenterNurse @ Führt das normale Heilgespräch fort!
+	goto Common_EventScript_PkmnCenterNurse
+
 
 Text_NurseGivesVialText:
 	.string "SCHWESTER JOY: Willkommen! Da du neu\n"
