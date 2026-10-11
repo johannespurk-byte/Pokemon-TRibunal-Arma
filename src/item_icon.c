@@ -103,7 +103,7 @@ u8 AddItemIconSprite(u16 tilesTag, u16 paletteTag, enum Item itemId)
         spriteSheet.tag = tilesTag;
         LoadSpriteSheet(&spriteSheet);
 
-        spritePalette.data = GetItemIconPalette(itemId);
+        spritePalette.data = (void *)GetItemIconPalette(itemId);
         spritePalette.tag = paletteTag;
         LoadSpritePalette(&spritePalette);
 
@@ -140,7 +140,7 @@ u8 AddCustomItemIconSprite(const struct SpriteTemplate *customSpriteTemplate, u1
         spriteSheet.tag = tilesTag;
         LoadSpriteSheet(&spriteSheet);
 
-        spritePalette.data = GetItemIconPalette(itemId);
+        spritePalette.data = (void *)GetItemIconPalette(itemId);
         spritePalette.tag = paletteTag;
         LoadSpritePalette(&spritePalette);
 
@@ -160,11 +160,11 @@ u8 AddCustomItemIconSprite(const struct SpriteTemplate *customSpriteTemplate, u1
 const void* GetItemIconPic(enum Item itemId)
 {
     // ========================================================
-    // ABSOLUTER MASTER-GRAFIKFIX F�R DAS CAP-BONBON
+    // MASTER-GRAFIKFIX FÜR DAS POKÉVIAL
     // ========================================================
-    if (itemId == ITEM_LEVEL_CAP_CANDY)
+    if (itemId == ITEM_POKE_VIAL)
     {
-        itemId = ITEM_RARE_CANDY; // Tauscht die ID aus, BEVOR dekomprimiert wird!
+        itemId = ITEM_RARE_CANDY; // Zwingt die Engine, das stabile Sonderbonbon-Bild zu laden!
     }
     // ========================================================
 
@@ -185,11 +185,11 @@ const void* GetItemIconPic(enum Item itemId)
 const u16* GetItemIconPalette(enum Item itemId)
 {
     // ========================================================
-    // ABSOLUTER MASTER-PALETTENFIX F�R DAS CAP-BONBON
+    // MASTER-PALETTENFIX FÜR DAS POKÉVIAL
     // ========================================================
-    if (itemId == ITEM_LEVEL_CAP_CANDY)
+    if (itemId == ITEM_POKE_VIAL)
     {
-        itemId = ITEM_RARE_CANDY; // Tauscht die ID aus, BEVOR die Palette geladen wird!
+        itemId = ITEM_RARE_CANDY; // Nutzt die passende Sonderbonbon-Palette!
     }
     // ========================================================
 
@@ -202,3 +202,4 @@ const u16* GetItemIconPalette(enum Item itemId)
 
     return gItemsInfo[itemId].iconPalette;
 }
+

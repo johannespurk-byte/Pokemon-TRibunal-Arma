@@ -15955,23 +15955,26 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_QuestionMark,
         .iconPalette = gItemIconPalette_QuestionMark,
     },
-
-    [ITEM_LEVEL_CAP_CANDY] =
+    [ITEM_POKE_VIAL] =
     {
-        .name = (const u8*)"Cap-Bonbon", // FIX: Heißt im Spiel perfekt!
-        .pluralName = (const u8*)"Cap-Bonbons",
-        .price = 0,
-        .description = (const u8*)"Bringt ein Pokemon\nauf das Level-Cap.",
+        .name = COMPOUND_STRING("Poké Flakon"),
+        .price = 500,
+        .description = COMPOUND_STRING(
+            "Ein Flakon, der deine\n"
+            "Pokémon vollstaendig\n"
+            "heilt. Unendlich nutzbar."),
+        .importance = 1,
+        .notConsumed = TRUE,
         .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
-        .type = ITEM_USE_PARTY_MENU,      // Native Menü-Logik
-        .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
-        .effect = gItemEffect_RareCandy,
-        .flingPower = 30,
-        .iconPic = gItemIcon_RareCandy,   // Absolut stabile, originale Textur!
-        .iconPalette = gItemIconPalette_RareCandy,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .iconPic = gItemIcon_RareCandy,          // 🌟 GESTERN: Sonderbonbon-Icon!
+        .iconPalette = gItemIconPalette_RareCandy, // 🌟 GESTERN: Sonderbonbon-Palette!
     },
-};
+}; // 🌟 DIESES SEMIKOLON SCHLIESST DIE DATEI NUN PERFEKT AB!
+
+
+
 
 #undef ITEM_NAME
 #undef ITEM_PLURAL_NAME
