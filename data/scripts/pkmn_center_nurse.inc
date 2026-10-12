@@ -142,14 +142,16 @@ Movement_PkmnCenterNurse_Turn:
 	walk_in_place_faster_left
 	step_end
 
-	@ --- NEUES EVENT-SKRIPT FÜR DIE EINMALIGE ÜGABE ---
+		@ --- NEUES EVENT-SKRIPT FÜR DIE EINMALIGE ÜGABE ---
 EventScript_PkmnCenterNurse_GiveVial:
 	msgbox Text_NurseGivesVialText, MSGBOX_DEFAULT
 	giveitem ITEM_POKE_VIAL, 1
 	setflag 0x264
 	setvar VAR_UNUSED_0x40F7, 5 @ Startet direkt mit 5 Ladungen!
 	closemessage
-	goto Common_EventScript_PkmnCenterNurse
+	setvar VAR_0x8004, 0 @ Bereitet das normale Heilungs-Event vor
+	goto EventScript_PkmnCenterNurse_HealPkmn @ ?? REPARATUR: Springt direkt zur Heilungs-Animation!
+
 
 
 Text_NurseGivesVialText:

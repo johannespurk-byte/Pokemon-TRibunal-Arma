@@ -92,6 +92,9 @@ static void ItemUseOnFieldCB_RockSmash(u8 taskId);
 static void ItemUseOnFieldCB_Waterfall(u8 taskId);
 static void ItemUseOnFieldCB_Dive(u8 taskId);
 static void ItemUseOnFieldCB_DiveUnderwater(u8 taskId);
+static bool32 IteamHealsMonVolatile(enum BattlerId battler, enum Item itemId);
+static bool32 SelectedMonHasVolatile(enum Item itemId);
+void ItemUseOutOfBattle_CannotUse(u8 taskId);
 
 static const u8 sText_CantDismountBike[] = _("You can't dismount your BIKE here.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_ItemFinderNearby[] = _("Huh?\nThe ITEMFINDER's responding!\pThere's an item buried around here!{PAUSE_UNTIL_PRESS}");
@@ -1892,31 +1895,40 @@ void ItemUseOutOfBattle_Dive(u8 taskId)
 
 // === modular POKÉVIAL ITEM LOGIC START ===
 void HealPlayerParty(void);
+void ItemUseOutOfBattle_CannotUse(u8 taskId); // Nutzt die eingebaute Standard-Task!
 
 void ItemUseOutOfBattle_PokeVial(u8 taskId)
 {
-    u16 charges = VarGet(VAR_UNUSED_0x40F7); // KORREKTUR: Dauerhafte Variable!
+    u16 charges = VarGet(VAR_UNUSED_0x40F7);
+
+    if (charges > 5)
+    {
+        charges = 5;
+        VarSet(VAR_UNUSED_0x40F7, 5);
+    }
 
     if (charges == 0)
     {
-        DisplayItemMessage(taskId, 2, COMPOUND_STRING("Das PokeVial ist komplett leer!\nHeile dein Team im PKMN-Center."), ItemUseOutOfBattle_CannotUse);
+        // 🌟 KORREKTUR: Nutzt ItemUseOutOfBattle_CannotUse zur fehlerfreien Beutel-Rückkehr!
+        DisplayItemMessage(taskId, 2, COMPOUND_STRING("Das Poké Vial ist komplett leer!\nHeile dein Team im PKMN-Center."), ItemUseOutOfBattle_CannotUse);
     }
     else
     {
-        PlaySE(173); // MUS_SUCCES Hardware-ID
+        PlaySE(173); // MUS_SUCCES Soundeffekt abspielen
         HealPlayerParty();
 
         charges--;
-        VarSet(VAR_UNUSED_0x40F7, charges); // KORREKTUR: Dauerhafte Variable!
+        VarSet(VAR_UNUSED_0x40F7, charges);
 
         if (charges == 0) {
-            DisplayItemMessage(taskId, 2, COMPOUND_STRING("Das PokeVial wurde benutzt!\nEs ist jetzt komplett leer!"), ItemUseOutOfBattle_CannotUse);
+            DisplayItemMessage(taskId, 2, COMPOUND_STRING("Das Poké Vial wurde benutzt!\nEs ist jetzt komplett leer!"), ItemUseOutOfBattle_CannotUse);
         }
         else {
             ConvertIntToDecimalStringN(gStringVar1, charges, STR_CONV_MODE_LEFT_ALIGN, 1);
-            StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Das PokeVial wurde benutzt!\nLadungen uebrig: {STR_VAR_1}."));
+            StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Das Poké Vial wurde benutzt!\nLadungen uebrig: {STR_VAR_1}/5."));
             DisplayItemMessage(taskId, 2, gStringVar4, ItemUseOutOfBattle_CannotUse);
         }
     }
 }
 // === POKÉVIAL ITEM LOGIC ENDE ===
+
