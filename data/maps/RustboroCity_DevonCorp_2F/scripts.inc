@@ -258,8 +258,23 @@ RustboroCity_DevonCorp_2F_EventScript_MatchCallScientist::
 	lock
 	faceplayer
 	call_if_eq VAR_FOSSIL_RESURRECTION_STATE, 1, RustboroCity_DevonCorp_2F_EventScript_SetFossilReady
-	goto_if_ge VAR_RUSTBORO_CITY_STATE, 6, RustboroCity_DevonCorp_2F_EventScript_WorkOnNext
+	
+	@ 🌟 REPARATUR: Nutzt jetzt die freie Systemflagge 0x265!
+	goto_if_set FLAG_UNUSED_0x265, RustboroCity_DevonCorp_2F_EventScript_WorkOnNext
+	
+	@ Überprüfung, ob die Story (Devon-Waren gerettet) bereit ist
+	goto_if_ge VAR_RUSTBORO_CITY_STATE, 6, RustboroCity_DevonCorp_2F_EventScript_GiveAutoRepel
+	
+	@ Standard-Text vor der Rettung
 	msgbox RustboroCity_DevonCorp_2F_Text_DevelopNewPokenavFeature, MSGBOX_DEFAULT
+	release
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_GiveAutoRepel::
+	msgbox RustboroCity_DevonCorp_2F_Text_SharePrototype, MSGBOX_DEFAULT
+	giveitem ITEM_REPEL_TOOL, 1
+	setflag FLAG_UNUSED_0x265 @ 🌟 REPARATUR: Setzt die freie Systemflagge 0x265!
+	msgbox RustboroCity_DevonCorp_2F_Text_ExplainPrototype, MSGBOX_DEFAULT
 	release
 	end
 
@@ -267,6 +282,7 @@ RustboroCity_DevonCorp_2F_EventScript_WorkOnNext::
 	msgbox RustboroCity_DevonCorp_2F_Text_WhatToWorkOnNext, MSGBOX_DEFAULT
 	release
 	end
+
 
 RustboroCity_DevonCorp_2F_Text_DeviceForTalkingToPokemon:
 	.string "We're developing a device for talking\n"
@@ -380,3 +396,14 @@ RustboroCity_DevonCorp_2F_Text_WhatToWorkOnNext:
 	.string "One couldn't ask for a better\n"
 	.string "environment as an engineer.$"
 
+RustboroCity_DevonCorp_2F_Text_SharePrototype:
+	.string "Wissenschaftler: Unglaublich! Du hast\n"
+	.string "unsere entwendeten Waren gerettet!\p"
+	.string "Als Dank moechte ich dir den neuesten\n"
+	.string "Prototyp unserer Forschung schenken!$"
+
+RustboroCity_DevonCorp_2F_Text_ExplainPrototype:
+	.string "Das ist der Auto-Schutz!\n"
+	.string "Er sendet hochfrequente Signale aus.\p"
+	.string "Du kannst wilde Pokémon damit dauerhaft\n"
+	.string "verscheuchen oder es einfach ausschalten!$"

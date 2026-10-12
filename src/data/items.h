@@ -1,3 +1,4 @@
+void ItemUseOutOfBattle_AutoRepel(u8 taskId); // 🌟 Vorab-Deklaration für den Compiler
 #if I_USE_EVO_HELD_ITEMS_FROM_BAG == TRUE
     #define EVO_HELD_ITEM_TYPE ITEM_USE_PARTY_MENU
     #define EVO_HELD_ITEM_FIELD_FUNC ItemUseOutOfBattle_EvolutionStone
@@ -13751,21 +13752,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [TM_OVERHEAT_2] =
-    {
-        .name = ITEM_NAME("TM99"),
-        .price = 3000,
-        .description = COMPOUND_STRING(
-            "Enables full-power\n"
-            "attack, but sharply\n"
-            "lowers Sp. Atk."),
-        .importance = I_REUSABLE_TMS,
-        .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-    },
-
-    [TM_SOLAR_BLADE] =
+     [TM_SOLAR_BLADE] =
     {
         .name = ITEM_NAME("TM100"),
         .price = 3000,
@@ -16325,8 +16312,24 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_RareCandy,
         .iconPalette = gItemIconPalette_RareCandy,
     },
+    [ITEM_REPEL_TOOL] = // 🌟 PERFEKT: Nutzt jetzt deine frisch deklarierte Eigen-ID!
+    {
+        .name = COMPOUND_STRING("Auto-Schutz"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Ein Geraet, das wilden\n"
+            "Pokemon den Weg versperrt.\n"
+            "An- und ausschaltbar."),
+        .importance = 1,
+        .notConsumed = TRUE,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_AutoRepel,
+        .iconPic = gItemIcon_DowsingMachine,
+        .iconPalette = gItemIconPalette_DowsingMachine,
+    },
 
-
+    
    }; // 🌟 WICHTIG: Diese geschweifte Klammer und das Semikolon verriegeln die Tabelle für src/item.c!
 
 #undef ITEM_NAME

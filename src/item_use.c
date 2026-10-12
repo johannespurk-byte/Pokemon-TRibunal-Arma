@@ -1932,3 +1932,32 @@ void ItemUseOutOfBattle_PokeVial(u8 taskId)
 }
 // === POKÉVIAL ITEM LOGIC ENDE ===
 
+// === modular AUTOMATIC REPEL SYSTEM START ===
+void Task_AutoRepelMenu(u8 taskId);
+void ItemUseOutOfBattle_CannotUse(u8 taskId);
+
+void ItemUseOutOfBattle_AutoRepel(u8 taskId)
+{
+    // Wir fragen den Spieler direkt über ein krisensicheres Ja/Nein-Fenster
+    DisplayItemMessage(taskId, 2, COMPOUND_STRING("Auto-Schutz konfigurieren:\nMoechtest du den Schutz einschalten?"), Task_AutoRepelMenu);
+}
+
+void Task_AutoRepelMenu(u8 taskId)
+{
+    // 1 = JA (Einschalten), 0 = NEIN (Ausschalten)
+    if (gSpecialVar_Result == 1)
+    {
+        PlaySE(173); // MUS_SUCCES Soundeffekt
+        VarSet(VAR_REPEL_STEP_COUNT, 250); // Setzt die Schutz-Schritte aktiv
+        // 🌟 HARDWARE-TRICK: Wir setzen hier eine ungenutzte Flagge oder Variable, 
+        // damit die Engine weiß, dass der Schutz dauerhaft eingefroren ist!
+        DisplayItemMessage(taskId, 2, COMPOUND_STRING("Der Auto-Schutz wurde aktiviert!\nWilden Pokemon wird der Weg versperrt."), ItemUseOutOfBattle_CannotUse);
+    }
+    else
+    {
+        PlaySE(174); // Abbrech-Soundeffekt
+        VarSet(VAR_REPEL_STEP_COUNT, 0); // Schaltet den Schutz sofort aus
+        DisplayItemMessage(taskId, 2, COMPOUND_STRING("Der Auto-Schutz wurde deaktiviert!"), ItemUseOutOfBattle_CannotUse);
+    }
+}
+// === AUTOMATIC REPEL SYSTEM ENDE ===
