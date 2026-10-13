@@ -9406,9 +9406,9 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("Choice Band"),
     #if I_PRICE >= GEN_9
-        .price = 100000,
+        .price = 1000,
     #elif I_PRICE >= GEN_7
-        .price = 4000,
+        .price = 1000,
     #else
         .price = 100,
     #endif
@@ -9431,7 +9431,7 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Choice Specs"),
         .pluralName = ITEM_PLURAL_NAME("Choice Specs"),
     #if I_PRICE >= GEN_9
-        .price = 100000,
+        .price = 1000,
     #elif I_PRICE >= GEN_7
         .price = 4000,
     #else
@@ -9456,7 +9456,7 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Choice Scarf"),
         .pluralName = ITEM_PLURAL_NAME("Choice Scarves"),
     #if I_PRICE >= GEN_9
-        .price = 100000,
+        .price = 4000,
     #elif I_PRICE >= GEN_7
         .price = 4000,
     #else
@@ -9482,7 +9482,7 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("Flame Orb"),
     #if I_PRICE >= GEN_9
-        .price = 15000,
+        .price = 8000,
     #elif I_PRICE >= GEN_7
         .price = 4000,
     #else
@@ -9506,7 +9506,7 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("Toxic Orb"),
     #if I_PRICE >= GEN_9
-        .price = 15000,
+        .price = 8000,
     #elif I_PRICE >= GEN_7
         .price = 4000,
     #else
