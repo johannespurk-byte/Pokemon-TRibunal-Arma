@@ -21,13 +21,14 @@ RustboroCity_Mart_Pokemart_Basic:
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_POTION
 	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_ESCAPE_ROPE
-	.2byte ITEM_REPEL
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_TM51
+	.2byte ITEM_TM79
+	.2byte ITEM_SOFT_SAND
+	.2byte ITEM_LIFE_ORB
+	.2byte ITEM_CHOICE_BAND
+	.2byte ITEM_CHOICE_SPECS
+	.2byte ITEM_WHITE_HERB
 	pokemartlistend
 
 RustboroCity_Mart_EventScript_PokemartExpanded::
@@ -40,16 +41,14 @@ RustboroCity_Mart_EventScript_PokemartExpanded::
 RustboroCity_Mart_Pokemart_Expanded:
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_TIMER_BALL
-	.2byte ITEM_REPEAT_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_ESCAPE_ROPE
-	.2byte ITEM_REPEL
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_TM51
+	.2byte ITEM_TM79
+	.2byte ITEM_SOFT_SAND
+	.2byte ITEM_LIFE_ORB
+	.2byte ITEM_CHOICE_BAND
+	.2byte ITEM_CHOICE_SPECS
+	.2byte ITEM_WHITE_HERB
 	pokemartlistend
 
 RustboroCity_Mart_EventScript_PokefanF::
