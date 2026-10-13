@@ -3137,7 +3137,7 @@ static void BattleStartClearSetData(void)
     gBattleStruct->safariCatchFactor = gSpeciesInfo[GetMonData(&gParties[B_TRAINER_OPPONENT_A][0], MON_DATA_SPECIES)].catchRate * 100 / 1275;
     gBattleStruct->safariEscapeFactor = 3;
     gBattleStruct->wildVictorySong = 0;
-    gBattleStruct->moneyMultiplier = 0; // 🌟 REPARATUR: Setzt den Verlust-Multiplikator permanent auf Null!
+    gBattleStruct->moneyMultiplier = 3; // 🌟 REPARATUR: Setzt den Verlust-Multiplikator permanent auf Null!
 
 
     gBattleStruct->givenExpMons[0] = 0;
