@@ -5075,11 +5075,11 @@ Class: Leader
 Pic: Leader Roxanne
 Gender: Female
 Music: Male
-Double Battle: Yes
+Battle Type: Doubles
 AI: Smart Trainer
 
 Geodude
-Level: 14
+Level: 15
 Ability: Sturdy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
@@ -5089,7 +5089,7 @@ EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
 - Defense Curl
 
 Lileep
-Level: 14
+Level: 15
 Ability: Storm Drain
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
@@ -5098,8 +5098,8 @@ EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
 - Constrict
 - Ingrain
 
-Nosepass
-Level: 15
+Nosepass @ Sitrus Berry
+Level: 16
 Ability: Sturdy
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
@@ -5533,9 +5533,33 @@ Music: Girl
 Double Battle: No
 AI: Smart Trainer
 
-Shroomish
-Level: 9
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Mawile @ Mawilite  
+Ability: Intimidate  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Swords Dance  
+- Sucker Punch  
+- Iron Head  
+- Play Rough  
+
+Copperajah @ Assault Vest  
+Ability: Sheer Force  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Iron Head  
+- Crunch  
+- Earthquake  
+- Rock Slide  
+
+Ivysaur @ Eviolite  
+Ability: Chlorophyll  
+EVs: 252 HP / 4 Def / 252 SpD  
+Bold Nature  
+IVs: 0 Atk  
+- Sleep Powder  
+- Leech Seed  
+- Giga Drain  
+- Malignant Chain
 
 === TRAINER_GEORGIA ===
 Name: GEORGIA
@@ -6485,9 +6509,42 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Machop
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Hippowdon @ Smooth Rock  
+Ability: Sand Stream  
+EVs: 252 HP / 4 Atk / 252 Def  
+Impish Nature  
+- Stealth Rock  
+- Earthquake  
+- Yawn  
+- Roar  
+
+Gastrodon @ Life Orb  
+Ability: Storm Drain  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Ice Beam  
+- Earth Power  
+- Scald  
+- Recover  
+
+Clodsire @ Leftovers  
+Ability: Water Absorb  
+EVs: 252 HP / 4 Atk / 252 SpD  
+Careful Nature  
+- Earthquake  
+- Toxic  
+- Recover  
+- Poison Jab  
+
+Excadrill @ Choice Band  
+Ability: Sand Rush  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Earthquake  
+- Iron Head  
+- X-Scissor  
+- Rock Slide
 
 === TRAINER_BEN ===
 Name: BEN
@@ -12467,21 +12524,61 @@ Modest Nature
 
 
 === TRAINER_JOSE ===
-Name: JOSE
-Class: Bug Catcher
-Pic: Bug Catcher
+Name: WATTSON
+Class: Leader
+Pic: Leader Wattson
 Gender: Male
 Music: Male
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
-Wurmple
-Level: 8
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Pincurchin @ Terrain Extender  
+Ability: Electric Surge  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Scald  
+- Volt Switch  
+- Helping Hand  
+- Protect  
 
-Nincada
-Level: 8
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Electabuzz @ Eviolite  
+Ability: Vital Spirit  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Plasma Fists  
+- Drain Punch  
+- Follow Me  
+- Ice Punch  
+
+Pawmot @ Punching Glove  
+Ability: Volt Absorb  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Double Shock  
+- Fake Out  
+- Ice Punch  
+- Close Combat  
+
+Electrode-Hisui @ Life Orb  
+Ability: Soundproof  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Electroweb  
+- Energy Ball  
+- Shadow Ball  
+- Rising Voltage  
+
+Ampharos @ Ampharosite  
+Ability: Plus  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Rising Voltage  
+- Dragon Pulse  
+- Thunderclap  
+- Dazzling Gleam
 
 === TRAINER_DOUG ===
 Name: DOUG
@@ -12778,9 +12875,40 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Geodude
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Roserade @ Life Orb  
+Ability: Technician  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Mega Drain  
+- Acid Spray  
+- Dazzling Gleam  
+- Shadow Ball  
+
+Fletchinder @ Choice Band  
+Ability: Gale Wings  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- U-turn  
+- Flare Blitz  
+- Brave Bird  
+- Close Combat  
+
+Flamigo @ Choice Scarf  
+Ability: Scrappy  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Thunderous Kick  
+- U-turn  
+- Floaty Fall  
+- Blaze Kick  
+
+Aron @ Focus Sash  
+Ability: Sturdy  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Endeavor  
+- Accelerock
 
 === TRAINER_ERIC ===
 Name: ERIC
@@ -14207,21 +14335,68 @@ Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DAWSON ===
-Name: DAWSON
-Class: Rich Boy
-Pic: Rich Boy
+Name:JUAN
+Class: Leader 
+Pic: Leader Juan
 Gender: Male
 Music: Rich
 Double Battle: No
 AI: Smart Trainer
 
-Zigzagoon @ Nugget
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Relicanth @ Focus Sash  
+Ability: Swift Swim  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Stealth Rock  
+- Waterfall  
+- Head Smash  
+- Earthquake  
 
-Poochyena
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Cloyster @ White Herb  
+Ability: Skill Link  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Shell Smash  
+- Icicle Spear  
+- Rock Blast  
+- Liquidation  
+
+Ludicolo @ Absorb Bulb  
+Ability: Swift Swim  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Giga Drain  
+- Scald  
+- Ice Beam  
+- Leech Seed  
+
+Quagsire @ Leftovers  
+Ability: Water Absorb  
+EVs: 252 HP / 4 Atk / 252 Def  
+Impish Nature  
+- Roar  
+- Recover  
+- Toxic  
+- Earthquake  
+
+Starmie @ Starminite  
+Ability: Illuminate  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Liquidation  
+- Zen Headbutt  
+- Ice Spinner  
+- Aqua Jet  
+
+Pelipper @ Wacan Berry  
+Ability: Rain Dish  
+EVs: 248 HP / 252 Def / 8 SpA  
+Bold Nature  
+- Hurricane  
+- U-turn  
+- Roost  
+- Ice Beam
 
 === TRAINER_SARAH ===
 Name: SARAH
@@ -15192,13 +15367,42 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Geodude
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ariados @ Bug Gem  
+Ability: Sniper  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- First Impression  
+- X-Scissor  
+- Shadow Sneak  
+- Gunk Shot  
 
-Geodude
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Leavanny @ Choice Scarf  
+Ability: Overcoat  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Leech Life  
+- Leaf Blade  
+- U-turn  
+- Crunch  
+
+Lilligant (F) @ Life Orb  
+Ability: Own Tempo  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Quiver Dance  
+- Sleep Powder  
+- Moonblast  
+- Giga Drain  
+
+Luvdisc @ Choice Specs  
+Ability: Swift Swim  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+- Moonblast  
+- Hydro Steam  
+- Flip Turn  
+- Ice Beam
 
 === TRAINER_JOHNSON ===
 Name: JOHNSON
@@ -15209,13 +15413,43 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Shroomish
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Vanilluxe @ Icy Rock  
+Ability: Snow Warning  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+- Aurora Veil  
+- Ice Beam  
+- Flip Turn  
+- Flash Cannon  
 
-Lotad
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Glalie @ Leftovers  
+Ability: Ice Body  
+EVs: 252 HP / 4 SpA / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Iron Defense  
+- Body Press  
+- Power Gem  
+- Recover  
+
+Lapras @ Loaded Dice  
+Ability: Shell Armor  
+EVs: 252 HP / 252 Atk / 4 Spe  
+Jolly Nature  
+- Dragon Dance  
+- Scale Shot  
+- Icicle Spear  
+- Waterfall  
+
+Frosmoth @ Rocky Helmet  
+Ability: Shield Dust  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Quiver Dance  
+- Ice Beam  
+- Sleep Powder  
+- Bug Buzz
 
 === TRAINER_MELINA ===
 Name: MELINA
@@ -18682,24 +18916,14 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 === TRAINER_BLAINE ===
 Name: BLAINE
 Class: Leader
-Pic: Hiker
+Pic:  Hiker
 Gender: Male
 Music: Male
-Double Battle: Yes
+Battle Type: Doubles
 AI: Smart Trainer
 
-Solrock
-Level: 14
-Ability: Drought
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
-- Sunny Day
-- Fire Spin
-- Rock Tomb
-- Psybeam
-
 Growlithe
-Level: 14
+Level: 15
 Ability: Intimidate
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
@@ -18708,15 +18932,25 @@ EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Roar
 - Ember
 
-Slugma
+Ponyta
 Level: 15
+Ability: Flash Fire
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Flame Wheel
+- Flame Charge
+- Stomp
+- Agility
+
+Magmar @ Sitrus Berry
+Level: 16
 Ability: Flame Body
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
-- Incinerate
+EVs: 4 HP / 0 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe
+- Fire Spin
+- Clear Smog
 - Smog
-- Recover
-- Light Screen
+- Confuse Ray
 
 
 === TRAINER_AQUACAMP_GRUNT_1 ===
