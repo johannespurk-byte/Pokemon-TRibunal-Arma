@@ -225,74 +225,69 @@ Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_PETALBURG_WOODS ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Name: SHELLY
+Class: Aqua Admin
+Pic: Aqua Admin F
 Gender: Male
 Music: Aqua
-Double Battle: No
-AI: Smart Trainer
+Double Battle: Yes
+Mugshot: Blue
+AI: Smart Trainer / Prediction
 
-Carvanha @ Life Orb
-Level: 17
-Ability: Speed Boost
-EVs: 4 HP / 252 Atk / 252 Spe
-Adamant Nature
-- Bite
-- Aqua Jet
-- Ice Fang
-- Protect
+Impidimp (M) @ Oran Berry  
+Ability: Prankster  
+EVs: 252 HP / 4 Atk / 252 SpD  
+Careful Nature  
+- Fake Out  
+- Foul Play  
+- Reflect  
+- Light Screen  
 
-Grimer @ Black Sludge
-Level: 16
-Ability: Sticky Hold
-EVs: 252 HP / 252 Atk / 4 SpD
-Adamant Nature
-- Poison Jab
-- Shadow Sneak
-- Mud-Shot
-- Mega Drain
+Dewott @ Rindo Berry  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Razor Shell  
+- Sacred Sword  
+- Swords Dance  
+- Protect  
 
-Palpitoad @ Eviolite
-Level: 17
-Ability: Water Absorb
-EVs: 252 HP / 4 Def / 252 SpA
-Modest Nature
-- Water Pulse
-- Mud-Shot
-- Icy Wind
-- Sludge Bomb
+Frillish @ Eviolite  
+Ability: Water Absorb  
+EVs: 252 HP / 4 SpA / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Water Pulse  
+- Protect  
+- Will-O-Wisp  
+- Hex  
 
-Corphish @ Choice Band
-Level: 17
-Ability: Adaptability
-EVs: 4 HP / 252 Atk / 252 Spe
-Jolly Nature
-- Crabhammer
-- Vice Grip
-- Rock Tomb
-- Aqua Jet
+Chinchou @ Shuca Berry  
+Ability: Volt Absorb  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Water Pulse  
+- Charge Beam  
+- Protect  
+- Icy Wind  
 
-Mareanie @ Rocky Helmet
-Level: 16
-Ability: Regenerator
-EVs: 252 HP / 252 Def / 4 SpD
-Bold Nature
-- Sludge Bomb
-- Chilling Water
-- Recover
-- Toxic Spikes
+Ducklett @ Choice Specs  
+Ability: Big Pecks  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+- U-turn  
+- Hydro Pump  
+- Hurricane  
+- Ice Beam  
 
-Poochyena @ Focus Sash
-Level: 18
-Ability: Rattled
-EVs: 4 HP / 252 Atk / 252 Spe
-Jolly Nature
-- Crunch
-- Sucker Punch
-- Play Rough
-- Fire Fang
-
+Dreepy @ Assault Vest  
+Ability: Clear Body  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Aerial Ace  
+- U-turn  
+- Dragon Claw  
+- Poltergeist  
 
 === TRAINER_MARCEL ===
 Name: MARCEL
@@ -12532,53 +12527,55 @@ Music: Male
 Double Battle: Yes
 AI: Smart Trainer
 
-Pincurchin @ Terrain Extender  
-Ability: Electric Surge  
-EVs: 252 HP / 252 Def / 4 SpA  
-Bold Nature  
+Rotom-Fan @ Life Orb  
+Ability: Levitate  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
 IVs: 0 Atk  
-- Scald  
+- Hurricane  
+- Thunderbolt  
+- Shadow Ball  
 - Volt Switch  
+
+Stunfisk @ Rocky Helmet  
+Ability: Static  
+EVs: 252 HP / 4 SpA / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Stealth Rock  
+- Mud Shot  
+- Spikes  
 - Helping Hand  
+
+Toxtricity @ Throat Spray  
+Ability: Punk Rock  
+Gigantamax: Yes
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Overdrive  
+- Acid Spray  
 - Protect  
+- Dark Pulse  
 
-Electabuzz @ Eviolite  
-Ability: Vital Spirit  
-EVs: 252 HP / 252 Atk / 4 SpD  
-Adamant Nature  
-- Plasma Fists  
-- Drain Punch  
-- Follow Me  
-- Ice Punch  
-
-Pawmot @ Punching Glove  
-Ability: Volt Absorb  
-EVs: 4 HP / 252 Atk / 252 Spe  
-Jolly Nature  
-- Double Shock  
-- Fake Out  
-- Ice Punch  
-- Close Combat  
-
-Electrode-Hisui @ Life Orb  
+Electrode-Hisui @ Choice Specs  
 Ability: Soundproof  
 EVs: 4 HP / 252 SpA / 252 Spe  
 Timid Nature  
 IVs: 0 Atk  
-- Electroweb  
-- Energy Ball  
+- Volt Switch  
+- Chloroblast  
+- Rising Voltage  
 - Shadow Ball  
-- Rising Voltage  
 
-Ampharos @ Ampharosite  
-Ability: Plus  
-EVs: 248 HP / 252 SpA / 8 SpD  
-Modest Nature  
-IVs: 0 Atk  
-- Rising Voltage  
-- Dragon Pulse  
-- Thunderclap  
-- Dazzling Gleam
+Pikachu-Starter @ Light Ball  
+Ability: Lightning Rod  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Volt Tackle  
+- Volt Switch  
+- Iron Head  
+- Play Rough
 
 === TRAINER_DOUG ===
 Name: DOUG
