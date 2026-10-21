@@ -1933,31 +1933,80 @@ void ItemUseOutOfBattle_PokeVial(u8 taskId)
 // === POKÉVIAL ITEM LOGIC ENDE ===
 
 // === modular AUTOMATIC REPEL SYSTEM START ===
+#define VAR_REPEL_TOOL_CHARGES 0x408F // 🌟 NEUE UNFEHLBARER VARIABLEN-ID (Garantiert frei!)
+
 void Task_AutoRepelMenu(u8 taskId);
-void ItemUseOutOfBattle_CannotUse(u8 taskId);
 
 void ItemUseOutOfBattle_AutoRepel(u8 taskId)
 {
-    // Wir fragen den Spieler direkt über ein krisensicheres Ja/Nein-Fenster
-    DisplayItemMessage(taskId, 2, COMPOUND_STRING("Auto-Schutz konfigurieren:\nMoechtest du den Schutz einschalten?"), Task_AutoRepelMenu);
+    u16 charges = VarGet(VAR_REPEL_TOOL_CHARGES);
+
+    // 🌟 UNFEHLBARER ERSTSTART-FIX: Wenn das Item im Spielstand noch nie benutzt wurde (Wert 0),
+    // lädt es sich beim allerersten Klick vollautomatisch kostenlos auf 10 Ladungen auf!
+    if (charges == 0 && VarGet(VAR_REPEL_STEP_COUNT) == 0)
+    {
+        VarSet(VAR_REPEL_TOOL_CHARGES, 10);
+        charges = 10;
+    }
+
+    // 1. Wenn der Schutz bereits AKTIV ist, erlauben wir das Ausschalten IMMER kostenlos!
+    if (VarGet(VAR_REPEL_STEP_COUNT) > 0)
+    {
+        DisplayItemMessage(taskId, 2, COMPOUND_STRING("Auto-Schutz konfigurieren:\nMoechtest du den Schutz ausschalten?"), Task_AutoRepelMenu);
+    }
+    // 2. Wenn er AUS ist und die Ladungen echt auf 0 verbraucht wurden, sperrt der Beutel ab
+    else if (charges == 0)
+    {
+        PlaySE(SE_SELECT); // Fehler-Sound
+        DisplayItemMessage(taskId, 2, COMPOUND_STRING("Die Batterie ist leer!\nLade das Geraet im POKeMON-CENTER auf."), ItemUseOutOfBattle_CannotUse);
+    }
+    // 3. Nur wenn Ladungen vorhanden sind, darf das Ja/Nein-Fenster öffnen
+    else
+    {
+        DisplayItemMessage(taskId, 2, COMPOUND_STRING("Auto-Schutz konfigurieren:\nMoechtest du den Schutz einschalten?"), Task_AutoRepelMenu);
+    }
 }
 
 void Task_AutoRepelMenu(u8 taskId)
 {
-    // 1 = JA (Einschalten), 0 = NEIN (Ausschalten)
-    if (gSpecialVar_Result == 1)
+    if (gSpecialVar_Result == 1) // Spieler drückt JA
     {
-        PlaySE(173); // MUS_SUCCES Soundeffekt
-        VarSet(VAR_REPEL_STEP_COUNT, 250); // Setzt die Schutz-Schritte aktiv
-        // 🌟 HARDWARE-TRICK: Wir setzen hier eine ungenutzte Flagge oder Variable, 
-        // damit die Engine weiß, dass der Schutz dauerhaft eingefroren ist!
-        DisplayItemMessage(taskId, 2, COMPOUND_STRING("Der Auto-Schutz wurde aktiviert!\nWilden Pokemon wird der Weg versperrt."), ItemUseOutOfBattle_CannotUse);
+        if (VarGet(VAR_REPEL_STEP_COUNT) > 0)
+        {
+            // Ausschalten
+            PlaySE(SE_SELECT);
+            VarSet(VAR_REPEL_STEP_COUNT, 0);
+            DisplayItemMessage(taskId, 2, COMPOUND_STRING("Der Auto-Schutz wurde deaktiviert!"), ItemUseOutOfBattle_CannotUse);
+        }
+        else
+        {
+            // Einschalten -> Ladung abziehen!
+            u16 charges = VarGet(VAR_REPEL_TOOL_CHARGES);
+
+            if (charges > 0)
+            {
+                charges--;
+                VarSet(VAR_REPEL_TOOL_CHARGES, charges); // Ladung abziehen
+
+                PlaySE(SE_REPEL); // Sprühsound
+                VarSet(VAR_REPEL_STEP_COUNT, 250); // 250 Schritte Schutz geben
+
+                DisplayItemMessage(taskId, 2, COMPOUND_STRING("Der Auto-Schutz wurde aktiviert!\nWilden Pokemon wird der Weg versperrt."), ItemUseOutOfBattle_CannotUse);
+            }
+            else
+            {
+                DisplayItemMessage(taskId, 2, COMPOUND_STRING("Die Batterie ist leer!\nLade das Geraet im POKeMON-CENTER auf."), ItemUseOutOfBattle_CannotUse);
+            }
+        }
     }
-    else
+    else // Spieler drückt NEIN
     {
-        PlaySE(174); // Abbrech-Soundeffekt
-        VarSet(VAR_REPEL_STEP_COUNT, 0); // Schaltet den Schutz sofort aus
-        DisplayItemMessage(taskId, 2, COMPOUND_STRING("Der Auto-Schutz wurde deaktiviert!"), ItemUseOutOfBattle_CannotUse);
+        PlaySE(SE_SELECT);
+        ItemUseOutOfBattle_CannotUse(taskId);
     }
 }
 // === AUTOMATIC REPEL SYSTEM ENDE ===
+
+
+
+

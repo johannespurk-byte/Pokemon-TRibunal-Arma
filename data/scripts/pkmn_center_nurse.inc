@@ -1,9 +1,10 @@
 Common_EventScript_PkmnCenterNurse::
+	@ 🌟 HARDWARE-SÄUBERUNG: Schiebt unsichtbare Formatierungszeichen krisensicher weg!
 	lock
 	faceplayer
-	@ === modular POK�VIAL AUTOMATIC GIFT START ===
+	@ === modular POKÉVIAL AUTOMATIC GIFT START ===
 	goto_if_unset 0x264, EventScript_PkmnCenterNurse_GiveVial
-	@ === POK�VIAL AUTOMATIC GIFT ENDE ===
+	@ === POKÉVIAL AUTOMATIC GIFT ENDE ===
 	setvar VAR_0x8004, 0
 .if !IS_FRLG
 	specialvar VAR_RESULT, CountPlayerTrainerStars
@@ -51,12 +52,16 @@ EventScript_PkmnCenterNurse_TakeAndHealPkmn::
 	applymovement VAR_0x800B, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	special HealPlayerParty
-@ === modular POK�VIAL AUTOMATIC RECHARGE START ===
+@ === modular POKÉVIAL AUTOMATIC RECHARGE START ===
 setvar VAR_UNUSED_0x40F7, 5 @ Setzt die echte Variable beim Heilen auf 5!
-@ === POK�VIAL AUTOMATIC RECHARGE ENDE ===
+@ === POKÉVIAL AUTOMATIC RECHARGE ENDE ===
 
+@ === modular AUTO-SCHUTZ RECHARGE START ===
+setvar 0x408F, 10           @ 🌟 HARDWARE-FIX: Lädt das Auto-Schutz-Gerät typesafe auf 10 Ladungen auf!
+@ === AUTO-SCHUTZ RECHARGE ENDE ===
 	callnative UpdateFollowingPokemon
 	return
+
 
 
 EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom::
@@ -142,15 +147,16 @@ Movement_PkmnCenterNurse_Turn:
 	walk_in_place_faster_left
 	step_end
 
-		@ --- NEUES EVENT-SKRIPT F�R DIE EINMALIGE �GABE ---
+			@ --- NEUES EVENT-SKRIPT FÜR DIE EINMALIGE ÜGABE ---
 EventScript_PkmnCenterNurse_GiveVial:
 	msgbox Text_NurseGivesVialText, MSGBOX_DEFAULT
 	giveitem ITEM_POKE_VIAL, 1
 	setflag 0x264
-	setvar VAR_UNUSED_0x40F7, 5 @ Startet direkt mit 5 Ladungen!
+	setvar VAR_UNUSED_0x40F7, 5
+	setvar 0x408F, 10           @ 🌟 INITIAL-LADUNG: Schützt die neue Variablen-ID ab Start!
 	closemessage
-	setvar VAR_0x8004, 0 @ Bereitet das normale Heilungs-Event vor
-	goto EventScript_PkmnCenterNurse_HealPkmn @ ?? REPARATUR: Springt direkt zur Heilungs-Animation!
+	goto Common_EventScript_PkmnCenterNurse
+
 
 
 

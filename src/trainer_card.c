@@ -33,6 +33,7 @@
 #include "constants/battle_frontier.h"
 #include "constants/rgb.h"
 #include "constants/trainers.h"
+#include "constants/event_objects.h"
 #include "constants/union_room.h"
 
 enum {
@@ -318,6 +319,85 @@ static const u8 sTrainerPicFacilityClass[][GENDER_COUNT] =
     }
 };
 
+// ---------------------------------------------------------------------------
+// NEU: Generationen-Seiten der Trainerkarte (L/R blaettert, Steuerkreuz wechselt das Geschlecht)
+// Gespeichert wird die Auswahl in gSaveBlock2Ptr->playerCharacterVariant.
+// Das Portrait (facilityClass) ist rein optisch; 0xFF = Standard-Portrait der Karte (Brendan/May).
+// ---------------------------------------------------------------------------
+#ifndef PLAYER_CHARACTER_RED
+#define PLAYER_CHARACTER_RED  3
+#endif
+#ifndef PLAYER_CHARACTER_LEAF
+#define PLAYER_CHARACTER_LEAF 4
+#endif
+
+#define CARD_NO_PORTRAIT   0xFF
+#define CARD_DEFAULT_PAGE  2    // Gen 3 = Brendan/May
+
+struct TrainerCardGenPage
+{
+    u8 variant[GENDER_COUNT];       // playerCharacterVariant, der bei dieser Seite gesetzt wird
+    u8 facilityClass[GENDER_COUNT]; // Portrait auf der Karte
+};
+
+static const struct TrainerCardGenPage sTrainerCardGenPages[] =
+{
+    // Gen 1: Rot / Leaf (Avatar dafuer folgt, bis dahin laeuft Brendan/May)
+    {
+        .variant       = {[MALE] = PLAYER_CHARACTER_RED,  [FEMALE] = PLAYER_CHARACTER_LEAF},
+        .facilityClass = {[MALE] = FACILITY_CLASS_RED,    [FEMALE] = FACILITY_CLASS_LEAF},
+    },
+    // Gen 2: Ethan / Lyra (Portrait fehlt noch -> Standard-Portrait)
+    {
+        .variant       = {[MALE] = PLAYER_CHARACTER_ETHAN, [FEMALE] = PLAYER_CHARACTER_LYRA},
+        .facilityClass = {[MALE] = CARD_NO_PORTRAIT,       [FEMALE] = CARD_NO_PORTRAIT},
+    },
+    // Gen 3: Brendan / May (Standard) -> CARD_DEFAULT_PAGE
+    {
+        .variant       = {[MALE] = PLAYER_CHARACTER_DEFAULT, [FEMALE] = PLAYER_CHARACTER_DEFAULT},
+        .facilityClass = {[MALE] = CARD_NO_PORTRAIT,         [FEMALE] = CARD_NO_PORTRAIT},
+    },
+    // TODO Gen 4-9, sobald Portraits + Avatare da sind (Reihenfolge = Reihenfolge beim Blaettern):
+    //  Gen 4: Lucas / Dawn      Gen 5: Hilbert / Hilda    Gen 6: Calem / Serena
+    //  Gen 7: Elio / Selene     Gen 8: Victor / Gloria    Gen 9: Florian / Juliana
+};
+
+// 🌟 UNFEHLBARER LOGIK-BLOCK: Steuert die Karte rein über den RAM-Puffer ohne SaveBlock-Fehler!
+EWRAM_DATA u8 sTrainerCardCurrentPage = 0; // 0 = Gen 1, 1 = Gen 2, 2 = Gen 3
+EWRAM_DATA u8 sTrainerCardCurrentSkin = 0; // 0 = Hauptheld, 1 = Rivale/Alternativ
+
+static u8 TrainerCardGetPage(void)
+{
+    return sTrainerCardCurrentPage;
+}
+
+static void TrainerCardApplyPage(u8 page)
+{
+    if (page < ARRAY_COUNT(sTrainerCardGenPages))
+    {
+        sTrainerCardCurrentPage = page;
+    }
+}
+
+static u8 TrainerCardGetFacilityClass(void)
+{
+    u8 gender = sData->trainerCard.gender;
+    u8 facilityClass = CARD_NO_PORTRAIT;
+
+    if (!sData->isLink)
+    {
+        u8 currentPage = TrainerCardGetPage();
+        facilityClass = sTrainerCardGenPages[currentPage].facilityClass[gender];
+    }
+
+    if (facilityClass == CARD_NO_PORTRAIT)
+        facilityClass = sTrainerPicFacilityClass[sData->cardType][gender];
+
+    return facilityClass;
+}
+
+
+
 static bool8 (*const sTrainerCardFlipTasks[])(struct Task *) =
 {
     Task_BeginCardFlip,
@@ -443,24 +523,40 @@ static void Task_TrainerCard(u8 taskId)
             DrawTrainerCardWindow(WIN_CARD_TEXT);
             sData->timeColonNeedDraw = FALSE;
         }
-        // 1. NAMENSÄNDERUNG MIT SELECT
-        if (JOY_NEW(SELECT_BUTTON))
+        // 1. GENERATION WECHSELN MIT L / R (Blättert die Reihen 0, 1, 2)
+        if (JOY_NEW(L_BUTTON) || JOY_NEW(R_BUTTON))
         {
+            u8 page = TrainerCardGetPage();
+            u8 count = ARRAY_COUNT(sTrainerCardGenPages);
             PlaySE(SE_SELECT);
-            FreeAllWindowBuffers();
-            DoNamingScreen(NAMING_SCREEN_PLAYER, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->playerGender, 0, 0, CB2_InitTrainerCard);
+            if (JOY_NEW(R_BUTTON))
+                page = (page + 1) % count;
+            else
+                page = (page + count - 1) % count;
+            TrainerCardApplyPage(page);
+
+            ResetSpriteData(); FreeAllSpritePalettes(); FreeAllWindowBuffers();
+            SetMainCallback2(CB2_InitTrainerCard);
         }
-        // 2. SKIN-WECHSEL MIT STEUERKREUZ
+        // 2. SKIN WECHSELN MIT DPAD LINKS / RECHTS (Schaltet Skin 0 und 1 um)
         else if (JOY_NEW(DPAD_LEFT) || JOY_NEW(DPAD_RIGHT))
         {
             PlaySE(SE_SELECT);
-            gSaveBlock2Ptr->playerGender ^= 1;
-            ResetSpriteData();
-            FreeAllSpritePalettes();
-            FreeAllWindowBuffers();
+            sTrainerCardCurrentSkin ^= 1;
+
+            ResetSpriteData(); FreeAllSpritePalettes(); FreeAllWindowBuffers();
             SetMainCallback2(CB2_InitTrainerCard);
         }
+        // 3. GESCHLECHT WECHSELN MIT A_BUTTON (Standard-Nintendo-Schiene)
         else if (JOY_NEW(A_BUTTON))
+        {
+            PlaySE(SE_SELECT);
+            gSaveBlock2Ptr->playerGender ^= 1;
+
+            ResetSpriteData(); FreeAllSpritePalettes(); FreeAllWindowBuffers();
+            SetMainCallback2(CB2_InitTrainerCard);
+        }
+        else if (JOY_NEW(SELECT_BUTTON)) // Mit SELECT drehen wir die Karte jetzt um
         {
             FlipTrainerCard();
             PlaySE(SE_RG_CARD_FLIP);
@@ -468,15 +564,11 @@ static void Task_TrainerCard(u8 taskId)
         }
         else if (JOY_NEW(B_BUTTON))
         {
-            if (gReceivedRemoteLinkPlayers && sData->isLink && InUnionRoom() == TRUE)
-                sData->mainState = STATE_WAIT_LINK_PARTNER;
-            else
-            {
-                BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, sData->blendColor);
-                sData->mainState = STATE_CLOSE_CARD;
-            }
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, sData->blendColor);
+            sData->mainState = STATE_CLOSE_CARD;
         }
         break;
+
     case STATE_WAIT_FLIP_TO_BACK:
         if (IsCardFlipTaskActive() && Overworld_IsRecvQueueAtMax() != TRUE)
         {
@@ -1929,7 +2021,7 @@ static void CreateTrainerCardTrainerPic(void)
     }
     else
     {
-        CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(sTrainerPicFacilityClass[sData->cardType][sData->trainerCard.gender]),
+        CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(TrainerCardGetFacilityClass()),
                     TRUE,
                     sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][0],
                     sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][1],
