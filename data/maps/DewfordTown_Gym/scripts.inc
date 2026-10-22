@@ -142,6 +142,14 @@ DewfordTown_Gym_EventScript_Brawly::
 	end
 
 DewfordTown_Gym_EventScript_BrawlyDefeated::
+	msgbox DewfordTown_Gym_Text_BrawlyAfterBattle, MSGBOX_DEFAULT
+	special HealPlayerParty
+	msgbox DewfordTown_Gym_Text_BrandonAppears, MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_BRANDON_DEWFORD, DewfordTown_Gym_Text_BrandonIntro, DewfordTown_Gym_Text_BrandonDefeat, DewfordTown_Gym_EventScript_BrandonDefeated, NO_MUSIC
+	end
+
+DewfordTown_Gym_EventScript_BrandonDefeated::
+	msgbox DewfordTown_Gym_Text_BrandonAfterBattle, MSGBOX_DEFAULT
 	call DewfordTown_Gym_EventScript_AnimateFlashFullBrightness
 	message DewfordTown_Gym_Text_ReceivedKnuckleBadge
 	waitmessage
@@ -380,20 +388,48 @@ DewfordTown_Gym_Text_CristianPostBattle:
 	.string "Go after that BADGE!$"
 
 DewfordTown_Gym_Text_BrawlyIntro:
-	.string "I'm BRAWLY!\n"
-	.string "DEWFORD's GYM LEADER!\p"
-	.string "I've been churned in the rough waves\n"
-	.string "of these parts, and I've grown tough\l"
-	.string "in the pitch-black cave!\p"
-	.string "So you wanted to challenge me?\n"
-	.string "Let me see what you're made of!$"
+	.string "I'm BRAWLY, DEWFORD's GYM LEADER!\p"
+	.string "The waves and the dark of GRANITE\n"
+	.string "CAVE have taught me to stay sharp.\p"
+	.string "A real fighter never backs down\n"
+	.string "when the pressure rises!\p"
+	.string "Show me your strength! Let's battle!$"
 
 DewfordTown_Gym_Text_BrawlyDefeat:
-	.string "Whoah, wow! You made a much bigger\n"
-	.string "splash than I expected!\p"
-	.string "You swamped me!\p"
-	.string "Okay, you've got me.\n"
-	.string "Take this GYM BADGE!$"
+	.string "Whoa! What a fight! You read my\n"
+	.string "moves and hit back even harder!\p"
+	.string "You've earned my respect, but hold\n"
+	.string "on a moment before that BADGE...$"
+
+DewfordTown_Gym_Text_BrawlyAfterBattle:
+	.string "That was incredible, {PLAYER}!\p"
+	.string "You've got strength, focus, and\n"
+	.string "the heart of a real fighter.\p"
+	.string "Before I hand over the BADGE,\n"
+	.string "there's someone I'd like you to face.$"
+
+DewfordTown_Gym_Text_BrandonAppears:
+	.string "BRAWLY: Brandon! You're just in time.\p"
+	.string "BRANDON: So this is the Trainer who\n"
+	.string "managed to defeat you? Interesting.\p"
+	.string "BRAWLY: Don't underestimate them.\n"
+	.string "Give them everything you've got!$"
+
+DewfordTown_Gym_Text_BrandonIntro:
+	.string "BRANDON: I've heard enough to know\n"
+	.string "this won't be an ordinary battle.\p"
+	.string "Let's see if you can handle my team!$"
+
+DewfordTown_Gym_Text_BrandonDefeat:
+	.string "BRANDON: You've earned this victory.\n"
+	.string "Your skill is the real deal!$"
+
+DewfordTown_Gym_Text_BrandonAfterBattle:
+	.string "BRAWLY: Now that's what I wanted to\n"
+	.string "see! You stood your ground twice.\p"
+	.string "You've earned the KNUCKLE BADGE.\n"
+	.string "Take it, you've more than proved\n"
+	.string "yourself today!$"
 
 DewfordTown_Gym_Text_ReceivedKnuckleBadge:
 	.string "{PLAYER} received the KNUCKLE BADGE\n"

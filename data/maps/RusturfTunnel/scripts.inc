@@ -525,3 +525,7 @@ RusturfTunnel_Text_MikePostBattle:
 	.string "protect POKéMON, right?\l"
 	.string "There's a feel-good story!$"
 
+	RusturfTunnel_EventScript_MagmaGrunt::
+    trainerbattle_single TRAINER_AQUACAMP_GRUNT_1, MagmaHideout_1F_Text_Grunt1Intro, MagmaHideout_1F_Text_Grunt1Defeat
+    msgbox MagmaHideout_1F_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
+    end
