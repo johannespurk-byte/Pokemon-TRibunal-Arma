@@ -43,6 +43,11 @@ SlateportCity_OceanicMuseum_2F_EventScript_CaptStern::
 	waitmovement 0
 	msgbox SlateportCity_OceanicMuseum_2F_Text_MeddlingKid, MSGBOX_DEFAULT
 	closemessage
+	msgbox SlateportCity_OceanicMuseum_2F_Text_PrepareForArchie, MSGBOX_DEFAULT
+	closemessage
+	playfanfare MUS_HEAL
+	waitfanfare
+	special HealPlayerParty
 	delay 35
 	addobject LOCALID_OCEANIC_MUSEUM_2F_ARCHIE
 	applymovement LOCALID_OCEANIC_MUSEUM_2F_ARCHIE, SlateportCity_OceanicMuseum_2F_Movement_ArchieEnter
@@ -53,6 +58,11 @@ SlateportCity_OceanicMuseum_2F_EventScript_CaptStern::
 	applymovement LOCALID_OCEANIC_MUSEUM_2F_ARCHIE, SlateportCity_OceanicMuseum_2F_Movement_ArchieApproachPlayer
 	waitmovement 0
 	msgbox SlateportCity_OceanicMuseum_2F_Text_ArchieWarning, MSGBOX_DEFAULT
+	closemessage
+	msgbox SlateportCity_OceanicMuseum_2F_Text_ArchieChallenge, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_ARCHIE_SLATEPORT, SlateportCity_OceanicMuseum_2F_Text_ArchieDefeat
+	msgbox SlateportCity_OceanicMuseum_2F_Text_ArchieAfterBattle, MSGBOX_DEFAULT
 	closemessage
 	savebgm MUS_DUMMY
 	fadedefaultbgm
@@ -342,6 +352,27 @@ SlateportCity_OceanicMuseum_2F_Text_ArchieWarning:
 	.string "The consequences will cost you\n"
 	.string "dearly!\p"
 	.string "And don't you forget it!$"
+
+SlateportCity_OceanicMuseum_2F_Text_PrepareForArchie:
+	.string "You defeated both TEAM AQUA grunts!\p"
+	.string "Take a moment to recover before\n"
+	.string "their leader arrives...$"
+
+SlateportCity_OceanicMuseum_2F_Text_ArchieChallenge:
+	.string "ARCHIE: So, you really think you can\n"
+	.string "stand in TEAM AQUA's way?\p"
+	.string "Let's see if your POKéMON can back\n"
+	.string "up that courage!$"
+
+SlateportCity_OceanicMuseum_2F_Text_ArchieDefeat:
+	.string "What?! You beat me?!\p"
+	.string "You may have won this time, but\n"
+	.string "TEAM AQUA's plans won't be stopped!$"
+
+SlateportCity_OceanicMuseum_2F_Text_ArchieAfterBattle:
+	.string "ARCHIE: Hmph! This isn't over, kid.\p"
+	.string "TEAM AQUA will return, and the sea\n"
+	.string "will be ours to command!$"
 
 SlateportCity_OceanicMuseum_2F_Text_SternThankYouForSavingUs:
 	.string "CAPT. STERN: You're…\n"
