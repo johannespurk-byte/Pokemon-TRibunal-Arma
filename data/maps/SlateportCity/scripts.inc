@@ -478,18 +478,17 @@ SlateportCity_EventScript_DollClerk::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemartdecoration SlateportCity_PokemartDecor_Dolls
+	pokemart SlateportCity_PokemartDecor_Dolls
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-SlateportCity_PokemartDecor_Dolls:
-		.2byte ITEM_ULTRA_BALL
+SlateportCity_PokemartDecor_Dolls::
+	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_TOXIC_ORB
 	.2byte ITEM_FLAME_ORB
-
-	pokemartlistend
+	.2byte ITEM_NONE @ 🌟 REPARATUR: Schließt die Assembly-Liste sauber ab!
 
 SlateportCity_EventScript_ComeBackWithSecretPower::
 	msgbox gText_ComeBackWithSecretPower, MSGBOX_DEFAULT
@@ -502,26 +501,26 @@ SlateportCity_EventScript_DecorClerk::
 	goto_if_unset FLAG_RECEIVED_SECRET_POWER, SlateportCity_EventScript_ComeBackWithSecretPower
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemartdecoration SlateportCity_PokemartDecor
+	pokemart SlateportCity_PokemartDecor
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
 @ 🌟 KOMPETITIV-MARKT OLYMP: Vollgepackt mit den stärksten Strategie-Items der Pokémon-Geschichte!
-SlateportCity_PokemartDecor:
-	.2byte ITEM_CHOICE_BAND   @ Wahlband (Erhöht Angriff massiv, blockiert auf eine Attacke)
-	.2byte ITEM_CHOICE_SPECS  @ Wahlglas (Erhöht Spezial-Angriff massiv)
-	.2byte ITEM_CHOICE_SCARF  @ Wahlschal (Erhöht Initiative massiv)
-	.2byte ITEM_LIFE_ORB      @ Leben-Orb (Verstärkt alle Attacken auf Kosten von KP)
-	.2byte ITEM_TOXIC_ORB     @ Toxik-Orb (Vergiftet den Träger schwer - genial für Aufheber/Adrenalin)
-	.2byte ITEM_FLAME_ORB     @ Heiß-Orb (Verbrennt den Träger - genial für Notschutz/Adrenalin)
-	.2byte ITEM_ASSAULT_VEST      @ Offensivweste (Assault Vest - Erhöht Spezial-Verteidigung)
-	.2byte ITEM_FOCUS_SASH    @ Fokusgurt (Verhindert K.O.-Treffer bei vollen KP)
-	.2byte ITEM_LEFTOVERS     @ Überreste (Heilt jede Runde ein paar KP)
-	.2byte ITEM_BLACK_SLUDGE  @ Giftschlamm (Heilt Gifttypen, schadet anderen Typen)
-	.2byte ITEM_EVIOLITE      @ Evolith (Erhöht Def/SpDef von nicht voll entwickelten Pokémon)
-	.2byte ITEM_NONE          @ 🌟 INFO: Reguläre Item-Märkte enden in Decomp immer auf ITEM_NONE!
+SlateportCity_PokemartDecor::
+	.2byte ITEM_CHOICE_BAND   @ Wahlband
+	.2byte ITEM_CHOICE_SPECS  @ Wahlglas
+	.2byte ITEM_CHOICE_SCARF  @ Wahlschal
+	.2byte ITEM_LIFE_ORB      @ Leben-Orb
+	.2byte ITEM_TOXIC_ORB     @ Toxik-Orb
+	.2byte ITEM_FLAME_ORB     @ Heiß-Orb
+	.2byte ITEM_ASSAULT_VEST  @ Offensivweste
+	.2byte ITEM_FOCUS_SASH    @ Fokusgurt
+	.2byte ITEM_LEFTOVERS     @ Überreste
+	.2byte ITEM_BLACK_SLUDGE  @ Giftschlamm
+	.2byte ITEM_EVIOLITE      @ Evolith
+	.2byte ITEM_NONE          @ 🌟 REPARATUR: Dichtet das Array für den GBA-Compiler perfekt ab!
 
 SlateportCity_EventScript_PowerTMClerk::
 	lock
@@ -534,8 +533,8 @@ SlateportCity_EventScript_PowerTMClerk::
 	end
 
 	.align 2
-@ 🌟 TM-MASTER-PIPELINE: Die vollständige Palette von TM01 bis TM50 lückenlos deklariert!
-SlateportCity_Pokemart_PowerTMs:
+@ 🌟 TM-MASTER-PIPELINE: Fehlerfrei formatiert mitsamt ITEM_NONE-Abschluss!
+SlateportCity_Pokemart_PowerTMs::
 	.2byte ITEM_TM01
 	.2byte ITEM_TM02
 	.2byte ITEM_TM03
@@ -586,8 +585,10 @@ SlateportCity_Pokemart_PowerTMs:
 	.2byte ITEM_TM48
 	.2byte ITEM_TM49
 	.2byte ITEM_TM50
-	.2byte ITEM_NONE        @ 🌟 INFO: Reguläre Item-Märkte enden in Decomp immer auf ITEM_NONE!
-	pokemartlistend
+	.2byte ITEM_NONE
+
+
+
 
 @ Scene with Capt Sterns interview and Team Aqua announcing plans to steal Submarine
 SlateportCity_EventScript_CaptStern::
