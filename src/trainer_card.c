@@ -24,28 +24,37 @@
 #include "pokedex.h"
 #include "pokemon_icon.h"
 #include "graphics.h"
-#include "pokemon_icon.h"
 #include "trainer_pokemon_sprites.h"
 #include "contest_util.h"
 #include "decompress.h"
-#include "constants/songs.h"
-#include "constants/game_stat.h"
-#include "constants/battle_frontier.h"
-#include "constants/rgb.h"
-#include "constants/trainers.h"
+#include "constants/trainers.h" // 🌟 HIER: Muss zwingend aktiv sein!
+
 #include "constants/event_objects.h"
 #include "constants/union_room.h"
-// 🌟 SINNOH-MENÜ-GRAFIKEN (Die echten, vom GFTPL generierten Pfade ohne _Custom anmelden!)
+
+// 🌟 NEU: Fehlende Header wieder hinzufügen, um Sounds, Farben und Frontier-Konstanten zu reparieren!
+#include "constants/songs.h"
+#include "constants/rgb.h"
+#include "constants/battle_frontier.h"
+
+// 🌟 SINNOH-MENÜ-GRAFIKEN
 extern const u32 gTrainerFrontPic_Lucas[];
 extern const u16 gTrainerPalette_Lucas[];
 extern const u32 gTrainerFrontPic_Dawn[];
 extern const u16 gTrainerPalette_Dawn[];
+
+// 🌟 JOHTO-MENÜ-GRAFIKEN (Typesafe verknüpft mit deinen RS-Ressourcen-Namen!)
+extern const u32 gTrainerFrontPic_RubySapphireBrendan[];
+extern const u16 gTrainerPalette_RubySapphireBrendan[];
+extern const u32 gTrainerFrontPic_RubySapphireMay[];
+extern const u16 gTrainerPalette_RubySapphireMay[];
 
 enum {
     WIN_MSG,
     WIN_CARD_TEXT,
     WIN_TRAINER_PIC,
 };
+
 
 struct TrainerCardData
 {
@@ -2043,7 +2052,7 @@ static void CreateTrainerCardTrainerPic(void)
 
     if (InUnionRoom() == TRUE && gReceivedRemoteLinkPlayers)
     {
-        // 🌟 KORREKTUR: Dreidimensionale Indizes [0] und [1] typesafe hinzugefügt!
+        // 🌟 KORREKTUR: Dreidimensionale Indizes ([0] für X, [1] für Y) typesafe hinzugefügt!
         CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(sData->trainerCard.unionRoomClass),
             TRUE,
             sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][0],
@@ -2058,44 +2067,59 @@ static void CreateTrainerCardTrainerPic(void)
         u8 page = TrainerCardGetPage();
 
         // === 🌟 AUTOMATISCHER KOORDINATEN-SCHUTZ FÜR ALLE CUSTOM-SEITEN ===
-        if (page == 1 || page == 3) // Johto oder Sinnoh
+        if (page == 1 || page == 3) // Johto (1) oder Sinnoh (3)
         {
             destX = 1;
             destY = 0;
         }
         else
         {
-            // 🌟 KORREKTUR: Dreidimensionale Indizes [0] und [1] typesafe hinzugefügt!
+            // 🌟 KORREKTUR: Dreidimensionale Indizes ([0] für X, [1] für Y) typesafe hinzugefügt!
             destX = sTrainerPicOffset[sData->isHoenn][gender][0];
             destY = sTrainerPicOffset[sData->isHoenn][gender][1];
         }
 
-        if (page == 3) // === 💎 Gen 4 (Sinnoh) ausgewählt! ===
+        // === 💎 Gen 4 (Sinnoh) ausgewählt! ===
+        if (page == 3)
         {
-            // 🌟 UNZERSTÖRBARER COUPLING-FIX: Erzeugt das Sprite-Fenster starr über den Standard-Hauptslot,
-            // um jeden VRAM-Buffer-Overflow und die Neustart-Schleife unzerstörbar zu stoppen!
             if (gender == MALE)
             {
                 CreateTrainerCardTrainerPicSprite(TRAINER_PIC_BRENDAN, TRUE, destX, destY, 8, WIN_TRAINER_PIC);
                 LoadPalette(gTrainerPalette_Lucas, OBJ_PLTT_ID(8), PLTT_SIZE_4BPP);
-                DecompressTrainerFrontPic(TRAINER_PIC_STEVEN, 8); // Überschreibt Brix typesafe mit Lucius-Pixeln!
+                DecompressTrainerFrontPic(TRAINER_PIC_STEVEN, 8);
             }
             else
             {
                 CreateTrainerCardTrainerPicSprite(TRAINER_PIC_MAY, TRUE, destX, destY, 8, WIN_TRAINER_PIC);
                 LoadPalette(gTrainerPalette_Dawn, OBJ_PLTT_ID(8), PLTT_SIZE_4BPP);
-                DecompressTrainerFrontPic(TRAINER_PIC_WALLY, 8);  // Überschreibt Maike typesafe mit Lucia-Pixeln!
+                DecompressTrainerFrontPic(TRAINER_PIC_WALLY, 8);
             }
-            return; // Beendet die Funktion typesafe, damit kein Hoenn-Fallback dazwischenfunkt!
+            return;
         }
-        else if (page == 1) // === 🟢 Gen 2 (Johto) ausgewählt! ===
+        // === 🟢 Gen 2 (Johto) ausgewählt! ===
+        else if (page == 1)
         {
-            u16 finalPicIndex = (gender == MALE) ? TRAINER_PIC_RS_BRENDAN : TRAINER_PIC_RS_MAY;
-            CreateTrainerCardTrainerPicSprite(finalPicIndex, TRUE, destX, destY, 8, WIN_TRAINER_PIC);
+            if (gender == MALE)
+            {
+                // 🌟 FIX: Zieht die echten, vom Compiler bereitgestellten Farbpaletten aus deiner trainers.h!
+                CreateTrainerCardTrainerPicSprite(TRAINER_PIC_RS_BRENDAN, TRUE, destX, destY, 8, WIN_TRAINER_PIC);
+                LoadPalette(gTrainerPalette_RubySapphireBrendan, OBJ_PLTT_ID(8), PLTT_SIZE_4BPP);
+                DecompressTrainerFrontPic(TRAINER_PIC_RS_BRENDAN, 8);
+            }
+            else
+            {
+                // 🌟 FIX: Zieht die echten, vom Compiler bereitgestellten Farbpaletten aus deiner trainers.h!
+                CreateTrainerCardTrainerPicSprite(TRAINER_PIC_RS_MAY, TRUE, destX, destY, 8, WIN_TRAINER_PIC);
+                LoadPalette(gTrainerPalette_RubySapphireMay, OBJ_PLTT_ID(8), PLTT_SIZE_4BPP);
+                DecompressTrainerFrontPic(TRAINER_PIC_RS_MAY, 8);
+            }
+            return;
         }
-        else // === 🔵 Standard Gen 3 / Gen 1 Schiene ===
+        // === 🔵 Standard Gen 3 / Gen 1 Schiene ===
+        else
         {
             CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(TrainerCardGetFacilityClass()), TRUE, destX, destY, 8, WIN_TRAINER_PIC);
         }
     }
 }
+
