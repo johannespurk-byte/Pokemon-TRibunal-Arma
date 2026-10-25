@@ -36,6 +36,15 @@
 #include "constants/event_objects.h"
 #include "constants/union_room.h"
 
+// 🌟 SINNOH-MENÜ-GRAFIKEN (Front-Pics und Paletten extern für die Trainerkarte anmelden)
+// 🌟 SINNOH-MENÜ-GRAFIKEN (Die echten, vom GFTPL generierten Pfade ohne _Custom anmelden!)
+extern const u32 gTrainerFrontPic_Lucas[];
+extern const u16 gTrainerPalette_Lucas[];
+extern const u32 gTrainerFrontPic_Dawn[];
+extern const u16 gTrainerPalette_Dawn[];
+
+
+
 enum {
     WIN_MSG,
     WIN_CARD_TEXT,
@@ -342,24 +351,26 @@ struct TrainerCardGenPage
 
 static const struct TrainerCardGenPage sTrainerCardGenPages[] =
 {
-    // Gen 1: Rot / Leaf (Avatar dafuer folgt, bis dahin laeuft Brendan/May)
+    // Gen 1: Rot / Leaf (Seite 0)
     {
-        .variant       = {[MALE] = PLAYER_CHARACTER_RED,  [FEMALE] = PLAYER_CHARACTER_LEAF},
-        .facilityClass = {[MALE] = FACILITY_CLASS_RED,    [FEMALE] = FACILITY_CLASS_LEAF},
+        .variant = { [MALE] = PLAYER_CHARACTER_RED,[FEMALE] = PLAYER_CHARACTER_LEAF},
+        .facilityClass = { [MALE] = FACILITY_CLASS_RED,[FEMALE] = FACILITY_CLASS_LEAF},
     },
-    // Gen 2: Ethan / Lyra (Portrait fehlt noch -> Standard-Portrait)
+    // Gen 2: Ethan / Lyra (Seite 1)
     {
-        .variant       = {[MALE] = PLAYER_CHARACTER_ETHAN, [FEMALE] = PLAYER_CHARACTER_LYRA},
-        .facilityClass = {[MALE] = CARD_NO_PORTRAIT,       [FEMALE] = CARD_NO_PORTRAIT},
+        .variant = { [MALE] = PLAYER_CHARACTER_ETHAN,[FEMALE] = PLAYER_CHARACTER_LYRA},
+        .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
     },
-    // Gen 3: Brendan / May (Standard) -> CARD_DEFAULT_PAGE
+    // Gen 3: Brendan / May (Seite 2) - 🌟 ENTFLOCHTEN: Holt Gen 3 unzerstörbar zurück!
     {
-        .variant       = {[MALE] = PLAYER_CHARACTER_DEFAULT, [FEMALE] = PLAYER_CHARACTER_DEFAULT},
-        .facilityClass = {[MALE] = CARD_NO_PORTRAIT,         [FEMALE] = CARD_NO_PORTRAIT},
+        .variant = { [MALE] = PLAYER_CHARACTER_DEFAULT,[FEMALE] = PLAYER_CHARACTER_DEFAULT},
+        .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
     },
-    // TODO Gen 4-9, sobald Portraits + Avatare da sind (Reihenfolge = Reihenfolge beim Blaettern):
-    //  Gen 4: Lucas / Dawn      Gen 5: Hilbert / Hilda    Gen 6: Calem / Serena
-    //  Gen 7: Elio / Selene     Gen 8: Victor / Gloria    Gen 9: Florian / Juliana
+    // Gen 4: Lucius / Lucia (Seite 3) - 🌟 ERWEITERT: Bereit für deine echten Sinnoh-Skins!
+    {
+        .variant = { [MALE] = 7,[FEMALE] = 8},
+        .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+    },
 };
 
 // 🌟 UNFEHLBARER LOGIK-BLOCK: Steuert die Karte rein über den RAM-Puffer ohne SaveBlock-Fehler!
@@ -1557,6 +1568,7 @@ static u8 SetCardBgsAndPals(void)
         LoadBgTiles(0, sData->cardTiles, 0x1800, 0);
         break;
     case 2:
+    {
         if (sData->cardType != CARD_TYPE_FRLG)
         {
             LoadPalette(sHoennTrainerCardPals[sData->trainerCard.stars], BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
@@ -1572,8 +1584,12 @@ static u8 SetCardBgsAndPals(void)
                 LoadPalette(sKantoTrainerCardFemaleBg_Pal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
         }
         LoadPalette(sTrainerCardStar_Pal, BG_PLTT_ID(4), PLTT_SIZE_4BPP);
-        break;
+    }
+    break;
+
+
     case 3:
+
         SetBgTilemapBuffer(0, sData->cardTilemapBuffer);
         SetBgTilemapBuffer(2, sData->bgTilemapBuffer);
         break;
@@ -2013,19 +2029,58 @@ static void CreateTrainerCardTrainerPic(void)
     if (InUnionRoom() == TRUE && gReceivedRemoteLinkPlayers)
     {
         CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(sData->trainerCard.unionRoomClass),
-                    TRUE,
-                    sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][0],
-                    sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][1],
-                    8,
-                    WIN_TRAINER_PIC);
+            TRUE,
+            sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][0],
+            sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][1],
+            8,
+            WIN_TRAINER_PIC);
     }
     else
     {
-        CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(TrainerCardGetFacilityClass()),
-                    TRUE,
-                    sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][0],
-                    sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][1],
-                    8,
-                    WIN_TRAINER_PIC);
+        u16 destX, destY;
+        u8 gender = sData->trainerCard.gender;
+        u8 page = TrainerCardGetPage();
+
+        // === 🌟 AUTOMATISCHER KOORDINATEN-SCHUTZ FÜR ALLE CUSTOM-SEITEN ===
+        if (page == 1 || page == 3) // Johto oder Sinnoh
+        {
+            destX = 1;
+            destY = 0;
+        }
+        else
+        {
+            destX = sTrainerPicOffset[sData->isHoenn][gender][0];
+            destY = sTrainerPicOffset[sData->isHoenn][gender][1];
+        }
+
+        if (page == 3) // === 💎 Gen 4 (Sinnoh) ausgewählt! ===
+        {
+            // Erzeugt das standardmäßige Sprite-Fenster typesafe als OAM-Objekt
+            CreateTrainerCardTrainerPicSprite(TRAINER_PIC_BRENDAN, TRUE, destX, destY, 8, WIN_TRAINER_PIC);
+
+            if (gender == MALE)
+            {
+                // 🌟 REPARATUR-FIX: Nutzt jetzt die sauberen, echten Namen ohne das alte _Custom!
+                LoadPalette(gTrainerPalette_Lucas, OBJ_PLTT_ID(8), PLTT_SIZE_4BPP);
+                LZ77UnCompVram(gTrainerFrontPic_Lucas, (void*)(OBJ_VRAM0 + 0x150 * 32));
+            }
+            else
+            {
+                // 🌟 REPARATUR-FIX: Nutzt jetzt die sauberen, echten Namen ohne das alte _Custom!
+                LoadPalette(gTrainerPalette_Dawn, OBJ_PLTT_ID(8), PLTT_SIZE_4BPP);
+                LZ77UnCompVram(gTrainerFrontPic_Dawn, (void*)(OBJ_VRAM0 + 0x150 * 32));
+            }
+            return; // Beendet die Funktion typesafe, damit kein Hoenn-Fallback dazwischenfunkt!
+        }
+        else if (page == 1) // === 🟢 Gen 2 (Johto) ausgewählt! ===
+        {
+            u16 finalPicIndex = (gender == MALE) ? TRAINER_PIC_RS_BRENDAN : TRAINER_PIC_RS_MAY;
+            CreateTrainerCardTrainerPicSprite(finalPicIndex, TRUE, destX, destY, 8, WIN_TRAINER_PIC);
+        }
+        else // === 🔵 Standard Gen 3 / Gen 1 Schiene ===
+        {
+            CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(TrainerCardGetFacilityClass()), TRUE, destX, destY, 8, WIN_TRAINER_PIC);
+        }
     }
 }
+
