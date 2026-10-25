@@ -35,15 +35,11 @@
 #include "constants/trainers.h"
 #include "constants/event_objects.h"
 #include "constants/union_room.h"
-
-// 🌟 SINNOH-MENÜ-GRAFIKEN (Front-Pics und Paletten extern für die Trainerkarte anmelden)
 // 🌟 SINNOH-MENÜ-GRAFIKEN (Die echten, vom GFTPL generierten Pfade ohne _Custom anmelden!)
 extern const u32 gTrainerFrontPic_Lucas[];
 extern const u16 gTrainerPalette_Lucas[];
 extern const u32 gTrainerFrontPic_Dawn[];
 extern const u16 gTrainerPalette_Dawn[];
-
-
 
 enum {
     WIN_MSG,
@@ -377,6 +373,7 @@ static const struct TrainerCardGenPage sTrainerCardGenPages[] =
 EWRAM_DATA u8 sTrainerCardCurrentPage = 0; // 0 = Gen 1, 1 = Gen 2, 2 = Gen 3
 EWRAM_DATA u8 sTrainerCardCurrentSkin = 0; // 0 = Hauptheld, 1 = Rivale/Alternativ
 
+
 static u8 TrainerCardGetPage(void)
 {
     return sTrainerCardCurrentPage;
@@ -396,17 +393,11 @@ static u8 TrainerCardGetFacilityClass(void)
     u8 facilityClass = CARD_NO_PORTRAIT;
 
     if (!sData->isLink)
-    {
-        u8 currentPage = TrainerCardGetPage();
-        facilityClass = sTrainerCardGenPages[currentPage].facilityClass[gender];
-    }
-
+        facilityClass = sTrainerCardGenPages[TrainerCardGetPage()].facilityClass[gender];
     if (facilityClass == CARD_NO_PORTRAIT)
         facilityClass = sTrainerPicFacilityClass[sData->cardType][gender];
-
     return facilityClass;
 }
-
 
 
 static bool8 (*const sTrainerCardFlipTasks[])(struct Task *) =
@@ -534,40 +525,45 @@ static void Task_TrainerCard(u8 taskId)
             DrawTrainerCardWindow(WIN_CARD_TEXT);
             sData->timeColonNeedDraw = FALSE;
         }
-        // 1. GENERATION WECHSELN MIT L / R (Blättert die Reihen 0, 1, 2)
-        if (JOY_NEW(L_BUTTON) || JOY_NEW(R_BUTTON))
+        // 1. NAMENSÄNDERUNG MIT SELECT
+        if (JOY_NEW(SELECT_BUTTON))
+        {
+            PlaySE(SE_SELECT);
+            FreeAllWindowBuffers();
+            DoNamingScreen(NAMING_SCREEN_PLAYER, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->playerGender, 0, 0, CB2_InitTrainerCard);
+        }
+        // 2. SKIN-WECHSEL MIT STEUERKREUZ
+        else if (JOY_NEW(DPAD_LEFT) || JOY_NEW(DPAD_RIGHT))
+        {
+            PlaySE(SE_SELECT);
+            {
+                u8 page = TrainerCardGetPage();
+                gSaveBlock2Ptr->playerGender ^= 1;
+                TrainerCardApplyPage(page); // NEU: Generation bleibt, Variante passt zum neuen Geschlecht
+            }
+            ResetSpriteData();
+            FreeAllSpritePalettes();
+            FreeAllWindowBuffers();
+            SetMainCallback2(CB2_InitTrainerCard);
+        }
+        // 3. NEU: GENERATION WECHSELN MIT L/R (nur bei der eigenen Karte)
+        else if (!sData->isLink && (JOY_NEW(L_BUTTON) || JOY_NEW(R_BUTTON)))
         {
             u8 page = TrainerCardGetPage();
             u8 count = ARRAY_COUNT(sTrainerCardGenPages);
+
             PlaySE(SE_SELECT);
             if (JOY_NEW(R_BUTTON))
                 page = (page + 1) % count;
             else
                 page = (page + count - 1) % count;
             TrainerCardApplyPage(page);
-
-            ResetSpriteData(); FreeAllSpritePalettes(); FreeAllWindowBuffers();
+            ResetSpriteData();
+            FreeAllSpritePalettes();
+            FreeAllWindowBuffers();
             SetMainCallback2(CB2_InitTrainerCard);
         }
-        // 2. SKIN WECHSELN MIT DPAD LINKS / RECHTS (Schaltet Skin 0 und 1 um)
-        else if (JOY_NEW(DPAD_LEFT) || JOY_NEW(DPAD_RIGHT))
-        {
-            PlaySE(SE_SELECT);
-            sTrainerCardCurrentSkin ^= 1;
-
-            ResetSpriteData(); FreeAllSpritePalettes(); FreeAllWindowBuffers();
-            SetMainCallback2(CB2_InitTrainerCard);
-        }
-        // 3. GESCHLECHT WECHSELN MIT A_BUTTON (Standard-Nintendo-Schiene)
         else if (JOY_NEW(A_BUTTON))
-        {
-            PlaySE(SE_SELECT);
-            gSaveBlock2Ptr->playerGender ^= 1;
-
-            ResetSpriteData(); FreeAllSpritePalettes(); FreeAllWindowBuffers();
-            SetMainCallback2(CB2_InitTrainerCard);
-        }
-        else if (JOY_NEW(SELECT_BUTTON)) // Mit SELECT drehen wir die Karte jetzt um
         {
             FlipTrainerCard();
             PlaySE(SE_RG_CARD_FLIP);
@@ -575,11 +571,15 @@ static void Task_TrainerCard(u8 taskId)
         }
         else if (JOY_NEW(B_BUTTON))
         {
-            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, sData->blendColor);
-            sData->mainState = STATE_CLOSE_CARD;
+            if (gReceivedRemoteLinkPlayers && sData->isLink && InUnionRoom() == TRUE)
+                sData->mainState = STATE_WAIT_LINK_PARTNER;
+            else
+            {
+                BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, sData->blendColor);
+                sData->mainState = STATE_CLOSE_CARD;
+            }
         }
         break;
-
     case STATE_WAIT_FLIP_TO_BACK:
         if (IsCardFlipTaskActive() && Overworld_IsRecvQueueAtMax() != TRUE)
         {
@@ -708,6 +708,10 @@ static void CB2_InitTrainerCard(void)
     switch (gMain.state)
     {
     case 0:
+        // NEU: eigene Karte bei jedem (Neu-)Start aus dem Spielstand lesen, damit Geschlecht
+        // und Name nach Steuerkreuz/SELECT sofort stimmen (vorher blieb die Kopie vom Oeffnen)
+        if (!sData->isLink)
+            TrainerCard_GenerateCardForPlayer(&sData->trainerCard);
         ResetGpuRegs();
         SetUpTrainerCardTask();
         gMain.state++;
@@ -1143,13 +1147,21 @@ static void PrintNameOnCardFront(void)
     else
         AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 16, 33, sTrainerCardTextColors, TEXT_SKIP_DRAW, buffer);
 
-    // --- DEINE NEUE INTERAKTIVE TASTEN-ZUWEISUNG (HORIZONTAL IM WEISSEN BEREICH RECHTS) ---
+    // --- INTERAKTIVE TASTEN-HINWEISE (rechts im weissen Bereich) ---
+    // SELECT = Name, L/R = Generation (zeigt die aktuelle Nummer), Steuerkreuz = Skin (Junge/Maedchen)
     static const u8 sTextSelectName[] = _("SELECT: NAME");
-    static const u8 sTextDpadSkin[]   = _("L/R: SKIN");
+    static const u8 sTextPadSkin[]    = _("PAD: SKIN");
+    static const u8 sTextGenPrefix[]  = _("L/R:GEN ");
+    u8 genText[16];
 
-    // Beide auf Hoehe 28 (neben dem Namen), aber weit nach rechts versetzt (X: 110 und X: 180)
     AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_SMALL, 110, 28, sTrainerCardTextColors, TEXT_SKIP_DRAW, sTextSelectName);
-    AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_SMALL, 180, 28, sTrainerCardTextColors, TEXT_SKIP_DRAW, sTextDpadSkin);
+    if (!sData->isLink)
+    {
+        u8 *end = StringCopy(genText, sTextGenPrefix);
+        ConvertIntToDecimalStringN(end, TrainerCardGetPage() + 1, STR_CONV_MODE_LEFT_ALIGN, 1);
+        AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_SMALL, 180, 28, sTrainerCardTextColors, TEXT_SKIP_DRAW, genText);
+        AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_SMALL, 110, 38, sTrainerCardTextColors, TEXT_SKIP_DRAW, sTextPadSkin);
+    }
 }
 
 static void PrintIdOnCard(void)
@@ -2083,4 +2095,3 @@ static void CreateTrainerCardTrainerPic(void)
         }
     }
 }
-
