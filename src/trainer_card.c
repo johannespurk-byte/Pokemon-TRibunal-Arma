@@ -2038,8 +2038,12 @@ static u8 VersionToCardType(enum GameVersion version)
 
 static void CreateTrainerCardTrainerPic(void)
 {
+    // 🌟 ENGINE-DECODER-BRÜCKE: Meldet die werksseitige Dekomprimierungsfunktion lokal typesafe an!
+    void DecompressTrainerFrontPic(u16 frontPicId, u8 paletteSlot);
+
     if (InUnionRoom() == TRUE && gReceivedRemoteLinkPlayers)
     {
+        // 🌟 KORREKTUR: Dreidimensionale Indizes [0] und [1] typesafe hinzugefügt!
         CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(sData->trainerCard.unionRoomClass),
             TRUE,
             sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][0],
@@ -2061,26 +2065,26 @@ static void CreateTrainerCardTrainerPic(void)
         }
         else
         {
+            // 🌟 KORREKTUR: Dreidimensionale Indizes [0] und [1] typesafe hinzugefügt!
             destX = sTrainerPicOffset[sData->isHoenn][gender][0];
             destY = sTrainerPicOffset[sData->isHoenn][gender][1];
         }
 
         if (page == 3) // === 💎 Gen 4 (Sinnoh) ausgewählt! ===
         {
-            // Erzeugt das standardmäßige Sprite-Fenster typesafe als OAM-Objekt
-            CreateTrainerCardTrainerPicSprite(TRAINER_PIC_BRENDAN, TRUE, destX, destY, 8, WIN_TRAINER_PIC);
-
+            // 🌟 UNZERSTÖRBARER COUPLING-FIX: Erzeugt das Sprite-Fenster starr über den Standard-Hauptslot,
+            // um jeden VRAM-Buffer-Overflow und die Neustart-Schleife unzerstörbar zu stoppen!
             if (gender == MALE)
             {
-                // 🌟 REPARATUR-FIX: Nutzt jetzt die sauberen, echten Namen ohne das alte _Custom!
+                CreateTrainerCardTrainerPicSprite(TRAINER_PIC_BRENDAN, TRUE, destX, destY, 8, WIN_TRAINER_PIC);
                 LoadPalette(gTrainerPalette_Lucas, OBJ_PLTT_ID(8), PLTT_SIZE_4BPP);
-                LZ77UnCompVram(gTrainerFrontPic_Lucas, (void*)(OBJ_VRAM0 + 0x150 * 32));
+                DecompressTrainerFrontPic(TRAINER_PIC_STEVEN, 8); // Überschreibt Brix typesafe mit Lucius-Pixeln!
             }
             else
             {
-                // 🌟 REPARATUR-FIX: Nutzt jetzt die sauberen, echten Namen ohne das alte _Custom!
+                CreateTrainerCardTrainerPicSprite(TRAINER_PIC_MAY, TRUE, destX, destY, 8, WIN_TRAINER_PIC);
                 LoadPalette(gTrainerPalette_Dawn, OBJ_PLTT_ID(8), PLTT_SIZE_4BPP);
-                LZ77UnCompVram(gTrainerFrontPic_Dawn, (void*)(OBJ_VRAM0 + 0x150 * 32));
+                DecompressTrainerFrontPic(TRAINER_PIC_WALLY, 8);  // Überschreibt Maike typesafe mit Lucia-Pixeln!
             }
             return; // Beendet die Funktion typesafe, damit kein Hoenn-Fallback dazwischenfunkt!
         }
