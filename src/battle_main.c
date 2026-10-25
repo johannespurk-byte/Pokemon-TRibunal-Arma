@@ -81,6 +81,17 @@
 #include "constants/trainers.h"
 #include "constants/weather.h"
 #include "cable_club.h"
+// 🌟 NEU: Externe Anmeldung deiner HGSS Kampfsprites für Ethan und Lyra (Gen 2)
+extern const u32 gTrainerBackPic_Ethan[];
+extern const u16 gTrainerPalette_Ethan[];
+extern const u32 gTrainerBackPic_Lyra[];
+extern const u16 gTrainerPalette_Lyra[];
+
+// 🌟 NEU: Externe Anmeldung deiner Platinum Kampfsprites für Lucas und Dawn (Gen 4)
+extern const u32 gTrainerBackPic_Lucas[];
+extern const u16 gTrainerPalette_Lucas[];
+extern const u32 gTrainerBackPic_Dawn[];
+extern const u16 gTrainerPalette_Dawn[];
 
 extern const struct BgTemplate gBattleBgTemplates[];
 extern const struct WindowTemplate *const gBattleWindowTemplates[];
@@ -3502,29 +3513,45 @@ static void DoBattleIntro(void)
             switch (GetBattlerPosition(battler))
             {
             case B_POSITION_PLAYER_LEFT: // player sprite
+            {
+                u16 activePage = VarGet(0x40EE); // Holt deine Charakter-ID aus dem Spielstand
+                u8 gender = gSaveBlock2Ptr->playerGender;
+
+                // === 💎 Gen 4 (Sinnoh) Kampf-Rückansichten-Weiche ===
+                if (activePage == 7 || activePage == 8) // Sinnoh aktiv!
+                {
+                    if (gender == MALE)
+                    {
+                        LoadCompressedSpriteSheetUsingHeap((const struct CompressedSpriteSheet[]) { { gTrainerBackPic_Lucas, 0x2000, TRAINER_PIC_RED } });
+                        LoadSpritePalette((const struct SpritePalette[]) { { gTrainerPalette_Lucas, TRAINER_PIC_RED } });
+                    }
+                    else
+                    {
+                        LoadCompressedSpriteSheetUsingHeap((const struct CompressedSpriteSheet[]) { { gTrainerBackPic_Dawn, 0x2000, TRAINER_PIC_LEAF } });
+                        LoadSpritePalette((const struct SpritePalette[]) { { gTrainerPalette_Dawn, TRAINER_PIC_LEAF } });
+                    }
+                }
+                // === 🟢 Gen 2 (Johto) Kampf-Rückansichten-Weiche ===
+                else if (activePage == 5 || activePage == 6) // Johto aktiv!
+                {
+                    if (gender == MALE)
+                    {
+                        LoadCompressedSpriteSheetUsingHeap((const struct CompressedSpriteSheet[]) { { gTrainerBackPic_Ethan, 0x2000, TRAINER_PIC_RED } });
+                        LoadSpritePalette((const struct SpritePalette[]) { { gTrainerPalette_Ethan, TRAINER_PIC_RED } });
+                    }
+                    else
+                    {
+                        LoadCompressedSpriteSheetUsingHeap((const struct CompressedSpriteSheet[]) { { gTrainerBackPic_Lyra, 0x2000, TRAINER_PIC_LEAF } });
+                        LoadSpritePalette((const struct SpritePalette[]) { { gTrainerPalette_Lyra, TRAINER_PIC_LEAF } });
+                    }
+                }
+
+                // Führt das Zeichnen des Spielers typesafe mit den frisch geladenen VRAM-Kacheln aus
                 BtlController_EmitDrawTrainerPic(battler, B_COMM_TO_CONTROLLER);
                 MarkBattlerForControllerExec(battler);
-                break;
-            case B_POSITION_OPPONENT_LEFT:
-                if (gBattleTypeFlags & BATTLE_TYPE_TRAINER) // opponent 1 sprite
-                {
-                    BtlController_EmitDrawTrainerPic(battler, B_COMM_TO_CONTROLLER);
-                    MarkBattlerForControllerExec(battler);
-                }
-                else // wild mon 1
-                {
-                    BtlController_EmitLoadMonSprite(battler, B_COMM_TO_CONTROLLER);
-                    MarkBattlerForControllerExec(battler);
-                    gBattleResults.lastOpponentSpecies = GetMonData(GetBattlerMon(battler), MON_DATA_SPECIES);
-                }
-                break;
-            case B_POSITION_PLAYER_RIGHT:
-                if (gBattleTypeFlags & (BATTLE_TYPE_MULTI | BATTLE_TYPE_INGAME_PARTNER)) // partner sprite
-                {
-                    BtlController_EmitDrawTrainerPic(battler, B_COMM_TO_CONTROLLER);
-                    MarkBattlerForControllerExec(battler);
-                }
-                break;
+            }
+            break;
+
             case B_POSITION_OPPONENT_RIGHT:
                 if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
                 {
