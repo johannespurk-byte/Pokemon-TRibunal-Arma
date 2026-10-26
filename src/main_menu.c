@@ -1314,15 +1314,18 @@ static void HighlightSelectedMainMenuItem(enum PartyMenuType menuType, u8 select
 // Generation (= Trainerkarten-Seite), die im Birk-Intro mit L/R gewählt wird
 #define BIRCH_DEFAULT_CHARACTER_PAGE 2 // Gen 3: Brendan / May
 static EWRAM_DATA u8 sBirchCharacterPage = 0;
+static EWRAM_DATA bool8 sBirchCharacterPageChosen = FALSE;
 
+// Ohne Birk-Intro (z. B. Quickstart) bleibt es bei Gen 3, wie in pokeemerald
 u8 NewGameBirchSpeech_GetCharacterPage(void)
 {
-    return sBirchCharacterPage;
+    return sBirchCharacterPageChosen ? sBirchCharacterPage : BIRCH_DEFAULT_CHARACTER_PAGE;
 }
 
 static void Task_NewGameBirchSpeech_Init(u8 taskId)
 {
     sBirchCharacterPage = BIRCH_DEFAULT_CHARACTER_PAGE;
+    sBirchCharacterPageChosen = TRUE;
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
     InitBgFromTemplate(&sBirchBgTemplate);

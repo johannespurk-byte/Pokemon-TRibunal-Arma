@@ -455,44 +455,34 @@ static const union AnimCmd sAnim_PressStart_4[] =
     ANIMCMD_FRAME(17, 4),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_PressStart_5[] =
+static const union AnimCmd sAnim_Copyright_0[] =
 {
     ANIMCMD_FRAME(21, 4),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_PressStart_6[] =
+static const union AnimCmd sAnim_Copyright_1[] =
 {
     ANIMCMD_FRAME(25, 4),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_Copyright_0[] =
+static const union AnimCmd sAnim_Copyright_2[] =
 {
     ANIMCMD_FRAME(29, 4),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_Copyright_1[] =
+static const union AnimCmd sAnim_Copyright_3[] =
 {
     ANIMCMD_FRAME(33, 4),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_Copyright_2[] =
+static const union AnimCmd sAnim_Copyright_4[] =
 {
     ANIMCMD_FRAME(37, 4),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_Copyright_3[] =
-{
-    ANIMCMD_FRAME(41, 4),
-    ANIMCMD_END,
-};
-static const union AnimCmd sAnim_Copyright_4[] =
-{
-    ANIMCMD_FRAME(45, 4),
-    ANIMCMD_END,
-};
 
-// "Press Select for New Game" is 7 32x8 segments long, the copyright 5
-#define NUM_PRESS_START_FRAMES 7
+// The "Press Start" and copyright graphics are each 5 32x8 segments long
+#define NUM_PRESS_START_FRAMES 5
 #define NUM_COPYRIGHT_FRAMES 5
 
 static const union AnimCmd *const sStartCopyrightBannerAnimTable[NUM_PRESS_START_FRAMES + NUM_COPYRIGHT_FRAMES] =
@@ -502,8 +492,6 @@ static const union AnimCmd *const sStartCopyrightBannerAnimTable[NUM_PRESS_START
     sAnim_PressStart_2,
     sAnim_PressStart_3,
     sAnim_PressStart_4,
-    sAnim_PressStart_5,
-    sAnim_PressStart_6,
     [NUM_PRESS_START_FRAMES] =
     sAnim_Copyright_0,
     sAnim_Copyright_1,
@@ -525,7 +513,7 @@ static const struct CompressedSpriteSheet sSpriteSheet_PressStart[] =
 {
     {
         .data = gTitleScreenPressStartGfx,
-        .size = 0x620,
+        .size = 0x520,
         .tag = TAG_PRESS_START_COPYRIGHT
     },
     {},
@@ -654,7 +642,7 @@ static void CreatePressStartBanner(s16 x, s16 y)
     u8 i;
     u8 spriteId;
 
-    x -= 96;
+    x -= 64;
     for (i = 0; i < NUM_PRESS_START_FRAMES; i++, x += 32)
     {
         spriteId = CreateSprite(&sStartCopyrightBannerSpriteTemplate, x, y, 0);

@@ -443,14 +443,21 @@ static const struct TrainerCardGenPage sTrainerCardGenPages[] =
 
 EWRAM_DATA u8 sTrainerCardCurrentSkin = 0; // 0 = Hauptheld, 1 = Rivale/Alternativ
 
-// Die gewählte Seite liegt in VAR_TRAINER_CARD_PAGE und wird so mit dem Spielstand gespeichert.
+// Die gewählte Seite liegt als "Seite + 1" in VAR_TRAINER_CARD_PAGE und wird so mit dem Spielstand gespeichert.
+// 0 (neuer oder alter Spielstand ohne Wahl) ergibt die Emerald-Standardseite Gen 3.
 static u8 TrainerCardGetPage(void)
 {
-    u16 page = VarGet(VAR_TRAINER_CARD_PAGE);
+    u16 value = VarGet(VAR_TRAINER_CARD_PAGE);
 
-    if (page >= ARRAY_COUNT(sTrainerCardGenPages))
-        page = 0;
-    return page;
+    if (value == 0 || value > ARRAY_COUNT(sTrainerCardGenPages))
+        return CARD_DEFAULT_PAGE;
+    return value - 1;
+}
+
+void TrainerCard_SetCharacterPage(u8 page)
+{
+    if (page < ARRAY_COUNT(sTrainerCardGenPages))
+        VarSet(VAR_TRAINER_CARD_PAGE, page + 1);
 }
 
 u8 TrainerCard_GetCharacterPage(void)
@@ -484,10 +491,7 @@ const u8 *TrainerCard_GetPageLabel(u8 page)
 
 static void TrainerCardApplyPage(u8 page)
 {
-    if (page < ARRAY_COUNT(sTrainerCardGenPages))
-    {
-        VarSet(VAR_TRAINER_CARD_PAGE, page);
-    }
+    TrainerCard_SetCharacterPage(page);
 }
 
 static u8 TrainerCardGetFacilityClass(void)

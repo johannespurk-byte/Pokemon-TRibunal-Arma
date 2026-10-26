@@ -58,6 +58,7 @@ void TrainerCard_GenerateCardForLinkPlayer(struct TrainerCard *trainerCard);
 
 // Player character chosen via the trainer card generation pages (L/R on the card).
 u8 TrainerCard_GetCharacterPage(void);
+void TrainerCard_SetCharacterPage(u8 page);
 u16 TrainerCard_GetPlayerTrainerPic(u8 gender);
 u8 TrainerCard_GetPageCount(void);
 u16 TrainerCard_GetPagePlayerPic(u8 page, u8 gender);
