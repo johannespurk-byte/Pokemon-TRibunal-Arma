@@ -36,6 +36,7 @@
 #include "save.h"
 #include "link_rfu.h"
 #include "main.h"
+#include "main_menu.h"
 #include "contest.h"
 #include "item_menu.h"
 #include "pokemon_storage_system.h"
@@ -234,6 +235,8 @@ void NewGameInitData(void)
     ResetItemFlags();
     ResetDexNav();
     ClearFollowerNPCData();
+    // Im Birk-Intro gewählte Generation (ClearSav1 hat die Variablen oben gelöscht)
+    VarSet(VAR_TRAINER_CARD_PAGE, NewGameBirchSpeech_GetCharacterPage());
 }
 
 static void ResetMiniGamesRecords(void)

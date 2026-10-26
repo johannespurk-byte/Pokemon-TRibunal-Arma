@@ -38,6 +38,7 @@
 #include "text.h"
 #include "text_window.h"
 #include "title_screen.h"
+#include "trainer_card.h"
 #include "window.h"
 #include "mystery_gift_menu.h"
 
@@ -1310,8 +1311,18 @@ static void HighlightSelectedMainMenuItem(enum PartyMenuType menuType, u8 select
 #define tBrendanSpriteId data[10]
 #define tMaySpriteId data[11]
 
+// Generation (= Trainerkarten-Seite), die im Birk-Intro mit L/R gewählt wird
+#define BIRCH_DEFAULT_CHARACTER_PAGE 2 // Gen 3: Brendan / May
+static EWRAM_DATA u8 sBirchCharacterPage = 0;
+
+u8 NewGameBirchSpeech_GetCharacterPage(void)
+{
+    return sBirchCharacterPage;
+}
+
 static void Task_NewGameBirchSpeech_Init(u8 taskId)
 {
+    sBirchCharacterPage = BIRCH_DEFAULT_CHARACTER_PAGE;
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
     InitBgFromTemplate(&sBirchBgTemplate);
@@ -1562,10 +1573,46 @@ static void Task_NewGameBirchSpeech_BoyOrGirl(u8 taskId)
     gTasks[taskId].func = Task_NewGameBirchSpeech_WaitToShowGenderMenu;
 }
 
+static void NewGameBirchSpeech_PrintGenerationHint(void)
+{
+    static const u8 sText_Prefix[] = _("Are you a boy or a girl?\nGeneration ");
+    static const u8 sText_Suffix[] = _("   {L_BUTTON}/{R_BUTTON}: change");
+    u8 *str = StringCopy(gStringVar4, sText_Prefix);
+
+    str = StringCopy(str, TrainerCard_GetPageLabel(sBirchCharacterPage));
+    StringCopy(str, sText_Suffix);
+    NewGameBirchSpeech_ClearWindow(0);
+    AddTextPrinterWithCustomSpeedForMessage(FALSE, 0);
+}
+
+// Ersetzt beide Spieler-Sprites durch die Charaktere der gewählten Generation
+static void NewGameBirchSpeech_RecreatePlayerSprites(u8 taskId)
+{
+    enum Gender gender;
+
+    DestroySpriteAndFreeResources(&gSprites[gTasks[taskId].tBrendanSpriteId]);
+    DestroySpriteAndFreeResources(&gSprites[gTasks[taskId].tMaySpriteId]);
+    for (gender = MALE; gender < GENDER_COUNT; gender++)
+    {
+        u8 spriteId = CreateTrainerSprite(TrainerCard_GetPagePlayerPic(sBirchCharacterPage, gender), 180, 60, 0, NULL);
+
+        gSprites[spriteId].callback = SpriteCB_Null;
+        gSprites[spriteId].oam.priority = 0;
+        gSprites[spriteId].invisible = (gender != gTasks[taskId].tPlayerGender);
+        if (gender == MALE)
+            gTasks[taskId].tBrendanSpriteId = spriteId;
+        else
+            gTasks[taskId].tMaySpriteId = spriteId;
+        if (gender == gTasks[taskId].tPlayerGender)
+            gTasks[taskId].tPlayerSpriteId = spriteId;
+    }
+}
+
 static void Task_NewGameBirchSpeech_WaitToShowGenderMenu(u8 taskId)
 {
     if (!RunTextPrintersAndIsPrinter0Active())
     {
+        NewGameBirchSpeech_PrintGenerationHint();
         NewGameBirchSpeech_ShowGenderMenu();
         gTasks[taskId].func = Task_NewGameBirchSpeech_ChooseGender;
     }
@@ -1573,9 +1620,25 @@ static void Task_NewGameBirchSpeech_WaitToShowGenderMenu(u8 taskId)
 
 static void Task_NewGameBirchSpeech_ChooseGender(u8 taskId)
 {
-    enum Gender gender = NewGameBirchSpeech_ProcessGenderMenuInput();
+    enum Gender gender;
     enum Gender gender2;
 
+    // L/R: Generation wechseln (gleiche Seiten wie auf der Trainerkarte)
+    if (JOY_NEW(L_BUTTON) || JOY_NEW(R_BUTTON))
+    {
+        u8 count = TrainerCard_GetPageCount();
+
+        PlaySE(SE_SELECT);
+        if (JOY_NEW(R_BUTTON))
+            sBirchCharacterPage = (sBirchCharacterPage + 1) % count;
+        else
+            sBirchCharacterPage = (sBirchCharacterPage + count - 1) % count;
+        NewGameBirchSpeech_RecreatePlayerSprites(taskId);
+        NewGameBirchSpeech_PrintGenerationHint();
+        return;
+    }
+
+    gender = NewGameBirchSpeech_ProcessGenderMenuInput();
     switch (gender)
     {
     case MALE:
@@ -1997,12 +2060,12 @@ static void AddBirchSpeechObjects(u8 taskId)
     gSprites[lotadSpriteId].oam.priority = 0;
     gSprites[lotadSpriteId].invisible = TRUE;
     gTasks[taskId].tLotadSpriteId = lotadSpriteId;
-    brendanSpriteId = CreateTrainerSprite(FacilityClassToPicIndex(FACILITY_CLASS_BRENDAN), 120, 60, 0, NULL);
+    brendanSpriteId = CreateTrainerSprite(TrainerCard_GetPagePlayerPic(sBirchCharacterPage, MALE), 120, 60, 0, NULL);
     gSprites[brendanSpriteId].callback = SpriteCB_Null;
     gSprites[brendanSpriteId].invisible = TRUE;
     gSprites[brendanSpriteId].oam.priority = 0;
     gTasks[taskId].tBrendanSpriteId = brendanSpriteId;
-    maySpriteId = CreateTrainerSprite(FacilityClassToPicIndex(FACILITY_CLASS_MAY), 120, 60, 0, NULL);
+    maySpriteId = CreateTrainerSprite(TrainerCard_GetPagePlayerPic(sBirchCharacterPage, FEMALE), 120, 60, 0, NULL);
     gSprites[maySpriteId].callback = SpriteCB_Null;
     gSprites[maySpriteId].invisible = TRUE;
     gSprites[maySpriteId].oam.priority = 0;

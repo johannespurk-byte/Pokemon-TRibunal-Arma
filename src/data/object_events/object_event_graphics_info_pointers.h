@@ -3,6 +3,16 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanNormal
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HilbertNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HildaNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NateNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RosaNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CalemNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SerenaNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ElioNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SeleneNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_VictorNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GloriaNormal;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
@@ -801,6 +811,16 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 	[OBJ_EVENT_GFX_LYRA_NORMAL] = &gObjectEventGraphicsInfo_LyraNormal,
     [OBJ_EVENT_GFX_LUCAS_NORMAL] = &gObjectEventGraphicsInfo_LucasNormal,
     [OBJ_EVENT_GFX_DAWN_NORMAL] = &gObjectEventGraphicsInfo_DawnNormal,
+    [OBJ_EVENT_GFX_HILBERT_NORMAL] = &gObjectEventGraphicsInfo_HilbertNormal,
+    [OBJ_EVENT_GFX_HILDA_NORMAL] = &gObjectEventGraphicsInfo_HildaNormal,
+    [OBJ_EVENT_GFX_NATE_NORMAL] = &gObjectEventGraphicsInfo_NateNormal,
+    [OBJ_EVENT_GFX_ROSA_NORMAL] = &gObjectEventGraphicsInfo_RosaNormal,
+    [OBJ_EVENT_GFX_CALEM_NORMAL] = &gObjectEventGraphicsInfo_CalemNormal,
+    [OBJ_EVENT_GFX_SERENA_NORMAL] = &gObjectEventGraphicsInfo_SerenaNormal,
+    [OBJ_EVENT_GFX_ELIO_NORMAL] = &gObjectEventGraphicsInfo_ElioNormal,
+    [OBJ_EVENT_GFX_SELENE_NORMAL] = &gObjectEventGraphicsInfo_SeleneNormal,
+    [OBJ_EVENT_GFX_VICTOR_NORMAL] = &gObjectEventGraphicsInfo_VictorNormal,
+    [OBJ_EVENT_GFX_GLORIA_NORMAL] = &gObjectEventGraphicsInfo_GloriaNormal,
 
 };
 

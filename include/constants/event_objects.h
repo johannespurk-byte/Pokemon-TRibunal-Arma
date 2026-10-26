@@ -425,6 +425,16 @@ enum
         OBJ_EVENT_GFX_LYRA_NORMAL,
         OBJ_EVENT_GFX_LUCAS_NORMAL,
         OBJ_EVENT_GFX_DAWN_NORMAL,
+        OBJ_EVENT_GFX_HILBERT_NORMAL,
+        OBJ_EVENT_GFX_HILDA_NORMAL,
+        OBJ_EVENT_GFX_NATE_NORMAL,
+        OBJ_EVENT_GFX_ROSA_NORMAL,
+        OBJ_EVENT_GFX_CALEM_NORMAL,
+        OBJ_EVENT_GFX_SERENA_NORMAL,
+        OBJ_EVENT_GFX_ELIO_NORMAL,
+        OBJ_EVENT_GFX_SELENE_NORMAL,
+        OBJ_EVENT_GFX_VICTOR_NORMAL,
+        OBJ_EVENT_GFX_GLORIA_NORMAL,
 
         NUM_OBJ_EVENT_GFX,
 };
@@ -534,6 +544,16 @@ enum
 #define OBJ_EVENT_PAL_TAG_LYRA                     0x11F1 // NEU
 #define OBJ_EVENT_PAL_TAG_LUCAS                   0x11F2
 #define OBJ_EVENT_PAL_TAG_DAWN                    0x11F3
+#define OBJ_EVENT_PAL_TAG_HILBERT                 0x11F4
+#define OBJ_EVENT_PAL_TAG_HILDA                   0x11F5
+#define OBJ_EVENT_PAL_TAG_NATE                    0x11F6
+#define OBJ_EVENT_PAL_TAG_ROSA                    0x11F7
+#define OBJ_EVENT_PAL_TAG_CALEM                   0x11F8
+#define OBJ_EVENT_PAL_TAG_SERENA                  0x11F9
+#define OBJ_EVENT_PAL_TAG_ELIO                    0x11FA
+#define OBJ_EVENT_PAL_TAG_SELENE                  0x11FB
+#define OBJ_EVENT_PAL_TAG_VICTOR                  0x11FC
+#define OBJ_EVENT_PAL_TAG_GLORIA                  0x11FD
 #define OBJ_EVENT_PAL_TAG_BRENDAN_REFLECTION      0x1101
 #define OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION       0x1102
 #define OBJ_EVENT_PAL_TAG_NPC_1                   0x1103

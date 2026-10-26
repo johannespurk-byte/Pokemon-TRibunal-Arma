@@ -331,6 +331,11 @@ static const struct PACKED
         {OBJ_EVENT_GFX_ETHAN_NORMAL,        PLAYER_AVATAR_FLAG_ON_FOOT},
         {OBJ_EVENT_GFX_LUCAS_NORMAL,        PLAYER_AVATAR_FLAG_ON_FOOT},
         {OBJ_EVENT_GFX_RED,                 PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_HILBERT_NORMAL,      PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_NATE_NORMAL,         PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_CALEM_NORMAL,        PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_ELIO_NORMAL,         PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_VICTOR_NORMAL,       PLAYER_AVATAR_FLAG_ON_FOOT},
     },
     [FEMALE] =
     {
@@ -343,7 +348,23 @@ static const struct PACKED
         {OBJ_EVENT_GFX_LYRA_NORMAL,           PLAYER_AVATAR_FLAG_ON_FOOT},
         {OBJ_EVENT_GFX_DAWN_NORMAL,           PLAYER_AVATAR_FLAG_ON_FOOT},
         {OBJ_EVENT_GFX_LEAF,                  PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_HILDA_NORMAL,          PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_ROSA_NORMAL,           PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_SERENA_NORMAL,         PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_SELENE_NORMAL,         PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_GLORIA_NORMAL,         PLAYER_AVATAR_FLAG_ON_FOOT},
     }
+};
+
+// Lauf-Sprite je Trainerkarten-Seite ab Gen 4 (Seite 4 = Index 0)
+static const u16 sPlayerAvatarOnFootGfx_Gen4Plus[][GENDER_COUNT] =
+{
+    { [MALE] = OBJ_EVENT_GFX_LUCAS_NORMAL,   [FEMALE] = OBJ_EVENT_GFX_DAWN_NORMAL },   // Gen 4
+    { [MALE] = OBJ_EVENT_GFX_HILBERT_NORMAL, [FEMALE] = OBJ_EVENT_GFX_HILDA_NORMAL },  // Gen 5 (SW)
+    { [MALE] = OBJ_EVENT_GFX_NATE_NORMAL,    [FEMALE] = OBJ_EVENT_GFX_ROSA_NORMAL },   // Gen 5 (SW2)
+    { [MALE] = OBJ_EVENT_GFX_CALEM_NORMAL,   [FEMALE] = OBJ_EVENT_GFX_SERENA_NORMAL }, // Gen 6
+    { [MALE] = OBJ_EVENT_GFX_ELIO_NORMAL,    [FEMALE] = OBJ_EVENT_GFX_SELENE_NORMAL }, // Gen 7
+    { [MALE] = OBJ_EVENT_GFX_VICTOR_NORMAL,  [FEMALE] = OBJ_EVENT_GFX_GLORIA_NORMAL }, // Gen 8
 };
 
 
@@ -402,28 +423,15 @@ u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
         }
     }
 
-    // === 💎 Gen 4 (Sinnoh: Lucas / Dawn) ===
-    if (activePage == 3) // Vierte Seite (Gen 4 Sinnoh)
+    // === Gen 4-8 (Seite 4-8): eigene Lauf-Sprites, Fahrrad/Surfen nutzen Brendan/May ===
+    if (activePage >= 3 && activePage - 3 < ARRAY_COUNT(sPlayerAvatarOnFootGfx_Gen4Plus))
     {
-        if (gender == FEMALE)
+        switch (state)
         {
-            switch (state)
-            {
-            case PLAYER_AVATAR_STATE_MACH_BIKE:
-            case PLAYER_AVATAR_STATE_ACRO_BIKE:   return PLAYER_AVATAR_GFX_FEMALE_MACH_BIKE;
-            case PLAYER_AVATAR_STATE_SURFING:     return PLAYER_AVATAR_GFX_FEMALE_SURFING;
-            default:                              return OBJ_EVENT_GFX_DAWN_NORMAL;          // Lädt deine echte Lucia!
-            }
-        }
-        else
-        {
-            switch (state)
-            {
-            case PLAYER_AVATAR_STATE_MACH_BIKE:
-            case PLAYER_AVATAR_STATE_ACRO_BIKE:   return PLAYER_AVATAR_GFX_MALE_MACH_BIKE;
-            case PLAYER_AVATAR_STATE_SURFING:     return PLAYER_AVATAR_GFX_MALE_SURFING;
-            default:                              return OBJ_EVENT_GFX_LUCAS_NORMAL;         // Lädt deinen echten Lucius!
-            }
+        case PLAYER_AVATAR_STATE_NORMAL:
+            return sPlayerAvatarOnFootGfx_Gen4Plus[activePage - 3][gender];
+        default:
+            return sPlayerAvatarGfxIds[state][gender];
         }
     }
 

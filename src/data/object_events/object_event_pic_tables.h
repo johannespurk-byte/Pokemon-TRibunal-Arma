@@ -10,6 +10,46 @@ static const struct SpriteFrameImage sPicTable_DawnNormal[] = {
     overworld_ascending_frames(gObjectEventPic_DawnNormal, 2, 4),
 };
 
+
+static const struct SpriteFrameImage sPicTable_HilbertNormal[] = {
+    overworld_ascending_frames(gObjectEventPic_HilbertNormal, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_HildaNormal[] = {
+    overworld_ascending_frames(gObjectEventPic_HildaNormal, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_NateNormal[] = {
+    overworld_ascending_frames(gObjectEventPic_NateNormal, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RosaNormal[] = {
+    overworld_ascending_frames(gObjectEventPic_RosaNormal, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CalemNormal[] = {
+    overworld_ascending_frames(gObjectEventPic_CalemNormal, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_SerenaNormal[] = {
+    overworld_ascending_frames(gObjectEventPic_SerenaNormal, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_ElioNormal[] = {
+    overworld_ascending_frames(gObjectEventPic_ElioNormal, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_SeleneNormal[] = {
+    overworld_ascending_frames(gObjectEventPic_SeleneNormal, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_VictorNormal[] = {
+    overworld_ascending_frames(gObjectEventPic_VictorNormal, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_GloriaNormal[] = {
+    overworld_ascending_frames(gObjectEventPic_GloriaNormal, 2, 4),
+};
 static const struct SpriteFrameImage sPicTable_BrendanMachBike[] = {
     overworld_ascending_frames(gObjectEventPic_BrendanMachBike, 4, 4),
 };

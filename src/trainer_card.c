@@ -375,6 +375,7 @@ struct TrainerCardGenPage
     u8 variant[GENDER_COUNT];       // playerCharacterVariant, der bei dieser Seite gesetzt wird
     u8 facilityClass[GENDER_COUNT]; // Portrait auf der Karte
     u16 trainerPic[GENDER_COUNT];   // Trainer-Bild für Karte (Vorderseite) und Kampf (Rückseite/Wurf)
+    const u8 *genLabel;             // Anzeige hinter "L/R:GEN "
 };
 
 static const struct TrainerCardGenPage sTrainerCardGenPages[] =
@@ -384,24 +385,58 @@ static const struct TrainerCardGenPage sTrainerCardGenPages[] =
         .variant = { [MALE] = PLAYER_CHARACTER_RED,[FEMALE] = PLAYER_CHARACTER_LEAF},
         .facilityClass = { [MALE] = FACILITY_CLASS_RED,[FEMALE] = FACILITY_CLASS_LEAF},
         .trainerPic = { [MALE] = TRAINER_PIC_RED, [FEMALE] = TRAINER_PIC_LEAF },
+        .genLabel = COMPOUND_STRING("1"),
     },
     // Gen 2: Ethan / Lyra (Seite 1)
     {
         .variant = { [MALE] = PLAYER_CHARACTER_ETHAN,[FEMALE] = PLAYER_CHARACTER_LYRA},
         .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
         .trainerPic = { [MALE] = TRAINER_PIC_ETHAN, [FEMALE] = TRAINER_PIC_LYRA },
+        .genLabel = COMPOUND_STRING("2"),
     },
     // Gen 3: Brendan / May (Seite 2)
     {
         .variant = { [MALE] = PLAYER_CHARACTER_DEFAULT,[FEMALE] = PLAYER_CHARACTER_DEFAULT},
         .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
         .trainerPic = { [MALE] = TRAINER_PIC_BRENDAN, [FEMALE] = TRAINER_PIC_MAY },
+        .genLabel = COMPOUND_STRING("3"),
     },
     // Gen 4: Lucius / Lucia (Seite 3)
     {
         .variant = { [MALE] = 7,[FEMALE] = 8},
         .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
         .trainerPic = { [MALE] = TRAINER_PIC_LUCAS, [FEMALE] = TRAINER_PIC_DAWN },
+        .genLabel = COMPOUND_STRING("4"),
+    },
+    // Gen 5: Hilbert / Hilda (Seite 4)
+    {
+        .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+        .trainerPic = { [MALE] = TRAINER_PIC_HILBERT, [FEMALE] = TRAINER_PIC_HILDA },
+        .genLabel = COMPOUND_STRING("5"),
+    },
+    // Gen 5 (SW2): Nate / Rosa (Seite 5)
+    {
+        .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+        .trainerPic = { [MALE] = TRAINER_PIC_NATE, [FEMALE] = TRAINER_PIC_ROSA },
+        .genLabel = COMPOUND_STRING("5-2"),
+    },
+    // Gen 6: Calem / Serena (Seite 6)
+    {
+        .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+        .trainerPic = { [MALE] = TRAINER_PIC_CALEM, [FEMALE] = TRAINER_PIC_SERENA },
+        .genLabel = COMPOUND_STRING("6"),
+    },
+    // Gen 7: Elio / Selene (Seite 7)
+    {
+        .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+        .trainerPic = { [MALE] = TRAINER_PIC_ELIO, [FEMALE] = TRAINER_PIC_SELENE },
+        .genLabel = COMPOUND_STRING("7"),
+    },
+    // Gen 8: Victor / Gloria (Seite 8)
+    {
+        .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+        .trainerPic = { [MALE] = TRAINER_PIC_VICTOR, [FEMALE] = TRAINER_PIC_GLORIA },
+        .genLabel = COMPOUND_STRING("8"),
     },
 };
 
@@ -424,7 +459,26 @@ u8 TrainerCard_GetCharacterPage(void)
 
 u16 TrainerCard_GetPlayerTrainerPic(u8 gender)
 {
-    return sTrainerCardGenPages[TrainerCardGetPage()].trainerPic[gender != MALE];
+    return TrainerCard_GetPagePlayerPic(TrainerCardGetPage(), gender);
+}
+
+u8 TrainerCard_GetPageCount(void)
+{
+    return ARRAY_COUNT(sTrainerCardGenPages);
+}
+
+u16 TrainerCard_GetPagePlayerPic(u8 page, u8 gender)
+{
+    if (page >= ARRAY_COUNT(sTrainerCardGenPages))
+        page = 0;
+    return sTrainerCardGenPages[page].trainerPic[gender != MALE];
+}
+
+const u8 *TrainerCard_GetPageLabel(u8 page)
+{
+    if (page >= ARRAY_COUNT(sTrainerCardGenPages))
+        page = 0;
+    return sTrainerCardGenPages[page].genLabel;
 }
 
 static void TrainerCardApplyPage(u8 page)
@@ -1206,7 +1260,7 @@ static void PrintNameOnCardFront(void)
     if (!sData->isLink)
     {
         u8 *end = StringCopy(genText, sTextGenPrefix);
-        ConvertIntToDecimalStringN(end, TrainerCardGetPage() + 1, STR_CONV_MODE_LEFT_ALIGN, 1);
+        StringCopy(end, sTrainerCardGenPages[TrainerCardGetPage()].genLabel);
         AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_SMALL, 180, 28, sTrainerCardTextColors, TEXT_SKIP_DRAW, genText);
         AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_SMALL, 110, 38, sTrainerCardTextColors, TEXT_SKIP_DRAW, sTextPadSkin);
     }
