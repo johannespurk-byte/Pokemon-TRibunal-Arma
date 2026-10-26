@@ -2007,6 +2007,9 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                0
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 0
 
+// Eigene Emerald-Flags, die in FRLG-Builds nur für gemeinsame Scripts definiert sein müssen
+#define FLAG_FINISHED_HAUS_BATTLE                            0
+
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0

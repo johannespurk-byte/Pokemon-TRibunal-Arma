@@ -10216,7 +10216,8 @@
       "border_filepath": "data/layouts/Mamor_Cace/border.bin",
       "blockdata_filepath": "data/layouts/Mamor_Cace/map.bin",
       "border_height": 2,
-      "border_width": 2
+      "border_width": 2,
+      "layout_version": "emerald"
     },
     {
       "id": "LAYOUT_MARMORCITYSCHOP",
@@ -10228,7 +10229,8 @@
       "border_filepath": "data/layouts/MARMORCITYSCHOP/border.bin",
       "blockdata_filepath": "data/layouts/MARMORCITYSCHOP/map.bin",
       "border_height": 2,
-      "border_width": 2
+      "border_width": 2,
+      "layout_version": "emerald"
     },
     {
       "id": "LAYOUT_MAGMACAMP",
@@ -10240,7 +10242,8 @@
       "border_filepath": "data/layouts/Magmacamp/border.bin",
       "blockdata_filepath": "data/layouts/Magmacamp/map.bin",
       "border_height": 2,
-      "border_width": 2
+      "border_width": 2,
+      "layout_version": "emerald"
     },
     {
       "id": "LAYOUT_Fossil_Ruins",
@@ -10250,7 +10253,10 @@
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_NavelRock",
       "border_filepath": "data/layouts/Fossil_Ruins/border.bin",
-      "blockdata_filepath": "data/layouts/Fossil_Ruins/map.bin"
+      "blockdata_filepath": "data/layouts/Fossil_Ruins/map.bin",
+      "border_height": 2,
+      "border_width": 2,
+      "layout_version": "emerald"
     },
     {
       "id": "LAYOUT_FOSSIL_RUINS_2",
@@ -10260,7 +10266,10 @@
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_NavelRock",
       "border_filepath": "data/layouts/Fossil_Ruins_2/border.bin",
-      "blockdata_filepath": "data/layouts/Fossil_Ruins_2/map.bin"
+      "blockdata_filepath": "data/layouts/Fossil_Ruins_2/map.bin",
+      "border_height": 2,
+      "border_width": 2,
+      "layout_version": "emerald"
     },
     {
       "id": "LAYOUT_LITTLEROOTCITY_ARENA",
@@ -10270,7 +10279,10 @@
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/LittlerootcityArena/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootcityArena/map.bin"
+      "blockdata_filepath": "data/layouts/LittlerootcityArena/map.bin",
+      "border_height": 2,
+      "border_width": 2,
+      "layout_version": "emerald"
     },
     {
       "id": "LAYOUT_LITTLEROOT_ARENA",
@@ -10280,7 +10292,10 @@
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_PetalburgGym",
       "border_filepath": "data/layouts/LittlerootArena/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootArena/map.bin"
+      "blockdata_filepath": "data/layouts/LittlerootArena/map.bin",
+      "border_height": 2,
+      "border_width": 2,
+      "layout_version": "emerald"
     },
     {
       "id": "LAYOUT_LITTLEROOTCITYARENA",
@@ -10290,7 +10305,10 @@
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Littlerootcityarena/border.bin",
-      "blockdata_filepath": "data/layouts/Littlerootcityarena/map.bin"
+      "blockdata_filepath": "data/layouts/Littlerootcityarena/map.bin",
+      "border_height": 2,
+      "border_width": 2,
+      "layout_version": "emerald"
     }
   ]
 }

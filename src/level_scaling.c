@@ -38,7 +38,7 @@ static u8 GetPlayerPartyAverageLevel(bool8 excludeFainted)
 
     for (i = 0; i < PARTY_SIZE; i++)
     {
-        struct Pokemon *mon = &gPlayerParty[i];
+        struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][i];
         if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NONE)
             break;
 
@@ -62,7 +62,7 @@ static u8 GetPlayerPartyHighestLevel(bool8 excludeFainted)
 
     for (i = 0; i < PARTY_SIZE; i++)
     {
-        struct Pokemon *mon = &gPlayerParty[i];
+        struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][i];
         if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NONE)
             break;
 
@@ -85,7 +85,7 @@ static u8 GetPlayerPartyLowestLevel(bool8 excludeFainted)
 
     for (i = 0; i < PARTY_SIZE; i++)
     {
-        struct Pokemon *mon = &gPlayerParty[i];
+        struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][i];
         if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NONE)
             break;
 
@@ -110,7 +110,7 @@ static u8 GetPlayerPartySize(bool8 excludeFainted)
 
     for (i = 0; i < PARTY_SIZE; i++)
     {
-        struct Pokemon *mon = &gPlayerParty[i];
+        struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][i];
         if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NONE)
             break;
 

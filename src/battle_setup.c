@@ -117,13 +117,13 @@ bool8 GiveRandomTrainerEgg(void)
     u8 partyIndex = CalculatePlayerPartyCount();
     struct OriginalTrainerId emptyOtId = { 0 };
 
-    CreateMon(&gPlayerParty[partyIndex], randomSpecies, 1, 0, emptyOtId);
+    CreateMon(&gParties[B_TRAINER_PLAYER][partyIndex], randomSpecies, 1, 0, emptyOtId);
 
     bool8 isEgg = TRUE;
-    SetMonData(&gPlayerParty[partyIndex], MON_DATA_IS_EGG, &isEgg);
+    SetMonData(&gParties[B_TRAINER_PLAYER][partyIndex], MON_DATA_IS_EGG, &isEgg);
 
     u8 steps = 1;
-    SetMonData(&gPlayerParty[partyIndex], MON_DATA_FRIENDSHIP, &steps);
+    SetMonData(&gParties[B_TRAINER_PLAYER][partyIndex], MON_DATA_FRIENDSHIP, &steps);
 
     ShowFieldMessage(gText_ReceivedEggFromTrainer);
 
@@ -535,10 +535,10 @@ static void DoTrainerBattle(void)
     // Überschreibt die Level direkt im globalen Kampf-Array
     for (i = 0; i < PARTY_SIZE; i++)
     {
-        if (GetMonData(&gEnemyParty[i], MON_DATA_SPECIES_OR_EGG) != 0)
+        if (GetMonData(&gParties[B_TRAINER_OPPONENT_A][i], MON_DATA_SPECIES_OR_EGG) != 0)
         {
-            SetMonData(&gEnemyParty[i], MON_DATA_LEVEL, &currentCap);
-            CalculateMonStats(&gEnemyParty[i]);
+            SetMonData(&gParties[B_TRAINER_OPPONENT_A][i], MON_DATA_LEVEL, &currentCap);
+            CalculateMonStats(&gParties[B_TRAINER_OPPONENT_A][i]);
         }
     }
     // === DYNAMISCHES LEVEL-SCALING ENDE ===

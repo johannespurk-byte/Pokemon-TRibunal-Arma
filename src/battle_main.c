@@ -92,7 +92,7 @@ static void CB2_HandleStartMultiPartnerBattle(void);
 static void CB2_HandleStartMultiBattle(void);
 static void CB2_HandleStartBattle(void);
 static void TryCorrectShedinjaLanguage(struct Pokemon *mon);
-static enum BattleTrainer GetBattlerTrainerFromParty(struct Pokemon *party);
+static enum BattleTrainer UNUSED GetBattlerTrainerFromParty(struct Pokemon *party);
 static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 firstTrainer);
 static void BattleMainCB1(void);
 static void CB2_EndLinkBattle(void);
