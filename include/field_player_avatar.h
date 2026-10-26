@@ -43,6 +43,7 @@ u16 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender);
 u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender);
 void SetPlayerAvatarFieldMove(void);
 u16 GetPlayerAvatarGraphicsIdByCurrentState(void);
+void UpdatePlayerAvatarForCharacterChange(void);
 void SetPlayerAvatarStateMask(u8 flags);
 u16 GetPlayerAvatarGraphicsIdByStateId(u8 state);
 u8 GetJumpSpecialMovementAction(u32);

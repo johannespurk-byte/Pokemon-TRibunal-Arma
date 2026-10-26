@@ -2,6 +2,14 @@ static const struct SpriteFrameImage sPicTable_BrendanNormal[] = {
     overworld_ascending_frames(gObjectEventPic_BrendanNormalRunning, 2, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_EthanNormal[] = {
+    overworld_ascending_frames(gObjectEventPic_EthanNormal, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_LyraNormal[] = {
+    overworld_ascending_frames(gObjectEventPic_LyraNormal, 2, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_LucasNormal[] = {
     overworld_ascending_frames(gObjectEventPic_LucasNormal, 2, 4),
 };
@@ -1407,7 +1415,6 @@ static const struct SpriteFrameImage sPicTable_ApricornTree[] = {
     overworld_frame(gObjectEventPic_ApricornTree, 2, 2, 0),
 };
 
-#if IS_FRLG
 
 static const struct SpriteFrameImage sPicTable_RedNormal[] = {
     overworld_frame(gObjectEventPic_RedNormal, 2, 4, 0),
@@ -1580,6 +1587,7 @@ static const struct SpriteFrameImage sPicTable_GreenVSSeekerBike[] = {
     overworld_frame(gObjectEventPic_GreenVSSeekerBike, 4, 4, 4),
     overworld_frame(gObjectEventPic_GreenVSSeekerBike, 4, 4, 5),
 };
+#if IS_FRLG
 
 static const struct SpriteFrameImage sPicTable_Policeman[] = {
     overworld_frame(gObjectEventPic_Policeman, 2, 4, 0),

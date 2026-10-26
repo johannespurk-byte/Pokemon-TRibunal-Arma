@@ -16,10 +16,10 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal = {
     .images = sPicTable_BrendanNormal,
 };
 
-// 🌟 UNZERSTÖRBARE JOHTO-GRAFIK-INFO: Synchronisiert mit den stabilen Kanto-Kacheln!
+// Gen 2: Ethan / Lyra (eigene HGSS-Sheets im Brendan/May-Layout, inkl. Rennen)
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanNormal = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_BRENDAN,
+    .paletteTag = OBJ_EVENT_PAL_TAG_ETHAN,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION,
     .size = 512,
     .width = 16,
@@ -32,12 +32,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanNormal = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_BrendanMayNormal,
-    .images = sPicTable_Red, // 🌟 KORREKTUR: Nutzt deinen exakten Kanto-Jungen-Bildzeiger!
+    .images = sPicTable_EthanNormal,
 };
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraNormal = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_MAY,
+    .paletteTag = OBJ_EVENT_PAL_TAG_LYRA,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION,
     .size = 512,
     .width = 16,
@@ -50,7 +50,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraNormal = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_BrendanMayNormal,
-    .images = sPicTable_Leaf, // 🌟 KORREKTUR: Nutzt deinen exakten Kanto-Mädchen-Bildzeiger!
+    .images = sPicTable_LyraNormal,
 };
 
 // Gen 4: Lucas / Dawn (eigene Sheets im Brendan/May-Layout, inkl. Rennen)
@@ -4723,7 +4723,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTree = {
     .images = sPicTable_ApricornTree,
 };
 
-#if IS_FRLG
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedNormal = {
     .tileTag = TAG_NONE,
@@ -4990,6 +4989,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreenFieldMove = {
     .images = sPicTable_GreenItem,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
+#if IS_FRLG
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Policeman = {
     .tileTag = TAG_NONE,

@@ -45,13 +45,6 @@
 #define PLAYER_CHARACTER_LEAF 4
 #endif
 
-// Seite 0 (Rot/Leaf) und Seite 1 (Ethan/Lyra) nutzen 9-Frame-Sheets ohne Lauf-Frames
-static bool32 PlayerAvatarLacksRunFrames(void)
-{
-    u8 page = TrainerCard_GetCharacterPage();
-    return page == 0 || page == 1;
-}
-
 #define NUM_FORCED_MOVEMENTS 22
 #define NUM_ACRO_BIKE_COLLISIONS 5
 
@@ -327,10 +320,12 @@ static const struct PACKED
         {PLAYER_AVATAR_GFX_MALE_ACRO_BIKE,  PLAYER_AVATAR_FLAG_ACRO_BIKE},
         {PLAYER_AVATAR_GFX_MALE_SURFING,    PLAYER_AVATAR_FLAG_SURFING},
         {PLAYER_AVATAR_GFX_MALE_UNDERWATER, PLAYER_AVATAR_FLAG_UNDERWATER},
-        // Gen 2 & Gen 4 Jungs-Schnittstellen legitimiert verankert:
+        // Spieler-Sprites der anderen Generationen (siehe sCharacterPageAvatarGfx)
+        {OBJ_EVENT_GFX_RED_NORMAL,          PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_RED_BIKE,            PLAYER_AVATAR_FLAG_MACH_BIKE},
+        {OBJ_EVENT_GFX_RED_SURF,            PLAYER_AVATAR_FLAG_SURFING},
         {OBJ_EVENT_GFX_ETHAN_NORMAL,        PLAYER_AVATAR_FLAG_ON_FOOT},
         {OBJ_EVENT_GFX_LUCAS_NORMAL,        PLAYER_AVATAR_FLAG_ON_FOOT},
-        {OBJ_EVENT_GFX_RED,                 PLAYER_AVATAR_FLAG_ON_FOOT},
         {OBJ_EVENT_GFX_HILBERT_NORMAL,      PLAYER_AVATAR_FLAG_ON_FOOT},
         {OBJ_EVENT_GFX_NATE_NORMAL,         PLAYER_AVATAR_FLAG_ON_FOOT},
         {OBJ_EVENT_GFX_CALEM_NORMAL,        PLAYER_AVATAR_FLAG_ON_FOOT},
@@ -344,10 +339,12 @@ static const struct PACKED
         {PLAYER_AVATAR_GFX_FEMALE_ACRO_BIKE,  PLAYER_AVATAR_FLAG_ACRO_BIKE},
         {PLAYER_AVATAR_GFX_FEMALE_SURFING,    PLAYER_AVATAR_FLAG_SURFING},
         {PLAYER_AVATAR_GFX_FEMALE_UNDERWATER, PLAYER_AVATAR_FLAG_UNDERWATER},
-        // Gen 2 & Gen 4 Mädchen-Schnittstellen legitimiert verankert:
+        // Spieler-Sprites der anderen Generationen (siehe sCharacterPageAvatarGfx)
+        {OBJ_EVENT_GFX_GREEN_NORMAL,          PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_GREEN_BIKE,            PLAYER_AVATAR_FLAG_MACH_BIKE},
+        {OBJ_EVENT_GFX_GREEN_SURF,            PLAYER_AVATAR_FLAG_SURFING},
         {OBJ_EVENT_GFX_LYRA_NORMAL,           PLAYER_AVATAR_FLAG_ON_FOOT},
         {OBJ_EVENT_GFX_DAWN_NORMAL,           PLAYER_AVATAR_FLAG_ON_FOOT},
-        {OBJ_EVENT_GFX_LEAF,                  PLAYER_AVATAR_FLAG_ON_FOOT},
         {OBJ_EVENT_GFX_HILDA_NORMAL,          PLAYER_AVATAR_FLAG_ON_FOOT},
         {OBJ_EVENT_GFX_ROSA_NORMAL,           PLAYER_AVATAR_FLAG_ON_FOOT},
         {OBJ_EVENT_GFX_SERENA_NORMAL,         PLAYER_AVATAR_FLAG_ON_FOOT},
@@ -356,87 +353,43 @@ static const struct PACKED
     }
 };
 
-// Lauf-Sprite je Trainerkarten-Seite ab Gen 4 (Seite 4 = Index 0)
-static const u16 sPlayerAvatarOnFootGfx_Gen4Plus[][GENDER_COUNT] =
+// Spieler-Sprite je Trainerkarten-Seite und Zustand. 0 = Brendan/May aus sPlayerAvatarGfxIds.
+// Gen 1 nutzt das komplette FRLG-Set von Rot/Leaf, alle anderen haben eigene Lauf-/Renn-Sprites.
+#define CHAR_GFX(m, f) { [MALE] = m, [FEMALE] = f }
+static const u16 sCharacterPageAvatarGfx[][PLAYER_AVATAR_STATE_VSSEEKER + 1][GENDER_COUNT] =
 {
-    { [MALE] = OBJ_EVENT_GFX_LUCAS_NORMAL,   [FEMALE] = OBJ_EVENT_GFX_DAWN_NORMAL },   // Gen 4
-    { [MALE] = OBJ_EVENT_GFX_HILBERT_NORMAL, [FEMALE] = OBJ_EVENT_GFX_HILDA_NORMAL },  // Gen 5 (SW)
-    { [MALE] = OBJ_EVENT_GFX_NATE_NORMAL,    [FEMALE] = OBJ_EVENT_GFX_ROSA_NORMAL },   // Gen 5 (SW2)
-    { [MALE] = OBJ_EVENT_GFX_CALEM_NORMAL,   [FEMALE] = OBJ_EVENT_GFX_SERENA_NORMAL }, // Gen 6
-    { [MALE] = OBJ_EVENT_GFX_ELIO_NORMAL,    [FEMALE] = OBJ_EVENT_GFX_SELENE_NORMAL }, // Gen 7
-    { [MALE] = OBJ_EVENT_GFX_VICTOR_NORMAL,  [FEMALE] = OBJ_EVENT_GFX_GLORIA_NORMAL }, // Gen 8
+    [0] = // Gen 1: Rot / Leaf
+    {
+        [PLAYER_AVATAR_STATE_NORMAL]     = CHAR_GFX(OBJ_EVENT_GFX_RED_NORMAL,     OBJ_EVENT_GFX_GREEN_NORMAL),
+        [PLAYER_AVATAR_STATE_MACH_BIKE]  = CHAR_GFX(OBJ_EVENT_GFX_RED_BIKE,       OBJ_EVENT_GFX_GREEN_BIKE),
+        [PLAYER_AVATAR_STATE_ACRO_BIKE]  = CHAR_GFX(OBJ_EVENT_GFX_RED_BIKE,       OBJ_EVENT_GFX_GREEN_BIKE),
+        [PLAYER_AVATAR_STATE_SURFING]    = CHAR_GFX(OBJ_EVENT_GFX_RED_SURF,       OBJ_EVENT_GFX_GREEN_SURF),
+        [PLAYER_AVATAR_STATE_FIELD_MOVE] = CHAR_GFX(OBJ_EVENT_GFX_RED_FIELD_MOVE, OBJ_EVENT_GFX_GREEN_FIELD_MOVE),
+        [PLAYER_AVATAR_STATE_FISHING]    = CHAR_GFX(OBJ_EVENT_GFX_RED_FISH,       OBJ_EVENT_GFX_GREEN_FISH),
+        [PLAYER_AVATAR_STATE_VSSEEKER]   = CHAR_GFX(OBJ_EVENT_GFX_RED_VS_SEEKER,  OBJ_EVENT_GFX_GREEN_VS_SEEKER),
+    },
+    [1] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(OBJ_EVENT_GFX_ETHAN_NORMAL,   OBJ_EVENT_GFX_LYRA_NORMAL) },   // Gen 2
+    [2] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(0, 0) },                                                       // Gen 3
+    [3] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(OBJ_EVENT_GFX_LUCAS_NORMAL,   OBJ_EVENT_GFX_DAWN_NORMAL) },   // Gen 4
+    [4] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(OBJ_EVENT_GFX_HILBERT_NORMAL, OBJ_EVENT_GFX_HILDA_NORMAL) },  // Gen 5
+    [5] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(OBJ_EVENT_GFX_NATE_NORMAL,    OBJ_EVENT_GFX_ROSA_NORMAL) },   // Gen 5-2
+    [6] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(OBJ_EVENT_GFX_CALEM_NORMAL,   OBJ_EVENT_GFX_SERENA_NORMAL) }, // Gen 6
+    [7] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(OBJ_EVENT_GFX_ELIO_NORMAL,    OBJ_EVENT_GFX_SELENE_NORMAL) }, // Gen 7
+    [8] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(OBJ_EVENT_GFX_VICTOR_NORMAL,  OBJ_EVENT_GFX_GLORIA_NORMAL) }, // Gen 8
 };
-
+#undef CHAR_GFX
 
 u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
 {
     // Seite, die auf der Trainerkarte ausgewählt wurde (im Spielstand gespeichert)
-    u16 activePage = TrainerCard_GetCharacterPage();
+    u8 page = TrainerCard_GetCharacterPage();
+    u16 graphicsId = 0;
 
-    // === 🔴 Gen 1 (Kanto: Rot / Leaf) ===
-    if (activePage == 0) // Erste Seite (Standard Kanto)
-    {
-        if (gender == MALE)
-        {
-            switch (state)
-            {
-            case PLAYER_AVATAR_STATE_MACH_BIKE:
-            case PLAYER_AVATAR_STATE_ACRO_BIKE: return OBJ_EVENT_GFX_RED_BIKE;
-            case PLAYER_AVATAR_STATE_SURFING:   return OBJ_EVENT_GFX_RED_SURF;
-            default:                            return OBJ_EVENT_GFX_RED;
-            }
-        }
-        else
-        {
-            switch (state)
-            {
-            case PLAYER_AVATAR_STATE_MACH_BIKE:
-            case PLAYER_AVATAR_STATE_ACRO_BIKE: return OBJ_EVENT_GFX_GREEN_BIKE;
-            case PLAYER_AVATAR_STATE_SURFING:   return OBJ_EVENT_GFX_GREEN_SURF;
-            default:                            return OBJ_EVENT_GFX_LEAF;
-            }
-        }
-    }
-
-    // === 🟢 Gen 2 (Johto: Ethan / Lyra) ===
-    if (activePage == 1) // Zweite Seite (Gen 2 Johto)
-    {
-        if (gender == FEMALE)
-        {
-            switch (state)
-            {
-            case PLAYER_AVATAR_STATE_MACH_BIKE:
-            case PLAYER_AVATAR_STATE_ACRO_BIKE:   return PLAYER_AVATAR_GFX_FEMALE_MACH_BIKE; // Fahrrad-Fallback
-            case PLAYER_AVATAR_STATE_SURFING:     return PLAYER_AVATAR_GFX_FEMALE_SURFING;   // Surf-Fallback
-            default:                              return OBJ_EVENT_GFX_LYRA_NORMAL;          // Lädt deine echte Lyra!
-            }
-        }
-        else
-        {
-            switch (state)
-            {
-            case PLAYER_AVATAR_STATE_MACH_BIKE:
-            case PLAYER_AVATAR_STATE_ACRO_BIKE:   return PLAYER_AVATAR_GFX_MALE_MACH_BIKE;   // Fahrrad-Fallback
-            case PLAYER_AVATAR_STATE_SURFING:     return PLAYER_AVATAR_GFX_MALE_SURFING;     // Surf-Fallback
-            default:                              return OBJ_EVENT_GFX_ETHAN_NORMAL;         // Lädt deinen echten Ethan!
-            }
-        }
-    }
-
-    // === Gen 4-8 (Seite 4-8): eigene Lauf-Sprites, Fahrrad/Surfen nutzen Brendan/May ===
-    if (activePage >= 3 && activePage - 3 < ARRAY_COUNT(sPlayerAvatarOnFootGfx_Gen4Plus))
-    {
-        switch (state)
-        {
-        case PLAYER_AVATAR_STATE_NORMAL:
-            return sPlayerAvatarOnFootGfx_Gen4Plus[activePage - 3][gender];
-        default:
-            return sPlayerAvatarGfxIds[state][gender];
-        }
-    }
-
-    // === 🔵 Standard Gen 3 Schiene (Brendan / May Fallback) ===
-    return sPlayerAvatarGfxIds[state][gender];
+    if (page < ARRAY_COUNT(sCharacterPageAvatarGfx) && state < ARRAY_COUNT(sCharacterPageAvatarGfx[0]))
+        graphicsId = sCharacterPageAvatarGfx[page][state][gender];
+    if (graphicsId == 0)
+        graphicsId = sPlayerAvatarGfxIds[state][gender];
+    return graphicsId;
 }
 
 
@@ -1373,21 +1326,6 @@ void PlayerSetAnimId(u8 movementActionId, enum CopyMovement copyableMovement)
 {
     if (!PlayerIsAnimActive())
     {
-        // Schützt Rot/Leaf und Ethan/Lyra vor Animationen, die ihr Sheet nicht hat
-        if (PlayerAvatarLacksRunFrames())
-        {
-            // Weiche 1: Sichert die normalen Lauf- und Sprint-Frames im hohen Gras ab
-            if (movementActionId >= MOVEMENT_ACTION_WALK_NORMAL_DOWN && movementActionId <= MOVEMENT_ACTION_WALK_NORMAL_RIGHT)
-            {
-                movementActionId = movementActionId - MOVEMENT_ACTION_WALK_NORMAL_DOWN + MOVEMENT_ACTION_WALK_FAST_DOWN;
-            }
-            // Weiche 2: KORREKTUR FÜR TREPPEN & SLOW-ANIMATIONEN (Verhindert den harten RAM-Adressen-Absturz!)
-            else if (movementActionId >= MOVEMENT_ACTION_WALK_SLOW_DOWN && movementActionId <= MOVEMENT_ACTION_WALK_SLOW_RIGHT)
-            {
-                movementActionId = movementActionId - MOVEMENT_ACTION_WALK_SLOW_DOWN + MOVEMENT_ACTION_WALK_FAST_DOWN;
-            }
-        }
-
         PlayerSetCopyableMovement(copyableMovement);
         ObjectEventSetHeldMovement(&gObjectEvents[gPlayerAvatar.objectEventId], movementActionId);
     }
@@ -1434,20 +1372,12 @@ void PlayerWalkFaster(enum Direction direction)
 
 static void PlayerRunSlow(enum Direction direction)
 {
-    // Nutzt die Geh-ID für Sheets ohne Lauf-Frames, um Renn-Animations-Abstürze zu verhindern
-    if (PlayerAvatarLacksRunFrames())
-        PlayerSetAnimId(GetWalkSlowStairsMovementAction(direction), COPY_MOVE_WALK);
-    else
-        PlayerSetAnimId(GetPlayerRunSlowMovementAction(direction), COPY_MOVE_WALK);
+    PlayerSetAnimId(GetPlayerRunSlowMovementAction(direction), COPY_MOVE_WALK);
 }
 
 static void PlayerRun(enum Direction direction)
 {
-    // Nutzt die Geh-ID für Sheets ohne Lauf-Frames, um Renn-Animations-Abstürze zu verhindern
-    if (PlayerAvatarLacksRunFrames())
-        PlayerSetAnimId(GetWalkFastMovementAction(direction), COPY_MOVE_WALK);
-    else
-        PlayerSetAnimId(GetPlayerRunMovementAction(direction), COPY_MOVE_WALK);
+    PlayerSetAnimId(GetPlayerRunMovementAction(direction), COPY_MOVE_WALK);
 }
 
 
@@ -1767,6 +1697,15 @@ enum Gender GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
     case OBJ_EVENT_GFX_GREEN_FISH:
     case OBJ_EVENT_GFX_GREEN_VS_SEEKER:
     case OBJ_EVENT_GFX_GREEN_VS_SEEKER_BIKE:
+    // Weibliche Spieler-Sprites der anderen Generationen
+    case OBJ_EVENT_GFX_LEAF:
+    case OBJ_EVENT_GFX_LYRA_NORMAL:
+    case OBJ_EVENT_GFX_DAWN_NORMAL:
+    case OBJ_EVENT_GFX_HILDA_NORMAL:
+    case OBJ_EVENT_GFX_ROSA_NORMAL:
+    case OBJ_EVENT_GFX_SERENA_NORMAL:
+    case OBJ_EVENT_GFX_SELENE_NORMAL:
+    case OBJ_EVENT_GFX_GLORIA_NORMAL:
         return FEMALE;
     default:
         return MALE;
@@ -1836,17 +1775,36 @@ static u8 GetPlayerAvatarStateTransitionByGraphicsId(u16 graphicsId, u8 gender)
     return PLAYER_AVATAR_FLAG_ON_FOOT;
 }
 
+// Über den Zustand statt über die erste passende Tabellenzeile, damit die gewählte Generation erhalten bleibt
 u16 GetPlayerAvatarGraphicsIdByCurrentState(void)
 {
-    u8 i;
     u8 flags = gPlayerAvatar.flags;
+    u8 state = PLAYER_AVATAR_STATE_NORMAL;
 
-    for (i = 0; i < ARRAY_COUNT(sPlayerAvatarGfxToStateFlag[0]); i++)
-    {
-        if (sPlayerAvatarGfxToStateFlag[gPlayerAvatar.gender][i].playerFlag & flags)
-            return sPlayerAvatarGfxToStateFlag[gPlayerAvatar.gender][i].graphicsId;
-    }
-    return 0;
+    if (flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
+        state = PLAYER_AVATAR_STATE_MACH_BIKE;
+    else if (flags & PLAYER_AVATAR_FLAG_ACRO_BIKE)
+        state = PLAYER_AVATAR_STATE_ACRO_BIKE;
+    else if (flags & PLAYER_AVATAR_FLAG_SURFING)
+        state = PLAYER_AVATAR_STATE_SURFING;
+    else if (flags & PLAYER_AVATAR_FLAG_UNDERWATER)
+        state = PLAYER_AVATAR_STATE_UNDERWATER;
+    return GetPlayerAvatarGraphicsIdByStateIdAndGender(state, gPlayerAvatar.gender);
+}
+
+// Nach einem Wechsel auf der Trainerkarte: Spieler-Objekt auf die neue Figur umstellen.
+// Der Sprite wird beim Zurückkehren ins Overworld aus graphicsId neu aufgebaut.
+void UpdatePlayerAvatarForCharacterChange(void)
+{
+    struct ObjectEvent *objectEvent;
+
+    if (gPlayerAvatar.objectEventId >= OBJECT_EVENTS_COUNT)
+        return;
+    objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
+    if (!objectEvent->active || !objectEvent->isPlayer)
+        return;
+    gPlayerAvatar.gender = gSaveBlock2Ptr->playerGender;
+    objectEvent->graphicsId = GetPlayerAvatarGraphicsIdByCurrentState();
 }
 
 void SetPlayerAvatarExtraStateTransition(u16 graphicsId, u8 transitionFlag)

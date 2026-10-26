@@ -15,6 +15,7 @@
 #include "text.h"
 #include "event_data.h"
 #include "easy_chat.h"
+#include "field_player_avatar.h"
 #include "money.h"
 #include "strings.h"
 #include "string_util.h"
@@ -642,6 +643,7 @@ static void Task_TrainerCard(u8 taskId)
                 u8 page = TrainerCardGetPage();
                 gSaveBlock2Ptr->playerGender ^= 1;
                 TrainerCardApplyPage(page); // NEU: Generation bleibt, Variante passt zum neuen Geschlecht
+                UpdatePlayerAvatarForCharacterChange();
             }
             ResetSpriteData();
             FreeAllSpritePalettes();
@@ -660,6 +662,7 @@ static void Task_TrainerCard(u8 taskId)
             else
                 page = (page + count - 1) % count;
             TrainerCardApplyPage(page);
+            UpdatePlayerAvatarForCharacterChange();
             ResetSpriteData();
             FreeAllSpritePalettes();
             FreeAllWindowBuffers();
