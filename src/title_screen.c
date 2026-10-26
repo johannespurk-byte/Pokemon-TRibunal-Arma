@@ -481,19 +481,11 @@ static const union AnimCmd sAnim_Copyright_4[] =
     ANIMCMD_END,
 };
 
-// "Select: New Game" alternates with "Press Start" in the same place (tiles 41-60)
-static const union AnimCmd sAnim_SelectNewGame_0[] = { ANIMCMD_FRAME(41, 4), ANIMCMD_END };
-static const union AnimCmd sAnim_SelectNewGame_1[] = { ANIMCMD_FRAME(45, 4), ANIMCMD_END };
-static const union AnimCmd sAnim_SelectNewGame_2[] = { ANIMCMD_FRAME(49, 4), ANIMCMD_END };
-static const union AnimCmd sAnim_SelectNewGame_3[] = { ANIMCMD_FRAME(53, 4), ANIMCMD_END };
-static const union AnimCmd sAnim_SelectNewGame_4[] = { ANIMCMD_FRAME(57, 4), ANIMCMD_END };
-
 // The "Press Start" and copyright graphics are each 5 32x8 segments long
 #define NUM_PRESS_START_FRAMES 5
 #define NUM_COPYRIGHT_FRAMES 5
-#define SELECT_NEW_GAME_ANIM_START (NUM_PRESS_START_FRAMES + NUM_COPYRIGHT_FRAMES)
 
-static const union AnimCmd *const sStartCopyrightBannerAnimTable[SELECT_NEW_GAME_ANIM_START + NUM_PRESS_START_FRAMES] =
+static const union AnimCmd *const sStartCopyrightBannerAnimTable[NUM_PRESS_START_FRAMES + NUM_COPYRIGHT_FRAMES] =
 {
     sAnim_PressStart_0,
     sAnim_PressStart_1,
@@ -506,12 +498,6 @@ static const union AnimCmd *const sStartCopyrightBannerAnimTable[SELECT_NEW_GAME
     sAnim_Copyright_2,
     sAnim_Copyright_3,
     sAnim_Copyright_4,
-    [SELECT_NEW_GAME_ANIM_START] =
-    sAnim_SelectNewGame_0,
-    sAnim_SelectNewGame_1,
-    sAnim_SelectNewGame_2,
-    sAnim_SelectNewGame_3,
-    sAnim_SelectNewGame_4,
 };
 
 static const struct SpriteTemplate sStartCopyrightBannerSpriteTemplate =
@@ -527,7 +513,7 @@ static const struct CompressedSpriteSheet sSpriteSheet_PressStart[] =
 {
     {
         .data = gTitleScreenPressStartGfx,
-        .size = 0x7A0,
+        .size = 0x520,
         .tag = TAG_PRESS_START_COPYRIGHT
     },
     {},
@@ -634,7 +620,6 @@ static void SpriteCB_VersionBannerRight(struct Sprite *sprite)
 // Sprite data for SpriteCB_PressStartCopyrightBanner
 #define sAnimate data[0]
 #define sTimer   data[1]
-#define sSegment data[2]
 
 static void SpriteCB_PressStartCopyrightBanner(struct Sprite *sprite)
 {
@@ -645,9 +630,6 @@ static void SpriteCB_PressStartCopyrightBanner(struct Sprite *sprite)
             sprite->invisible = FALSE;
         else
             sprite->invisible = TRUE;
-        // Every other time it reappears, show "SELECT: NEW GAME" instead of "PRESS START"
-        if ((sprite->sTimer & 31) == 16)
-            StartSpriteAnim(sprite, (sprite->sTimer & 32) ? SELECT_NEW_GAME_ANIM_START + sprite->sSegment : sprite->sSegment);
     }
     else
     {
@@ -666,7 +648,6 @@ static void CreatePressStartBanner(s16 x, s16 y)
         spriteId = CreateSprite(&sStartCopyrightBannerSpriteTemplate, x, y, 0);
         StartSpriteAnim(&gSprites[spriteId], i);
         gSprites[spriteId].sAnimate = TRUE;
-        gSprites[spriteId].sSegment = i;
     }
 }
 
@@ -685,7 +666,6 @@ static void CreateCopyrightBanner(s16 x, s16 y)
 
 #undef sAnimate
 #undef sTimer
-#undef sSegment
 
 // Defines for SpriteCB_PokemonLogoShine
 enum {
