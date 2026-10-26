@@ -133,19 +133,16 @@ DewfordTown_Gym_EventScript_StopCountingTrainers::
 	return
 
 DewfordTown_Gym_EventScript_Brawly::
-	trainerbattle_single TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_Brawly, NO_MUSIC
+	msgbox DewfordTown_Gym_Text_BrawlyAfterBattle, MSGBOX_DEFAULT
+	special HealPlayerParty
+	msgbox DewfordTown_Gym_Text_BrandonAppears, MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_BRANDON_DEWFORD, DewfordTown_Gym_Text_BrandonIntro, DewfordTown_Gym_Text_BrandonDefeat, DewfordTown_Gym_EventScript_BrandonDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_BrawlyRematch
 	goto_if_unset FLAG_RECEIVED_TM_BULK_UP, DewfordTown_Gym_EventScript_GiveBulkUp2
 	msgbox DewfordTown_Gym_Text_BrawlyPostBattle, MSGBOX_DEFAULT
 	release
-	end
-
-DewfordTown_Gym_EventScript_BrawlyDefeated::
-	msgbox DewfordTown_Gym_Text_BrawlyAfterBattle, MSGBOX_DEFAULT
-	special HealPlayerParty
-	msgbox DewfordTown_Gym_Text_BrandonAppears, MSGBOX_DEFAULT
-	trainerbattle_single TRAINER_BRANDON_DEWFORD, DewfordTown_Gym_Text_BrandonIntro, DewfordTown_Gym_Text_BrandonDefeat, DewfordTown_Gym_EventScript_BrandonDefeated, NO_MUSIC
 	end
 
 DewfordTown_Gym_EventScript_BrandonDefeated::
@@ -176,7 +173,8 @@ DewfordTown_Gym_EventScript_BrandonDefeated::
 	end
 
 DewfordTown_Gym_EventScript_GiveBulkUp::
-	giveitem ITEM_TM_BULK_UP
+	giveitem ITEM_EMBOARITE, 1
+	giveitem ITEM_GOLURKITE, 1
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_BagIsFull
 	msgbox DewfordTown_Gym_Text_ExplainBulkUp, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_BULK_UP

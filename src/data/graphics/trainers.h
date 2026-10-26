@@ -1,19 +1,21 @@
 ﻿#include "constants/trainers.h"
 #include "data.h"
 
-// 🌟 CUSTOM BACK-PICS REGISTRATION (Zieht deine prachtvollen HGSS Wurf-Kacheln händisch rein!)
-const u32 gTrainerBackPic_Lucas[] = INCGFX_U32("graphics/trainers/back_pics/brendan.png", ".4bpp.smol");
-const u32 gTrainerBackPic_Dawn[] = INCGFX_U32("graphics/trainers/back_pics/may.png", ".4bpp.smol");
-const u32 gTrainerBackPic_Ethan[] = INCGFX_U32("graphics/trainers/back_pics/ethan_back.png", ".4bpp.smol");
-const u32 gTrainerBackPic_Lyra[] = INCGFX_U32("graphics/trainers/back_pics/lyra_back.png", ".4bpp.smol");
+// Custom player back pics (5-frame HGSS layout, 64x320). Back pics are uncompressed
+// because the sprite system copies single frames directly out of the data.
+const u8 gTrainerBackPic_Ethan[] = INCGFX_U8("graphics/trainers/back_pics/ethan_back.png", ".4bpp");
+const u8 gTrainerBackPic_Lyra[] = INCGFX_U8("graphics/trainers/back_pics/lyra_back.png", ".4bpp");
+const u8 gTrainerBackPic_Lucas[] = INCGFX_U8("graphics/trainers/back_pics/lucas_back.png", ".4bpp");
+const u8 gTrainerBackPic_Dawn[] = INCGFX_U8("graphics/trainers/back_pics/dawn_back.png", ".4bpp");
+const u16 gTrainerBackPicPalette_Ethan[] = INCGFX_U16("graphics/trainers/back_pics/ethan_back.png", ".gbapal");
+const u16 gTrainerBackPicPalette_Lyra[] = INCGFX_U16("graphics/trainers/back_pics/lyra_back.png", ".gbapal");
+const u16 gTrainerBackPicPalette_Lucas[] = INCGFX_U16("graphics/trainers/back_pics/lucas_back.png", ".gbapal");
+const u16 gTrainerBackPicPalette_Dawn[] = INCGFX_U16("graphics/trainers/back_pics/dawn_back.png", ".gbapal");
 
-
-
-// 🔴 LUCIUS (LUCAS) - GEN 4
+// LUCIUS (LUCAS) & LUCIA (DAWN) - GEN 4
 const u32 gTrainerFrontPic_Lucas[] = INCGFX_U32("graphics/trainers/front_pics/lucas.png", ".4bpp.smol");
 const u16 gTrainerPalette_Lucas[] = INCGFX_U16("graphics/trainers/front_pics/lucas.png", ".gbapal");
 
-// 🟣 LUCIA (DAWN) - GEN 4
 const u32 gTrainerFrontPic_Dawn[] = INCGFX_U32("graphics/trainers/front_pics/dawn.png", ".4bpp.smol");
 const u16 gTrainerPalette_Dawn[] = INCGFX_U16("graphics/trainers/front_pics/dawn.png", ".gbapal");
 
@@ -300,13 +302,11 @@ const u16 gTrainerPalette_Red[] = INCGFX_U16("graphics/trainers/front_pics/red.p
 const u32 gTrainerFrontPic_Leaf[] = INCGFX_U32("graphics/trainers/front_pics/leaf.png", ".4bpp.smol");
 const u16 gTrainerPalette_Leaf[] = INCGFX_U16("graphics/trainers/front_pics/leaf.png", ".gbapal");
 
-// 🌟 KLARIN (ETHAN): Tauscht den alten RS-Brix-Pfad gegen dein neues HGSS-Ethan-Bild aus!
-const u32 gTrainerFrontPic_RubySapphireBrendan[] = INCGFX_U32("graphics/trainers/front_pics/ethan.png", ".4bpp.smol");
-const u16 gTrainerPalette_RubySapphireBrendan[] = INCGFX_U16("graphics/trainers/front_pics/ethan.png", ".gbapal");
+const u32 gTrainerFrontPic_RubySapphireBrendan[] = INCGFX_U32("graphics/trainers/front_pics/brendan_rs.png", ".4bpp.smol");
+const u16 gTrainerPalette_RubySapphireBrendan[] = INCGFX_U16("graphics/trainers/palettes/brendan_rs.pal", ".gbapal");
 
-// 🌟 LYRA: Tauscht den alten RS-Maike-Pfad gegen dein neues HGSS-Lyra-Bild aus!
-const u32 gTrainerFrontPic_RubySapphireMay[] = INCGFX_U32("graphics/trainers/front_pics/lyra.png", ".4bpp.smol");
-const u16 gTrainerPalette_RubySapphireMay[] = INCGFX_U16("graphics/trainers/front_pics/lyra.png", ".gbapal");
+const u32 gTrainerFrontPic_RubySapphireMay[] = INCGFX_U32("graphics/trainers/front_pics/may_rs.png", ".4bpp.smol");
+const u16 gTrainerPalette_RubySapphireMay[] = INCGFX_U16("graphics/trainers/palettes/may_rs.pal", ".gbapal");
 
 
 const u32 gTrainerFrontPic_YoungsterFrlg[] = INCGFX_U32("graphics/trainers/front_pics/youngster_frlg.png", ".4bpp.smol");
@@ -626,7 +626,8 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_May, gTrainerPalette_May),
         .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_May, gTrainerPalette_May, sBackAnims_Hoenn),
-    },    [TRAINER_PIC_RED] =
+    },
+    [TRAINER_PIC_RED] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Red, gTrainerPalette_Red),
         .backPic = TRAINER_BACK_PIC(5, gTrainerBackPic_Red, gTrainerBackPicPalette_Red, sBackAnims_Kanto),
@@ -636,34 +637,26 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Leaf, gTrainerPalette_Leaf),
         .backPic = TRAINER_BACK_PIC(5, gTrainerBackPic_Leaf, gTrainerBackPicPalette_Leaf, sBackAnims_Kanto),
     },
-            [TRAINER_PIC_RS_BRENDAN] =
+    [TRAINER_PIC_RS_BRENDAN] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_RubySapphireBrendan, gTrainerPalette_RubySapphireBrendan),
-        // 🌟 NATIVE HARDWARE-ANIMATION: Aktiviert die 5-Frame-Wurferkennung für ethan_back.png!
-        .backPic = TRAINER_BACK_PIC(5, gTrainerBackPic_Ethan, gTrainerPalette_RubySapphireBrendan, sBackAnims_Hoenn),
+        .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_RubySapphireBrendan, gTrainerPalette_RubySapphireBrendan, sBackAnims_Hoenn),
     },
     [TRAINER_PIC_RS_MAY] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_RubySapphireMay, gTrainerPalette_RubySapphireMay),
-        // 🌟 NATIVE HARDWARE-ANIMATION: Aktiviert die 5-Frame-Wurferkennung für lyra_back.png!
-        .backPic = TRAINER_BACK_PIC(5, gTrainerBackPic_Lyra, gTrainerPalette_RubySapphireMay, sBackAnims_Hoenn),
-    },
-
-
-           [TRAINER_PIC_STEVEN] =
-    {
-        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Lucas, gTrainerPalette_Lucas),
-        // 🌟 MASTER-FIX BACK: Verknüpft Lucius (Lucas) Back-Pic typesafe mit den sBackAnims!
-        .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_Lucas, gTrainerPalette_Lucas, sBackAnims_Hoenn),
+        .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_RubySapphireMay, gTrainerPalette_RubySapphireMay, sBackAnims_Hoenn),
     },
     [TRAINER_PIC_WALLY] =
     {
-        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Dawn, gTrainerPalette_Dawn),
-        // 🌟 MASTER-FIX BACK: Verknüpft Lucia (Dawn) Back-Pic typesafe mit den sBackAnims!
-        .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_Dawn, gTrainerPalette_Dawn, sBackAnims_Hoenn),
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Wally, gTrainerPalette_Wally),
+        .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_Wally, gTrainerPalette_Wally, sBackAnims_Hoenn),
     },
-
-
+    [TRAINER_PIC_STEVEN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Steven, gTrainerPalette_Steven, 0, 7, 0x188),
+        .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_Steven, gTrainerPalette_Steven, sBackAnims_Hoenn),
+    },
     [TRAINER_PIC_POKEDUDE] =
     {
         .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_Pokedude, gTrainerBackPicPalette_Pokedude, sBackAnims_OldManPokedude),
@@ -1259,5 +1252,27 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_PAINTER_FRLG] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PainterFrlg, gTrainerPalette_PainterFrlg),
+    },
+
+    // Custom player characters (trainer card pages). Back pics use the 5-frame HGSS layout.
+    [TRAINER_PIC_ETHAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Ethan, gTrainerPalette_Ethan),
+        .backPic = TRAINER_BACK_PIC(5, gTrainerBackPic_Ethan, gTrainerBackPicPalette_Ethan, sBackAnims_Kanto),
+    },
+    [TRAINER_PIC_LYRA] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Lyra, gTrainerPalette_Lyra),
+        .backPic = TRAINER_BACK_PIC(5, gTrainerBackPic_Lyra, gTrainerBackPicPalette_Lyra, sBackAnims_Kanto),
+    },
+    [TRAINER_PIC_LUCAS] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Lucas, gTrainerPalette_Lucas),
+        .backPic = TRAINER_BACK_PIC(5, gTrainerBackPic_Lucas, gTrainerBackPicPalette_Lucas, sBackAnims_Kanto),
+    },
+    [TRAINER_PIC_DAWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Dawn, gTrainerPalette_Dawn),
+        .backPic = TRAINER_BACK_PIC(5, gTrainerBackPic_Dawn, gTrainerBackPicPalette_Dawn, sBackAnims_Kanto),
     },
 };

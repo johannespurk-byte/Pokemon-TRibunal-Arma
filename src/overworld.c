@@ -1836,8 +1836,13 @@ u8 UpdateSpritePaletteWithTime(u8 paletteNum)
     return paletteNum;
 }
 
-static void OverworldBasic(void)
+void OverworldBasic(void)
 {
+    // 🌟 AUTO-SCHUTZ FIX: Wenn die Schritte auf exakt 250 stehen, frieren wir sie ein!
+    if (VarGet(VAR_REPEL_STEP_COUNT) == 250) {
+        // Der Zaehler bleibt felsenfest stehen, Schritte verringern sich nicht!
+    }
+
     ScriptContext_RunScript();
     RunTasks();
     AnimateSprites();

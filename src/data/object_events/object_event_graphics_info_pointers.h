@@ -1,3 +1,9 @@
+// 🌟 VORWÄRTSDEKLARATION: Macht die Johto-Grafikinfos für die Pointer-Tabelle sofort sichtbar!
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnNormal;
+
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanSurfing;
@@ -644,13 +650,13 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_POKE_BALL] =                &gObjectEventGraphicsInfo_PokeBall,
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
     [OBJ_EVENT_GFX_LIGHT_SPRITE] =             &gObjectEventGraphicsInfo_BallLight,
-    [OBJ_EVENT_GFX_APRICORN_TREE] =            &gObjectEventGraphicsInfo_ApricornTree,
-#if IS_FRLG
-    [OBJ_EVENT_GFX_RED_NORMAL] =               &gObjectEventGraphicsInfo_RedNormal,
-    [OBJ_EVENT_GFX_RED_BIKE] =                 &gObjectEventGraphicsInfo_RedBike,
-    [OBJ_EVENT_GFX_RED_SURF] =                 &gObjectEventGraphicsInfo_RedSurf,
-    [OBJ_EVENT_GFX_RED_FIELD_MOVE] =           &gObjectEventGraphicsInfo_RedFieldMove,
-    [OBJ_EVENT_GFX_RED_FISH] =                 &gObjectEventGraphicsInfo_RedFish,
+    [OBJ_EVENT_GFX_APRICORN_TREE] =            &gObjectEventGraphicsInfo_ApricornTree, 
+   #if IS_FRLG
+        [OBJ_EVENT_GFX_RED_NORMAL] = &gObjectEventGraphicsInfo_RedNormal,
+        [OBJ_EVENT_GFX_RED_BIKE] = &gObjectEventGraphicsInfo_RedBike,
+        [OBJ_EVENT_GFX_RED_SURF] = &gObjectEventGraphicsInfo_RedSurf,
+        [OBJ_EVENT_GFX_RED_FIELD_MOVE] = &gObjectEventGraphicsInfo_RedFieldMove,
+        [OBJ_EVENT_GFX_RED_FISH] = &gObjectEventGraphicsInfo_RedFish,
     [OBJ_EVENT_GFX_RED_VS_SEEKER] =            &gObjectEventGraphicsInfo_RedVSSeeker,
     [OBJ_EVENT_GFX_RED_VS_SEEKER_BIKE] =       &gObjectEventGraphicsInfo_RedVSSeekerBike,
     [OBJ_EVENT_GFX_GREEN_NORMAL] =             &gObjectEventGraphicsInfo_GreenNormal,
@@ -791,6 +797,11 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DEOXYS_N]                 = &gObjectEventGraphicsInfo_DeoxysN,
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
 #endif // IS_FRLG
+	[OBJ_EVENT_GFX_ETHAN_NORMAL] = &gObjectEventGraphicsInfo_EthanNormal,
+	[OBJ_EVENT_GFX_LYRA_NORMAL] = &gObjectEventGraphicsInfo_LyraNormal,
+    [OBJ_EVENT_GFX_LUCAS_NORMAL] = &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_DAWN_NORMAL] = &gObjectEventGraphicsInfo_DawnNormal,
+
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
@@ -801,4 +812,6 @@ const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[
     [MAUVILLE_MAN_GIDDY]       = &gObjectEventGraphicsInfo_Giddy,
     [MAUVILLE_MAN_UNUSED1]     = &gObjectEventGraphicsInfo_UnusedMauvilleOldMan1,
     [MAUVILLE_MAN_UNUSED2]     = &gObjectEventGraphicsInfo_UnusedMauvilleOldMan2,
+	[OBJ_EVENT_GFX_ETHAN_NORMAL] = &gObjectEventGraphicsInfo_EthanNormal,
+	[OBJ_EVENT_GFX_LYRA_NORMAL] = &gObjectEventGraphicsInfo_LyraNormal,
 };

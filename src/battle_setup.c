@@ -2270,3 +2270,19 @@ void SetMultiTrainerBattle(struct ScriptContext *ctx)
     TRAINER_BATTLE_PARAM.defeatTextB = (u8*)ScriptReadWord(ctx);
     gPartnerTrainerId = TRAINER_PARTNER(ScriptReadHalfword(ctx));
 };
+// === NO-MONEY-LOSS PROTECTION START ===
+void ResetPlayerMoney(void)
+{
+    return; // KORREKTUR: Spieler verliert ab jetzt kein Geld mehr bei einer Niederlage!
+}
+
+void TakeMoneyOnWhiteout(void)
+{
+    return; // Fallback fuer neuere Expansion-Infrastrukturen
+}
+
+void ReducePlayerMoneyOnWhiteout(void)
+{
+    return; // Blockiert alternative Level-Cap-Geldabzugs-Systeme
+}
+// === NO-MONEY-LOSS PROTECTION ENDE ===

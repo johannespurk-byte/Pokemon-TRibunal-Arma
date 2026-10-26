@@ -574,6 +574,18 @@ void CB2_ReinitMainMenu(void)
     InitMainMenu(TRUE);
 }
 
+// Titelbildschirm (Select): überspringt das Hauptmenü und startet direkt das Birk-Intro
+void CB2_InitMainMenuNewGame(void)
+{
+    InitMainMenu(FALSE);
+    DestroyTask(FindTaskIdByFunc(Task_MainMenuCheckSaveFile));
+    gPlttBufferUnfaded[0] = RGB_BLACK;
+    gPlttBufferFaded[0] = RGB_BLACK;
+    FreeAllWindowBuffers();
+    sCurrItemAndOptionMenuCheck = 0;
+    CreateTask(Task_NewGameBirchSpeech_Init, 0);
+}
+
 static u32 InitMainMenu(bool8 returningFromOptionsMenu)
 {
     SetVBlankCallback(NULL);
@@ -1330,25 +1342,18 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
 
     ScanlineEffect_Stop();
     ResetSpriteData();
-
-    // ==========================================
-    // ERGÄNZUNG: Fehlenden Ablauf wiederherstellen
-    // ==========================================
-    ResetTasks(); // Bereitet die Task-Struktur vor
-
-    // FIX: Hintergrund-Layer (BG0) war geladen, aber nie sichtbar geschaltet.
-    // InitBgFromTemplate() richtet nur die Register ein, aktiviert den Layer aber nicht -
-    // dafür braucht es zwingend ShowBg(). Deshalb blieb der Bildschirm schwarz.
-    ShowBg(0);
-
-    AddBirchSpeechObjects(taskId); // Lädt die Sprites für Birk und Lotad
-
-    // NUTZT DIE KORREKTE FUNKTION AUS DEINER MAIN_MENU.C:
-    NewGameBirchSpeech_ClearWindow(0);
-
-    // Sagt dem Spiel, welcher Task als nächstes ausgeführt werden soll:
+    FreeAllSpritePalettes();
+    ResetAllPicSprites();
+    AddBirchSpeechObjects(taskId);
+    BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
+    gTasks[taskId].tBG1HOFS = 0;
     gTasks[taskId].func = Task_NewGameBirchSpeech_WaitToShowBirch;
-    // ==========================================
+    gTasks[taskId].tPlayerSpriteId = SPRITE_NONE;
+    gTasks[taskId].data[3] = 0xFF;
+    gTasks[taskId].tTimer = 0xD8;
+    PlayBGM(MUS_ROUTE122);
+    ShowBg(0);
+    ShowBg(1);
 }
 
 

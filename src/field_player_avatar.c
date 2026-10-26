@@ -1,4 +1,4 @@
-#include "global.h"
+﻿#include "global.h"
 #include "main.h"
 #include "bike.h"
 #include "event_data.h"
@@ -35,6 +35,22 @@
 #include "constants/moves.h"
 #include "constants/songs.h"
 #include "constants/trainer_types.h"
+#include "trainer_card.h"
+
+// 🌟 HARDWARE-FIX: Macht die Charakter-IDs für die Overworld unfehlbar sichtbar!
+#ifndef PLAYER_CHARACTER_RED
+#define PLAYER_CHARACTER_RED  3
+#endif
+#ifndef PLAYER_CHARACTER_LEAF
+#define PLAYER_CHARACTER_LEAF 4
+#endif
+
+// Seite 0 (Rot/Leaf) und Seite 1 (Ethan/Lyra) nutzen 9-Frame-Sheets ohne Lauf-Frames
+static bool32 PlayerAvatarLacksRunFrames(void)
+{
+    u8 page = TrainerCard_GetCharacterPage();
+    return page == 0 || page == 1;
+}
 
 #define NUM_FORCED_MOVEMENTS 22
 #define NUM_ACRO_BIKE_COLLISIONS 5
@@ -269,18 +285,6 @@ static const u8 sRivalAvatarGfxIds[][GENDER_COUNT] =
     [PLAYER_AVATAR_STATE_VSSEEKER]   = {OBJ_EVENT_GFX_RIVAL_BRENDAN_FIELD_MOVE, OBJ_EVENT_GFX_RIVAL_MAY_FIELD_MOVE},
 };
 
-static const u16 sPlayerAvatarGfxIds[][GENDER_COUNT] =
-{
-    [PLAYER_AVATAR_STATE_NORMAL]     = {PLAYER_AVATAR_GFX_MALE_NORMAL,     PLAYER_AVATAR_GFX_FEMALE_NORMAL},
-    [PLAYER_AVATAR_STATE_MACH_BIKE]  = {PLAYER_AVATAR_GFX_MALE_MACH_BIKE,  PLAYER_AVATAR_GFX_FEMALE_MACH_BIKE},
-    [PLAYER_AVATAR_STATE_ACRO_BIKE]  = {PLAYER_AVATAR_GFX_MALE_ACRO_BIKE,  PLAYER_AVATAR_GFX_FEMALE_ACRO_BIKE},
-    [PLAYER_AVATAR_STATE_SURFING]    = {PLAYER_AVATAR_GFX_MALE_SURFING,    PLAYER_AVATAR_GFX_FEMALE_SURFING},
-    [PLAYER_AVATAR_STATE_UNDERWATER] = {PLAYER_AVATAR_GFX_MALE_UNDERWATER, PLAYER_AVATAR_GFX_FEMALE_UNDERWATER},
-    [PLAYER_AVATAR_STATE_FIELD_MOVE] = {PLAYER_AVATAR_GFX_MALE_FIELD_MOVE, PLAYER_AVATAR_GFX_FEMALE_FIELD_MOVE},
-    [PLAYER_AVATAR_STATE_FISHING]    = {PLAYER_AVATAR_GFX_MALE_FISHING,    PLAYER_AVATAR_GFX_FEMALE_FISHING},
-    [PLAYER_AVATAR_STATE_WATERING]   = {PLAYER_AVATAR_GFX_MALE_WATERING,   PLAYER_AVATAR_GFX_FEMALE_WATERING},
-    [PLAYER_AVATAR_STATE_VSSEEKER]   = {PLAYER_AVATAR_GFX_MALE_VSSEEKER,   PLAYER_AVATAR_GFX_FEMALE_VSSEEKER},
-};
 
 static const u8 sFRLGAvatarGfxIds[GENDER_COUNT] =
 {
@@ -294,11 +298,27 @@ static const u8 sRSAvatarGfxIds[GENDER_COUNT] =
     [FEMALE] = OBJ_EVENT_GFX_LINK_RS_MAY
 };
 
+// 🌟 NEU: ERWEITERTES MULTI-GENERATIONEN-GRAFIKREGISTER (Typesafe deklariert)
+// Mapped alle Zustände (Gehen, Rad, Surfen, Angeln etc.) für alle 4 Generationen crash-frei!
+static const u16 sPlayerAvatarGfxIds[][GENDER_COUNT] =
+{
+    [PLAYER_AVATAR_STATE_NORMAL] = {PLAYER_AVATAR_GFX_MALE_NORMAL,     PLAYER_AVATAR_GFX_FEMALE_NORMAL},
+    [PLAYER_AVATAR_STATE_MACH_BIKE] = {PLAYER_AVATAR_GFX_MALE_MACH_BIKE,  PLAYER_AVATAR_GFX_FEMALE_MACH_BIKE},
+    [PLAYER_AVATAR_STATE_ACRO_BIKE] = {PLAYER_AVATAR_GFX_MALE_ACRO_BIKE,  PLAYER_AVATAR_GFX_FEMALE_ACRO_BIKE},
+    [PLAYER_AVATAR_STATE_SURFING] = {PLAYER_AVATAR_GFX_MALE_SURFING,    PLAYER_AVATAR_GFX_FEMALE_SURFING},
+    [PLAYER_AVATAR_STATE_UNDERWATER] = {PLAYER_AVATAR_GFX_MALE_UNDERWATER, PLAYER_AVATAR_GFX_FEMALE_UNDERWATER},
+    [PLAYER_AVATAR_STATE_FIELD_MOVE] = {PLAYER_AVATAR_GFX_MALE_FIELD_MOVE, PLAYER_AVATAR_GFX_FEMALE_FIELD_MOVE},
+    [PLAYER_AVATAR_STATE_FISHING] = {PLAYER_AVATAR_GFX_MALE_FISHING,    PLAYER_AVATAR_GFX_FEMALE_FISHING},
+    [PLAYER_AVATAR_STATE_WATERING] = {PLAYER_AVATAR_GFX_MALE_WATERING,   PLAYER_AVATAR_GFX_FEMALE_WATERING},
+    [PLAYER_AVATAR_STATE_VSSEEKER] = {PLAYER_AVATAR_GFX_MALE_VSSEEKER,   PLAYER_AVATAR_GFX_FEMALE_VSSEEKER},
+};
+
+// 🌟 NEU: NATIVE SYSTEM-FLAG-VERBINDUNG FÜR ALLE CUSTOM AVATARE
 static const struct PACKED
 {
     u16 graphicsId;
     u8 playerFlag;
-} sPlayerAvatarGfxToStateFlag[GENDER_COUNT][5] =
+} sPlayerAvatarGfxToStateFlag[GENDER_COUNT][15] =
 {
     [MALE] =
     {
@@ -307,16 +327,115 @@ static const struct PACKED
         {PLAYER_AVATAR_GFX_MALE_ACRO_BIKE,  PLAYER_AVATAR_FLAG_ACRO_BIKE},
         {PLAYER_AVATAR_GFX_MALE_SURFING,    PLAYER_AVATAR_FLAG_SURFING},
         {PLAYER_AVATAR_GFX_MALE_UNDERWATER, PLAYER_AVATAR_FLAG_UNDERWATER},
+        // Gen 2 & Gen 4 Jungs-Schnittstellen legitimiert verankert:
+        {OBJ_EVENT_GFX_ETHAN_NORMAL,        PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_LUCAS_NORMAL,        PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_RED,                 PLAYER_AVATAR_FLAG_ON_FOOT},
     },
     [FEMALE] =
     {
-        {PLAYER_AVATAR_GFX_FEMALE_NORMAL,         PLAYER_AVATAR_FLAG_ON_FOOT},
-        {PLAYER_AVATAR_GFX_FEMALE_MACH_BIKE,      PLAYER_AVATAR_FLAG_MACH_BIKE},
-        {PLAYER_AVATAR_GFX_FEMALE_ACRO_BIKE,      PLAYER_AVATAR_FLAG_ACRO_BIKE},
-        {PLAYER_AVATAR_GFX_FEMALE_SURFING,        PLAYER_AVATAR_FLAG_SURFING},
-        {PLAYER_AVATAR_GFX_FEMALE_UNDERWATER,     PLAYER_AVATAR_FLAG_UNDERWATER},
+        {PLAYER_AVATAR_GFX_FEMALE_NORMAL,     PLAYER_AVATAR_FLAG_ON_FOOT},
+        {PLAYER_AVATAR_GFX_FEMALE_MACH_BIKE,  PLAYER_AVATAR_FLAG_MACH_BIKE},
+        {PLAYER_AVATAR_GFX_FEMALE_ACRO_BIKE,  PLAYER_AVATAR_FLAG_ACRO_BIKE},
+        {PLAYER_AVATAR_GFX_FEMALE_SURFING,    PLAYER_AVATAR_FLAG_SURFING},
+        {PLAYER_AVATAR_GFX_FEMALE_UNDERWATER, PLAYER_AVATAR_FLAG_UNDERWATER},
+        // Gen 2 & Gen 4 Mädchen-Schnittstellen legitimiert verankert:
+        {OBJ_EVENT_GFX_LYRA_NORMAL,           PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_DAWN_NORMAL,           PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_LEAF,                  PLAYER_AVATAR_FLAG_ON_FOOT},
     }
 };
+
+
+u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
+{
+    // Seite, die auf der Trainerkarte ausgewählt wurde (im Spielstand gespeichert)
+    u16 activePage = TrainerCard_GetCharacterPage();
+
+    // === 🔴 Gen 1 (Kanto: Rot / Leaf) ===
+    if (activePage == 0) // Erste Seite (Standard Kanto)
+    {
+        if (gender == MALE)
+        {
+            switch (state)
+            {
+            case PLAYER_AVATAR_STATE_MACH_BIKE:
+            case PLAYER_AVATAR_STATE_ACRO_BIKE: return OBJ_EVENT_GFX_RED_BIKE;
+            case PLAYER_AVATAR_STATE_SURFING:   return OBJ_EVENT_GFX_RED_SURF;
+            default:                            return OBJ_EVENT_GFX_RED;
+            }
+        }
+        else
+        {
+            switch (state)
+            {
+            case PLAYER_AVATAR_STATE_MACH_BIKE:
+            case PLAYER_AVATAR_STATE_ACRO_BIKE: return OBJ_EVENT_GFX_GREEN_BIKE;
+            case PLAYER_AVATAR_STATE_SURFING:   return OBJ_EVENT_GFX_GREEN_SURF;
+            default:                            return OBJ_EVENT_GFX_LEAF;
+            }
+        }
+    }
+
+    // === 🟢 Gen 2 (Johto: Ethan / Lyra) ===
+    if (activePage == 1) // Zweite Seite (Gen 2 Johto)
+    {
+        if (gender == FEMALE)
+        {
+            switch (state)
+            {
+            case PLAYER_AVATAR_STATE_MACH_BIKE:
+            case PLAYER_AVATAR_STATE_ACRO_BIKE:   return PLAYER_AVATAR_GFX_FEMALE_MACH_BIKE; // Fahrrad-Fallback
+            case PLAYER_AVATAR_STATE_SURFING:     return PLAYER_AVATAR_GFX_FEMALE_SURFING;   // Surf-Fallback
+            default:                              return OBJ_EVENT_GFX_LYRA_NORMAL;          // Lädt deine echte Lyra!
+            }
+        }
+        else
+        {
+            switch (state)
+            {
+            case PLAYER_AVATAR_STATE_MACH_BIKE:
+            case PLAYER_AVATAR_STATE_ACRO_BIKE:   return PLAYER_AVATAR_GFX_MALE_MACH_BIKE;   // Fahrrad-Fallback
+            case PLAYER_AVATAR_STATE_SURFING:     return PLAYER_AVATAR_GFX_MALE_SURFING;     // Surf-Fallback
+            default:                              return OBJ_EVENT_GFX_ETHAN_NORMAL;         // Lädt deinen echten Ethan!
+            }
+        }
+    }
+
+    // === 💎 Gen 4 (Sinnoh: Lucas / Dawn) ===
+    if (activePage == 3) // Vierte Seite (Gen 4 Sinnoh)
+    {
+        if (gender == FEMALE)
+        {
+            switch (state)
+            {
+            case PLAYER_AVATAR_STATE_MACH_BIKE:
+            case PLAYER_AVATAR_STATE_ACRO_BIKE:   return PLAYER_AVATAR_GFX_FEMALE_MACH_BIKE;
+            case PLAYER_AVATAR_STATE_SURFING:     return PLAYER_AVATAR_GFX_FEMALE_SURFING;
+            default:                              return OBJ_EVENT_GFX_DAWN_NORMAL;          // Lädt deine echte Lucia!
+            }
+        }
+        else
+        {
+            switch (state)
+            {
+            case PLAYER_AVATAR_STATE_MACH_BIKE:
+            case PLAYER_AVATAR_STATE_ACRO_BIKE:   return PLAYER_AVATAR_GFX_MALE_MACH_BIKE;
+            case PLAYER_AVATAR_STATE_SURFING:     return PLAYER_AVATAR_GFX_MALE_SURFING;
+            default:                              return OBJ_EVENT_GFX_LUCAS_NORMAL;         // Lädt deinen echten Lucius!
+            }
+        }
+    }
+
+    // === 🔵 Standard Gen 3 Schiene (Brendan / May Fallback) ===
+    return sPlayerAvatarGfxIds[state][gender];
+}
+
+
+
+
+
+
 
 static bool8 (*const sArrowWarpMetatileBehaviorChecks2[])(u8) =  //Duplicate of sArrowWarpMetatileBehaviorChecks
 {
@@ -1246,10 +1365,29 @@ void PlayerSetAnimId(u8 movementActionId, enum CopyMovement copyableMovement)
 {
     if (!PlayerIsAnimActive())
     {
+        // Schützt Rot/Leaf und Ethan/Lyra vor Animationen, die ihr Sheet nicht hat
+        if (PlayerAvatarLacksRunFrames())
+        {
+            // Weiche 1: Sichert die normalen Lauf- und Sprint-Frames im hohen Gras ab
+            if (movementActionId >= MOVEMENT_ACTION_WALK_NORMAL_DOWN && movementActionId <= MOVEMENT_ACTION_WALK_NORMAL_RIGHT)
+            {
+                movementActionId = movementActionId - MOVEMENT_ACTION_WALK_NORMAL_DOWN + MOVEMENT_ACTION_WALK_FAST_DOWN;
+            }
+            // Weiche 2: KORREKTUR FÜR TREPPEN & SLOW-ANIMATIONEN (Verhindert den harten RAM-Adressen-Absturz!)
+            else if (movementActionId >= MOVEMENT_ACTION_WALK_SLOW_DOWN && movementActionId <= MOVEMENT_ACTION_WALK_SLOW_RIGHT)
+            {
+                movementActionId = movementActionId - MOVEMENT_ACTION_WALK_SLOW_DOWN + MOVEMENT_ACTION_WALK_FAST_DOWN;
+            }
+        }
+
         PlayerSetCopyableMovement(copyableMovement);
         ObjectEventSetHeldMovement(&gObjectEvents[gPlayerAvatar.objectEventId], movementActionId);
     }
 }
+
+
+
+
 
 // slow stairs (from FRLG--faster than slow)
 static void PlayerWalkSlowStairs(enum Direction direction)
@@ -1263,10 +1401,7 @@ static void UNUSED PlayerWalkSlow(enum Direction direction)
     PlayerSetAnimId(GetWalkSlowMovementAction(direction), COPY_MOVE_WALK);
 }
 
-static void PlayerRunSlow(enum Direction direction)
-{
-    PlayerSetAnimId(GetPlayerRunSlowMovementAction(direction), COPY_MOVE_WALK);
-}
+
 
 // normal speed (1 speed)
 void PlayerWalkNormal(enum Direction direction)
@@ -1289,10 +1424,24 @@ void PlayerWalkFaster(enum Direction direction)
     PlayerSetAnimId(GetWalkFasterMovementAction(direction), COPY_MOVE_WALK);
 }
 
+static void PlayerRunSlow(enum Direction direction)
+{
+    // Nutzt die Geh-ID für Sheets ohne Lauf-Frames, um Renn-Animations-Abstürze zu verhindern
+    if (PlayerAvatarLacksRunFrames())
+        PlayerSetAnimId(GetWalkSlowStairsMovementAction(direction), COPY_MOVE_WALK);
+    else
+        PlayerSetAnimId(GetPlayerRunSlowMovementAction(direction), COPY_MOVE_WALK);
+}
+
 static void PlayerRun(enum Direction direction)
 {
-    PlayerSetAnimId(GetPlayerRunMovementAction(direction), COPY_MOVE_WALK);
+    // Nutzt die Geh-ID für Sheets ohne Lauf-Frames, um Renn-Animations-Abstürze zu verhindern
+    if (PlayerAvatarLacksRunFrames())
+        PlayerSetAnimId(GetWalkFastMovementAction(direction), COPY_MOVE_WALK);
+    else
+        PlayerSetAnimId(GetPlayerRunMovementAction(direction), COPY_MOVE_WALK);
 }
+
 
 void PlayerOnBikeCollide(enum Direction direction)
 {
@@ -1572,10 +1721,9 @@ u16 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
         return sRivalAvatarGfxIds[state][gender];
 }
 
-u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
-{
-    return sPlayerAvatarGfxIds[state][gender];
-}
+
+
+
 
 u16 GetFRLGAvatarGraphicsIdByGender(enum Gender gender)
 {

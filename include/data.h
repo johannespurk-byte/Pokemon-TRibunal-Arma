@@ -1,4 +1,4 @@
-#ifndef GUARD_DATA_H
+﻿#ifndef GUARD_DATA_H
 #define GUARD_DATA_H
 
 #include "constants/moves.h"
@@ -206,6 +206,11 @@ extern const struct SpriteFrameImage gTrainerBackPicTable_RubySapphireBrendan[];
 extern const struct SpriteFrameImage gTrainerBackPicTable_RubySapphireMay[];
 extern const struct SpriteFrameImage gTrainerBackPicTable_Wally[];
 extern const struct SpriteFrameImage gTrainerBackPicTable_Steven[];
+// 🌟 CUSTOM MULTI-GENERATION BACK-PIC ARRAYS (Typesafe im globalen Datenstamm verankert!)
+extern const struct SpriteFrameImage gTrainerBackPicTable_Ethan[];
+extern const struct SpriteFrameImage gTrainerBackPicTable_Lyra[];
+extern const struct SpriteFrameImage gTrainerBackPicTable_Lucas[];
+extern const struct SpriteFrameImage gTrainerBackPicTable_Dawn[];
 
 extern const union AffineAnimCmd *const gAffineAnims_BattleSpritePlayerSide[];
 extern const union AffineAnimCmd *const gAffineAnims_BattleSpriteOpponentSide[];

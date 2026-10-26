@@ -31,23 +31,44 @@
 
 #include "constants/event_objects.h"
 #include "constants/union_room.h"
+// 🌟 CUSTOM LINK-BRIDGE: Macht die Steven- und Wally-Farbpaletten im gesamten Pass-Dokument sichtbar!
+extern const u16 gTrainerPalette_Steven[];
+extern const u16 gTrainerPalette_Wally[];
 
 // 🌟 NEU: Fehlende Header wieder hinzufügen, um Sounds, Farben und Frontier-Konstanten zu reparieren!
 #include "constants/songs.h"
 #include "constants/rgb.h"
 #include "constants/battle_frontier.h"
+// 🌟 CUSTOM LINK-BRIDGE: Macht die Kanto-Farbpaletten im gesamten Pass-Dokument sichtbar!
+extern const u16 gTrainerPalette_Red[];
+extern const u16 gTrainerPalette_Leaf[];
 
-// 🌟 SINNOH-MENÜ-GRAFIKEN
+// 🌟 SINNOH-MENÜ-GRAFIKEN (Die echten Namen ohne das alte _Custom anmelden!)
 extern const u32 gTrainerFrontPic_Lucas[];
 extern const u16 gTrainerPalette_Lucas[];
 extern const u32 gTrainerFrontPic_Dawn[];
 extern const u16 gTrainerPalette_Dawn[];
+// 🌟 VERIFIZIERTE PALETTEN-BRÜCKE: Richtet die Deklarationen pfeilgerade auf die echten Grafik-Pfade deiner Engine aus!
+extern const u16 gTrainerPalette_RSBrendan[];
+extern const u16 gTrainerPalette_RSMay[];
+// 🌟 VERIFIZIERTE PALETTEN-BRÜCKE: Verknüpft die Adressen direkt mit den echten Objekten deiner Engine!
+extern const u16 gTrainerPalette_RubySapphireBrendan[];
+extern const u16 gTrainerPalette_RubySapphireMay[];
 
-// 🌟 JOHTO-MENÜ-GRAFIKEN (Typesafe verknüpft mit deinen RS-Ressourcen-Namen!)
+// 🌟 VERIFIZIERTE PALETTEN-BRÜCKE: Richtet die Deklarationen auf deine echten Ethan/Lyra-Paletten aus!
+extern const u16 gTrainerPalette_Ethan[];
+extern const u16 gTrainerPalette_Lyra[];
+
+
+
+// 🌟 JOHTO-MENÜ-GRAFIKEN
 extern const u32 gTrainerFrontPic_RubySapphireBrendan[];
 extern const u16 gTrainerPalette_RubySapphireBrendan[];
 extern const u32 gTrainerFrontPic_RubySapphireMay[];
 extern const u16 gTrainerPalette_RubySapphireMay[];
+
+
+
 
 enum {
     WIN_MSG,
@@ -193,6 +214,7 @@ static const u16 sKantoTrainerCardBronze_Pal[]   = INCGFX_U16("graphics/trainer_
 static const u16 sHoennTrainerCardSilver_Pal[]   = INCGFX_U16("graphics/trainer_card/silver.pal", ".gbapal");
 static const u16 sKantoTrainerCardSilver_Pal[]   = INCGFX_U16("graphics/trainer_card/frlg/silver.pal", ".gbapal");
 static const u16 sHoennTrainerCardGold_Pal[]     = INCGFX_U16("graphics/trainer_card/gold.pal", ".gbapal");
+static const u16 sHoennTrainerCardPlatinum_Pal[] = INCGFX_U16("graphics/trainer_card/platinum.pal", ".gbapal");
 static const u16 sKantoTrainerCardGold_Pal[]     = INCGFX_U16("graphics/trainer_card/frlg/gold.pal", ".gbapal");
 static const u16 sHoennTrainerCardFemaleBg_Pal[] = INCGFX_U16("graphics/trainer_card/female_bg.pal", ".gbapal");
 static const u16 sKantoTrainerCardFemaleBg_Pal[] = INCGFX_U16("graphics/trainer_card/frlg/female_bg.pal", ".gbapal");
@@ -352,6 +374,7 @@ struct TrainerCardGenPage
 {
     u8 variant[GENDER_COUNT];       // playerCharacterVariant, der bei dieser Seite gesetzt wird
     u8 facilityClass[GENDER_COUNT]; // Portrait auf der Karte
+    u16 trainerPic[GENDER_COUNT];   // Trainer-Bild für Karte (Vorderseite) und Kampf (Rückseite/Wurf)
 };
 
 static const struct TrainerCardGenPage sTrainerCardGenPages[] =
@@ -360,39 +383,55 @@ static const struct TrainerCardGenPage sTrainerCardGenPages[] =
     {
         .variant = { [MALE] = PLAYER_CHARACTER_RED,[FEMALE] = PLAYER_CHARACTER_LEAF},
         .facilityClass = { [MALE] = FACILITY_CLASS_RED,[FEMALE] = FACILITY_CLASS_LEAF},
+        .trainerPic = { [MALE] = TRAINER_PIC_RED, [FEMALE] = TRAINER_PIC_LEAF },
     },
     // Gen 2: Ethan / Lyra (Seite 1)
     {
         .variant = { [MALE] = PLAYER_CHARACTER_ETHAN,[FEMALE] = PLAYER_CHARACTER_LYRA},
         .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+        .trainerPic = { [MALE] = TRAINER_PIC_ETHAN, [FEMALE] = TRAINER_PIC_LYRA },
     },
-    // Gen 3: Brendan / May (Seite 2) - 🌟 ENTFLOCHTEN: Holt Gen 3 unzerstörbar zurück!
+    // Gen 3: Brendan / May (Seite 2)
     {
         .variant = { [MALE] = PLAYER_CHARACTER_DEFAULT,[FEMALE] = PLAYER_CHARACTER_DEFAULT},
         .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+        .trainerPic = { [MALE] = TRAINER_PIC_BRENDAN, [FEMALE] = TRAINER_PIC_MAY },
     },
-    // Gen 4: Lucius / Lucia (Seite 3) - 🌟 ERWEITERT: Bereit für deine echten Sinnoh-Skins!
+    // Gen 4: Lucius / Lucia (Seite 3)
     {
         .variant = { [MALE] = 7,[FEMALE] = 8},
         .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+        .trainerPic = { [MALE] = TRAINER_PIC_LUCAS, [FEMALE] = TRAINER_PIC_DAWN },
     },
 };
 
-// 🌟 UNFEHLBARER LOGIK-BLOCK: Steuert die Karte rein über den RAM-Puffer ohne SaveBlock-Fehler!
-EWRAM_DATA u8 sTrainerCardCurrentPage = 0; // 0 = Gen 1, 1 = Gen 2, 2 = Gen 3
 EWRAM_DATA u8 sTrainerCardCurrentSkin = 0; // 0 = Hauptheld, 1 = Rivale/Alternativ
 
-
+// Die gewählte Seite liegt in VAR_TRAINER_CARD_PAGE und wird so mit dem Spielstand gespeichert.
 static u8 TrainerCardGetPage(void)
 {
-    return sTrainerCardCurrentPage;
+    u16 page = VarGet(VAR_TRAINER_CARD_PAGE);
+
+    if (page >= ARRAY_COUNT(sTrainerCardGenPages))
+        page = 0;
+    return page;
+}
+
+u8 TrainerCard_GetCharacterPage(void)
+{
+    return TrainerCardGetPage();
+}
+
+u16 TrainerCard_GetPlayerTrainerPic(u8 gender)
+{
+    return sTrainerCardGenPages[TrainerCardGetPage()].trainerPic[gender != MALE];
 }
 
 static void TrainerCardApplyPage(u8 page)
 {
     if (page < ARRAY_COUNT(sTrainerCardGenPages))
     {
-        sTrainerCardCurrentPage = page;
+        VarSet(VAR_TRAINER_CARD_PAGE, page);
     }
 }
 
@@ -1592,9 +1631,14 @@ static u8 SetCardBgsAndPals(void)
     {
         if (sData->cardType != CARD_TYPE_FRLG)
         {
-            LoadPalette(sHoennTrainerCardPals[sData->trainerCard.stars], BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
+            // Eigene Karte immer in Platin, Link-Karten behalten die Sterne-Farbe
+            if (!sData->isLink)
+                LoadPalette(sHoennTrainerCardPlatinum_Pal, BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
+            else
+                LoadPalette(sHoennTrainerCardPals[sData->trainerCard.stars], BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
             LoadPalette(sHoennTrainerCardBadges_Pal, BG_PLTT_ID(3), PLTT_SIZE_4BPP);
-            if (sData->trainerCard.gender != MALE)
+            // Eigene Karte: auch der Hintergrund bleibt platin (kein rosa Hintergrund für Mädchen)
+            if (sData->trainerCard.gender != MALE && sData->isLink)
                 LoadPalette(sHoennTrainerCardFemaleBg_Pal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
         }
         else
@@ -2044,82 +2088,21 @@ static u8 VersionToCardType(enum GameVersion version)
     else
         return CARD_TYPE_RS;
 }
-
 static void CreateTrainerCardTrainerPic(void)
 {
-    // 🌟 ENGINE-DECODER-BRÜCKE: Meldet die werksseitige Dekomprimierungsfunktion lokal typesafe an!
-    void DecompressTrainerFrontPic(u16 frontPicId, u8 paletteSlot);
-
     if (InUnionRoom() == TRUE && gReceivedRemoteLinkPlayers)
     {
-        // 🌟 KORREKTUR: Dreidimensionale Indizes ([0] für X, [1] für Y) typesafe hinzugefügt!
-        CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(sData->trainerCard.unionRoomClass),
-            TRUE,
-            sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][0],
-            sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][1],
-            8,
-            WIN_TRAINER_PIC);
+        CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(sData->trainerCard.unionRoomClass), TRUE, 0, 0, 8, WIN_TRAINER_PIC);
+    }
+    else if (sData->isLink)
+    {
+        CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(TrainerCardGetFacilityClass()), TRUE, 0, 0, 8, WIN_TRAINER_PIC);
     }
     else
     {
-        u16 destX, destY;
-        u8 gender = sData->trainerCard.gender;
-        u8 page = TrainerCardGetPage();
-
-        // === 🌟 AUTOMATISCHER KOORDINATEN-SCHUTZ FÜR ALLE CUSTOM-SEITEN ===
-        if (page == 1 || page == 3) // Johto (1) oder Sinnoh (3)
-        {
-            destX = 1;
-            destY = 0;
-        }
-        else
-        {
-            // 🌟 KORREKTUR: Dreidimensionale Indizes ([0] für X, [1] für Y) typesafe hinzugefügt!
-            destX = sTrainerPicOffset[sData->isHoenn][gender][0];
-            destY = sTrainerPicOffset[sData->isHoenn][gender][1];
-        }
-
-        // === 💎 Gen 4 (Sinnoh) ausgewählt! ===
-        if (page == 3)
-        {
-            if (gender == MALE)
-            {
-                CreateTrainerCardTrainerPicSprite(TRAINER_PIC_BRENDAN, TRUE, destX, destY, 8, WIN_TRAINER_PIC);
-                LoadPalette(gTrainerPalette_Lucas, OBJ_PLTT_ID(8), PLTT_SIZE_4BPP);
-                DecompressTrainerFrontPic(TRAINER_PIC_STEVEN, 8);
-            }
-            else
-            {
-                CreateTrainerCardTrainerPicSprite(TRAINER_PIC_MAY, TRUE, destX, destY, 8, WIN_TRAINER_PIC);
-                LoadPalette(gTrainerPalette_Dawn, OBJ_PLTT_ID(8), PLTT_SIZE_4BPP);
-                DecompressTrainerFrontPic(TRAINER_PIC_WALLY, 8);
-            }
-            return;
-        }
-        // === 🟢 Gen 2 (Johto) ausgewählt! ===
-        else if (page == 1)
-        {
-            if (gender == MALE)
-            {
-                // 🌟 FIX: Zieht die echten, vom Compiler bereitgestellten Farbpaletten aus deiner trainers.h!
-                CreateTrainerCardTrainerPicSprite(TRAINER_PIC_RS_BRENDAN, TRUE, destX, destY, 8, WIN_TRAINER_PIC);
-                LoadPalette(gTrainerPalette_RubySapphireBrendan, OBJ_PLTT_ID(8), PLTT_SIZE_4BPP);
-                DecompressTrainerFrontPic(TRAINER_PIC_RS_BRENDAN, 8);
-            }
-            else
-            {
-                // 🌟 FIX: Zieht die echten, vom Compiler bereitgestellten Farbpaletten aus deiner trainers.h!
-                CreateTrainerCardTrainerPicSprite(TRAINER_PIC_RS_MAY, TRUE, destX, destY, 8, WIN_TRAINER_PIC);
-                LoadPalette(gTrainerPalette_RubySapphireMay, OBJ_PLTT_ID(8), PLTT_SIZE_4BPP);
-                DecompressTrainerFrontPic(TRAINER_PIC_RS_MAY, 8);
-            }
-            return;
-        }
-        // === 🔵 Standard Gen 3 / Gen 1 Schiene ===
-        else
-        {
-            CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(TrainerCardGetFacilityClass()), TRUE, destX, destY, 8, WIN_TRAINER_PIC);
-        }
+        // Eigene Karte: Bild der gewählten Generations-Seite (lädt seine eigene Palette mit)
+        CreateTrainerCardTrainerPicSprite(TrainerCard_GetPlayerTrainerPic(sData->trainerCard.gender), TRUE, 0, 0, 8, WIN_TRAINER_PIC);
     }
 }
+
 

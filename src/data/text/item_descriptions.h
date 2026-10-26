@@ -18,3 +18,13 @@ const u8 LittlerootTown_Text_GachaBoxFull[] = _("Deine PC-Boxen sind voll?!");
 const u8 LittlerootTown_Text_StyleChanger[] = _("I cannot change your style right now!");
 const u8 LittlerootTown_Text_TownSign[] = _("LITTLEROOT TOWN\nA town that can't be shaded any hue.");
 const u8 gText_HowMayIBerveYou[] = _("Welcome! How may I serve you?");
+
+// 🌟 TM51+ GRAPHICS INTERFACE TEXT REGISTER
+const u8 gItemDescription_TM51[] = _("Senkt die Initiative des\nGegners durch eine heftige\nErschuetterung.");
+const u8 gItemDescription_TM52[] = _("Ein maechtiges Erdbeben,\ndas alle ungeschuetzten\nPokemon im Kampf trifft.");
+
+// 🌟 TM-MENÜ STRINGS FÜR TM51 UND TM52
+const u8 gText_TM51[] = _("TM51");
+const u8 gText_TM52[] = _("TM52");
+const u8 gMoveName_Bulldoze[] = _("Dampfwalze");
+const u8 gMoveName_Earthquake[] = _("Erdbeben");

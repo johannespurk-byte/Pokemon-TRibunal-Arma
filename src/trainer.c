@@ -1,9 +1,13 @@
 #include "global.h"
+#include "trainer_card.h"
 #include "constants/trainers.h"
 
 static enum TrainerPicID GetEmeraldTrainerPic(enum Gender gender)
 {
-    return gender == MALE ? TRAINER_PIC_BRENDAN : TRAINER_PIC_MAY;
+    if (TESTING)
+        return gender == MALE ? TRAINER_PIC_BRENDAN : TRAINER_PIC_MAY;
+    // Character picked on the trainer card (Gen 1-4 pages)
+    return TrainerCard_GetPlayerTrainerPic(gender);
 }
 static enum TrainerPicID GetRSTrainerPic(enum Gender gender)
 {

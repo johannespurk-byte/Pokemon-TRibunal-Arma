@@ -2910,8 +2910,9 @@ BattleScript_LocalBattleLost::
 	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, 0, BattleScript_RivalBattleLost
 	jumpifnowhiteout BattleScript_LocalBattleLostEnd_
 	jumpifbattletype BATTLE_TYPE_INGAME_PARTNER, BattleScript_LocalBattleLostPrintWhiteOut
+
 BattleScript_LocalBattleLostPrintWhiteOut::
-	getmoneyreward
+	nop @ 🌟 REPARATUR: getmoneyreward durch nop ersetzt! Du verlierst ab jetzt 0 Geld!
 	printstring STRINGID_PLAYERWHITEOUT
 	waitmessage B_WAIT_TIME_LONG
 .if B_WHITEOUT_MONEY >= GEN_4
@@ -2930,9 +2931,9 @@ BattleScript_LocalBattleLostEnd::
 .else
 	printstring STRINGID_PLAYERWHITEOUT3
 	waitmessage B_WAIT_TIME_LONG
-BattleScript_LocalBattleLostEnd::
-	end2
+	end2 @ 🌟 REPARATUR: Das doppelte Label-Symbol direkt über dem end2 wurde restlos entfernt!
 .endif
+
 
 BattleScript_CheckDomeDrew::
 	jumpifbyte CMP_EQUAL, gBattleOutcome, B_OUTCOME_DREW, BattleScript_LocalBattleLostEnd_

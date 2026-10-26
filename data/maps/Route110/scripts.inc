@@ -615,6 +615,8 @@ Route110_EventScript_BirchScene::
 	applymovement LOCALID_ROUTE110_BIRCH, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	delay 30
+	msgbox Route102_Text_AllenIntro, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_BIRCH_R110, Route102_Text_AllenDefeated
 	msgbox Route110_Text_HeardYouInstallMatchCall, MSGBOX_DEFAULT
 	closemessage
 	delay 30

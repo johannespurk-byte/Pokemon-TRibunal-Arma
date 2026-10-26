@@ -7550,7 +7550,8 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
     // ====================================================================
     // DEIN PERFEKTES, UNENDLICHES CAP-BONBON (IN DER BEEREN-TASCHE)
     // ====================================================================
-    if (gSpecialVar_ItemId == ITEM_LEVEL_CAP_CANDY)
+    if (gSpecialVar_ItemId == ITEM_POKE_VIAL)
+
     {
         u8 currentLevel = GetMonData(mon, MON_DATA_LEVEL);
         u8 maxLevel = GetCurrentLevelCap(); // Holt das native Story-Cap deiner Engine

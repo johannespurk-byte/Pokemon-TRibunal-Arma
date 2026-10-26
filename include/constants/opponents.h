@@ -871,7 +871,12 @@
 #define TRAINER_BLAINE                      864
 #define TRAINER_AQUACAMP_GRUNT_2				865
 #define TRAINER_AQUACAMP_GRUNT_1				866
-
+#define TRAINER_BRANDON_DEWFORD					867
+#define TRAINER_ARCHIE_SLATEPORT						868
+#define TRAINER_SEASHORE_OWNER						869
+#define TRAINER_BIRCH_R110    870
+#define TRAINER_STEVEN_GRANITE    871
+#
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space

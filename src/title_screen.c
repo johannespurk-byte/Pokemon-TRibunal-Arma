@@ -59,6 +59,7 @@ static void Task_TitleScreenPhase1(u8);
 static void Task_TitleScreenPhase2(u8);
 static void Task_TitleScreenPhase3(u8);
 static void CB2_GoToMainMenu(void);
+static void CB2_GoToNewGame(void);
 static void CB2_GoToClearSaveDataScreen(void);
 static void CB2_GoToResetRtcScreen(void);
 static void CB2_GoToBerryFixScreen(void);
@@ -454,34 +455,44 @@ static const union AnimCmd sAnim_PressStart_4[] =
     ANIMCMD_FRAME(17, 4),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_Copyright_0[] =
+static const union AnimCmd sAnim_PressStart_5[] =
 {
     ANIMCMD_FRAME(21, 4),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_Copyright_1[] =
+static const union AnimCmd sAnim_PressStart_6[] =
 {
     ANIMCMD_FRAME(25, 4),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_Copyright_2[] =
+static const union AnimCmd sAnim_Copyright_0[] =
 {
     ANIMCMD_FRAME(29, 4),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_Copyright_3[] =
+static const union AnimCmd sAnim_Copyright_1[] =
 {
     ANIMCMD_FRAME(33, 4),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_Copyright_4[] =
+static const union AnimCmd sAnim_Copyright_2[] =
 {
     ANIMCMD_FRAME(37, 4),
     ANIMCMD_END,
 };
+static const union AnimCmd sAnim_Copyright_3[] =
+{
+    ANIMCMD_FRAME(41, 4),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_Copyright_4[] =
+{
+    ANIMCMD_FRAME(45, 4),
+    ANIMCMD_END,
+};
 
-// The "Press Start" and copyright graphics are each 5 32x8 segments long
-#define NUM_PRESS_START_FRAMES 5
+// "Press Select for New Game" is 7 32x8 segments long, the copyright 5
+#define NUM_PRESS_START_FRAMES 7
 #define NUM_COPYRIGHT_FRAMES 5
 
 static const union AnimCmd *const sStartCopyrightBannerAnimTable[NUM_PRESS_START_FRAMES + NUM_COPYRIGHT_FRAMES] =
@@ -491,6 +502,8 @@ static const union AnimCmd *const sStartCopyrightBannerAnimTable[NUM_PRESS_START
     sAnim_PressStart_2,
     sAnim_PressStart_3,
     sAnim_PressStart_4,
+    sAnim_PressStart_5,
+    sAnim_PressStart_6,
     [NUM_PRESS_START_FRAMES] =
     sAnim_Copyright_0,
     sAnim_Copyright_1,
@@ -512,7 +525,7 @@ static const struct CompressedSpriteSheet sSpriteSheet_PressStart[] =
 {
     {
         .data = gTitleScreenPressStartGfx,
-        .size = 0x520,
+        .size = 0x620,
         .tag = TAG_PRESS_START_COPYRIGHT
     },
     {},
@@ -641,7 +654,7 @@ static void CreatePressStartBanner(s16 x, s16 y)
     u8 i;
     u8 spriteId;
 
-    x -= 64;
+    x -= 96;
     for (i = 0; i < NUM_PRESS_START_FRAMES; i++, x += 32)
     {
         spriteId = CreateSprite(&sStartCopyrightBannerSpriteTemplate, x, y, 0);
@@ -1028,7 +1041,8 @@ static void Task_TitleScreenPhase2(u8 taskId)
 // Show Rayquaza silhouette and process main title screen input
 static void Task_TitleScreenPhase3(u8 taskId)
 {
-    if (QUICKSTART && JOY_NEW(SELECT_BUTTON))
+    // Quickstart (Debug, nur Nicht-Release-Builds) liegt auf R + Select, Select allein startet ein neues Spiel
+    if (QUICKSTART && JOY_NEW(SELECT_BUTTON) && JOY_HELD(R_BUTTON))
         Quickstart();
 
     if (JOY_NEW(A_BUTTON) || JOY_NEW(START_BUTTON))
@@ -1036,6 +1050,13 @@ static void Task_TitleScreenPhase3(u8 taskId)
         FadeOutBGM(4);
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_WHITEALPHA);
         SetMainCallback2(CB2_GoToMainMenu);
+    }
+    else if (JOY_NEW(SELECT_BUTTON) && !JOY_HELD(B_BUTTON | R_BUTTON) && !gPaletteFade.active)
+    {
+        // B + Select gehören zu den Kombos (Spielstand löschen, Uhr, Beeren-Fix)
+        FadeOutBGM(4);
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+        SetMainCallback2(CB2_GoToNewGame);
     }
     else if (JOY_HELD(CLEAR_SAVE_BUTTON_COMBO) == CLEAR_SAVE_BUTTON_COMBO)
     {
@@ -1076,6 +1097,12 @@ static void CB2_GoToMainMenu(void)
 {
     if (!UpdatePaletteFade())
         SetMainCallback2(CB2_InitMainMenu);
+}
+
+static void CB2_GoToNewGame(void)
+{
+    if (!UpdatePaletteFade())
+        SetMainCallback2(CB2_InitMainMenuNewGame);
 }
 
 static void CB2_GoToCopyrightScreen(void)

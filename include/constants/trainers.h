@@ -177,8 +177,17 @@ enum __attribute__((packed)) TrainerPicID
     TRAINER_PIC_CRUSH_GIRL_FRLG,
     TRAINER_PIC_POKEMON_BREEDER_FRLG,
     TRAINER_PIC_PAINTER_FRLG,
-    TRAINER_PIC_COUNT,
+
+    // 🌟 CUSTOM MULTI-GENERATION TRAINER PICS (Einzigartige, eigenständige System-IDs verankert!)
+        TRAINER_PIC_ETHAN,
+        TRAINER_PIC_LYRA,
+        TRAINER_PIC_LUCAS,
+        TRAINER_PIC_DAWN,
+
+        TRAINER_PIC_COUNT,
 };
+
+
 
 enum
 {
