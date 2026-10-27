@@ -91,9 +91,6 @@ bool8 GiveRandomTrainerEgg(void)
         return FALSE;
     }
 
-    if (CalculatePlayerPartyCount() >= PARTY_SIZE)
-        return FALSE;
-
     u16 randomSpecies;
     u32 attempts = 0;
 
@@ -122,17 +119,27 @@ bool8 GiveRandomTrainerEgg(void)
     if (attempts >= 100)
         randomSpecies = SPECIES_PICHU;
 
-    u8 partyIndex = CalculatePlayerPartyCount();
+    struct Pokemon egg;
 
     // Wie ein Zucht-Ei: zufälliges Wesen und DVs, Spitzname EI, Ursprungslevel 0
-    CreateEgg(&gParties[B_TRAINER_PLAYER][partyIndex], randomSpecies, FALSE);
+    CreateEgg(&egg, randomSpecies, FALSE);
 
     // Schlüpft nach wenigen Schritten statt nach den normalen Ei-Zyklen
     u8 steps = 1;
-    SetMonData(&gParties[B_TRAINER_PLAYER][partyIndex], MON_DATA_FRIENDSHIP, &steps);
-    CalculatePlayerPartyCount();
+    SetMonData(&egg, MON_DATA_FRIENDSHIP, &steps);
 
-    ShowFieldMessage(gText_ReceivedEggFromTrainer);
+    // Ins Team, oder in die Box, wenn das Team voll ist
+    switch (GiveCapturedMonToPlayer(&egg))
+    {
+    case MON_GIVEN_TO_PARTY:
+        ShowFieldMessage(gText_ReceivedEggFromTrainer);
+        break;
+    case MON_GIVEN_TO_PC:
+        ShowFieldMessage(COMPOUND_STRING("Nach dem harten Kampf übergibt dir der\nTrainer ein mysteriöses Ei!\pDein Team ist voll, das Ei wurde\nin die Box geschickt.$"));
+        break;
+    default: // Team und alle Boxen voll
+        return FALSE;
+    }
 
     return TRUE;
 }
