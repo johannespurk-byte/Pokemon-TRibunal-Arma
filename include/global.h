@@ -601,7 +601,8 @@ struct SaveBlock2
              u16 optionsBattleStyle:1; // OPTIONS_BATTLE_STYLE_[SHIFT/SET]
              u16 optionsBattleSceneOff:1; // whether battle animations are disabled
              u16 regionMapZoom:1; // whether the map is zoomed in
-             //u16 padding1:4;
+             u16 optionsNuzlocke:1; // Nuzlocke-Regeln an (Optionsmenü), siehe nuzlocke.c
+             //u16 padding1:3;
              //u16 padding2;
     /*0x18*/ struct Pokedex pokedex;
     /*0x90*/ u8 filler_90[0x8];
@@ -1209,6 +1210,7 @@ struct SaveBlock1
     u8 rivalName[PLAYER_NAME_LENGTH + 1];
     struct DaycareMon route5DayCareMon;
 #endif
+    u8 nuzlockeEncounters[32]; // Nuzlocke: ein Bit je Kartenabschnitt (MAPSEC), dessen Begegnung verbraucht ist
     // sizeof: 0x3???
 };
 

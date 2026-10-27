@@ -34,6 +34,7 @@
 #include "naming_screen.h"
 #include "overworld.h"
 #include "party_menu.h"
+#include "nuzlocke.h"
 #include "pokedex.h"
 #include "pokeblock.h"
 #include "pokemon.h"
@@ -3517,6 +3518,9 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, enum Item item, u8 partyIndex, 
     // Determine the EV cap to use
     u32 maxAllowedEVs = !B_EV_ITEMS_CAP ? MAX_TOTAL_EVS : GetCurrentEVCap();
 
+    if (!usedByAI && Nuzlocke_IsItemBlocked(mon))
+        return TRUE;
+
     // Get item hold effect
     heldItem = GetMonData(mon, MON_DATA_HELD_ITEM);
     if (heldItem == ITEM_ENIGMA_BERRY_E_READER)
@@ -6695,6 +6699,9 @@ void HealPokemon(struct Pokemon *mon)
 {
     u32 data;
 
+    if (Nuzlocke_ShouldSkipHeal(&mon->box))
+        return;
+
     data = GetMonData(mon, MON_DATA_MAX_HP);
     SetMonData(mon, MON_DATA_HP, &data);
 
@@ -6707,6 +6714,9 @@ void HealPokemon(struct Pokemon *mon)
 void HealBoxPokemon(struct BoxPokemon *boxMon)
 {
     u32 data;
+
+    if (Nuzlocke_ShouldSkipHeal(boxMon))
+        return;
 
     data = 0;
     SetBoxMonData(boxMon, MON_DATA_HP_LOST, &data);

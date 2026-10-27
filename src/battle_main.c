@@ -37,6 +37,7 @@
 #include "load_save.h"
 #include "main.h"
 #include "malloc.h"
+#include "nuzlocke.h"
 #include "m4a.h"
 #include "palette.h"
 #include "party_menu.h"
@@ -483,6 +484,7 @@ void CB2_InitBattle(void)
     AllocateBattleSpritesData();
     AllocateMonSpritesGfx();
     RecordedBattle_ClearFrontierPassFlag();
+    Nuzlocke_OnBattleStart();
 
 #if T_SHOULD_RUN_MOVE_ANIM
     gLoadFail = FALSE;
@@ -5732,6 +5734,8 @@ static void ReturnFromBattleToOverworld(void)
         CalculatePlayerPartyCount();
         RandomlyGivePartyPokerus();
         PartySpreadPokerus();
+        if (!(gBattleTypeFlags & (BATTLE_TYPE_FIRST_BATTLE | BATTLE_TYPE_RECORDED)))
+            Nuzlocke_MarkFaintedPartyMonsDead();
     }
 
     if (gBattleTypeFlags & BATTLE_TYPE_LINK && gReceivedRemoteLinkPlayers)
