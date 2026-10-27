@@ -354,8 +354,20 @@ static const struct PACKED
 };
 
 // Spieler-Sprite je Trainerkarten-Seite und Zustand. 0 = Brendan/May aus sPlayerAvatarGfxIds.
-// Gen 1 nutzt das komplette FRLG-Set von Rot/Leaf, alle anderen haben eigene Lauf-/Renn-Sprites.
+// Gen 1 nutzt das komplette FRLG-Set von Rot/Leaf. Gen 2 und 4-8 haben eigene Lauf-/Renn-Sprites;
+// Fahrrad, Surfen, Angeln und Feldattacke sind Brendan/May-Sprites mit ihrem Kopf und ihren Farben.
+// Tauchen und Gießen bleiben bei Brendan/May.
 #define CHAR_GFX(m, f) { [MALE] = m, [FEMALE] = f }
+#define CHAR_PAGE(M, F)                                                                                             \
+{                                                                                                                   \
+    [PLAYER_AVATAR_STATE_NORMAL]     = CHAR_GFX(OBJ_EVENT_GFX_##M##_NORMAL,     OBJ_EVENT_GFX_##F##_NORMAL),     \
+    [PLAYER_AVATAR_STATE_MACH_BIKE]  = CHAR_GFX(OBJ_EVENT_GFX_##M##_MACH_BIKE,  OBJ_EVENT_GFX_##F##_MACH_BIKE),  \
+    [PLAYER_AVATAR_STATE_ACRO_BIKE]  = CHAR_GFX(OBJ_EVENT_GFX_##M##_ACRO_BIKE,  OBJ_EVENT_GFX_##F##_ACRO_BIKE),  \
+    [PLAYER_AVATAR_STATE_SURFING]    = CHAR_GFX(OBJ_EVENT_GFX_##M##_SURFING,    OBJ_EVENT_GFX_##F##_SURFING),    \
+    [PLAYER_AVATAR_STATE_FIELD_MOVE] = CHAR_GFX(OBJ_EVENT_GFX_##M##_FIELD_MOVE, OBJ_EVENT_GFX_##F##_FIELD_MOVE), \
+    [PLAYER_AVATAR_STATE_FISHING]    = CHAR_GFX(OBJ_EVENT_GFX_##M##_FISHING,    OBJ_EVENT_GFX_##F##_FISHING),    \
+    [PLAYER_AVATAR_STATE_VSSEEKER]   = CHAR_GFX(OBJ_EVENT_GFX_##M##_FIELD_MOVE, OBJ_EVENT_GFX_##F##_FIELD_MOVE), \
+}
 static const u16 sCharacterPageAvatarGfx[][PLAYER_AVATAR_STATE_VSSEEKER + 1][GENDER_COUNT] =
 {
     [0] = // Gen 1: Rot / Leaf
@@ -368,16 +380,57 @@ static const u16 sCharacterPageAvatarGfx[][PLAYER_AVATAR_STATE_VSSEEKER + 1][GEN
         [PLAYER_AVATAR_STATE_FISHING]    = CHAR_GFX(OBJ_EVENT_GFX_RED_FISH,       OBJ_EVENT_GFX_GREEN_FISH),
         [PLAYER_AVATAR_STATE_VSSEEKER]   = CHAR_GFX(OBJ_EVENT_GFX_RED_VS_SEEKER,  OBJ_EVENT_GFX_GREEN_VS_SEEKER),
     },
-    [1] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(OBJ_EVENT_GFX_ETHAN_NORMAL,   OBJ_EVENT_GFX_LYRA_NORMAL) },   // Gen 2
-    [2] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(0, 0) },                                                       // Gen 3
-    [3] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(OBJ_EVENT_GFX_LUCAS_NORMAL,   OBJ_EVENT_GFX_DAWN_NORMAL) },   // Gen 4
-    [4] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(OBJ_EVENT_GFX_HILBERT_NORMAL, OBJ_EVENT_GFX_HILDA_NORMAL) },  // Gen 5
-    [5] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(OBJ_EVENT_GFX_NATE_NORMAL,    OBJ_EVENT_GFX_ROSA_NORMAL) },   // Gen 5-2
-    [6] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(OBJ_EVENT_GFX_CALEM_NORMAL,   OBJ_EVENT_GFX_SERENA_NORMAL) }, // Gen 6
-    [7] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(OBJ_EVENT_GFX_ELIO_NORMAL,    OBJ_EVENT_GFX_SELENE_NORMAL) }, // Gen 7
-    [8] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(OBJ_EVENT_GFX_VICTOR_NORMAL,  OBJ_EVENT_GFX_GLORIA_NORMAL) }, // Gen 8
+    [1] = CHAR_PAGE(ETHAN, LYRA),                                // Gen 2
+    [2] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(0, 0) },     // Gen 3
+    [3] = CHAR_PAGE(LUCAS, DAWN),                                // Gen 4
+    [4] = CHAR_PAGE(HILBERT, HILDA),                             // Gen 5
+    [5] = CHAR_PAGE(NATE, ROSA),                                 // Gen 5-2
+    [6] = CHAR_PAGE(CALEM, SERENA),                              // Gen 6
+    [7] = CHAR_PAGE(ELIO, SELENE),                               // Gen 7
+    [8] = CHAR_PAGE(VICTOR, GLORIA),                             // Gen 8
 };
+#undef CHAR_PAGE
 #undef CHAR_GFX
+
+// Zustand -> Spieler-Flag für die Sprites aus sCharacterPageAvatarGfx
+static const u8 sCharacterStateFlags[PLAYER_AVATAR_STATE_VSSEEKER + 1] =
+{
+    [PLAYER_AVATAR_STATE_NORMAL]     = PLAYER_AVATAR_FLAG_ON_FOOT,
+    [PLAYER_AVATAR_STATE_MACH_BIKE]  = PLAYER_AVATAR_FLAG_MACH_BIKE,
+    [PLAYER_AVATAR_STATE_ACRO_BIKE]  = PLAYER_AVATAR_FLAG_ACRO_BIKE,
+    [PLAYER_AVATAR_STATE_SURFING]    = PLAYER_AVATAR_FLAG_SURFING,
+    [PLAYER_AVATAR_STATE_UNDERWATER] = PLAYER_AVATAR_FLAG_UNDERWATER,
+    [PLAYER_AVATAR_STATE_FIELD_MOVE] = PLAYER_AVATAR_FLAG_ON_FOOT,
+    [PLAYER_AVATAR_STATE_FISHING]    = PLAYER_AVATAR_FLAG_ON_FOOT,
+    [PLAYER_AVATAR_STATE_WATERING]   = PLAYER_AVATAR_FLAG_ON_FOOT,
+    [PLAYER_AVATAR_STATE_VSSEEKER]   = PLAYER_AVATAR_FLAG_ON_FOOT,
+};
+
+// Sucht graphicsId in sCharacterPageAvatarGfx. Gibt FALSE zurück, wenn es kein Sprite der Generationen ist.
+static bool8 FindCharacterPageGfx(u16 graphicsId, u8 *state, enum Gender *gender)
+{
+    u8 page, s;
+    enum Gender g;
+
+    if (graphicsId == 0)
+        return FALSE;
+    for (page = 0; page < ARRAY_COUNT(sCharacterPageAvatarGfx); page++)
+    {
+        for (s = 0; s < ARRAY_COUNT(sCharacterPageAvatarGfx[0]); s++)
+        {
+            for (g = 0; g < GENDER_COUNT; g++)
+            {
+                if (sCharacterPageAvatarGfx[page][s][g] == graphicsId)
+                {
+                    *state = s;
+                    *gender = g;
+                    return TRUE;
+                }
+            }
+        }
+    }
+    return FALSE;
+}
 
 u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
 {
@@ -1680,6 +1733,11 @@ u16 GetPlayerAvatarGraphicsIdByStateId(u8 state)
 
 enum Gender GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
 {
+    u8 state;
+    enum Gender gender;
+
+    if (FindCharacterPageGfx(gfxId, &state, &gender))
+        return gender;
     switch (gfxId)
     {
     case OBJ_EVENT_GFX_MAY_NORMAL:
@@ -1697,15 +1755,7 @@ enum Gender GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
     case OBJ_EVENT_GFX_GREEN_FISH:
     case OBJ_EVENT_GFX_GREEN_VS_SEEKER:
     case OBJ_EVENT_GFX_GREEN_VS_SEEKER_BIKE:
-    // Weibliche Spieler-Sprites der anderen Generationen
     case OBJ_EVENT_GFX_LEAF:
-    case OBJ_EVENT_GFX_LYRA_NORMAL:
-    case OBJ_EVENT_GFX_DAWN_NORMAL:
-    case OBJ_EVENT_GFX_HILDA_NORMAL:
-    case OBJ_EVENT_GFX_ROSA_NORMAL:
-    case OBJ_EVENT_GFX_SERENA_NORMAL:
-    case OBJ_EVENT_GFX_SELENE_NORMAL:
-    case OBJ_EVENT_GFX_GLORIA_NORMAL:
         return FEMALE;
     default:
         return MALE;
@@ -1765,8 +1815,12 @@ void SetPlayerAvatarStateMask(u8 flags)
 
 static u8 GetPlayerAvatarStateTransitionByGraphicsId(u16 graphicsId, u8 gender)
 {
-    u8 i;
+    u8 i, state;
+    enum Gender pageGender;
 
+    // Sprites der Generationen (auch die Zustände, die nicht in sPlayerAvatarGfxToStateFlag stehen)
+    if (FindCharacterPageGfx(graphicsId, &state, &pageGender))
+        return sCharacterStateFlags[state];
     for (i = 0; i < ARRAY_COUNT(sPlayerAvatarGfxToStateFlag[0]); i++)
     {
         if (sPlayerAvatarGfxToStateFlag[gender][i].graphicsId == graphicsId)

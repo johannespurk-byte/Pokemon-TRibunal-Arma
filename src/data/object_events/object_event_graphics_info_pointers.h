@@ -13,6 +13,76 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ElioNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SeleneNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_VictorNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GloriaNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HilbertMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HilbertAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HilbertSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HilbertFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HilbertFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HildaMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HildaAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HildaSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HildaFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HildaFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NateMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NateAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NateSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NateFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NateFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RosaMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RosaAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RosaSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RosaFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RosaFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CalemMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CalemAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CalemSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CalemFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CalemFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SerenaMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SerenaAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SerenaSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SerenaFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SerenaFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ElioMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ElioAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ElioSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ElioFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ElioFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SeleneMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SeleneAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SeleneSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SeleneFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SeleneFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_VictorMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_VictorAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_VictorSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_VictorFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_VictorFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GloriaMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GloriaAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GloriaSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GloriaFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GloriaFieldMove;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
@@ -821,6 +891,76 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SELENE_NORMAL] = &gObjectEventGraphicsInfo_SeleneNormal,
     [OBJ_EVENT_GFX_VICTOR_NORMAL] = &gObjectEventGraphicsInfo_VictorNormal,
     [OBJ_EVENT_GFX_GLORIA_NORMAL] = &gObjectEventGraphicsInfo_GloriaNormal,
+    [OBJ_EVENT_GFX_ETHAN_MACH_BIKE] = &gObjectEventGraphicsInfo_EthanMachBike,
+    [OBJ_EVENT_GFX_ETHAN_ACRO_BIKE] = &gObjectEventGraphicsInfo_EthanAcroBike,
+    [OBJ_EVENT_GFX_ETHAN_SURFING] = &gObjectEventGraphicsInfo_EthanSurfing,
+    [OBJ_EVENT_GFX_ETHAN_FISHING] = &gObjectEventGraphicsInfo_EthanFishing,
+    [OBJ_EVENT_GFX_ETHAN_FIELD_MOVE] = &gObjectEventGraphicsInfo_EthanFieldMove,
+    [OBJ_EVENT_GFX_LYRA_MACH_BIKE] = &gObjectEventGraphicsInfo_LyraMachBike,
+    [OBJ_EVENT_GFX_LYRA_ACRO_BIKE] = &gObjectEventGraphicsInfo_LyraAcroBike,
+    [OBJ_EVENT_GFX_LYRA_SURFING] = &gObjectEventGraphicsInfo_LyraSurfing,
+    [OBJ_EVENT_GFX_LYRA_FISHING] = &gObjectEventGraphicsInfo_LyraFishing,
+    [OBJ_EVENT_GFX_LYRA_FIELD_MOVE] = &gObjectEventGraphicsInfo_LyraFieldMove,
+    [OBJ_EVENT_GFX_LUCAS_MACH_BIKE] = &gObjectEventGraphicsInfo_LucasMachBike,
+    [OBJ_EVENT_GFX_LUCAS_ACRO_BIKE] = &gObjectEventGraphicsInfo_LucasAcroBike,
+    [OBJ_EVENT_GFX_LUCAS_SURFING] = &gObjectEventGraphicsInfo_LucasSurfing,
+    [OBJ_EVENT_GFX_LUCAS_FISHING] = &gObjectEventGraphicsInfo_LucasFishing,
+    [OBJ_EVENT_GFX_LUCAS_FIELD_MOVE] = &gObjectEventGraphicsInfo_LucasFieldMove,
+    [OBJ_EVENT_GFX_DAWN_MACH_BIKE] = &gObjectEventGraphicsInfo_DawnMachBike,
+    [OBJ_EVENT_GFX_DAWN_ACRO_BIKE] = &gObjectEventGraphicsInfo_DawnAcroBike,
+    [OBJ_EVENT_GFX_DAWN_SURFING] = &gObjectEventGraphicsInfo_DawnSurfing,
+    [OBJ_EVENT_GFX_DAWN_FISHING] = &gObjectEventGraphicsInfo_DawnFishing,
+    [OBJ_EVENT_GFX_DAWN_FIELD_MOVE] = &gObjectEventGraphicsInfo_DawnFieldMove,
+    [OBJ_EVENT_GFX_HILBERT_MACH_BIKE] = &gObjectEventGraphicsInfo_HilbertMachBike,
+    [OBJ_EVENT_GFX_HILBERT_ACRO_BIKE] = &gObjectEventGraphicsInfo_HilbertAcroBike,
+    [OBJ_EVENT_GFX_HILBERT_SURFING] = &gObjectEventGraphicsInfo_HilbertSurfing,
+    [OBJ_EVENT_GFX_HILBERT_FISHING] = &gObjectEventGraphicsInfo_HilbertFishing,
+    [OBJ_EVENT_GFX_HILBERT_FIELD_MOVE] = &gObjectEventGraphicsInfo_HilbertFieldMove,
+    [OBJ_EVENT_GFX_HILDA_MACH_BIKE] = &gObjectEventGraphicsInfo_HildaMachBike,
+    [OBJ_EVENT_GFX_HILDA_ACRO_BIKE] = &gObjectEventGraphicsInfo_HildaAcroBike,
+    [OBJ_EVENT_GFX_HILDA_SURFING] = &gObjectEventGraphicsInfo_HildaSurfing,
+    [OBJ_EVENT_GFX_HILDA_FISHING] = &gObjectEventGraphicsInfo_HildaFishing,
+    [OBJ_EVENT_GFX_HILDA_FIELD_MOVE] = &gObjectEventGraphicsInfo_HildaFieldMove,
+    [OBJ_EVENT_GFX_NATE_MACH_BIKE] = &gObjectEventGraphicsInfo_NateMachBike,
+    [OBJ_EVENT_GFX_NATE_ACRO_BIKE] = &gObjectEventGraphicsInfo_NateAcroBike,
+    [OBJ_EVENT_GFX_NATE_SURFING] = &gObjectEventGraphicsInfo_NateSurfing,
+    [OBJ_EVENT_GFX_NATE_FISHING] = &gObjectEventGraphicsInfo_NateFishing,
+    [OBJ_EVENT_GFX_NATE_FIELD_MOVE] = &gObjectEventGraphicsInfo_NateFieldMove,
+    [OBJ_EVENT_GFX_ROSA_MACH_BIKE] = &gObjectEventGraphicsInfo_RosaMachBike,
+    [OBJ_EVENT_GFX_ROSA_ACRO_BIKE] = &gObjectEventGraphicsInfo_RosaAcroBike,
+    [OBJ_EVENT_GFX_ROSA_SURFING] = &gObjectEventGraphicsInfo_RosaSurfing,
+    [OBJ_EVENT_GFX_ROSA_FISHING] = &gObjectEventGraphicsInfo_RosaFishing,
+    [OBJ_EVENT_GFX_ROSA_FIELD_MOVE] = &gObjectEventGraphicsInfo_RosaFieldMove,
+    [OBJ_EVENT_GFX_CALEM_MACH_BIKE] = &gObjectEventGraphicsInfo_CalemMachBike,
+    [OBJ_EVENT_GFX_CALEM_ACRO_BIKE] = &gObjectEventGraphicsInfo_CalemAcroBike,
+    [OBJ_EVENT_GFX_CALEM_SURFING] = &gObjectEventGraphicsInfo_CalemSurfing,
+    [OBJ_EVENT_GFX_CALEM_FISHING] = &gObjectEventGraphicsInfo_CalemFishing,
+    [OBJ_EVENT_GFX_CALEM_FIELD_MOVE] = &gObjectEventGraphicsInfo_CalemFieldMove,
+    [OBJ_EVENT_GFX_SERENA_MACH_BIKE] = &gObjectEventGraphicsInfo_SerenaMachBike,
+    [OBJ_EVENT_GFX_SERENA_ACRO_BIKE] = &gObjectEventGraphicsInfo_SerenaAcroBike,
+    [OBJ_EVENT_GFX_SERENA_SURFING] = &gObjectEventGraphicsInfo_SerenaSurfing,
+    [OBJ_EVENT_GFX_SERENA_FISHING] = &gObjectEventGraphicsInfo_SerenaFishing,
+    [OBJ_EVENT_GFX_SERENA_FIELD_MOVE] = &gObjectEventGraphicsInfo_SerenaFieldMove,
+    [OBJ_EVENT_GFX_ELIO_MACH_BIKE] = &gObjectEventGraphicsInfo_ElioMachBike,
+    [OBJ_EVENT_GFX_ELIO_ACRO_BIKE] = &gObjectEventGraphicsInfo_ElioAcroBike,
+    [OBJ_EVENT_GFX_ELIO_SURFING] = &gObjectEventGraphicsInfo_ElioSurfing,
+    [OBJ_EVENT_GFX_ELIO_FISHING] = &gObjectEventGraphicsInfo_ElioFishing,
+    [OBJ_EVENT_GFX_ELIO_FIELD_MOVE] = &gObjectEventGraphicsInfo_ElioFieldMove,
+    [OBJ_EVENT_GFX_SELENE_MACH_BIKE] = &gObjectEventGraphicsInfo_SeleneMachBike,
+    [OBJ_EVENT_GFX_SELENE_ACRO_BIKE] = &gObjectEventGraphicsInfo_SeleneAcroBike,
+    [OBJ_EVENT_GFX_SELENE_SURFING] = &gObjectEventGraphicsInfo_SeleneSurfing,
+    [OBJ_EVENT_GFX_SELENE_FISHING] = &gObjectEventGraphicsInfo_SeleneFishing,
+    [OBJ_EVENT_GFX_SELENE_FIELD_MOVE] = &gObjectEventGraphicsInfo_SeleneFieldMove,
+    [OBJ_EVENT_GFX_VICTOR_MACH_BIKE] = &gObjectEventGraphicsInfo_VictorMachBike,
+    [OBJ_EVENT_GFX_VICTOR_ACRO_BIKE] = &gObjectEventGraphicsInfo_VictorAcroBike,
+    [OBJ_EVENT_GFX_VICTOR_SURFING] = &gObjectEventGraphicsInfo_VictorSurfing,
+    [OBJ_EVENT_GFX_VICTOR_FISHING] = &gObjectEventGraphicsInfo_VictorFishing,
+    [OBJ_EVENT_GFX_VICTOR_FIELD_MOVE] = &gObjectEventGraphicsInfo_VictorFieldMove,
+    [OBJ_EVENT_GFX_GLORIA_MACH_BIKE] = &gObjectEventGraphicsInfo_GloriaMachBike,
+    [OBJ_EVENT_GFX_GLORIA_ACRO_BIKE] = &gObjectEventGraphicsInfo_GloriaAcroBike,
+    [OBJ_EVENT_GFX_GLORIA_SURFING] = &gObjectEventGraphicsInfo_GloriaSurfing,
+    [OBJ_EVENT_GFX_GLORIA_FISHING] = &gObjectEventGraphicsInfo_GloriaFishing,
+    [OBJ_EVENT_GFX_GLORIA_FIELD_MOVE] = &gObjectEventGraphicsInfo_GloriaFieldMove,
 
 };
 
