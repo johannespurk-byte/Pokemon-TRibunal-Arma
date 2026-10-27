@@ -38,6 +38,7 @@
 #include "text.h"
 #include "text_window.h"
 #include "title_screen.h"
+#include "trainer.h"
 #include "trainer_card.h"
 #include "window.h"
 #include "mystery_gift_menu.h"
@@ -1589,12 +1590,21 @@ static void NewGameBirchSpeech_PrintGenerationHint(void)
 }
 
 // Ersetzt beide Spieler-Sprites durch die Charaktere der gewählten Generation
-static void NewGameBirchSpeech_RecreatePlayerSprites(u8 taskId)
+static void NewGameBirchSpeech_RecreatePlayerSprites(u8 taskId, u8 oldPage)
 {
     enum Gender gender;
 
-    DestroySpriteAndFreeResources(&gSprites[gTasks[taskId].tBrendanSpriteId]);
-    DestroySpriteAndFreeResources(&gSprites[gTasks[taskId].tMaySpriteId]);
+    // CreateTrainerSprite legt die Vorlage auf dem Stack an, sprite->template zeigt danach ins Leere.
+    // Deshalb Grafik und Palette über die Tags der alten Bilder freigeben statt mit DestroySpriteAndFreeResources.
+    DestroySprite(&gSprites[gTasks[taskId].tBrendanSpriteId]);
+    DestroySprite(&gSprites[gTasks[taskId].tMaySpriteId]);
+    for (gender = MALE; gender < GENDER_COUNT; gender++)
+    {
+        u16 tag = GetTrainerPicTag(TrainerCard_GetPagePlayerPic(oldPage, gender), TRUE);
+
+        FreeSpriteTilesByTag(tag);
+        FreeSpritePaletteByTag(tag);
+    }
     for (gender = MALE; gender < GENDER_COUNT; gender++)
     {
         u8 spriteId = CreateTrainerSprite(TrainerCard_GetPagePlayerPic(sBirchCharacterPage, gender), 180, 60, 0, NULL);
@@ -1630,13 +1640,14 @@ static void Task_NewGameBirchSpeech_ChooseGender(u8 taskId)
     if (JOY_NEW(L_BUTTON) || JOY_NEW(R_BUTTON))
     {
         u8 count = TrainerCard_GetPageCount();
+        u8 oldPage = sBirchCharacterPage;
 
         PlaySE(SE_SELECT);
         if (JOY_NEW(R_BUTTON))
             sBirchCharacterPage = (sBirchCharacterPage + 1) % count;
         else
             sBirchCharacterPage = (sBirchCharacterPage + count - 1) % count;
-        NewGameBirchSpeech_RecreatePlayerSprites(taskId);
+        NewGameBirchSpeech_RecreatePlayerSprites(taskId, oldPage);
         NewGameBirchSpeech_PrintGenerationHint();
         return;
     }
@@ -2408,12 +2419,9 @@ static void NewGameBirchSpeech_ClearGenderWindow(u8 windowId, bool8 copyToVram)
 static void NewGameBirchSpeech_ClearWindow(u8 windowId)
 {
     u8 bgColor = GetFontAttribute(FONT_NORMAL, FONTATTR_COLOR_BACKGROUND);
-    u8 maxCharWidth = GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_WIDTH);
-    u8 maxCharHeight = GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT);
-    u8 winWidth = GetWindowAttribute(windowId, WINDOW_WIDTH);
-    u8 winHeight = GetWindowAttribute(windowId, WINDOW_HEIGHT);
 
-    FillWindowPixelRect(windowId, bgColor, 0, 0, maxCharWidth * winWidth, maxCharHeight * winHeight);
+    // Ganzes Fenster leeren: die Breite aus Buchstabenbreite * Kacheln ließ rechts Textreste stehen
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(bgColor));
     CopyWindowToVram(windowId, COPYWIN_GFX);
 }
 
