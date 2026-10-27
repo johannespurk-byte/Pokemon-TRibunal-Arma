@@ -16308,13 +16308,13 @@ const struct ItemInfo gItemsInfo[] =
         .name = COMPOUND_STRING("Poké Vial"),
         .price = 500,
         .description = COMPOUND_STRING(
-            "Ein Vial, das deine\n" // 🌟 KORREKTUR: Jetzt perfekt auf Deutsch angepasst!
-            "Pokemon vollstaendig\n"
-            "heilt. Unendlich nutzbar."),
+            "Heilt dein ganzes\n"
+            "Team. 5 Ladungen, im\n"
+            "PKMN-Center aufladen."),
         .importance = 1,
         .notConsumed = TRUE,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_PARTY_MENU,
+        .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_PokeVial,
         .iconPic = gItemIcon_RareCandy,
         .iconPalette = gItemIconPalette_RareCandy,
@@ -16330,7 +16330,7 @@ const struct ItemInfo gItemsInfo[] =
         .importance = 1,
         .notConsumed = TRUE,
         .pocket = POCKET_KEY_ITEMS,
-        .type = ITEM_USE_PARTY_MENU,
+        .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_AutoRepel,
         .iconPic = gItemIcon_DowsingMachine,
         .iconPalette = gItemIconPalette_DowsingMachine,

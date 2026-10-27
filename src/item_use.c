@@ -1905,8 +1905,9 @@ void ItemUseOutOfBattle_Dive(u8 taskId)
 
 // === modular POKÉVIAL ITEM LOGIC START ===
 void HealPlayerParty(void);
-void ItemUseOutOfBattle_CannotUse(u8 taskId); // Nutzt die eingebaute Standard-Task!
 
+// Die Meldungen laufen im Beutel; CloseItemMessage kehrt danach zur Item-Liste zurück.
+// (ItemUseOutOfBattle_CannotUse als Rücksprung hielt den Beutel fürs Spielfeld und beendete den Beutel-Task -> Absturz.)
 void ItemUseOutOfBattle_PokeVial(u8 taskId)
 {
     u16 charges = VarGet(VAR_UNUSED_0x40F7);
@@ -1919,58 +1920,43 @@ void ItemUseOutOfBattle_PokeVial(u8 taskId)
 
     if (charges == 0)
     {
-        // 🌟 KORREKTUR: Nutzt ItemUseOutOfBattle_CannotUse zur fehlerfreien Beutel-Rückkehr!
-        DisplayItemMessage(taskId, 2, COMPOUND_STRING("Das Poké Vial ist komplett leer!\nHeile dein Team im PKMN-Center."), ItemUseOutOfBattle_CannotUse);
+        DisplayItemMessage(taskId, FONT_NORMAL, COMPOUND_STRING("Das Poké Vial ist komplett leer!\nHeile dein Team im PKMN-Center."), CloseItemMessage);
     }
     else
     {
-        PlaySE(173); // MUS_SUCCES Soundeffekt abspielen
+        PlaySE(SE_USE_ITEM);
         HealPlayerParty();
 
         charges--;
         VarSet(VAR_UNUSED_0x40F7, charges);
 
         if (charges == 0) {
-            DisplayItemMessage(taskId, 2, COMPOUND_STRING("Das Poké Vial wurde benutzt!\nEs ist jetzt komplett leer!"), ItemUseOutOfBattle_CannotUse);
+            DisplayItemMessage(taskId, FONT_NORMAL, COMPOUND_STRING("Das Poké Vial wurde benutzt!\nEs ist jetzt komplett leer!"), CloseItemMessage);
         }
         else {
             ConvertIntToDecimalStringN(gStringVar1, charges, STR_CONV_MODE_LEFT_ALIGN, 1);
             StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Das Poké Vial wurde benutzt!\nLadungen uebrig: {STR_VAR_1}/5."));
-            DisplayItemMessage(taskId, 2, gStringVar4, ItemUseOutOfBattle_CannotUse);
+            DisplayItemMessage(taskId, FONT_NORMAL, gStringVar4, CloseItemMessage);
         }
     }
 }
 // === POKÉVIAL ITEM LOGIC ENDE ===
 // === modular AUTOMATIC REPEL SYSTEM START ===
-void Task_AutoRepelMenu(u8 taskId);
-
+// Schalter: ist der Schutz aus, wird er für 250 Schritte angeschaltet, sonst ausgeschaltet.
+// Wie beim Poké Vial kehrt CloseItemMessage danach zur Item-Liste zurück.
 void ItemUseOutOfBattle_AutoRepel(u8 taskId)
 {
-    // 🌟 DIREKT-OPTION: Öffnet das Auswahlfenster sofort im Beutel!
-    // JA steht für Anschalten, NEIN steht für Abschalten
-    DisplayItemMessage(taskId, 2, COMPOUND_STRING("Auto-Schutz konfigurieren:\nJA: Anschalten  /  NEIN: Abschalten"), Task_AutoRepelMenu);
-}
-
-void Task_AutoRepelMenu(u8 taskId)
-{
-    // gSpecialVar_Result fängt deinen Knopfdruck ab
-    if (gSpecialVar_Result == 1) // Spieler hat ANSCHALTEN gewaehlt
+    if (VarGet(VAR_REPEL_STEP_COUNT) == 0)
     {
-        PlaySE(SE_REPEL); // Sprühsound
-
-        // Schreibt die 250 Schritte kostenlos und typesafe in deine Skript-Variable!
+        PlaySE(SE_REPEL);
         VarSet(VAR_REPEL_STEP_COUNT, 250);
-
-        DisplayItemMessage(taskId, 2, COMPOUND_STRING("Der Auto-Schutz wurde eingeschaltet!\nWilden Pokemon wird der Weg versperrt."), ItemUseOutOfBattle_CannotUse);
+        DisplayItemMessage(taskId, FONT_NORMAL, COMPOUND_STRING("Der Auto-Schutz wurde eingeschaltet!\nWilden Pokemon wird der Weg versperrt."), CloseItemMessage);
     }
-    else // Spieler hat ABSCHALTEN gewaehlt
+    else
     {
-        PlaySE(SE_SELECT); // Bestätigungssound
-
-        // Setzt den Schutz-Zähler sofort auf Null zurück
+        PlaySE(SE_SELECT);
         VarSet(VAR_REPEL_STEP_COUNT, 0);
-
-        DisplayItemMessage(taskId, 2, COMPOUND_STRING("Der Auto-Schutz wurde ausgeschaltet!"), ItemUseOutOfBattle_CannotUse);
+        DisplayItemMessage(taskId, FONT_NORMAL, COMPOUND_STRING("Der Auto-Schutz wurde ausgeschaltet!"), CloseItemMessage);
     }
 }
 // === AUTOMATIC REPEL SYSTEM ENDE ===
