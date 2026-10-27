@@ -13,7 +13,8 @@ const u16 gTrainerBackPicPalette_Lucas[] = INCGFX_U16("graphics/trainers/back_pi
 const u16 gTrainerBackPicPalette_Dawn[] = INCGFX_U16("graphics/trainers/back_pics/dawn_back.png", ".gbapal");
 
 // Gen 5-8 player characters: front pics from Showdown (80x80 scaled to 64x64),
-// back pics are recoloured Lucas/Dawn placeholders until real throw sprites exist.
+// back pics for Hilbert, Hilda, Calem and Serena from pokeemerald-rogue (Pokabbie); Nate, Rosa,
+// Elio, Victor, Selene and Gloria are recoloured from the closest of those.
 const u32 gTrainerFrontPic_Hilbert[] = INCGFX_U32("graphics/trainers/front_pics/hilbert.png", ".4bpp.smol");
 const u16 gTrainerPalette_Hilbert[] = INCGFX_U16("graphics/trainers/front_pics/hilbert.png", ".gbapal");
 const u8 gTrainerBackPic_Hilbert[] = INCGFX_U8("graphics/trainers/back_pics/hilbert_back.png", ".4bpp");
