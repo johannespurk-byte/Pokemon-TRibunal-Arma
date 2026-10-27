@@ -18,6 +18,8 @@ CeladonCity_Restaurant_EventScript_CoinCaseMan::
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_Restaurant_EventScript_NoRoomForCoinCase
 	giveitem_msg CeladonCity_Restaurant_Text_ReceivedCoinCaseFromMan, ITEM_COIN_CASE
 	setflag FLAG_GOT_COIN_CASE
+	addcoins MAX_COINS
+	msgbox CeladonCity_Restaurant_Text_CoinCaseIsFull
 	release
 	end
 
@@ -68,6 +70,10 @@ CeladonCity_Restaurant_Text_TakeThisImBusted::
 CeladonCity_Restaurant_Text_ReceivedCoinCaseFromMan::
 	.string "{PLAYER} received a COIN CASE\n"
 	.string "from the man.$"
+
+CeladonCity_Restaurant_Text_CoinCaseIsFull::
+	.string "It's still full of COINS!\n"
+	.string "{PLAYER} received 9,999 COINS!$"
 
 CeladonCity_Restaurant_Text_MakeRoomForThis::
 	.string "Make room for this!$"
