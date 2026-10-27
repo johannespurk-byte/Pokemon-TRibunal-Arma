@@ -5,13 +5,12 @@ const u32 gObjectEventPic_EthanNormal[] = INCGFX_U32("graphics/object_events/pic
 const u16 gObjectEventPal_Ethan[] = INCGFX_U16("graphics/object_events/pics/ethan/walking.png", ".gbapal");
 const u32 gObjectEventPic_LyraNormal[] = INCGFX_U32("graphics/object_events/pics/lyra/walking_1.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPal_Lyra[] = INCGFX_U16("graphics/object_events/pics/lyra/walking_1.png", ".gbapal");
-// Lucas / Dawn: 18 frames 16x32 (9 walking + 9 running, Brendan layout), palette taken from the sheet
+// Gen 4-8 player characters: walking sprites from pokeemerald-rogue (Pokabbie), 18 frames 16x32
+// (9 walking + the same 9 again as running, Brendan layout), palette taken from the sheet
 const u32 gObjectEventPic_LucasNormal[] = INCGFX_U32("graphics/object_events/pics/people/lucas.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPal_Lucas[] = INCGFX_U16("graphics/object_events/pics/people/lucas.png", ".gbapal");
 const u32 gObjectEventPic_DawnNormal[] = INCGFX_U32("graphics/object_events/pics/people/dawn.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPal_Dawn[] = INCGFX_U16("graphics/object_events/pics/people/dawn.png", ".gbapal");
-
-// Gen 5-8: recoloured Lucas/Dawn placeholders (Brendan/May layout incl. running)
 const u32 gObjectEventPic_HilbertNormal[] = INCGFX_U32("graphics/object_events/pics/people/hilbert.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPal_Hilbert[] = INCGFX_U16("graphics/object_events/pics/people/hilbert.png", ".gbapal");
 const u32 gObjectEventPic_HildaNormal[] = INCGFX_U32("graphics/object_events/pics/people/hilda.png", ".4bpp", "-mwidth 2 -mheight 4");

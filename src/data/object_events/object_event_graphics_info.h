@@ -53,7 +53,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraNormal = {
     .images = sPicTable_LyraNormal,
 };
 
-// Gen 4: Lucas / Dawn (eigene Sheets im Brendan/May-Layout, inkl. Rennen)
+// Gen 4-8: Lucas ... Gloria (Sprites aus pokeemerald-rogue im Brendan/May-Layout, Rennen = Laufen)
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasNormal = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_LUCAS,
