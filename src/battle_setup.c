@@ -57,6 +57,7 @@
 #include "constants/weather.h"
 #include "fishing.h"
 #include "pokemon.h"
+#include "daycare.h"
 #include "random.h"
 
 
@@ -96,15 +97,22 @@ bool8 GiveRandomTrainerEgg(void)
     u16 randomSpecies;
     u32 attempts = 0;
 
+    // Nur Grundformen der ersten Entwicklungsstufe (keine Megas, Regional- oder Sonderformen),
+    // ohne Legendäre, Mysteriöse, Ultrabestien und Paradox-Pokémon
     while (attempts < 100)
     {
         randomSpecies = (Random() % (NUM_SPECIES - 1)) + 1;
         attempts++;
 
         if (randomSpecies != SPECIES_EGG &&
+            IsSpeciesEnabled(randomSpecies) &&
+            GET_BASE_SPECIES_ID(randomSpecies) == randomSpecies &&
+            GetSpeciesPreEvolution(randomSpecies) == SPECIES_NONE &&
+            !gSpeciesInfo[randomSpecies].isRestrictedLegendary &&
             !gSpeciesInfo[randomSpecies].isSubLegendary &&
             !gSpeciesInfo[randomSpecies].isMythical &&
             !gSpeciesInfo[randomSpecies].isUltraBeast &&
+            !gSpeciesInfo[randomSpecies].isParadox &&
             gSpeciesInfo[randomSpecies].natDexNum != 0)
         {
             break;
@@ -115,15 +123,14 @@ bool8 GiveRandomTrainerEgg(void)
         randomSpecies = SPECIES_PICHU;
 
     u8 partyIndex = CalculatePlayerPartyCount();
-    struct OriginalTrainerId emptyOtId = { 0 };
 
-    CreateMon(&gParties[B_TRAINER_PLAYER][partyIndex], randomSpecies, 1, 0, emptyOtId);
+    // Wie ein Zucht-Ei: zufälliges Wesen und DVs, Spitzname EI, Ursprungslevel 0
+    CreateEgg(&gParties[B_TRAINER_PLAYER][partyIndex], randomSpecies, FALSE);
 
-    bool8 isEgg = TRUE;
-    SetMonData(&gParties[B_TRAINER_PLAYER][partyIndex], MON_DATA_IS_EGG, &isEgg);
-
+    // Schlüpft nach wenigen Schritten statt nach den normalen Ei-Zyklen
     u8 steps = 1;
     SetMonData(&gParties[B_TRAINER_PLAYER][partyIndex], MON_DATA_FRIENDSHIP, &steps);
+    CalculatePlayerPartyCount();
 
     ShowFieldMessage(gText_ReceivedEggFromTrainer);
 
