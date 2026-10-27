@@ -1843,6 +1843,7 @@ void OverworldBasic(void)
         // Der Zaehler bleibt felsenfest stehen, Schritte verringern sich nicht!
     }
 
+    TryShowTrainerEggMessage();
     ScriptContext_RunScript();
     RunTasks();
     AnimateSprites();

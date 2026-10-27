@@ -67,6 +67,34 @@
 
 
 
+// Welche Ei-Meldung noch angezeigt werden muss (0 = keine). Die Meldung darf nicht direkt am
+// Kampfende kommen: dort ist noch der Kampfbildschirm aktiv, und eine Feld-Textbox schreibt nach
+// dem Wechsel aufs Spielfeld in freigegebene Fenster (Absturz z. B. beim Öffnen des Beutels).
+enum
+{
+    TRAINER_EGG_MSG_NONE,
+    TRAINER_EGG_MSG_PARTY,
+    TRAINER_EGG_MSG_PC,
+};
+static EWRAM_DATA u8 sTrainerEggMessage = TRAINER_EGG_MSG_NONE;
+
+// Zeigt die Meldung, sobald das Spielfeld frei ist (kein Skript, Steuerung nicht gesperrt)
+void TryShowTrainerEggMessage(void)
+{
+    if (sTrainerEggMessage == TRAINER_EGG_MSG_NONE
+     || gMain.callback2 != CB2_Overworld
+     || gPaletteFade.active
+     || ScriptContext_IsEnabled()
+     || ArePlayerFieldControlsLocked())
+        return;
+
+    if (sTrainerEggMessage == TRAINER_EGG_MSG_PC)
+        ScriptContext_SetupScript(EventScript_TrainerEggSentToPC);
+    else
+        ScriptContext_SetupScript(EventScript_TrainerEggReceived);
+    sTrainerEggMessage = TRAINER_EGG_MSG_NONE;
+}
+
 bool8 GiveRandomTrainerEgg(void)
 {
     u16 trainerId = TRAINER_BATTLE_PARAM.opponentA;
@@ -132,10 +160,10 @@ bool8 GiveRandomTrainerEgg(void)
     switch (GiveCapturedMonToPlayer(&egg))
     {
     case MON_GIVEN_TO_PARTY:
-        ShowFieldMessage(gText_ReceivedEggFromTrainer);
+        sTrainerEggMessage = TRAINER_EGG_MSG_PARTY;
         break;
     case MON_GIVEN_TO_PC:
-        ShowFieldMessage(COMPOUND_STRING("Nach dem harten Kampf übergibt dir der\nTrainer ein mysteriöses Ei!\pDein Team ist voll, das Ei wurde\nin die Box geschickt.$"));
+        sTrainerEggMessage = TRAINER_EGG_MSG_PC;
         break;
     default: // Team und alle Boxen voll
         return FALSE;

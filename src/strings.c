@@ -1181,3 +1181,4 @@ const u8 gText_OakImportantToGetToKnowPokemonThroughly[] = _("OAK: It's importan
 const u8 gText_OakThisIsListOfPokemon[] = _("This is a list of your POKéMON,\n{PLAYER}.\pOpen this to check the skills\nand moves of your POKéMON.\pYou also choose POKéMON here if\nyou want to use an item on one.{PAUSE_UNTIL_PRESS}");
 
 const u8 gText_ReceivedEggFromTrainer[] = _("Nach dem harten Kampf übergibt dir der\nTrainer ein mysteriöses Ei!$");
+const u8 gText_TrainerEggSentToPC[] = _("Dein Team ist voll, das Ei wurde\nin die Box geschickt.$");
