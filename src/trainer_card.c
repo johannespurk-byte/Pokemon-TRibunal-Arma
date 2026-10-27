@@ -19,6 +19,7 @@
 #include "money.h"
 #include "strings.h"
 #include "string_util.h"
+#include "random.h"
 #include "trainer_card.h"
 #include "gpu_regs.h"
 #include "international_string_util.h"
@@ -377,6 +378,7 @@ struct TrainerCardGenPage
     u8 facilityClass[GENDER_COUNT]; // Portrait auf der Karte
     u16 trainerPic[GENDER_COUNT];   // Trainer-Bild für Karte (Vorderseite) und Kampf (Rückseite/Wurf)
     const u8 *genLabel;             // Anzeige hinter "L/R:GEN "
+    const u8 *name[GENDER_COUNT];   // Name, wenn die Figur der Rivale ist
 };
 
 static const struct TrainerCardGenPage sTrainerCardGenPages[] =
@@ -387,6 +389,7 @@ static const struct TrainerCardGenPage sTrainerCardGenPages[] =
         .facilityClass = { [MALE] = FACILITY_CLASS_RED,[FEMALE] = FACILITY_CLASS_LEAF},
         .trainerPic = { [MALE] = TRAINER_PIC_RED, [FEMALE] = TRAINER_PIC_LEAF },
         .genLabel = COMPOUND_STRING("1"),
+        .name = { [MALE] = COMPOUND_STRING("RED"), [FEMALE] = COMPOUND_STRING("LEAF") },
     },
     // Gen 2: Ethan / Lyra (Seite 1)
     {
@@ -394,6 +397,7 @@ static const struct TrainerCardGenPage sTrainerCardGenPages[] =
         .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
         .trainerPic = { [MALE] = TRAINER_PIC_ETHAN, [FEMALE] = TRAINER_PIC_LYRA },
         .genLabel = COMPOUND_STRING("2"),
+        .name = { [MALE] = COMPOUND_STRING("ETHAN"), [FEMALE] = COMPOUND_STRING("LYRA") },
     },
     // Gen 3: Brendan / May (Seite 2)
     {
@@ -401,6 +405,7 @@ static const struct TrainerCardGenPage sTrainerCardGenPages[] =
         .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
         .trainerPic = { [MALE] = TRAINER_PIC_BRENDAN, [FEMALE] = TRAINER_PIC_MAY },
         .genLabel = COMPOUND_STRING("3"),
+        .name = { [MALE] = gText_ExpandedPlaceholder_Brendan, [FEMALE] = gText_ExpandedPlaceholder_May },
     },
     // Gen 4: Lucius / Lucia (Seite 3)
     {
@@ -408,36 +413,42 @@ static const struct TrainerCardGenPage sTrainerCardGenPages[] =
         .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
         .trainerPic = { [MALE] = TRAINER_PIC_LUCAS, [FEMALE] = TRAINER_PIC_DAWN },
         .genLabel = COMPOUND_STRING("4"),
+        .name = { [MALE] = COMPOUND_STRING("LUCAS"), [FEMALE] = COMPOUND_STRING("DAWN") },
     },
     // Gen 5: Hilbert / Hilda (Seite 4)
     {
         .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
         .trainerPic = { [MALE] = TRAINER_PIC_HILBERT, [FEMALE] = TRAINER_PIC_HILDA },
         .genLabel = COMPOUND_STRING("5"),
+        .name = { [MALE] = COMPOUND_STRING("HILBERT"), [FEMALE] = COMPOUND_STRING("HILDA") },
     },
     // Gen 5 (SW2): Nate / Rosa (Seite 5)
     {
         .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
         .trainerPic = { [MALE] = TRAINER_PIC_NATE, [FEMALE] = TRAINER_PIC_ROSA },
         .genLabel = COMPOUND_STRING("5-2"),
+        .name = { [MALE] = COMPOUND_STRING("NATE"), [FEMALE] = COMPOUND_STRING("ROSA") },
     },
     // Gen 6: Calem / Serena (Seite 6)
     {
         .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
         .trainerPic = { [MALE] = TRAINER_PIC_CALEM, [FEMALE] = TRAINER_PIC_SERENA },
         .genLabel = COMPOUND_STRING("6"),
+        .name = { [MALE] = COMPOUND_STRING("CALEM"), [FEMALE] = COMPOUND_STRING("SERENA") },
     },
     // Gen 7: Elio / Selene (Seite 7)
     {
         .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
         .trainerPic = { [MALE] = TRAINER_PIC_ELIO, [FEMALE] = TRAINER_PIC_SELENE },
         .genLabel = COMPOUND_STRING("7"),
+        .name = { [MALE] = COMPOUND_STRING("ELIO"), [FEMALE] = COMPOUND_STRING("SELENE") },
     },
     // Gen 8: Victor / Gloria (Seite 8)
     {
         .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
         .trainerPic = { [MALE] = TRAINER_PIC_VICTOR, [FEMALE] = TRAINER_PIC_GLORIA },
         .genLabel = COMPOUND_STRING("8"),
+        .name = { [MALE] = COMPOUND_STRING("VICTOR"), [FEMALE] = COMPOUND_STRING("GLORIA") },
     },
 };
 
@@ -487,6 +498,37 @@ const u8 *TrainerCard_GetPageLabel(u8 page)
     if (page >= ARRAY_COUNT(sTrainerCardGenPages))
         page = 0;
     return sTrainerCardGenPages[page].genLabel;
+}
+
+// Der Rivale (Birchs Kind) hat immer das andere Geschlecht, die Generation wird beim neuen Spiel ausgelost.
+// Sie liegt als "Seite + 1" in VAR_RIVAL_CHARACTER_PAGE; 0 (alter Spielstand) ergibt Brendan/May.
+void TrainerCard_DrawRivalPage(void)
+{
+    VarSet(VAR_RIVAL_CHARACTER_PAGE, Random() % ARRAY_COUNT(sTrainerCardGenPages) + 1);
+}
+
+u8 TrainerCard_GetRivalPage(void)
+{
+    u16 value = VarGet(VAR_RIVAL_CHARACTER_PAGE);
+
+    if (value == 0 || value > ARRAY_COUNT(sTrainerCardGenPages))
+        return CARD_DEFAULT_PAGE;
+    return value - 1;
+}
+
+u8 TrainerCard_GetRivalGender(void)
+{
+    return gSaveBlock2Ptr->playerGender == MALE ? FEMALE : MALE;
+}
+
+u16 TrainerCard_GetRivalTrainerPic(void)
+{
+    return sTrainerCardGenPages[TrainerCard_GetRivalPage()].trainerPic[TrainerCard_GetRivalGender()];
+}
+
+const u8 *TrainerCard_GetRivalName(void)
+{
+    return sTrainerCardGenPages[TrainerCard_GetRivalPage()].name[TrainerCard_GetRivalGender()];
 }
 
 static void TrainerCardApplyPage(u8 page)

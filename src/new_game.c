@@ -238,6 +238,7 @@ void NewGameInitData(void)
     ClearFollowerNPCData();
     // Im Birk-Intro gewählte Generation (ClearSav1 hat die Variablen oben gelöscht)
     TrainerCard_SetCharacterPage(NewGameBirchSpeech_GetCharacterPage());
+    TrainerCard_DrawRivalPage();
 }
 
 static void ResetMiniGamesRecords(void)

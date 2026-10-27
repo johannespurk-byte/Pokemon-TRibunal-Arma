@@ -432,6 +432,44 @@ static bool8 FindCharacterPageGfx(u16 graphicsId, u8 *state, enum Gender *gender
     return FALSE;
 }
 
+// Brendan/May als Rivale -> Sprite der ausgelosten Rivalen-Figur im selben Zustand.
+// Gen 3 (Seite 2) und fehlende Zustände bleiben beim Rivalen-Sprite von Brendan/May.
+u16 GetRivalGraphicsId(u16 graphicsId)
+{
+    u8 state, page;
+    u16 rivalGfx;
+
+    switch (graphicsId)
+    {
+    case OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL:
+    case OBJ_EVENT_GFX_RIVAL_MAY_NORMAL:
+        state = PLAYER_AVATAR_STATE_NORMAL;
+        break;
+    case OBJ_EVENT_GFX_RIVAL_BRENDAN_MACH_BIKE:
+    case OBJ_EVENT_GFX_RIVAL_MAY_MACH_BIKE:
+        state = PLAYER_AVATAR_STATE_MACH_BIKE;
+        break;
+    case OBJ_EVENT_GFX_RIVAL_BRENDAN_ACRO_BIKE:
+    case OBJ_EVENT_GFX_RIVAL_MAY_ACRO_BIKE:
+        state = PLAYER_AVATAR_STATE_ACRO_BIKE;
+        break;
+    case OBJ_EVENT_GFX_RIVAL_BRENDAN_SURFING:
+    case OBJ_EVENT_GFX_RIVAL_MAY_SURFING:
+        state = PLAYER_AVATAR_STATE_SURFING;
+        break;
+    case OBJ_EVENT_GFX_RIVAL_BRENDAN_FIELD_MOVE:
+    case OBJ_EVENT_GFX_RIVAL_MAY_FIELD_MOVE:
+        state = PLAYER_AVATAR_STATE_FIELD_MOVE;
+        break;
+    default:
+        return graphicsId;
+    }
+
+    page = TrainerCard_GetRivalPage();
+    rivalGfx = sCharacterPageAvatarGfx[page][state][TrainerCard_GetRivalGender()];
+    return rivalGfx != 0 ? rivalGfx : graphicsId;
+}
+
 u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
 {
     // Seite, die auf der Trainerkarte ausgewählt wurde (im Spielstand gespeichert)

@@ -64,4 +64,11 @@ u8 TrainerCard_GetPageCount(void);
 u16 TrainerCard_GetPagePlayerPic(u8 page, u8 gender);
 const u8 *TrainerCard_GetPageLabel(u8 page);
 
+// Rival (Birch's child): a character of the opposite gender from a page drawn at new game.
+void TrainerCard_DrawRivalPage(void);
+u8 TrainerCard_GetRivalPage(void);
+u8 TrainerCard_GetRivalGender(void);
+u16 TrainerCard_GetRivalTrainerPic(void);
+const u8 *TrainerCard_GetRivalName(void);
+
 #endif // GUARD_TRAINER_CARD_H
