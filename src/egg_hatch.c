@@ -949,6 +949,8 @@ static void CreateEggShardSprite(u8 x, u8 y, s16 velocityX, s16 velocityY, s16 a
 
 static void EggHatchPrintMessage(u8 windowId, u8 *string, u8 x, u8 y, u8 speed)
 {
+    // Re-wrap lines that no longer fit the box with the wider main font
+    FitMessageToWidth(string, GetWindowAttribute(windowId, WINDOW_WIDTH) * 8 - x);
     FillWindowPixelBuffer(windowId, PIXEL_FILL(15));
     sEggHatchData->textColor[0] = 0;
     sEggHatchData->textColor[1] = 5;

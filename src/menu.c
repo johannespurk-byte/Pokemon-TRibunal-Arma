@@ -218,15 +218,18 @@ static u32 GetLongestMessageLineWidth(const u8 *str)
 
 // Die Hauptschrift ist breiter als die alte. Texte, deren Zeilen nicht mehr in das
 // Nachrichtenfenster passen, werden automatisch neu umbrochen; passende bleiben unverändert.
-static void FitMessageToWindow(u8 windowId, u8 *str)
+void FitMessageToWidth(u8 *str, u32 maxWidth)
 {
-    // The rounded dialogue frame (WindowFunc_DrawDialogueFrame) covers the window's last tile column
-    u32 maxWidth = (GetWindowAttribute(windowId, WINDOW_WIDTH) - 1) * 8;
-
     if (GetLongestMessageLineWidth(str) <= maxWidth)
         return;
     StripLineBreaks(str);
     BreakStringAutomatic(str, maxWidth, 2, FONT_NORMAL, SHOW_SCROLL_PROMPT);
+}
+
+static void FitMessageToWindow(u8 windowId, u8 *str)
+{
+    // The rounded dialogue frame (WindowFunc_DrawDialogueFrame) covers the window's last tile column
+    FitMessageToWidth(str, (GetWindowAttribute(windowId, WINDOW_WIDTH) - 1) * 8);
 }
 
 void AddTextPrinterForMessage(bool8 allowSkippingDelayWithButtonPress)
