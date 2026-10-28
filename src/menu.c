@@ -448,8 +448,9 @@ void DisplayYesNoMenuWithDefault(u8 initialCursorPos)
 
 u8 AddStartMenuWindow(u8 numActions)
 {
+    // 8 statt 7 Kacheln breit (eine nach links), damit POKéDEX/POKéMON in der breiteren Hauptschrift passen
     if (sStartMenuWindowId == WINDOW_NONE)
-        sStartMenuWindowId = AddWindowParameterized(0, 22, 1, 7, (numActions * 2) + 2, 15, 0x139);
+        sStartMenuWindowId = AddWindowParameterized(0, 21, 1, 8, (numActions * 2) + 2, 15, 0x139);
     return sStartMenuWindowId;
 }
 
