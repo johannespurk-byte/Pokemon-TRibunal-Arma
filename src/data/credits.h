@@ -52,6 +52,7 @@ enum
     PAGE_BRAILLE_CODE_CHECK_1,
     PAGE_BRAILLE_CODE_CHECK_2,
     PAGE_SPECIAL_THANKS_5,
+    PAGE_FONT,
     PAGE_TASK_MANAGERS,
     PAGE_PRODUCERS,
     PAGE_EXECUTIVE_DIRECTOR,
@@ -63,6 +64,9 @@ enum
 #define ENTRIES_PER_PAGE 5
 
 static const u8 sCreditsText_EmptyString[]                    = _("");
+static const u8 sCreditsText_Font[]                           = _("Font");
+static const u8 sCreditsText_PixelOperator[]                  = _("Pixel Operator");
+static const u8 sCreditsText_JayveeEnaguas[]                  = _("Jayvee Enaguas");
 static const u8 sCreditsText_PkmnEmeraldVersion[]             = _("POKéMON EMERALD VERSION");
 static const u8 sCreditsText_Credits[]                        = _("Credits");
 static const u8 sCreditsText_ExecutiveDirector[]              = _("Executive Director");
@@ -222,6 +226,9 @@ static const u8 sCreditsText_NicolaPrattBarlow[]              = _("Nicola Pratt-
 static const u8 sCreditsText_ShellieDow[]                     = _("Shellie Dow");
 static const u8 sCreditsText_ErikJohnson[]                    = _("Erik Johnson");
 static const struct CreditsEntry sCreditsEntry_EmptyString                      = { 0, FALSE, sCreditsText_EmptyString};
+static const struct CreditsEntry sCreditsEntry_Font                             = {13,  TRUE, sCreditsText_Font};
+static const struct CreditsEntry sCreditsEntry_PixelOperator                    = {10, FALSE, sCreditsText_PixelOperator};
+static const struct CreditsEntry sCreditsEntry_JayveeEnaguas                    = {10, FALSE, sCreditsText_JayveeEnaguas};
 static const struct CreditsEntry sCreditsEntry_PkmnEmeraldVersion               = { 7,  TRUE, sCreditsText_PkmnEmeraldVersion};
 static const struct CreditsEntry sCreditsEntry_Credits                          = {11,  TRUE, sCreditsText_Credits};
 static const struct CreditsEntry sCreditsEntry_ExecutiveDirector                = { 8,  TRUE, sCreditsText_ExecutiveDirector};
@@ -747,6 +754,14 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_MotoyasuTojima,
         &sCreditsEntry_NicolaPrattBarlow,
         &sCreditsEntry_ShellieDow,
+    },
+    // Hauptschrift: Pixel Operator (CC0)
+    [PAGE_FONT] = {
+        _,
+        &sCreditsEntry_Font,
+        &sCreditsEntry_PixelOperator,
+        &sCreditsEntry_JayveeEnaguas,
+        _,
     },
     [PAGE_TASK_MANAGERS] = {
         _,
