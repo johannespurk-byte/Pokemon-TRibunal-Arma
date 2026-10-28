@@ -220,7 +220,8 @@ static u32 GetLongestMessageLineWidth(const u8 *str)
 // Nachrichtenfenster passen, werden automatisch neu umbrochen; passende bleiben unverändert.
 static void FitMessageToWindow(u8 windowId, u8 *str)
 {
-    u32 maxWidth = GetWindowAttribute(windowId, WINDOW_WIDTH) * 8;
+    // The rounded dialogue frame (WindowFunc_DrawDialogueFrame) covers the window's last tile column
+    u32 maxWidth = (GetWindowAttribute(windowId, WINDOW_WIDTH) - 1) * 8;
 
     if (GetLongestMessageLineWidth(str) <= maxWidth)
         return;
