@@ -4400,6 +4400,7 @@ static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)
     const u8 *name;
     const u8 *category;
     const u8 *description;
+    u32 fontId;
     u8 digitCount = (NATIONAL_DEX_COUNT > 999 && value != 0) ? 4 : 3;
 
     if (value == 0)
@@ -4429,7 +4430,9 @@ static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)
         description = GetSpeciesPokedexDescription(species);
     else
         description = sExpandedPlaceholder_PokedexDescription;
-    PrintInfoScreenText(description, GetStringCenterAlignXOffset(FONT_NORMAL, description, 0xF0), 93);
+    // Die breitere Hauptschrift ragt sonst links und rechts über den Rahmen des Eintrags hinaus
+    fontId = GetFontIdToFit(description, FONT_NORMAL, 0, DISPLAY_WIDTH - 16);
+    PrintInfoScreenTextSmall(description, fontId, GetStringCenterAlignXOffset(fontId, description, 0xF0), 93);
 
     //Type Icon(s)
     if (owned)

@@ -52,7 +52,8 @@ Team, Beutel und Pokédex haben dasselbe Schema: marineblaue Flächen, goldene K
 | `graphics/bag/swsh/*.png` (Sprites) | Index 8, das rechte Ende des Balkens unter dem gewählten Item, wird Gold |
 | `graphics/party_menu/swsh/tiles.png` | Rote und lila Hälfte werden Marineblau und Schieferblau, die Pokéball-Linien Gold. Zeilen 1–6 sind die Zustände der Team-Plätze (Index 1 Fläche, 3 Schrift, 2 Schatten). Der Platz unter dem Cursor ist golden mit marineblauer Schrift |
 | `graphics/pokedex/bg_*.pal`, `search_results_bg.pal` | Alter Pokédex: weiße, graue und gelbe Flächen und grüne Streifen werden Marineblau, Konturen und Titel Gold |
-| `graphics/pokedex/hgss/palette_default.pal`, `palette_national.pal`, `palette_search_results.pal` | HGSS-Pokédex: Zeile 0 ist der Rahmen (1 Fläche, 4 Gitter und Beschriftung, 6 Buchstaben auf den Balken, 7–9 Balken und Kanten) |
+| `graphics/pokedex/hgss/palette_default.pal`, `palette_national.pal`, `palette_search_results.pal` | HGSS-Pokédex: Zeile 0 ist der Rahmen (1 Fläche, 4 Gitter und Beschriftung, 6 Buchstaben auf den Balken, 7–9 Balken und Kanten, 15 Schrift `TEXT_DYNAMIC_COLOR_6` und Konturen in Gold) |
+| `PrintMonInfo` in `src/pokedex_plus_hgss.c` | Der Pokédex-Eintrag nimmt mit `GetFontIdToFit` die schmalere Schrift, wenn er sonst über den Rahmen ragt |
 
 | `graphics/battle_interface/text.pal` (Index 8–10), `B_WIN_YESNO` in `src/battle_message.c` | Ja/Nein im Kampf: Fläche Marineblau, Schrift Gold, Schatten Bronze. Vorher war die Fläche weiß und die Cursor-Spalte im Rahmen marineblau |
 | `message_box.png`, `name_box.png` (Index 4–9, 14, 15) | Rot, Grün und Blau sind aufgehellt, damit farbiger Text auf Marineblau lesbar bleibt (z. B. die Stimmfarben der NPCs in FireRed/LeafGreen). 14/15 sind Hellgold mit Bronze-Schatten |
