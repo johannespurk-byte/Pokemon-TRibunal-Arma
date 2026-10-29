@@ -61,7 +61,9 @@ Text mit `TEXT_COLOR_WHITE` auf Palette 15 ist jetzt marineblau, weil Index 1 di
 In `include/config/pokedex_plus_hgss.h` ist `POKEDEX_PLUS_HGSS` auf `TRUE` gesetzt.
 Der Pokédex im HGSS-Stil zeigt Werte, Entwicklungen, Formen und Attacken.
 Alle Generationen 1–9 sind eingeschaltet, der National-Dex reicht bis Nr. 1025.
-Er wird wie im Original freigeschaltet: in Emerald von Birch, in FireRed/LeafGreen von Eich.
+`NewGameInitData` in `src/new_game.c` ruft `EnableNationalPokedex()` auf, damit ist der National-Dex ab Spielbeginn aktiv.
+Den Pokédex selbst bekommt man weiterhin von Birch bzw. Eich, danach zeigt er sofort alle 1025 Pokémon.
+Das spätere Upgrade durch Birch bzw. Eich läuft trotzdem ab, ändert aber nichts mehr.
 
 ## Rocket-Versteck (nur FireRed/LeafGreen)
 

@@ -235,6 +235,8 @@ void NewGameInitData(void)
     SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
     ResetItemFlags();
     ResetDexNav();
+    // National-Dex ab Spielbeginn (Gen 1–9), nicht erst nach Birchs/Eichs Upgrade
+    EnableNationalPokedex();
     ClearFollowerNPCData();
     // Im Birk-Intro gewählte Generation (ClearSav1 hat die Variablen oben gelöscht)
     TrainerCard_SetCharacterPage(NewGameBirchSpeech_GetCharacterPage());
