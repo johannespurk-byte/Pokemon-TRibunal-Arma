@@ -58,6 +58,7 @@ Team, Beutel und Pokédex haben dasselbe Schema: marineblaue Flächen, goldene K
 | `graphics/battle_interface/text.pal` (Index 8–10), `B_WIN_YESNO` in `src/battle_message.c` | Ja/Nein im Kampf: Fläche Marineblau, Schrift Gold, Schatten Bronze. Vorher war die Fläche weiß und die Cursor-Spalte im Rahmen marineblau |
 | `message_box.png`, `name_box.png` (Index 4–9, 14, 15) | Rot, Grün und Blau sind aufgehellt, damit farbiger Text auf Marineblau lesbar bleibt (z. B. die Stimmfarben der NPCs in FireRed/LeafGreen). 14/15 sind Hellgold mit Bronze-Schatten |
 | `sTrainerCardTextColors`, `sTrainerCardStatColors` in `src/trainer_card.c` | Trainerkarte: Die Karte bleibt platinfarben, die Schrift ist dunkle Bronze (Index 15 der Dialogbox-Palette) mit Goldschatten. Werte auf der Rückseite sind Bronze statt Rot |
+| `graphics/pokemon_storage/*.pal` | PC-Boxen: Hintergrund mit dunklem Pokéball-Muster, „PKMN DATA“-Feld Marineblau mit Goldkante, Name und Level Gold, „PARTY POKéMON“ und „CLOSE BOX“ marineblau mit goldener Schrift. Die Box-Hintergründe (Wallpaper) sind unverändert |
 | `graphics/shop/menu.png` | Laden: Itemliste mit marineblauen Streifen und goldenem Rand statt Pfirsich und Grün; Beschreibungs- und Item-Box marineblau statt weiß |
 | `ShowSaveInfoWindow` in `src/start_menu.c` | Speichermenü: Ort und Werte in Hellgold (Index 14) statt Grün bzw. Blau/Rot je nach Geschlecht |
 
