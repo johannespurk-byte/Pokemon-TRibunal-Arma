@@ -320,8 +320,9 @@ static const u16 *const sKantoTrainerCardPals[] =
     sKantoTrainerCardGold_Pal,   // 4 stars
 };
 
-static const u8 sTrainerCardTextColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY};
-static const u8 sTrainerCardStatColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_RED, TEXT_COLOR_LIGHT_RED};
+// Dunkle Bronze (Index 15 der Dialogbox-Palette) mit Goldschatten: auf der hellen Platin-Karte lesbar
+static const u8 sTrainerCardTextColors[] = {TEXT_COLOR_TRANSPARENT, 15, TEXT_COLOR_DARK_GRAY};
+static const u8 sTrainerCardStatColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_LIGHT_GRAY, TEXT_COLOR_DARK_GRAY};
 static const u8 sTimeColonInvisibleTextColors[6] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_TRANSPARENT, TEXT_COLOR_TRANSPARENT};
 
 static const u8 sTrainerPicOffset[2][GENDER_COUNT][2] =
