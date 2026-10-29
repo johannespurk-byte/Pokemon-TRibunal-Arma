@@ -48,8 +48,8 @@ Team, Beutel und Pokédex haben dasselbe Schema: marineblaue Flächen, goldene K
 |---|---|
 | `graphics/interface/std_menu.pal` | Index 1 Marineblau, 2 Gold, 3 Bronze: Kontextmenüs und Ja/Nein auf allen Bildschirmen |
 | `graphics/interface/option_menu_text.pal`, `sOptionMenuBg_Pal` in `src/option_menu.c` | Optionsmenü: Titelleiste Bronze, Karte Marineblau, Namen Gold, Werte Hellgold, Pfeile und Hilfetext Dunkelgold |
-| `graphics/bag/swsh/tiles.png` | Gelbe Fläche wird Marineblau, orange Balken werden Gold, die Taschenleiste wird Schieferblau. In Palette 1 steht die Schrift (1 Gold, 3 Bronze; das gewählte Item hat 2 Marineblau und 4 Dunkelgold) |
-| `graphics/bag/swsh/*.png` (Sprites) | Index 8, der Balken unter dem gewählten Item, wird Gold |
+| `graphics/bag/swsh/tiles.png` | Gelbe Fläche wird Marineblau, orange Balken werden Gold, die Taschenleiste wird Schieferblau. In Palette 1 steht die Schrift (1 Gold, 3 Bronze; das gewählte Item hat 2 Hellgold und 4 Bronze, weil sein Balken schwarz ist) |
+| `graphics/bag/swsh/*.png` (Sprites) | Index 8, das rechte Ende des Balkens unter dem gewählten Item, wird Gold |
 | `graphics/party_menu/swsh/tiles.png` | Rote und lila Hälfte werden Marineblau und Schieferblau, die Pokéball-Linien Gold. Zeilen 1–6 sind die Zustände der Team-Plätze (Index 1 Fläche, 3 Schrift, 2 Schatten). Der Platz unter dem Cursor ist golden mit marineblauer Schrift |
 | `graphics/pokedex/bg_*.pal`, `search_results_bg.pal` | Alter Pokédex: weiße, graue und gelbe Flächen und grüne Streifen werden Marineblau, Konturen und Titel Gold |
 | `graphics/pokedex/hgss/palette_default.pal`, `palette_national.pal`, `palette_search_results.pal` | HGSS-Pokédex: Zeile 0 ist der Rahmen (1 Fläche, 4 Gitter und Beschriftung, 6 Buchstaben auf den Balken, 7–9 Balken und Kanten) |
