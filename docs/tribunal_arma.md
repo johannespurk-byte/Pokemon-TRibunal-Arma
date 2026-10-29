@@ -40,8 +40,28 @@ Die Palette der Dialogbox (`gMessageBox_Pal`) laden auch Menüfenster mit Palett
 Darum wird die Schrift dort ebenfalls golden.
 Der Fußabdruck im Pokédex nutzt Index 2 dieser Palette und ist jetzt ebenfalls golden.
 
-`graphics/interface/std_menu.pal` ist unverändert.
-Diese Palette nutzen Bildschirme mit hellem Hintergrund (Team, Beutel, Pokédex), auf denen Gold schlecht lesbar wäre.
+### Menüs
+
+Team, Beutel und Pokédex haben dasselbe Schema: marineblaue Flächen, goldene Kanten und goldene Schrift.
+
+| Datei | Änderung |
+|---|---|
+| `graphics/interface/std_menu.pal` | Index 1 Marineblau, 2 Gold, 3 Bronze: Kontextmenüs und Ja/Nein auf allen Bildschirmen |
+| `graphics/bag/swsh/tiles.png` | Gelbe Fläche wird Marineblau, orange Balken werden Gold, die Taschenleiste wird Schieferblau. In Palette 1 steht die Schrift (1 Gold, 3 Bronze; das gewählte Item hat 2 Marineblau und 4 Dunkelgold) |
+| `graphics/bag/swsh/*.png` (Sprites) | Index 8, der Balken unter dem gewählten Item, wird Gold |
+| `graphics/party_menu/swsh/tiles.png` | Rote und lila Hälfte werden Marineblau und Schieferblau, die Pokéball-Linien Gold. Zeilen 1–6 sind die Zustände der Team-Plätze (Index 1 Fläche, 3 Schrift, 2 Schatten). Der Platz unter dem Cursor ist golden mit marineblauer Schrift |
+| `graphics/pokedex/bg_*.pal`, `search_results_bg.pal` | Alter Pokédex: weiße, graue und gelbe Flächen und grüne Streifen werden Marineblau, Konturen und Titel Gold |
+| `graphics/pokedex/hgss/palette_default.pal`, `palette_national.pal`, `palette_search_results.pal` | HGSS-Pokédex: Zeile 0 ist der Rahmen (1 Fläche, 4 Gitter und Beschriftung, 6 Buchstaben auf den Balken, 7–9 Balken und Kanten) |
+
+Text mit `TEXT_COLOR_WHITE` auf Palette 15 ist jetzt marineblau, weil Index 1 die Boxfläche ist.
+`palette_search_menu.pal` (Suchmaske) und die `_dark`-Paletten sind unverändert.
+
+## Erweiterter Pokédex
+
+In `include/config/pokedex_plus_hgss.h` ist `POKEDEX_PLUS_HGSS` auf `TRUE` gesetzt.
+Der Pokédex im HGSS-Stil zeigt Werte, Entwicklungen, Formen und Attacken.
+Alle Generationen 1–9 sind eingeschaltet, der National-Dex reicht bis Nr. 1025.
+Er wird wie im Original freigeschaltet: in Emerald von Birch, in FireRed/LeafGreen von Eich.
 
 ## Rocket-Versteck (nur FireRed/LeafGreen)
 
