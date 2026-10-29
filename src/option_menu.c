@@ -213,7 +213,7 @@ static const struct BgTemplate sOptionMenuBgTemplates[] =
 };
 
 // Hintergrund hinter den Fenstern: dunkles Nachtblau
-static const u16 sOptionMenuBg_Pal[] = {RGB(3, 4, 7)};
+static const u16 sOptionMenuBg_Pal[] = {RGB(2, 3, 8)};
 
 static void MainCB2(void)
 {

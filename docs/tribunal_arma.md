@@ -47,6 +47,7 @@ Team, Beutel und Pokédex haben dasselbe Schema: marineblaue Flächen, goldene K
 | Datei | Änderung |
 |---|---|
 | `graphics/interface/std_menu.pal` | Index 1 Marineblau, 2 Gold, 3 Bronze: Kontextmenüs und Ja/Nein auf allen Bildschirmen |
+| `graphics/interface/option_menu_text.pal`, `sOptionMenuBg_Pal` in `src/option_menu.c` | Optionsmenü: Titelleiste Bronze, Karte Marineblau, Namen Gold, Werte Hellgold, Pfeile und Hilfetext Dunkelgold |
 | `graphics/bag/swsh/tiles.png` | Gelbe Fläche wird Marineblau, orange Balken werden Gold, die Taschenleiste wird Schieferblau. In Palette 1 steht die Schrift (1 Gold, 3 Bronze; das gewählte Item hat 2 Marineblau und 4 Dunkelgold) |
 | `graphics/bag/swsh/*.png` (Sprites) | Index 8, der Balken unter dem gewählten Item, wird Gold |
 | `graphics/party_menu/swsh/tiles.png` | Rote und lila Hälfte werden Marineblau und Schieferblau, die Pokéball-Linien Gold. Zeilen 1–6 sind die Zustände der Team-Plätze (Index 1 Fläche, 3 Schrift, 2 Schatten). Der Platz unter dem Cursor ist golden mit marineblauer Schrift |
