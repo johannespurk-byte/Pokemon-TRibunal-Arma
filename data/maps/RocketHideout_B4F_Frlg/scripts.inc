@@ -132,16 +132,23 @@ RocketHideout_B4F_Text_GiovanniIntro::
 	.string "world of pain!$"
 
 RocketHideout_B4F_Text_GiovanniDefeat::
-	.string "WHAT!\n"
-	.string "This can't be!$"
+	.string "Hmph… impressive.\n"
+	.string "You have earned my attention.$"
 
 RocketHideout_B4F_Text_GiovanniPostBattle::
 	.string "I see that you raise POKéMON with\n"
 	.string "utmost care.\p"
-	.string "A child like you would never\n"
-	.string "understand what I hope to achieve.\p"
-	.string "I shall step aside this time!\p"
-	.string "I hope we meet again…$"
+	.string "Very well. I shall step aside…\n"
+	.string "for now.\p"
+	.string "But this is not the end of our\n"
+	.string "story, child. Far from it.\p"
+	.string "We will meet again. And every time\n"
+	.string "we do, you will be stronger.\p"
+	.string "So will I.\p"
+	.string "Train hard. Climb higher.\n"
+	.string "I will be waiting for you.\p"
+	.string "Next time, TEAM ROCKET will not\n"
+	.string "hold back!$"
 
 RocketHideout_B4F_Text_Grunt2Intro::
 	.string "I know you!\n"

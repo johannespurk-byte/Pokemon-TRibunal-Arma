@@ -4983,19 +4983,75 @@ Pic: Leader Giovanni Frlg
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer / Prediction
 
-Onix
-Level: 25
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+Dugtrio @ Focus Sash
+Level: 60
+Ability: Arena Trap
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Earthquake
+- Sucker Punch
+- Stone Edge
+- Memento
 
-Rhyhorn
-Level: 24
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+Persian @ Life Orb
+Level: 60
+Ability: Technician
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Fake Out
+- Knock Off
+- U-turn
+- Play Rough
 
-Kangaskhan
-Level: 29
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+Nidoqueen @ Leftovers
+Level: 60
+Ability: Sheer Force
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+Tera Type: Fairy
+- Earth Power
+- Sludge Wave
+- Ice Beam
+- Toxic Spikes
+
+Nidoking @ Groundium Z
+Level: 60
+Ability: Sheer Force
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Earth Power
+- Sludge Wave
+- Ice Beam
+- Thunderbolt
+
+Rhyperior @ Weakness Policy
+Level: 60
+Ability: Solid Rock
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Dynamax Level: 10
+- Earthquake
+- Stone Edge
+- Megahorn
+- Ice Punch
+
+Steelix @ Steelixite
+Level: 60
+Ability: Sturdy
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Heavy Slam
+- Earthquake
+- Stealth Rock
+- Roar
 
 === TRAINER_BOSS_GIOVANNI_2 ===
 Name: GIOVANNI

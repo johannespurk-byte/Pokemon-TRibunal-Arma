@@ -44,7 +44,7 @@
 
 #include "constants/opponents.h"
 
-// Rocket Hideout grunts always fight at the current level cap (caps.c)
+// Rocket Hideout grunts and Giovanni always fight at the current level cap (caps.c)
 #define ROCKET_HIDEOUT_SCALING { .mode = LEVEL_SCALING_TO_LEVEL_CAP }
 
 const struct LevelScalingConfig gTrainerLevelScalingRules[TRAINERS_COUNT] =
@@ -61,5 +61,6 @@ const struct LevelScalingConfig gTrainerLevelScalingRules[TRAINERS_COUNT] =
     [TRAINER_TEAM_ROCKET_GRUNT_16] = ROCKET_HIDEOUT_SCALING,
     [TRAINER_TEAM_ROCKET_GRUNT_17] = ROCKET_HIDEOUT_SCALING,
     [TRAINER_TEAM_ROCKET_GRUNT_18] = ROCKET_HIDEOUT_SCALING,
+    [TRAINER_BOSS_GIOVANNI]        = ROCKET_HIDEOUT_SCALING,
 #endif
 };
