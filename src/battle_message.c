@@ -3628,12 +3628,21 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
 
             if (toCpy != NULL)
             {
+                // Trainer speech is whole sentences: it keeps its spaces and drops its own line breaks,
+                // so BreakStringAutomatic below can rewrap it for the battle box. Names keep NBSPs so they never split.
+                bool32 isTrainerSpeech = (*src == B_TXT_TRAINER1_LOSE_TEXT || *src == B_TXT_TRAINER2_LOSE_TEXT
+                                       || *src == B_TXT_TRAINER1_WIN_TEXT || *src == B_TXT_TRAINER2_WIN_TEXT);
+                u32 prevChar = EOS;
+
                 while (*toCpy != EOS)
                 {
-                    if (*toCpy == CHAR_SPACE)
+                    if (isTrainerSpeech && (*toCpy == CHAR_NEWLINE || *toCpy == CHAR_PROMPT_SCROLL))
+                        dst[dstID] = (prevChar == CHAR_HYPHEN) ? CHAR_ZWS : CHAR_SPACE;
+                    else if (!isTrainerSpeech && *toCpy == CHAR_SPACE)
                         dst[dstID] = CHAR_NBSP;
                     else
                         dst[dstID] = *toCpy;
+                    prevChar = *toCpy;
                     dstID++;
                     toCpy++;
                 }
