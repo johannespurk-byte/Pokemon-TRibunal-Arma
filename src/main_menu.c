@@ -1432,7 +1432,7 @@ static void Task_NewGameBirchSpeech_ThisIsAPokemon(u8 taskId)
         // sonst wird der PokéBall mit Beldum während Birchs Satz nie ausgelöst.
         // ACHTUNG: Bitte Parameterreihenfolge/Namen gegen eure text.h/text_window.h prüfen,
         // falls der Compiler hier meckert.
-        AddTextPrinterParameterized2(0, FONT_NORMAL, gStringVar4, GetPlayerTextSpeedDelay(), NewGameBirchSpeech_WaitForThisIsPokemonText, TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+        AddTextPrinterParameterized2(0, FONT_NORMAL, gStringVar4, GetPlayerTextSpeedDelay(), NewGameBirchSpeech_WaitForThisIsPokemonText, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
 
         gTasks[taskId].func = Task_NewGameBirchSpeech_MainSpeech;
     }
