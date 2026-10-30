@@ -103,9 +103,10 @@ bool8 GiveRandomTrainerEgg(void)
     if (trainerId == 0 || trainerId >= TRAINERS_COUNT)
         return FALSE;
 
-    trainerClass = gTrainers[trainerId]->trainerClass;
+    // gTrainers ist nach Schwierigkeit und dann nach Trainer geordnet, daher über die Hilfsfunktion lesen
+    trainerClass = GetTrainerClassFromId(trainerId);
 
-    // Zuverlässiger Filter für alle Boss-Klassen
+    // Arenaleiter, Top Vier, Champs, Rivalen, Bosse und Admins von Magma, Aqua und Rocket geben kein Ei
     if (trainerClass == TRAINER_CLASS_LEADER ||
         trainerClass == TRAINER_CLASS_ELITE_FOUR ||
         trainerClass == TRAINER_CLASS_CHAMPION ||
@@ -114,10 +115,22 @@ bool8 GiveRandomTrainerEgg(void)
         trainerClass == TRAINER_CLASS_MAGMA_LEADER ||
         trainerClass == TRAINER_CLASS_AQUA_ADMIN ||
         trainerClass == TRAINER_CLASS_MAGMA_ADMIN ||
+        trainerClass == TRAINER_CLASS_LEADER_FRLG ||
+        trainerClass == TRAINER_CLASS_ELITE_FOUR_FRLG ||
+        trainerClass == TRAINER_CLASS_CHAMPION_FRLG ||
+        trainerClass == TRAINER_CLASS_RIVAL_EARLY_FRLG ||
+        trainerClass == TRAINER_CLASS_RIVAL_LATE_FRLG ||
+        trainerClass == TRAINER_CLASS_BOSS_FRLG ||
         trainerClass == TRAINER_CLASS_TEAM_ROCKET_FRLG)
     {
         return FALSE;
     }
+
+#if !IS_FRLG
+    // Arenaleiter mit einer anderen Klasse: Misty (Blütenburg) und Brandon (Faustauhaven)
+    if (trainerId == TRAINER_MISTY || trainerId == TRAINER_BRANDON_DEWFORD)
+        return FALSE;
+#endif
 
     u16 randomSpecies;
     u32 attempts = 0;
