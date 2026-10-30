@@ -473,7 +473,12 @@ u16 GetRivalGraphicsId(u16 graphicsId)
 u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
 {
     // Seite, die auf der Trainerkarte ausgewählt wurde (im Spielstand gespeichert)
-    u8 page = TrainerCard_GetCharacterPage();
+    return GetCharacterPageAvatarGraphicsId(TrainerCard_GetCharacterPage(), state, gender);
+}
+
+// Overworld-Grafik einer Charakter-Seite; Standardfigur, wenn die Seite keine eigene hat
+u16 GetCharacterPageAvatarGraphicsId(u8 page, u8 state, enum Gender gender)
+{
     u16 graphicsId = 0;
 
     if (page < ARRAY_COUNT(sCharacterPageAvatarGfx) && state < ARRAY_COUNT(sCharacterPageAvatarGfx[0]))

@@ -27,6 +27,7 @@
 #include "overworld.h"
 #include "walda_phrase.h"
 #include "main.h"
+#include "main_menu.h"
 #include "decompress.h"
 #include "constants/event_objects.h"
 #include "constants/rgb.h"
@@ -1401,11 +1402,12 @@ static void NamingScreen_NoIcon(void)
 
 static void NamingScreen_CreatePlayerIcon(void)
 {
-    u16 rivalGfxId;
+    u16 playerGfxId;
     u8 spriteId;
 
-    rivalGfxId = GetRivalAvatarGraphicsIdByStateIdAndGender(PLAYER_AVATAR_STATE_NORMAL, (enum Gender)sNamingScreen->monSpecies);
-    spriteId = CreateObjectGraphicsSprite(rivalGfxId, SpriteCallbackDummy, 56, 37, 0);
+    // The player is named in the intro, before the character chosen there is stored in the save
+    playerGfxId = GetCharacterPageAvatarGraphicsId(NewGameBirchSpeech_GetCharacterPage(), PLAYER_AVATAR_STATE_NORMAL, (enum Gender)sNamingScreen->monSpecies);
+    spriteId = CreateObjectGraphicsSprite(playerGfxId, SpriteCallbackDummy, 56, 37, 0);
     gSprites[spriteId].oam.priority = 3;
     StartSpriteAnim(&gSprites[spriteId], ANIM_STD_GO_SOUTH);
 }
