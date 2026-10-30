@@ -22,7 +22,7 @@ bool8 CanUseFly(void);
 // Check if Flash can be used (either via Pokémon or FLASH_TOOL item)
 bool8 CanUseFlash(void);
 
-// Cut, Strength, Surf, Fly and Rock Smash also work outside battle with the badge and the HM in the bag
+// Every badge-gated HM also works outside battle with the badge and the HM in the bag
 bool32 HasBadgeAndHMForFieldMove(enum FieldMove fieldMove);
 
 // First party slot that is not an egg, or PARTY_SIZE if there is none

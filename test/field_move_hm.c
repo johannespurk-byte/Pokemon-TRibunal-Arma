@@ -31,9 +31,25 @@ TEST("(Field move) Cut still needs the badge when the HM is in the bag")
     EXPECT_EQ(gSpecialVar_Result, PARTY_SIZE);
 }
 
-TEST("(Field move) Flash is not unlocked by the HM alone")
+TEST("(Field move) Waterfall works with the badge and the HM even if no Pokémon can learn it")
 {
+    ZeroPlayerPartyMons();
+    FlagSet(FLAG_BADGE08_GET);
+    AddBagItem(ITEM_HM_WATERFALL, 1);
+    RUN_OVERWORLD_SCRIPT(
+        givemon SPECIES_POLTCHAGEIST, 10;
+        checkfieldmove FIELD_MOVE_WATERFALL;
+    );
+    EXPECT(!CanLearnTeachableMove(SPECIES_POLTCHAGEIST, MOVE_WATERFALL));
+    EXPECT_EQ(gSpecialVar_Result, 0);
+}
+
+TEST("(Field move) Flash works with the badge and the HM even if no Pokémon can learn it")
+{
+    ZeroPlayerPartyMons();
     FlagSet(FLAG_BADGE02_GET);
     AddBagItem(ITEM_HM_FLASH, 1);
-    EXPECT(!HasBadgeAndHMForFieldMove(FIELD_MOVE_FLASH));
+    RUN_OVERWORLD_SCRIPT(givemon SPECIES_POLTCHAGEIST, 10;);
+    EXPECT(!CanLearnTeachableMove(SPECIES_POLTCHAGEIST, MOVE_FLASH));
+    EXPECT(CanUseFlash());
 }

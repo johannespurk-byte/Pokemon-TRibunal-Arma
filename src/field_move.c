@@ -258,6 +258,9 @@ bool32 HasBadgeAndHMForFieldMove(enum FieldMove fieldMove)
     case FIELD_MOVE_SURF:       hm = ITEM_HM_SURF;       break;
     case FIELD_MOVE_FLY:        hm = ITEM_HM_FLY;        break;
     case FIELD_MOVE_ROCK_SMASH: hm = ITEM_HM_ROCK_SMASH; break;
+    case FIELD_MOVE_FLASH:      hm = ITEM_HM_FLASH;      break;
+    case FIELD_MOVE_DIVE:       hm = ITEM_HM_DIVE;       break;
+    case FIELD_MOVE_WATERFALL:  hm = ITEM_HM_WATERFALL;  break;
     default:                    return FALSE;
     }
 
@@ -341,6 +344,13 @@ bool8 CanUseFlash(void)
                 return TRUE;
             }
         }
+    }
+
+    // With the badge and HM05 in the bag any Pokémon can use Flash.
+    if (HasBadgeAndHMForFieldMove(FIELD_MOVE_FLASH) && GetFirstNonEggPartySlot() != PARTY_SIZE)
+    {
+        sFieldMoveSource = FIELD_MOVE_SOURCE_POKEMON;
+        return TRUE;
     }
 
     // 3. Check for the item

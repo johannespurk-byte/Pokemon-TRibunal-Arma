@@ -3732,7 +3732,7 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
             {
                 if (IsFieldMoveUnlocked(j) && CanLearnTeachableMove(species, moveId))
                     offer = TRUE;
-                // With the badge and HM02 in the bag every Pokémon can fly outside battle.
+                // With the badge and the HM in the bag every Pokémon can use Fly and Flash outside battle.
                 else if (HasBadgeAndHMForFieldMove(j))
                     offer = TRUE;
             }
