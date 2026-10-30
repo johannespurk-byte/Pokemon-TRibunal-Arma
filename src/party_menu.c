@@ -3025,7 +3025,8 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
             // Case 1: Fly and Flash - show if learnable and badge obtained
             if (moveId == MOVE_FLY || moveId == MOVE_FLASH)
             {
-                if (IsFieldMoveUnlocked(i) && CanLearnTeachableMove(species, moveId))
+                // With the badge and HM02 in the bag every Pokémon can fly outside battle.
+                if ((IsFieldMoveUnlocked(i) && CanLearnTeachableMove(species, moveId)) || HasBadgeAndHMForFieldMove(i))
                 {
                     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, i + MENU_FIELD_MOVES);
                 }

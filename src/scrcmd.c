@@ -2368,6 +2368,18 @@ bool8 ScrCmd_checkfieldmove(struct ScriptContext *ctx)
         }
     }
 
+    // With the badge and the HM in the bag the first Pokémon uses the move, even if it can't learn it.
+    if (HasBadgeAndHMForFieldMove(fieldMove))
+    {
+        i = GetFirstNonEggPartySlot();
+        if (i != PARTY_SIZE)
+        {
+            gSpecialVar_Result = i;
+            SetFieldMoveSource(FIELD_MOVE_SOURCE_POKEMON);
+            return FALSE;
+        }
+    }
+
     // 2. If no Pokémon is found, check for the key item.
     if (keyItem != ITEM_NONE && CheckBagHasItem(keyItem, 1))
     {

@@ -3732,6 +3732,9 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
             {
                 if (IsFieldMoveUnlocked(j) && CanLearnTeachableMove(species, moveId))
                     offer = TRUE;
+                // With the badge and HM02 in the bag every Pokémon can fly outside battle.
+                else if (HasBadgeAndHMForFieldMove(j))
+                    offer = TRUE;
             }
             // Item-based HMs are used from the overworld / key items, not the party menu.
             else if (IsFieldMoveExcludedFromPartyMenu(moveId))

@@ -247,6 +247,35 @@ void SetFieldMoveSource(u8 source)
     sFieldMoveSource = source;
 }
 
+bool32 HasBadgeAndHMForFieldMove(enum FieldMove fieldMove)
+{
+    u16 hm;
+
+    switch (fieldMove)
+    {
+    case FIELD_MOVE_CUT:        hm = ITEM_HM_CUT;        break;
+    case FIELD_MOVE_STRENGTH:   hm = ITEM_HM_STRENGTH;   break;
+    case FIELD_MOVE_SURF:       hm = ITEM_HM_SURF;       break;
+    case FIELD_MOVE_FLY:        hm = ITEM_HM_FLY;        break;
+    case FIELD_MOVE_ROCK_SMASH: hm = ITEM_HM_ROCK_SMASH; break;
+    default:                    return FALSE;
+    }
+
+    return IsFieldMoveUnlocked(fieldMove) && CheckBagHasItem(hm, 1);
+}
+
+u32 GetFirstNonEggPartySlot(void)
+{
+    u32 i;
+
+    for (i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
+    {
+        if (!GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_IS_EGG))
+            return i;
+    }
+    return PARTY_SIZE;
+}
+
 bool8 CanUseFly(void)
 {
     u32 i;
@@ -267,6 +296,13 @@ bool8 CanUseFly(void)
                 return TRUE; // Found a valid Pokémon
             }
         }
+    }
+
+    // With the badge and HM02 in the bag any Pokémon can fly.
+    if (HasBadgeAndHMForFieldMove(FIELD_MOVE_FLY) && GetFirstNonEggPartySlot() != PARTY_SIZE)
+    {
+        sFieldMoveSource = FIELD_MOVE_SOURCE_POKEMON;
+        return TRUE;
     }
 
     // If no Pokémon is found, check for the Fly Tool item.
