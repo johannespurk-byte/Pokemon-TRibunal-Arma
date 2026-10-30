@@ -28,6 +28,29 @@ const struct Tileset gTileset_SecretBaseRedCave =
 const struct Tileset *const gTilesetPointer_SecretBase = &gTileset_SecretBase;
 const struct Tileset *const gTilesetPointer_SecretBaseRedCave = &gTileset_SecretBaseRedCave;
 
+// Also built for Emerald: the Rocket Hideout under the Mauville Game Corner uses these FRLG tilesets
+const struct Tileset gTileset_BuildingFrlg =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Building_Frlg,
+    .palettes = gTilesetPalettes_Building_Frlg,
+    .metatiles = gMetatiles_Building_Frlg,
+    .metatileAttributes = gMetatileAttributes_Building_Frlg,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SilphCo =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Condominiums,
+    .palettes = gTilesetPalettes_Condominiums,
+    .metatiles = gMetatiles_SilphCo,
+    .metatileAttributes = gMetatileAttributes_SilphCo,
+    .callback = InitTilesetAnim_SilphCo,
+};
+
 #if !IS_FRLG
 
 const struct Tileset gTileset_General =
@@ -836,17 +859,6 @@ const struct Tileset gTileset_UnionRoom =
 #else
 
 // FRLG tilesets
-const struct Tileset gTileset_BuildingFrlg =
-{
-    .isCompressed = TRUE,
-    .isSecondary = FALSE,
-    .tiles = gTilesetTiles_Building_Frlg,
-    .palettes = gTilesetPalettes_Building_Frlg,
-    .metatiles = gMetatiles_Building_Frlg,
-    .metatileAttributes = gMetatileAttributes_Building_Frlg,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_General_Frlg =
 {
     .isCompressed = TRUE,
@@ -1307,17 +1319,6 @@ const struct Tileset gTileset_SeaCottage =
     .metatiles = gMetatiles_SeaCottage,
     .metatileAttributes = gMetatileAttributes_SeaCottage,
     .callback = NULL,
-};
-
-const struct Tileset gTileset_SilphCo =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Condominiums,
-    .palettes = gTilesetPalettes_Condominiums,
-    .metatiles = gMetatiles_SilphCo,
-    .metatileAttributes = gMetatileAttributes_SilphCo,
-    .callback = InitTilesetAnim_SilphCo,
 };
 
 const struct Tileset gTileset_UndergroundPath =

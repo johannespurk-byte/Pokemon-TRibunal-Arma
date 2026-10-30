@@ -78,17 +78,29 @@ Alle Generationen 1–9 sind eingeschaltet, der National-Dex reicht bis Nr. 1025
 Den Pokédex selbst bekommt man weiterhin von Birch bzw. Eich, danach zeigt er sofort alle 1025 Pokémon.
 Das spätere Upgrade durch Birch bzw. Eich läuft trotzdem ab, ändert aber nichts mehr.
 
-## Rocket-Versteck (nur FireRed/LeafGreen)
+## Rocket-Versteck
 
 Alle elf Rüpel (`TRAINER_TEAM_ROCKET_GRUNT_8` … `_18`) und Giovanni (`TRAINER_BOSS_GIOVANNI`) haben 6 Pokémon mit 31 DVs, EVs, Wesen, Item und passender Fähigkeit.
 Die KI ist `Smart Trainer / Prediction`.
 Jedes Team hat genau einen Nutzer pro Gimmick: Mega, Dynamax, Tera und Z-Attacke.
 Die Teams stehen in `src/data/trainers_frlg.party`.
 
+### Emerald: Versteck unter der Spielhalle von Malvenfroh
+
+In Emerald liegt das Versteck unter der Spielhalle von Malvenfroh.
+Karten, Skripte und Texte sind dieselben wie in FireRed/LeafGreen.
+
+- **Karten:** `tools/mapjson/emerald_kanto_maps.json` listet die fünf Versteck-Karten und ihre Layouts. `mapjson` nimmt sie zusätzlich in den Emerald-Build auf, obwohl sie `REGION_KANTO` sind.
+- **Tilesets:** `gTileset_BuildingFrlg` und `gTileset_SilphCo` werden auch für Emerald gebaut (`src/data/tilesets/`).
+- **Skripte:** Die Versteck-Skripte und `data/scripts/item_ball_scripts_rocket_hideout.inc` stehen in `data/event_scripts.s` außerhalb von `.if IS_FRLG`.
+- **Trainer:** Giovanni und die Rüpel stehen in Emerald als `TRAINER_ROCKET_HIDEOUT_GIOVANNI` / `_GRUNT_8` … `_18` (IDs 872–883) in `src/data/trainers.party`. Die Teams sind dieselben wie in FRLG. `include/constants/opponents.h` biegt die FRLG-Namen in Emerald auf diese IDs um.
+- **Flags:** Item-Bälle, Giovanni, Liftschlüssel, Silph Scope und Lift nutzen in Emerald `FLAG_UNUSED_0x020` … `0x02F`. Die versteckten Items nutzen `0x266` … `0x269`. Liftschlüssel und Silph Scope werden beim neuen Spiel versteckt (`data/scripts/new_game.inc`).
+- **Lift:** `VAR_ELEVATOR_FLOOR` ist in Emerald `0x404E`, weil `0x403A` dort der Schrittzähler der Faraway-Insel ist.
+
 ### Level
 
 In `src/data/level_scaling_rules.h` kämpfen alle zwölf mit `LEVEL_SCALING_TO_LEVEL_CAP`, also immer auf der aktuellen Level-Grenze aus `src/caps.c`.
-Die Regeln stehen in `#if IS_FRLG`.
+Das gilt in allen drei Versionen.
 
 | Orden | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
 |---|---|---|---|---|---|---|---|---|---|
@@ -112,9 +124,6 @@ Die Regeln stehen in `#if IS_FRLG`.
 | Giovanni | Stahlos | Rihornior | Nidoqueen (Fee) | Nidoking (Terrium Z) |
 
 Giovannis übrige Pokémon sind Digdri (Fokusgurt, Ausweglos) und Snobilikat (Leben-Orb, Techniker).
-
-Im Emerald-Build haben die Rüpel 8–18 dieselben IDs wie Walter 3–5, die Top Vier und vier Arenaleiter.
-Das Rocket-Versteck ist deshalb nur in FireRed/LeafGreen korrekt.
 
 ### Giovannis Text
 

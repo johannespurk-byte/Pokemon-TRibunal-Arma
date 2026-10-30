@@ -592,6 +592,37 @@ Json parse_required_map_defines(void) {
     return json_data;
 }
 
+// Kanto maps and FRLG layouts that the Emerald build includes as well, e.g. the Rocket Hideout under the Mauville Game Corner
+vector<string> parse_emerald_kanto_list(string key) {
+    string json_err;
+
+    string json_text = read_text_file("tools/mapjson/emerald_kanto_maps.json");
+
+    Json json_data = Json::parse(json_text, json_err);
+    if (json_data == Json())
+        FATAL_ERROR("%s\n", json_err.c_str());
+
+    vector<string> v;
+    for (auto item : json_data[key].array_items())
+        v.push_back(json_to_string(item));
+    return v;
+}
+
+bool is_layout_in_version(Json layout, vector<string> &emerald_kanto_layouts) {
+    string layout_version = json_to_string(layout, "layout_version", true);
+    if (layout_version.empty()) {
+        if (version == "emerald")
+            layout_version = "emerald";
+        else if (version == "firered")
+            layout_version = "frlg";
+    }
+    if (version == "emerald" && layout_version != "emerald")
+        return find(emerald_kanto_layouts.begin(), emerald_kanto_layouts.end(), json_to_string(layout, "id")) != emerald_kanto_layouts.end();
+    if (version == "firered" && layout_version != "frlg")
+        return false;
+    return true;
+}
+
 string generate_map_constants_text(string groups_filepath, Json groups_data, vector<string> &valid_map_ids) {
     string file_dir = file_parent(groups_filepath) + sep;
 
@@ -722,6 +753,7 @@ void process_groups(string groups_filepath, vector<string> &map_filepaths, strin
     Json groups_data = Json::parse(read_text_file(groups_filepath), err);
     vector<string> invalid_maps;
     vector<string> valid_map_ids;
+    vector<string> emerald_kanto_maps = parse_emerald_kanto_list("maps");
 
     for (const string &filepath : map_filepaths) {
         string err;
@@ -740,7 +772,9 @@ void process_groups(string groups_filepath, vector<string> &map_filepaths, strin
         }
         string map_name = json_to_string(map_data, "name");
 
-        if ((version == "emerald" && region != "REGION_HOENN")
+        bool shared_with_emerald = find(emerald_kanto_maps.begin(), emerald_kanto_maps.end(), map_name) != emerald_kanto_maps.end();
+
+        if ((version == "emerald" && region != "REGION_HOENN" && !shared_with_emerald)
          || (version == "firered" && region != "REGION_KANTO")) {
             invalid_maps.push_back(map_name);
         }
@@ -768,21 +802,15 @@ string generate_layout_headers_text(Json layouts_data) {
 
     text << get_generated_warning("data/layouts/layouts.json", true);
 
+    vector<string> emerald_kanto_layouts = parse_emerald_kanto_list("layouts");
+
     for (auto &layout : layouts_data["layouts"].array_items()) {
         if (layout == Json::object()) continue;
         if (!std::filesystem::exists(json_to_string(layout, "border_filepath")))
             continue;
-        string layout_version = json_to_string(layout, "layout_version", true);
-
-        if (layout_version.empty()) {
-            if (version == "emerald")
-                layout_version = "emerald";
-            else if (version == "firered")
-                layout_version = "frlg";
-        }
-        if ((version == "emerald" && layout_version != "emerald")
-         || (version == "firered" && layout_version != "frlg"))
+        if (!is_layout_in_version(layout, emerald_kanto_layouts))
             continue;
+        string layout_version = json_to_string(layout, "layout_version", true);
         string layoutName = json_to_string(layout, "name");
         string border_label = layoutName + "_Border";
         string blockdata_label = layoutName + "_Blockdata";
@@ -828,17 +856,12 @@ string generate_layouts_table_text(Json layouts_data) {
     text << "\t.align 2\n"
          << json_to_string(layouts_data, "layouts_table_label") << "::\n";
 
+    vector<string> emerald_kanto_layouts = parse_emerald_kanto_list("layouts");
+
     for (auto &layout : layouts_data["layouts"].array_items()) {
         if (!std::filesystem::exists(json_to_string(layout, "border_filepath")))
             continue;
-        string layout_version = json_to_string(layout, "layout_version", true);
-        if (layout_version.empty()) {
-            if (version == "emerald")
-                layout_version = "emerald";
-            else if (version == "firered")
-                layout_version = "frlg";
-        }
-        if ((version == "emerald" && layout_version != "emerald") || (version == "firered" && layout_version != "frlg")) {
+        if (!is_layout_in_version(layout, emerald_kanto_layouts)) {
             text << "\t.4byte NULL\n";
         } else {
             string layout_name = json_to_string(layout, "name", true);

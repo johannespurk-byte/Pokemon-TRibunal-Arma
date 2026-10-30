@@ -1635,8 +1635,7 @@ const u16 gTilesetPalettes_UnionRoom[][16] =
 
 const u32 gTilesetTiles_UnionRoom[] = INCGFX_U32("data/tilesets/secondary/union_room/tiles.png", ".4bpp.fastSmol");
 
-#if IS_FRLG
-
+// Also built for Emerald: the Rocket Hideout under the Mauville Game Corner uses these FRLG tilesets
 const u32 gTilesetTiles_Building_Frlg[] = INCGFX_U32("data/tilesets/primary/building_frlg/tiles.png", ".4bpp.smol");
 
 const u16 gTilesetPalettes_Building_Frlg[][16] =
@@ -1658,6 +1657,32 @@ const u16 gTilesetPalettes_Building_Frlg[][16] =
     INCGFX_U16("data/tilesets/primary/building_frlg/palettes/14.pal", ".gbapal"),
     INCGFX_U16("data/tilesets/primary/building_frlg/palettes/15.pal", ".gbapal"),
 };
+
+// Shared by SilphCo
+const u32 gTilesetTiles_Condominiums[] = INCGFX_U32("data/tilesets/secondary/condominiums_frlg/tiles.png", ".4bpp.fastSmol");
+
+// Shared by SilphCo
+const u16 gTilesetPalettes_Condominiums[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/15.pal", ".gbapal"),
+};
+
+#if IS_FRLG
 
 const u16 gTilesetPalettes_GenericBuilding1[][16] =
 {
@@ -2559,30 +2584,6 @@ const u16 gTilesetPalettes_SeaCottage[][16] =
     INCGFX_U16("data/tilesets/secondary/sea_cottage_frlg/palettes/13.pal", ".gbapal"),
     INCGFX_U16("data/tilesets/secondary/sea_cottage_frlg/palettes/14.pal", ".gbapal"),
     INCGFX_U16("data/tilesets/secondary/sea_cottage_frlg/palettes/15.pal", ".gbapal"),
-};
-
-// Shared by SilphCo
-const u32 gTilesetTiles_Condominiums[] = INCGFX_U32("data/tilesets/secondary/condominiums_frlg/tiles.png", ".4bpp.fastSmol");
-
-// Shared by SilphCo
-const u16 gTilesetPalettes_Condominiums[][16] =
-{
-    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/00.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/01.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/02.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/03.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/04.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/05.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/06.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/07.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/08.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/09.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/10.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/11.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/12.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/13.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/14.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/condominiums_frlg/palettes/15.pal", ".gbapal"),
 };
 
 const u32 gTilesetTiles_UndergroundPath[] = INCGFX_U32("data/tilesets/secondary/underground_path_frlg/tiles.png", ".4bpp.fastSmol");

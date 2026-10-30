@@ -49,7 +49,7 @@
 
 const struct LevelScalingConfig gTrainerLevelScalingRules[TRAINERS_COUNT] =
 {
-#if IS_FRLG
+    // In Emerald these names point at the hideout under the Mauville Game Corner (constants/opponents.h)
     [TRAINER_TEAM_ROCKET_GRUNT_8]  = ROCKET_HIDEOUT_SCALING,
     [TRAINER_TEAM_ROCKET_GRUNT_9]  = ROCKET_HIDEOUT_SCALING,
     [TRAINER_TEAM_ROCKET_GRUNT_10] = ROCKET_HIDEOUT_SCALING,
@@ -62,5 +62,4 @@ const struct LevelScalingConfig gTrainerLevelScalingRules[TRAINERS_COUNT] =
     [TRAINER_TEAM_ROCKET_GRUNT_17] = ROCKET_HIDEOUT_SCALING,
     [TRAINER_TEAM_ROCKET_GRUNT_18] = ROCKET_HIDEOUT_SCALING,
     [TRAINER_BOSS_GIOVANNI]        = ROCKET_HIDEOUT_SCALING,
-#endif
 };

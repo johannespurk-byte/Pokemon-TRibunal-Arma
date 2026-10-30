@@ -21872,3 +21872,927 @@ Jolly Nature
 - Multi-Attack  
 - Fire Punch  
 - Zen Headbutt  
+
+=== TRAINER_ROCKET_HIDEOUT_GIOVANNI ===
+Name: GIOVANNI
+Class: Boss Frlg
+Pic: Leader Giovanni Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Dugtrio @ Focus Sash
+Level: 60
+Ability: Arena Trap
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Earthquake
+- Sucker Punch
+- Stone Edge
+- Memento
+
+Persian @ Life Orb
+Level: 60
+Ability: Technician
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Fake Out
+- Knock Off
+- U-turn
+- Play Rough
+
+Nidoqueen @ Leftovers
+Level: 60
+Ability: Sheer Force
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+Tera Type: Fairy
+- Earth Power
+- Sludge Wave
+- Ice Beam
+- Toxic Spikes
+
+Nidoking @ Groundium Z
+Level: 60
+Ability: Sheer Force
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Earth Power
+- Sludge Wave
+- Ice Beam
+- Thunderbolt
+
+Rhyperior @ Weakness Policy
+Level: 60
+Ability: Solid Rock
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Dynamax Level: 10
+- Earthquake
+- Stone Edge
+- Megahorn
+- Ice Punch
+
+Steelix @ Steelixite
+Level: 60
+Ability: Sturdy
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Heavy Slam
+- Earthquake
+- Stealth Rock
+- Roar
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_8 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Weezing-Galar @ Black Sludge
+Level: 60
+Ability: Neutralizing Gas
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Toxic Spikes
+- Will-O-Wisp
+- Strange Steam
+- Pain Split
+
+Crobat @ Life Orb
+Level: 60
+Ability: Inner Focus
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+Dynamax Level: 10
+- Brave Bird
+- Cross Poison
+- U-turn
+- Taunt
+
+Muk-Alola @ Darkinium Z
+Level: 60
+Ability: Poison Touch
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Knock Off
+- Poison Jab
+- Shadow Sneak
+- Curse
+
+Arbok @ Leftovers
+Level: 60
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+Tera Type: Ground
+- Gunk Shot
+- Earthquake
+- Sucker Punch
+- Glare
+
+Toxicroak @ Rocky Helmet
+Level: 60
+Ability: Dry Skin
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Drain Punch
+- Gunk Shot
+- Sucker Punch
+- Swords Dance
+
+Beedrill @ Beedrillite
+Level: 60
+Ability: Sniper
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Poison Jab
+- U-turn
+- Drill Run
+- Knock Off
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_9 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Liepard @ Focus Sash
+Level: 60
+Ability: Prankster
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 Spe
+Jolly Nature
+- Fake Out
+- Foul Play
+- Thunder Wave
+- Encore
+
+Raticate-Alola @ Normalium Z
+Level: 60
+Ability: Hustle
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Hyper Fang
+- Sucker Punch
+- Knock Off
+- Swords Dance
+
+Thievul @ Sitrus Berry
+Level: 60
+Ability: Stakeout
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+Dynamax Level: 10
+- Dark Pulse
+- Snarl
+- Grass Knot
+- Nasty Plot
+
+Persian-Alola @ Life Orb
+Level: 60
+Ability: Fur Coat
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+Tera Type: Dark
+- Nasty Plot
+- Dark Pulse
+- Thunderbolt
+- Parting Shot
+
+Weavile @ Choice Band
+Level: 60
+Ability: Pressure
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Knock Off
+- Ice Shard
+- Triple Axel
+- Low Kick
+
+Kangaskhan @ Kangaskhanite
+Level: 60
+Ability: Scrappy
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Fake Out
+- Double-Edge
+- Sucker Punch
+- Power-Up Punch
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_10 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Weezing @ Rocky Helmet
+Level: 60
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Will-O-Wisp
+- Sludge Bomb
+- Pain Split
+- Toxic Spikes
+
+Garbodor @ Black Sludge
+Level: 60
+Ability: Aftermath
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Gigantamax: Yes
+- Gunk Shot
+- Drain Punch
+- Seed Bomb
+- Toxic Spikes
+
+Toxapex @ Black Sludge
+Level: 60
+Ability: Regenerator
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+Tera Type: Steel
+- Toxic
+- Recover
+- Baneful Bunker
+- Scald
+
+Swalot @ Poisonium Z
+Level: 60
+Ability: Sticky Hold
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+- Sludge Bomb
+- Yawn
+- Encore
+- Pain Split
+
+Muk @ Leftovers
+Level: 60
+Ability: Poison Touch
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Gunk Shot
+- Knock Off
+- Drain Punch
+- Shadow Sneak
+
+Sableye @ Sablenite
+Level: 60
+Ability: Prankster
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Will-O-Wisp
+- Recover
+- Foul Play
+- Knock Off
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_11 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Zoroark @ Darkinium Z
+Level: 60
+Ability: Illusion
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Night Daze
+- Flamethrower
+- Sludge Bomb
+- Nasty Plot
+
+Spiritomb @ Leftovers
+Level: 60
+Ability: Infiltrator
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+Tera Type: Fairy
+- Foul Play
+- Will-O-Wisp
+- Pain Split
+- Sucker Punch
+
+Mimikyu @ Life Orb
+Level: 60
+Ability: Disguise
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+Dynamax Level: 10
+- Play Rough
+- Shadow Claw
+- Shadow Sneak
+- Swords Dance
+
+Raticate @ Flame Orb
+Level: 60
+Ability: Guts
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Facade
+- Sucker Punch
+- U-turn
+- Crunch
+
+Honchkrow @ Scope Lens
+Level: 60
+Ability: Super Luck
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Brave Bird
+- Sucker Punch
+- Night Slash
+- Superpower
+
+Mawile @ Mawilite
+Level: 60
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Play Rough
+- Iron Head
+- Sucker Punch
+- Swords Dance
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_12 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Scrafty @ Leftovers
+Level: 60
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+- Fake Out
+- Drain Punch
+- Knock Off
+- Bulk Up
+
+Hypno @ Leftovers
+Level: 60
+Ability: Insomnia
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+Tera Type: Psychic
+- Hypnosis
+- Dream Eater
+- Psychic
+- Nasty Plot
+
+Drapion @ Life Orb
+Level: 60
+Ability: Sniper
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+Dynamax Level: 10
+- Knock Off
+- Poison Jab
+- Earthquake
+- Swords Dance
+
+Skuntank @ Poisonium Z
+Level: 60
+Ability: Aftermath
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Gunk Shot
+- Sucker Punch
+- Fire Blast
+- Taunt
+
+Salazzle @ Focus Sash
+Level: 60
+Ability: Corrosion
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Toxic
+- Flamethrower
+- Sludge Bomb
+- Nasty Plot
+
+Houndoom @ Houndoominite
+Level: 60
+Ability: Flash Fire
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Nasty Plot
+- Dark Pulse
+- Fire Blast
+- Sludge Bomb
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_13 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Golbat @ Eviolite
+Level: 60
+Ability: Infiltrator
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Super Fang
+- Toxic
+- Roost
+- U-turn
+
+Tentacruel @ Waterium Z
+Level: 60
+Ability: Clear Body
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Hydro Pump
+- Sludge Bomb
+- Toxic Spikes
+- Rapid Spin
+
+Crawdaunt @ Life Orb
+Level: 60
+Ability: Adaptability
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+Dynamax Level: 10
+- Crabhammer
+- Knock Off
+- Aqua Jet
+- Swords Dance
+
+Malamar @ Leftovers
+Level: 60
+Ability: Contrary
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Tera Type: Fighting
+- Superpower
+- Knock Off
+- Psycho Cut
+- Rest
+
+Dusknoir @ Rocky Helmet
+Level: 60
+Ability: Pressure
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Shadow Sneak
+- Will-O-Wisp
+- Pain Split
+- Earthquake
+
+Sharpedo @ Sharpedonite
+Level: 60
+Ability: Speed Boost
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Crunch
+- Waterfall
+- Psychic Fangs
+- Protect
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_14 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Mr. Mime @ Light Clay
+Level: 60
+Ability: Filter
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 SpA / 252 Spe
+Timid Nature
+- Reflect
+- Light Screen
+- Psychic
+- Encore
+
+Gothitelle @ Leftovers
+Level: 60
+Ability: Shadow Tag
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+Tera Type: Fairy
+- Psychic
+- Thunder Wave
+- Calm Mind
+- Taunt
+
+Bronzong @ Leftovers
+Level: 60
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Def
+Relaxed Nature
+Dynamax Level: 10
+- Gyro Ball
+- Earthquake
+- Stealth Rock
+- Hypnosis
+
+Jynx @ Icium Z
+Level: 60
+Ability: Dry Skin
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Ice Beam
+- Psychic
+- Lovely Kiss
+- Nasty Plot
+
+Bisharp @ Life Orb
+Level: 60
+Ability: Defiant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Sucker Punch
+- Iron Head
+- Knock Off
+- Swords Dance
+
+Alakazam @ Alakazite
+Level: 60
+Ability: Magic Guard
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Psychic
+- Shadow Ball
+- Focus Blast
+- Encore
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_15 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Hitmontop @ Leftovers
+Level: 60
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Def
+Impish Nature
+Tera Type: Ghost
+- Fake Out
+- Close Combat
+- Sucker Punch
+- Rapid Spin
+
+Machamp @ Life Orb
+Level: 60
+Ability: No Guard
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Gigantamax: Yes
+- Dynamic Punch
+- Knock Off
+- Stone Edge
+- Bullet Punch
+
+Conkeldurr @ Fightinium Z
+Level: 60
+Ability: Iron Fist
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Drain Punch
+- Mach Punch
+- Knock Off
+- Ice Punch
+
+Hariyama @ Flame Orb
+Level: 60
+Ability: Guts
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Close Combat
+- Knock Off
+- Fake Out
+- Bullet Punch
+
+Lucario @ Focus Sash
+Level: 60
+Ability: Inner Focus
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Close Combat
+- Extreme Speed
+- Crunch
+- Swords Dance
+
+Medicham @ Medichamite
+Level: 60
+Ability: Pure Power
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- High Jump Kick
+- Zen Headbutt
+- Ice Punch
+- Bullet Punch
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_16 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Hippowdon @ Leftovers
+Level: 60
+Ability: Sand Stream
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+Tera Type: Water
+- Earthquake
+- Slack Off
+- Stealth Rock
+- Whirlwind
+
+Sandslash @ Leftovers
+Level: 60
+Ability: Sand Rush
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+Dynamax Level: 10
+- Earthquake
+- Knock Off
+- Stone Edge
+- Rapid Spin
+
+Excadrill @ Groundium Z
+Level: 60
+Ability: Sand Rush
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Earthquake
+- Iron Head
+- Rock Slide
+- Swords Dance
+
+Gliscor @ Toxic Orb
+Level: 60
+Ability: Poison Heal
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Earthquake
+- Toxic
+- Protect
+- Knock Off
+
+Krookodile @ Choice Scarf
+Level: 60
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Earthquake
+- Knock Off
+- Stone Edge
+- Gunk Shot
+
+Banette @ Banettite
+Level: 60
+Ability: Cursed Body
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Will-O-Wisp
+- Shadow Claw
+- Knock Off
+- Destiny Bond
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_17 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Aerodactyl @ Life Orb
+Level: 60
+Ability: Unnerve
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+Dynamax Level: 10
+- Rock Slide
+- Dual Wingbeat
+- Earthquake
+- Crunch
+
+Seviper @ Black Sludge
+Level: 60
+Ability: Infiltrator
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Glare
+- Poison Jab
+- Crunch
+- Earthquake
+
+Nidoking @ Life Orb
+Level: 60
+Ability: Sheer Force
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+Tera Type: Ground
+- Earth Power
+- Sludge Wave
+- Ice Beam
+- Flamethrower
+
+Tyranitar @ Rockium Z
+Level: 60
+Ability: Sand Stream
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Stone Edge
+- Crunch
+- Earthquake
+- Dragon Dance
+
+Kingambit @ Black Glasses
+Level: 60
+Ability: Supreme Overlord
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Kowtow Cleave
+- Sucker Punch
+- Iron Head
+- Swords Dance
+
+Gyarados @ Gyaradosite
+Level: 60
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Waterfall
+- Crunch
+- Ice Fang
+- Dragon Dance
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_18 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Grimmsnarl @ Light Clay
+Level: 60
+Ability: Prankster
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+- Reflect
+- Light Screen
+- Spirit Break
+- Thunder Wave
+
+Porygon2 @ Eviolite
+Level: 60
+Ability: Download
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+Tera Type: Ghost
+- Tri Attack
+- Ice Beam
+- Recover
+- Thunder Wave
+
+Toxtricity @ Throat Spray
+Level: 60
+Ability: Punk Rock
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Modest Nature
+Gigantamax: Yes
+- Overdrive
+- Boomburst
+- Sludge Bomb
+- Volt Switch
+
+Snorlax @ Snorlium Z
+Level: 60
+Ability: Thick Fat
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Giga Impact
+- Body Slam
+- Earthquake
+- Curse
+
+Scizor @ Choice Band
+Level: 60
+Ability: Technician
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Bullet Punch
+- U-turn
+- Knock Off
+- Superpower
+
+Gengar @ Gengarite
+Level: 60
+Ability: Cursed Body
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Hypnosis
+- Shadow Ball
+- Sludge Bomb
+- Destiny Bond
