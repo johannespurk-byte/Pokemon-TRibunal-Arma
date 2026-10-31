@@ -5951,41 +5951,63 @@ Class: Leader
 Pic: Leader Wattson
 Gender: Male
 Music: Male
-Items: Super Potion / Super Potion
 Double Battle: No
-AI: Basic Trainer
+Mugshot: Purple
+AI: Smart Trainer / Prediction / Ace Pokemon
 
-Voltorb
-Level: 20
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Rollout
-- Spark
-- Self Destruct
-- Shock Wave
+Electrode @ Light Clay
+Ability: Aftermath
+EVs: 252 HP / 4 SpA / 252 Spe
+Timid Nature
+- Light Screen
+- Reflect
+- Volt Switch
+- Explosion
 
-Electrike
-Level: 20
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Shock Wave
-- Leer
-- Quick Attack
-- Howl
+Lanturn @ Leftovers
+Ability: Volt Absorb
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+- Scald
+- Thunderbolt
+- Ice Beam
+- Heal Bell
 
-Magneton
-Level: 22
-IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
-- Supersonic
-- Shock Wave
-- Thunder Wave
-- Sonic Boom
+Eelektross @ Assault Vest
+Ability: Levitate
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+- Thunderbolt
+- Flamethrower
+- Giga Drain
+- Knock Off
 
-Manectric @ Sitrus Berry
-Level: 24
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Quick Attack
-- Thunder Wave
-- Shock Wave
-- Howl
+Rotom-Heat @ Choice Scarf
+Ability: Levitate
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Overheat
+- Thunderbolt
+- Volt Switch
+- Trick
+
+Luxray @ Choice Band
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Wild Charge
+- Crunch
+- Ice Fang
+- Play Rough
+
+Manectric @ Manectite
+Ability: Lightning Rod
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunderbolt
+- Flamethrower
+- Volt Switch
+- Snarl
 
 === TRAINER_FLANNERY_1 ===
 Name: FLANNERY
@@ -23002,3 +23024,70 @@ Timid Nature
 - Shadow Ball
 - Sludge Bomb
 - Destiny Bond
+
+=== TRAINER_LORELEI_MAUVILLE ===
+Name: LORELEI
+Class: Elite Four Frlg
+Pic: Elite Four Lorelei Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+Mugshot: Purple
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Ninetales-Alola @ Light Clay
+Ability: Snow Warning
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Aurora Veil
+- Blizzard
+- Moonblast
+- Freeze-Dry
+
+Abomasnow @ Assault Vest
+Ability: Snow Warning
+EVs: 252 HP / 252 Atk / 4 SpA
+Brave Nature
+- Wood Hammer
+- Ice Shard
+- Earthquake
+- Blizzard
+
+Cloyster @ Focus Sash
+Ability: Skill Link
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Shell Smash
+- Icicle Spear
+- Rock Blast
+- Ice Shard
+
+Mamoswine @ Life Orb
+Ability: Thick Fat
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Icicle Crash
+- Earthquake
+- Ice Shard
+- Knock Off
+
+Weavile @ Choice Band
+Ability: Pressure
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Triple Axel
+- Knock Off
+- Ice Shard
+- Low Kick
+
+Lapras @ Leftovers
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+Dynamax Level: 10
+Gigantamax: Yes
+- Freeze-Dry
+- Hydro Pump
+- Thunderbolt
+- Perish Song
+

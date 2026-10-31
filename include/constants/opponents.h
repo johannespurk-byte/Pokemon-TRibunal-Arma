@@ -888,6 +888,7 @@
 #define TRAINER_ROCKET_HIDEOUT_GRUNT_16       881
 #define TRAINER_ROCKET_HIDEOUT_GRUNT_17       882
 #define TRAINER_ROCKET_HIDEOUT_GRUNT_18       883
+#define TRAINER_LORELEI_MAUVILLE              884
 #
 #if !IS_FRLG
 // The Rocket Hideout under the Mauville Game Corner shares its scripts with FRLG,
