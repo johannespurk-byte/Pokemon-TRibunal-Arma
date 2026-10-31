@@ -3863,22 +3863,52 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Electrike
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Quick Attack
-- Thunder Wave
-- Spark
-- Leer
+Rotom-Wash @ Leftovers
+Ability: Levitate
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+- Hydro Pump
+- Volt Switch
+- Will-O-Wisp
+- Pain Split
 
-Voltorb
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Charge
-- Shock Wave
-- Screech
+Jolteon @ Life Orb
+Ability: Volt Absorb
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunderbolt
+- Shadow Ball
+- Hyper Voice
+- Volt Switch
+
+Toxtricity @ Throat Spray
+Ability: Punk Rock
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Overdrive
+- Boomburst
+- Sludge Bomb
+- Volt Switch
+
+Electivire @ Expert Belt
+Ability: Motor Drive
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Wild Charge
+- Ice Punch
+- Cross Chop
+- Earthquake
+
+Raichu-Alola @ Focus Sash
+Ability: Surge Surfer
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunderbolt
+- Psychic
+- Focus Blast
+- Nasty Plot
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_7 ===
 Name: GRUNT
@@ -3917,15 +3947,52 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Voltorb
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Magnezone @ Choice Specs
+Ability: Magnet Pull
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Tri Attack
 
-Magnemite
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Electrode-Hisui @ Life Orb
+Ability: Static
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Leaf Storm
+- Thunderbolt
+- Volt Switch
+- Taunt
+
+Heliolisk @ Choice Scarf
+Ability: Dry Skin
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunderbolt
+- Hyper Voice
+- Grass Knot
+- Volt Switch
+
+Ampharos @ Assault Vest
+Ability: Static
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+- Thunderbolt
+- Dragon Pulse
+- Focus Blast
+- Volt Switch
+
+Galvantula @ Focus Sash
+Ability: Compound Eyes
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunder
+- Bug Buzz
+- Energy Ball
+- Sticky Web
 
 === TRAINER_FERNANDO_1 ===
 Name: FERNANDO
@@ -7261,23 +7328,52 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Zigzagoon
-Level: 17
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-- Headbutt
-- Sand Attack
-- Growl
+Kilowattrel @ Leftovers
+Ability: Volt Absorb
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
 - Thunderbolt
+- Hurricane
+- Volt Switch
+- Roost
 
-Gulpin
-Level: 17
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-- Amnesia
-- Sludge
-- Yawn
-- Pound
+Bellibolt @ Leftovers
+Ability: Electromorphosis
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Discharge
+- Muddy Water
+- Slack Off
+- Toxic
+
+Boltund @ Choice Band
+Ability: Strong Jaw
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Psychic Fangs
+- Fire Fang
+- Thunder Fang
+- Play Rough
+
+Zebstrika @ Life Orb
+Ability: Sap Sipper
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Wild Charge
+- Flare Blitz
+- High Horsepower
+- Volt Switch
+
+Pikachu @ Light Ball
+Ability: Lightning Rod
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Volt Tackle
+- Iron Tail
+- Knock Off
+- Quick Attack
 
 === TRAINER_QUINCY ===
 Name: QUINCY
@@ -15087,23 +15183,52 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Meditite
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Bide
-- Detect
-- Confusion
+Medicham @ Choice Band
+Ability: Pure Power
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- High Jump Kick
+- Zen Headbutt
 - Thunder Punch
+- Ice Punch
 
-Meditite
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Pawmot @ Life Orb
+Ability: Iron Fist
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Double Shock
+- Close Combat
+- Mach Punch
+- Ice Punch
+
+Hitmonchan @ Assault Vest
+Ability: Iron Fist
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Drain Punch
 - Thunder Punch
-- Detect
-- Confusion
-- Meditate
+- Ice Punch
+- Mach Punch
+
+Hawlucha @ Sitrus Berry
+Ability: Unburden
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Close Combat
+- Acrobatics
+- Encore
+
+Lucario @ Life Orb
+Ability: Inner Focus
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Swords Dance
+- Close Combat
+- Meteor Mash
+- Extreme Speed
 
 === TRAINER_DANIELLE ===
 Name: DANIELLE
@@ -15242,11 +15367,61 @@ Pic: Wally
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction / Ace Pokemon
 
-Ralts
-Level: 16
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Altaria @ Leftovers
+Ability: Natural Cure
+EVs: 252 HP / 252 Atk / 4 Spe
+Adamant Nature
+- Dragon Dance
+- Dragon Claw
+- Earthquake
+- Roost
+
+Roserade @ Focus Sash
+Ability: Technician
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Sludge Bomb
+- Leaf Storm
+- Shadow Ball
+- Spikes
+
+Magnezone @ Assault Vest
+Ability: Analytic
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Body Press
+
+Delcatty @ Choice Scarf
+Ability: Wonder Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Double-Edge
+- Sucker Punch
+- Play Rough
+- U-turn
+
+Gallade @ Life Orb
+Ability: Sharpness
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Psycho Cut
+- Sacred Sword
+- Leaf Blade
+- Night Slash
+
+Gardevoir @ Gardevoirite
+Ability: Trace
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Hyper Voice
+- Psyshock
+- Focus Blast
+- Calm Mind
 
 === TRAINER_WALLY_VR_2 ===
 Name: WALLY
@@ -19493,21 +19668,52 @@ Pic: Bug Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction
 
-Illumise
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Shock Wave
-- Quick Attack
-- Charm
+Volbeat @ Damp Rock
+Ability: Prankster
+EVs: 252 HP / 4 Def / 252 SpD
+Calm Nature
+- Rain Dance
+- Encore
+- Thunder Wave
+- U-turn
 
-Volbeat
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Shock Wave
-- Quick Attack
-- Confuse Ray
+Illumise @ Mental Herb
+Ability: Prankster
+EVs: 252 HP / 4 Def / 252 SpD
+Calm Nature
+- Encore
+- Thunder Wave
+- Bug Buzz
+- Moonlight
+
+Vikavolt @ Choice Specs
+Ability: Levitate
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Thunderbolt
+- Bug Buzz
+- Energy Ball
+- Volt Switch
+
+Scizor @ Choice Band
+Ability: Technician
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Bullet Punch
+- U-turn
+- Knock Off
+- Superpower
+
+Volcarona @ Heavy-Duty Boots
+Ability: Flame Body
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Quiver Dance
+- Fiery Dance
+- Bug Buzz
+- Giga Drain
 
 === TRAINER_DARIUS ===
 Name: DARIUS
