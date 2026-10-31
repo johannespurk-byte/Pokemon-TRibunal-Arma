@@ -258,7 +258,8 @@ RustboroCity_DevonCorp_2F_EventScript_MatchCallScientist::
 	lock
 	faceplayer
 	call_if_eq VAR_FOSSIL_RESURRECTION_STATE, 1, RustboroCity_DevonCorp_2F_EventScript_SetFossilReady
-	goto_if_set FLAG_RECEIVED_REPEL_TOOL, RustboroCity_DevonCorp_2F_EventScript_WorkOnNext
+	checkitem ITEM_REPEL_TOOL
+	goto_if_eq VAR_RESULT, TRUE, RustboroCity_DevonCorp_2F_EventScript_WorkOnNext
 	@ The Auto-Schutz is the thank-you for recovering the Devon Goods
 	goto_if_ge VAR_RUSTBORO_CITY_STATE, 6, RustboroCity_DevonCorp_2F_EventScript_GiveAutoRepel
 	msgbox RustboroCity_DevonCorp_2F_Text_DevelopNewPokenavFeature, MSGBOX_DEFAULT
@@ -269,7 +270,6 @@ RustboroCity_DevonCorp_2F_EventScript_GiveAutoRepel::
 	msgbox RustboroCity_DevonCorp_2F_Text_SharePrototype, MSGBOX_DEFAULT
 	giveitem ITEM_REPEL_TOOL, 1
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_REPEL_TOOL
 	msgbox RustboroCity_DevonCorp_2F_Text_ExplainPrototype, MSGBOX_DEFAULT
 	release
 	end

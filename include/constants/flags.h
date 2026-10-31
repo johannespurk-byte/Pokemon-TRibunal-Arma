@@ -669,7 +669,7 @@
 #define FLAG_HIDDEN_ITEM_Magmacamp_Camerupnite               (FLAG_HIDDEN_ITEMS_START + 0x70)
 #define FLAG_HIDDEN_ITEM_ROUTE_102_Water_Gem                  (FLAG_HIDDEN_ITEMS_START + 0x71)
 
-#define FLAG_RECEIVED_REPEL_TOOL  0x265 // Auto-Schutz from the Devon Corp 2F scientist
+#define FLAG_UNUSED_0x265  0x265 // Taken: same id as FLAG_HIDDEN_ITEM_ROUTE_102_Water_Gem
 #define FLAG_UNUSED_0x266  0x266 // Unused Flag
 #define FLAG_UNUSED_0x267  0x267 // Unused Flag
 #define FLAG_UNUSED_0x268  0x268 // Unused Flag

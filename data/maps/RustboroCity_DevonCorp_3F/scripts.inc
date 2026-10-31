@@ -5,8 +5,15 @@ RustboroCity_DevonCorp_3F_MapScripts::
 	.byte 0
 
 RustboroCity_DevonCorp_3F_OnTransition:
+	call_if_unset FLAG_RECEIVED_POKENAV, RustboroCity_DevonCorp_3F_EventScript_RepairState
 	call_if_eq VAR_DEVON_CORP_3F_STATE, 0, RustboroCity_DevonCorp_3F_EventScript_SetEmployeePos
 	end
+
+@ Pokémon Center heals used to overwrite this var with 10, which skipped
+@ Mr. Stone's scene (Letter, PokéNav, Briney's return) in older saves
+RustboroCity_DevonCorp_3F_EventScript_RepairState::
+	setvar VAR_DEVON_CORP_3F_STATE, 0
+	return
 
 RustboroCity_DevonCorp_3F_EventScript_SetEmployeePos::
 	setobjectxyperm LOCALID_DEVON_CORP_3F_EMPLOYEE, 3, 2
@@ -21,12 +28,25 @@ RustboroCity_DevonCorp_3F_EventScript_PlayerFaceEast::
 	turnobject LOCALID_PLAYER, DIR_EAST
 	end
 
+RustboroCity_DevonCorp_3F_EventScript_StepOffStairs::
+	applymovement LOCALID_PLAYER, RustboroCity_DevonCorp_3F_Movement_StepOffStairs
+	waitmovement 0
+	return
+
+RustboroCity_DevonCorp_3F_Movement_StepOffStairs:
+	walk_down
+	walk_in_place_faster_right
+	step_end
+
 RustboroCity_DevonCorp_3F_OnFrame:
 	map_script_2 VAR_DEVON_CORP_3F_STATE, 0, RustboroCity_DevonCorp_3F_EventScript_MeetPresident
 	.2byte 0
 
 RustboroCity_DevonCorp_3F_EventScript_MeetPresident::
 	lockall
+	@ The scene's paths start at 2,2, where returning the goods warps you; coming up the stairs lands on 2,1
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	call_if_eq VAR_TEMP_1, 1, RustboroCity_DevonCorp_3F_EventScript_StepOffStairs
 	msgbox RustboroCity_DevonCorp_3F_Text_ThisIs3rdFloorWaitHere, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_DEVON_CORP_3F_EMPLOYEE, RustboroCity_DevonCorp_3F_Movement_EmployeeWalkOffscreen

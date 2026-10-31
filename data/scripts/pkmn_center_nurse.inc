@@ -3,7 +3,9 @@ Common_EventScript_PkmnCenterNurse::
 	lock
 	faceplayer
 	@ === modular POKÉVIAL AUTOMATIC GIFT START ===
-	goto_if_unset 0x264, EventScript_PkmnCenterNurse_GiveVial
+	@ Checks the bag rather than a flag: 0x264 is FLAG_HIDDEN_ITEM_Magmacamp_Camerupnite
+	checkitem ITEM_POKE_VIAL
+	goto_if_eq VAR_RESULT, FALSE, EventScript_PkmnCenterNurse_GiveVial
 	@ === POKÉVIAL AUTOMATIC GIFT ENDE ===
 	setvar VAR_0x8004, 0
 .if !IS_FRLG
@@ -55,10 +57,6 @@ EventScript_PkmnCenterNurse_TakeAndHealPkmn::
 @ === modular POKÉVIAL AUTOMATIC RECHARGE START ===
 setvar VAR_UNUSED_0x40F7, 5 @ Setzt die echte Variable beim Heilen auf 5!
 @ === POKÉVIAL AUTOMATIC RECHARGE ENDE ===
-
-@ === modular AUTO-SCHUTZ RECHARGE START ===
-setvar 0x408F, 10           @ 🌟 HARDWARE-FIX: Lädt das Auto-Schutz-Gerät typesafe auf 10 Ladungen auf!
-@ === AUTO-SCHUTZ RECHARGE ENDE ===
 	callnative UpdateFollowingPokemon
 	return
 
@@ -151,9 +149,7 @@ Movement_PkmnCenterNurse_Turn:
 EventScript_PkmnCenterNurse_GiveVial:
 	msgbox Text_NurseGivesVialText, MSGBOX_DEFAULT
 	giveitem ITEM_POKE_VIAL, 1
-	setflag 0x264
 	setvar VAR_UNUSED_0x40F7, 5
-	setvar 0x408F, 10           @ 🌟 INITIAL-LADUNG: Schützt die neue Variablen-ID ab Start!
 	closemessage
 	goto Common_EventScript_PkmnCenterNurse
 
