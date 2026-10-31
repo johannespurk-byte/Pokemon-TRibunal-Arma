@@ -11,7 +11,7 @@ Magmacamp_Grunt_2_Alpha::
 	end
 
 @ =========================================================================
-@ TEXTE FÜR GRUNT 1 (GAMMA)
+@ TEXTE FÃœR GRUNT 1 (GAMMA)
 @ =========================================================================
 Magmacamp_Text_GammaIntro:
 	.string "We want to test our new strength again.\n"
@@ -30,7 +30,7 @@ Magmacamp_Text_GammaPostBattle:
 	.string "We need to talk to our admins.!$"
 
 @ =========================================================================
-@ TEXTE FÜR GRUNT 2 (ALPHA)
+@ TEXTE FÃœR GRUNT 2 (ALPHA)
 @ =========================================================================
 Magmacamp_Text_AlphaIntro:
 	.string "We want to test our new strength again.\n"
