@@ -57,6 +57,7 @@
 #include "constants/weather.h"
 #include "fishing.h"
 #include "pokemon.h"
+#include "daycare.h"
 #include "random.h"
 
 
@@ -66,6 +67,34 @@
 
 
 
+// Welche Ei-Meldung noch angezeigt werden muss (0 = keine). Die Meldung darf nicht direkt am
+// Kampfende kommen: dort ist noch der Kampfbildschirm aktiv, und eine Feld-Textbox schreibt nach
+// dem Wechsel aufs Spielfeld in freigegebene Fenster (Absturz z. B. beim Öffnen des Beutels).
+enum
+{
+    TRAINER_EGG_MSG_NONE,
+    TRAINER_EGG_MSG_PARTY,
+    TRAINER_EGG_MSG_PC,
+};
+static EWRAM_DATA u8 sTrainerEggMessage = TRAINER_EGG_MSG_NONE;
+
+// Zeigt die Meldung, sobald das Spielfeld frei ist (kein Skript, Steuerung nicht gesperrt)
+void TryShowTrainerEggMessage(void)
+{
+    if (sTrainerEggMessage == TRAINER_EGG_MSG_NONE
+     || gMain.callback2 != CB2_Overworld
+     || gPaletteFade.active
+     || ScriptContext_IsEnabled()
+     || ArePlayerFieldControlsLocked())
+        return;
+
+    if (sTrainerEggMessage == TRAINER_EGG_MSG_PC)
+        ScriptContext_SetupScript(EventScript_TrainerEggSentToPC);
+    else
+        ScriptContext_SetupScript(EventScript_TrainerEggReceived);
+    sTrainerEggMessage = TRAINER_EGG_MSG_NONE;
+}
+
 bool8 GiveRandomTrainerEgg(void)
 {
     u16 trainerId = TRAINER_BATTLE_PARAM.opponentA;
@@ -74,9 +103,10 @@ bool8 GiveRandomTrainerEgg(void)
     if (trainerId == 0 || trainerId >= TRAINERS_COUNT)
         return FALSE;
 
-    trainerClass = gTrainers[trainerId]->trainerClass;
+    // gTrainers ist nach Schwierigkeit und dann nach Trainer geordnet, daher über die Hilfsfunktion lesen
+    trainerClass = GetTrainerClassFromId(trainerId);
 
-    // Zuverlässiger Filter für alle Boss-Klassen
+    // Arenaleiter, Top Vier, Champs, Rivalen, Bosse und Admins von Magma, Aqua und Rocket geben kein Ei
     if (trainerClass == TRAINER_CLASS_LEADER ||
         trainerClass == TRAINER_CLASS_ELITE_FOUR ||
         trainerClass == TRAINER_CLASS_CHAMPION ||
@@ -85,26 +115,42 @@ bool8 GiveRandomTrainerEgg(void)
         trainerClass == TRAINER_CLASS_MAGMA_LEADER ||
         trainerClass == TRAINER_CLASS_AQUA_ADMIN ||
         trainerClass == TRAINER_CLASS_MAGMA_ADMIN ||
+        trainerClass == TRAINER_CLASS_LEADER_FRLG ||
+        trainerClass == TRAINER_CLASS_ELITE_FOUR_FRLG ||
+        trainerClass == TRAINER_CLASS_CHAMPION_FRLG ||
+        trainerClass == TRAINER_CLASS_RIVAL_EARLY_FRLG ||
+        trainerClass == TRAINER_CLASS_RIVAL_LATE_FRLG ||
+        trainerClass == TRAINER_CLASS_BOSS_FRLG ||
         trainerClass == TRAINER_CLASS_TEAM_ROCKET_FRLG)
     {
         return FALSE;
     }
 
-    if (CalculatePlayerPartyCount() >= PARTY_SIZE)
+#if !IS_FRLG
+    // Arenaleiter mit einer anderen Klasse: Misty (Blütenburg) und Brandon (Faustauhaven)
+    if (trainerId == TRAINER_MISTY || trainerId == TRAINER_BRANDON_DEWFORD)
         return FALSE;
+#endif
 
     u16 randomSpecies;
     u32 attempts = 0;
 
+    // Nur Grundformen der ersten Entwicklungsstufe (keine Megas, Regional- oder Sonderformen),
+    // ohne Legendäre, Mysteriöse, Ultrabestien und Paradox-Pokémon
     while (attempts < 100)
     {
         randomSpecies = (Random() % (NUM_SPECIES - 1)) + 1;
         attempts++;
 
         if (randomSpecies != SPECIES_EGG &&
+            IsSpeciesEnabled(randomSpecies) &&
+            GET_BASE_SPECIES_ID(randomSpecies) == randomSpecies &&
+            GetSpeciesPreEvolution(randomSpecies) == SPECIES_NONE &&
+            !gSpeciesInfo[randomSpecies].isRestrictedLegendary &&
             !gSpeciesInfo[randomSpecies].isSubLegendary &&
             !gSpeciesInfo[randomSpecies].isMythical &&
             !gSpeciesInfo[randomSpecies].isUltraBeast &&
+            !gSpeciesInfo[randomSpecies].isParadox &&
             gSpeciesInfo[randomSpecies].natDexNum != 0)
         {
             break;
@@ -114,18 +160,27 @@ bool8 GiveRandomTrainerEgg(void)
     if (attempts >= 100)
         randomSpecies = SPECIES_PICHU;
 
-    u8 partyIndex = CalculatePlayerPartyCount();
-    struct OriginalTrainerId emptyOtId = { 0 };
+    struct Pokemon egg;
 
-    CreateMon(&gPlayerParty[partyIndex], randomSpecies, 1, 0, emptyOtId);
+    // Wie ein Zucht-Ei: zufälliges Wesen und DVs, Spitzname EI, Ursprungslevel 0
+    CreateEgg(&egg, randomSpecies, FALSE);
 
-    bool8 isEgg = TRUE;
-    SetMonData(&gPlayerParty[partyIndex], MON_DATA_IS_EGG, &isEgg);
-
+    // Schlüpft nach wenigen Schritten statt nach den normalen Ei-Zyklen
     u8 steps = 1;
-    SetMonData(&gPlayerParty[partyIndex], MON_DATA_FRIENDSHIP, &steps);
+    SetMonData(&egg, MON_DATA_FRIENDSHIP, &steps);
 
-    ShowFieldMessage(gText_ReceivedEggFromTrainer);
+    // Ins Team, oder in die Box, wenn das Team voll ist
+    switch (GiveCapturedMonToPlayer(&egg))
+    {
+    case MON_GIVEN_TO_PARTY:
+        sTrainerEggMessage = TRAINER_EGG_MSG_PARTY;
+        break;
+    case MON_GIVEN_TO_PC:
+        sTrainerEggMessage = TRAINER_EGG_MSG_PC;
+        break;
+    default: // Team und alle Boxen voll
+        return FALSE;
+    }
 
     return TRUE;
 }
@@ -535,10 +590,10 @@ static void DoTrainerBattle(void)
     // Überschreibt die Level direkt im globalen Kampf-Array
     for (i = 0; i < PARTY_SIZE; i++)
     {
-        if (GetMonData(&gEnemyParty[i], MON_DATA_SPECIES_OR_EGG) != 0)
+        if (GetMonData(&gParties[B_TRAINER_OPPONENT_A][i], MON_DATA_SPECIES_OR_EGG) != 0)
         {
-            SetMonData(&gEnemyParty[i], MON_DATA_LEVEL, &currentCap);
-            CalculateMonStats(&gEnemyParty[i]);
+            SetMonData(&gParties[B_TRAINER_OPPONENT_A][i], MON_DATA_LEVEL, &currentCap);
+            CalculateMonStats(&gParties[B_TRAINER_OPPONENT_A][i]);
         }
     }
     // === DYNAMISCHES LEVEL-SCALING ENDE ===
@@ -2270,3 +2325,19 @@ void SetMultiTrainerBattle(struct ScriptContext *ctx)
     TRAINER_BATTLE_PARAM.defeatTextB = (u8*)ScriptReadWord(ctx);
     gPartnerTrainerId = TRAINER_PARTNER(ScriptReadHalfword(ctx));
 };
+// === NO-MONEY-LOSS PROTECTION START ===
+void ResetPlayerMoney(void)
+{
+    return; // KORREKTUR: Spieler verliert ab jetzt kein Geld mehr bei einer Niederlage!
+}
+
+void TakeMoneyOnWhiteout(void)
+{
+    return; // Fallback fuer neuere Expansion-Infrastrukturen
+}
+
+void ReducePlayerMoneyOnWhiteout(void)
+{
+    return; // Blockiert alternative Level-Cap-Geldabzugs-Systeme
+}
+// === NO-MONEY-LOSS PROTECTION ENDE ===

@@ -67,7 +67,7 @@
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
+#define FLAG_AUTO_REPEL_ON   0x30 // Auto-Schutz switched on: the repel counter stops counting down
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag
@@ -666,10 +666,10 @@
 #define FLAG_HIDDEN_ITEM_NAVEL_ROCK_TOP_SACRED_ASH           (FLAG_HIDDEN_ITEMS_START + 0x6D)
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
-#define FLAG_HIDDEN_ITEM_Magmacamp_Camerupnite               (FLAG_HIDDEN_ITEMS_START + 0x70)
+#define FLAG_HIDDEN_ITEM_Magmacamp_Camerupnite               FLAG_UNUSED_0x26A // 0x264 was also the Poké Vial gift flag
 #define FLAG_HIDDEN_ITEM_ROUTE_102_Water_Gem                  (FLAG_HIDDEN_ITEMS_START + 0x71)
 
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
+#define FLAG_UNUSED_0x265  0x265 // Taken: same id as FLAG_HIDDEN_ITEM_ROUTE_102_Water_Gem
 #define FLAG_UNUSED_0x266  0x266 // Unused Flag
 #define FLAG_UNUSED_0x267  0x267 // Unused Flag
 #define FLAG_UNUSED_0x268  0x268 // Unused Flag
@@ -1681,9 +1681,9 @@
 #define FLAG_HIDE_BILL_HUMAN_SEA_COTTAGE                   0
 #define FLAG_HIDE_TOWER_FUJI                               0
 #define FLAG_HIDE_POKEHOUSE_FUJI                           0
-#define FLAG_HIDE_LIFT_KEY                                 0
-#define FLAG_HIDE_SILPH_SCOPE                              0
-#define FLAG_HIDE_HIDEOUT_GIOVANNI                         0
+#define FLAG_HIDE_LIFT_KEY                                 FLAG_UNUSED_0x020 // Rocket Hideout under the Mauville Game Corner
+#define FLAG_HIDE_SILPH_SCOPE                              FLAG_UNUSED_0x021 // Rocket Hideout under the Mauville Game Corner
+#define FLAG_HIDE_HIDEOUT_GIOVANNI                         FLAG_UNUSED_0x022 // Rocket Hideout under the Mauville Game Corner
 #define FLAG_HIDE_TOWN_MAP                                 0
 #define FLAG_HIDE_POKEDEX                                  0
 #define FLAG_HIDE_CERULEAN_ROCKET                          0
@@ -1824,17 +1824,17 @@
 #define FLAG_HIDE_SSANNE_B1F_ROOM5_SUPER_POTION                 0
 #define FLAG_HIDE_SSANNE_KITCHEN_GREAT_BALL                     0
 #define FLAG_HIDE_ROUTE9_TM40                                   0
-#define FLAG_HIDE_ROCKET_HIDEOUT_B1F_ESCAPE_ROPE                0
-#define FLAG_HIDE_ROCKET_HIDEOUT_B1F_HYPER_POTION               0
-#define FLAG_HIDE_ROCKET_HIDEOUT_B2F_X_SPEED                    0
-#define FLAG_HIDE_ROCKET_HIDEOUT_B2F_MOON_STONE                 0
-#define FLAG_HIDE_ROCKET_HIDEOUT_B2F_TM12                       0
-#define FLAG_HIDE_ROCKET_HIDEOUT_B2F_SUPER_POTION               0
-#define FLAG_HIDE_ROCKET_HIDEOUT_B3F_RARE_CANDY                 0
-#define FLAG_HIDE_ROCKET_HIDEOUT_B3F_TM21                       0
-#define FLAG_HIDE_ROCKET_HIDEOUT_B4F_TM49                       0
-#define FLAG_HIDE_ROCKET_HIDEOUT_B4F_MAX_ETHER                  0
-#define FLAG_HIDE_ROCKET_HIDEOUT_B4F_CALCIUM                    0
+#define FLAG_HIDE_ROCKET_HIDEOUT_B1F_ESCAPE_ROPE                FLAG_UNUSED_0x024 // Rocket Hideout under the Mauville Game Corner
+#define FLAG_HIDE_ROCKET_HIDEOUT_B1F_HYPER_POTION               FLAG_UNUSED_0x025 // Rocket Hideout under the Mauville Game Corner
+#define FLAG_HIDE_ROCKET_HIDEOUT_B2F_X_SPEED                    FLAG_UNUSED_0x026 // Rocket Hideout under the Mauville Game Corner
+#define FLAG_HIDE_ROCKET_HIDEOUT_B2F_MOON_STONE                 FLAG_UNUSED_0x027 // Rocket Hideout under the Mauville Game Corner
+#define FLAG_HIDE_ROCKET_HIDEOUT_B2F_TM12                       FLAG_UNUSED_0x028 // Rocket Hideout under the Mauville Game Corner
+#define FLAG_HIDE_ROCKET_HIDEOUT_B2F_SUPER_POTION               FLAG_UNUSED_0x029 // Rocket Hideout under the Mauville Game Corner
+#define FLAG_HIDE_ROCKET_HIDEOUT_B3F_RARE_CANDY                 FLAG_UNUSED_0x02A // Rocket Hideout under the Mauville Game Corner
+#define FLAG_HIDE_ROCKET_HIDEOUT_B3F_TM21                       FLAG_UNUSED_0x02B // Rocket Hideout under the Mauville Game Corner
+#define FLAG_HIDE_ROCKET_HIDEOUT_B4F_TM49                       FLAG_UNUSED_0x02D // Rocket Hideout under the Mauville Game Corner
+#define FLAG_HIDE_ROCKET_HIDEOUT_B4F_MAX_ETHER                  FLAG_UNUSED_0x02E // Rocket Hideout under the Mauville Game Corner
+#define FLAG_HIDE_ROCKET_HIDEOUT_B4F_CALCIUM                    FLAG_UNUSED_0x02F // Rocket Hideout under the Mauville Game Corner
 #define FLAG_HIDE_POKEMON_TOWER_3F_ESCAPE_ROPE                  0
 #define FLAG_HIDE_POKEMON_TOWER_4F_ELIXIR                       0
 #define FLAG_HIDE_POKEMON_TOWER_4F_AWAKENING                    0
@@ -1926,7 +1926,7 @@
 #define FLAG_HIDE_ROUTE11_AWAKENING                             0
 #define FLAG_HIDE_POKEMON_TOWER_5F_CLEANSE_TAG                  0
 #define FLAG_HIDE_CELADON_CITY_ETHER                            0
-#define FLAG_HIDE_ROCKET_HIDEOUT_B3F_BLACK_GLASSES              0
+#define FLAG_HIDE_ROCKET_HIDEOUT_B3F_BLACK_GLASSES              FLAG_UNUSED_0x02C // Rocket Hideout under the Mauville Game Corner
 #define FLAG_HIDE_SAFARI_ZONE_NORTH_QUICK_CLAW                  0
 #define FLAG_HIDE_SEAFOAM_ISLANDS_1F_ICE_HEAL                   0
 #define FLAG_HIDE_SEAFOAM_ISLANDS_B1F_WATER_STONE               0
@@ -2089,7 +2089,7 @@
 #define FLAG_VISITED_TWO_ISLAND                          0
 #define FLAG_RESCUED_LOSTELLE                            0
 #define FLAG_0x2A4                                       0
-#define FLAG_CAN_USE_ROCKET_HIDEOUT_LIFT                 0
+#define FLAG_CAN_USE_ROCKET_HIDEOUT_LIFT                 FLAG_UNUSED_0x023 // Rocket Hideout under the Mauville Game Corner
 #define FLAG_GOT_TEA                                     0
 #define FLAG_GOT_POWDER_JAR                              0
 #define FLAG_FOUGHT_MEWTWO                               0
@@ -2170,9 +2170,9 @@
 #define FLAG_HIDDEN_ITEM_SSANNE_B1F_CORRIDOR_HYPER_POTION                  0
 #define FLAG_HIDDEN_ITEM_ROUTE10_SUPER_POTION                              0
 #define FLAG_HIDDEN_ITEM_ROUTE10_MAX_ETHER                                 0
-#define FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B1F_PP_UP                          0
-#define FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B3F_NUGGET                         0
-#define FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B4F_NEST_BALL                      0
+#define FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B1F_PP_UP                          FLAG_UNUSED_0x266 // Rocket Hideout under the Mauville Game Corner
+#define FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B3F_NUGGET                         FLAG_UNUSED_0x267 // Rocket Hideout under the Mauville Game Corner
+#define FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B4F_NEST_BALL                      FLAG_UNUSED_0x268 // Rocket Hideout under the Mauville Game Corner
 #define FLAG_HIDDEN_ITEM_POKEMON_TOWER_5F_BIG_MUSHROOM                     0
 #define FLAG_HIDDEN_ITEM_ROUTE13_PP_UP                                     0
 #define FLAG_HIDDEN_ITEM_UNUSED_0x10                                       0
@@ -2292,7 +2292,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE12_LEFTOVERS                                 0
 #define FLAG_HIDDEN_ITEM_ROUTE16_LEFTOVERS                                 0
 #define FLAG_HIDDEN_ITEM_FUCHSIA_CITY_MAX_REVIVE                           0
-#define FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B4F_NET_BALL                       0
+#define FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B4F_NET_BALL                       FLAG_UNUSED_0x269 // Rocket Hideout under the Mauville Game Corner
 #define FLAG_HIDDEN_ITEM_SILPH_CO_2F_ULTRA_BALL                            0
 #define FLAG_HIDDEN_ITEM_SILPH_CO_3F_PROTEIN                               0
 #define FLAG_HIDDEN_ITEM_SILPH_CO_4F_IRON                                  0

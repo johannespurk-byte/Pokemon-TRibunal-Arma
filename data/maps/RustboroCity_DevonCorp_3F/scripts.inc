@@ -8,6 +8,23 @@ RustboroCity_DevonCorp_3F_OnTransition:
 	call_if_eq VAR_DEVON_CORP_3F_STATE, 0, RustboroCity_DevonCorp_3F_EventScript_SetEmployeePos
 	end
 
+@ Pokémon Center heals used to overwrite this var with 10, which skipped
+@ Mr. Stone's scene (Letter, PokéNav, Briney's return) in older saves.
+@ The scene's paths start at 2,2, where returning the goods warps you, so
+@ rather than run it from the stairs, warp there the same way.
+RustboroCity_DevonCorp_3F_EventScript_RepairState::
+	goto_if_set FLAG_RECEIVED_POKENAV, RustboroCity_DevonCorp_3F_EventScript_RepairStateMetPresident
+	lockall
+	setvar VAR_DEVON_CORP_3F_STATE, 0
+	warpsilent MAP_RUSTBORO_CITY_DEVON_CORP_3F, 2, 2
+	waitstate
+	releaseall
+	end
+
+RustboroCity_DevonCorp_3F_EventScript_RepairStateMetPresident::
+	setvar VAR_DEVON_CORP_3F_STATE, 1
+	end
+
 RustboroCity_DevonCorp_3F_EventScript_SetEmployeePos::
 	setobjectxyperm LOCALID_DEVON_CORP_3F_EMPLOYEE, 3, 2
 	setobjectmovementtype LOCALID_DEVON_CORP_3F_EMPLOYEE, MOVEMENT_TYPE_FACE_LEFT
@@ -23,6 +40,7 @@ RustboroCity_DevonCorp_3F_EventScript_PlayerFaceEast::
 
 RustboroCity_DevonCorp_3F_OnFrame:
 	map_script_2 VAR_DEVON_CORP_3F_STATE, 0, RustboroCity_DevonCorp_3F_EventScript_MeetPresident
+	map_script_2 VAR_DEVON_CORP_3F_STATE, 10, RustboroCity_DevonCorp_3F_EventScript_RepairState
 	.2byte 0
 
 RustboroCity_DevonCorp_3F_EventScript_MeetPresident::

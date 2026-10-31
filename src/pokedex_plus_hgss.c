@@ -51,6 +51,7 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 #include "config/pokedex_plus_hgss.h"
+#include "trainer_card.h"
 
 enum
 {
@@ -4400,6 +4401,7 @@ static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)
     const u8 *name;
     const u8 *category;
     const u8 *description;
+    u32 fontId;
     u8 digitCount = (NATIONAL_DEX_COUNT > 999 && value != 0) ? 4 : 3;
 
     if (value == 0)
@@ -4429,7 +4431,9 @@ static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)
         description = GetSpeciesPokedexDescription(species);
     else
         description = sExpandedPlaceholder_PokedexDescription;
-    PrintInfoScreenText(description, GetStringCenterAlignXOffset(FONT_NORMAL, description, 0xF0), 93);
+    // Die breitere Hauptschrift ragt sonst links und rechts über den Rahmen des Eintrags hinaus
+    fontId = GetFontIdToFit(description, FONT_NORMAL, 0, DISPLAY_WIDTH - 16);
+    PrintInfoScreenTextSmall(description, fontId, GetStringCenterAlignXOffset(fontId, description, 0xF0), 93);
 
     //Type Icon(s)
     if (owned)
@@ -5189,10 +5193,13 @@ static void PrintStatsScreen_Moves_Top(u8 taskId)
 
     //Egg/TM/Level/Tutor Item Icon
     gTasks[taskId].data[3] = AddItemIconSprite(ITEM_TAG, ITEM_TAG, item);
-    gSprites[gTasks[taskId].data[3]].x2 = 203;
-    gSprites[gTasks[taskId].data[3]].y2 = 39;
-    gSprites[gTasks[taskId].data[3]].oam.priority = 0;
-
+// The associated sprite gets cleared a bunch below - I assume that's still okay if it is MAX_SPRITES?
+    if (gTasks[taskId].data[3] != MAX_SPRITES)
+    {
+        gSprites[gTasks[taskId].data[3]].x2 = 203;
+        gSprites[gTasks[taskId].data[3]].y2 = 39;
+        gSprites[gTasks[taskId].data[3]].oam.priority = 0;
+    }
 }
 
 static void PrintStatsScreen_Moves_Description(u8 taskId)
@@ -7419,7 +7426,7 @@ static void Task_LoadSizeScreen(u8 taskId)
         gMain.state++;
         break;
     case 5:
-        spriteId = CreateSizeScreenTrainerPic(PlayerGenderToFrontTrainerPicId(gSaveBlock2Ptr->playerGender), 152, 56, 0);
+        spriteId = CreateSizeScreenTrainerPic(TrainerCard_GetPlayerTrainerPic(gSaveBlock2Ptr->playerGender), 152, 56, 0);
         gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_NORMAL;
         gSprites[spriteId].oam.matrixNum = 1;
         gSprites[spriteId].oam.priority = 0;

@@ -5553,6 +5553,15 @@ static void Task_PrintContestMoves(u8 taskId)
     data[0]++;
 }
 
+// The name area (x 8-88) spans the first three 32px slot sprites, but FillSpriteRectColor stops at the edge of
+// one sprite, so each sprite is cleared on its own. Otherwise the end of a longer, older name stays visible.
+static void ClearMoveSlotName(const u8 *spriteIds, u32 height)
+{
+    FillSpriteRectColor(spriteIds[0], 8, 0, 24, height, MOVE_SLOT_NAME_FILL_COLOR);
+    FillSpriteRectColor(spriteIds[1], 0, 0, 32, height, MOVE_SLOT_NAME_FILL_COLOR);
+    FillSpriteRectColor(spriteIds[2], 0, 0, 24, height, MOVE_SLOT_NAME_FILL_COLOR);
+}
+
 static void PrintMoveNameAndPP(u8 slotIndex)
 {
     struct PokeSummary *summary = &sMonSummaryScreen->summary;
@@ -5563,7 +5572,7 @@ static void PrintMoveNameAndPP(u8 slotIndex)
     u8 sp0 = spriteIds[0], sp4 = spriteIds[4];
     enum Move move = summary->moves[slotIndex];
 
-    FillSpriteRectColor(sp0, 8, 0, 80, 16, MOVE_SLOT_NAME_FILL_COLOR);
+    ClearMoveSlotName(spriteIds, 16);
     if (move != MOVE_NONE)
         AddSpriteTextPrinterParameterized6(sp0, FONT_SMALL, 12, 0, 0, 0, sMoveSlotNameColor, 0, GetMoveName(move));
 
@@ -5730,7 +5739,7 @@ static void PrintNewMoveDetailsOrCancelText(void)
 
     u8 sp0 = spriteIds[0], sp4 = spriteIds[4];
 
-    FillSpriteRectColor(sp0, 8, 0, 80, 16, MOVE_SLOT_NAME_FILL_COLOR);
+    ClearMoveSlotName(spriteIds, 16);
 
     if (sMonSummaryScreen->newMove == MOVE_NONE)
     {
@@ -5758,8 +5767,8 @@ static void ClearCancelText(void)
     if (spriteIds[0] == SPRITE_NONE)
         return;
 
-    u8 sp0 = spriteIds[0], sp4 = spriteIds[4];
-    FillSpriteRectColor(sp0, 8, 0, 80, 12, MOVE_SLOT_NAME_FILL_COLOR);
+    u8 sp4 = spriteIds[4];
+    ClearMoveSlotName(spriteIds, 12);
     FillSpriteRectColor(sp4, 0, 0, 24, 12, MOVE_SLOT_PP_FILL_COLOR);
 }
 

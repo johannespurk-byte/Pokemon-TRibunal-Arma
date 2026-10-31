@@ -44,153 +44,22 @@
 
 #include "constants/opponents.h"
 
+// Rocket Hideout grunts and Giovanni always fight at the current level cap (caps.c)
+#define ROCKET_HIDEOUT_SCALING { .mode = LEVEL_SCALING_TO_LEVEL_CAP }
+
 const struct LevelScalingConfig gTrainerLevelScalingRules[TRAINERS_COUNT] =
 {
-    // Trainers not listed here will use the default from config/level_scaling.h
-
-    // ============================================================================
-    // TEST TRAINERS - For debugging and testing level scaling
-    // ============================================================================
-
-    // Test 1: Scale to level cap
-    [TRAINER_ROXANNE_1] = {
-        .mode = LEVEL_SCALING_TO_LEVEL_CAP,
-        .levelAugmentAdd = 0,
-        .levelVariationPct = 0,
-        .manageEvolutions = TRUE,
-    },
-
-    // Test 2: Scale to party average + 3
-    [TRAINER_BRAWLY_1] = {
-        .mode = LEVEL_SCALING_PARTY_AVG,
-        .levelAugmentAdd = 3,
-        .levelVariationPct = 0,
-        .manageEvolutions = TRUE,
-        .excludeFainted = TRUE,
-    },
-
-    // Test 3: Scale to party highest
-    [TRAINER_WATTSON_1] = {
-        .mode = LEVEL_SCALING_PARTY_HIGHEST,
-        .levelAugmentAdd = 0,
-        .levelVariationPct = 10,
-        .manageEvolutions = TRUE,
-    },
-
-    // Test 4: Scale to party lowest + 5 (also exercises EV + moveset scaling)
-    // With the debug Script 1 setup, party lowest = 10 → scaled level = 15.
-    // - manageEvolutions devolves any fully-evolved mons
-    // - scaleMoves drops any trainer-defined move not in the devolved species'
-    //   level-up learnset at <= 15 AND not MOVE_TIER_DEFAULT, refilling from
-    //   the species' learnset at <= 15
-    // - scaleEVs caps total EVs at 15 * 10 = 150 (proportional to defined EVs)
-    [TRAINER_FLANNERY_1] = {
-        .mode = LEVEL_SCALING_PARTY_LOWEST,
-        .levelAugmentAdd = 5,
-        .levelVariationPct = 0,
-        .manageEvolutions = TRUE,
-        .scaleEVs = TRUE,
-        .scaleMoves = TRUE,
-    },
-
-    // Test 5: Scale to party highest + augment with variation
-    [TRAINER_NORMAN_1] = {
-        .mode = LEVEL_SCALING_PARTY_HIGHEST,
-        .levelAugmentAdd = 2,
-        .levelVariationPct = 10,
-        .minLevel = 25,
-        .maxLevel = 50,
-        .manageEvolutions = TRUE,
-    },
-
-    // Test 6: Evolution management test (should devolve illegal mons)
-    [TRAINER_WINONA_1] = {
-        .mode = LEVEL_SCALING_TO_LEVEL_CAP,
-        .levelAugmentAdd = -20,  // Reduce levels significantly
-        .levelVariationPct = 0,
-        .manageEvolutions = TRUE,
-    },
-
-    // Example configurations (commented out by default):
-
-    /*
-    // Gym Leaders scale to level cap + 2
-    [TRAINER_ROXANNE_1] = {
-        .mode = LEVEL_SCALING_TO_LEVEL_CAP,
-        .levelAugmentAdd = 2,
-        .levelVariationPct = 1,
-        .minLevel = 0,
-        .maxLevel = 0,
-        .manageEvolutions = TRUE,
-        .excludeFainted = FALSE,
-    },
-
-    [TRAINER_BRAWLY_1] = {
-        .mode = LEVEL_SCALING_TO_LEVEL_CAP,
-        .levelAugmentAdd = 2,
-        .levelVariationPct = 1,
-        .manageEvolutions = TRUE,
-    },
-
-    // Rival battles scale to player's highest
-    [TRAINER_BRENDAN_ROUTE_103_TREECKO] = {
-        .mode = LEVEL_SCALING_PARTY_HIGHEST,
-        .levelAugmentAdd = 0,
-        .levelVariationPct = 1,
-        .manageEvolutions = TRUE,
-        .excludeFainted = TRUE,
-    },
-
-    // Elite Four scale to party average + 5
-    [TRAINER_SIDNEY] = {
-        .mode = LEVEL_SCALING_PARTY_AVG,
-        .levelAugmentAdd = 5,
-        .levelVariationPct = 2,
-        .minLevel = 55,
-        .maxLevel = 75,
-        .manageEvolutions = TRUE,
-        .excludeFainted = TRUE,
-    },
-
-    [TRAINER_PHOEBE] = {
-        .mode = LEVEL_SCALING_PARTY_AVG,
-        .levelAugmentAdd = 5,
-        .levelVariationPct = 2,
-        .minLevel = 55,
-        .maxLevel = 75,
-        .manageEvolutions = TRUE,
-        .excludeFainted = TRUE,
-    },
-
-    [TRAINER_GLACIA] = {
-        .mode = LEVEL_SCALING_PARTY_AVG,
-        .levelAugmentAdd = 5,
-        .levelVariationPct = 2,
-        .minLevel = 55,
-        .maxLevel = 75,
-        .manageEvolutions = TRUE,
-        .excludeFainted = TRUE,
-    },
-
-    [TRAINER_DRAKE] = {
-        .mode = LEVEL_SCALING_PARTY_AVG,
-        .levelAugmentAdd = 5,
-        .levelVariationPct = 2,
-        .minLevel = 55,
-        .maxLevel = 75,
-        .manageEvolutions = TRUE,
-        .excludeFainted = TRUE,
-    },
-
-    // Champion scales to party or PC highest
-    [TRAINER_WALLACE] = {
-        .mode = LEVEL_SCALING_PARTY_OR_PC_HIGHEST,
-        .levelAugmentAdd = 7,
-        .levelVariationPct = 2,
-        .minLevel = 60,
-        .maxLevel = 80,
-        .manageEvolutions = TRUE,
-        .excludeFainted = TRUE,
-    },
-    */
+    // In Emerald these names point at the hideout under the Mauville Game Corner (constants/opponents.h)
+    [TRAINER_TEAM_ROCKET_GRUNT_8]  = ROCKET_HIDEOUT_SCALING,
+    [TRAINER_TEAM_ROCKET_GRUNT_9]  = ROCKET_HIDEOUT_SCALING,
+    [TRAINER_TEAM_ROCKET_GRUNT_10] = ROCKET_HIDEOUT_SCALING,
+    [TRAINER_TEAM_ROCKET_GRUNT_11] = ROCKET_HIDEOUT_SCALING,
+    [TRAINER_TEAM_ROCKET_GRUNT_12] = ROCKET_HIDEOUT_SCALING,
+    [TRAINER_TEAM_ROCKET_GRUNT_13] = ROCKET_HIDEOUT_SCALING,
+    [TRAINER_TEAM_ROCKET_GRUNT_14] = ROCKET_HIDEOUT_SCALING,
+    [TRAINER_TEAM_ROCKET_GRUNT_15] = ROCKET_HIDEOUT_SCALING,
+    [TRAINER_TEAM_ROCKET_GRUNT_16] = ROCKET_HIDEOUT_SCALING,
+    [TRAINER_TEAM_ROCKET_GRUNT_17] = ROCKET_HIDEOUT_SCALING,
+    [TRAINER_TEAM_ROCKET_GRUNT_18] = ROCKET_HIDEOUT_SCALING,
+    [TRAINER_BOSS_GIOVANNI]        = ROCKET_HIDEOUT_SCALING,
 };

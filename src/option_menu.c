@@ -7,7 +7,9 @@
 #include "menu.h"
 #include "palette.h"
 #include "scanline_effect.h"
+#include "sound.h"
 #include "sprite.h"
+#include "string_util.h"
 #include "strings.h"
 #include "task.h"
 #include "text.h"
@@ -15,6 +17,7 @@
 #include "window.h"
 #include "gba/m4a_internal.h"
 #include "constants/rgb.h"
+#include "constants/songs.h"
 
 #define tMenuSelection data[0]
 #define tTextSpeed data[1]
@@ -23,6 +26,7 @@
 #define tSound data[4]
 #define tButtonMode data[5]
 #define tWindowFrameType data[6]
+#define tNuzlocke data[7]
 
 enum
 {
@@ -32,26 +36,51 @@ enum
     MENUITEM_SOUND,
     MENUITEM_BUTTONMODE,
     MENUITEM_FRAMETYPE,
+    MENUITEM_NUZLOCKE,
     MENUITEM_CANCEL,
     MENUITEM_COUNT,
 };
 
+// Modernes Layout: Titelleiste oben, dunkle Optionskarte, Hilfezeile unten.
+// Die gewählte Zeile wird per WIN0 aufgehellt, jede Option zeigt nur ihren Wert zwischen ◀ ▶.
+#define OPTION_ROW_HEIGHT 14
+#define OPTIONS_TOP_TILE  3
+#define OPTIONS_TOP_PX    (OPTIONS_TOP_TILE * 8)
+
+// Wert-Spalte im Optionsfenster (Pixel)
+#define VALUE_ARROW_L_X   112
+#define VALUE_ARROW_R_X   192
+#define VALUE_CENTER_X    156
+
+// Farben in graphics/interface/option_menu_text.pal
+#define COLOR_PANEL       1
+#define COLOR_TEXT        2
+#define COLOR_SHADOW      3
+#define COLOR_ACCENT      4
+#define COLOR_DIM         6
+#define COLOR_HEADER      8
+#define COLOR_HELP_BG     9
+
 enum
 {
     WIN_HEADER,
-    WIN_OPTIONS
+    WIN_OPTIONS,
+    WIN_HELP,
 };
 
-#define YPOS_TEXTSPEED    (MENUITEM_TEXTSPEED * 16)
-#define YPOS_BATTLESCENE  (MENUITEM_BATTLESCENE * 16)
-#define YPOS_BATTLESTYLE  (MENUITEM_BATTLESTYLE * 16)
-#define YPOS_SOUND        (MENUITEM_SOUND * 16)
-#define YPOS_BUTTONMODE   (MENUITEM_BUTTONMODE * 16)
-#define YPOS_FRAMETYPE    (MENUITEM_FRAMETYPE * 16)
+#define YPOS_TEXTSPEED    (MENUITEM_TEXTSPEED * OPTION_ROW_HEIGHT)
+#define YPOS_BATTLESCENE  (MENUITEM_BATTLESCENE * OPTION_ROW_HEIGHT)
+#define YPOS_BATTLESTYLE  (MENUITEM_BATTLESTYLE * OPTION_ROW_HEIGHT)
+#define YPOS_SOUND        (MENUITEM_SOUND * OPTION_ROW_HEIGHT)
+#define YPOS_BUTTONMODE   (MENUITEM_BUTTONMODE * OPTION_ROW_HEIGHT)
+#define YPOS_FRAMETYPE    (MENUITEM_FRAMETYPE * OPTION_ROW_HEIGHT)
+#define YPOS_NUZLOCKE     (MENUITEM_NUZLOCKE * OPTION_ROW_HEIGHT)
 
 static void Task_OptionMenuFadeIn(u8 taskId);
 static void Task_OptionMenuProcessInput(u8 taskId);
 static void Task_OptionMenuSave(u8 taskId);
+static void Task_OptionMenuTryClose(u8 taskId);
+static void Task_OptionMenuConfirm(u8 taskId);
 static void Task_OptionMenuFadeOut(u8 taskId);
 static void HighlightOptionMenuItem(u8 selection);
 static u8 TextSpeed_ProcessInput(u8 selection);
@@ -66,27 +95,40 @@ static u8 FrameType_ProcessInput(u8 selection);
 static void FrameType_DrawChoices(u8 selection);
 static u8 ButtonMode_ProcessInput(u8 selection);
 static void ButtonMode_DrawChoices(u8 selection);
+static u8 Nuzlocke_ProcessInput(u8 selection);
+static void Nuzlocke_DrawChoices(u8 selection);
 static void DrawHeaderText(void);
 static void DrawOptionMenuTexts(void);
-static void DrawBgWindowFrames(void);
+static void DrawHelpText(u8 selection);
 
 EWRAM_DATA static bool8 sArrowPressed = FALSE;
 
-static const u8 gText_Option[]             = _("OPTION");
-static const u8 gText_TextSpeedSlow[]      = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}SLOW");
-static const u8 gText_TextSpeedMid[]       = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}MID");
-static const u8 gText_TextSpeedFast[]      = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}FAST");
-static const u8 gText_BattleSceneOn[]      = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}ON");
-static const u8 gText_BattleSceneOff[]     = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}OFF");
-static const u8 gText_BattleStyleShift[]   = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}SHIFT");
-static const u8 gText_BattleStyleSet[]     = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}SET");
-static const u8 gText_SoundMono[]          = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}MONO");
-static const u8 gText_SoundStereo[]        = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}STEREO");
-static const u8 gText_FrameType[]          = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}TYPE");
-static const u8 gText_FrameTypeNumber[]    = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}");
-static const u8 gText_ButtonTypeNormal[]   = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}NORMAL");
-static const u8 gText_ButtonTypeLR[]       = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}LR");
-static const u8 gText_ButtonTypeLEqualsA[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}L=A");
+static const u8 gText_Option[]             = _("OPTIONS");
+static const u8 gText_TextSpeedSlow[]      = _("SLOW");
+static const u8 gText_TextSpeedMid[]       = _("MID");
+static const u8 gText_TextSpeedFast[]      = _("FAST");
+static const u8 gText_On[]                 = _("ON");
+static const u8 gText_Off[]                = _("OFF");
+static const u8 gText_BattleStyleShift[]   = _("SHIFT");
+static const u8 gText_BattleStyleSet[]     = _("SET");
+static const u8 gText_SoundMono[]          = _("MONO");
+static const u8 gText_SoundStereo[]        = _("STEREO");
+static const u8 gText_FrameType[]          = _("TYPE ");
+static const u8 gText_ButtonTypeNormal[]   = _("NORMAL");
+static const u8 gText_ButtonTypeLR[]       = _("LR");
+static const u8 gText_ButtonTypeLEqualsA[] = _("L=A");
+static const u8 sText_ArrowLeft[]          = { CHAR_LEFT_ARROW, EOS };
+static const u8 sText_ArrowRight[]         = { CHAR_RIGHT_ARROW, EOS };
+
+static const u8 *const sTextSpeedNames[] = { gText_TextSpeedSlow, gText_TextSpeedMid, gText_TextSpeedFast };
+static const u8 *const sButtonModeNames[] = { gText_ButtonTypeNormal, gText_ButtonTypeLR, gText_ButtonTypeLEqualsA };
+
+static const u8 sTextColors[]   = { COLOR_PANEL, COLOR_TEXT, COLOR_SHADOW };
+static const u8 sValueColors[]  = { COLOR_PANEL, COLOR_ACCENT, COLOR_SHADOW };
+static const u8 sArrowColors[]  = { COLOR_PANEL, COLOR_DIM, COLOR_SHADOW };
+static const u8 sHeaderColors[] = { COLOR_HEADER, COLOR_TEXT, COLOR_SHADOW };
+static const u8 sHelpColors[]   = { COLOR_HELP_BG, COLOR_DIM, COLOR_SHADOW };
+static const u8 sConfirmColors[] = { COLOR_HELP_BG, COLOR_ACCENT, COLOR_SHADOW };
 
 static const u16 sOptionMenuText_Pal[] = INCGFX_U16("graphics/interface/option_menu_text.pal", ".gbapal");
 // note: this is only used in the Japanese release
@@ -100,16 +142,29 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     [MENUITEM_SOUND]       = COMPOUND_STRING("SOUND"),
     [MENUITEM_BUTTONMODE]  = COMPOUND_STRING("BUTTON MODE"),
     [MENUITEM_FRAMETYPE]   = COMPOUND_STRING("FRAME"),
+    [MENUITEM_NUZLOCKE]    = COMPOUND_STRING("NUZLOCKE"),
     [MENUITEM_CANCEL]      = COMPOUND_STRING("CANCEL"),
+};
+
+static const u8 *const sOptionMenuItemsHelp[MENUITEM_COUNT] =
+{
+    [MENUITEM_TEXTSPEED]   = COMPOUND_STRING("How fast messages are printed."),
+    [MENUITEM_BATTLESCENE] = COMPOUND_STRING("Show or skip battle animations."),
+    [MENUITEM_BATTLESTYLE] = COMPOUND_STRING("SHIFT offers a switch after a knockout."),
+    [MENUITEM_SOUND]       = COMPOUND_STRING("Mono or stereo sound."),
+    [MENUITEM_BUTTONMODE]  = COMPOUND_STRING("What the L and R buttons do."),
+    [MENUITEM_FRAMETYPE]   = COMPOUND_STRING("Frame style of the message boxes."),
+    [MENUITEM_NUZLOCKE]    = COMPOUND_STRING("First catch per area, fainted = lost."),
+    [MENUITEM_CANCEL]      = COMPOUND_STRING("Save the settings and close."),
 };
 
 static const struct WindowTemplate sOptionMenuWinTemplates[] =
 {
     [WIN_HEADER] = {
         .bg = 1,
-        .tilemapLeft = 2,
-        .tilemapTop = 1,
-        .width = 26,
+        .tilemapLeft = 0,
+        .tilemapTop = 0,
+        .width = 30,
         .height = 2,
         .paletteNum = 1,
         .baseBlock = 2
@@ -117,11 +172,20 @@ static const struct WindowTemplate sOptionMenuWinTemplates[] =
     [WIN_OPTIONS] = {
         .bg = 0,
         .tilemapLeft = 2,
-        .tilemapTop = 5,
+        .tilemapTop = OPTIONS_TOP_TILE,
         .width = 26,
         .height = 14,
         .paletteNum = 1,
-        .baseBlock = 0x36
+        .baseBlock = 62
+    },
+    [WIN_HELP] = {
+        .bg = 1,
+        .tilemapLeft = 0,
+        .tilemapTop = 18,
+        .width = 30,
+        .height = 2,
+        .paletteNum = 1,
+        .baseBlock = 426
     },
     DUMMY_WIN_TEMPLATE
 };
@@ -148,7 +212,8 @@ static const struct BgTemplate sOptionMenuBgTemplates[] =
     }
 };
 
-static const u16 sOptionMenuBg_Pal[] = {RGB(17, 18, 31)};
+// Hintergrund hinter den Fenstern: dunkles Nachtblau
+static const u16 sOptionMenuBg_Pal[] = {RGB(2, 3, 8)};
 
 static void MainCB2(void)
 {
@@ -191,13 +256,14 @@ void CB2_InitOptionMenu(void)
         ChangeBgY(3, 0, BG_COORD_SET);
         InitWindows(sOptionMenuWinTemplates);
         DeactivateAllTextPrinters();
+        // Innerhalb von WIN0 (gewählte Zeile) wird BG0 aufgehellt, außerhalb bleibt alles normal
         SetGpuReg(REG_OFFSET_WIN0H, 0);
         SetGpuReg(REG_OFFSET_WIN0V, 0);
-        SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_BG0);
-        SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG0 | WINOUT_WIN01_BG1 | WINOUT_WIN01_CLR);
-        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG0 | BLDCNT_EFFECT_DARKEN);
+        SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_BG0 | WININ_WIN0_BG1 | WININ_WIN0_CLR);
+        SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG0 | WINOUT_WIN01_BG1);
+        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG0 | BLDCNT_EFFECT_LIGHTEN);
         SetGpuReg(REG_OFFSET_BLDALPHA, 0);
-        SetGpuReg(REG_OFFSET_BLDY, 4);
+        SetGpuReg(REG_OFFSET_BLDY, 3);
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_WIN0_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
         ShowBg(0);
         ShowBg(1);
@@ -211,12 +277,10 @@ void CB2_InitOptionMenu(void)
         gMain.state++;
         break;
     case 3:
-        LoadBgTiles(1, GetWindowFrameTilesPal(gSaveBlock2Ptr->optionsWindowFrameType)->tiles, 0x120, 0x1A2);
         gMain.state++;
         break;
     case 4:
         LoadPalette(sOptionMenuBg_Pal, BG_PLTT_ID(0), sizeof(sOptionMenuBg_Pal));
-        LoadPalette(GetWindowFrameTilesPal(gSaveBlock2Ptr->optionsWindowFrameType)->pal, BG_PLTT_ID(7), PLTT_SIZE_4BPP);
         gMain.state++;
         break;
     case 5:
@@ -229,6 +293,7 @@ void CB2_InitOptionMenu(void)
         gMain.state++;
         break;
     case 7:
+        PutWindowTilemap(WIN_HELP);
         gMain.state++;
         break;
     case 8:
@@ -236,7 +301,7 @@ void CB2_InitOptionMenu(void)
         DrawOptionMenuTexts();
         gMain.state++;
     case 9:
-        DrawBgWindowFrames();
+        CopyBgTilemapBufferToVram(1);
         gMain.state++;
         break;
     case 10:
@@ -250,6 +315,7 @@ void CB2_InitOptionMenu(void)
         gTasks[taskId].tSound = gSaveBlock2Ptr->optionsSound;
         gTasks[taskId].tButtonMode = gSaveBlock2Ptr->optionsButtonMode;
         gTasks[taskId].tWindowFrameType = gSaveBlock2Ptr->optionsWindowFrameType;
+        gTasks[taskId].tNuzlocke = gSaveBlock2Ptr->optionsNuzlocke;
 
         TextSpeed_DrawChoices(gTasks[taskId].tTextSpeed);
         BattleScene_DrawChoices(gTasks[taskId].tBattleSceneOff);
@@ -257,6 +323,7 @@ void CB2_InitOptionMenu(void)
         Sound_DrawChoices(gTasks[taskId].tSound);
         ButtonMode_DrawChoices(gTasks[taskId].tButtonMode);
         FrameType_DrawChoices(gTasks[taskId].tWindowFrameType);
+        Nuzlocke_DrawChoices(gTasks[taskId].tNuzlocke);
         HighlightOptionMenuItem(gTasks[taskId].tMenuSelection);
 
         CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
@@ -282,11 +349,11 @@ static void Task_OptionMenuProcessInput(u8 taskId)
     if (JOY_NEW(A_BUTTON))
     {
         if (gTasks[taskId].tMenuSelection == MENUITEM_CANCEL)
-            gTasks[taskId].func = Task_OptionMenuSave;
+            gTasks[taskId].func = Task_OptionMenuTryClose;
     }
     else if (JOY_NEW(B_BUTTON))
     {
-        gTasks[taskId].func = Task_OptionMenuSave;
+        gTasks[taskId].func = Task_OptionMenuTryClose;
     }
     else if (JOY_NEW(DPAD_UP))
     {
@@ -352,6 +419,13 @@ static void Task_OptionMenuProcessInput(u8 taskId)
             if (previousOption != gTasks[taskId].tWindowFrameType)
                 FrameType_DrawChoices(gTasks[taskId].tWindowFrameType);
             break;
+        case MENUITEM_NUZLOCKE:
+            previousOption = gTasks[taskId].tNuzlocke;
+            gTasks[taskId].tNuzlocke = Nuzlocke_ProcessInput(gTasks[taskId].tNuzlocke);
+
+            if (previousOption != gTasks[taskId].tNuzlocke)
+                Nuzlocke_DrawChoices(gTasks[taskId].tNuzlocke);
+            break;
         default:
             return;
         }
@@ -364,6 +438,57 @@ static void Task_OptionMenuProcessInput(u8 taskId)
     }
 }
 
+static bool32 HaveOptionsChanged(u8 taskId)
+{
+    return gTasks[taskId].tTextSpeed != gSaveBlock2Ptr->optionsTextSpeed
+        || gTasks[taskId].tBattleSceneOff != gSaveBlock2Ptr->optionsBattleSceneOff
+        || gTasks[taskId].tBattleStyle != gSaveBlock2Ptr->optionsBattleStyle
+        || gTasks[taskId].tSound != gSaveBlock2Ptr->optionsSound
+        || gTasks[taskId].tButtonMode != gSaveBlock2Ptr->optionsButtonMode
+        || gTasks[taskId].tWindowFrameType != gSaveBlock2Ptr->optionsWindowFrameType
+        || gTasks[taskId].tNuzlocke != gSaveBlock2Ptr->optionsNuzlocke;
+}
+
+// Beim Verlassen mit Änderungen nachfragen, sonst direkt schließen
+static void Task_OptionMenuTryClose(u8 taskId)
+{
+    if (!HaveOptionsChanged(taskId))
+    {
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+        gTasks[taskId].func = Task_OptionMenuFadeOut;
+        return;
+    }
+
+    PlaySE(SE_SELECT);
+    FillWindowPixelBuffer(WIN_HELP, PIXEL_FILL(COLOR_HELP_BG));
+    AddTextPrinterParameterized3(WIN_HELP, FONT_SMALL, 16, 2, sConfirmColors, TEXT_SKIP_DRAW,
+                                 COMPOUND_STRING("Save changes?  A: Yes  B: No  {UP_ARROW}{DOWN_ARROW}: Back"));
+    CopyWindowToVram(WIN_HELP, COPYWIN_FULL);
+    gTasks[taskId].func = Task_OptionMenuConfirm;
+}
+
+static void Task_OptionMenuConfirm(u8 taskId)
+{
+    if (JOY_NEW(A_BUTTON))
+    {
+        PlaySE(SE_SELECT);
+        gTasks[taskId].func = Task_OptionMenuSave;
+    }
+    else if (JOY_NEW(B_BUTTON))
+    {
+        // Änderungen verwerfen; die Stereo-Einstellung wurde beim Umschalten schon gesetzt
+        PlaySE(SE_SELECT);
+        SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+        gTasks[taskId].func = Task_OptionMenuFadeOut;
+    }
+    else if (JOY_NEW(DPAD_UP | DPAD_DOWN))
+    {
+        DrawHelpText(gTasks[taskId].tMenuSelection);
+        gTasks[taskId].func = Task_OptionMenuProcessInput;
+    }
+}
+
 static void Task_OptionMenuSave(u8 taskId)
 {
     gSaveBlock2Ptr->optionsTextSpeed = gTasks[taskId].tTextSpeed;
@@ -372,6 +497,7 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsSound = gTasks[taskId].tSound;
     gSaveBlock2Ptr->optionsButtonMode = gTasks[taskId].tButtonMode;
     gSaveBlock2Ptr->optionsWindowFrameType = gTasks[taskId].tWindowFrameType;
+    gSaveBlock2Ptr->optionsNuzlocke = gTasks[taskId].tNuzlocke;
 
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     gTasks[taskId].func = Task_OptionMenuFadeOut;
@@ -389,26 +515,22 @@ static void Task_OptionMenuFadeOut(u8 taskId)
 
 static void HighlightOptionMenuItem(u8 index)
 {
+    u32 top = OPTIONS_TOP_PX + index * OPTION_ROW_HEIGHT;
+
     SetGpuReg(REG_OFFSET_WIN0H, WIN_RANGE(16, DISPLAY_WIDTH - 16));
-    SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(index * 16 + 40, index * 16 + 56));
+    SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(top, top + OPTION_ROW_HEIGHT));
+    DrawHelpText(index);
 }
 
-static void DrawOptionMenuChoice(const u8 *text, u8 x, u8 y, u8 style)
+// Zeichnet den Wert einer Option zentriert zwischen ◀ und ▶
+static void DrawOptionValue(const u8 *text, u8 y)
 {
-    u8 dst[16];
-    u16 i;
+    s32 x = VALUE_CENTER_X - GetStringWidth(FONT_NORMAL, text, 0) / 2;
 
-    for (i = 0; *text != EOS && i < ARRAY_COUNT(dst) - 1; i++)
-        dst[i] = *(text++);
-
-    if (style != 0)
-    {
-        dst[2] = TEXT_COLOR_RED;
-        dst[5] = TEXT_COLOR_LIGHT_RED;
-    }
-
-    dst[i] = EOS;
-    AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, dst, x, y + 1, TEXT_SKIP_DRAW, NULL);
+    FillWindowPixelRect(WIN_OPTIONS, PIXEL_FILL(COLOR_PANEL), VALUE_ARROW_L_X, y, DISPLAY_WIDTH - 32 - VALUE_ARROW_L_X, OPTION_ROW_HEIGHT);
+    AddTextPrinterParameterized3(WIN_OPTIONS, FONT_NORMAL, VALUE_ARROW_L_X, y + 1, sArrowColors, TEXT_SKIP_DRAW, sText_ArrowLeft);
+    AddTextPrinterParameterized3(WIN_OPTIONS, FONT_NORMAL, x, y + 1, sValueColors, TEXT_SKIP_DRAW, text);
+    AddTextPrinterParameterized3(WIN_OPTIONS, FONT_NORMAL, VALUE_ARROW_R_X, y + 1, sArrowColors, TEXT_SKIP_DRAW, sText_ArrowRight);
 }
 
 static u8 TextSpeed_ProcessInput(u8 selection)
@@ -436,25 +558,7 @@ static u8 TextSpeed_ProcessInput(u8 selection)
 
 static void TextSpeed_DrawChoices(u8 selection)
 {
-    u8 styles[3];
-    s32 widthSlow, widthMid, widthFast, xMid;
-
-    styles[0] = 0;
-    styles[1] = 0;
-    styles[2] = 0;
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(gText_TextSpeedSlow, 104, YPOS_TEXTSPEED, styles[0]);
-
-    widthSlow = GetStringWidth(FONT_NORMAL, gText_TextSpeedSlow, 0);
-    widthMid = GetStringWidth(FONT_NORMAL, gText_TextSpeedMid, 0);
-    widthFast = GetStringWidth(FONT_NORMAL, gText_TextSpeedFast, 0);
-
-    widthMid -= 94;
-    xMid = (widthSlow - widthMid - widthFast) / 2 + 104;
-    DrawOptionMenuChoice(gText_TextSpeedMid, xMid, YPOS_TEXTSPEED, styles[1]);
-
-    DrawOptionMenuChoice(gText_TextSpeedFast, GetStringRightAlignXOffset(FONT_NORMAL, gText_TextSpeedFast, 198), YPOS_TEXTSPEED, styles[2]);
+    DrawOptionValue(sTextSpeedNames[selection], YPOS_TEXTSPEED);
 }
 
 static u8 BattleScene_ProcessInput(u8 selection)
@@ -470,14 +574,7 @@ static u8 BattleScene_ProcessInput(u8 selection)
 
 static void BattleScene_DrawChoices(u8 selection)
 {
-    u8 styles[2];
-
-    styles[0] = 0;
-    styles[1] = 0;
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(gText_BattleSceneOn, 104, YPOS_BATTLESCENE, styles[0]);
-    DrawOptionMenuChoice(gText_BattleSceneOff, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleSceneOff, 198), YPOS_BATTLESCENE, styles[1]);
+    DrawOptionValue(selection ? gText_Off : gText_On, YPOS_BATTLESCENE);
 }
 
 static u8 BattleStyle_ProcessInput(u8 selection)
@@ -493,14 +590,7 @@ static u8 BattleStyle_ProcessInput(u8 selection)
 
 static void BattleStyle_DrawChoices(u8 selection)
 {
-    u8 styles[2];
-
-    styles[0] = 0;
-    styles[1] = 0;
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(gText_BattleStyleShift, 104, YPOS_BATTLESTYLE, styles[0]);
-    DrawOptionMenuChoice(gText_BattleStyleSet, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleStyleSet, 198), YPOS_BATTLESTYLE, styles[1]);
+    DrawOptionValue(selection ? gText_BattleStyleSet : gText_BattleStyleShift, YPOS_BATTLESTYLE);
 }
 
 static u8 Sound_ProcessInput(u8 selection)
@@ -517,14 +607,7 @@ static u8 Sound_ProcessInput(u8 selection)
 
 static void Sound_DrawChoices(u8 selection)
 {
-    u8 styles[2];
-
-    styles[0] = 0;
-    styles[1] = 0;
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(gText_SoundMono, 104, YPOS_SOUND, styles[0]);
-    DrawOptionMenuChoice(gText_SoundStereo, GetStringRightAlignXOffset(FONT_NORMAL, gText_SoundStereo, 198), YPOS_SOUND, styles[1]);
+    DrawOptionValue(selection ? gText_SoundStereo : gText_SoundMono, YPOS_SOUND);
 }
 
 static u8 FrameType_ProcessInput(u8 selection)
@@ -535,9 +618,6 @@ static u8 FrameType_ProcessInput(u8 selection)
             selection++;
         else
             selection = 0;
-
-        LoadBgTiles(1, GetWindowFrameTilesPal(selection)->tiles, 0x120, 0x1A2);
-        LoadPalette(GetWindowFrameTilesPal(selection)->pal, BG_PLTT_ID(7), PLTT_SIZE_4BPP);
         sArrowPressed = TRUE;
     }
     if (JOY_NEW(DPAD_LEFT))
@@ -546,9 +626,6 @@ static u8 FrameType_ProcessInput(u8 selection)
             selection--;
         else
             selection = WINDOW_FRAMES_COUNT - 1;
-
-        LoadBgTiles(1, GetWindowFrameTilesPal(selection)->tiles, 0x120, 0x1A2);
-        LoadPalette(GetWindowFrameTilesPal(selection)->pal, BG_PLTT_ID(7), PLTT_SIZE_4BPP);
         sArrowPressed = TRUE;
     }
     return selection;
@@ -556,33 +633,11 @@ static u8 FrameType_ProcessInput(u8 selection)
 
 static void FrameType_DrawChoices(u8 selection)
 {
-    u8 text[16] = {EOS};
-    u8 n = selection + 1;
-    u16 i;
+    u8 text[16];
+    u8 *end = StringCopy(text, gText_FrameType);
 
-    for (i = 0; gText_FrameTypeNumber[i] != EOS && i <= 5; i++)
-        text[i] = gText_FrameTypeNumber[i];
-
-    // Convert a number to decimal string
-    if (n / 10 != 0)
-    {
-        text[i] = n / 10 + CHAR_0;
-        i++;
-        text[i] = n % 10 + CHAR_0;
-        i++;
-    }
-    else
-    {
-        text[i] = n % 10 + CHAR_0;
-        i++;
-        text[i] = CHAR_SPACER;
-        i++;
-    }
-
-    text[i] = EOS;
-
-    DrawOptionMenuChoice(gText_FrameType, 104, YPOS_FRAMETYPE, 0);
-    DrawOptionMenuChoice(text, 128, YPOS_FRAMETYPE, 1);
+    ConvertIntToDecimalStringN(end, selection + 1, STR_CONV_MODE_LEFT_ALIGN, 2);
+    DrawOptionValue(text, YPOS_FRAMETYPE);
 }
 
 static u8 ButtonMode_ProcessInput(u8 selection)
@@ -610,75 +665,46 @@ static u8 ButtonMode_ProcessInput(u8 selection)
 
 static void ButtonMode_DrawChoices(u8 selection)
 {
-    s32 widthNormal, widthLR, widthLA, xLR;
-    u8 styles[3];
+    DrawOptionValue(sButtonModeNames[selection], YPOS_BUTTONMODE);
+}
 
-    styles[0] = 0;
-    styles[1] = 0;
-    styles[2] = 0;
-    styles[selection] = 1;
+static u8 Nuzlocke_ProcessInput(u8 selection)
+{
+    if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
+    {
+        selection ^= 1;
+        sArrowPressed = TRUE;
+    }
 
-    DrawOptionMenuChoice(gText_ButtonTypeNormal, 104, YPOS_BUTTONMODE, styles[0]);
+    return selection;
+}
 
-    widthNormal = GetStringWidth(FONT_NORMAL, gText_ButtonTypeNormal, 0);
-    widthLR = GetStringWidth(FONT_NORMAL, gText_ButtonTypeLR, 0);
-    widthLA = GetStringWidth(FONT_NORMAL, gText_ButtonTypeLEqualsA, 0);
-
-    widthLR -= 94;
-    xLR = (widthNormal - widthLR - widthLA) / 2 + 104;
-    DrawOptionMenuChoice(gText_ButtonTypeLR, xLR, YPOS_BUTTONMODE, styles[1]);
-
-    DrawOptionMenuChoice(gText_ButtonTypeLEqualsA, GetStringRightAlignXOffset(FONT_NORMAL, gText_ButtonTypeLEqualsA, 198), YPOS_BUTTONMODE, styles[2]);
+// 0 = aus, 1 = an (Regeln in nuzlocke.c)
+static void Nuzlocke_DrawChoices(u8 selection)
+{
+    DrawOptionValue(selection ? gText_On : gText_Off, YPOS_NUZLOCKE);
 }
 
 static void DrawHeaderText(void)
 {
-    FillWindowPixelBuffer(WIN_HEADER, PIXEL_FILL(1));
-    AddTextPrinterParameterized(WIN_HEADER, FONT_NORMAL, gText_Option, 8, 1, TEXT_SKIP_DRAW, NULL);
+    FillWindowPixelBuffer(WIN_HEADER, PIXEL_FILL(COLOR_HEADER));
+    AddTextPrinterParameterized3(WIN_HEADER, FONT_NORMAL, 16, 1, sHeaderColors, TEXT_SKIP_DRAW, gText_Option);
     CopyWindowToVram(WIN_HEADER, COPYWIN_FULL);
+}
+
+static void DrawHelpText(u8 selection)
+{
+    FillWindowPixelBuffer(WIN_HELP, PIXEL_FILL(COLOR_HELP_BG));
+    AddTextPrinterParameterized3(WIN_HELP, FONT_SMALL, 16, 2, sHelpColors, TEXT_SKIP_DRAW, sOptionMenuItemsHelp[selection]);
+    CopyWindowToVram(WIN_HELP, COPYWIN_FULL);
 }
 
 static void DrawOptionMenuTexts(void)
 {
     u8 i;
 
-    FillWindowPixelBuffer(WIN_OPTIONS, PIXEL_FILL(1));
+    FillWindowPixelBuffer(WIN_OPTIONS, PIXEL_FILL(COLOR_PANEL));
     for (i = 0; i < MENUITEM_COUNT; i++)
-        AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, sOptionMenuItemsNames[i], 8, (i * 16) + 1, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized3(WIN_OPTIONS, FONT_NORMAL, 8, (i * OPTION_ROW_HEIGHT) + 1, sTextColors, TEXT_SKIP_DRAW, sOptionMenuItemsNames[i]);
     CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
-}
-
-#define TILE_TOP_CORNER_L 0x1A2
-#define TILE_TOP_EDGE     0x1A3
-#define TILE_TOP_CORNER_R 0x1A4
-#define TILE_LEFT_EDGE    0x1A5
-#define TILE_RIGHT_EDGE   0x1A7
-#define TILE_BOT_CORNER_L 0x1A8
-#define TILE_BOT_EDGE     0x1A9
-#define TILE_BOT_CORNER_R 0x1AA
-
-static void DrawBgWindowFrames(void)
-{
-    //                     bg, tile,              x, y, width, height, palNum
-    // Draw title window frame
-    FillBgTilemapBufferRect(1, TILE_TOP_CORNER_L,  1,  0,  1,  1,  7);
-    FillBgTilemapBufferRect(1, TILE_TOP_EDGE,      2,  0, 27,  1,  7);
-    FillBgTilemapBufferRect(1, TILE_TOP_CORNER_R, 28,  0,  1,  1,  7);
-    FillBgTilemapBufferRect(1, TILE_LEFT_EDGE,     1,  1,  1,  2,  7);
-    FillBgTilemapBufferRect(1, TILE_RIGHT_EDGE,   28,  1,  1,  2,  7);
-    FillBgTilemapBufferRect(1, TILE_BOT_CORNER_L,  1,  3,  1,  1,  7);
-    FillBgTilemapBufferRect(1, TILE_BOT_EDGE,      2,  3, 27,  1,  7);
-    FillBgTilemapBufferRect(1, TILE_BOT_CORNER_R, 28,  3,  1,  1,  7);
-
-    // Draw options list window frame
-    FillBgTilemapBufferRect(1, TILE_TOP_CORNER_L,  1,  4,  1,  1,  7);
-    FillBgTilemapBufferRect(1, TILE_TOP_EDGE,      2,  4, 26,  1,  7);
-    FillBgTilemapBufferRect(1, TILE_TOP_CORNER_R, 28,  4,  1,  1,  7);
-    FillBgTilemapBufferRect(1, TILE_LEFT_EDGE,     1,  5,  1, 18,  7);
-    FillBgTilemapBufferRect(1, TILE_RIGHT_EDGE,   28,  5,  1, 18,  7);
-    FillBgTilemapBufferRect(1, TILE_BOT_CORNER_L,  1, 19,  1,  1,  7);
-    FillBgTilemapBufferRect(1, TILE_BOT_EDGE,      2, 19, 26,  1,  7);
-    FillBgTilemapBufferRect(1, TILE_BOT_CORNER_R, 28, 19,  1,  1,  7);
-
-    CopyBgTilemapBufferToVram(1);
 }

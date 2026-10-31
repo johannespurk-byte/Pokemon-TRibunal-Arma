@@ -6,7 +6,7 @@
 PetalburgCity_Gym_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, PetalburgCity_Gym_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgCity_Gym_OnTransition
-	
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PetalburgCity_Gym_OnWarp
 	.byte 0
 
 PetalburgCity_Gym_OnLoad:
@@ -80,7 +80,13 @@ PetalburgCity_Gym_EventScript_MoveMomToEntrance::
 	setobjectxyperm LOCALID_PETALBURG_GYM_MOM, 4, 107
 	return
 
+PetalburgCity_Gym_OnWarp:
+	map_script_2 VAR_PETALBURG_GYM_STATE, 1, PetalburgCity_Gym_EventScript_TurnPlayerNorth
+	.2byte 0
 
+PetalburgCity_Gym_EventScript_TurnPlayerNorth::
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	end
 
 PetalburgCity_Gym_EventScript_Norman::
 	lock
@@ -297,8 +303,6 @@ PetalburgCity_Gym_Text_AlexiaDefeat:
 	.string "Jetzt bin ich hellwach...$"
 
 PetalburgCity_Gym_Text_AlexiaPostBattle:
-	.string "ALEXIA: Du bist wirklich stark.\n"
-	.string "Suchst du den Keller? Geh weiter!$"
 
 PetalburgCity_Gym_Text_GeorgeIntro:
 .string "Ich repariere hier unten die\n"

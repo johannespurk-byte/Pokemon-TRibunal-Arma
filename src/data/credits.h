@@ -52,6 +52,9 @@ enum
     PAGE_BRAILLE_CODE_CHECK_1,
     PAGE_BRAILLE_CODE_CHECK_2,
     PAGE_SPECIAL_THANKS_5,
+    PAGE_FONT,
+    PAGE_SYLJEYON,
+    PAGE_POKABBIE,
     PAGE_TASK_MANAGERS,
     PAGE_PRODUCERS,
     PAGE_EXECUTIVE_DIRECTOR,
@@ -63,6 +66,15 @@ enum
 #define ENTRIES_PER_PAGE 5
 
 static const u8 sCreditsText_EmptyString[]                    = _("");
+static const u8 sCreditsText_Font[]                           = _("Font");
+static const u8 sCreditsText_PixelOperator[]                  = _("Pixel Operator");
+static const u8 sCreditsText_JayveeEnaguas[]                  = _("Jayvee Enaguas");
+static const u8 sCreditsText_TrainerEditing[]                 = _("Trainer Editing");
+static const u8 sCreditsText_SwShMenuLayout[]                 = _("SwSh Menu Layout");
+static const u8 sCreditsText_Syljeyon[]                       = _("Syljeyon");
+static const u8 sCreditsText_Sprites[]                        = _("Sprites");
+static const u8 sCreditsText_PokeemeraldRogue[]               = _("pokeemerald-rogue");
+static const u8 sCreditsText_Pokabbie[]                       = _("Pokabbie");
 static const u8 sCreditsText_PkmnEmeraldVersion[]             = _("POKéMON EMERALD VERSION");
 static const u8 sCreditsText_Credits[]                        = _("Credits");
 static const u8 sCreditsText_ExecutiveDirector[]              = _("Executive Director");
@@ -222,6 +234,15 @@ static const u8 sCreditsText_NicolaPrattBarlow[]              = _("Nicola Pratt-
 static const u8 sCreditsText_ShellieDow[]                     = _("Shellie Dow");
 static const u8 sCreditsText_ErikJohnson[]                    = _("Erik Johnson");
 static const struct CreditsEntry sCreditsEntry_EmptyString                      = { 0, FALSE, sCreditsText_EmptyString};
+static const struct CreditsEntry sCreditsEntry_Font                             = {13,  TRUE, sCreditsText_Font};
+static const struct CreditsEntry sCreditsEntry_PixelOperator                    = {10, FALSE, sCreditsText_PixelOperator};
+static const struct CreditsEntry sCreditsEntry_JayveeEnaguas                    = {10, FALSE, sCreditsText_JayveeEnaguas};
+static const struct CreditsEntry sCreditsEntry_TrainerEditing                   = { 9,  TRUE, sCreditsText_TrainerEditing};
+static const struct CreditsEntry sCreditsEntry_SwShMenuLayout                   = { 9,  TRUE, sCreditsText_SwShMenuLayout};
+static const struct CreditsEntry sCreditsEntry_Syljeyon                         = {12, FALSE, sCreditsText_Syljeyon};
+static const struct CreditsEntry sCreditsEntry_Sprites                          = {13,  TRUE, sCreditsText_Sprites};
+static const struct CreditsEntry sCreditsEntry_PokeemeraldRogue                 = { 9, FALSE, sCreditsText_PokeemeraldRogue};
+static const struct CreditsEntry sCreditsEntry_Pokabbie                         = {12, FALSE, sCreditsText_Pokabbie};
 static const struct CreditsEntry sCreditsEntry_PkmnEmeraldVersion               = { 7,  TRUE, sCreditsText_PkmnEmeraldVersion};
 static const struct CreditsEntry sCreditsEntry_Credits                          = {11,  TRUE, sCreditsText_Credits};
 static const struct CreditsEntry sCreditsEntry_ExecutiveDirector                = { 8,  TRUE, sCreditsText_ExecutiveDirector};
@@ -747,6 +768,29 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_MotoyasuTojima,
         &sCreditsEntry_NicolaPrattBarlow,
         &sCreditsEntry_ShellieDow,
+    },
+    // Hauptschrift: Pixel Operator (CC0)
+    [PAGE_FONT] = {
+        _,
+        &sCreditsEntry_Font,
+        &sCreditsEntry_PixelOperator,
+        &sCreditsEntry_JayveeEnaguas,
+        _,
+    },
+    [PAGE_SYLJEYON] = {
+        _,
+        &sCreditsEntry_TrainerEditing,
+        &sCreditsEntry_SwShMenuLayout,
+        &sCreditsEntry_Syljeyon,
+        _,
+    },
+    // Lauf-, Wurf- und Vorderbilder der Gen-4-8-Figuren aus pokeemerald-rogue
+    [PAGE_POKABBIE] = {
+        _,
+        &sCreditsEntry_Sprites,
+        &sCreditsEntry_PokeemeraldRogue,
+        &sCreditsEntry_Pokabbie,
+        _,
     },
     [PAGE_TASK_MANAGERS] = {
         _,

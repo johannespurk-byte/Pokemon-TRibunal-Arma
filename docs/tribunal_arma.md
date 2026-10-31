@@ -1,0 +1,138 @@
+# Pokémon Tribunal ARMA – Änderungen
+
+Diese Seite beschreibt Änderungen an Pokémon Tribunal ARMA, die nicht aus pokeemerald-expansion stammen.
+Alle drei ROMs werden so gebaut, Emerald zuletzt, weil alle dieselbe `Pokemon_Tribunal_ARMA.gba` schreiben:
+
+```bash
+make firered -j$(nproc) UNUSED_ERROR=1 DEPRECATED_ERROR=1
+make leafgreen -j$(nproc) UNUSED_ERROR=1 DEPRECATED_ERROR=1
+make -j$(nproc) UNUSED_ERROR=1 DEPRECATED_ERROR=1
+```
+
+## Titelbild
+
+Die Schriftzüge „TRIBUNAL ARMA“, „PRESS START“ und „©2026 WARGUN“ sind in einer gemeinsamen, handgezeichneten Blockschrift gezeichnet.
+Die Buchstaben sind 5 Pixel hoch und haben 2 Pixel breite Striche und eine schwarze Kontur von 1 Pixel.
+Der Pokémon-Schriftzug ist unverändert.
+
+| Datei | Inhalt |
+|---|---|
+| `graphics/title_screen/tribunal_arma_0.png` … `_3.png` | „TRIBUNAL ARMA“, 4 Sprites à 32×8 bei y = 64 |
+| `graphics/title_screen/tribunal_arma_logo.pal` | Goldpalette für „TRIBUNAL ARMA“ |
+| `graphics/title_screen/press_start.png` | Kacheln 1–20: PRESS START (gold), Kacheln 21–40: Copyright (silber) |
+
+## Goldene Schrift in Textboxen
+
+Dialogtexte und die Rahmen der Menüfenster in der Spielwelt sind golden auf dunklem Marineblau.
+Der GBA zeichnet jeden Buchstaben mit genau zwei Farben: Füllfarbe und Schatten.
+Mehr Farbstufen als Gold mit Bronze-Schatten sind deshalb nicht möglich.
+
+| Datei | Index | Farbe | Verwendung |
+|---|---|---|---|
+| `graphics/text_window/message_box.png`, `name_box.png` | 1, 13, 14 | 20,28,64 Marineblau | Hintergrund der Dialogbox |
+| | 2 | 248,208,72 Gold | Schrift |
+| | 3 | 112,64,8 Bronze | Schriftschatten |
+| | 10 / 11 / 12 | dunkle Kontur / Goldkante / dunkles Blau | Kante der Box |
+| `graphics/text_window/1.png` (Standard-Fensterrahmen) | 1–8, 15 | Goldtöne | Rahmen von Startmenü, Ja/Nein und Auswahlmenüs |
+| | 14 | Marineblau | Innenkante des Rahmens |
+
+Die Palette der Dialogbox (`gMessageBox_Pal`) laden auch Menüfenster mit Palette 15.
+Darum wird die Schrift dort ebenfalls golden.
+Der Fußabdruck im Pokédex nutzt Index 2 dieser Palette und ist jetzt ebenfalls golden.
+
+### Menüs
+
+Team, Beutel und Pokédex haben dasselbe Schema: marineblaue Flächen, goldene Kanten und goldene Schrift.
+
+| Datei | Änderung |
+|---|---|
+| `graphics/interface/std_menu.pal` | Index 1 Marineblau, 2 Gold, 3 Bronze: Kontextmenüs und Ja/Nein auf allen Bildschirmen |
+| `graphics/interface/option_menu_text.pal`, `sOptionMenuBg_Pal` in `src/option_menu.c` | Optionsmenü: Titelleiste Bronze, Karte Marineblau, Namen Gold, Werte Hellgold, Pfeile und Hilfetext Dunkelgold |
+| `graphics/bag/swsh/tiles.png` | Gelbe Fläche wird Marineblau, orange Balken werden Gold, die Taschenleiste wird Schieferblau. In Palette 1 steht die Schrift (1 Gold, 3 Bronze; das gewählte Item hat 2 Hellgold und 4 Bronze, weil sein Balken schwarz ist) |
+| `graphics/bag/swsh/*.png` (Sprites) | Index 8, das rechte Ende des Balkens unter dem gewählten Item, wird Gold |
+| `graphics/party_menu/swsh/tiles.png` | Rote und lila Hälfte werden Marineblau und Schieferblau, die Pokéball-Linien Gold. Zeilen 1–6 sind die Zustände der Team-Plätze (Index 1 Fläche, 3 Schrift, 2 Schatten). Der Platz unter dem Cursor ist golden mit marineblauer Schrift |
+| `graphics/pokedex/bg_*.pal`, `search_results_bg.pal` | Alter Pokédex: weiße, graue und gelbe Flächen und grüne Streifen werden Marineblau, Konturen und Titel Gold |
+| `graphics/pokedex/hgss/palette_default.pal`, `palette_national.pal`, `palette_search_results.pal` | HGSS-Pokédex: Zeile 0 ist der Rahmen (1 Fläche, 4 Gitter und Beschriftung, 6 Buchstaben auf den Balken, 7–9 Balken und Kanten, 15 Schrift `TEXT_DYNAMIC_COLOR_6` und Konturen in Gold) |
+| `PrintMonInfo` in `src/pokedex_plus_hgss.c` | Der Pokédex-Eintrag nimmt mit `GetFontIdToFit` die schmalere Schrift, wenn er sonst über den Rahmen ragt |
+
+| `graphics/battle_interface/bw/textbox_0.pal`, `bw/actionbox.png`, `bw/movebox.png` | Kampf (BW-Oberfläche): Nachrichtenbox und Aktionsmenü marineblau mit goldenen Linien und Rahmen, Kampftext Gold mit Bronze-Schatten; Attackenfelder mit goldenem Rahmen (die Fläche färbt der Attackentyp) |
+| `graphics/battle_interface/bw_healthbox.pal` | Lebensanzeige: weißer Streifen wird Gold, dunkle Platte Marineblau, Name und KP-Zahlen Gold |
+| `graphics/battle_interface/text.pal` (Index 8–10), `B_WIN_YESNO` und `gText_BattleYesNoChoice` in `src/battle_message.c` | Ja/Nein im Kampf: Fläche Marineblau, Schrift Gold, Schatten Bronze. Vorher war die Fläche weiß und die Cursor-Spalte im Rahmen marineblau |
+| `message_box.png`, `name_box.png` (Index 4–9, 14, 15) | Rot, Grün und Blau sind aufgehellt, damit farbiger Text auf Marineblau lesbar bleibt (z. B. die Stimmfarben der NPCs in FireRed/LeafGreen). 14/15 sind Hellgold mit Bronze-Schatten |
+| `sTrainerCardTextColors`, `sTrainerCardStatColors` in `src/trainer_card.c` | Trainerkarte: Die Karte bleibt platinfarben, die Schrift ist dunkle Bronze (Index 15 der Dialogbox-Palette) mit Goldschatten. Werte auf der Rückseite sind Bronze statt Rot |
+| `graphics/pokemon_storage/*.pal` | PC-Boxen: Hintergrund mit dunklem Pokéball-Muster, „PKMN DATA“-Feld Marineblau mit Goldkante, Name und Level Gold, „PARTY POKéMON“ golden mit dunkler Schrift, „CLOSE BOX“ marineblau mit goldener Schrift (14 Buchstaben, 9 Schatten, 8 Fläche). Das Bildfeld hinter dem Pokémon ist ein Karomuster aus 8/11, 12/11 und 13/11; diese vier Einträge bleiben deshalb nahe Blautöne. Die Box-Hintergründe (Wallpaper) sind unverändert |
+| `graphics/summary_screen/swsh/tiles.png` | Pokémon-Übersicht: rote Fläche und lila Hintergrund werden Marineblau, das Infofeld Schieferblau, Beschriftungsfelder mit Goldtrennern und Goldschrift. In Zeile 2 steht der Text (1/2 Gold/Bronze, 3/4 Spitzname, 5–10 Wesensfarben mit dunklen Schatten). Die Seiten-Icons oben links haben eigene Einträge: In ihren Kacheln wurde 3 → 10 (Gold) und 7 → 11 (Hellgold, Rand der aktiven Seite) umgezeichnet |
+| `graphics/summary_screen/swsh/move_slot.png` | Attacken-Felder: Marineblau mit goldenem Namen, das Feld unter dem Cursor golden mit dunkler Schrift |
+| `graphics/shop/menu.png` | Laden: Itemliste mit marineblauen Streifen und goldenem Rand statt Pfirsich und Grün; Beschreibungs- und Item-Box marineblau statt weiß |
+| `ShowSaveInfoWindow` in `src/start_menu.c` | Speichermenü: Ort und Werte in Hellgold (Index 14) statt Grün bzw. Blau/Rot je nach Geschlecht |
+
+Text mit `TEXT_COLOR_WHITE` auf Palette 15 ist jetzt marineblau, weil Index 1 die Boxfläche ist.
+`palette_search_menu.pal` (Suchmaske) und die `_dark`-Paletten sind unverändert.
+
+## Erweiterter Pokédex
+
+In `include/config/pokedex_plus_hgss.h` ist `POKEDEX_PLUS_HGSS` auf `TRUE` gesetzt.
+Der Pokédex im HGSS-Stil zeigt Werte, Entwicklungen, Formen und Attacken.
+Alle Generationen 1–9 sind eingeschaltet, der National-Dex reicht bis Nr. 1025.
+`NewGameInitData` in `src/new_game.c` ruft `EnableNationalPokedex()` auf, damit ist der National-Dex ab Spielbeginn aktiv.
+Den Pokédex selbst bekommt man weiterhin von Birch bzw. Eich, danach zeigt er sofort alle 1025 Pokémon.
+Das spätere Upgrade durch Birch bzw. Eich läuft trotzdem ab, ändert aber nichts mehr.
+
+## Rocket-Versteck
+
+Alle elf Rüpel (`TRAINER_TEAM_ROCKET_GRUNT_8` … `_18`) und Giovanni (`TRAINER_BOSS_GIOVANNI`) haben 6 Pokémon mit 31 DVs, EVs, Wesen, Item und passender Fähigkeit.
+Die KI ist `Smart Trainer / Prediction`.
+Jedes Team hat genau einen Nutzer pro Gimmick: Mega, Dynamax, Tera und Z-Attacke.
+Die Teams stehen in `src/data/trainers_frlg.party`.
+
+### Emerald: Versteck unter der Spielhalle von Malvenfroh
+
+In Emerald liegt das Versteck unter der Spielhalle von Malvenfroh.
+Karten, Skripte und Texte sind dieselben wie in FireRed/LeafGreen.
+
+- **Karten:** `tools/mapjson/emerald_kanto_maps.json` listet die fünf Versteck-Karten und ihre Layouts. `mapjson` nimmt sie zusätzlich in den Emerald-Build auf, obwohl sie `REGION_KANTO` sind.
+- **Tilesets:** `gTileset_BuildingFrlg` und `gTileset_SilphCo` werden auch für Emerald gebaut (`src/data/tilesets/`).
+- **Skripte:** Die Versteck-Skripte und `data/scripts/item_ball_scripts_rocket_hideout.inc` stehen in `data/event_scripts.s` außerhalb von `.if IS_FRLG`.
+- **Trainer:** Giovanni und die Rüpel stehen in Emerald als `TRAINER_ROCKET_HIDEOUT_GIOVANNI` / `_GRUNT_8` … `_18` (IDs 872–883) in `src/data/trainers.party`. Die Teams sind dieselben wie in FRLG. `include/constants/opponents.h` biegt die FRLG-Namen in Emerald auf diese IDs um.
+- **Flags:** Item-Bälle, Giovanni, Liftschlüssel, Silph Scope und Lift nutzen in Emerald `FLAG_UNUSED_0x020` … `0x02F`. Die versteckten Items nutzen `0x266` … `0x269`. Liftschlüssel und Silph Scope werden beim neuen Spiel versteckt (`data/scripts/new_game.inc`).
+- **Lift:** `VAR_ELEVATOR_FLOOR` ist in Emerald `0x404E`, weil `0x403A` dort der Schrittzähler der Faraway-Insel ist.
+
+### Level
+
+In `src/data/level_scaling_rules.h` kämpfen alle zwölf mit `LEVEL_SCALING_TO_LEVEL_CAP`, also immer auf der aktuellen Level-Grenze aus `src/caps.c`.
+Das gilt in allen drei Versionen.
+
+| Orden | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+|---|---|---|---|---|---|---|---|---|---|
+| Level-Grenze | 18 | 36 | 50 | 60 | 68 | 74 | 80 | 90 | 100 |
+
+### Teams
+
+| Trainer | Mega | Dynamax | Tera | Z-Attacke |
+|---|---|---|---|---|
+| Rüpel 8 | Bibor | Iksbat | Arbok (Boden) | Alola-Sleimok (Tenebrium Z) |
+| Rüpel 9 | Kangama | Gaunux | Alola-Snobilikat (Unlicht) | Alola-Rattikarl (Normium Z) |
+| Rüpel 10 | Zobiris | Deponitox (Gigadynamax) | Aggrostella (Stahl) | Schlukwech (Toxium Z) |
+| Rüpel 11 | Flunkifer | Mimigma | Kryppuk (Fee) | Zoroark (Tenebrium Z) |
+| Rüpel 12 | Hundemon | Piondragi | Hypno (Psycho) | Skuntank (Toxium Z) |
+| Rüpel 13 | Tohaido | Krebutack | Calamanero (Kampf) | Tentoxa (Aquium Z) |
+| Rüpel 14 | Simsala | Bronzong | Morbitesse (Fee) | Rossana (Glacium Z) |
+| Rüpel 15 | Meditalis | Machomei (Gigadynamax) | Kapoera (Geist) | Meistagrif (Fightium Z) |
+| Rüpel 16 | Banette | Sandamer | Hippoterus (Wasser) | Stalobor (Terrium Z) |
+| Rüpel 17 | Garados | Aerodactyl | Nidoking (Boden) | Despotar (Petrium Z) |
+| Rüpel 18 | Gengar | Riffex (Gigadynamax) | Porygon2 (Geist) | Relaxo (Relaxonium Z) |
+| Giovanni | Stahlos | Rihornior | Nidoqueen (Fee) | Nidoking (Terrium Z) |
+
+Giovannis übrige Pokémon sind Digdri (Fokusgurt, Ausweglos) und Snobilikat (Leben-Orb, Techniker).
+
+### Giovannis Text
+
+Nach dem Kampf verspricht Giovanni weitere Begegnungen und verrät das Bündnis mit Team Magma und Team Aqua.
+Er finanziert Marc (Magma) und Adrian (Aqua) und hält sie für „nützliche Narren“.
+Dafür führen sie ihn zu den Legenden von Hoenn.
+Der Text steht in `data/maps/RocketHideout_B4F_Frlg/scripts.inc`.
+
+### Geplant
+
+- Giovanni in der Silph Co. bleibt unverändert.
+- Die Arena von Vertania wird ein eigenes Custom-Event.

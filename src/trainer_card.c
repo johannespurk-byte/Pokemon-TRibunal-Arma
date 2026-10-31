@@ -15,31 +15,69 @@
 #include "text.h"
 #include "event_data.h"
 #include "easy_chat.h"
+#include "field_player_avatar.h"
 #include "money.h"
 #include "strings.h"
 #include "string_util.h"
+#include "random.h"
 #include "trainer_card.h"
 #include "gpu_regs.h"
 #include "international_string_util.h"
 #include "pokedex.h"
 #include "pokemon_icon.h"
 #include "graphics.h"
-#include "pokemon_icon.h"
 #include "trainer_pokemon_sprites.h"
 #include "contest_util.h"
 #include "decompress.h"
-#include "constants/songs.h"
-#include "constants/game_stat.h"
-#include "constants/battle_frontier.h"
-#include "constants/rgb.h"
-#include "constants/trainers.h"
+#include "constants/trainers.h" // 🌟 HIER: Muss zwingend aktiv sein!
+
+#include "constants/event_objects.h"
 #include "constants/union_room.h"
+// 🌟 CUSTOM LINK-BRIDGE: Macht die Steven- und Wally-Farbpaletten im gesamten Pass-Dokument sichtbar!
+extern const u16 gTrainerPalette_Steven[];
+extern const u16 gTrainerPalette_Wally[];
+
+// 🌟 NEU: Fehlende Header wieder hinzufügen, um Sounds, Farben und Frontier-Konstanten zu reparieren!
+#include "constants/songs.h"
+#include "constants/rgb.h"
+#include "constants/battle_frontier.h"
+// 🌟 CUSTOM LINK-BRIDGE: Macht die Kanto-Farbpaletten im gesamten Pass-Dokument sichtbar!
+extern const u16 gTrainerPalette_Red[];
+extern const u16 gTrainerPalette_Leaf[];
+
+// 🌟 SINNOH-MENÜ-GRAFIKEN (Die echten Namen ohne das alte _Custom anmelden!)
+extern const u32 gTrainerFrontPic_Lucas[];
+extern const u16 gTrainerPalette_Lucas[];
+extern const u32 gTrainerFrontPic_Dawn[];
+extern const u16 gTrainerPalette_Dawn[];
+// 🌟 VERIFIZIERTE PALETTEN-BRÜCKE: Richtet die Deklarationen pfeilgerade auf die echten Grafik-Pfade deiner Engine aus!
+extern const u16 gTrainerPalette_RSBrendan[];
+extern const u16 gTrainerPalette_RSMay[];
+// 🌟 VERIFIZIERTE PALETTEN-BRÜCKE: Verknüpft die Adressen direkt mit den echten Objekten deiner Engine!
+extern const u16 gTrainerPalette_RubySapphireBrendan[];
+extern const u16 gTrainerPalette_RubySapphireMay[];
+
+// 🌟 VERIFIZIERTE PALETTEN-BRÜCKE: Richtet die Deklarationen auf deine echten Ethan/Lyra-Paletten aus!
+extern const u16 gTrainerPalette_Ethan[];
+extern const u16 gTrainerPalette_Lyra[];
+
+
+
+// 🌟 JOHTO-MENÜ-GRAFIKEN
+extern const u32 gTrainerFrontPic_RubySapphireBrendan[];
+extern const u16 gTrainerPalette_RubySapphireBrendan[];
+extern const u32 gTrainerFrontPic_RubySapphireMay[];
+extern const u16 gTrainerPalette_RubySapphireMay[];
+
+
+
 
 enum {
     WIN_MSG,
     WIN_CARD_TEXT,
     WIN_TRAINER_PIC,
 };
+
 
 struct TrainerCardData
 {
@@ -178,6 +216,7 @@ static const u16 sKantoTrainerCardBronze_Pal[]   = INCGFX_U16("graphics/trainer_
 static const u16 sHoennTrainerCardSilver_Pal[]   = INCGFX_U16("graphics/trainer_card/silver.pal", ".gbapal");
 static const u16 sKantoTrainerCardSilver_Pal[]   = INCGFX_U16("graphics/trainer_card/frlg/silver.pal", ".gbapal");
 static const u16 sHoennTrainerCardGold_Pal[]     = INCGFX_U16("graphics/trainer_card/gold.pal", ".gbapal");
+static const u16 sHoennTrainerCardPlatinum_Pal[] = INCGFX_U16("graphics/trainer_card/platinum.pal", ".gbapal");
 static const u16 sKantoTrainerCardGold_Pal[]     = INCGFX_U16("graphics/trainer_card/frlg/gold.pal", ".gbapal");
 static const u16 sHoennTrainerCardFemaleBg_Pal[] = INCGFX_U16("graphics/trainer_card/female_bg.pal", ".gbapal");
 static const u16 sKantoTrainerCardFemaleBg_Pal[] = INCGFX_U16("graphics/trainer_card/frlg/female_bg.pal", ".gbapal");
@@ -281,8 +320,9 @@ static const u16 *const sKantoTrainerCardPals[] =
     sKantoTrainerCardGold_Pal,   // 4 stars
 };
 
-static const u8 sTrainerCardTextColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY};
-static const u8 sTrainerCardStatColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_RED, TEXT_COLOR_LIGHT_RED};
+// Dunkle Bronze (Index 15 der Dialogbox-Palette) mit Goldschatten: auf der hellen Platin-Karte lesbar
+static const u8 sTrainerCardTextColors[] = {TEXT_COLOR_TRANSPARENT, 15, TEXT_COLOR_DARK_GRAY};
+static const u8 sTrainerCardStatColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_LIGHT_GRAY, TEXT_COLOR_DARK_GRAY};
 static const u8 sTimeColonInvisibleTextColors[6] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_TRANSPARENT, TEXT_COLOR_TRANSPARENT};
 
 static const u8 sTrainerPicOffset[2][GENDER_COUNT][2] =
@@ -317,6 +357,198 @@ static const u8 sTrainerPicFacilityClass[][GENDER_COUNT] =
         [FEMALE] = FACILITY_CLASS_MAY
     }
 };
+
+// ---------------------------------------------------------------------------
+// NEU: Generationen-Seiten der Trainerkarte (L/R blaettert, Steuerkreuz wechselt das Geschlecht)
+// Gespeichert wird die Auswahl in gSaveBlock2Ptr->playerCharacterVariant.
+// Das Portrait (facilityClass) ist rein optisch; 0xFF = Standard-Portrait der Karte (Brendan/May).
+// ---------------------------------------------------------------------------
+#ifndef PLAYER_CHARACTER_RED
+#define PLAYER_CHARACTER_RED  3
+#endif
+#ifndef PLAYER_CHARACTER_LEAF
+#define PLAYER_CHARACTER_LEAF 4
+#endif
+
+#define CARD_NO_PORTRAIT   0xFF
+#define CARD_DEFAULT_PAGE  2    // Gen 3 = Brendan/May
+
+struct TrainerCardGenPage
+{
+    u8 variant[GENDER_COUNT];       // playerCharacterVariant, der bei dieser Seite gesetzt wird
+    u8 facilityClass[GENDER_COUNT]; // Portrait auf der Karte
+    u16 trainerPic[GENDER_COUNT];   // Trainer-Bild für Karte (Vorderseite) und Kampf (Rückseite/Wurf)
+    const u8 *genLabel;             // Anzeige hinter "L/R:GEN "
+    const u8 *name[GENDER_COUNT];   // Name, wenn die Figur der Rivale ist
+};
+
+static const struct TrainerCardGenPage sTrainerCardGenPages[] =
+{
+    // Gen 1: Rot / Leaf (Seite 0)
+    {
+        .variant = { [MALE] = PLAYER_CHARACTER_RED,[FEMALE] = PLAYER_CHARACTER_LEAF},
+        .facilityClass = { [MALE] = FACILITY_CLASS_RED,[FEMALE] = FACILITY_CLASS_LEAF},
+        .trainerPic = { [MALE] = TRAINER_PIC_RED, [FEMALE] = TRAINER_PIC_LEAF },
+        .genLabel = COMPOUND_STRING("1"),
+        .name = { [MALE] = COMPOUND_STRING("RED"), [FEMALE] = COMPOUND_STRING("LEAF") },
+    },
+    // Gen 2: Ethan / Lyra (Seite 1)
+    {
+        .variant = { [MALE] = PLAYER_CHARACTER_ETHAN,[FEMALE] = PLAYER_CHARACTER_LYRA},
+        .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+        .trainerPic = { [MALE] = TRAINER_PIC_ETHAN, [FEMALE] = TRAINER_PIC_LYRA },
+        .genLabel = COMPOUND_STRING("2"),
+        .name = { [MALE] = COMPOUND_STRING("ETHAN"), [FEMALE] = COMPOUND_STRING("LYRA") },
+    },
+    // Gen 3: Brendan / May (Seite 2)
+    {
+        .variant = { [MALE] = PLAYER_CHARACTER_DEFAULT,[FEMALE] = PLAYER_CHARACTER_DEFAULT},
+        .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+        .trainerPic = { [MALE] = TRAINER_PIC_BRENDAN, [FEMALE] = TRAINER_PIC_MAY },
+        .genLabel = COMPOUND_STRING("3"),
+        .name = { [MALE] = gText_ExpandedPlaceholder_Brendan, [FEMALE] = gText_ExpandedPlaceholder_May },
+    },
+    // Gen 4: Lucius / Lucia (Seite 3)
+    {
+        .variant = { [MALE] = 7,[FEMALE] = 8},
+        .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+        .trainerPic = { [MALE] = TRAINER_PIC_LUCAS, [FEMALE] = TRAINER_PIC_DAWN },
+        .genLabel = COMPOUND_STRING("4"),
+        .name = { [MALE] = COMPOUND_STRING("LUCAS"), [FEMALE] = COMPOUND_STRING("DAWN") },
+    },
+    // Gen 5: Hilbert / Hilda (Seite 4)
+    {
+        .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+        .trainerPic = { [MALE] = TRAINER_PIC_HILBERT, [FEMALE] = TRAINER_PIC_HILDA },
+        .genLabel = COMPOUND_STRING("5"),
+        .name = { [MALE] = COMPOUND_STRING("HILBERT"), [FEMALE] = COMPOUND_STRING("HILDA") },
+    },
+    // Gen 5 (SW2): Nate / Rosa (Seite 5)
+    {
+        .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+        .trainerPic = { [MALE] = TRAINER_PIC_NATE, [FEMALE] = TRAINER_PIC_ROSA },
+        .genLabel = COMPOUND_STRING("5-2"),
+        .name = { [MALE] = COMPOUND_STRING("NATE"), [FEMALE] = COMPOUND_STRING("ROSA") },
+    },
+    // Gen 6: Calem / Serena (Seite 6)
+    {
+        .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+        .trainerPic = { [MALE] = TRAINER_PIC_CALEM, [FEMALE] = TRAINER_PIC_SERENA },
+        .genLabel = COMPOUND_STRING("6"),
+        .name = { [MALE] = COMPOUND_STRING("CALEM"), [FEMALE] = COMPOUND_STRING("SERENA") },
+    },
+    // Gen 7: Elio / Selene (Seite 7)
+    {
+        .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+        .trainerPic = { [MALE] = TRAINER_PIC_ELIO, [FEMALE] = TRAINER_PIC_SELENE },
+        .genLabel = COMPOUND_STRING("7"),
+        .name = { [MALE] = COMPOUND_STRING("ELIO"), [FEMALE] = COMPOUND_STRING("SELENE") },
+    },
+    // Gen 8: Victor / Gloria (Seite 8)
+    {
+        .facilityClass = { [MALE] = CARD_NO_PORTRAIT,[FEMALE] = CARD_NO_PORTRAIT},
+        .trainerPic = { [MALE] = TRAINER_PIC_VICTOR, [FEMALE] = TRAINER_PIC_GLORIA },
+        .genLabel = COMPOUND_STRING("8"),
+        .name = { [MALE] = COMPOUND_STRING("VICTOR"), [FEMALE] = COMPOUND_STRING("GLORIA") },
+    },
+};
+
+EWRAM_DATA u8 sTrainerCardCurrentSkin = 0; // 0 = Hauptheld, 1 = Rivale/Alternativ
+
+// Die gewählte Seite liegt als "Seite + 1" in VAR_TRAINER_CARD_PAGE und wird so mit dem Spielstand gespeichert.
+// 0 (neuer oder alter Spielstand ohne Wahl) ergibt die Emerald-Standardseite Gen 3.
+static u8 TrainerCardGetPage(void)
+{
+    u16 value = VarGet(VAR_TRAINER_CARD_PAGE);
+
+    if (value == 0 || value > ARRAY_COUNT(sTrainerCardGenPages))
+        return CARD_DEFAULT_PAGE;
+    return value - 1;
+}
+
+void TrainerCard_SetCharacterPage(u8 page)
+{
+    if (page < ARRAY_COUNT(sTrainerCardGenPages))
+        VarSet(VAR_TRAINER_CARD_PAGE, page + 1);
+}
+
+u8 TrainerCard_GetCharacterPage(void)
+{
+    return TrainerCardGetPage();
+}
+
+u16 TrainerCard_GetPlayerTrainerPic(u8 gender)
+{
+    return TrainerCard_GetPagePlayerPic(TrainerCardGetPage(), gender);
+}
+
+u8 TrainerCard_GetPageCount(void)
+{
+    return ARRAY_COUNT(sTrainerCardGenPages);
+}
+
+u16 TrainerCard_GetPagePlayerPic(u8 page, u8 gender)
+{
+    if (page >= ARRAY_COUNT(sTrainerCardGenPages))
+        page = 0;
+    return sTrainerCardGenPages[page].trainerPic[gender != MALE];
+}
+
+const u8 *TrainerCard_GetPageLabel(u8 page)
+{
+    if (page >= ARRAY_COUNT(sTrainerCardGenPages))
+        page = 0;
+    return sTrainerCardGenPages[page].genLabel;
+}
+
+// Der Rivale (Birchs Kind) hat immer das andere Geschlecht, die Generation wird beim neuen Spiel ausgelost.
+// Sie liegt als "Seite + 1" in VAR_RIVAL_CHARACTER_PAGE; 0 (alter Spielstand) ergibt Brendan/May.
+void TrainerCard_DrawRivalPage(void)
+{
+    VarSet(VAR_RIVAL_CHARACTER_PAGE, Random() % ARRAY_COUNT(sTrainerCardGenPages) + 1);
+}
+
+u8 TrainerCard_GetRivalPage(void)
+{
+    u16 value = VarGet(VAR_RIVAL_CHARACTER_PAGE);
+
+    if (value == 0 || value > ARRAY_COUNT(sTrainerCardGenPages))
+        return CARD_DEFAULT_PAGE;
+    return value - 1;
+}
+
+u8 TrainerCard_GetRivalGender(void)
+{
+    return gSaveBlock2Ptr->playerGender == MALE ? FEMALE : MALE;
+}
+
+u16 TrainerCard_GetRivalTrainerPic(void)
+{
+    return sTrainerCardGenPages[TrainerCard_GetRivalPage()].trainerPic[TrainerCard_GetRivalGender()];
+}
+
+const u8 *TrainerCard_GetRivalName(void)
+{
+    return sTrainerCardGenPages[TrainerCard_GetRivalPage()].name[TrainerCard_GetRivalGender()];
+}
+
+static void TrainerCardApplyPage(u8 page)
+{
+    TrainerCard_SetCharacterPage(page);
+}
+
+static u8 TrainerCardGetFacilityClass(void)
+{
+    u8 gender = sData->trainerCard.gender;
+    u8 facilityClass = CARD_NO_PORTRAIT;
+
+    if (!sData->isLink)
+        facilityClass = sTrainerCardGenPages[TrainerCardGetPage()].facilityClass[gender];
+    if (facilityClass == CARD_NO_PORTRAIT)
+        facilityClass = sTrainerPicFacilityClass[sData->cardType][gender];
+    return facilityClass;
+}
+
 
 static bool8 (*const sTrainerCardFlipTasks[])(struct Task *) =
 {
@@ -454,7 +686,30 @@ static void Task_TrainerCard(u8 taskId)
         else if (JOY_NEW(DPAD_LEFT) || JOY_NEW(DPAD_RIGHT))
         {
             PlaySE(SE_SELECT);
-            gSaveBlock2Ptr->playerGender ^= 1;
+            {
+                u8 page = TrainerCardGetPage();
+                gSaveBlock2Ptr->playerGender ^= 1;
+                TrainerCardApplyPage(page); // NEU: Generation bleibt, Variante passt zum neuen Geschlecht
+                UpdatePlayerAvatarForCharacterChange();
+            }
+            ResetSpriteData();
+            FreeAllSpritePalettes();
+            FreeAllWindowBuffers();
+            SetMainCallback2(CB2_InitTrainerCard);
+        }
+        // 3. NEU: GENERATION WECHSELN MIT L/R (nur bei der eigenen Karte)
+        else if (!sData->isLink && (JOY_NEW(L_BUTTON) || JOY_NEW(R_BUTTON)))
+        {
+            u8 page = TrainerCardGetPage();
+            u8 count = ARRAY_COUNT(sTrainerCardGenPages);
+
+            PlaySE(SE_SELECT);
+            if (JOY_NEW(R_BUTTON))
+                page = (page + 1) % count;
+            else
+                page = (page + count - 1) % count;
+            TrainerCardApplyPage(page);
+            UpdatePlayerAvatarForCharacterChange();
             ResetSpriteData();
             FreeAllSpritePalettes();
             FreeAllWindowBuffers();
@@ -605,6 +860,10 @@ static void CB2_InitTrainerCard(void)
     switch (gMain.state)
     {
     case 0:
+        // NEU: eigene Karte bei jedem (Neu-)Start aus dem Spielstand lesen, damit Geschlecht
+        // und Name nach Steuerkreuz/SELECT sofort stimmen (vorher blieb die Kopie vom Oeffnen)
+        if (!sData->isLink)
+            TrainerCard_GenerateCardForPlayer(&sData->trainerCard);
         ResetGpuRegs();
         SetUpTrainerCardTask();
         gMain.state++;
@@ -1040,13 +1299,21 @@ static void PrintNameOnCardFront(void)
     else
         AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 16, 33, sTrainerCardTextColors, TEXT_SKIP_DRAW, buffer);
 
-    // --- DEINE NEUE INTERAKTIVE TASTEN-ZUWEISUNG (HORIZONTAL IM WEISSEN BEREICH RECHTS) ---
+    // --- INTERAKTIVE TASTEN-HINWEISE (rechts im weissen Bereich) ---
+    // SELECT = Name, L/R = Generation (zeigt die aktuelle Nummer), Steuerkreuz = Skin (Junge/Maedchen)
     static const u8 sTextSelectName[] = _("SELECT: NAME");
-    static const u8 sTextDpadSkin[]   = _("L/R: SKIN");
+    static const u8 sTextPadSkin[]    = _("PAD: SKIN");
+    static const u8 sTextGenPrefix[]  = _("L/R:GEN ");
+    u8 genText[16];
 
-    // Beide auf Hoehe 28 (neben dem Namen), aber weit nach rechts versetzt (X: 110 und X: 180)
     AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_SMALL, 110, 28, sTrainerCardTextColors, TEXT_SKIP_DRAW, sTextSelectName);
-    AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_SMALL, 180, 28, sTrainerCardTextColors, TEXT_SKIP_DRAW, sTextDpadSkin);
+    if (!sData->isLink)
+    {
+        u8 *end = StringCopy(genText, sTextGenPrefix);
+        StringCopy(end, sTrainerCardGenPages[TrainerCardGetPage()].genLabel);
+        AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_SMALL, 180, 28, sTrainerCardTextColors, TEXT_SKIP_DRAW, genText);
+        AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_SMALL, 110, 38, sTrainerCardTextColors, TEXT_SKIP_DRAW, sTextPadSkin);
+    }
 }
 
 static void PrintIdOnCard(void)
@@ -1465,11 +1732,17 @@ static u8 SetCardBgsAndPals(void)
         LoadBgTiles(0, sData->cardTiles, 0x1800, 0);
         break;
     case 2:
+    {
         if (sData->cardType != CARD_TYPE_FRLG)
         {
-            LoadPalette(sHoennTrainerCardPals[sData->trainerCard.stars], BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
+            // Eigene Karte immer in Platin, Link-Karten behalten die Sterne-Farbe
+            if (!sData->isLink)
+                LoadPalette(sHoennTrainerCardPlatinum_Pal, BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
+            else
+                LoadPalette(sHoennTrainerCardPals[sData->trainerCard.stars], BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
             LoadPalette(sHoennTrainerCardBadges_Pal, BG_PLTT_ID(3), PLTT_SIZE_4BPP);
-            if (sData->trainerCard.gender != MALE)
+            // Eigene Karte: auch der Hintergrund bleibt platin (kein rosa Hintergrund für Mädchen)
+            if (sData->trainerCard.gender != MALE && sData->isLink)
                 LoadPalette(sHoennTrainerCardFemaleBg_Pal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
         }
         else
@@ -1480,8 +1753,12 @@ static u8 SetCardBgsAndPals(void)
                 LoadPalette(sKantoTrainerCardFemaleBg_Pal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
         }
         LoadPalette(sTrainerCardStar_Pal, BG_PLTT_ID(4), PLTT_SIZE_4BPP);
-        break;
+    }
+    break;
+
+
     case 3:
+
         SetBgTilemapBuffer(0, sData->cardTilemapBuffer);
         SetBgTilemapBuffer(2, sData->bgTilemapBuffer);
         break;
@@ -1915,25 +2192,21 @@ static u8 VersionToCardType(enum GameVersion version)
     else
         return CARD_TYPE_RS;
 }
-
 static void CreateTrainerCardTrainerPic(void)
 {
     if (InUnionRoom() == TRUE && gReceivedRemoteLinkPlayers)
     {
-        CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(sData->trainerCard.unionRoomClass),
-                    TRUE,
-                    sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][0],
-                    sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][1],
-                    8,
-                    WIN_TRAINER_PIC);
+        CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(sData->trainerCard.unionRoomClass), TRUE, 0, 0, 8, WIN_TRAINER_PIC);
+    }
+    else if (sData->isLink)
+    {
+        CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(TrainerCardGetFacilityClass()), TRUE, 0, 0, 8, WIN_TRAINER_PIC);
     }
     else
     {
-        CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(sTrainerPicFacilityClass[sData->cardType][sData->trainerCard.gender]),
-                    TRUE,
-                    sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][0],
-                    sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][1],
-                    8,
-                    WIN_TRAINER_PIC);
+        // Eigene Karte: Bild der gewählten Generations-Seite (lädt seine eigene Palette mit)
+        CreateTrainerCardTrainerPicSprite(TrainerCard_GetPlayerTrainerPic(sData->trainerCard.gender), TRUE, 0, 0, 8, WIN_TRAINER_PIC);
     }
 }
+
+

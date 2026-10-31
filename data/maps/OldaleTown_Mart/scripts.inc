@@ -17,12 +17,12 @@ OldaleTown_Mart_Pokemart:
 .2byte ITEM_TM_ROCK_TOMB     // TM Felsgrab (Giovanni)
 .2byte ITEM_TM_SECRET_POWER  // TM Geheimpower (Giovanni)
 .2byte ITEM_TM_SHOCK_WAVE    // TM Schockwelle (Marc)
-.2byte ITEM_TM_THIEF         // TM Raub (Marc - Ersatz f¸r Fake Out, funktioniert garantiert!)
+.2byte ITEM_TM_THIEF         // TM Raub (Marc - Ersatz f√ºr Fake Out, funktioniert garantiert!)
 .2byte ITEM_SITRUS_BERRY     // Sitrusbeere
 .2byte ITEM_SILK_SCARF       // Seidenschal
 .2byte ITEM_CHOICE_BAND      // Wahlband
 .2byte ITEM_SOOTHE_BELL      // Sanftglocke
-.2byte ITEM_NONE             // Schlieﬂt das Verkaufsregal sicher ab
+.2byte ITEM_NONE             // Schlie√üt das Verkaufsregal sicher ab
 
 
 OldaleTown_Mart_EventScript_Woman::

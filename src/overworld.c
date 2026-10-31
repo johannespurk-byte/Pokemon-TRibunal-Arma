@@ -1836,8 +1836,9 @@ u8 UpdateSpritePaletteWithTime(u8 paletteNum)
     return paletteNum;
 }
 
-static void OverworldBasic(void)
+void OverworldBasic(void)
 {
+    TryShowTrainerEggMessage();
     ScriptContext_RunScript();
     RunTasks();
     AnimateSprites();

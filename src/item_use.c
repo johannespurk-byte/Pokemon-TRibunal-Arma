@@ -28,6 +28,7 @@
 #include "mail.h"
 #include "main.h"
 #include "menu.h"
+#include "nuzlocke.h"
 #include "menu_helpers.h"
 #include "metatile_behavior.h"
 #include "oras_dowse.h"
@@ -92,6 +93,9 @@ static void ItemUseOnFieldCB_RockSmash(u8 taskId);
 static void ItemUseOnFieldCB_Waterfall(u8 taskId);
 static void ItemUseOnFieldCB_Dive(u8 taskId);
 static void ItemUseOnFieldCB_DiveUnderwater(u8 taskId);
+static bool32 IteamHealsMonVolatile(enum BattlerId battler, enum Item itemId);
+static bool32 SelectedMonHasVolatile(enum Item itemId);
+void ItemUseOutOfBattle_CannotUse(u8 taskId);
 
 static const u8 sText_CantDismountBike[] = _("You can't dismount your BIKE here.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_ItemFinderNearby[] = _("Huh?\nThe ITEMFINDER's responding!\pThere's an item buried around here!{PAUSE_UNTIL_PRESS}");
@@ -1185,6 +1189,8 @@ static u32 GetBallThrowableState(void)
         return BALL_THROW_UNABLE_SEMI_INVULNERABLE;
     else if (FlagGet(WE_FLAG_NO_CATCHING) || !IsAllowedToUseBag())
         return BALL_THROW_UNABLE_DISABLED_FLAG;
+    else if (Nuzlocke_IsCatchBlocked())
+        return BALL_THROW_UNABLE_NUZLOCKE;
 
     return BALL_THROW_ABLE;
 }
@@ -1197,6 +1203,7 @@ bool32 CanThrowBall(void)
 static const u8 sText_CantThrowPokeBall_TwoMons[] = _("Cannot throw a ball!\nThere are two Pokémon out there!\p");
 static const u8 sText_CantThrowPokeBall_SemiInvulnerable[] = _("Cannot throw a ball!\nThere's no Pokémon in sight!\p");
 static const u8 sText_CantThrowPokeBall_Disabled[] = _("POKé BALLS cannot be used\nright now!\p");
+static const u8 sText_CantThrowPokeBall_Nuzlocke[] = _("NUZLOCKE: You already had your\nencounter in this area!\p");
 void ItemUseInBattle_PokeBall(u8 taskId)
 {
     switch (GetBallThrowableState())
@@ -1232,6 +1239,12 @@ void ItemUseInBattle_PokeBall(u8 taskId)
             DisplayItemMessage(taskId, FONT_NORMAL, sText_CantThrowPokeBall_Disabled, CloseItemMessage);
         else
             DisplayItemMessageInBattlePyramid(taskId, sText_CantThrowPokeBall_Disabled, Task_CloseBattlePyramidBagMessage);
+        break;
+    case BALL_THROW_UNABLE_NUZLOCKE:
+        if (CurrentBattlePyramidLocation() == PYRAMID_LOCATION_NONE)
+            DisplayItemMessage(taskId, FONT_NORMAL, sText_CantThrowPokeBall_Nuzlocke, CloseItemMessage);
+        else
+            DisplayItemMessageInBattlePyramid(taskId, sText_CantThrowPokeBall_Nuzlocke, Task_CloseBattlePyramidBagMessage);
         break;
     }
 }
@@ -1893,30 +1906,81 @@ void ItemUseOutOfBattle_Dive(u8 taskId)
 // === modular POKÉVIAL ITEM LOGIC START ===
 void HealPlayerParty(void);
 
+// Die Meldungen laufen im Beutel; CloseItemMessage kehrt danach zur Item-Liste zurück.
+// (ItemUseOutOfBattle_CannotUse als Rücksprung hielt den Beutel fürs Spielfeld und beendete den Beutel-Task -> Absturz.)
 void ItemUseOutOfBattle_PokeVial(u8 taskId)
 {
-    u16 charges = VarGet(VAR_UNUSED_0x40F7); // KORREKTUR: Dauerhafte Variable!
+    u16 charges = VarGet(VAR_UNUSED_0x40F7);
+
+    if (charges > 5)
+    {
+        charges = 5;
+        VarSet(VAR_UNUSED_0x40F7, 5);
+    }
 
     if (charges == 0)
     {
-        DisplayItemMessage(taskId, 2, COMPOUND_STRING("Das PokeVial ist komplett leer!\nHeile dein Team im PKMN-Center."), ItemUseOutOfBattle_CannotUse);
+        DisplayItemMessage(taskId, FONT_NORMAL, COMPOUND_STRING("Das Poké Vial ist komplett leer!\nHeile dein Team im PKMN-Center."), CloseItemMessage);
     }
     else
     {
-        PlaySE(173); // MUS_SUCCES Hardware-ID
+        PlaySE(SE_USE_ITEM);
         HealPlayerParty();
 
         charges--;
-        VarSet(VAR_UNUSED_0x40F7, charges); // KORREKTUR: Dauerhafte Variable!
+        VarSet(VAR_UNUSED_0x40F7, charges);
 
         if (charges == 0) {
-            DisplayItemMessage(taskId, 2, COMPOUND_STRING("Das PokeVial wurde benutzt!\nEs ist jetzt komplett leer!"), ItemUseOutOfBattle_CannotUse);
+            DisplayItemMessage(taskId, FONT_NORMAL, COMPOUND_STRING("Das Poké Vial wurde benutzt!\nEs ist jetzt komplett leer!"), CloseItemMessage);
         }
         else {
             ConvertIntToDecimalStringN(gStringVar1, charges, STR_CONV_MODE_LEFT_ALIGN, 1);
-            StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Das PokeVial wurde benutzt!\nLadungen uebrig: {STR_VAR_1}."));
-            DisplayItemMessage(taskId, 2, gStringVar4, ItemUseOutOfBattle_CannotUse);
+            StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Das Poké Vial wurde benutzt!\nLadungen uebrig: {STR_VAR_1}/5."));
+            DisplayItemMessage(taskId, FONT_NORMAL, gStringVar4, CloseItemMessage);
         }
     }
 }
 // === POKÉVIAL ITEM LOGIC ENDE ===
+// === modular AUTOMATIC REPEL SYSTEM START ===
+// Die Knöpfe ANSCHALTEN/ABSCHALTEN im Beutel setzen gSpecialVar_Result auf
+// AUTO_REPEL_SWITCH_ON/OFF, jeder andere Weg schaltet um. Solange FLAG_AUTO_REPEL_ON
+// gesetzt ist, zählt UpdateRepelCounter nicht herunter, der Schutz hält also dauerhaft.
+// Wie beim Poké Vial kehrt CloseItemMessage danach zur Item-Liste zurück.
+void ItemUseOutOfBattle_AutoRepel(u8 taskId)
+{
+    bool32 switchOn;
+
+    if (gSpecialVar_Result == AUTO_REPEL_SWITCH_ON)
+        switchOn = TRUE;
+    else if (gSpecialVar_Result == AUTO_REPEL_SWITCH_OFF)
+        switchOn = FALSE;
+    else
+        switchOn = !FlagGet(FLAG_AUTO_REPEL_ON);
+    gSpecialVar_Result = 0;
+
+    if (switchOn)
+    {
+        PlaySE(SE_REPEL);
+        FlagSet(FLAG_AUTO_REPEL_ON);
+        VarSet(VAR_REPEL_STEP_COUNT, 250);
+        DisplayItemMessage(taskId, FONT_NORMAL, COMPOUND_STRING("Der Auto-Schutz wurde eingeschaltet!\nWilden Pokemon wird der Weg versperrt."), CloseItemMessage);
+    }
+    else
+    {
+        PlaySE(SE_SELECT);
+        FlagClear(FLAG_AUTO_REPEL_ON);
+        VarSet(VAR_REPEL_STEP_COUNT, 0);
+        DisplayItemMessage(taskId, FONT_NORMAL, COMPOUND_STRING("Der Auto-Schutz wurde ausgeschaltet!"), CloseItemMessage);
+    }
+}
+// === AUTOMATIC REPEL SYSTEM ENDE ===
+
+// 🌟 CUSTOM AUTO-SCHUTZ TEXTE FÜR DEIN BEUTEL-INTERFACE
+static const u8 sText_Anschalten[] = _("ANSCHALTEN");
+static const u8 sText_Abschalten[] = _("ABSCHALTEN");
+
+
+
+
+
+

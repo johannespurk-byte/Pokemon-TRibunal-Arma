@@ -1,5 +1,83 @@
-#include "constants/trainers.h"
+﻿#include "constants/trainers.h"
 #include "data.h"
+
+// Custom player back pics (5-frame HGSS layout, 64x320). Back pics are uncompressed
+// because the sprite system copies single frames directly out of the data.
+const u8 gTrainerBackPic_Ethan[] = INCGFX_U8("graphics/trainers/back_pics/ethan_back.png", ".4bpp");
+const u8 gTrainerBackPic_Lyra[] = INCGFX_U8("graphics/trainers/back_pics/lyra_back.png", ".4bpp");
+const u8 gTrainerBackPic_Lucas[] = INCGFX_U8("graphics/trainers/back_pics/lucas_back.png", ".4bpp");
+const u8 gTrainerBackPic_Dawn[] = INCGFX_U8("graphics/trainers/back_pics/dawn_back.png", ".4bpp");
+const u16 gTrainerBackPicPalette_Ethan[] = INCGFX_U16("graphics/trainers/back_pics/ethan_back.png", ".gbapal");
+const u16 gTrainerBackPicPalette_Lyra[] = INCGFX_U16("graphics/trainers/back_pics/lyra_back.png", ".gbapal");
+const u16 gTrainerBackPicPalette_Lucas[] = INCGFX_U16("graphics/trainers/back_pics/lucas_back.png", ".gbapal");
+const u16 gTrainerBackPicPalette_Dawn[] = INCGFX_U16("graphics/trainers/back_pics/dawn_back.png", ".gbapal");
+
+// Gen 5-8 player characters: front pics from Showdown (80x80 scaled to 64x64),
+// back pics for Hilbert, Hilda, Calem and Serena from pokeemerald-rogue (Pokabbie); Nate, Rosa,
+// Elio, Victor, Selene and Gloria are recoloured from the closest of those.
+const u32 gTrainerFrontPic_Hilbert[] = INCGFX_U32("graphics/trainers/front_pics/hilbert.png", ".4bpp.smol");
+const u16 gTrainerPalette_Hilbert[] = INCGFX_U16("graphics/trainers/front_pics/hilbert.png", ".gbapal");
+const u8 gTrainerBackPic_Hilbert[] = INCGFX_U8("graphics/trainers/back_pics/hilbert_back.png", ".4bpp");
+const u16 gTrainerBackPicPalette_Hilbert[] = INCGFX_U16("graphics/trainers/back_pics/hilbert_back.png", ".gbapal");
+
+const u32 gTrainerFrontPic_Hilda[] = INCGFX_U32("graphics/trainers/front_pics/hilda.png", ".4bpp.smol");
+const u16 gTrainerPalette_Hilda[] = INCGFX_U16("graphics/trainers/front_pics/hilda.png", ".gbapal");
+const u8 gTrainerBackPic_Hilda[] = INCGFX_U8("graphics/trainers/back_pics/hilda_back.png", ".4bpp");
+const u16 gTrainerBackPicPalette_Hilda[] = INCGFX_U16("graphics/trainers/back_pics/hilda_back.png", ".gbapal");
+
+const u32 gTrainerFrontPic_Nate[] = INCGFX_U32("graphics/trainers/front_pics/nate.png", ".4bpp.smol");
+const u16 gTrainerPalette_Nate[] = INCGFX_U16("graphics/trainers/front_pics/nate.png", ".gbapal");
+const u8 gTrainerBackPic_Nate[] = INCGFX_U8("graphics/trainers/back_pics/nate_back.png", ".4bpp");
+const u16 gTrainerBackPicPalette_Nate[] = INCGFX_U16("graphics/trainers/back_pics/nate_back.png", ".gbapal");
+
+const u32 gTrainerFrontPic_Rosa[] = INCGFX_U32("graphics/trainers/front_pics/rosa.png", ".4bpp.smol");
+const u16 gTrainerPalette_Rosa[] = INCGFX_U16("graphics/trainers/front_pics/rosa.png", ".gbapal");
+const u8 gTrainerBackPic_Rosa[] = INCGFX_U8("graphics/trainers/back_pics/rosa_back.png", ".4bpp");
+const u16 gTrainerBackPicPalette_Rosa[] = INCGFX_U16("graphics/trainers/back_pics/rosa_back.png", ".gbapal");
+
+const u32 gTrainerFrontPic_Calem[] = INCGFX_U32("graphics/trainers/front_pics/calem.png", ".4bpp.smol");
+const u16 gTrainerPalette_Calem[] = INCGFX_U16("graphics/trainers/front_pics/calem.png", ".gbapal");
+const u8 gTrainerBackPic_Calem[] = INCGFX_U8("graphics/trainers/back_pics/calem_back.png", ".4bpp");
+const u16 gTrainerBackPicPalette_Calem[] = INCGFX_U16("graphics/trainers/back_pics/calem_back.png", ".gbapal");
+
+const u32 gTrainerFrontPic_Serena[] = INCGFX_U32("graphics/trainers/front_pics/serena.png", ".4bpp.smol");
+const u16 gTrainerPalette_Serena[] = INCGFX_U16("graphics/trainers/front_pics/serena.png", ".gbapal");
+const u8 gTrainerBackPic_Serena[] = INCGFX_U8("graphics/trainers/back_pics/serena_back.png", ".4bpp");
+const u16 gTrainerBackPicPalette_Serena[] = INCGFX_U16("graphics/trainers/back_pics/serena_back.png", ".gbapal");
+
+const u32 gTrainerFrontPic_Elio[] = INCGFX_U32("graphics/trainers/front_pics/elio.png", ".4bpp.smol");
+const u16 gTrainerPalette_Elio[] = INCGFX_U16("graphics/trainers/front_pics/elio.png", ".gbapal");
+const u8 gTrainerBackPic_Elio[] = INCGFX_U8("graphics/trainers/back_pics/elio_back.png", ".4bpp");
+const u16 gTrainerBackPicPalette_Elio[] = INCGFX_U16("graphics/trainers/back_pics/elio_back.png", ".gbapal");
+
+const u32 gTrainerFrontPic_Selene[] = INCGFX_U32("graphics/trainers/front_pics/selene.png", ".4bpp.smol");
+const u16 gTrainerPalette_Selene[] = INCGFX_U16("graphics/trainers/front_pics/selene.png", ".gbapal");
+const u8 gTrainerBackPic_Selene[] = INCGFX_U8("graphics/trainers/back_pics/selene_back.png", ".4bpp");
+const u16 gTrainerBackPicPalette_Selene[] = INCGFX_U16("graphics/trainers/back_pics/selene_back.png", ".gbapal");
+
+const u32 gTrainerFrontPic_Victor[] = INCGFX_U32("graphics/trainers/front_pics/victor.png", ".4bpp.smol");
+const u16 gTrainerPalette_Victor[] = INCGFX_U16("graphics/trainers/front_pics/victor.png", ".gbapal");
+const u8 gTrainerBackPic_Victor[] = INCGFX_U8("graphics/trainers/back_pics/victor_back.png", ".4bpp");
+const u16 gTrainerBackPicPalette_Victor[] = INCGFX_U16("graphics/trainers/back_pics/victor_back.png", ".gbapal");
+
+const u32 gTrainerFrontPic_Gloria[] = INCGFX_U32("graphics/trainers/front_pics/gloria.png", ".4bpp.smol");
+const u16 gTrainerPalette_Gloria[] = INCGFX_U16("graphics/trainers/front_pics/gloria.png", ".gbapal");
+const u8 gTrainerBackPic_Gloria[] = INCGFX_U8("graphics/trainers/back_pics/gloria_back.png", ".4bpp");
+const u16 gTrainerBackPicPalette_Gloria[] = INCGFX_U16("graphics/trainers/back_pics/gloria_back.png", ".gbapal");
+
+// LUCIUS (LUCAS) & LUCIA (DAWN) - GEN 4
+const u32 gTrainerFrontPic_Lucas[] = INCGFX_U32("graphics/trainers/front_pics/lucas.png", ".4bpp.smol");
+const u16 gTrainerPalette_Lucas[] = INCGFX_U16("graphics/trainers/front_pics/lucas.png", ".gbapal");
+
+const u32 gTrainerFrontPic_Dawn[] = INCGFX_U32("graphics/trainers/front_pics/dawn.png", ".4bpp.smol");
+const u16 gTrainerPalette_Dawn[] = INCGFX_U16("graphics/trainers/front_pics/dawn.png", ".gbapal");
+
+// 🟢 KLARIN (ETHAN) & LYRA - GEN 2
+const u32 gTrainerFrontPic_Ethan[] = INCGFX_U32("graphics/trainers/front_pics/ethan.png", ".4bpp.smol");
+const u16 gTrainerPalette_Ethan[] = INCGFX_U16("graphics/trainers/front_pics/ethan.png", ".gbapal");
+
+const u32 gTrainerFrontPic_Lyra[] = INCGFX_U32("graphics/trainers/front_pics/lyra.png", ".4bpp.smol");
+const u16 gTrainerPalette_Lyra[] = INCGFX_U16("graphics/trainers/front_pics/lyra.png", ".gbapal");
 
 const u32 gTrainerFrontPic_None[] = INCGFX_U32("graphics/trainers/front_pics/none.png", ".4bpp.smol");
 const u16 gTrainerPalette_None[] = INCGFX_U16("graphics/trainers/palettes/none.pal", ".gbapal");
@@ -282,6 +360,7 @@ const u16 gTrainerPalette_RubySapphireBrendan[] = INCGFX_U16("graphics/trainers/
 
 const u32 gTrainerFrontPic_RubySapphireMay[] = INCGFX_U32("graphics/trainers/front_pics/may_rs.png", ".4bpp.smol");
 const u16 gTrainerPalette_RubySapphireMay[] = INCGFX_U16("graphics/trainers/palettes/may_rs.pal", ".gbapal");
+
 
 const u32 gTrainerFrontPic_YoungsterFrlg[] = INCGFX_U32("graphics/trainers/front_pics/youngster_frlg.png", ".4bpp.smol");
 const u16 gTrainerPalette_YoungsterFrlg[] = INCGFX_U16("graphics/trainers/palettes/youngster_frlg.pal", ".gbapal");
@@ -582,6 +661,7 @@ const union AnimCmd *const sBackAnims_OldManPokedude[] = {
         .paletteData = pal,                                                                  \
         .animation = anim,                                                                   \
     }}
+
 
 const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
 {
@@ -1226,4 +1306,42 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PainterFrlg, gTrainerPalette_PainterFrlg),
     },
+
+    // Custom player characters (trainer card pages). Back pics use the 5-frame HGSS layout.
+    [TRAINER_PIC_ETHAN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Ethan, gTrainerPalette_Ethan),
+        .backPic = TRAINER_BACK_PIC(5, gTrainerBackPic_Ethan, gTrainerBackPicPalette_Ethan, sBackAnims_Kanto),
+    },
+    [TRAINER_PIC_LYRA] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Lyra, gTrainerPalette_Lyra),
+        .backPic = TRAINER_BACK_PIC(5, gTrainerBackPic_Lyra, gTrainerBackPicPalette_Lyra, sBackAnims_Kanto),
+    },
+    [TRAINER_PIC_LUCAS] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Lucas, gTrainerPalette_Lucas),
+        .backPic = TRAINER_BACK_PIC(5, gTrainerBackPic_Lucas, gTrainerBackPicPalette_Lucas, sBackAnims_Kanto),
+    },
+    [TRAINER_PIC_DAWN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Dawn, gTrainerPalette_Dawn),
+        .backPic = TRAINER_BACK_PIC(5, gTrainerBackPic_Dawn, gTrainerBackPicPalette_Dawn, sBackAnims_Kanto),
+    },
+#define PLAYER_CHAR_PIC(Name)                                                                                    \
+    {                                                                                                            \
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_##Name, gTrainerPalette_##Name),                          \
+        .backPic = TRAINER_BACK_PIC(5, gTrainerBackPic_##Name, gTrainerBackPicPalette_##Name, sBackAnims_Kanto), \
+    }
+    [TRAINER_PIC_HILBERT] = PLAYER_CHAR_PIC(Hilbert),
+    [TRAINER_PIC_HILDA]   = PLAYER_CHAR_PIC(Hilda),
+    [TRAINER_PIC_NATE]    = PLAYER_CHAR_PIC(Nate),
+    [TRAINER_PIC_ROSA]    = PLAYER_CHAR_PIC(Rosa),
+    [TRAINER_PIC_CALEM]   = PLAYER_CHAR_PIC(Calem),
+    [TRAINER_PIC_SERENA]  = PLAYER_CHAR_PIC(Serena),
+    [TRAINER_PIC_ELIO]    = PLAYER_CHAR_PIC(Elio),
+    [TRAINER_PIC_SELENE]  = PLAYER_CHAR_PIC(Selene),
+    [TRAINER_PIC_VICTOR]  = PLAYER_CHAR_PIC(Victor),
+    [TRAINER_PIC_GLORIA]  = PLAYER_CHAR_PIC(Gloria),
+#undef PLAYER_CHAR_PIC
 };

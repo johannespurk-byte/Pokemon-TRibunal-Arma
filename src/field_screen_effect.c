@@ -1369,7 +1369,8 @@ static const struct WindowTemplate sWindowTemplate_WhiteoutText =
     .baseBlock = 1,
 };
 
-static const u8 sWhiteoutTextColors[] = { TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_DARK_GRAY };
+// Gold with a bronze shadow on black; white is the navy window fill in std_menu.pal
+static const u8 sWhiteoutTextColors[] = { TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY };
 
 #define tState         data[0]
 #define tWindowId      data[1]

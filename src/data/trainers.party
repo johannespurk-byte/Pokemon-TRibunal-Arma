@@ -225,74 +225,63 @@ Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_PETALBURG_WOODS ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Name: MATT
+Class: Aqua Admin
+Pic: Aqua Admin M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Blue
+AI: Smart Trainer / Prediction
 
-Carvanha @ Life Orb
-Level: 17
-Ability: Speed Boost
-EVs: 4 HP / 252 Atk / 252 Spe
-Adamant Nature
-- Bite
-- Aqua Jet
-- Ice Fang
-- Protect
+Castform @ Damp Rock  
+Ability: Forecast  
+Shiny: Yes  
+Tera Type: Normal  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Rain Dance  
+- Hyper Voice  
+- Thunder  
+- Weather Ball  
 
-Grimer @ Black Sludge
-Level: 16
-Ability: Sticky Hold
-EVs: 252 HP / 252 Atk / 4 SpD
-Adamant Nature
-- Poison Jab
-- Shadow Sneak
-- Mud-Shot
-- Mega Drain
+Dreepy @ Focus Sash  
+Ability: Clear Body  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Dragon Dance  
+- Dragon Claw  
+- Poltergeist  
+- Iron Head  
 
-Palpitoad @ Eviolite
-Level: 17
-Ability: Water Absorb
-EVs: 252 HP / 4 Def / 252 SpA
-Modest Nature
-- Water Pulse
-- Mud-Shot
-- Icy Wind
-- Sludge Bomb
+Tirtouga @ White Herb  
+Ability: Sturdy  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Shell Smash  
+- Waterfall  
+- Stone Edge  
+- Ice Fang  
 
-Corphish @ Choice Band
-Level: 17
-Ability: Adaptability
-EVs: 4 HP / 252 Atk / 252 Spe
-Jolly Nature
-- Crabhammer
-- Vice Grip
-- Rock Tomb
-- Aqua Jet
+Dustox @ Leftovers  
+Ability: Shield Dust  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Quiver Dance  
+- Sludge Bomb  
+- Bug Buzz  
+- Giga Drain  
 
-Mareanie @ Rocky Helmet
-Level: 16
-Ability: Regenerator
-EVs: 252 HP / 252 Def / 4 SpD
-Bold Nature
-- Sludge Bomb
-- Chilling Water
-- Recover
-- Toxic Spikes
-
-Poochyena @ Focus Sash
-Level: 18
-Ability: Rattled
-EVs: 4 HP / 252 Atk / 252 Spe
-Jolly Nature
-- Crunch
-- Sucker Punch
-- Play Rough
-- Fire Fang
-
+Wimpod @ Life Orb  
+Ability: Wimp Out  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- First Impression  
+- Aqua Jet  
+- Liquidation  
+- Sucker Punch  
 
 === TRAINER_MARCEL ===
 Name: MARCEL
@@ -379,11 +368,56 @@ Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Poochyena
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Mightyena (M) @ Life Orb  
+Ability: Moxie  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Crunch  
+- Gunk Shot  
+- Psychic Fangs  
+- Sucker Punch  
+
+Golbat (M) @ Eviolite  
+Ability: Inner Focus  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Leech Life  
+- Dual Wingbeat  
+- Dire Claw  
+- Hone Claws  
+
+Seismitoad (M) @ Leftovers  
+Ability: Water Absorb  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Surf  
+- Sludge Wave  
+- Earth Power  
+- Slack Off  
+
+Uxie @ Rocky Helmet  
+Ability: Levitate  
+Shiny: Yes  
+EVs: 252 HP / 252 Def / 4 SpD  
+Bold Nature  
+IVs: 0 Atk  
+- Draining Kiss  
+- Calm Mind  
+- Psyshock  
+- Shock Wave  
+
+Dragalge @ Leftovers  
+Ability: Adaptability  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Dragon Pulse  
+- Sludge Wave  
+- Hydro Pump  
+- Thunderbolt  
 
 === TRAINER_GRUNT_WEATHER_INST_1 ===
 Name: GRUNT
@@ -447,11 +481,34 @@ Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Carvanha
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Mightyena @ Focus Sash  
+Ability: Intimidate  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Sucker Punch  
+- Crunch  
+- Play Rough  
+- Gunk Shot  
+
+Dragalge @ Dragalgite  
+Ability: Adaptability  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+- Bouncy Bubble  
+- Flip Turn  
+- Sludge Wave  
+- Dragon Pulse  
+
+Lokix @ Life Orb  
+Ability: Tinted Lens  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- First Impression  
+- Knock Off  
+- Sucker Punch  
+- Axe Kick  
 
 === TRAINER_GRUNT_MUSEUM_2 ===
 Name: GRUNT
@@ -460,15 +517,35 @@ Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Zubat
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Azelf @ Choice Band  
+Ability: Levitate  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Zen Headbutt  
+- U-turn  
+- Play Rough  
+- Supercell Slam  
 
-Carvanha
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Palafin @ Choice Band  
+Ability: Zero to Hero  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Flip Turn  
+- Close Combat  
+- Jet Punch  
+- Ice Punch  
+
+Weezing @ Black Sludge  
+Ability: Levitate  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Hex  
+- Will-O-Wisp  
+- Sludge Bomb  
+- Flamethrower  
 
 === TRAINER_GRUNT_SPACE_CENTER_1 ===
 Name: GRUNT
@@ -1098,15 +1175,36 @@ Pic: Tuber F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Azurill
-Level: 12
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Jolteon @ Life Orb  
+Ability: Volt Absorb  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Thunderbolt  
+- Ice Beam  
+- Dazzling Gleam  
+- Grass Knot  
 
-Azurill
-Level: 12
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Electrode @ Choice Band  
+Ability: Soundproof  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Supercell Slam  
+- Explosion  
+- Volt Switch  
+- Pyro Ball  
+
+Lanturn @ Leftovers  
+Ability: Volt Absorb  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Scald  
+- Ice Beam  
+- Parabolic Charge  
+- Tail Glow  
 
 === TRAINER_AUSTINA ===
 Name: AUSTINA
@@ -1115,11 +1213,36 @@ Pic: Tuber F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Marill
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Blastoise @ White Herb  
+Ability: Torrent  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Surf  
+- Shell Smash  
+- Aura Sphere  
+- Ice Beam  
+
+Feraligatr @ Life Orb  
+Ability: Sheer Force  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Adamant Nature  
+- Dragon Dance  
+- Waterfall  
+- Crunch  
+- Earthquake  
+
+Empoleon @ Choice Scarf  
+Ability: Competitive  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Flash Cannon  
+- Hydro Steam  
+- Ice Beam  
+- Air Slash  
 
 === TRAINER_GWEN ===
 Name: GWEN
@@ -1209,15 +1332,55 @@ Pic: Tuber M
 Gender: Male
 Music: Girl
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Green
+AI: Smart Trainer / Prediction
 
-Zigzagoon
-Level: 13
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-- Sand Attack
-- Headbutt
-- Tail Whip
-- Surf
+Swampert @ Rindo Berry  
+Ability: Damp  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Stealth Rock  
+- Roar  
+- Jet Punch  
+- Earthquake  
+
+Quaquaval @ Focus Sash  
+Ability: Moxie  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Aqua Step  
+- Swords Dance  
+- Close Combat  
+- Ice Spinner  
+
+Ampharos @ Choice Specs  
+Ability: Static  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Thunderbolt  
+- Dragon Pulse  
+- Flash Cannon  
+- Volt Switch  
+
+Gyarados @ Choice Scarf  
+Ability: Moxie  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Waterfall  
+- Floaty Fall  
+- Earthquake  
+- Crunch  
+
+Audino @ Audinite  
+Ability: Regenerator  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Wish  
+- Moonblast  
+- Echoed Voice  
 
 === TRAINER_SIMON ===
 Name: SIMON
@@ -1226,15 +1389,45 @@ Pic: Tuber M
 Gender: Male
 Music: Girl
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Azurill
-Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Clodsire @ Black Sludge  
+Ability: Water Absorb  
+EVs: 252 HP / 4 Atk / 252 SpD  
+Careful Nature  
+- Earthquake  
+- Poison Jab  
+- Toxic Spikes  
+- Recover  
 
-Marill
-Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Quagsire @ Rocky Helmet  
+Ability: Water Absorb  
+EVs: 252 HP / 4 Atk / 252 Def  
+Impish Nature  
+- Curse  
+- Earthquake  
+- Recover  
+- Body Press  
+
+Gastrodon @ Leftovers  
+Ability: Storm Drain  
+EVs: 252 HP / 4 Def / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Recover  
+- Scald  
+- Ice Beam  
+- Earth Power  
+
+Vaporeon @ Shell Bell  
+Ability: Water Absorb  
+EVs: 248 HP / 252 Def / 8 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Wish  
+- Scald  
+- Dazzling Gleam  
 
 === TRAINER_CHARLIE ===
 Name: CHARLIE
@@ -2286,74 +2479,51 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_CINDY_1 ===
 Name: CINDY
-Class: Lady
+Class: cooltrainer
 Pic: Lady
 Gender: Female
 Music: Female
-Items: Full Restore
-Double Battle: No
-AI: Smart Trainer
+Double Battle: Yes
+Mugshot: Green
+AI: Smart Trainer / Prediction
 
-Gible @ Life Orb
-Level: 17
-Ability: Rough Skin
-EVs: 4 HP / 252 Atk / 252 Spe
-Jolly Nature
-- Dragon Rage
-- Sand Tomb
-- Bulldoze
-- Metal Claw
+Aipom @ Silk Scarf  
+Ability: Skill Link  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Tail Slap  
+- Bullet Seed  
+- Rock Blast  
+- Fake Out  
 
-Cleffa @ Eviolite
-Level: 16
-Ability: Magic Guard
-EVs: 252 HP / 252 Def / 4 SpD
-Bold Nature
-- Moonblast
-- Calm Mind
-- Soft-Boiled
-- Thunder Wave
+Sneasel @ Choice Band  
+Ability: Inner Focus  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Ice Spinner  
+- Dire Claw  
+- Night Slash  
+- Brick Break  
 
-Bagon @ Choice Band
-Level: 18
-Ability: Rock Head
-EVs: 4 HP / 252 Atk / 252 Spe
-Adamant Nature
-- Dragon Claw
-- Bite
-- Rock Tomb
-- Fire Punch
+Pidgeotto @ Life Orb  
+Ability: Big Pecks  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Hurricane  
+- Heat Wave  
+- Protect  
+- Round  
 
-Impidimp @ Light Clay
-Level: 17
-Ability: Prankster
-EVs: 252 HP / 4 Def / 252 SpD
-Careful Nature
-- Reflect
-- Light Screen
-- Fairy Wind
-- Fake Out
-
-Tinkatink @ Leftovers
-Level: 17
-Ability: Mold Breaker
-EVs: 252 HP / 4 Atk / 252 Def
-Impish Nature
-- Metal Claw
-- Play Rough
-- Stealth Rock
-- Thunder Wave
-
-Sneasel @ Focus Sash
-Level: 18
-Ability: Inner Focus
-EVs: 4 HP / 252 Atk / 252 Spe
-Jolly Nature
-- Bite
-- Ice Spinner
-- Ice Shard
-- Quick Attack
-
+Brionne @ Eviolite  
+Ability: Liquid Voice  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Round  
+- Dazzling Gleam  
+- Calm Mind  
+- Ice Beam  
 
 === TRAINER_DAPHNE ===
 Name: DAPHNE
@@ -2751,66 +2921,46 @@ Class: Rich Boy
 Pic: Rich Boy
 Gender: Male
 Music: Rich
-Items: Full Restore
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Meowth @ Nugget
-Level: 7
-Ability: Technician
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
-- Fake Out
-- Pay Day
-- Bite
-- Growl
+Gimmighoul @ Berry Juice  
+Ability: Rattled  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Nasty Plot  
+- Hex  
+- Flash Cannon  
+- Dazzling Gleam  
 
-Sableye @ Nugget
-Level: 7
-Ability: Keen Eye
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
-- Shadow Sneak
-- Scratch
-- Mud-Slap
-- Leer
+Magikarp @ Normalium Z  
+Ability: Swift Swim  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Splash  
+- Aqua Jet  
+- Bounce  
+- Pounce  
 
-Beldum @ Nugget
-Level: 7
-Ability: Clear Body
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 0 Spe
-- Take Down
+Slowpoke @ Eviolite  
+Ability: Regenerator  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+- Flip Turn  
+- Psychic  
+- Scald  
+- Flamethrower  
 
-Aron @ Nugget
-Level: 7
-Ability: Sturdy
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
-- Metal Claw
-- Rock Tomb
-- Tackle
-- Harden
-
-Larvitar @ Nugget
-Level: 7
-Ability: Guts
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 4 Spe
-- Rock Tomb
-- Bite
-- Leer
-- Sandstorm
-
-Porygon @ Nugget
-Level: 7
-Ability: Trace
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
-- Sharpen
-- Psybeam
-- Conversion
-- Tackle
+Slowpoke-Galar @ Eviolite  
+Ability: Regenerator  
+EVs: 248 HP / 252 Def / 8 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Psychic  
+- Sludge Bomb  
+- Slack Off  
 
 === TRAINER_MOLLIE ===
 Name: MOLLIE
@@ -3133,15 +3283,45 @@ Pic: Swimmer M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Tentacool
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Samurott @ White Herb  
+Ability: Shell Armor  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Shell Smash  
+- Sacred Sword  
+- Aqua Cutter  
+- Night Slash  
 
-Carvanha
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Cloyster @ Focus Sash  
+Ability: Skill Link  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Rock Blast  
+- Waterfall  
+- Icicle Spear  
+- Shell Smash  
+
+Gorebyss @ Leftovers  
+Ability: Swift Swim  
+EVs: 252 HP / 252 Def / 4 SpD  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Draining Kiss  
+- Scald  
+- Psychic  
+
+Phione @ Rocky Helmet  
+Ability: Hydration  
+EVs: 252 HP / 252 Def / 4 SpD  
+Bold Nature  
+IVs: 0 Atk  
+- Take Heart  
+- Bouncy Bubble  
+- Acid Armor  
+- Stored Power  
 
 === TRAINER_SPENCER ===
 Name: SPENCER
@@ -3449,12 +3629,53 @@ Class: Black Belt
 Pic: Black Belt
 Gender: Male
 Music: Intense
-Double Battle: No
-AI: Smart Trainer
+Double Battle: Yes
+AI: Smart Trainer / Prediction
 
-Machop
-Level: 13
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Throh (M) @ Assault Vest  
+Ability: Inner Focus  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Storm Throw  
+- Accelerock  
+- Fire Punch  
+- Ice Punch  
+
+Scrafty @ Roseli Berry  
+Ability: Intimidate  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Fake Out  
+- Crunch  
+- Poison Jab  
+- Drain Punch  
+
+Infernape @ White Herb  
+Ability: Blaze  
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Hasty Nature  
+- Focus Blast  
+- Overheat  
+- Fake Out  
+- Thunderbolt  
+
+Sawk (M) @ Choice Scarf  
+Ability: Sturdy  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Close Combat  
+- Fire Punch  
+- Ice Punch  
+- Zen Headbutt  
+
+Passimian @ Sitrus Berry  
+Ability: Defiant  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Rock Slide  
+- High Jump Kick  
+- Pyro Ball  
+- Sucker Punch  
 
 === TRAINER_HITOSHI ===
 Name: HITOSHI
@@ -3642,22 +3863,52 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Electrike
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Quick Attack
-- Thunder Wave
-- Spark
-- Leer
+Rotom-Wash @ Leftovers
+Ability: Levitate
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+- Hydro Pump
+- Volt Switch
+- Will-O-Wisp
+- Pain Split
 
-Voltorb
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Charge
-- Shock Wave
-- Screech
+Jolteon @ Life Orb
+Ability: Volt Absorb
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunderbolt
+- Shadow Ball
+- Hyper Voice
+- Volt Switch
+
+Toxtricity @ Throat Spray
+Ability: Punk Rock
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Overdrive
+- Boomburst
+- Sludge Bomb
+- Volt Switch
+
+Electivire @ Expert Belt
+Ability: Motor Drive
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Wild Charge
+- Ice Punch
+- Cross Chop
+- Earthquake
+
+Raichu-Alola @ Focus Sash
+Ability: Surge Surfer
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunderbolt
+- Psychic
+- Focus Blast
+- Nasty Plot
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_7 ===
 Name: GRUNT
@@ -3696,15 +3947,52 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Voltorb
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Magnezone @ Choice Specs
+Ability: Magnet Pull
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Tri Attack
 
-Magnemite
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Electrode-Hisui @ Life Orb
+Ability: Static
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Leaf Storm
+- Thunderbolt
+- Volt Switch
+- Taunt
+
+Heliolisk @ Choice Scarf
+Ability: Dry Skin
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunderbolt
+- Hyper Voice
+- Grass Knot
+- Volt Switch
+
+Ampharos @ Assault Vest
+Ability: Static
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+- Thunderbolt
+- Dragon Pulse
+- Focus Blast
+- Volt Switch
+
+Galvantula @ Focus Sash
+Ability: Compound Eyes
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunder
+- Bug Buzz
+- Energy Ball
+- Sticky Web
 
 === TRAINER_FERNANDO_1 ===
 Name: FERNANDO
@@ -4273,15 +4561,52 @@ Pic: Bug Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Dustox
-Level: 16
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Forretress @ Leftovers
+Ability: Sturdy
+EVs: 252 HP / 4 Atk / 252 Def
+Relaxed Nature
+- Spikes
+- Rapid Spin
+- Gyro Ball
+- Volt Switch
 
-Beautifly
-Level: 16
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Frosmoth @ Heavy-Duty Boots
+Ability: Ice Scales
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Quiver Dance
+- Ice Beam
+- Bug Buzz
+- Giga Drain
+
+Kleavor @ Focus Sash
+Ability: Sharpness
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Stone Axe
+- X-Scissor
+- Close Combat
+- Swords Dance
+
+Lokix @ Choice Band
+Ability: Tinted Lens
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- First Impression
+- Sucker Punch
+- Leech Life
+- U-turn
+
+Heracross @ Flame Orb
+Ability: Guts
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Close Combat
+- Megahorn
+- Knock Off
+- Facade
 
 === TRAINER_JEFFREY_2 ===
 Name: JEFFREY
@@ -4386,12 +4711,45 @@ Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Abra
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Hidden Power
+Slowking-Galar @ Assault Vest  
+Ability: Regenerator  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+- Flip Turn  
+- Ice Beam  
+- Sludge Wave  
+- Psystrike  
+
+Malamar @ Assault Vest  
+Ability: Contrary  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Superpower  
+- Psyblade  
+- Knock Off  
+- Liquidation  
+
+Hoopa @ Choice Specs  
+Ability: Magician  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Moonblast  
+- Hyperspace Hole  
+- Moongeist Beam  
+
+Delphox @ Delphoxite  
+Ability: Magician  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psystrike  
+- Shadow Ball  
+- Moonblast  
+- Flamethrower  
 
 === TRAINER_PRESTON ===
 Name: PRESTON
@@ -4553,17 +4911,70 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_JACLYN ===
 Name: JACLYN
-Class: Psychic
+Class: Cooltrainer
 Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Green
+AI: Smart Trainer / Prediction
 
-Abra
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Hidden Power
+Shuckle @ Rocky Helmet  
+Ability: Sturdy  
+EVs: 248 HP / 8 Def / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Sticky Web  
+- Stealth Rock  
+- Spikes  
+- Toxic Spikes  
+
+Pinsir @ Pinsirite  
+Ability: Hyper Cutter  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Body Slam  
+- X-Scissor  
+- Swords Dance  
+- Earthquake  
+
+Milotic @ Leftovers  
+Ability: Marvel Scale  
+EVs: 252 HP / 4 SpA / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Toxic  
+- Recover  
+- Surf  
+- Ice Beam  
+
+Delphox @ Focus Sash  
+Ability: Magician  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Nasty Plot  
+- Flamethrower  
+- Psychic  
+- Dazzling Gleam  
+
+Hoopa-Unbound @ Life Orb  
+Ability: Magician  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Hyperspace Fury  
+- Zen Headbutt  
+- Close Combat  
+- Fire Punch  
+
+Iron Leaves @ Booster Energy  
+Ability: Quark Drive  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Psyblade  
+- Leaf Blade  
+- Swords Dance  
+- Close Combat  
 
 === TRAINER_HANNAH ===
 Name: HANNAH
@@ -5075,38 +5486,141 @@ Class: Leader
 Pic: Leader Roxanne
 Gender: Female
 Music: Male
-Double Battle: Yes
-AI: Smart Trainer
+Battle Type: Singles
+Mugshot: Yellow
+Party Size: 5
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction
 
-Geodude
-Level: 14
-Ability: Sturdy
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
-- Rock Tomb
-- Mud-Slap
-- Block
-- Defense Curl
+Pupitar @ Eviolite  
+Ability: Shed Skin  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Dragon Dance  
+- Crunch  
+- Earthquake  
+- Rock Slide  
 
-Lileep
-Level: 14
-Ability: Storm Drain
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
-- Solar Beam
-- Acid
-- Constrict
-- Ingrain
+Solrock @ Choice Band  
+Ability: Levitate  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Rock Slide  
+- Flare Blitz  
+- Zen Headbutt  
+- Earthquake  
 
-Nosepass
-Level: 15
-Ability: Sturdy
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
-- Rock Tomb
-- Spark
-- Harden
-- Block
+Lunatone @ Leftovers  
+Ability: Levitate  
+EVs: 252 HP / 252 Def / 4 SpD  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Moonlight  
+- Stored Power  
+- Power Gem  
+
+Probopass @ Air Balloon  
+Ability: Sturdy  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Thunderbolt  
+- Power Gem  
+- Earth Power  
+- Flash Cannon  
+
+Golem-Alola @ Air Balloon  
+Ability: Galvanize  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Body Slam  
+- Rock Slide  
+- Magnitude  
+- Accelerock  
+
+Growlithe-Hisui @ Choice Scarf  
+Ability: Rock Head  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Flare Blitz  
+- Head Smash  
+- Wild Charge  
+- Play Rough  
+
+Dwebble @ Choice Band  
+Ability: Sturdy  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Stone Edge  
+- X-Scissor  
+- Accelerock  
+- Earthquake  
+
+Naclstack @ Leftovers  
+Ability: Purifying Salt  
+EVs: 252 HP / 4 Atk / 252 SpD  
+Careful Nature  
+- Salt Cure  
+- Recover  
+- Body Press  
+- Iron Defense  
+
+Diancie @ Babiri Berry  
+Ability: Clear Body  
+EVs: 248 HP / 8 Atk / 252 SpD  
+Careful Nature  
+- Diamond Storm  
+- Play Rough  
+- Cosmic Power  
+- Recover  
+
+Diancie @ Babiri Berry  
+Ability: Clear Body  
+EVs: 252 HP / 4 Atk / 252 Def  
+Serious Nature  
+- Calm Mind  
+- Draining Kiss  
+- Diamond Storm  
+- Earth Power  
+
+Glimmet @ Focus Sash  
+Ability: Toxic Debris  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Sludge Wave  
+- Power Gem  
+- Earth Power  
+- Energy Ball  
+
+Minior @ White Herb  
+Ability: Shields Down  
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Mild Nature  
+- Shell Smash  
+- Acrobatics  
+- Earth Power  
+- Power Gem  
+
+Minior @ White Herb  
+Ability: Shields Down  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Floaty Fall  
+- Rock Slide  
+- Earthquake  
+- Shell Smash  
+
+Solrock @ Leftovers  
+Ability: Levitate  
+EVs: 252 HP / 4 Atk / 252 SpD  
+Sassy Nature  
+- Morning Sun  
+- Cosmic Power  
+- Rock Slide  
+- Stored Power  
 
 === TRAINER_BRAWLY_1 ===
 Name: BRAWLY
@@ -5114,33 +5628,359 @@ Class: Leader
 Pic: Leader Brawly
 Gender: Male
 Music: Male
-Items: Super Potion / Super Potion
 Double Battle: No
-AI: Basic Trainer
+Mugshot: Purple
+Party Size: 6
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
 
-Machop
-Level: 16
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Karate Chop
-- Low Kick
-- Seismic Toss
-- Bulk Up
+Iron Valiant @ Choice Specs  
+Ability: Quark Drive  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+- Moonblast  
+- Aura Sphere  
+- U-turn  
+- Energy Ball  
 
-Meditite
-Level: 16
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Focus Punch
-- Light Screen
-- Reflect
-- Bulk Up
+Hariyama @ Flame Orb  
+Ability: Guts  
+- Fake Out  
+- Ice Punch  
+- Earthquake  
+- Drain Punch  
 
-Makuhita @ Sitrus Berry
-Level: 19
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Arm Thrust
-- Vital Throw
-- Reversal
-- Bulk Up
+Gallade (M) @ Choice Scarf  
+Ability: Sharpness  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Leaf Blade  
+- Psyblade  
+- Sacred Sword  
+- Aqua Cutter  
+
+Poliwrath @ Assault Vest  
+Ability: Swift Swim  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Drain Punch  
+- Jet Punch  
+- Poison Jab  
+- Earthquake  
+
+Infernape @ Life Orb  
+Ability: Iron Fist  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Mach Punch  
+- Fire Punch  
+- Thunder Punch  
+- Drain Punch  
+
+Lilligant-Hisui (F) @ Focus Sash  
+Ability: Chlorophyll  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Victory Dance  
+- Leaf Blade  
+- Close Combat  
+- Ice Spinner  
+
+Zapdos-Galar @ Leftovers  
+Ability: Defiant  
+EVs: 248 HP / 8 Atk / 252 SpD  
+Careful Nature  
+- Thunderous Kick  
+- Floaty Fall  
+- Roost  
+- Bulk Up  
+
+Infernape @ Life Orb  
+Ability: Blaze  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+- Fire Blast  
+- Focus Blast  
+- U-turn  
+- Thunderbolt  
+
+Lucario @ Lucarionite  
+Ability: Inner Focus  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Flash Cannon  
+- Focus Blast  
+- Dark Pulse  
+- Nasty Plot  
+
+Flamigo @ Choice Scarf  
+Ability: Scrappy  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- High Jump Kick  
+- Brave Bird  
+- U-turn  
+- Blaze Kick  
+
+Lucario @ Focus Sash  
+Ability: Inner Focus  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Nasty Plot  
+- Flash Cannon  
+- Aura Sphere  
+- Vacuum Wave  
+
+Crabominable @ Crabominite  
+Ability: Iron Fist  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Bullet Punch  
+- Ice Punch  
+- Drain Punch  
+- Thunder Punch  
+
+Blaziken @ Blazikenite  
+Ability: Speed Boost  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Protect  
+- Flare Blitz  
+- Brave Bird  
+- Close Combat  
+
+Medicham @ Medichamite  
+Ability: Pure Power  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Zen Headbutt  
+- Power-Up Punch  
+- Bullet Punch  
+- Ice Punch  
+
+Annihilape @ Assault Vest  
+Ability: Defiant  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Rage Fist  
+- Earthquake  
+- Zen Headbutt  
+- Drain Punch  
+
+Iron Hands @ Booster Energy  
+Ability: Quark Drive  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Drain Punch  
+- Double Iron Bash  
+- Plasma Fists  
+- Ice Punch  
+
+Scrafty @ Life Orb  
+Ability: Moxie  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Adamant Nature  
+- Drain Punch  
+- Knock Off  
+- Dragon Dance  
+- Poison Jab  
+
+Mienshao @ Choice Specs  
+Ability: Inner Focus  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Secret Sword  
+- Air Slash  
+- Thunderbolt  
+- Psychic  
+
+Breloom @ Choice Band  
+Ability: Technician  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Mach Punch  
+- Seed Bomb  
+- Force Palm  
+- U-turn  
+
+Quaquaval @ Choice Band  
+Ability: Moxie  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Aqua Step  
+- Flip Turn  
+- Close Combat  
+- Triple Axel  
+
+Sneasler @ Normal Gem  
+Ability: Unburden  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Fake Out  
+- Close Combat  
+- Acrobatics  
+- Dire Claw  
+
+Medicham @ Choice Scarf  
+Ability: Pure Power  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- High Jump Kick  
+- Zen Headbutt  
+- Ice Punch  
+- Knock Off  
+
+Annihilape @ Leftovers  
+Ability: Defiant  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Bulk Up  
+- Rage Fist  
+- Drain Punch  
+- Ice Punch  
+
+Lucario @ Lucarionite Z  
+Ability: Inner Focus  
+EVs: 248 HP / 8 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Flash Cannon  
+- Aura Sphere  
+- Recover  
+
+Breloom @ Toxic Orb  
+Ability: Poison Heal  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Spore  
+- Swords Dance  
+- Mach Punch  
+- Seed Bomb  
+
+Emboar @ Emboarite  
+Ability: Reckless  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Fire Punch  
+- Drain Punch  
+- Swords Dance  
+- Sucker Punch  
+
+Iron Valiant @ Booster Energy  
+Ability: Quark Drive  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Moonblast  
+- Aura Sphere  
+- Psychic  
+- Thunderbolt  
+
+Machamp @ Assault Vest  
+Ability: No Guard  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Dynamic Punch  
+- Bullet Punch  
+- Rage Fist  
+- Meteor Mash  
+
+Kommo-o @ Kommonium Z  
+Ability: Soundproof  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Clanging Scales  
+- Aura Sphere  
+- Flash Cannon  
+- Flamethrower  
+
+Scrafty @ Scraftinite  
+Ability: Intimidate  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Adamant Nature  
+- Dragon Dance  
+- Wicked Blow  
+- Drain Punch  
+- Iron Head  
+
+Pawmot @ Focus Sash  
+Ability: Iron Fist  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Revival Blessing  
+- Drain Punch  
+- Ice Punch  
+- Thunder Punch  
+
+Hitmontop (M) @ Assault Vest  
+Ability: Intimidate  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Jet Punch  
+- Bullet Punch  
+- Ice Punch  
+- Power-Up Punch  
+
+Iron Hands @ Assault Vest  
+Ability: Quark Drive  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Earthquake  
+- Plasma Fists  
+- Drain Punch  
+- Bullet Punch  
+
+Iron Valiant @ Life Orb  
+Ability: Quark Drive  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Close Combat  
+- Spirit Break  
+- Poison Jab  
+- Fire Punch  
+
+Great Tusk @ Booster Energy  
+Ability: Protosynthesis  
+EVs: 252 HP / 4 Def / 252 SpD  
+Careful Nature  
+- Bulk Up  
+- Rapid Spin  
+- Earthquake  
+- Drain Punch  
+
+Blaziken @ Focus Sash  
+Ability: Speed Boost  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Protect  
+- Close Combat  
+- Pyro Ball  
+- Drill Peck  
+
+Zapdos-Galar @ Choice Scarf  
+Ability: Defiant  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Thunderous Kick  
+- Drill Peck  
+- U-turn  
+- Bolt Beak  
+
+Kommo-o @ Throat Spray  
+Ability: Overcoat  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Clangorous Soul  
+- Clanging Scales  
+- Secret Sword  
+- Flash Cannon  
 
 === TRAINER_WATTSON_1 ===
 Name: WATTSON
@@ -5148,41 +5988,63 @@ Class: Leader
 Pic: Leader Wattson
 Gender: Male
 Music: Male
-Items: Super Potion / Super Potion
 Double Battle: No
-AI: Basic Trainer
+Mugshot: Purple
+AI: Smart Trainer / Prediction / Ace Pokemon
 
-Voltorb
-Level: 20
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Rollout
-- Spark
-- Self Destruct
-- Shock Wave
+Electrode @ Light Clay
+Ability: Aftermath
+EVs: 252 HP / 4 SpA / 252 Spe
+Timid Nature
+- Light Screen
+- Reflect
+- Volt Switch
+- Explosion
 
-Electrike
-Level: 20
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Shock Wave
-- Leer
-- Quick Attack
-- Howl
+Lanturn @ Leftovers
+Ability: Volt Absorb
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+- Scald
+- Thunderbolt
+- Ice Beam
+- Heal Bell
 
-Magneton
-Level: 22
-IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
-- Supersonic
-- Shock Wave
-- Thunder Wave
-- Sonic Boom
+Eelektross @ Assault Vest
+Ability: Levitate
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+- Thunderbolt
+- Flamethrower
+- Giga Drain
+- Knock Off
 
-Manectric @ Sitrus Berry
-Level: 24
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Quick Attack
-- Thunder Wave
-- Shock Wave
-- Howl
+Rotom-Heat @ Choice Scarf
+Ability: Levitate
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Overheat
+- Thunderbolt
+- Volt Switch
+- Trick
+
+Luxray @ Choice Band
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Wild Charge
+- Crunch
+- Ice Fang
+- Play Rough
+
+Manectric @ Manectite
+Ability: Lightning Rod
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunderbolt
+- Flamethrower
+- Volt Switch
+- Snarl
 
 === TRAINER_FLANNERY_1 ===
 Name: FLANNERY
@@ -5533,9 +6395,33 @@ Music: Girl
 Double Battle: No
 AI: Smart Trainer
 
-Shroomish
-Level: 9
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Mawile @ Mawilite  
+Ability: Intimidate  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Swords Dance  
+- Sucker Punch  
+- Iron Head  
+- Play Rough  
+
+Copperajah @ Assault Vest  
+Ability: Sheer Force  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Iron Head  
+- Crunch  
+- Earthquake  
+- Rock Slide  
+
+Ivysaur @ Eviolite  
+Ability: Chlorophyll  
+EVs: 252 HP / 4 Def / 252 SpD  
+Bold Nature  
+IVs: 0 Atk  
+- Sleep Powder  
+- Leech Seed  
+- Giga Drain  
+- Malignant Chain
 
 === TRAINER_GEORGIA ===
 Name: GEORGIA
@@ -5654,22 +6540,43 @@ Pic: Sr And Jr
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Zigzagoon
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Growl
-- Tail Whip
-- Headbutt
-- Odor Sleuth
+Indeedee-F @ Psychic Seed
+Ability: Psychic Surge
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+- Follow Me
+- Psychic
+- Helping Hand
+- Protect
 
-Makuhita
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Focus Energy
-- Arm Thrust
+Armarouge @ Life Orb
+Ability: Flash Fire
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+- Expanding Force
+- Armor Cannon
+- Trick Room
+- Protect
+
+Torkoal @ Charcoal
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+- Eruption
+- Heat Wave
+- Solar Beam
+- Protect
+
+Rhyperior @ Weakness Policy
+Ability: Solid Rock
+EVs: 252 HP / 252 Atk / 4 SpD
+Brave Nature
+- Rock Slide
+- High Horsepower
+- Ice Punch
+- Protect
 
 === TRAINER_ANNA_AND_MEG_2 ===
 Name: ANNA & MEG
@@ -5960,15 +6867,37 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Plusle @ Oran Berry
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Plusle @ Life Orb  
+Ability: Plus  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Discharge  
+- Dazzling Gleam  
+- Weather Ball  
+- Grass Knot  
 
-Minun @ Oran Berry
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Dedenne @ Choice Specs  
+Ability: Plus  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Thunderbolt  
+- Dazzling Gleam  
+- Grass Knot  
+- Shadow Ball  
+
+Pachirisu @ Sitrus Berry  
+Ability: Volt Absorb  
+EVs: 252 HP / 4 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Follow Me  
+- Helping Hand  
+- Super Fang  
+- Thunderbolt  
 
 === TRAINER_ISABEL_2 ===
 Name: ISABEL
@@ -6254,7 +7183,7 @@ Ability: Arena Trap
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
 - Bulldoze
-- Hone Claws
+- Iron Head
 - Sucker Punch
 - Rock Tomb
 
@@ -6267,7 +7196,6 @@ Adamant Nature
 - Acrobatics
 - Swords Dance
 
-
 === TRAINER_BILLY ===
 Name: BILLY
 Class: Youngster
@@ -6275,68 +7203,44 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Poochyena @ Silk Scarf
-Level: 16
-Ability: Quick Feet
-EVs: 4 HP / 252 Atk / 252 Spe
-Nature: Adamant
-- Bite
-- Crunch
-- Sucker Punch
-- Play Rough
+Ekans @ Eviolite  
+Ability: Intimidate  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Poison Fang  
+- Coil  
+- Leech Life  
+- Crunch  
 
-Shroomish @ Toxic Orb
-Level: 16
-Ability: Poison Heal
-EVs: 252 HP / 252 Def / 4 SpD
-Nature: Impish
-- Spore
-- Seed Bomb
-- Mach Punch
-- Leech Seed
+Zigzagoon @ Aguav Berry  
+Ability: Gluttony  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Belly Drum  
+- Extreme Speed  
+- Knock Off  
+- Ice Fang  
 
-Wooloo @ Leftovers
-Level: 17
-Ability: Fluffy
-EVs: 252 HP / 252 Def / 4 SpD
-Nature: Impish
-- Body Slam
-- Cotton Guard
-- Payback
-- Rest
+Staravia @ Choice Scarf  
+Ability: Reckless  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Double-Edge  
+- Brave Bird  
+- U-turn  
+- Close Combat  
 
-Sprigatito @ Life Orb
-Level: 17
-Ability: Protean
-EVs: 4 HP / 252 Atk / 252 Spe
-Nature: Jolly
-- Seed Bomb
-- U-turn
-- Play Rough
-- Shadow Sneak
-
-Dratini @ Eviolite
-Level: 18
-Ability: Marvel Scale
-EVs: 252 HP / 252 Atk / 4 Spe
-Nature: Adamant
-- Dragon Dance
-- Dragon Claw
-- Extreme Speed
-- Aqua Jet
-
-Zorua @ Focus Sash
-Level: 18
-Ability: Illusion
-EVs: 4 HP / 252 SpA / 252 Spe
-Nature: Timid
-- Night Daze
-- Sludge Bomb
-- Extrasensory
-- Sucker Punch
-
+Loudred @ Throat Spray  
+Ability: Soundproof  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Boomburst  
+- Ice Beam  
+- Torch Song  
+- Overdrive  
 
 === TRAINER_JOSH ===
 Name: JOSH
@@ -6345,67 +7249,54 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Green
+AI: Smart Trainer / Prediction
 
-Aron
-Level: 17
-Ability: Sturdy
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 0 Spe
-- Metal Claw
-- Rock Tomb
-- Headbutt
-- Harden
+Hippopotas @ Smooth Rock  
+Ability: Sand Stream  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Stealth Rock  
+- Roar  
+- Magnitude  
+- Fire Fang  
 
-Geodude
-Level: 17
-Ability: Rock Head
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
-- Rock Tomb
-- Magnitude
-- Tackle
-- Defense Curl
+Drilbur @ Life Orb  
+Ability: Sand Rush  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Iron Head  
+- Earthquake  
+- Swords Dance  
+- Stone Edge  
 
-Onix
-Level: 17
-Ability: Sturdy
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 4 Spe
-- Rock Tomb
-- Bind
-- Screech
-- Harden
+Toedscool @ Eviolite  
+Ability: Mycelium Might  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Spore  
+- Giga Drain  
+- Earth Power  
+- Sludge Bomb  
 
-Nosepass
-Level: 18
-Ability: Magnet Pull
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
-- Rock Tomb
-- Spark
-- Block
-- Harden
+Sandile @ Choice Scarf  
+Ability: Moxie  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Earthquake  
+- Crunch  
+- Gunk Shot  
+- Close Combat  
 
-Shieldon
-Level: 18
-Ability: Sturdy
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
-- Metal Sound
-- Iron Defense
-- Take Down
-- Rock Tomb
-
-Magnemite
-Level: 18
-Ability: Sturdy
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
-- Thundershock
-- Sonic Boom
-- Thunder Wave
-- Metal Sound
+Gligar @ Weakness Policy  
+Ability: Hyper Cutter  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Aerial Ace  
+- Poison Jab  
+- Swords Dance  
+- Fire Fang  
 
 === TRAINER_TOMMY ===
 Name: TOMMY
@@ -6414,67 +7305,55 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Green
+AI: Smart Trainer / Prediction
 
-Geodude
-Level: 8
-Ability: Rock Head
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
-- Rock Tomb
-- Mud-Slap
-- Tackle
-- Defense Curl
+Onix @ Custap Berry  
+Ability: Sturdy  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Stealth Rock  
+- Iron Head  
+- Earthquake  
+- Stone Edge  
 
-Machop
-Level: 8
-Ability: No Guard
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 0 Spe
-- Karate Chop
-- Low Kick
-- Leer
-- Focus Energy
+Omanyte @ Focus Sash  
+Ability: Shell Armor  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Shell Smash  
+- Scald  
+- Ice Beam  
+- Power Gem  
 
-Tyrogue
-Level: 8
-Ability: Guts
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 4 Spe
-- Fake Out
-- Tackle
-- Helping Hand
-- Rock Smash
+Anorith @ Eviolite  
+Ability: Battle Armor  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Accelerock  
+- Swords Dance  
+- X-Scissor  
+- Aqua Jet  
 
-Makuhita
-Level: 8
-Ability: Thick Fat
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
-- Fake Out
-- Arm Thrust
-- Sand Attack
-- Tackle
+Tyrunt @ Choice Scarf  
+Ability: Strong Jaw  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Crunch  
+- Iron Head  
+- Stone Edge  
+- Outrage  
 
-Riolu
-Level: 8
-Ability: Inner Focus
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 4 Spe
-- Quick Attack
-- Rock Smash
-- Foresight
-- Endure
-
-Bonsly
-Level: 8
-Ability: Rock Head
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
-- Rock Tomb
-- Copycat
-- Fake Tears
-- Flail
+Amaura @ Assault Vest  
+Ability: Snow Warning  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Blizzard  
+- Power Gem  
+- Thunderbolt  
+- Earth Power  
 
 === TRAINER_JOEY ===
 Name: JOEY
@@ -6485,9 +7364,42 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Machop
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Hippowdon @ Smooth Rock  
+Ability: Sand Stream  
+EVs: 252 HP / 4 Atk / 252 Def  
+Impish Nature  
+- Stealth Rock  
+- Earthquake  
+- Yawn  
+- Roar  
+
+Gastrodon @ Life Orb  
+Ability: Storm Drain  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Ice Beam  
+- Earth Power  
+- Scald  
+- Recover  
+
+Clodsire @ Leftovers  
+Ability: Water Absorb  
+EVs: 252 HP / 4 Atk / 252 SpD  
+Careful Nature  
+- Earthquake  
+- Toxic  
+- Recover  
+- Poison Jab  
+
+Excadrill @ Choice Band  
+Ability: Sand Rush  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Earthquake  
+- Iron Head  
+- X-Scissor  
+- Rock Slide
 
 === TRAINER_BEN ===
 Name: BEN
@@ -6496,23 +7408,52 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Zigzagoon
-Level: 17
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-- Headbutt
-- Sand Attack
-- Growl
+Kilowattrel @ Leftovers
+Ability: Volt Absorb
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
 - Thunderbolt
+- Hurricane
+- Volt Switch
+- Roost
 
-Gulpin
-Level: 17
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-- Amnesia
-- Sludge
-- Yawn
-- Pound
+Bellibolt @ Leftovers
+Ability: Electromorphosis
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Discharge
+- Muddy Water
+- Slack Off
+- Toxic
+
+Boltund @ Choice Band
+Ability: Strong Jaw
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Psychic Fangs
+- Fire Fang
+- Thunder Fang
+- Play Rough
+
+Zebstrika @ Life Orb
+Ability: Sap Sipper
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Wild Charge
+- Flare Blitz
+- High Horsepower
+- Volt Switch
+
+Pikachu @ Light Ball
+Ability: Lightning Rod
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Volt Tackle
+- Iron Tail
+- Knock Off
+- Quick Attack
 
 === TRAINER_QUINCY ===
 Name: QUINCY
@@ -6690,70 +7631,42 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-SPECIES_CHARMANDER (M) @ Berry Juice  
-Ability: Blaze  
-EVs: 4 HP / 252 SpA / 252 Spe  
-Timid Nature  
-- Ember  
-- Air Cutter  
-- Dragon Breath  
-- SMOKESCREEN  
-
-
-Rookidee (M) @ Eviolite  
+Rookidee @ Eviolite  
 Ability: Unnerve  
-Level: 18  
-EVs: 252 HP / 252 Def / 4 SpD  
-Impish Nature  
-- Pluck  
-- Power Trip  
-- Taunt  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
 - Hone Claws  
-
-
-
-Gligar (M) @ Eviolite  
-Ability: Hyper Cutter  
-EVs: 252 HP / 4 Atk / 252 Def  
-Impish Nature  
-- Bulldoze  
-- Wing Attack  
-- Poison Sting  
+- Dual Wingbeat  
+- Power Trip  
 - Quick Attack  
 
+Fletchling @ Flying Gem  
+Ability: Gale Wings  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Flare Blitz  
+- Acrobatics  
+- U-turn  
+- Steel Wing  
 
-
-Wattrel (M) @ Sharp Beak  
+Wattrel @ Sitrus Berry  
 Ability: Wind Power  
 EVs: 4 HP / 252 SpA / 252 Spe  
 Timid Nature  
 IVs: 0 Atk  
-- Spark  
-- Wing Attack  
-- Quick Attack  
-- Roost  
+- Tailwind  
+- Thunderbolt  
+- Hurricane  
+- Surf  
 
-
-Bagon (M) @ Life Orb  
-Ability: Rock Head  
-EVs: 252 Atk / 4 SpD / 252 Spe  
-Adamant Nature  
-- Bite  
-- Ember  
-- Headbutt  
-- Dragon Dance  
-
-
-Togepi (M) @ Eviolite  
-Ability: Serene Grace  
-EVs: 252 HP / 4 SpA / 252 Spe  
+Pidgey @ Choice Scarf  
+Ability: Big Pecks  
+EVs: 4 HP / 252 SpA / 252 Spe  
 Timid Nature  
-IVs: 0 Atk  
-- Water Pulse  
-- Ancient Power  
-- Metronome  
-- Yawn  
-
+- Hurricane  
+- Hyper Voice  
+- U-turn  
+- Heat Wave  
 
 === TRAINER_TIMMY ===
 Name: TIMMY
@@ -6762,15 +7675,53 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Aron
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Porygon-Z @ Life Orb  
+Ability: Adaptability  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Tri Attack  
+- Psychic  
+- Ice Beam  
+- Thunderbolt  
 
-Electrike
-Level: 13
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sawsbuck @ Choice Band  
+Ability: Chlorophyll  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Body Slam  
+- Horn Leech  
+- Megahorn  
+- High Horsepower  
+
+Toucannon @ Choice Scarf  
+Ability: Skill Link  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Tail Slap  
+- Brave Bird  
+- Bullet Seed  
+- Rock Blast  
+
+Raticate-Alola @ Focus Sash  
+Ability: Hustle  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Tidy Up  
+- Body Slam  
+- Crunch  
+- Fire Fang  
+
+Stantler @ Eviolite  
+Ability: Intimidate  
+EVs: 252 HP / 4 Atk / 252 SpD  
+Careful Nature  
+- Bulk Up  
+- Milk Drink  
+- Psyshield Bash  
+- Body Slam  
 
 === TRAINER_WALLACE ===
 Name: WALLACE
@@ -6949,19 +7900,54 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Magikarp
-Level: 10
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Araquanid @ Coba Berry  
+Ability: Water Bubble  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Aqua Jet  
+- Liquidation  
+- Lunge  
+- Sticky Web  
 
-Tentacool
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Kingdra @ Scope Lens  
+Ability: Sniper  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Snipe Shot  
+- Dragon Pulse  
+- Ice Beam  
+- Flash Cannon  
 
-Magikarp
-Level: 10
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Kilowattrel @ Life Orb  
+Ability: Wind Power  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+- Thunderbolt  
+- Ice Beam  
+- Hurricane  
+- U-turn  
+
+Swanna @ Choice Specs  
+Ability: Big Pecks  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+- Hurricane  
+- Hydro Pump  
+- Flip Turn  
+- Ice Beam  
+
+Clawitzer @ Weakness Policy  
+Ability: Mega Launcher  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Ice Beam  
+- Water Pulse  
+- Dragon Pulse  
+- Dark Pulse  
 
 === TRAINER_NED ===
 Name: NED
@@ -6970,11 +7956,55 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Tentacool
-Level: 11
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Malamar @ Malamarite  
+Ability: Contrary  
+EVs: 252 HP / 252 SpD / 4 Spe  
+Careful Nature  
+- Superpower  
+- Psycho Cut  
+- Liquidation  
+- Recover  
+
+Dewgong @ Assault Vest  
+Ability: Thick Fat  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Triple Axel  
+- Liquidation  
+- Knock Off  
+- Iron Tail  
+
+Empoleon @ Leftovers  
+Ability: Competitive  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Roost  
+- Scald  
+- Ice Beam  
+- Flash Cannon  
+
+Starmie @ Life Orb  
+Ability: Analytic  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Hydro Steam  
+- Psystrike  
+- Ice Beam  
+- Energy Ball  
+
+Volbeat (M) @ Focus Sash  
+Ability: Prankster  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Tail Glow  
+- Bug Buzz  
+- Thunderbolt  
+- Dazzling Gleam  
 
 === TRAINER_DALE ===
 Name: DALE
@@ -6983,23 +8013,44 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Tentacool
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ogerpon-Wellspring (F) @ Wellspring Mask  
+Ability: Water Absorb  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Ivy Cudgel  
+- Swords Dance  
+- Knock Off  
+- Horn Leech  
 
-Wailmer
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Jellicent @ Leftovers  
+Ability: Water Absorb  
+EVs: 252 HP / 4 SpA / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Will-O-Wisp  
+- Hex  
+- Scald  
+- Strength Sap  
 
-Tentacool
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Wailord @ Leftovers  
+Ability: Pressure  
+EVs: 252 HP / 4 Atk / 252 Def  
+Impish Nature  
+- Body Slam  
+- Rest  
+- Sleep Talk  
+- Scald  
 
-Wailmer
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Gyarados @ Wacan Berry  
+Ability: Intimidate  
+EVs: 252 Atk / 4 SpA / 252 Spe  
+Hasty Nature  
+- Dragon Breath  
+- Earthquake  
+- Crunch  
+- Waterfall  
 
 === TRAINER_NOLAN ===
 Name: NOLAN
@@ -7051,15 +8102,36 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Wailmer
-Level: 25
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Manaphy @ Choice Specs  
+Ability: Hydration  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Scald  
+- Dazzling Gleam  
+- Energy Ball  
+- Ice Beam  
 
-Tentacruel
-Level: 25
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Raichu-Alola @ Focus Sash  
+Ability: Surge Surfer  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Nasty Plot  
+- Psystrike  
+- Thunderbolt  
+- Dazzling Gleam  
+
+Hitmontop (M) @ Sitrus Berry  
+Ability: Intimidate  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Fake Out  
+- Triple Axel  
+- Drain Punch  
+- Knock Off  
 
 === TRAINER_ELLIOT_2 ===
 Name: ELLIOT
@@ -7196,20 +8268,55 @@ Class: Triathlete
 Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
-Double Battle: No
-AI: Smart Trainer
+Double Battle: Yes
+AI: Smart Trainer / Prediction
 
-Voltorb
-Level: 6
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Tyranitar @ Air Balloon  
+Ability: Sand Stream  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Rock Slide  
+- Crunch  
+- Protect  
+- Ice Punch  
 
-Voltorb
-Level: 6
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Excadrill @ Life Orb  
+Ability: Sand Rush  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Iron Head  
+- Earthquake  
+- Rock Slide  
+- Protect  
 
-Magnemite
-Level: 14
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Dracozolt @ Electric Gem  
+Ability: Sand Rush  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Bolt Beak  
+- Dragon Claw  
+- Rock Slide  
+- Crunch  
+
+Cradily @ Leftovers  
+Ability: Storm Drain  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Giga Drain  
+- Power Gem  
+- Recover  
+- Sludge Bomb  
+
+Nosepass @ Eviolite  
+Ability: Sand Force  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Earth Power  
+- Flash Cannon  
+- Power Gem  
+- Thunder Wave  
 
 === TRAINER_ANTHONY ===
 Name: ANTHONY
@@ -7218,15 +8325,34 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Magnemite
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Cyclizar @ Sitrus Berry  
+Ability: Regenerator  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Shed Tail  
+- Dragon Claw  
+- Double-Edge  
+- Knock Off  
 
-Magnemite
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Koraidon @ Muscle Band  
+Ability: Orichalcum Pulse  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Close Combat  
+- Flare Blitz  
+- Dragon Claw  
+- Iron Head  
+
+Miraidon @ Choice Specs  
+Ability: Hadron Engine  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+- Volt Switch  
+- Draco Meteor  
+- Electro Drift  
+- Overheat  
 
 === TRAINER_BENJAMIN_1 ===
 Name: BENJAMIN
@@ -7235,11 +8361,44 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Magnemite
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Cinderace @ Life Orb  
+Gigantamax: Yes
+Ability: Libero  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- U-turn  
+- Pyro Ball  
+- High Jump Kick  
+- Gunk Shot  
+
+Passimian @ Choice Scarf  
+Ability: Defiant  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Rock Slide  
+- Close Combat  
+- Knock Off  
+- U-turn  
+
+Hitmonlee (M) @ Focus Sash  
+Ability: Unburden  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Swords Dance  
+- High Jump Kick  
+- Blaze Kick  
+- Trop Kick  
+
+Hitmonchan (M) @ Life Orb  
+Ability: Iron Fist  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Fire Punch  
+- Ice Punch  
+- Bullet Punch  
+- Drain Punch  
 
 === TRAINER_BENJAMIN_2 ===
 Name: BENJAMIN
@@ -7300,32 +8459,100 @@ Pic: Cycling Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Magnemite
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Starmie @ Starminite  
+Ability: Analytic  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Zen Headbutt  
+- Liquidation  
+- Ice Spinner  
+- Play Rough  
+
+Raticate @ Flame Orb  
+Ability: Guts  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Protect  
+- Facade  
+- Earthquake  
+- Sucker Punch  
+
+Talonflame @ White Herb  
+Ability: Gale Wings  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+- Hurricane  
+- Overheat  
+- U-turn  
+- Dark Pulse  
 
 === TRAINER_JASMINE ===
 Name: JASMINE
-Class: Triathlete
+Class: Leader
 Pic: Cycling Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Pink
+AI: Smart Trainer / Prediction
 
-Magnemite
-Level: 14
-IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
+Kingambit @ Chople Berry  
+Ability: Supreme Overlord  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Stealth Rock  
+- Iron Head  
+- Sucker Punch  
+- Aerial Ace  
 
-Magnemite
-Level: 14
-IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
+Magnezone @ Air Balloon  
+Ability: Analytic  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Thunderbolt  
+- Ice Beam  
+- Thunder Cage  
+- Flash Cannon  
 
-Voltorb
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Scizor @ Scizorite  
+Ability: Technician  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Swords Dance  
+- Dual Wingbeat  
+- Bug Bite  
+- Bullet Punch  
+
+Excadrill @ Focus Sash  
+Ability: Mold Breaker  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Iron Head  
+- Earthquake  
+- Rock Slide  
+
+Aegislash @ Life Orb  
+Ability: Stance Change  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Shadow Ball  
+- Flash Cannon  
+- Focus Blast  
+- King's Shield  
+
+Corviknight @ Rocky Helmet  
+Ability: Unnerve  
+EVs: 248 HP / 8 Atk / 252 SpD  
+Careful Nature  
+- Iron Defense  
+- Roost  
+- Body Press  
+- Brave Bird  
 
 === TRAINER_ABIGAIL_2 ===
 Name: ABIGAIL
@@ -7386,11 +8613,43 @@ Pic: Running Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Doduo
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Dodrio @ Choice Band
+Ability: Early Bird
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Brave Bird
+- Drill Run
+- Knock Off
+- Quick Attack
+
+Talonflame @ Heavy-Duty Boots
+Ability: Gale Wings
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Brave Bird
+- Flare Blitz
+- Swords Dance
+- Roost
+
+Lopunny @ Life Orb
+Ability: Limber
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Fake Out
+- Double-Edge
+- High Jump Kick
+- Ice Punch
+
+Cinderace @ Life Orb
+Ability: Blaze
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Pyro Ball
+- High Jump Kick
+- U-turn
+- Sucker Punch
 
 === TRAINER_DYLAN_2 ===
 Name: DYLAN
@@ -7451,11 +8710,43 @@ Pic: Running Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Doduo
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Politoed @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+- Scald
+- Ice Beam
+- Encore
+- Hypnosis
+
+Floatzel @ Choice Band
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Wave Crash
+- Ice Spinner
+- Crunch
+- Aqua Jet
+
+Barraskewda @ Life Orb
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Psychic Fangs
+- Aqua Jet
+
+Swampert @ Leftovers
+Ability: Torrent
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Earthquake
+- Waterfall
+- Stealth Rock
+- Ice Punch
 
 === TRAINER_MARIA_2 ===
 Name: MARIA
@@ -8418,11 +9709,44 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Meditite
-Level: 13
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Flamigo @ Life Orb  
+Ability: Scrappy  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Thunderous Kick  
+- U-turn  
+- Floaty Fall  
+- Knock Off  
+
+Keldeo @ Choice Specs  
+Ability: Justified  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+- Secret Sword  
+- Flip Turn  
+- Ice Beam  
+- Surf  
+
+Hariyama @ Flame Orb  
+Ability: Guts  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Fake Out  
+- Drain Punch  
+- Ice Punch  
+- Earthquake  
+
+Drampa @ Drampanite  
+Ability: Berserk  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Roost  
+- Hyper Voice  
+- Dragon Pulse  
+- Aura Sphere  
 
 === TRAINER_LAURA ===
 Name: LAURA
@@ -8431,11 +9755,54 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Meditite
-Level: 13
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Primeape @ Eviolite  
+Ability: Vital Spirit  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Bulk Up  
+- Drain Punch  
+- Rage Fist  
+- Ice Punch  
+
+Lucario @ Life Orb  
+Ability: Steadfast  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Aura Sphere  
+- Flash Cannon  
+- Dragon Pulse  
+- Dark Pulse  
+
+Toxicroak @ Focus Sash  
+Ability: Dry Skin  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Mach Punch  
+- Swords Dance  
+- Sucker Punch  
+- Poison Jab  
+
+Tentacruel @ Black Sludge  
+Ability: Clear Body  
+EVs: 252 HP / 240 SpD / 16 Spe  
+Calm Nature  
+IVs: 0 Atk  
+- Scald  
+- Sludge Wave  
+- Acid Armor  
+- Recover  
+
+Kubfu @ Eviolite  
+Ability: Inner Focus  
+EVs: 252 HP / 4 Def / 252 SpD  
+Careful Nature  
+- Wicked Blow  
+- Surging Strikes  
+- Drain Punch  
+- Bulk Up  
 
 === TRAINER_CYNDY_1 ===
 Name: CYNDY
@@ -8793,19 +10160,44 @@ Pic: Swimmer F
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Goldeen
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Pelipper @ Focus Sash  
+Ability: Drizzle  
+EVs: 248 HP / 8 Atk / 252 SpA  
+Quiet Nature  
+- Quick Attack  
+- Hurricane  
+- Hydro Steam  
+- Ice Beam  
 
-Wingull
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Seaking @ Life Orb  
+Ability: Swift Swim  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Waterfall  
+- Drill Peck  
+- Ice Spinner  
+- Knock Off  
 
-Goldeen
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Lapras @ Leftovers  
+Ability: Water Absorb  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Ice Beam  
+- Bouncy Bubble  
+- Thunderbolt  
+- Calm Mind  
+
+Kingler @ Choice Band  
+Ability: Hyper Cutter  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Waterfall  
+- Ice Punch  
+- Earthquake  
+- Iron Head  
 
 === TRAINER_JENNY_1 ===
 Name: JENNY
@@ -9378,73 +10770,63 @@ Level: 27
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_GINA_AND_MIA_1 ===
-Name: GINA & MIA
-Class: Twins
-Pic: Twins
+Name: TATE&LIZA
+Class: Leader
+Pic: Leader Tate And Liza
 Gender: Female
-Music: Female
+Music: Girl
 Double Battle: Yes
-AI: Smart Trainer
+Starting Status: Trick Room / Psychic Terrain
+Mugshot: Pink
+AI: Smart Trainer / Prediction
 
-Slowpoke
-Level: 15
-Ability: Regenerator
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
-- Trick Room
-- Water Pulse
-- Confusion
-- Slack Off
+Solosis @ Life Orb  
+Ability: Magic Guard  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Expanding Force  
+- Energy Ball  
+- Shadow Ball  
+- Protect  
 
-Smoochum
-Level: 15
-Ability: Forewarn
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
-- Powder Snow
-- Confusion
-- Sing
-- Fake Out
+Wynaut @ Eviolite  
+Ability: Shadow Tag  
+EVs: 252 HP / 4 Def / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Helping Hand  
+- Charm  
+- Mirror Coat  
+- Counter  
 
-Baltoy
-Level: 14
-Ability: Levitate
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
-- Rock Tomb
-- Mud-Slap
-- Harden
-- Rapid Spin
+Meditite @ Room Service  
+Ability: Pure Power  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Drain Punch  
+- Zen Headbutt  
+- Ice Punch  
+- Protect  
 
-Swinub
-Level: 14
-Ability: Oblivious
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
-- Ice Shard
-- Mud-Slap
-- Tackle
-- Odor Sleuth
+Bronzor @ Leftovers  
+Ability: Levitate  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Iron Defense  
+- Body Press  
+- Iron Head  
+- Zen Headbutt  
 
-Spoink
-Level: 15
-Ability: Thick Fat
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
-- Psybeam
-- Confuse Ray
-- Splash
-- Growl
-
-Snorunt
-Level: 15
-Ability: Inner Focus
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 0 Spe
-- Bite
-- Powder Snow
-- Leer
-- Double Team
+Cosmoem @ Eviolite  
+Ability: Sturdy  
+EVs: 252 HP / 252 Def / 4 SpD  
+Bold Nature  
+IVs: 0 Atk  
+- Cosmic Power  
+- Stored Power  
+- Shock Wave  
+- Protect  
 
 === TRAINER_MIU_AND_YUKI ===
 Name: MIU & YUKI
@@ -9575,15 +10957,43 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Wingull
-Level: 12
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Azumarill @ Sitrus Berry  
+Ability: Huge Power  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Belly Drum  
+- Ice Punch  
+- Play Rough  
+- Aqua Jet  
 
-Machop
-Level: 12
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Pidgeot @ Choice Specs  
+Ability: Big Pecks  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+- Hurricane  
+- Hyper Voice  
+- U-turn  
+- Heat Wave  
+
+Raticate @ Choice Scarf  
+Ability: Hustle  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Double-Edge  
+- U-turn  
+- Wicked Blow  
+- Close Combat  
+
+Linoone @ Choice Band  
+Ability: Quick Feet  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Extreme Speed  
+- Double-Edge  
+- Knock Off  
+- Zen Headbutt  
 
 === TRAINER_EDMOND ===
 Name: EDMOND
@@ -9592,11 +11002,34 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Wingull
-Level: 13
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Barbaracle @ Focus Sash  
+Ability: Tough Claws  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Shell Smash  
+- Rock Slide  
+- Close Combat  
+- Liquidation  
+
+Breloom @ Life Orb  
+Ability: Technician  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Aerial Ace  
+- Mach Punch  
+- Cut  
+- Vine Whip  
+
+Bruxish @ Choice Scarf  
+Ability: Strong Jaw  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Ice Fang  
+- Crunch  
+- Psychic Fangs  
+- Fishious Rend  
 
 === TRAINER_ERNEST_1 ===
 Name: ERNEST
@@ -9622,19 +11055,53 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Wingull
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Qwilfish @ Focus Sash  
+Ability: Intimidate  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Toxic Spikes  
+- Spikes  
+- Aqua Jet  
+- Poison Jab  
 
-Machop
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Kabutops @ Focus Sash  
+Ability: Weak Armor  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Shell Smash  
+- Stone Edge  
+- Waterfall  
+- Ice Spinner  
 
-Tentacool
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Starmie @ Life Orb  
+Ability: Analytic  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psychic  
+- Hydro Steam  
+- Glaciate  
+- Thunderbolt  
+
+Dodrio @ Choice Band  
+Ability: Tangled Feet  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Drill Peck  
+- Earthquake  
+- Close Combat  
+- U-turn  
+
+Squawkabilly @ Flame Orb  
+Ability: Guts  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Protect  
+- Floaty Fall  
+- Facade  
+- Trailblaze  
 
 === TRAINER_PHILLIP ===
 Name: PHILLIP
@@ -9966,16 +11433,55 @@ Class: Collector
 Pic: Collector
 Gender: Male
 Music: Suspicious
-Double Battle: No
-AI: Smart Trainer
+Double Battle: Yes
+AI: Smart Trainer / Prediction
 
-Lombre
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ludicolo @ Normal Gem  
+Ability: Swift Swim  
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Mild Nature  
+- Fake Out  
+- Hydro Pump  
+- Giga Drain  
+- Ice Beam  
 
-Nuzleaf
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Shiftry @ Focus Sash  
+Ability: Wind Rider  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Tailwind  
+- Leaf Blade  
+- Ceaseless Edge  
+- Psycho Cut  
+
+Sceptile @ Sceptilite  
+Ability: Unburden  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Energy Ball  
+- Dragon Pulse  
+- Flamethrower  
+- Earth Power  
+
+Torterra @ Assault Vest  
+Ability: Shell Armor  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Stomping Tantrum  
+- Rock Slide  
+- Seed Bomb  
+- Crunch  
+
+Shaymin @ Leftovers  
+Ability: Natural Cure  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Leech Seed  
+- Earth Power  
+- Giga Drain  
+- Stun Spore  
 
 === TRAINER_HECTOR ===
 Name: HECTOR
@@ -10141,63 +11647,65 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Pink
+AI: Smart Trainer / Prediction
 
-Taillow (F) @ Flame Orb
-Ability: Guts
-EVs: 4 HP / 252 Atk / 252 Spe
-Jolly Nature
-- Protect
-- Wing Attack
-- Quick Attack
-- U-turn
+Noibat @ Life Orb  
+Ability: Infiltrator  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+- Air Slash  
+- Dragon Pulse  
+- U-turn  
+- Heat Wave  
 
-Pichu (F) @ Focus Sash
-Ability: Static
-EVs: 252 SpA / 4 SpD / 252 Spe
-Timid Nature
-IVs: 0 Atk
-- Thunder Shock
-- Psybeam
-- Draining Kiss
-- Nasty Plot
+Budew @ Eviolite  
+Ability: Poison Point  
+EVs: 252 HP / 4 SpA / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Leech Seed  
+- Mega Drain  
+- Protect  
+- Acid Spray  
 
-Chimchar (M) @ Passho Berry
-Ability: Iron Fist
-EVs: 248 HP / 252 Atk / 8 SpD
-Adamant Nature
-- Mach Punch
-- Flame Wheel
-- Work Up
-- Trailblaze
+Aron @ Rocky Helmet  
+Ability: Sturdy  
+EVs: 252 HP / 4 Def / 252 SpD  
+Impish Nature  
+IVs: 0 Atk  
+- Iron Defense  
+- Body Press  
+- Rest  
+- Sleep Talk  
 
-Mudkip (M) @ Oran Berry
-Ability: Damp
-EVs: 248 HP / 8 Atk / 252 SpA
-Quiet Nature
-- Water Pledge
-- Icy Wind
-- Mud Shot
-- Aqua Jet
+Growlithe @ Choice Band  
+Ability: Intimidate  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Extreme Speed  
+- Fire Fang  
+- Thunder Fang  
+- Crunch  
 
-Bulbasaur (F) @ Black Sludge
-Ability: Overgrow
-EVs: 252 HP / 4 SpA / 252 SpD
-Calm Nature
-IVs: 0 Atk
-- Mega Drain
-- Leech Seed
-- Sleep Powder
-- Mud Shot
+Mudkip @ Oran Berry  
+Ability: Torrent  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Water Pulse  
+- Ice Beam  
+- Earth Power  
+- Recover  
 
-Stunky (M) @ Leftovers
-Ability: Aftermath
-EVs: 252 HP / 4 Atk / 252 Spe
-Naive Nature
-- Toxic
-- Protect
-- Venoshock
-- Bite
+Swinub @ Assault Vest  
+Ability: Thick Fat  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Ice Shard  
+- Icicle Crash  
+- Earthquake  
+- Stone Edge  
 
 === TRAINER_BRENDAN_ROUTE_110_MUDKIP ===
 Name: BRENDAN
@@ -10205,20 +11713,65 @@ Class: Rival
 Pic: Brendan
 Gender: Male
 Music: Male
-Double Battle: No
-AI: Basic Trainer
+Double Battle: Yes
+Mugshot: Purple
+AI: Smart Trainer / Prediction
 
-Slugma
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Talonflame @ Flying Gem  
+Ability: Gale Wings  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Tailwind  
+- Acrobatics  
+- Flare Blitz  
+- Steel Wing  
 
-Wingull
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Venusaur @ Life Orb  
+Ability: Chlorophyll  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Sleep Powder  
+- Solar Beam  
+- Earth Power  
+- Sludge Bomb  
 
-Grovyle
-Level: 20
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Mimikyu @ Life Orb  
+Ability: Disguise  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Shadow Claw  
+- Drain Punch  
+- Play Rough  
+
+Pikachu-Starter @ Light Ball  
+Ability: Lightning Rod  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Volt Tackle  
+- Play Rough  
+- Iron Tail  
+- Protect  
+
+Pyroar @ Pyroarite  
+Ability: Unnerve  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Heat Wave  
+- Hyper Voice  
+- Scorching Sands  
+- Protect  
+
+Whimsicott @ Choice Specs  
+Ability: Chlorophyll  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+- Solar Beam  
+- Weather Ball  
+- Moonblast  
+- U-turn  
 
 === TRAINER_BRENDAN_ROUTE_119_MUDKIP ===
 Name: BRENDAN
@@ -10248,15 +11801,16 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Pink
+AI: Smart Trainer / Prediction
 
 Taillow (F) @ Flame Orb
 Ability: Guts
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
 - Protect
-- Wing Attack
-- Quick Attack
+- Aerial Ace
+- Facade
 - U-turn
 
 Pichu (F) @ Focus Sash
@@ -10264,22 +11818,22 @@ Ability: Static
 EVs: 252 SpA / 4 SpD / 252 Spe
 Timid Nature
 IVs: 0 Atk
-- Thunder Shock
-- Psybeam
+- Shock Wave
+- Psychic
 - Draining Kiss
 - Nasty Plot
 
-Chimchar (M) @ Passho Berry
+Chimchar (M) @ Life Orb
 Ability: Iron Fist
 EVs: 248 HP / 252 Atk / 8 SpD
 Adamant Nature
 - Mach Punch
-- Flame Wheel
-- Work Up
-- Trailblaze
+- Fire Punch
+- Power-Up Punch
+- Thunder Punch
 
-Mudkip (M) @ Oran Berry
-Ability: Damp
+Piplup (M) @ Oran Berry
+Ability: Torrent
 EVs: 248 HP / 8 Atk / 252 SpA
 Quiet Nature
 - Water Pledge
@@ -10292,7 +11846,7 @@ Ability: Overgrow
 EVs: 252 HP / 4 SpA / 252 SpD
 Calm Nature
 IVs: 0 Atk
-- Mega Drain
+- Giga Drain
 - Leech Seed
 - Sleep Powder
 - Mud Shot
@@ -10304,7 +11858,7 @@ Naive Nature
 - Toxic
 - Protect
 - Venoshock
-- Bite
+- Crunch
 
 === TRAINER_BRENDAN_ROUTE_110_TREECKO ===
 Name: BRENDAN
@@ -10312,20 +11866,65 @@ Class: Rival
 Pic: Brendan
 Gender: Male
 Music: Male
-Double Battle: No
-AI: Basic Trainer
+Double Battle: Yes
+Mugshot: Purple
+AI: Smart Trainer / Prediction
 
-Wingull
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Talonflame @ Flying Gem  
+Ability: Gale Wings  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Tailwind  
+- Acrobatics  
+- Flare Blitz  
+- Steel Wing  
 
-Lombre
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Venusaur @ Life Orb  
+Ability: Chlorophyll  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Sleep Powder  
+- Solar Beam  
+- Earth Power  
+- Sludge Bomb  
 
-Combusken
-Level: 20
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Mimikyu @ Life Orb  
+Ability: Disguise  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Shadow Claw  
+- Drain Punch  
+- Play Rough  
+
+Pikachu-Starter @ Light Ball  
+Ability: Lightning Rod  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Volt Tackle  
+- Play Rough  
+- Iron Tail  
+- Protect  
+
+Pyroar @ Pyroarite  
+Ability: Unnerve  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Heat Wave  
+- Hyper Voice  
+- Scorching Sands  
+- Protect  
+
+Whimsicott @ Choice Specs  
+Ability: Chlorophyll  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+- Solar Beam  
+- Weather Ball  
+- Moonblast  
+- U-turn  
 
 === TRAINER_BRENDAN_ROUTE_119_TREECKO ===
 Name: BRENDAN
@@ -10355,63 +11954,63 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Pink
+AI: Smart Trainer / Prediction
 
-Taillow (F) @ Flame Orb
-Ability: Guts
-EVs: 4 HP / 252 Atk / 252 Spe
-Jolly Nature
-- Protect
-- Wing Attack
-- Quick Attack
-- U-turn
+Eevee @ Eevium Z  
+Ability: Adaptability  
+EVs: 252 HP / 252 Atk / 4 SpA  
+Lonely Nature  
+- Last Resort  
+- Freezy Frost  
+- Sizzly Slide  
+- Sparkly Swirl  
 
-Pichu (F) @ Focus Sash
-Ability: Static
-EVs: 252 SpA / 4 SpD / 252 Spe
-Timid Nature
-IVs: 0 Atk
-- Thunder Shock
-- Psybeam
-- Draining Kiss
-- Nasty Plot
+Timburr @ Assault Vest  
+Ability: Iron Fist  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Drain Punch  
+- Mach Punch  
+- Thunder Punch  
+- Ice Punch  
 
-Chimchar (M) @ Passho Berry
-Ability: Iron Fist
-EVs: 248 HP / 252 Atk / 8 SpD
-Adamant Nature
-- Mach Punch
-- Flame Wheel
-- Work Up
-- Trailblaze
+Squirtle @ White Herb  
+Ability: Torrent  
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Rash Nature  
+- Water Pulse  
+- Ice Beam  
+- Shell Smash  
+- Crunch  
 
-Mudkip (M) @ Oran Berry
-Ability: Damp
-EVs: 248 HP / 8 Atk / 252 SpA
-Quiet Nature
-- Water Pledge
-- Icy Wind
-- Mud Shot
-- Aqua Jet
+Rowlet @ Eviolite  
+Ability: Long Reach  
+EVs: 248 HP / 8 Atk / 252 Def  
+Impish Nature  
+- Leaf Blade  
+- Leech Seed  
+- Protect  
+- Aerial Ace  
 
-Bulbasaur (F) @ Black Sludge
-Ability: Overgrow
-EVs: 252 HP / 4 SpA / 252 SpD
-Calm Nature
-IVs: 0 Atk
-- Mega Drain
-- Leech Seed
-- Sleep Powder
-- Mud Shot
+Magby @ Life Orb  
+Ability: Flame Body  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Flamethrower  
+- Shock Wave  
+- Snarl  
+- Vacuum Wave  
 
-Stunky (M) @ Leftovers
-Ability: Aftermath
-EVs: 252 HP / 4 Atk / 252 Spe
-Naive Nature
-- Toxic
-- Protect
-- Venoshock
-- Bite
+Geodude @ Choice Scarf  
+Ability: Rock Head  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Head Smash  
+- Earthquake  
+- Explosion  
+- Thunder Punch  
 
 === TRAINER_BRENDAN_ROUTE_110_TORCHIC ===
 Name: BRENDAN
@@ -10419,20 +12018,65 @@ Class: Rival
 Pic: Brendan
 Gender: Male
 Music: Male
-Double Battle: No
-AI: Basic Trainer
+Double Battle: Yes
+Mugshot: Purple
+AI: Smart Trainer / Prediction
 
-Lombre
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Talonflame @ Flying Gem  
+Ability: Gale Wings  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Tailwind  
+- Acrobatics  
+- Flare Blitz  
+- Steel Wing  
 
-Slugma
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Venusaur @ Life Orb  
+Ability: Chlorophyll  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Sleep Powder  
+- Solar Beam  
+- Earth Power  
+- Sludge Bomb  
 
-Marshtomp
-Level: 20
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Mimikyu @ Life Orb  
+Ability: Disguise  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Shadow Claw  
+- Drain Punch  
+- Play Rough  
+
+Pikachu-Starter @ Light Ball  
+Ability: Lightning Rod  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Volt Tackle  
+- Play Rough  
+- Iron Tail  
+- Protect  
+
+Pyroar @ Pyroarite  
+Ability: Unnerve  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Heat Wave  
+- Hyper Voice  
+- Scorching Sands  
+- Protect  
+
+Whimsicott @ Choice Specs  
+Ability: Chlorophyll  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+- Solar Beam  
+- Weather Ball  
+- Moonblast  
+- U-turn  
 
 === TRAINER_BRENDAN_ROUTE_119_TORCHIC ===
 Name: BRENDAN
@@ -10462,63 +12106,65 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Pink
+AI: Smart Trainer / Prediction
 
-Taillow (F) @ Flame Orb
-Ability: Guts
-EVs: 4 HP / 252 Atk / 252 Spe
-Jolly Nature
-- Protect
-- Wing Attack
-- Quick Attack
-- U-turn
+Noibat @ Life Orb  
+Ability: Infiltrator  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+- Air Slash  
+- Dragon Pulse  
+- U-turn  
+- Heat Wave  
 
-Pichu (F) @ Focus Sash
-Ability: Static
-EVs: 252 SpA / 4 SpD / 252 Spe
-Timid Nature
-IVs: 0 Atk
-- Thunder Shock
-- Psybeam
-- Draining Kiss
-- Nasty Plot
+Budew @ Eviolite  
+Ability: Poison Point  
+EVs: 252 HP / 4 SpA / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Leech Seed  
+- Mega Drain  
+- Protect  
+- Acid Spray  
 
-Chimchar (M) @ Passho Berry
-Ability: Iron Fist
-EVs: 248 HP / 252 Atk / 8 SpD
-Adamant Nature
-- Mach Punch
-- Flame Wheel
-- Work Up
-- Trailblaze
+Aron @ Rocky Helmet  
+Ability: Sturdy  
+EVs: 252 HP / 4 Def / 252 SpD  
+Impish Nature  
+IVs: 0 Atk  
+- Iron Defense  
+- Body Press  
+- Rest  
+- Sleep Talk  
 
-Mudkip (M) @ Oran Berry
-Ability: Damp
-EVs: 248 HP / 8 Atk / 252 SpA
-Quiet Nature
-- Water Pledge
-- Icy Wind
-- Mud Shot
-- Aqua Jet
+Growlithe @ Choice Band  
+Ability: Intimidate  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Extreme Speed  
+- Fire Fang  
+- Thunder Fang  
+- Crunch  
 
-Bulbasaur (F) @ Black Sludge
-Ability: Overgrow
-EVs: 252 HP / 4 SpA / 252 SpD
-Calm Nature
-IVs: 0 Atk
-- Mega Drain
-- Leech Seed
-- Sleep Powder
-- Mud Shot
+Mudkip @ Oran Berry  
+Ability: Torrent  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Water Pulse  
+- Ice Beam  
+- Earth Power  
+- Recover  
 
-Stunky (M) @ Leftovers
-Ability: Aftermath
-EVs: 252 HP / 4 Atk / 252 Spe
-Naive Nature
-- Toxic
-- Protect
-- Venoshock
-- Bite
+Swinub @ Assault Vest  
+Ability: Thick Fat  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Ice Shard  
+- Icicle Crash  
+- Earthquake  
+- Stone Edge  
 
 === TRAINER_MAY_ROUTE_110_MUDKIP ===
 Name: MAY
@@ -10526,20 +12172,65 @@ Class: Rival
 Pic: May
 Gender: Female
 Music: Female
-Double Battle: No
-AI: Basic Trainer
+Double Battle: Yes
+Mugshot: Purple
+AI: Smart Trainer / Prediction
 
-Wingull
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Talonflame @ Flying Gem  
+Ability: Gale Wings  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Tailwind  
+- Acrobatics  
+- Flare Blitz  
+- Steel Wing  
 
-Slugma
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Venusaur @ Life Orb  
+Ability: Chlorophyll  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Sleep Powder  
+- Solar Beam  
+- Earth Power  
+- Sludge Bomb  
 
-Grovyle
-Level: 20
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Mimikyu @ Life Orb  
+Ability: Disguise  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Shadow Claw  
+- Drain Punch  
+- Play Rough  
+
+Pikachu-Starter @ Light Ball  
+Ability: Lightning Rod  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Volt Tackle  
+- Play Rough  
+- Iron Tail  
+- Protect  
+
+Pyroar @ Pyroarite  
+Ability: Unnerve  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Heat Wave  
+- Hyper Voice  
+- Scorching Sands  
+- Protect  
+
+Whimsicott @ Choice Specs  
+Ability: Chlorophyll  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+- Solar Beam  
+- Weather Ball  
+- Moonblast  
+- U-turn  
 
 === TRAINER_MAY_ROUTE_119_MUDKIP ===
 Name: MAY
@@ -10569,15 +12260,16 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Pink
+AI: Smart Trainer / Prediction
 
 Taillow (F) @ Flame Orb
 Ability: Guts
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
 - Protect
-- Wing Attack
-- Quick Attack
+- Aerial Ace
+- Facade
 - U-turn
 
 Pichu (F) @ Focus Sash
@@ -10585,22 +12277,22 @@ Ability: Static
 EVs: 252 SpA / 4 SpD / 252 Spe
 Timid Nature
 IVs: 0 Atk
-- Thunder Shock
-- Psybeam
+- Shock Wave
+- Psychic
 - Draining Kiss
 - Nasty Plot
 
-Chimchar (M) @ Passho Berry
+Chimchar (M) @ Life Orb
 Ability: Iron Fist
 EVs: 248 HP / 252 Atk / 8 SpD
 Adamant Nature
 - Mach Punch
-- Flame Wheel
-- Work Up
-- Trailblaze
+- Fire Punch
+- Power-Up Punch
+- Thunder Punch
 
-Mudkip (M) @ Oran Berry
-Ability: Damp
+Piplup (M) @ Oran Berry
+Ability: Torrent
 EVs: 248 HP / 8 Atk / 252 SpA
 Quiet Nature
 - Water Pledge
@@ -10613,7 +12305,7 @@ Ability: Overgrow
 EVs: 252 HP / 4 SpA / 252 SpD
 Calm Nature
 IVs: 0 Atk
-- Mega Drain
+- Giga Drain
 - Leech Seed
 - Sleep Powder
 - Mud Shot
@@ -10625,7 +12317,7 @@ Naive Nature
 - Toxic
 - Protect
 - Venoshock
-- Bite
+- Crunch
 
 === TRAINER_MAY_ROUTE_110_TREECKO ===
 Name: MAY
@@ -10633,20 +12325,65 @@ Class: Rival
 Pic: May
 Gender: Female
 Music: Female
-Double Battle: No
-AI: Basic Trainer
+Double Battle: Yes
+Mugshot: Purple
+AI: Smart Trainer / Prediction
 
-Wingull
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Talonflame @ Flying Gem  
+Ability: Gale Wings  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Tailwind  
+- Acrobatics  
+- Flare Blitz  
+- Steel Wing  
 
-Lombre
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Venusaur @ Life Orb  
+Ability: Chlorophyll  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Sleep Powder  
+- Solar Beam  
+- Earth Power  
+- Sludge Bomb  
 
-Combusken
-Level: 20
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Mimikyu @ Life Orb  
+Ability: Disguise  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Shadow Claw  
+- Drain Punch  
+- Play Rough  
+
+Pikachu-Starter @ Light Ball  
+Ability: Lightning Rod  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Volt Tackle  
+- Play Rough  
+- Iron Tail  
+- Protect  
+
+Pyroar @ Pyroarite  
+Ability: Unnerve  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Heat Wave  
+- Hyper Voice  
+- Scorching Sands  
+- Protect  
+
+Whimsicott @ Choice Specs  
+Ability: Chlorophyll  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+- Solar Beam  
+- Weather Ball  
+- Moonblast  
+- U-turn  
 
 === TRAINER_MAY_ROUTE_119_TREECKO ===
 Name: MAY
@@ -10676,63 +12413,63 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Pink
+AI: Smart Trainer / Prediction
 
-Taillow (F) @ Flame Orb
-Ability: Guts
-EVs: 4 HP / 252 Atk / 252 Spe
-Jolly Nature
-- Protect
-- Wing Attack
-- Quick Attack
-- U-turn
+Eevee @ Eevium Z  
+Ability: Adaptability  
+EVs: 252 HP / 252 Atk / 4 SpA  
+Lonely Nature  
+- Last Resort  
+- Freezy Frost  
+- Sizzly Slide  
+- Sparkly Swirl  
 
-Pichu (F) @ Focus Sash
-Ability: Static
-EVs: 252 SpA / 4 SpD / 252 Spe
-Timid Nature
-IVs: 0 Atk
-- Thunder Shock
-- Psybeam
-- Draining Kiss
-- Nasty Plot
+Timburr @ Assault Vest  
+Ability: Iron Fist  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Drain Punch  
+- Mach Punch  
+- Thunder Punch  
+- Ice Punch  
 
-Chimchar (M) @ Passho Berry
-Ability: Iron Fist
-EVs: 248 HP / 252 Atk / 8 SpD
-Adamant Nature
-- Mach Punch
-- Flame Wheel
-- Work Up
-- Trailblaze
+Squirtle @ White Herb  
+Ability: Torrent  
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Rash Nature  
+- Water Pulse  
+- Ice Beam  
+- Shell Smash  
+- Crunch  
 
-Mudkip (M) @ Oran Berry
-Ability: Damp
-EVs: 248 HP / 8 Atk / 252 SpA
-Quiet Nature
-- Water Pledge
-- Icy Wind
-- Mud Shot
-- Aqua Jet
+Rowlet @ Eviolite  
+Ability: Long Reach  
+EVs: 248 HP / 8 Atk / 252 Def  
+Impish Nature  
+- Leaf Blade  
+- Leech Seed  
+- Protect  
+- Aerial Ace  
 
-Bulbasaur (F) @ Black Sludge
-Ability: Overgrow
-EVs: 252 HP / 4 SpA / 252 SpD
-Calm Nature
-IVs: 0 Atk
-- Mega Drain
-- Leech Seed
-- Sleep Powder
-- Mud Shot
+Magby @ Life Orb  
+Ability: Flame Body  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Flamethrower  
+- Shock Wave  
+- Snarl  
+- Vacuum Wave  
 
-Stunky (M) @ Leftovers
-Ability: Aftermath
-EVs: 252 HP / 4 Atk / 252 Spe
-Naive Nature
-- Toxic
-- Protect
-- Venoshock
-- Bite
+Geodude @ Choice Scarf  
+Ability: Rock Head  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Head Smash  
+- Earthquake  
+- Explosion  
+- Thunder Punch  
 
 === TRAINER_MAY_ROUTE_110_TORCHIC ===
 Name: MAY
@@ -10740,20 +12477,65 @@ Class: Rival
 Pic: May
 Gender: Female
 Music: Female
-Double Battle: No
-AI: Basic Trainer
+Double Battle: Yes
+Mugshot: Purple
+AI: Smart Trainer / Prediction
 
-Lombre
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Talonflame @ Flying Gem  
+Ability: Gale Wings  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Tailwind  
+- Acrobatics  
+- Flare Blitz  
+- Steel Wing  
 
-Slugma
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Venusaur @ Life Orb  
+Ability: Chlorophyll  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Sleep Powder  
+- Solar Beam  
+- Earth Power  
+- Sludge Bomb  
 
-Marshtomp
-Level: 20
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Mimikyu @ Life Orb  
+Ability: Disguise  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Shadow Claw  
+- Drain Punch  
+- Play Rough  
+
+Pikachu-Starter @ Light Ball  
+Ability: Lightning Rod  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Volt Tackle  
+- Play Rough  
+- Iron Tail  
+- Protect  
+
+Pyroar @ Pyroarite  
+Ability: Unnerve  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Heat Wave  
+- Hyper Voice  
+- Scorching Sands  
+- Protect  
+
+Whimsicott @ Choice Specs  
+Ability: Chlorophyll  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+- Solar Beam  
+- Weather Ball  
+- Moonblast  
+- U-turn  
 
 === TRAINER_MAY_ROUTE_119_TORCHIC ===
 Name: MAY
@@ -10783,31 +12565,61 @@ Pic: Pokemon Breeder M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Whismur
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Snorlax @ Leftovers
+Ability: Thick Fat
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+- Body Slam
+- Curse
+- Rest
+- Sleep Talk
 
-Zigzagoon
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Hariyama @ Flame Orb
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Close Combat
+- Knock Off
+- Bullet Punch
+- Fake Out
 
-Aron
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Aggron @ Choice Band
+Ability: Rock Head
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Head Smash
+- Heavy Slam
+- Earthquake
+- Aqua Tail
 
-Poochyena
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Mightyena @ Life Orb
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Crunch
+- Play Rough
+- Sucker Punch
+- Fire Fang
 
-Taillow
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Swellow @ Flame Orb
+Ability: Guts
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Facade
+- Brave Bird
+- U-turn
+- Quick Attack
 
-Makuhita
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Exploud @ Choice Specs
+Ability: Scrappy
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Boomburst
+- Focus Blast
+- Fire Blast
+- Ice Beam
 
 === TRAINER_DAVIS ===
 Name: DAVIS
@@ -10986,31 +12798,61 @@ Pic: Pokemon Breeder F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Wingull
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Pelipper @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Hurricane
+- Scald
+- U-turn
+- Roost
 
-Shroomish
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ludicolo @ Life Orb
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Hydro Pump
+- Giga Drain
+- Ice Beam
+- Fake Out
 
-Marill
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Breloom @ Focus Sash
+Ability: Technician
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Mach Punch
+- Bullet Seed
+- Rock Tomb
+- Spore
 
-Roselia
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Azumarill @ Sitrus Berry
+Ability: Huge Power
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Belly Drum
+- Aqua Jet
+- Play Rough
+- Knock Off
 
-Skitty
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sylveon @ Leftovers
+Ability: Pixilate
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Hyper Voice
+- Calm Mind
+- Wish
+- Protect
 
-Goldeen
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Kingdra @ Choice Specs
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Draco Meteor
+- Hydro Pump
+- Hurricane
+- Flip Turn
 
 === TRAINER_HALLE ===
 Name: HALLE
@@ -11503,67 +13345,54 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Green
+AI: Smart Trainer / Prediction
 
-Geodude
-Level: 8
-Ability: Rock Head
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
-- Rock Tomb
-- Mud-Slap
-- Tackle
-- Defense Curl
+Tinkatuff (F) @ Oran Berry  
+Ability: Mold Breaker  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Play Rough  
+- Knock Off  
+- Iron Head  
+- Stealth Rock  
 
-Onix
-Level: 8
-Ability: Sturdy
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 4 Spe
-- Rock Tomb
-- Mud-Slap
-- Bind
-- Harden
+Metang @ Eviolite  
+Ability: Clear Body  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Bullet Punch  
+- Ice Punch  
+- Thunder Punch  
+- Zen Headbutt  
 
-Larvitar
-Level: 8
-Ability: Guts
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 4 Spe
-- Rock Tomb
-- Bite
-- Leer
-- Sandstorm
+Magnemite @ Choice Scarf  
+Ability: Magnet Pull  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Thunderbolt  
+- Volt Switch  
+- Signal Beam  
+- Flash Cannon  
 
-Rhyhorn
-Level: 8
-Ability: Rock Head
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
-- Rock Tomb
-- Tail Whip
-- Horn Attack
-- Scary Face
+Pawniard @ Focus Sash  
+Ability: Defiant  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Swords Dance  
+- Iron Head  
+- Aerial Ace  
+- Sucker Punch  
 
-Cubone
-Level: 8
-Ability: Lightning Rod
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 4 Spe
-- Bone Club
-- Mud-Slap
-- Growl
-- Tail Whip
-
-Phanpy
-Level: 8
-Ability: Pickup
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
-- Odor Sleuth
-- Tackle
-- Growl
-- Mud-Slap
+Honedge @ Eviolite  
+Ability: No Guard  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Dynamic Punch  
+- Sacred Sword  
+- Shadow Sneak  
+- Iron Head  
 
 === TRAINER_BRENDEN ===
 Name: BRENDEN
@@ -11571,12 +13400,56 @@ Class: Sailor
 Pic: Sailor
 Gender: Male
 Music: Male
-Double Battle: No
-AI: Smart Trainer
+Double Battle: Yes
+AI: Smart Trainer / Prediction
 
-Machop
-Level: 13
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Politoed @ Damp Rock  
+Ability: Drizzle  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Weather Ball  
+- Helping Hand  
+- Icy Wind  
+- Earth Power  
+
+Poliwrath @ Life Orb  
+Ability: Swift Swim  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Close Combat  
+- Jet Punch  
+- Liquidation  
+- Ice Punch  
+
+Seismitoad @ Assault Vest  
+Ability: Swift Swim  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Sludge Bomb  
+- Ice Beam  
+- Muddy Water  
+- Earth Power  
+
+Golduck @ Focus Sash  
+Ability: Swift Swim  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Psystrike  
+- Hydro Steam  
+- Ice Beam  
+- Protect  
+
+Gyarados @ Gyaradosite  
+Ability: Intimidate  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Adamant Nature  
+- Crunch  
+- Waterfall  
+- Bounce  
+- Dragon Dance  
 
 === TRAINER_LILITH ===
 Name: LILITH
@@ -11585,11 +13458,44 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Meditite
-Level: 13
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Lilligant-Hisui (F) @ Focus Sash  
+Ability: Chlorophyll  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Sleep Powder  
+- Victory Dance  
+- Close Combat  
+- Leaf Blade  
+
+Mienshao @ Life Orb  
+Ability: Inner Focus  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Aura Sphere  
+- Air Slash  
+- Thunderbolt  
+- Grass Knot  
+
+Weavile @ Choice Band  
+Ability: Pressure  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Icicle Crash  
+- Knock Off  
+- U-turn  
+- Low Kick  
+
+Falinks @ Falinksite  
+Ability: Defiant  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- No Retreat  
+- Triple Dive  
+- Triple Arrows  
+- Drain Punch  
 
 === TRAINER_CRISTIAN ===
 Name: CRISTIAN
@@ -11598,11 +13504,53 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Makuhita
-Level: 13
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Gallade (M) @ Galladite  
+Ability: Steadfast  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Bitter Blade  
+- Psycho Cut  
+- Sacred Sword  
+
+Heracross @ Flame Orb  
+Ability: Guts  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Close Combat  
+- Trailblaze  
+- Poison Jab  
+- Lunge  
+
+Bewear @ Assault Vest  
+Ability: Fluffy  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Drain Punch  
+- Body Slam  
+- Sucker Punch  
+- Earthquake  
+
+Pangoro @ Life Orb  
+Ability: Iron Fist  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Bullet Punch  
+- Drain Punch  
+- Sucker Punch  
+- Poison Jab  
+
+Raichu @ Choice Specs  
+Ability: Lightning Rod  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Thunderbolt  
+- Surf  
+- Grass Knot  
+- Volt Switch  
 
 === TRAINER_SYLVIA ===
 Name: SYLVIA
@@ -11846,15 +13794,64 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Pink
+AI: Smart Trainer / Prediction
 
-Lotad
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Meowstic-F (F) @ Meowsticite  
+Ability: Competitive  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Mist Ball  
+- Calm Mind  
+- Draining Kiss  
+- Energy Ball  
 
-Torchic
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Virizion @ Life Orb  
+Ability: Justified  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Close Combat  
+- Leaf Blade  
+- Stone Edge  
+- Sucker Punch  
+
+Electivire @ Air Balloon  
+Ability: Motor Drive  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Plasma Fists  
+- Close Combat  
+- Ice Punch  
+- Earthquake  
+
+Sylveon @ Leftovers  
+Ability: Pixilate  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Wish  
+- Hyper Voice  
+- Mystical Fire  
+
+Drapion @ Scope Lens  
+Ability: Sniper  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Night Slash  
+- Cross Poison  
+- X-Scissor  
+- Earthquake  
+
+Type: Null @ Eviolite  
+Ability: Battle Armor  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Swords Dance  
+- Body Slam  
+- Trailblaze  
+- Earthquake  
 
 === TRAINER_BRENDAN_RUSTBORO_MUDKIP ===
 Name: BRENDAN
@@ -11863,15 +13860,64 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Pink
+AI: Smart Trainer / Prediction
 
-Wingull
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Meowstic-F (F) @ Meowsticite  
+Ability: Competitive  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Mist Ball  
+- Calm Mind  
+- Draining Kiss  
+- Energy Ball  
 
-Treecko
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Virizion @ Life Orb  
+Ability: Justified  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Close Combat  
+- Leaf Blade  
+- Stone Edge  
+- Sucker Punch  
+
+Electivire @ Air Balloon  
+Ability: Motor Drive  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Plasma Fists  
+- Close Combat  
+- Ice Punch  
+- Earthquake  
+
+Sylveon @ Leftovers  
+Ability: Pixilate  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Wish  
+- Hyper Voice  
+- Mystical Fire  
+
+Drapion @ Scope Lens  
+Ability: Sniper  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Night Slash  
+- Cross Poison  
+- X-Scissor  
+- Earthquake  
+
+Type: Null @ Eviolite  
+Ability: Battle Armor  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Swords Dance  
+- Body Slam  
+- Trailblaze  
+- Earthquake  
 
 === TRAINER_PAXTON ===
 Name: PAXTON
@@ -11970,15 +14016,64 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+Mugshot: Pink
+AI: Smart Trainer / Prediction
 
-Slugma
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Meowstic-F (F) @ Meowsticite  
+Ability: Competitive  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Mist Ball  
+- Calm Mind  
+- Draining Kiss  
+- Energy Ball  
 
-Mudkip
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Virizion @ Life Orb  
+Ability: Justified  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Close Combat  
+- Leaf Blade  
+- Stone Edge  
+- Sucker Punch  
+
+Electivire @ Air Balloon  
+Ability: Motor Drive  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Plasma Fists  
+- Close Combat  
+- Ice Punch  
+- Earthquake  
+
+Sylveon @ Leftovers  
+Ability: Pixilate  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Wish  
+- Hyper Voice  
+- Mystical Fire  
+
+Drapion @ Scope Lens  
+Ability: Sniper  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Night Slash  
+- Cross Poison  
+- X-Scissor  
+- Earthquake  
+
+Type: Null @ Eviolite  
+Ability: Battle Armor  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Swords Dance  
+- Body Slam  
+- Trailblaze  
+- Earthquake  
 
 === TRAINER_MAY_RUSTBORO_MUDKIP ===
 Name: MAY
@@ -11987,15 +14082,64 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Pink
+AI: Smart Trainer / Prediction
 
-Wingull
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Meowstic-F (F) @ Meowsticite  
+Ability: Competitive  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Mist Ball  
+- Calm Mind  
+- Draining Kiss  
+- Energy Ball  
 
-Treecko
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Virizion @ Life Orb  
+Ability: Justified  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Close Combat  
+- Leaf Blade  
+- Stone Edge  
+- Sucker Punch  
+
+Electivire @ Air Balloon  
+Ability: Motor Drive  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Plasma Fists  
+- Close Combat  
+- Ice Punch  
+- Earthquake  
+
+Sylveon @ Leftovers  
+Ability: Pixilate  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Wish  
+- Hyper Voice  
+- Mystical Fire  
+
+Drapion @ Scope Lens  
+Ability: Sniper  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Night Slash  
+- Cross Poison  
+- X-Scissor  
+- Earthquake  
+
+Type: Null @ Eviolite  
+Ability: Battle Armor  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Swords Dance  
+- Body Slam  
+- Trailblaze  
+- Earthquake  
 
 === TRAINER_MAXIE_MAGMA_HIDEOUT ===
 Name: MAXIE
@@ -12050,71 +14194,32 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Marshtomp (M) @ Soft Sand  
-Ability: Torrent   
-EVs: 252 Atk / 4 SpD / 252 Spe  
+Luxio @ Flame Orb  
+Ability: Guts  
+EVs: 252 HP / 252 Atk / 4 SpD  
 Adamant Nature  
-- Water Gun  
-- Mud Shot  
-- Mud-Slap  
-- Rock Tomb  
+- Protect  
+- Fire Fang  
+- Ice Fang  
+- Thunder Fang  
 
+Audino @ Leftovers  
+Ability: Healer  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+- Wish  
+- Calm Mind  
+- Protect  
+- Metronome  
 
-Shellos (M) @ Mystic Water  
-Ability: Sticky Hold  
-EVs: 252 HP / 252 SpA / 4 SpD  
-Modest Nature  
-IVs: 0 Atk  
-- Water Pulse  
-- Mud-Slap  
-- Recover  
-- Hidden Power 
-
- 
-
-
-Bellsprout (M) @ Miracle Seed  
+Nuzleaf @ Life Orb  
 Ability: Chlorophyll  
 EVs: 4 HP / 252 Atk / 252 Spe  
 Adamant Nature  
-- Vine Whip  
-- Poison Powder  
-- Wrap  
-- Growth  
-
-
-Zubat (M) @ Sharp Beak  
-Ability: Inner Focus  
-EVs: 4 HP / 252 Atk / 252 Spe  
-Jolly Nature  
-- Wing Attack  
-- Bite  
-- Poison Fang  
-- Supersonic  
-
-
-Gastly (M) @ Spell Tag  
-Ability: Levitate  
-EVs: 4 HP / 252 SpA / 252 Spe  
-Timid Nature  
-IVs: 0 Atk  
-- Hex  
-- Sludge  
-- Confuse Ray  
-- Hypnosis  
-
-
-Croagunk (M) @ Black Belt  
-Ability: Dry Skin  
-EVs: 4 HP / 252 Atk / 252 Spe  
-Jolly Nature  
-- Power-Up Punch  
-- Poison Sting  
+- Ceaseless Edge  
+- Leaf Blade  
+- Iron Head  
 - Sucker Punch  
-- Feint Attack  
-
-
-
 
 === TRAINER_HALEY_1 ===
 Name: HALEY
@@ -12123,67 +14228,55 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Eevee
-Level: 18
-Ability: Run Away
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
-- Double-Edge
-- Bite
-- Quick Attack
-- Swift
+Skitty @ Normal Gem  
+Ability: Cute Charm  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Fake Out  
+- Play Rough  
+- Return  
+- Zen Headbutt  
 
-Ralts
-Level: 18
-Ability: Synchronize
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
-- Confusion
-- Magical Leaf
-- Disarming Voice
-- Calm Mind
+Wingull @ Choice Specs  
+Ability: Rain Dish  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+- Surf  
+- U-turn  
+- Ice Beam  
+- Air Slash  
 
-Vulpix
-Level: 18
-Ability: Flash Fire
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe
-- Flame Burst
-- Will-O-Wisp
-- Quick Attack
-- Baby-Doll Eyes
+Buneary @ Life Orb  
+Ability: Limber  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- High Jump Kick  
+- Mega Kick  
+- Ice Punch  
+- Knock Off  
 
-Buneary
-Level: 19
-Ability: Run Away
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
-- Jump Kick
-- Quick Attack
-- Baby-Doll Eyes
-- Frustration
+Wooloo @ Eviolite  
+Ability: Fluffy  
+EVs: 248 HP / 8 Atk / 252 SpD  
+Careful Nature  
+- Bulk Up  
+- Milk Drink  
+- Body Slam  
+- Earthquake  
 
-Bellsprout
-Level: 19
-Ability: Chlorophyll
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
-- Razor Leaf
-- Poison Powder
-- Sleep Powder
-- Sludge
-
-Skitty
-Level: 19
-Ability: Cute Charm
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
-- Fake Out
-- Disarming Voice
-- Sing
-- Wake-Up Slap
+Cosmog @ Eviolite  
+Ability: Unaware  
+Shiny: Yes  
+Tera Type: Psychic  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Draining Kiss  
+- Psystrike  
+- Recover  
 
 === TRAINER_JANICE ===
 Name: JANICE
@@ -12362,38 +14455,45 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Spinarak @ Focus Sash  
-Ability: Sniper  
-EVs: 248 HP / 252 Atk / 8 SpD  
-Adamant Nature  
-- Shadow Sneak  
-- Bug Bite  
-- Swords Dance  
-- Poison Sting  
+Combee @ Eviolite  
+Ability: Hustle  
+EVs: 248 HP / 8 Atk / 252 SpD  
+Careful Nature  
+- Attack Order  
+- Defend Order  
+- Heal Order  
+- Aerial Ace  
 
-Ledyba (F) @ Choice Specs  
-Ability: Swarm  
-EVs: 248 HP / 252 SpA / 8 SpD  
+Yanma @ Life Orb  
+Ability: Speed Boost  
+EVs: 252 SpA / 4 SpD / 252 Spe  
 Modest Nature  
 IVs: 0 Atk  
-- Psybeam  
-- Silver Wind  
-- Air Cutter  
-- Mega Drain  
+- Detect  
+- Air Slash  
+- Struggle Bug  
+- Ancient Power  
 
-Burmy-Trash (F) @ Eviolite  
+Kricketot @ Choice Band  
+Ability: Shed Skin  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- First Impression  
+- Sucker Punch  
+- X-Scissor  
+- Knock Off  
+
+Burmy-Trash @ Eviolite  
 Ability: Overcoat  
-Shiny: Yes  
 EVs: 248 HP / 8 SpA / 252 SpD  
 Calm Nature  
 IVs: 0 Atk  
 - Toxic  
 - Protect  
-- Struggle Bug  
-- Mega Drain  
-
+- Synthesis  
+- Bug Buzz  
 
 === TRAINER_LYLE ===
 Name: LYLE
@@ -12402,35 +14502,32 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Venonat @ Black Sludge
-Level: 16
+Venonat @ Focus Sash
 Ability: Compound Eyes
-EVs: 252 HP / 4 Def / 252 Spe
+EVs: 252 SpA / 4 Def / 252 Spe
 Timid Nature
 - Sleep Powder
 - Sludge Bomb
 - Bug Buzz
-- Stun Spore
+- Quiver Dance
 
 Foongus @ Rocky Helmet
-Level: 16
 Ability: Regenerator
 EVs: 252 HP / 252 Def / 4 SpD
 Bold Nature
-- Spore
+- Toxic
 - Giga Drain
-- Clear Smog
-- Synthesis
+- Sludge Bomb
+- Protect
 
 Croagunk @ Life Orb
-Level: 17
 Ability: Dry Skin
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
 - Poison Jab
-- Drain Punch
+- Mach Punch
 - Sucker Punch
 - Fake Out
 
@@ -12441,18 +14538,18 @@ EVs: 252 HP / 4 Atk / 252 Def
 Impish Nature
 - Poison Jab
 - Bug Bite
-- Protect
-- Venoshock
+- Earthquake
+- Swords Dance
 
 Shroodle @ Focus Sash
 Level: 17
 Ability: Prankster
 EVs: 4 HP / 252 SpA / 252 Spe
 Timid Nature
-- Toxic
-- Sludge Bomb
-- Parting Shot
-- Taunt
+- Knock Off
+- Poison Jab
+- Swords Dance
+- Headbutt
 
 Roselia @ Choice Specs
 Level: 18
@@ -12464,24 +14561,64 @@ Modest Nature
 - Shadow Ball
 - Extrasensory
 
-
-
 === TRAINER_JOSE ===
-Name: JOSE
-Class: Bug Catcher
-Pic: Bug Catcher
+Name: WATTSON
+Class: Expert
+Pic: Leader Wattson
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Yellow
+AI: Smart Trainer / Prediction
 
-Wurmple
-Level: 8
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Emolga @ Life Orb  
+Ability: Static  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Bolt Beak  
+- U-turn  
+- Brave Bird  
+- Knock Off  
 
-Nincada
-Level: 8
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Pikachu-Starter (M) @ Light Ball  
+Ability: Lightning Rod  
+Shiny: Yes  
+Tera Type: Electric  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Play Rough  
+- Iron Tail  
+- U-turn  
+- Volt Tackle  
+
+Rotom-Frost @ Power Herb  
+Ability: Levitate  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Ice Burn  
+- Thunderbolt  
+- Hex  
+- Volt Switch  
+
+Electrode-Hisui @ Life Orb  
+Ability: Soundproof  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Chloroblast  
+- Thunderbolt  
+- Flash Cannon  
+- Shadow Ball  
+
+Pawmot @ Fist Plate  
+Ability: Iron Fist  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Mach Punch  
+- Thunder Punch  
+- Ice Punch  
+- Drain Punch  
 
 === TRAINER_DOUG ===
 Name: DOUG
@@ -12537,68 +14674,44 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Dottler @ Eviolite
-Level: 16
-Ability: Compound Eyes
-EVs: 252 HP / 252 Def / 4 SpD
-Bold Nature
-- Light Screen
-- Reflect
-- Bug Buzz
-- Psychic
+Orbeetle @ Light Clay  
+Ability: Frisk  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Light Screen  
+- Reflect  
+- Bug Buzz  
+- Psyshock  
 
-Venomoth @ Black Sludge
-Level: 17
-Ability: Tinted Lens
-EVs: 4 HP / 252 SpA / 252 Spe
-Timid Nature
-- Sleep Powder
-- Psychic
-- Silver Wind
-- Giga Drain
+Beedrill @ Life Orb  
+Ability: Sniper  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- X-Scissor  
+- Poison Jab  
+- Dual Wingbeat  
 
-Surskit @ Focus Sash
-Level: 16
-Ability: Swift Swim
-EVs: 4 HP / 252 SpA / 252 Spe
-Timid Nature
-- Sticky Web
-- Hydro Pump
-- Psybeam
-- Ice Beam
+Cutiefly @ Choice Scarf  
+Ability: Shield Dust  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+- Moonblast  
+- Aeroblast  
+- Bug Buzz  
+- U-turn  
 
-Cutiefly @ Life Orb
-Level: 17
-Ability: Shield Dust
-EVs: 4 HP / 252 SpA / 252 Spe
-Timid Nature
-- Moonblast
-- Struggle Bug
-- Psychic
-- Roost
-
-Orbeetle @ Leftovers
-Level: 18
-Ability: Frisk
-EVs: 252 HP / 4 Def / 252 SpA
-Modest Nature
-- Calm Mind
-- Psychic
-- Bug Buzz
-- Recover
-
-Inkay @ Choice Band
-Level: 17
-Ability: Contrary
-EVs: 4 HP / 252 Atk / 252 Spe
-Adamant Nature
-- Superpower
-- Knock Off
-- Psycho Cut
-- Pluck
-
+Kricketune @ Bug Gem  
+Ability: Technician  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Sucker Punch  
+- First Impression  
+- Aqua Jet  
+- Bulldoze  
 
 === TRAINER_JAMES_2 ===
 Name: JAMES
@@ -12778,9 +14891,40 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Geodude
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Roserade @ Life Orb  
+Ability: Technician  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Mega Drain  
+- Acid Spray  
+- Dazzling Gleam  
+- Shadow Ball  
+
+Fletchinder @ Choice Band  
+Ability: Gale Wings  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- U-turn  
+- Flare Blitz  
+- Brave Bird  
+- Close Combat  
+
+Flamigo @ Choice Scarf  
+Ability: Scrappy  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Thunderous Kick  
+- U-turn  
+- Floaty Fall  
+- Blaze Kick  
+
+Aron @ Focus Sash  
+Ability: Sturdy  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Endeavor  
+- Accelerock
 
 === TRAINER_ERIC ===
 Name: ERIC
@@ -12816,45 +14960,96 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MIKE_1 ===
 Name: MIKE
-Class: Hiker
 Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Pink
+AI: Smart Trainer / Prediction
 
-Pelipper
-Level: 10
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Gust
-- Growl
+Tyranitar @ Assault Vest  
+Ability: Sand Stream  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Stone Edge  
+- Crunch  
+- Ice Punch  
+- Earthquake  
 
-Poochyena
-Level: 10
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Bite
-- Scary Face
+Corsola-Galar @ Eviolite  
+Ability: Cursed Body  
+EVs: 252 HP / 4 SpA / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Will-O-Wisp  
+- Strength Sap  
+- Hex  
+- Amnesia  
+
+Aerodactyl @ Life Orb  
+Ability: Rock Head  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Head Smash  
+- Dual Wingbeat  
+- U-turn  
+- Iron Head  
+
+Sandslash @ Life Orb  
+Ability: Sand Rush  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Earthquake  
+- Iron Head  
+- X-Scissor  
+- Rock Slide  
 
 === TRAINER_MIKE_2 ===
 Name: MIKE
-Class: Hiker
+Class: Cooltrainer
 Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Pink
+AI: Smart Trainer / Prediction
 
-Geodude
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Tyranitar @ Assault Vest  
+Ability: Sand Stream  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Stone Edge  
+- Crunch  
+- Ice Punch  
+- Earthquake  
 
-Geodude
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Corsola-Galar @ Eviolite  
+Ability: Cursed Body  
+EVs: 252 HP / 4 SpA / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Will-O-Wisp  
+- Strength Sap  
+- Hex  
+- Amnesia  
 
-Machop
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Aerodactyl @ Life Orb  
+Ability: Rock Head  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Head Smash  
+- Dual Wingbeat  
+- U-turn  
+- Iron Head  
+
+Sandslash @ Life Orb  
+Ability: Sand Rush  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Earthquake  
+- Iron Head  
+- X-Scissor  
+- Rock Slide  
 
 === TRAINER_TRENT_2 ===
 Name: TRENT
@@ -13127,11 +15322,45 @@ Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Goldeen
-Level: 13
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Victreebel @ Victreebelite  
+Ability: Gluttony  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Spiky Shield  
+- Leaf Blade  
+- Gunk Shot  
+- Leech Life  
+
+Roserade @ Life Orb  
+Ability: Technician  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Mega Drain  
+- Acid Spray  
+- Alluring Voice  
+- Confusion  
+
+Slowbro-Galar @ Quick Claw  
+Ability: Quick Draw  
+EVs: 252 HP / 252 Atk / 4 SpA  
+Brave Nature  
+- Shell Side Arm  
+- Psyshield Bash  
+- Drain Punch  
+- Fire Punch  
+
+Weezing-Galar @ Leftovers  
+Ability: Levitate  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Will-O-Wisp  
+- Hex  
+- Strange Steam  
+- Sludge Bomb  
 
 === TRAINER_GERALD ===
 Name: GERALD
@@ -13158,23 +15387,52 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Meditite
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Bide
-- Detect
-- Confusion
+Medicham @ Choice Band
+Ability: Pure Power
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- High Jump Kick
+- Zen Headbutt
 - Thunder Punch
+- Ice Punch
 
-Meditite
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Pawmot @ Life Orb
+Ability: Iron Fist
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Double Shock
+- Close Combat
+- Mach Punch
+- Ice Punch
+
+Hitmonchan @ Assault Vest
+Ability: Iron Fist
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Drain Punch
 - Thunder Punch
-- Detect
-- Confusion
-- Meditate
+- Ice Punch
+- Mach Punch
+
+Hawlucha @ Sitrus Berry
+Ability: Unburden
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Close Combat
+- Acrobatics
+- Encore
+
+Lucario @ Life Orb
+Ability: Inner Focus
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Swords Dance
+- Close Combat
+- Meteor Mash
+- Extreme Speed
 
 === TRAINER_DANIELLE ===
 Name: DANIELLE
@@ -13313,11 +15571,61 @@ Pic: Wally
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction / Ace Pokemon
 
-Ralts
-Level: 16
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Altaria @ Leftovers
+Ability: Natural Cure
+EVs: 252 HP / 252 Atk / 4 Spe
+Adamant Nature
+- Dragon Dance
+- Dragon Claw
+- Earthquake
+- Roost
+
+Roserade @ Focus Sash
+Ability: Technician
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Sludge Bomb
+- Leaf Storm
+- Shadow Ball
+- Spikes
+
+Magnezone @ Assault Vest
+Ability: Analytic
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Body Press
+
+Delcatty @ Choice Scarf
+Ability: Wonder Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Double-Edge
+- Sucker Punch
+- Play Rough
+- U-turn
+
+Gallade @ Life Orb
+Ability: Sharpness
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Psycho Cut
+- Sacred Sword
+- Leaf Blade
+- Night Slash
+
+Gardevoir @ Gardevoirite
+Ability: Trace
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Hyper Voice
+- Psyshock
+- Focus Blast
+- Calm Mind
 
 === TRAINER_WALLY_VR_2 ===
 Name: WALLY
@@ -13919,23 +16227,55 @@ Pic: Young Couple
 Gender: Male
 Music: Girl
 Double Battle: Yes
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Dustox
-Level: 27
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Gust
-- Psybeam
-- Toxic
-- Protect
+Pincurchin @ Terrain Extender  
+Ability: Electric Surge  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Thunderbolt  
+- Scald  
+- Spikes  
+- Spiky Shield  
 
-Beautifly
-Level: 27
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Gust
-- Mega Drain
-- Attract
-- Stun Spore
+Iron Thorns @ Life Orb  
+Ability: Quark Drive  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Supercell Slam  
+- Rock Slide  
+- Ice Punch  
+- Crunch  
+
+Lumineon @ Focus Sash  
+Ability: Storm Drain  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Tailwind  
+- Hydro Pump  
+- Hurricane  
+- Protect  
+
+Gogoat @ Assault Vest  
+Ability: Sap Sipper  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- High Horsepower  
+- Supercell Slam  
+- Horn Leech  
+- Rock Slide  
+
+Manectric @ White Herb  
+Ability: Lightning Rod  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Overheat  
+- Thunderbolt  
+- Snarl  
+- Shadow Ball  
 
 === TRAINER_JOHN_AND_JAY_1 ===
 Name: JOHN & JAY
@@ -14207,21 +16547,131 @@ Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DAWSON ===
-Name: DAWSON
-Class: Rich Boy
-Pic: Rich Boy
+Name: JUAN
+Class: Leader 
+Pic: Leader Juan
 Gender: Male
 Music: Rich
 Double Battle: No
-AI: Smart Trainer
+Mugshot: Purple
+Party Size: 4
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
 
-Zigzagoon @ Nugget
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Pelipper @ Wacan Berry  
+Ability: Rain Dish  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Roost  
+- Hurricane  
+- Surf  
+- Ice Beam  
 
-Poochyena
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Lanturn @ Leftovers  
+Ability: Volt Absorb  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Ice Beam  
+- Recover  
+- Scald  
+- Discharge  
+
+Jellicent @ Rocky Helmet  
+Ability: Water Absorb  
+EVs: 252 HP / 4 SpA / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Strength Sap  
+- Will-O-Wisp  
+- Ice Beam  
+- Hex  
+
+Lapras @ Loaded Dice  
+Ability: Shell Armor  
+EVs: 252 HP / 252 Atk / 4 Spe  
+Jolly Nature  
+- Icicle Spear  
+- Waterfall  
+- Dragon Dance  
+- Scale Shot  
+
+Sharpedo @ Focus Sash  
+Ability: Speed Boost  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Protect  
+- Psychic Fangs  
+- Waterfall  
+- Crunch  
+
+Floatzel @ Life Orb  
+Ability: Swift Swim  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Adamant Nature  
+- Ice Punch  
+- Thunder Punch  
+- Waterfall  
+- Flip Turn  
+
+Basculegion (M) @ Choice Band  
+Ability: Swift Swim  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Last Respects  
+- Flip Turn  
+- Wave Crash  
+- Psychic Fangs  
+
+Tentacruel @ Black Sludge  
+Ability: Clear Body  
+EVs: 252 HP / 240 SpD / 16 Spe  
+Calm Nature  
+IVs: 0 Atk  
+- Acid Armor  
+- Acid Spray  
+- Recover  
+- Scald  
+
+Azumarill @ Assault Vest  
+Ability: Sap Sipper  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Liquidation  
+- Jet Punch  
+- Play Rough  
+- Ice Punch  
+
+Ludicolo @ Absorb Bulb  
+Ability: Swift Swim  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Giga Drain  
+- Hydro Steam  
+- Ice Beam  
+- Leech Seed  
+
+Milotic @ Flame Orb  
+Ability: Marvel Scale  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Recover  
+- Scald  
+- Ice Beam  
+- Draining Kiss  
+
+Relicanth @ Choice Scarf  
+Ability: Swift Swim  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Stone Edge  
+- Ice Punch  
+- Waterfall  
+- Flip Turn  
 
 === TRAINER_SARAH ===
 Name: SARAH
@@ -14248,69 +16698,44 @@ Pic: Expert M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Milotic
-Level: 18
-Ability: Marvel Scale
-EVs: 252 HP / 252 Def / 4 SpD
-Bold Nature
-- Water Pulse
-- Icy Wind
-- Recover
-- Hypnosis
+Alomomola @ Rocky Helmet  
+Ability: Regenerator  
+EVs: 248 HP / 8 SpA / 252 SpD  
+Calm Nature  
+- Mirror Coat  
+- Wish  
+- Protect  
+- Ice Beam  
 
-Sharpedo
-Level: 18
-Ability: Speed Boost
-EVs: 4 HP / 252 Atk / 252 Spe
-Jolly Nature
-- Bite
-- Aqua Jet
-- Ice Fang
-- Protect
+Corphish @ Choice Scarf  
+Ability: Adaptability  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Crabhammer  
+- Knock Off  
+- Brick Break  
+- Ice Punch  
 
-Kingdra
-Level: 18
-Ability: Swift Swim
-EVs: 4 HP / 252 SpA / 252 Spe
-Modest Nature
-- Water Pulse
-- Dragon Breath
-- Icy Wind
-- Flash Cannon
+Dratini @ Flame Orb  
+Ability: Marvel Scale  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Dragon Pulse  
+- Tail Glow  
+- Surf  
+- Hurricane  
 
-Gyarados
-Level: 18
-Ability: Intimidate
-EVs: 4 HP / 252 Atk / 252 Spe
-Jolly Nature
-- Waterfall
-- Bite
-- Dragon Dance
-- Bounce
-
-Lapras
-Level: 18
-Ability: Water Absorb
-EVs: 252 HP / 4 Def / 252 SpA
-Quiet Nature
-- Freeze-Dry
-- Water Pulse
-- Ancient Power
-- Ice Shard
-
-Quagsire
-Level: 18
-Ability: Unaware
-EVs: 252 HP / 252 Def / 4 SpD
-Relaxed Nature
-- Mud-Shot
-- Chilling Water
-- Recover
-- Yawn
-
-
+Carvanha @ Muscle Band  
+Ability: Speed Boost  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Adamant Nature  
+- Poison Fang  
+- Crunch  
+- Waterfall  
+- Protect  
 
 === TRAINER_HAILEY ===
 Name: HAILEY
@@ -14319,11 +16744,35 @@ Pic: Tuber F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Marill
-Level: 13
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Wishiwashi @ Leftovers  
+Ability: Schooling  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Bulk Up  
+- Jet Punch  
+- Ice Punch  
+- Drain Punch  
+
+Inteleon @ Scope Lens  
+Ability: Sniper  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Snipe Shot  
+- Ice Beam  
+- Dark Pulse  
+- Flash Cannon  
+
+Wugtrio @ Focus Sash  
+Ability: Gooey  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Shell Smash  
+- Triple Dive  
+- Drill Run  
+- Knock Off  
 
 === TRAINER_CHANDLER ===
 Name: CHANDLER
@@ -14332,15 +16781,36 @@ Pic: Tuber M
 Gender: Male
 Music: Girl
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Tentacool
-Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Chandelure @ Chandelurite  
+Ability: Flame Body  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Flamethrower  
+- Energy Ball  
+- Astral Barrage  
+- Agility  
 
-Tentacool
-Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Luxray @ Assault Vest  
+Ability: Intimidate  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Supercell Slam  
+- Crunch  
+- Ice Punch  
+- Sucker Punch  
+
+Espeon @ Choice Specs  
+Ability: Magic Bounce  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psystrike  
+- Dazzling Gleam  
+- Energy Ball  
+- Shadow Ball  
 
 === TRAINER_KALEB ===
 Name: KALEB
@@ -14349,15 +16819,35 @@ Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Minun @ Oran Berry
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Minun @ Life Orb  
+Ability: Minus  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Discharge  
+- Dazzling Gleam  
+- Weather Ball  
+- Grass Knot  
 
-Plusle @ Oran Berry
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Togedemaru @ Rocky Helmet  
+Ability: Iron Barbs  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Spiky Shield  
+- Zing Zap  
+- Iron Head  
+- Fake Out  
+
+Emolga @ Choice Band  
+Ability: Static  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Floaty Fall  
+- U-turn  
+- Bolt Beak  
+- Knock Off  
 
 === TRAINER_JOSEPH ===
 Name: JOSEPH
@@ -14366,15 +16856,48 @@ Pic: Guitarist
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Electrike
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Toxtricity @ Choice Scarf  
+Ability: Punk Rock  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Boomburst  
+- Overdrive  
+- Sludge Wave  
+- Torch Song  
 
-Voltorb
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Toxtricity-Low-Key @ Throat Spray  
+Gigantamax: Yes
+Ability: Punk Rock  
+Shiny: Yes
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Boomburst  
+- Overdrive  
+- Sparkling Aria  
+- Sludge Wave  
+
+Pikachu-Rock-Star (F) @ Light Ball  
+Ability: Lightning Rod  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Close Combat  
+- Volt Tackle  
+- Ice Punch  
+- Iron Head  
+
+Rotom-Fan @ Choice Specs  
+Ability: Levitate  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Hurricane  
+- Volt Switch  
+- Shadow Ball  
+- Thunderbolt  
 
 === TRAINER_ALYSSA ===
 Name: ALYSSA
@@ -14383,11 +16906,35 @@ Pic: Cycling Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Magnemite
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Iron Treads @ Choice Band  
+Ability: Quark Drive  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Earthquake  
+- Volt Switch  
+- Iron Head  
+- Knock Off  
+
+Coalossal @ Focus Sash  
+Ability: Steam Engine  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Earth Power  
+- Power Gem  
+- Fire Blast  
+- Energy Ball  
+
+Meowscarada @ Choice Scarf  
+Ability: Protean  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- U-turn  
+- Flower Trick  
+- Knock Off  
+- Triple Axel  
 
 === TRAINER_MARCOS ===
 Name: MARCOS
@@ -15003,15 +17550,26 @@ Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Skarmory
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sigilyph @ Life Orb  
+Ability: Tinted Lens  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Esper Wing  
+- Heat Wave  
+- Air Slash  
+- Tailwind  
 
-Skarmory
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Skarmory @ Skarmorite  
+Ability: Sturdy  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Drill Peck  
+- Bulk Up  
+- Body Press  
+- Iron Head  
 
 === TRAINER_CELIA ===
 Name: CELIA
@@ -15192,13 +17750,42 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Geodude
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ariados @ Bug Gem  
+Ability: Sniper  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- First Impression  
+- X-Scissor  
+- Shadow Sneak  
+- Gunk Shot  
 
-Geodude
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Leavanny @ Choice Scarf  
+Ability: Overcoat  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Leech Life  
+- Leaf Blade  
+- U-turn  
+- Crunch  
+
+Lilligant (F) @ Life Orb  
+Ability: Own Tempo  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Quiver Dance  
+- Sleep Powder  
+- Moonblast  
+- Giga Drain  
+
+Luvdisc @ Choice Specs  
+Ability: Swift Swim  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+- Moonblast  
+- Hydro Steam  
+- Flip Turn  
+- Ice Beam
 
 === TRAINER_JOHNSON ===
 Name: JOHNSON
@@ -15209,13 +17796,43 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Shroomish
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Vanilluxe @ Icy Rock  
+Ability: Snow Warning  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+- Aurora Veil  
+- Ice Beam  
+- Flip Turn  
+- Flash Cannon  
 
-Lotad
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Glalie @ Leftovers  
+Ability: Ice Body  
+EVs: 252 HP / 4 SpA / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Iron Defense  
+- Body Press  
+- Power Gem  
+- Recover  
+
+Lapras @ Loaded Dice  
+Ability: Shell Armor  
+EVs: 252 HP / 252 Atk / 4 Spe  
+Jolly Nature  
+- Dragon Dance  
+- Scale Shot  
+- Icicle Spear  
+- Waterfall  
+
+Frosmoth @ Rocky Helmet  
+Ability: Shield Dust  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Quiver Dance  
+- Ice Beam  
+- Sleep Powder  
+- Bug Buzz
 
 === TRAINER_MELINA ===
 Name: MELINA
@@ -15224,11 +17841,43 @@ Pic: Running Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Doduo
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Lycanroc @ Focus Sash
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Stone Edge
+- Close Combat
+- Accelerock
+- Swords Dance
+
+Rapidash-Galar @ Life Orb
+Ability: Pastel Veil
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Psycho Cut
+- Play Rough
+- High Horsepower
+- Swords Dance
+
+Mienshao @ Choice Scarf
+Ability: Regenerator
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- High Jump Kick
+- U-turn
+- Knock Off
+- Stone Edge
+
+Arcanine @ Leftovers
+Ability: Intimidate
+EVs: 252 HP / 252 Atk / 4 Spe
+Adamant Nature
+- Flare Blitz
+- Extreme Speed
+- Wild Charge
+- Morning Sun
 
 === TRAINER_BRANDI ===
 Name: BRANDI
@@ -15237,11 +17886,52 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Ralts
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Alakazam @ Focus Sash
+Ability: Magic Guard
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Psychic
+- Focus Blast
+- Shadow Ball
+- Nasty Plot
+
+Slowbro @ Leftovers
+Ability: Regenerator
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Scald
+- Psychic
+- Slack Off
+- Thunder Wave
+
+Espeon @ Choice Specs
+Ability: Magic Bounce
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Psychic
+- Psyshock
+- Shadow Ball
+- Dazzling Gleam
+
+Reuniclus @ Life Orb
+Ability: Magic Guard
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+- Trick Room
+- Psychic
+- Focus Blast
+- Shadow Ball
+
+Hatterene @ Leftovers
+Ability: Magic Bounce
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+- Trick Room
+- Dazzling Gleam
+- Psychic
+- Mystical Fire
 
 === TRAINER_AISHA ===
 Name: AISHA
@@ -15250,11 +17940,43 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Meditite
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Infernape @ Life Orb
+Ability: Iron Fist
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Close Combat
+- Flare Blitz
+- Mach Punch
+- U-turn
+
+Machamp @ Life Orb
+Ability: No Guard
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Dynamic Punch
+- Knock Off
+- Stone Edge
+- Bullet Punch
+
+Quaquaval @ Life Orb
+Ability: Moxie
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Aqua Step
+- Close Combat
+- Brave Bird
+- Aqua Jet
+
+Conkeldurr @ Flame Orb
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Mach Punch
+- Drain Punch
+- Knock Off
+- Ice Punch
 
 === TRAINER_MAKAYLA ===
 Name: MAKAYLA
@@ -15459,15 +18181,64 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+Mugshot: Pink
+AI: Smart Trainer / Prediction
 
-Lotad
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Meowstic-F (F) @ Meowsticite  
+Ability: Competitive  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Mist Ball  
+- Calm Mind  
+- Draining Kiss  
+- Energy Ball  
 
-Torchic
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Virizion @ Life Orb  
+Ability: Justified  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Close Combat  
+- Leaf Blade  
+- Stone Edge  
+- Sucker Punch  
+
+Electivire @ Air Balloon  
+Ability: Motor Drive  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Plasma Fists  
+- Close Combat  
+- Ice Punch  
+- Earthquake  
+
+Sylveon @ Leftovers  
+Ability: Pixilate  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Wish  
+- Hyper Voice  
+- Mystical Fire  
+
+Drapion @ Scope Lens  
+Ability: Sniper  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Night Slash  
+- Cross Poison  
+- X-Scissor  
+- Earthquake  
+
+Type: Null @ Eviolite  
+Ability: Battle Armor  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Swords Dance  
+- Body Slam  
+- Trailblaze  
+- Earthquake  
 
 === TRAINER_MAY_RUSTBORO_TORCHIC ===
 Name: MAY
@@ -15476,15 +18247,64 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+Mugshot: Pink
+AI: Smart Trainer / Prediction
 
-Torkoal
-Level: 13
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Meowstic-F (F) @ Meowsticite  
+Ability: Competitive  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Mist Ball  
+- Calm Mind  
+- Draining Kiss  
+- Energy Ball  
 
-Mudkip
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Virizion @ Life Orb  
+Ability: Justified  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Close Combat  
+- Leaf Blade  
+- Stone Edge  
+- Sucker Punch  
+
+Electivire @ Air Balloon  
+Ability: Motor Drive  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Plasma Fists  
+- Close Combat  
+- Ice Punch  
+- Earthquake  
+
+Sylveon @ Leftovers  
+Ability: Pixilate  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Wish  
+- Hyper Voice  
+- Mystical Fire  
+
+Drapion @ Scope Lens  
+Ability: Sniper  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Night Slash  
+- Cross Poison  
+- X-Scissor  
+- Earthquake  
+
+Type: Null @ Eviolite  
+Ability: Battle Armor  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Swords Dance  
+- Body Slam  
+- Trailblaze  
+- Earthquake  
 
 === TRAINER_ROXANNE_2 ===
 Name: ROXANNE
@@ -17157,21 +19977,52 @@ Pic: Bug Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction
 
-Illumise
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Shock Wave
-- Quick Attack
-- Charm
+Volbeat @ Damp Rock
+Ability: Prankster
+EVs: 252 HP / 4 Def / 252 SpD
+Calm Nature
+- Rain Dance
+- Encore
+- Thunder Wave
+- U-turn
 
-Volbeat
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Shock Wave
-- Quick Attack
-- Confuse Ray
+Illumise @ Mental Herb
+Ability: Prankster
+EVs: 252 HP / 4 Def / 252 SpD
+Calm Nature
+- Encore
+- Thunder Wave
+- Bug Buzz
+- Moonlight
+
+Vikavolt @ Choice Specs
+Ability: Levitate
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Thunderbolt
+- Bug Buzz
+- Energy Ball
+- Volt Switch
+
+Scizor @ Choice Band
+Ability: Technician
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Bullet Punch
+- U-turn
+- Knock Off
+- Superpower
+
+Volcarona @ Heavy-Duty Boots
+Ability: Flame Body
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Quiver Dance
+- Fiery Dance
+- Bug Buzz
+- Giga Drain
 
 === TRAINER_DARIUS ===
 Name: DARIUS
@@ -18289,36 +21140,34 @@ Gender: Female
 Music: Suspicious
 AI: Smart Trainer      
 
-Cleffa (F) @ Eviolite
-Ability: Magic Guard
-EVs: 252 HP / 252 SpA / 4 SpD
-Modest Nature
-IVs: 0 Atk
-- Calm Mind
-- Draining Kiss
-- Confusion
-- Shock Wave
+Abra @ Life Orb  
+Ability: Magic Guard  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psychic  
+- Aura Sphere  
+- Dazzling Gleam  
+- Energy Ball  
 
-Slowpoke (F) @ Leftovers
-Ability: Regenerator
-EVs: 252 HP / 252 SpA / 4 SpD
-Modest Nature
-- Flip Turn
-- Psybeam
-- Water Pulse
-- Yawn
+Meditite @ Clear Amulet  
+Ability: Pure Power  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Power-Up Punch  
+- Zen Headbutt  
+- Pursuit  
+- Meditate  
 
-Inkay (M) @ Assault Vest
-Ability: Contrary
-EVs: 252 HP / 252 Atk / 4 SpD
-Adamant Nature
-- Psycho Cut
-- Payback
-- Aerial Ace
-- Aqua Jet
-
-
-
+Smoochum (F) @ Choice Scarf  
+Ability: Forewarn  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Ice Beam  
+- Psyshock  
+- Attract  
+- Thunderbolt  
 
 === TRAINER_GERD ===
 Name: Gerd
@@ -18363,7 +21212,6 @@ Pic: Expert M
 Gender: Male
 Music: Intense
 AI: Smart Trainer      
-
 
 Tyranitar (M) @ Tyranitarite
 Ability: Sand Stream
@@ -18434,13 +21282,12 @@ Nature: Timid
 - Earth Power
 
 === TRAINER_RINO ===
-Name:Rino
+Name: Rino
 Class: Hiker
 Pic: Hiker
 Gender: Male
 Music: Hiker
 AI: Smart Trainer
-
 
 Swampert (M) @ Leftovers
 Ability: Torrent
@@ -18510,8 +21357,6 @@ Gender: Male
 Music: Hiker
 AI: Smart Trainer      
 
-
-
 Aggron (M) @ Choice Band
 Ability: Rock Head
 EVs: 252 HP / 252 Atk / 4 Spe
@@ -18571,8 +21416,6 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Earthquake
 - Rock Slide
 - Slash
-
-
 
 === TRAINER_MISTY ===
 Name: MISTY
@@ -18681,120 +21524,1857 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_BLAINE ===
 Name: BLAINE
-Class: Leader
-Pic: Hiker
+Class: Leader Frlg
+Pic: Leader Blaine Frlg
 Gender: Male
 Music: Male
-Double Battle: Yes
-AI: Smart Trainer
+Battle Type: Singles
+Mugshot: Purple
+Party Size: 4
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
 
-Solrock
-Level: 14
-Ability: Drought
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
-- Sunny Day
-- Fire Spin
-- Rock Tomb
-- Psybeam
+Vulpix @ Heat Rock  
+Tags: Lead
+Ability: Drought  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Flamethrower  
+- Solar Beam  
+- Dazzling Gleam  
+- Hypnosis  
 
-Growlithe
-Level: 14
-Ability: Intimidate
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
-- Flame Wheel
-- Bite
-- Roar
-- Ember
+Castform @ Heat Rock  
+Tags: Lead
+Ability: Forecast  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Sunny Day  
+- Weather Ball  
+- Air Slash  
+- Boomburst  
 
-Slugma
-Level: 15
-Ability: Flame Body
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
-- Incinerate
-- Smog
-- Recover
-- Light Screen
+Helioptile @ Choice Scarf  
+Ability: Solar Power  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Volt Switch  
+- Thunderbolt  
+- Hyper Voice  
+- Weather Ball  
 
+Growlithe-Hisui @ Choice Scarf  
+Ability: Rock Head  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Wild Charge  
+- Head Smash  
+- Flare Blitz  
+- Iron Head  
+
+Houndour @ Focus Sash  
+Ability: Unnerve  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Heat Wave  
+- Dark Pulse  
+- Sludge Bomb  
+- Solar Beam  
+
+Sunflora @ Weakness Policy  
+Tags: Ace
+Ability: Chlorophyll  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Flamethrower  
+- Energy Ball  
+- Dazzling Gleam  
+- Shadow Ball  
+
+Scovillain @ Weakness Policy  
+Tags: Ace
+Ability: Chlorophyll  
+EVs: 252 Atk / 4 SpA / 252 Spe  
+Lonely Nature  
+- Flamethrower  
+- Energy Ball  
+- Zen Headbutt  
+- Stomping Tantrum  
 
 === TRAINER_AQUACAMP_GRUNT_1 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Magma
+Pic: Magma Grunt M
 Gender: Male
-Music: Male
-Double Battle: Yes
-AI: Smart Trainer
+Music: Magma
+Double Battle: No
+Party Size: 6
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction
 
-Carvanha
-Level: 26
-Ability: Rough Skin
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
-- Bite
-- Water Pulse
-- Assurance
-- Aqua Jet
+Ceruledge @ Focus Sash  
+Ability: Weak Armor  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Bitter Blade  
+- Close Combat  
+- Shadow Claw  
 
-Pelipper
-Level: 26
-Ability: Drizzle
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 252 Def / 4 SpA / 0 SpD / 0 Spe
-- Water Pulse
-- Wing Attack
-- Roost
-- Protect
+Camerupt @ Assault Vest  
+Ability: Solid Rock  
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Earth Power  
+- Flamethrower  
+- Energy Ball  
+- Power Gem  
 
-Corphish
-Level: 27
-Ability: Adaptability
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
-- Bubble Beam
-- Knock Off
-- Aqua Jet
-- Vice Grip
+Rotom-Heat @ Choice Specs  
+Ability: Levitate  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Heat Wave  
+- Volt Switch  
+- Thunderbolt  
+- Energy Ball  
 
+Salazzle (F) @ Firium Z  
+Ability: Corrosion  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+- Sludge Wave  
+- U-turn  
+- Fire Blast  
+- Earth Power  
+
+Houndoom @ Focus Sash  
+Ability: Unnerve  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Flamethrower  
+- Nasty Plot  
+- Sludge Bomb  
+- Dark Pulse  
+
+Golem-Alola @ Focus Sash  
+Ability: Galvanize  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Stone Edge  
+- Earthquake  
+- Body Slam  
+- Accelerock  
+
+Gliscor @ Toxic Orb  
+Ability: Poison Heal  
+EVs: 252 HP / 184 Def / 72 Spe  
+Impish Nature  
+- Protect  
+- Toxic  
+- Earthquake  
+- Dual Wingbeat  
+
+Darmanitan @ Choice Scarf  
+Ability: Sheer Force  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Flare Blitz  
+- Earthquake  
+- Iron Head  
+- Zen Headbutt  
+
+Arcanine-Hisui @ Choice Band  
+Ability: Rock Head  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Head Smash  
+- Flare Blitz  
+- Wild Charge  
+- Extreme Speed  
+
+Flareon @ Toxic Orb  
+Ability: Guts  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Protect  
+- Extreme Speed  
+- Flare Blitz  
+- Play Rough  
 
 === TRAINER_AQUACAMP_GRUNT_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
-Gender: Female
-Music: Male
-Double Battle: Yes
-AI: Smart Trainer
+Name: MITCHAL
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Smart Trainer / Prediction
 
-Mightyena
-Level: 26
-Ability: Intimidate
+Archeops @ Choice Scarf  
+Ability: Defeatist  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Brave Bird  
+- Stone Edge  
+- U-turn  
+- Earthquake  
+
+Kabutops @ Focus Sash  
+Ability: Weak Armor  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Shell Smash  
+- Waterfall  
+- Ice Punch  
+- Rock Slide  
+
+Lycanroc-Midnight @ Life Orb  
+Ability: No Guard  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Stone Edge  
+- High Jump Kick  
+- Zen Headbutt  
+- Sucker Punch  
+
+Lunatone @ Leftovers  
+Ability: Levitate  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Psychic  
+- Power Gem  
+- Shadow Ball  
+
+Coalossal (M) @ Weakness Policy  
+Ability: Steam Engine  
+Shiny: Yes  
+Gigantamax: Yes
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Power Gem  
+- Flamethrower  
+- Earth Power  
+- Steam Eruption  
+
+=== TRAINER_BRANDON_DEWFORD ===
+Name: BRANDON
+Class: Pyramid King
+Pic: Pyramid King Brandon
+Gender: Male
+Music: Male
+Double Battle: No
+Mugshot: Purple
+Party Size: 6
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Claydol @ Leftovers  
+Ability: Levitate  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Earth Power  
+- Psyshock  
+- Recover  
+
+Garchomp @ Garchompite  
+Ability: Rough Skin  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Scale Shot  
+- Earthquake  
+- Liquidation  
+
+Ursaluna @ Flame Orb  
+Ability: Guts  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Earthquake  
+- Facade  
+- Play Rough  
+- Protect  
+
+Palossand @ Rocky Helmet  
+Ability: Water Compaction  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Shore Up  
+- Shadow Ball  
+- Earth Power  
+- Giga Drain  
+
+Excadrill @ Excadrite  
+Ability: Sand Rush  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Swords Dance  
+- X-Scissor  
+- Earthquake  
+- Iron Head  
+
+Gliscor @ Flying Gem  
+Ability: Hyper Cutter  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Acrobatics  
+- Swords Dance  
+- Earthquake  
+- Fire Fang  
+
+Marowak @ Thick Club  
+Ability: Rock Head  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Head Smash  
+- Flare Blitz  
+- Supercell Slam  
+- Bone Rush  
+
+Quagsire @ Rindo Berry  
+Ability: Water Absorb  
+EVs: 252 HP / 4 Atk / 252 Def  
+Impish Nature  
+- Stealth Rock  
+- Toxic  
+- Recover  
+- Earthquake  
+
+Gastrodon @ Leftovers  
+Ability: Storm Drain  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Scald  
+- Earth Power  
+- Ice Beam  
+- Recover  
+
+Garchomp @ Life Orb  
+Ability: Rough Skin  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Poison Jab  
+- Earthquake  
+- Dragon Claw  
+
+Iron Treads @ Assault Vest  
+Ability: Quark Drive  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Earthquake  
+- Knock Off  
+- Volt Switch  
+- Iron Head  
+
+Iron Treads @ Booster Energy  
+Ability: Quark Drive  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Iron Head  
+- Supercell Slam  
+- Earthquake  
+- Swords Dance  
+
+Clodsire @ Leftovers  
+Ability: Water Absorb  
+EVs: 252 HP / 4 Atk / 252 SpD  
+Careful Nature  
+- Toxic Spikes  
+- Earthquake  
+- Recover  
+- Gunk Shot  
+
+Gliscor @ Toxic Orb  
+Ability: Poison Heal  
+EVs: 252 HP / 4 Atk / 252 Spe  
+Adamant Nature  
+- Protect  
+- Earthquake  
+- Swords Dance  
+- Dual Wingbeat  
+
+Mamoswine @ Choice Scarf  
+Ability: Thick Fat  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Earthquake  
+- Icicle Crash  
+- Stone Edge  
+- Knock Off  
+
+Toedscruel @ Yache Berry  
+Ability: Mycelium Might  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Spore  
+- Earth Power  
+- Giga Drain  
+- Sludge Bomb  
+
+Swampert @ Swampertite  
+Ability: Damp  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Bulk Up  
+- Drain Punch  
+- Jet Punch  
+- Earthquake  
+
+Garchomp @ Garchompite Z  
+Ability: Rough Skin  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Draco Meteor  
+- Earth Power  
+- Surf  
+- Flamethrower  
+
+Golurk @ Golurkite  
+Ability: Iron Fist  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Bulk Up  
+- Wicked Blow  
+- Rage Fist  
+- Earthquake  
+
+Zygarde @ Leftovers  
+EVs: 252 HP / 4 Atk / 252 SpA  
+Quiet Nature  
+- Core Enforcer  
+- Land's Wrath  
+- Flash Cannon  
+- Thunder Cage  
+
+Excadrill @ Choice Scarf  
+Ability: Mold Breaker  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Earthquake  
+- Iron Head  
+- Stone Edge  
+- X-Scissor  
+
+Groudon @ Leftovers  
+Ability: Drought  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Earthquake  
+- Heat Crash  
+- Bulk Up  
+- Solar Blade  
+
+Krookodile @ Dark Gem  
+Ability: Moxie  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Knock Off  
+- Earthquake  
+- Close Combat  
+- Gunk Shot  
+
+=== TRAINER_ARCHIE_SLATEPORT ===
+Name: ARCHIE
+Class: Aqua Leader
+Pic: Aqua Leader Archie
+Gender: Male
+Music: Aqua
+Double Battle: No
+Party Size: 6
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Crobat @ Choice Band  
+Ability: Inner Focus  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Brave Bird  
+- Dire Claw  
+- U-turn  
+- Shadow Claw  
+
+Crobat @ Life Orb  
+Ability: Inner Focus  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Dual Wingbeat  
+- Cross Poison  
+- U-turn  
+- Shadow Claw  
+
+Sharpedo @ Sharpedonite  
+Ability: Speed Boost  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Protect  
+- Psychic Fangs  
+- Crunch  
+- Waterfall  
+
+Sharpedo @ Focus Sash  
+Ability: Speed Boost  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Protect  
+- Crunch  
+- Waterfall  
+- Psychic Fangs  
+
+Suicune @ Leftovers  
+Ability: Pressure  
+EVs: 252 HP / 252 Def / 4 SpD  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Rest  
+- Sleep Talk  
+- Scald  
+
+Suicune @ Choice Specs  
+Ability: Inner Focus  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+- Ice Beam  
+- Flip Turn  
+- Scald  
+- Extrasensory  
+
+Suicune @ Leftovers  
+Ability: Pressure  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Bouncy Bubble  
+- Ice Beam  
+- Extrasensory  
+
+Eelektross @ Eelektrossite  
+Ability: Levitate  
+EVs: 252 HP / 4 Def / 252 SpD  
+Careful Nature  
+- Coil  
+- Supercell Slam  
+- Drain Punch  
+- Liquidation  
+
+Eelektross @ Life Orb  
+Ability: Levitate  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Giga Drain  
+- Thunderbolt  
+- Flamethrower  
+- Flash Cannon  
+
+Dhelmise @ Assault Vest  
+Ability: Steelworker  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Anchor Shot  
+- Poltergeist  
+- Shadow Sneak  
+- Earthquake  
+
+Blastoise @ Blastoisinite  
+Ability: Torrent  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Shell Smash  
+- Water Pulse  
+- Aura Sphere  
+- Flash Cannon  
+
+Kingdra @ Scope Lens  
+Ability: Sniper  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Snipe Shot  
+- Dragon Pulse  
+- Ice Beam  
+- Flash Cannon  
+
+Drapion @ Scope Lens  
+Ability: Sniper  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Cross Poison  
+- Night Slash  
+- Earthquake  
+- Swords Dance  
+
+Drapion @ Life Orb  
+Ability: Battle Armor  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Sucker Punch  
+- Cross Poison  
+- Earthquake  
+
+Crawdaunt @ Choice Band  
+Ability: Hyper Cutter  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Aqua Jet  
+- Knock Off  
+- Crabhammer  
+- Ice Punch  
+
+Crawdaunt @ Focus Sash  
+Ability: Hyper Cutter  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Dragon Dance  
+- Crabhammer  
+- Knock Off  
+- Poison Jab  
+
+Muk-Alola @ Assault Vest  
+Ability: Poison Touch  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Drain Punch  
+- Knock Off  
+- Poison Jab  
+- Ice Punch  
+
+Iron Bundle @ Booster Energy  
+Ability: Quark Drive  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Ice Beam  
+- Surf  
+- Air Slash  
+- Freeze-Dry  
+
+Vaporeon @ Leftovers  
+Ability: Water Absorb  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Wish  
+- Ice Beam  
+- Scald  
+
+Muk-Alola @ Black Sludge  
+Ability: Poison Touch  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Knock Off  
+- Sucker Punch  
+- Fire Punch  
+- Poison Jab  
+
+=== TRAINER_SEASHORE_OWNER ===
+Name: MR. SEA
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+Mugshot: Blue
+AI: Smart Trainer / Prediction
+
+Persian-Alola @ Darkinium Z  
+Ability: Fur Coat  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Dark Pulse  
+- Nasty Plot  
+- Ice Beam  
+- Power Gem  
+
+Gholdengo @ Life Orb  
+Ability: Good as Gold  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Flash Cannon  
+- Astral Barrage  
+- Thunderbolt  
+- Dazzling Gleam  
+
+Palossand @ Leftovers  
+Ability: Water Compaction  
+EVs: 252 HP / 4 Atk / 252 SpD  
+Sassy Nature  
+- Shore Up  
+- Hex  
+- Will-O-Wisp  
+- Sand Tomb  
+
+Greninja @ Focus Sash  
+Ability: Protean  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+- Nasty Plot  
+- Steam Eruption  
+- Dark Pulse  
+- Sludge Wave  
+
+Sirfetch’d @ Leek  
+Ability: Scrappy  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Sacred Sword  
+- Swords Dance  
+- Mach Punch  
+- Night Slash  
+
+Munkidori (M) @ Choice Specs  
+Ability: Toxic Chain  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+- Malignant Chain  
+- Psystrike  
+- Focus Blast  
+- U-turn  
+
+=== TRAINER_STEVEN_GRANITE ===
+Name: STEVEN
+Class: Elite Four
+Pic: Steven
+Gender: Male
+Music: Male
+Double Battle: No
+Mugshot: Yellow
+AI: Smart Trainer / Prediction
+
+Gigalith @ Smooth Rock  
+Ability: Sand Stream  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Stealth Rock  
+- Thunderbolt  
+- Earth Power  
+- Power Gem  
+
+Metagross @ Metagrossite  
+Ability: Clear Body  
+EVs: 252 Atk / 4 SpA / 252 Spe  
+Naive Nature  
+- Psyshield Bash  
+- Meteor Mash  
+- Ice Punch  
+- Earthquake  
+
+Cradily @ Leftovers  
+Ability: Storm Drain  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Recover  
+- Giga Drain  
+- Earth Power  
+- Ancient Power  
+
+Scizor @ Life Orb  
+Ability: Technician  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Bullet Punch  
+- Bug Bite  
+- Aerial Ace  
+- Bulldoze  
+
+Regirock @ Rocky Helmet  
+Ability: Clear Body  
+EVs: 252 HP / 4 Atk / 252 Def  
+Impish Nature  
+- Curse  
+- Recover  
+- Body Press  
+- Rock Slide  
+
+Aegislash @ Life Orb  
+Ability: Stance Change  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Flash Cannon  
+- Shadow Ball  
+- Aura Sphere  
+- Vacuum Wave  
+
+=== TRAINER_BIRCH_R110 ===
+Name: BIRCH
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Smeargle @ Focus Sash  
+Ability: Moody  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Shell Smash  
+- Population Bomb  
+- Spore  
+- Baton Pass  
+
+Obstagoon @ Flame Orb  
+Ability: Guts  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Obstruct  
+- Facade  
+- Knock Off  
+- Seed Bomb  
+
+Heliolisk @ Choice Specs  
+Ability: Solar Power  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Thunderbolt  
+- Hyper Voice  
+- Weather Ball  
+- Solar Beam  
+
+Wyrdeer @ Leftovers  
+Ability: Intimidate  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Headbutt  
+- Thunder Wave  
+- Psyshield Bash  
+- Earthquake  
+
+Braviary (M) @ Choice Scarf  
+Ability: Defiant  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Close Combat  
+- Double-Edge  
+- Brave Bird  
+- U-turn  
+
+Silvally @ Life Orb  
+Ability: RKS System  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Extreme Speed  
+- Multi-Attack  
+- Fire Punch  
+- Zen Headbutt  
+
+=== TRAINER_ROCKET_HIDEOUT_GIOVANNI ===
+Name: GIOVANNI
+Class: Boss Frlg
+Pic: Leader Giovanni Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Dugtrio @ Focus Sash
+Level: 60
+Ability: Arena Trap
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 0 Spe
-- Bite
-- Assurance
-- Sand Attack
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Earthquake
+- Sucker Punch
+- Stone Edge
+- Memento
+
+Persian @ Life Orb
+Level: 60
+Ability: Technician
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Fake Out
+- Knock Off
+- U-turn
+- Play Rough
+
+Nidoqueen @ Leftovers
+Level: 60
+Ability: Sheer Force
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+Tera Type: Fairy
+- Earth Power
+- Sludge Wave
+- Ice Beam
+- Toxic Spikes
+
+Nidoking @ Groundium Z
+Level: 60
+Ability: Sheer Force
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Earth Power
+- Sludge Wave
+- Ice Beam
+- Thunderbolt
+
+Rhyperior @ Weakness Policy
+Level: 60
+Ability: Solid Rock
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Dynamax Level: 10
+- Earthquake
+- Stone Edge
+- Megahorn
+- Ice Punch
+
+Steelix @ Steelixite
+Level: 60
+Ability: Sturdy
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Heavy Slam
+- Earthquake
+- Stealth Rock
 - Roar
 
-Gyarados
-Level: 26
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_8 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Weezing-Galar @ Black Sludge
+Level: 60
+Ability: Neutralizing Gas
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Toxic Spikes
+- Will-O-Wisp
+- Strange Steam
+- Pain Split
+
+Crobat @ Life Orb
+Level: 60
+Ability: Inner Focus
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+Dynamax Level: 10
+- Brave Bird
+- Cross Poison
+- U-turn
+- Taunt
+
+Muk-Alola @ Darkinium Z
+Level: 60
+Ability: Poison Touch
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Knock Off
+- Poison Jab
+- Shadow Sneak
+- Curse
+
+Arbok @ Leftovers
+Level: 60
 Ability: Intimidate
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
-- Water Pulse
-- Bite
-- Twister
-- Scary Face
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+Tera Type: Ground
+- Gunk Shot
+- Earthquake
+- Sucker Punch
+- Glare
 
-Lombre
-Level: 27
-Ability: Swift Swim
+Toxicroak @ Rocky Helmet
+Level: 60
+Ability: Dry Skin
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
-- Water Pulse
-- Absorb
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Drain Punch
+- Gunk Shot
+- Sucker Punch
+- Swords Dance
+
+Beedrill @ Beedrillite
+Level: 60
+Ability: Sniper
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Poison Jab
+- U-turn
+- Drill Run
+- Knock Off
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_9 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Liepard @ Focus Sash
+Level: 60
+Ability: Prankster
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 Spe
+Jolly Nature
 - Fake Out
-- Nature Power
+- Foul Play
+- Thunder Wave
+- Encore
+
+Raticate-Alola @ Normalium Z
+Level: 60
+Ability: Hustle
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Hyper Fang
+- Sucker Punch
+- Knock Off
+- Swords Dance
+
+Thievul @ Sitrus Berry
+Level: 60
+Ability: Stakeout
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+Dynamax Level: 10
+- Dark Pulse
+- Snarl
+- Grass Knot
+- Nasty Plot
+
+Persian-Alola @ Life Orb
+Level: 60
+Ability: Fur Coat
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+Tera Type: Dark
+- Nasty Plot
+- Dark Pulse
+- Thunderbolt
+- Parting Shot
+
+Weavile @ Choice Band
+Level: 60
+Ability: Pressure
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Knock Off
+- Ice Shard
+- Triple Axel
+- Low Kick
+
+Kangaskhan @ Kangaskhanite
+Level: 60
+Ability: Scrappy
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Fake Out
+- Double-Edge
+- Sucker Punch
+- Power-Up Punch
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_10 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Weezing @ Rocky Helmet
+Level: 60
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Will-O-Wisp
+- Sludge Bomb
+- Pain Split
+- Toxic Spikes
+
+Garbodor @ Black Sludge
+Level: 60
+Ability: Aftermath
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Gigantamax: Yes
+- Gunk Shot
+- Drain Punch
+- Seed Bomb
+- Toxic Spikes
+
+Toxapex @ Black Sludge
+Level: 60
+Ability: Regenerator
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+Tera Type: Steel
+- Toxic
+- Recover
+- Baneful Bunker
+- Scald
+
+Swalot @ Poisonium Z
+Level: 60
+Ability: Sticky Hold
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+- Sludge Bomb
+- Yawn
+- Encore
+- Pain Split
+
+Muk @ Leftovers
+Level: 60
+Ability: Poison Touch
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Gunk Shot
+- Knock Off
+- Drain Punch
+- Shadow Sneak
+
+Sableye @ Sablenite
+Level: 60
+Ability: Prankster
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Will-O-Wisp
+- Recover
+- Foul Play
+- Knock Off
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_11 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Zoroark @ Darkinium Z
+Level: 60
+Ability: Illusion
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Night Daze
+- Flamethrower
+- Sludge Bomb
+- Nasty Plot
+
+Spiritomb @ Leftovers
+Level: 60
+Ability: Infiltrator
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+Tera Type: Fairy
+- Foul Play
+- Will-O-Wisp
+- Pain Split
+- Sucker Punch
+
+Mimikyu @ Life Orb
+Level: 60
+Ability: Disguise
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+Dynamax Level: 10
+- Play Rough
+- Shadow Claw
+- Shadow Sneak
+- Swords Dance
+
+Raticate @ Flame Orb
+Level: 60
+Ability: Guts
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Facade
+- Sucker Punch
+- U-turn
+- Crunch
+
+Honchkrow @ Scope Lens
+Level: 60
+Ability: Super Luck
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Brave Bird
+- Sucker Punch
+- Night Slash
+- Superpower
+
+Mawile @ Mawilite
+Level: 60
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Play Rough
+- Iron Head
+- Sucker Punch
+- Swords Dance
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_12 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Scrafty @ Leftovers
+Level: 60
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+- Fake Out
+- Drain Punch
+- Knock Off
+- Bulk Up
+
+Hypno @ Leftovers
+Level: 60
+Ability: Insomnia
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+Tera Type: Psychic
+- Hypnosis
+- Dream Eater
+- Psychic
+- Nasty Plot
+
+Drapion @ Life Orb
+Level: 60
+Ability: Sniper
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+Dynamax Level: 10
+- Knock Off
+- Poison Jab
+- Earthquake
+- Swords Dance
+
+Skuntank @ Poisonium Z
+Level: 60
+Ability: Aftermath
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Gunk Shot
+- Sucker Punch
+- Fire Blast
+- Taunt
+
+Salazzle @ Focus Sash
+Level: 60
+Ability: Corrosion
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Toxic
+- Flamethrower
+- Sludge Bomb
+- Nasty Plot
+
+Houndoom @ Houndoominite
+Level: 60
+Ability: Flash Fire
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Nasty Plot
+- Dark Pulse
+- Fire Blast
+- Sludge Bomb
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_13 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Golbat @ Eviolite
+Level: 60
+Ability: Infiltrator
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Super Fang
+- Toxic
+- Roost
+- U-turn
+
+Tentacruel @ Waterium Z
+Level: 60
+Ability: Clear Body
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Hydro Pump
+- Sludge Bomb
+- Toxic Spikes
+- Rapid Spin
+
+Crawdaunt @ Life Orb
+Level: 60
+Ability: Adaptability
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+Dynamax Level: 10
+- Crabhammer
+- Knock Off
+- Aqua Jet
+- Swords Dance
+
+Malamar @ Leftovers
+Level: 60
+Ability: Contrary
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Tera Type: Fighting
+- Superpower
+- Knock Off
+- Psycho Cut
+- Rest
+
+Dusknoir @ Rocky Helmet
+Level: 60
+Ability: Pressure
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Shadow Sneak
+- Will-O-Wisp
+- Pain Split
+- Earthquake
+
+Sharpedo @ Sharpedonite
+Level: 60
+Ability: Speed Boost
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Crunch
+- Waterfall
+- Psychic Fangs
+- Protect
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_14 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Mr. Mime @ Light Clay
+Level: 60
+Ability: Filter
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 SpA / 252 Spe
+Timid Nature
+- Reflect
+- Light Screen
+- Psychic
+- Encore
+
+Gothitelle @ Leftovers
+Level: 60
+Ability: Shadow Tag
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+Tera Type: Fairy
+- Psychic
+- Thunder Wave
+- Calm Mind
+- Taunt
+
+Bronzong @ Leftovers
+Level: 60
+Ability: Levitate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Def
+Relaxed Nature
+Dynamax Level: 10
+- Gyro Ball
+- Earthquake
+- Stealth Rock
+- Hypnosis
+
+Jynx @ Icium Z
+Level: 60
+Ability: Dry Skin
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Ice Beam
+- Psychic
+- Lovely Kiss
+- Nasty Plot
+
+Bisharp @ Life Orb
+Level: 60
+Ability: Defiant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Sucker Punch
+- Iron Head
+- Knock Off
+- Swords Dance
+
+Alakazam @ Alakazite
+Level: 60
+Ability: Magic Guard
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Psychic
+- Shadow Ball
+- Focus Blast
+- Encore
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_15 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Hitmontop @ Leftovers
+Level: 60
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Def
+Impish Nature
+Tera Type: Ghost
+- Fake Out
+- Close Combat
+- Sucker Punch
+- Rapid Spin
+
+Machamp @ Life Orb
+Level: 60
+Ability: No Guard
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Gigantamax: Yes
+- Dynamic Punch
+- Knock Off
+- Stone Edge
+- Bullet Punch
+
+Conkeldurr @ Fightinium Z
+Level: 60
+Ability: Iron Fist
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Drain Punch
+- Mach Punch
+- Knock Off
+- Ice Punch
+
+Hariyama @ Flame Orb
+Level: 60
+Ability: Guts
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Close Combat
+- Knock Off
+- Fake Out
+- Bullet Punch
+
+Lucario @ Focus Sash
+Level: 60
+Ability: Inner Focus
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Close Combat
+- Extreme Speed
+- Crunch
+- Swords Dance
+
+Medicham @ Medichamite
+Level: 60
+Ability: Pure Power
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- High Jump Kick
+- Zen Headbutt
+- Ice Punch
+- Bullet Punch
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_16 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Hippowdon @ Leftovers
+Level: 60
+Ability: Sand Stream
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+Tera Type: Water
+- Earthquake
+- Slack Off
+- Stealth Rock
+- Whirlwind
+
+Sandslash @ Leftovers
+Level: 60
+Ability: Sand Rush
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+Dynamax Level: 10
+- Earthquake
+- Knock Off
+- Stone Edge
+- Rapid Spin
+
+Excadrill @ Groundium Z
+Level: 60
+Ability: Sand Rush
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Earthquake
+- Iron Head
+- Rock Slide
+- Swords Dance
+
+Gliscor @ Toxic Orb
+Level: 60
+Ability: Poison Heal
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Earthquake
+- Toxic
+- Protect
+- Knock Off
+
+Krookodile @ Choice Scarf
+Level: 60
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Earthquake
+- Knock Off
+- Stone Edge
+- Gunk Shot
+
+Banette @ Banettite
+Level: 60
+Ability: Cursed Body
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Will-O-Wisp
+- Shadow Claw
+- Knock Off
+- Destiny Bond
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_17 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Aerodactyl @ Life Orb
+Level: 60
+Ability: Unnerve
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+Dynamax Level: 10
+- Rock Slide
+- Dual Wingbeat
+- Earthquake
+- Crunch
+
+Seviper @ Black Sludge
+Level: 60
+Ability: Infiltrator
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Glare
+- Poison Jab
+- Crunch
+- Earthquake
+
+Nidoking @ Life Orb
+Level: 60
+Ability: Sheer Force
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+Tera Type: Ground
+- Earth Power
+- Sludge Wave
+- Ice Beam
+- Flamethrower
+
+Tyranitar @ Rockium Z
+Level: 60
+Ability: Sand Stream
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Stone Edge
+- Crunch
+- Earthquake
+- Dragon Dance
+
+Kingambit @ Black Glasses
+Level: 60
+Ability: Supreme Overlord
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Kowtow Cleave
+- Sucker Punch
+- Iron Head
+- Swords Dance
+
+Gyarados @ Gyaradosite
+Level: 60
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Waterfall
+- Crunch
+- Ice Fang
+- Dragon Dance
+
+=== TRAINER_ROCKET_HIDEOUT_GRUNT_18 ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Grimmsnarl @ Light Clay
+Level: 60
+Ability: Prankster
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+- Reflect
+- Light Screen
+- Spirit Break
+- Thunder Wave
+
+Porygon2 @ Eviolite
+Level: 60
+Ability: Download
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+Tera Type: Ghost
+- Tri Attack
+- Ice Beam
+- Recover
+- Thunder Wave
+
+Toxtricity @ Throat Spray
+Level: 60
+Ability: Punk Rock
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Modest Nature
+Gigantamax: Yes
+- Overdrive
+- Boomburst
+- Sludge Bomb
+- Volt Switch
+
+Snorlax @ Snorlium Z
+Level: 60
+Ability: Thick Fat
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Giga Impact
+- Body Slam
+- Earthquake
+- Curse
+
+Scizor @ Choice Band
+Level: 60
+Ability: Technician
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Bullet Punch
+- U-turn
+- Knock Off
+- Superpower
+
+Gengar @ Gengarite
+Level: 60
+Ability: Cursed Body
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Hypnosis
+- Shadow Ball
+- Sludge Bomb
+- Destiny Bond
+
+=== TRAINER_LORELEI_MAUVILLE ===
+Name: LORELEI
+Class: Elite Four Frlg
+Pic: Elite Four Lorelei Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+Mugshot: Purple
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Ninetales-Alola @ Light Clay
+Ability: Snow Warning
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Aurora Veil
+- Blizzard
+- Moonblast
+- Freeze-Dry
+
+Abomasnow @ Assault Vest
+Ability: Snow Warning
+EVs: 252 HP / 252 Atk / 4 SpA
+Brave Nature
+- Wood Hammer
+- Ice Shard
+- Earthquake
+- Blizzard
+
+Cloyster @ Focus Sash
+Ability: Skill Link
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Shell Smash
+- Icicle Spear
+- Rock Blast
+- Ice Shard
+
+Mamoswine @ Life Orb
+Ability: Thick Fat
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Icicle Crash
+- Earthquake
+- Ice Shard
+- Knock Off
+
+Weavile @ Choice Band
+Ability: Pressure
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Triple Axel
+- Knock Off
+- Ice Shard
+- Low Kick
+
+Lapras @ Leftovers
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+Dynamax Level: 10
+Gigantamax: Yes
+- Freeze-Dry
+- Hydro Pump
+- Thunderbolt
+- Perish Song
 

@@ -8,6 +8,7 @@
 #include "field_poison.h"
 #include "fldeff_misc.h"
 #include "frontier_util.h"
+#include "nuzlocke.h"
 #include "party_menu.h"
 #include "pokenav.h"
 #include "script.h"
@@ -50,6 +51,8 @@ static void FaintFromFieldPoison(u8 partyIdx)
         AdjustFriendship(pokemon, FRIENDSHIP_EVENT_FAINT_FIELD_PSN);
 
     SetMonData(pokemon, MON_DATA_STATUS, &status);
+    if (GetMonData(pokemon, MON_DATA_HP) == 0)
+        Nuzlocke_MarkMonDead(pokemon);
     GetMonData(pokemon, MON_DATA_NICKNAME, gStringVar1);
     StringGet_Nickname(gStringVar1);
 }

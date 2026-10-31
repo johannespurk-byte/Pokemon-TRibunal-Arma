@@ -195,3 +195,27 @@ EventSnippet_NotEnoughMonsForDoubleBattle::
 	waitbuttonpress
 	release
 	end
+
+@ Ei nach einem gewonnenen Trainerkampf (siehe GiveRandomTrainerEgg / TryShowTrainerEggMessage)
+EventScript_TrainerEggReceived::
+	lockall
+	playfanfare MUS_OBTAIN_ITEM
+	message gText_ReceivedEggFromTrainer
+	waitfanfare
+	waitmessage
+	waitbuttonpress
+	closemessage
+	releaseall
+	end
+
+EventScript_TrainerEggSentToPC::
+	lockall
+	playfanfare MUS_OBTAIN_ITEM
+	message gText_ReceivedEggFromTrainer
+	waitfanfare
+	waitmessage
+	waitbuttonpress
+	msgbox gText_TrainerEggSentToPC, MSGBOX_DEFAULT
+	closemessage
+	releaseall
+	end

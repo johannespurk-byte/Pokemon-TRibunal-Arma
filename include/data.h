@@ -1,4 +1,4 @@
-#ifndef GUARD_DATA_H
+﻿#ifndef GUARD_DATA_H
 #define GUARD_DATA_H
 
 #include "constants/moves.h"
@@ -206,6 +206,11 @@ extern const struct SpriteFrameImage gTrainerBackPicTable_RubySapphireBrendan[];
 extern const struct SpriteFrameImage gTrainerBackPicTable_RubySapphireMay[];
 extern const struct SpriteFrameImage gTrainerBackPicTable_Wally[];
 extern const struct SpriteFrameImage gTrainerBackPicTable_Steven[];
+// 🌟 CUSTOM MULTI-GENERATION BACK-PIC ARRAYS (Typesafe im globalen Datenstamm verankert!)
+extern const struct SpriteFrameImage gTrainerBackPicTable_Ethan[];
+extern const struct SpriteFrameImage gTrainerBackPicTable_Lyra[];
+extern const struct SpriteFrameImage gTrainerBackPicTable_Lucas[];
+extern const struct SpriteFrameImage gTrainerBackPicTable_Dawn[];
 
 extern const union AffineAnimCmd *const gAffineAnims_BattleSpritePlayerSide[];
 extern const union AffineAnimCmd *const gAffineAnims_BattleSpriteOpponentSide[];
@@ -305,14 +310,33 @@ static inline const u8 *GetTrainerClassNameFromId(u16 trainerId)
     return gTrainerClasses[GetTrainerClassFromId(trainerId)].name;
 }
 
+// Brendan/May as rival battles show the rival drawn at new game instead, see trainer_card.c.
+u16 TrainerCard_GetRivalTrainerPic(void);
+const u8 *TrainerCard_GetRivalName(void);
+
+static inline bool32 IsDrawnRivalTrainer(const struct Trainer *trainer)
+{
+    return !IS_FRLG
+        && trainer->trainerClass == TRAINER_CLASS_RIVAL
+        && (trainer->trainerPic == TRAINER_PIC_BRENDAN || trainer->trainerPic == TRAINER_PIC_MAY);
+}
+
 static inline const u8 *GetTrainerNameFromId(u16 trainerId)
 {
-    return GetTrainerStructFromId(trainerId)->trainerName;
+    const struct Trainer *trainer = GetTrainerStructFromId(trainerId);
+
+    if (IsDrawnRivalTrainer(trainer))
+        return TrainerCard_GetRivalName();
+    return trainer->trainerName;
 }
 
 static inline const enum TrainerPicID GetTrainerPicFromId(u16 trainerId)
 {
-    return GetTrainerStructFromId(trainerId)->trainerPic;
+    const struct Trainer *trainer = GetTrainerStructFromId(trainerId);
+
+    if (IsDrawnRivalTrainer(trainer))
+        return TrainerCard_GetRivalTrainerPic();
+    return trainer->trainerPic;
 }
 
 static inline const struct StartingStatuses GetTrainerStartingStatusFromId(u16 trainerId)

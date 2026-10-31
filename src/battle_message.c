@@ -1467,7 +1467,8 @@ const u8 gText_MoveInterfaceType[] = _("TYPE/");
 const u8 gText_MoveInterfacePpType[] = _("{PALETTE 5}{BACKGROUND DYNAMIC_COLOR5}{TEXT_COLORS DYNAMIC_COLOR4 DYNAMIC_COLOR6 DYNAMIC_COLOR5}PP\nTYPE/");
 const u8 gText_MoveInterfaceDynamicColors[] = _("{PALETTE 5}{BACKGROUND DYNAMIC_COLOR5}{TEXT_COLORS DYNAMIC_COLOR4 DYNAMIC_COLOR6 DYNAMIC_COLOR5}");
 const u8 gText_WhichMoveToForget4[] = _("{PALETTE 5}{BACKGROUND DYNAMIC_COLOR5}{TEXT_COLORS DYNAMIC_COLOR4 DYNAMIC_COLOR6 DYNAMIC_COLOR5}Which move should\nbe forgotten?");
-const u8 gText_BattleYesNoChoice[] = _("{PALETTE 5}{BACKGROUND DYNAMIC_COLOR5}{TEXT_COLORS DYNAMIC_COLOR4 DYNAMIC_COLOR6 DYNAMIC_COLOR5}Yes\nNo");
+// Navy box with gold text: entries 8-10 of graphics/battle_interface/text.pal (see B_WIN_YESNO)
+const u8 gText_BattleYesNoChoice[] = _("{PALETTE 5}{BACKGROUND BLUE}{TEXT_COLORS LIGHT_BLUE DYNAMIC_COLOR1 BLUE}Yes\nNo");
 const u8 gText_BattleSwitchWhich[] = _("{PALETTE 5}{BACKGROUND DYNAMIC_COLOR5}{TEXT_COLORS DYNAMIC_COLOR4 DYNAMIC_COLOR6 DYNAMIC_COLOR5}Switch\nwhich?");
 const u8 gText_BattleSwitchWhich2[] = _("{PALETTE 5}{BACKGROUND DYNAMIC_COLOR5}{TEXT_COLORS DYNAMIC_COLOR4 DYNAMIC_COLOR6 DYNAMIC_COLOR5}");
 const u8 gText_BattleSwitchWhich3[] = _("{UP_ARROW}");
@@ -1697,15 +1698,15 @@ static const struct BattleWindowText sTextOnWindowsInfo_Normal[] =
         .color.shadow = 15,
     },
     [B_WIN_YESNO] = {
-        .fillValue = PIXEL_FILL(0xE),
+        .fillValue = PIXEL_FILL(8),
         .fontId = FONT_NORMAL,
         .x = 0,
         .y = 1,
         .speed = 0,
-        .color.foreground = 13,
-        .color.background = 14,
-        .color.accent = 14,
-        .color.shadow = 15,
+        .color.foreground = 9,
+        .color.background = 8,
+        .color.accent = 8,
+        .color.shadow = 10,
     },
     [B_WIN_LEVEL_UP_BOX] = {
         .fillValue = PIXEL_FILL(0xE),
@@ -1970,15 +1971,15 @@ static const struct BattleWindowText sTextOnWindowsInfo_KantoTutorial[] =
         .color.shadow = 15,
     },
     [B_WIN_YESNO] = {
-        .fillValue = PIXEL_FILL(0xE),
+        .fillValue = PIXEL_FILL(8),
         .fontId = FONT_NORMAL,
         .x = 0,
         .y = 1,
         .speed = 0,
-        .color.foreground = 13,
-        .color.background = 14,
-        .color.accent = 14,
-        .color.shadow = 15,
+        .color.foreground = 9,
+        .color.background = 8,
+        .color.accent = 8,
+        .color.shadow = 10,
     },
     [B_WIN_LEVEL_UP_BOX] = {
         .fillValue = PIXEL_FILL(0xE),
@@ -2255,15 +2256,15 @@ static const struct BattleWindowText sTextOnWindowsInfo_Arena[] =
         .color.shadow = 15,
     },
     [B_WIN_YESNO] = {
-        .fillValue = PIXEL_FILL(0xE),
+        .fillValue = PIXEL_FILL(8),
         .fontId = FONT_NORMAL,
         .x = 0,
         .y = 1,
         .speed = 0,
-        .color.foreground = 13,
-        .color.background = 14,
-        .color.accent = 14,
-        .color.shadow = 15,
+        .color.foreground = 9,
+        .color.background = 8,
+        .color.accent = 8,
+        .color.shadow = 10,
     },
     [B_WIN_LEVEL_UP_BOX] = {
         .fillValue = PIXEL_FILL(0xE),
@@ -3627,12 +3628,21 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
 
             if (toCpy != NULL)
             {
+                // Trainer speech is whole sentences: it keeps its spaces and drops its own line breaks,
+                // so BreakStringAutomatic below can rewrap it for the battle box. Names keep NBSPs so they never split.
+                bool32 isTrainerSpeech = (*src == B_TXT_TRAINER1_LOSE_TEXT || *src == B_TXT_TRAINER2_LOSE_TEXT
+                                       || *src == B_TXT_TRAINER1_WIN_TEXT || *src == B_TXT_TRAINER2_WIN_TEXT);
+                u32 prevChar = EOS;
+
                 while (*toCpy != EOS)
                 {
-                    if (*toCpy == CHAR_SPACE)
+                    if (isTrainerSpeech && (*toCpy == CHAR_NEWLINE || *toCpy == CHAR_PROMPT_SCROLL))
+                        dst[dstID] = (prevChar == CHAR_HYPHEN) ? CHAR_ZWS : CHAR_SPACE;
+                    else if (!isTrainerSpeech && *toCpy == CHAR_SPACE)
                         dst[dstID] = CHAR_NBSP;
                     else
                         dst[dstID] = *toCpy;
+                    prevChar = *toCpy;
                     dstID++;
                     toCpy++;
                 }

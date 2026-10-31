@@ -1,4 +1,4 @@
-#include "global.h"
+﻿#include "global.h"
 #include "item.h"
 #include "berry.h"
 #include "pokeball.h"
@@ -29,38 +29,136 @@ void ItemUse_InfiniteCapCandy(u8 partyIndex);
     .id = POCKET_DUMMY,                     \
     .capacity = PC_ITEMS_COUNT,             \
     .itemSlots = gSaveBlock1Ptr->pcItems,   \
-}
+} // 🌟 HINWEIS: Hier darf KEIN Backslash mehr am Ende der Zeile stehen!
 
 static bool32 CheckPyramidBagHasItem(enum Item itemId, u16 count);
 static bool32 CheckPyramidBagHasSpace(enum Item itemId, u16 count);
-static const u8 *GetItemPluralName(enum Item);
+static const u8* GetItemPluralName(enum Item);
 static bool32 DoesItemHavePluralName(enum Item);
-static void NONNULL BagPocket_CompactItems(struct BagPocket *pocket);
+static void NONNULL BagPocket_CompactItems(struct BagPocket* pocket);
 static u16 SanitizeItemId(enum Item itemId);
 static u16 SanitizeBagItemId(enum Item itemId);
 
-EWRAM_DATA struct BagPocket gBagPockets[POCKETS_COUNT] = {0};
+EWRAM_DATA struct BagPocket gBagPockets[POCKETS_COUNT] = { 0 };
 
 #include "data/pokemon/item_effects.h"
 #include "data/items.h"
 
-#define UNPACK_TM_ITEM_ID(_tm) [CAT(ENUM_TM_HM_, _tm) + 1] = { CAT(ITEM_TM_, _tm), CAT(MOVE_, _tm) },
-#define UNPACK_HM_ITEM_ID(_hm) [CAT(ENUM_TM_HM_, _hm) + 1] = { CAT(ITEM_HM_, _hm), CAT(MOVE_, _hm) },
+// KORREKTUR: Flache, crash-sichere Hardware-Tabelle für das TM-Register!
 
-const struct TmHmIndexKey gTMHMItemMoveIds[NUM_ALL_MACHINES + 1] =
+const struct TmHmIndexKey gTMHMItemMoveIds[] =
+
 {
-    [0] = { ITEM_NONE, MOVE_NONE }, // Failsafe
-    FOREACH_TM(UNPACK_TM_ITEM_ID)
-    FOREACH_HM(UNPACK_HM_ITEM_ID)
-    /*
-     * Expands to the following:
-     *
-     * [1] = { ITEM_TM_FOCUS_PUNCH, MOVE_FOCUS_PUNCH },
-     * [2] = { ITEM_TM_DRAGON_CLAW, MOVE_DRAGON_CLAW },
-     * [3] = { ITEM_TM_WATER_PULSE, MOVE_WATER_PULSE },
-     * etc etc
-    */
+    { ITEM_NONE, MOVE_NONE },
+    { ITEM_TM01, MOVE_FOCUS_PUNCH },
+    { ITEM_TM02, MOVE_DRAGON_CLAW },
+    { ITEM_TM03, MOVE_WATER_PULSE },
+    { ITEM_TM04, MOVE_CALM_MIND },
+    { ITEM_TM05, MOVE_ROAR },
+    { ITEM_TM06, MOVE_TOXIC },
+    { ITEM_TM07, MOVE_HAIL },
+    { ITEM_TM08, MOVE_BULK_UP },
+    { ITEM_TM09, MOVE_BULLET_SEED },
+    { ITEM_TM10, MOVE_HIDDEN_POWER },
+    { ITEM_TM11, MOVE_SUNNY_DAY },
+    { ITEM_TM12, MOVE_TAUNT },
+    { ITEM_TM13, MOVE_ICE_BEAM },
+    { ITEM_TM14, MOVE_BLIZZARD },
+    { ITEM_TM15, MOVE_HYPER_BEAM },
+    { ITEM_TM16, MOVE_LIGHT_SCREEN },
+    { ITEM_TM17, MOVE_PROTECT },
+    { ITEM_TM18, MOVE_RAIN_DANCE },
+    { ITEM_TM19, MOVE_GIGA_DRAIN },
+    { ITEM_TM20, MOVE_SAFEGUARD },
+    { ITEM_TM21, MOVE_FRUSTRATION },
+    { ITEM_TM22, MOVE_SOLAR_BEAM },
+    { ITEM_TM23, MOVE_IRON_TAIL },
+    { ITEM_TM24, MOVE_THUNDERBOLT },
+    { ITEM_TM25, MOVE_THUNDER },
+    { ITEM_TM26, MOVE_EARTHQUAKE },
+    { ITEM_TM27, MOVE_RETURN },
+    { ITEM_TM28, MOVE_DIG },
+    { ITEM_TM29, MOVE_PSYCHIC },
+    { ITEM_TM30, MOVE_SHADOW_BALL },
+    { ITEM_TM31, MOVE_BRICK_BREAK },
+    { ITEM_TM32, MOVE_DOUBLE_TEAM },
+    { ITEM_TM33, MOVE_REFLECT },
+    { ITEM_TM34, MOVE_SHOCK_WAVE },
+    { ITEM_TM35, MOVE_FLAMETHROWER },
+    { ITEM_TM36, MOVE_SLUDGE_BOMB },
+    { ITEM_TM37, MOVE_SANDSTORM },
+    { ITEM_TM38, MOVE_FIRE_BLAST },
+    { ITEM_TM39, MOVE_ROCK_TOMB },
+    { ITEM_TM40, MOVE_AERIAL_ACE },
+    { ITEM_TM41, MOVE_TORMENT },
+    { ITEM_TM42, MOVE_FACADE },
+    { ITEM_TM43, MOVE_SECRET_POWER },
+    { ITEM_TM44, MOVE_REST },
+    { ITEM_TM45, MOVE_ATTRACT },
+    { ITEM_TM46, MOVE_THIEF },
+    { ITEM_TM47, MOVE_STEEL_WING },
+    { ITEM_TM48, MOVE_SKILL_SWAP },
+    { ITEM_TM49, MOVE_SNATCH },
+    { ITEM_TM50, MOVE_OVERHEAT },
+    { ITEM_TM51, MOVE_BULLDOZE },
+    { ITEM_TM52, MOVE_U_TURN },
+    { ITEM_TM53, MOVE_ICE_PUNCH },
+    { ITEM_TM54, MOVE_KNOCK_OFF },
+    { ITEM_TM55, MOVE_FLAME_CHARGE },
+    { ITEM_TM56, MOVE_EARTH_POWER },
+    { ITEM_TM57, MOVE_IRON_HEAD },
+    { ITEM_TM58, MOVE_BRAVE_BIRD },
+    { ITEM_TM59, MOVE_DARK_PULSE },
+    { ITEM_TM60, MOVE_DAZZLING_GLEAM },
+    { ITEM_TM61, MOVE_DRAGON_DANCE },
+    { ITEM_TM62, MOVE_SWORDS_DANCE },
+    { ITEM_TM63, MOVE_NASTY_PLOT },
+    { ITEM_TM64, MOVE_PSYCHO_CUT },
+    { ITEM_TM65, MOVE_X_SCISSOR },
+    { ITEM_TM66, MOVE_ROCK_WRECKER },
+    { ITEM_TM67, MOVE_STONE_EDGE },
+    { ITEM_TM68, MOVE_STEALTH_ROCK },
+    { ITEM_TM69, MOVE_TOXIC_SPIKES },
+    { ITEM_TM70, MOVE_STUN_SPORE },
+    { ITEM_TM71, MOVE_WILL_O_WISP },
+    { ITEM_TM72, MOVE_THUNDER_WAVE },
+    { ITEM_TM73, MOVE_REFLECT },
+    { ITEM_TM74, MOVE_LIGHT_SCREEN },
+    { ITEM_TM75, MOVE_RECOVER },
+    { ITEM_TM76, MOVE_ROOST },
+    { ITEM_TM77, MOVE_SLUDGE_BOMB },
+    { ITEM_TM78, MOVE_ICE_BEAM },
+    { ITEM_TM79, MOVE_THUNDERBOLT },
+    { ITEM_TM80, MOVE_FLAMETHROWER },
+    { ITEM_TM81, MOVE_EARTHQUAKE },
+    { ITEM_TM82, MOVE_PSYCHIC },
+    { ITEM_TM83, MOVE_SHADOW_BALL },
+    { ITEM_TM84, MOVE_BRICK_BREAK },
+    { ITEM_TM85, MOVE_AERIAL_ACE },
+    { ITEM_TM86, MOVE_TAUNT },
+    { ITEM_TM87, MOVE_PROTECT },
+    { ITEM_TM88, MOVE_EXTRASENSORY },
+    { ITEM_TM89, MOVE_SCALD },
+    { ITEM_TM90, MOVE_GIGA_DRAIN },
+    { ITEM_TM91, MOVE_VOLT_SWITCH },
+    { ITEM_TM92, MOVE_AERIAL_ACE },
+    { ITEM_TM93, MOVE_WATERFALL },
+    { ITEM_TM94, MOVE_IRON_TAIL },
+    { ITEM_TM95, MOVE_CLOSE_COMBAT },
+    { ITEM_TM96, MOVE_HYDRO_PUMP },
+    { ITEM_TM97, MOVE_FIRE_BLAST },
+    { ITEM_TM98, MOVE_HURRICANE },
+    { ITEM_TM99, MOVE_DRACO_METEOR },
+    { ITEM_HM01, MOVE_CUT },
+    { ITEM_HM02, MOVE_FLY },
+    { ITEM_HM03, MOVE_SURF },
+    { ITEM_HM04, MOVE_STRENGTH },
+    { ITEM_HM05, MOVE_FLASH },
+    { ITEM_HM06, MOVE_ROCK_SMASH },
+    { ITEM_HM07, MOVE_WATERFALL },
+    { ITEM_HM08, MOVE_DIVE },
 };
+
 
 #undef UNPACK_TM_ITEM_ID
 #undef UNPACK_HM_ITEM_ID
@@ -991,23 +1089,4 @@ bool32 IsItemShopCriteriaFulfilled(u32 itemId)
     return func(SanitizeItemId(itemId));
 }
 
-// Funktion f�r das unendliche Level-Cap-Bonbon
-void ItemUse_InfiniteCapCandy(u8 partyIndex)
-{
-    extern u32 GetCurrentLevelCap(void);
-    u32 maxLevel = GetCurrentLevelCap();
-    u32 currentLevel = GetMonData(&gPlayerParty[partyIndex], MON_DATA_LEVEL, NULL);
 
-    if (currentLevel >= maxLevel || currentLevel >= 100)
-    {
-        return;
-    }
-
-    u16 species = GetMonData(&gPlayerParty[partyIndex], MON_DATA_SPECIES, NULL);
-    u32 targetExp = gExperienceTables[gSpeciesInfo[species].growthRate][maxLevel];
-
-    SetMonData(&gPlayerParty[partyIndex], MON_DATA_EXP, &targetExp);
-    CalculateMonStats(&gPlayerParty[partyIndex]);
-
-    return;
-}

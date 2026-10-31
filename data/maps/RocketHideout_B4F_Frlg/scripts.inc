@@ -132,16 +132,31 @@ RocketHideout_B4F_Text_GiovanniIntro::
 	.string "world of pain!$"
 
 RocketHideout_B4F_Text_GiovanniDefeat::
-	.string "WHAT!\n"
-	.string "This can't be!$"
+	.string "Hmph… impressive.\n"
+	.string "You have earned my attention.$"
 
 RocketHideout_B4F_Text_GiovanniPostBattle::
 	.string "I see that you raise POKéMON with\n"
 	.string "utmost care.\p"
-	.string "A child like you would never\n"
-	.string "understand what I hope to achieve.\p"
-	.string "I shall step aside this time!\p"
-	.string "I hope we meet again…$"
+	.string "Very well. I shall step aside…\n"
+	.string "for now.\p"
+	.string "Do not mistake this for victory.\n"
+	.string "TEAM ROCKET does not stand alone.\p"
+	.string "MAXIE of TEAM MAGMA dreams of\n"
+	.string "endless land.\p"
+	.string "ARCHIE of TEAM AQUA longs for\n"
+	.string "an endless sea.\p"
+	.string "Fools, both of them.\n"
+	.string "But useful fools.\p"
+	.string "I give them money and men.\n"
+	.string "They give me HOENN's legends.\p"
+	.string "We will meet again, child. And\n"
+	.string "every time, you will be stronger.\p"
+	.string "So will we.\p"
+	.string "Train hard. Climb higher.\n"
+	.string "I will be waiting for you.\p"
+	.string "Next time, TEAM ROCKET will not\n"
+	.string "hold back!$"
 
 RocketHideout_B4F_Text_Grunt2Intro::
 	.string "I know you!\n"

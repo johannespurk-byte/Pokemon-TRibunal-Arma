@@ -37,6 +37,7 @@
 #include "load_save.h"
 #include "main.h"
 #include "malloc.h"
+#include "nuzlocke.h"
 #include "m4a.h"
 #include "palette.h"
 #include "party_menu.h"
@@ -92,7 +93,7 @@ static void CB2_HandleStartMultiPartnerBattle(void);
 static void CB2_HandleStartMultiBattle(void);
 static void CB2_HandleStartBattle(void);
 static void TryCorrectShedinjaLanguage(struct Pokemon *mon);
-static enum BattleTrainer GetBattlerTrainerFromParty(struct Pokemon *party);
+static enum BattleTrainer UNUSED GetBattlerTrainerFromParty(struct Pokemon *party);
 static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 firstTrainer);
 static void BattleMainCB1(void);
 static void CB2_EndLinkBattle(void);
@@ -483,6 +484,7 @@ void CB2_InitBattle(void)
     AllocateBattleSpritesData();
     AllocateMonSpritesGfx();
     RecordedBattle_ClearFrontierPassFlag();
+    Nuzlocke_OnBattleStart();
 
 #if T_SHOULD_RUN_MOVE_ANIM
     gLoadFail = FALSE;
@@ -3137,7 +3139,8 @@ static void BattleStartClearSetData(void)
     gBattleStruct->safariCatchFactor = gSpeciesInfo[GetMonData(&gParties[B_TRAINER_OPPONENT_A][0], MON_DATA_SPECIES)].catchRate * 100 / 1275;
     gBattleStruct->safariEscapeFactor = 3;
     gBattleStruct->wildVictorySong = 0;
-    gBattleStruct->moneyMultiplier = 1;
+    gBattleStruct->moneyMultiplier = 3; // 🌟 REPARATUR: Setzt den Verlust-Multiplikator permanent auf Null!
+
 
     gBattleStruct->givenExpMons[0] = 0;
     gBattleStruct->givenExpMons[1] = 0;
@@ -5731,6 +5734,8 @@ static void ReturnFromBattleToOverworld(void)
         CalculatePlayerPartyCount();
         RandomlyGivePartyPokerus();
         PartySpreadPokerus();
+        if (!(gBattleTypeFlags & (BATTLE_TYPE_FIRST_BATTLE | BATTLE_TYPE_RECORDED)))
+            Nuzlocke_MarkFaintedPartyMonsDead();
     }
 
     if (gBattleTypeFlags & BATTLE_TYPE_LINK && gReceivedRemoteLinkPlayers)

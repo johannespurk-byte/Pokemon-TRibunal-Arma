@@ -3732,6 +3732,9 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
             {
                 if (IsFieldMoveUnlocked(j) && CanLearnTeachableMove(species, moveId))
                     offer = TRUE;
+                // With the badge and the HM in the bag every Pokémon can use Fly and Flash outside battle.
+                else if (HasBadgeAndHMForFieldMove(j))
+                    offer = TRUE;
             }
             // Item-based HMs are used from the overworld / key items, not the party menu.
             else if (IsFieldMoveExcludedFromPartyMenu(moveId))
@@ -7550,7 +7553,8 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
     // ====================================================================
     // DEIN PERFEKTES, UNENDLICHES CAP-BONBON (IN DER BEEREN-TASCHE)
     // ====================================================================
-    if (gSpecialVar_ItemId == ITEM_LEVEL_CAP_CANDY)
+    if (gSpecialVar_ItemId == ITEM_POKE_VIAL)
+
     {
         u8 currentLevel = GetMonData(mon, MON_DATA_LEVEL);
         u8 maxLevel = GetCurrentLevelCap(); // Holt das native Story-Cap deiner Engine

@@ -74,7 +74,8 @@ MauvilleCity_Gym_EventScript_DeactivatePuzzle::
 	end
 
 MauvilleCity_Gym_EventScript_Wattson::
-	trainerbattle_single TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonIntro, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonIntro, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_LoreleiChallenge, NO_MUSIC
+	goto_if_not_defeated TRAINER_LORELEI_MAUVILLE, MauvilleCity_Gym_EventScript_LoreleiChallenge
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_WattsonRematch
 	goto_if_unset FLAG_RECEIVED_TM_SHOCK_WAVE, MauvilleCity_Gym_EventScript_GiveShockWave2
@@ -83,7 +84,17 @@ MauvilleCity_Gym_EventScript_Wattson::
 	release
 	end
 
+@ After WATTSON, his partner LORELEI challenges the player; the badge comes after both
+MauvilleCity_Gym_EventScript_LoreleiChallenge::
+	msgbox MauvilleCity_Gym_Text_WattsonAfterBattle, MSGBOX_DEFAULT
+	special HealPlayerParty
+	msgbox MauvilleCity_Gym_Text_LoreleiAppears, MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_LORELEI_MAUVILLE, MauvilleCity_Gym_Text_LoreleiIntro, MauvilleCity_Gym_Text_LoreleiDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
+	release
+	end
+
 MauvilleCity_Gym_EventScript_WattsonDefeated::
+	msgbox MauvilleCity_Gym_Text_LoreleiAfterBattle, MSGBOX_DEFAULT
 	message MauvilleCity_Gym_Text_ReceivedDynamoBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -99,6 +110,7 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	special MauvilleGymDeactivatePuzzle
 	special DrawWholeMapView
 	playse SE_UNLOCK
+	call MauvilleCity_Gym_EventScript_GiveMegaStone
 	call MauvilleCity_Gym_EventScript_GiveShockWave
 	closemessage
 	delay 30
@@ -118,6 +130,11 @@ MauvilleCity_Gym_EventScript_GiveShockWave2::
 	setflag FLAG_RECEIVED_TM_SHOCK_WAVE
 	release
 	end
+
+MauvilleCity_Gym_EventScript_GiveMegaStone::
+	msgbox MauvilleCity_Gym_Text_LoreleiGiveMegaStone, MSGBOX_DEFAULT
+	giveitem ITEM_GLALITITE, 1
+	return
 
 MauvilleCity_Gym_EventScript_GiveShockWave::
 	giveitem ITEM_TM_SHOCK_WAVE
@@ -348,8 +365,37 @@ MauvilleCity_Gym_Text_WattsonIntro:
 MauvilleCity_Gym_Text_WattsonDefeat:
 	.string "Wahahahah!\n"
 	.string "Fine, I lost!\p"
-	.string "You ended up giving me a thrill!\n"
-	.string "Take this BADGE!$"
+	.string "You ended up giving me a thrill!$"
+
+MauvilleCity_Gym_Text_WattsonAfterBattle:
+	.string "WATTSON: But don't celebrate yet!\p"
+	.string "An old friend from KANTO is visiting\n"
+	.string "my GYM today. Let me patch up your\l"
+	.string "POKéMON first!$"
+
+MauvilleCity_Gym_Text_LoreleiAppears:
+	.string "LORELEI: So you beat WATTSON's\n"
+	.string "electric tricks. Not bad.\p"
+	.string "WATTSON: Wahahahah! LORELEI of the\n"
+	.string "KANTO ELITE FOUR! Your turn!$"
+
+MauvilleCity_Gym_Text_LoreleiIntro:
+	.string "LORELEI: Ground types won't save you\n"
+	.string "from my ice.\p"
+	.string "Let's see if you can keep your cool!$"
+
+MauvilleCity_Gym_Text_LoreleiDefeat:
+	.string "LORELEI: …Melted. You are\n"
+	.string "the real thing.$"
+
+MauvilleCity_Gym_Text_LoreleiAfterBattle:
+	.string "WATTSON: Wahahahah! You beat us both!\n"
+	.string "That earns you my BADGE!$"
+
+MauvilleCity_Gym_Text_LoreleiGiveMegaStone:
+	.string "LORELEI: Take this as well.\p"
+	.string "A MEGA STONE from my homeland.\n"
+	.string "Use its cold power wisely.$"
 
 MauvilleCity_Gym_Text_ReceivedDynamoBadge:
 	.string "{PLAYER} received the DYNAMO BADGE\n"

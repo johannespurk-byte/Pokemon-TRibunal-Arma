@@ -34,6 +34,7 @@
 #include "naming_screen.h"
 #include "overworld.h"
 #include "party_menu.h"
+#include "nuzlocke.h"
 #include "pokedex.h"
 #include "pokeblock.h"
 #include "pokemon.h"
@@ -3517,6 +3518,9 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, enum Item item, u8 partyIndex, 
     // Determine the EV cap to use
     u32 maxAllowedEVs = !B_EV_ITEMS_CAP ? MAX_TOTAL_EVS : GetCurrentEVCap();
 
+    if (!usedByAI && Nuzlocke_IsItemBlocked(mon))
+        return TRUE;
+
     // Get item hold effect
     heldItem = GetMonData(mon, MON_DATA_HELD_ITEM);
     if (heldItem == ITEM_ENIGMA_BERRY_E_READER)
@@ -5305,25 +5309,27 @@ u16 GetBattleBGM(void)
             return MUS_VS_AQUA_MAGMA_LEADER;
         case TRAINER_CLASS_TEAM_AQUA:
         case TRAINER_CLASS_TEAM_MAGMA:
+            return MUS_DP_VS_GALACTIC;
         case TRAINER_CLASS_AQUA_ADMIN:
         case TRAINER_CLASS_MAGMA_ADMIN:
-            return MUS_VS_AQUA_MAGMA;
+            return MUS_BW_VS_PLASMA;
         case TRAINER_CLASS_LEADER:
             return MUS_VS_GYM_LEADER;
         case TRAINER_CLASS_CHAMPION:
-            return MUS_VS_CHAMPION;
+            return MUS_DP_VS_CHAMPION;
         case TRAINER_CLASS_RIVAL:
             if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
-                return MUS_VS_RIVAL;
+                return MUS_BW_VS_RIVAL;
             if (!StringCompare(GetTrainerNameFromId(TRAINER_BATTLE_PARAM.opponentA), gText_BattleWallyName))
-                return MUS_VS_TRAINER;
-            return MUS_VS_RIVAL;
+                return MUS_DP_VS_TRAINER;
+            return MUS_BW_VS_RIVAL;
         case TRAINER_CLASS_ELITE_FOUR:
-            return MUS_VS_ELITE_FOUR;
+            return MUS_BW_VS_ELITE_FOUR;
         case TRAINER_CLASS_CHAMPION_FRLG:
-            return MUS_RG_VS_CHAMPION;
-        case TRAINER_CLASS_LEADER_FRLG:
+            return MUS_BW_VS_CHAMPION;
         case TRAINER_CLASS_ELITE_FOUR_FRLG:
+            return MUS_BW_VS_GYM_LEADER;
+        case TRAINER_CLASS_LEADER_FRLG:
             return MUS_RG_VS_GYM_LEADER;
         case TRAINER_CLASS_SALON_MAIDEN:
         case TRAINER_CLASS_DOME_ACE:
@@ -5332,7 +5338,10 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_FACTORY_HEAD:
         case TRAINER_CLASS_PIKE_QUEEN:
         case TRAINER_CLASS_PYRAMID_KING:
-            return MUS_VS_FRONTIER_BRAIN;
+            return MUS_PL_VS_FRONTIER_BRAIN;
+        case TRAINER_CLASS_EXPERT:
+        case TRAINER_CLASS_COOLTRAINER:
+            return MUS_BW_VS_SUBWAY_TRAINER;
         default:
             if (GetCurrentRegion() == REGION_KANTO)
                 return MUS_RG_VS_TRAINER;
@@ -5345,7 +5354,7 @@ u16 GetBattleBGM(void)
         if (GetCurrentRegion() == REGION_KANTO)
             return MUS_RG_VS_WILD;
         else
-            return MUS_VS_WILD;
+            return MUS_BW_VS_WILD_STRONG;
     }
 }
 
@@ -6690,6 +6699,9 @@ void HealPokemon(struct Pokemon *mon)
 {
     u32 data;
 
+    if (Nuzlocke_ShouldSkipHeal(&mon->box))
+        return;
+
     data = GetMonData(mon, MON_DATA_MAX_HP);
     SetMonData(mon, MON_DATA_HP, &data);
 
@@ -6702,6 +6714,9 @@ void HealPokemon(struct Pokemon *mon)
 void HealBoxPokemon(struct BoxPokemon *boxMon)
 {
     u32 data;
+
+    if (Nuzlocke_ShouldSkipHeal(boxMon))
+        return;
 
     data = 0;
     SetBoxMonData(boxMon, MON_DATA_HP_LOST, &data);

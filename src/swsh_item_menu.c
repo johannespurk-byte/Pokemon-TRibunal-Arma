@@ -128,8 +128,11 @@ enum {
     ACTION_BY_TYPE,
     ACTION_BY_AMOUNT,
     ACTION_BY_INDEX,
+    ACTION_AUTO_REPEL_ON,   // 🌟 NEU: ID für Anschalten
+    ACTION_AUTO_REPEL_OFF,  // 🌟 NEU: ID für Abschalten
     ACTION_DUMMY,
 };
+
 
 enum {
     WIN_ITEM_LIST,
@@ -594,28 +597,43 @@ static const struct ListMenuTemplate sItemListMenu =
 };
 
 static const u8 sText_NothingToSort[] = _("There's nothing to sort!");
+// 🌟 TYPESAFE PROTOTYPEN: Meldet deine beiden Wunsch-Aktionen krisensicher beim Compiler an!
+static void ItemMenu_AutoRepelOn(u8 taskId)
+{
+    gSpecialVar_Result = AUTO_REPEL_SWITCH_ON;
+    ItemMenu_UseOutOfBattle(taskId);
+}
+
+static void ItemMenu_AutoRepelOff(u8 taskId)
+{
+    gSpecialVar_Result = AUTO_REPEL_SWITCH_OFF;
+    ItemMenu_UseOutOfBattle(taskId);
+}
+
 static const struct MenuAction sItemMenuActions[] = {
-    [ACTION_USE]               = {gMenuText_Use,                {ItemMenu_UseOutOfBattle}},
-    [ACTION_TOSS]              = {gMenuText_Toss,               {ItemMenu_Toss}},
-    [ACTION_REGISTER]          = {gMenuText_Register,           {ItemMenu_Register}},
-    [ACTION_GIVE]              = {gMenuText_Give,               {ItemMenu_Give}},
-    [ACTION_CANCEL]            = {gText_Cancel2,                {ItemMenu_Cancel}},
-    [ACTION_BATTLE_USE]        = {gMenuText_Use,                {ItemMenu_UseInBattle}},
-    [ACTION_CHECK]             = {COMPOUND_STRING("CHECK"),     {ItemMenu_UseOutOfBattle}},
-    [ACTION_WALK]              = {COMPOUND_STRING("WALK"),      {ItemMenu_UseOutOfBattle}},
-    [ACTION_DESELECT]          = {COMPOUND_STRING("DESELECT"),  {ItemMenu_Register}},
+    [ACTION_USE] = {gMenuText_Use,                {ItemMenu_UseOutOfBattle}},
+    [ACTION_TOSS] = {gMenuText_Toss,               {ItemMenu_Toss}},
+    [ACTION_REGISTER] = {gMenuText_Register,           {ItemMenu_Register}},
+    [ACTION_GIVE] = {gMenuText_Give,               {ItemMenu_Give}},
+    [ACTION_CANCEL] = {gText_Cancel2,                {ItemMenu_Cancel}},
+    [ACTION_BATTLE_USE] = {gMenuText_Use,                {ItemMenu_UseInBattle}},
+    [ACTION_CHECK] = {COMPOUND_STRING("CHECK"),     {ItemMenu_UseOutOfBattle}},
+    [ACTION_WALK] = {COMPOUND_STRING("WALK"),      {ItemMenu_UseOutOfBattle}},
+    [ACTION_DESELECT] = {COMPOUND_STRING("DESELECT"),  {ItemMenu_Register}},
 #if SWSH_ITEM_MENU_BERRY_TAG
-    [ACTION_CHECK_TAG]         = {COMPOUND_STRING("CHECK TAG"), {ItemMenu_CheckTag}},
+    [ACTION_CHECK_TAG] = {COMPOUND_STRING("CHECK TAG"), {ItemMenu_CheckTag}},
 #endif
-    [ACTION_CONFIRM]           = {gMenuText_Confirm,            {Task_FadeAndCloseBagMenu}},
-    [ACTION_SHOW]              = {COMPOUND_STRING("SHOW"),      {ItemMenu_Show}},
-    [ACTION_GIVE_FAVOR_LADY]   = {gMenuText_Give2,              {ItemMenu_GiveFavorLady}},
+    [ACTION_CONFIRM] = {gMenuText_Confirm,            {Task_FadeAndCloseBagMenu}},
+    [ACTION_SHOW] = {COMPOUND_STRING("SHOW"),      {ItemMenu_Show}},
+    [ACTION_GIVE_FAVOR_LADY] = {gMenuText_Give2,              {ItemMenu_GiveFavorLady}},
     [ACTION_CONFIRM_QUIZ_LADY] = {gMenuText_Confirm,            {ItemMenu_ConfirmQuizLady}},
-    [ACTION_BY_NAME]           = {COMPOUND_STRING("Name"),      {ItemMenu_SortByName}},
-    [ACTION_BY_TYPE]           = {COMPOUND_STRING("Type"),      {ItemMenu_SortByType}},
-    [ACTION_BY_AMOUNT]         = {COMPOUND_STRING("Amount"),    {ItemMenu_SortByAmount}},
-    [ACTION_BY_INDEX]          = {COMPOUND_STRING("Index"),     {ItemMenu_SortByIndex}},
-    [ACTION_DUMMY]             = {gText_EmptyString2,           {NULL}}
+    [ACTION_BY_NAME] = {COMPOUND_STRING("Name"),      {ItemMenu_SortByName}},
+    [ACTION_BY_TYPE] = {COMPOUND_STRING("Type"),      {ItemMenu_SortByType}},
+    [ACTION_BY_AMOUNT] = {COMPOUND_STRING("Amount"),    {ItemMenu_SortByAmount}},
+    [ACTION_BY_INDEX] = {COMPOUND_STRING("Index"),     {ItemMenu_SortByIndex}},
+    [ACTION_AUTO_REPEL_ON] = {COMPOUND_STRING("ANSCHALTEN"),{ItemMenu_AutoRepelOn}},  // 🌟 Dein linker Wunschknopf!
+    [ACTION_AUTO_REPEL_OFF] = {COMPOUND_STRING("ABSCHALTEN"),{ItemMenu_AutoRepelOff}}, // 🌟 Dein rechter Wunschknopf!
+    [ACTION_DUMMY] = {gText_EmptyString2,           {NULL}}
 };
 
 // these are all 2D arrays with a width of 2 but are represented as 1D arrays
@@ -639,6 +657,13 @@ static const u8 sContextMenuItems_TmHmPocket[] = {
     ACTION_USE,         ACTION_GIVE,
     ACTION_DUMMY,       ACTION_CANCEL
 };
+
+// 🌟 CUSTOM CONTEXT INTERFACE: Schreibt die Knöpfe direkt ins Grid ohne Redefinitions-Fehler!
+static const u8 sContextMenuItems_AutoRepel[] = {
+    ACTION_AUTO_REPEL_ON,   ACTION_AUTO_REPEL_OFF,
+    ACTION_DUMMY,           ACTION_CANCEL
+};
+
 
 #if SWSH_ITEM_MENU_BERRY_TAG
 static const u8 sContextMenuItems_BerriesPocket[] = {
@@ -2654,15 +2679,13 @@ static void BagMenu_ItemPrintCallback(u8 windowId, u32 itemIndex, u8 y)
 {
     if (itemIndex != LIST_CANCEL)
     {
-        s32 offset;
-
-        struct ItemSlot itemSlot = BagList_GetSlot(gBagPosition.pocket, itemIndex);
+        s32 offset; // 🌟 REPARATUR: Variable wieder deklariert!
+        struct ItemSlot itemSlot = BagList_GetSlot(gBagPosition.pocket, itemIndex); // 🌟 REPARATUR: itemSlot wieder zugewiesen!
+        bool8 isHovered = ((s32)itemIndex == gBagMenu->hoveredItemIndex); // 🌟 REPARATUR: isHovered wieder zugewiesen!
 
         // Draw HM icon
         if (gBagPosition.pocket == POCKET_TM_HM && GetItemTMHMIndex(itemSlot.itemId) > NUM_TECHNICAL_MACHINES)
             BlitBitmapToWindow(windowId, sBagMenuHMIcon_Gfx, 8, y, 16, 16);
-
-        bool8 isHovered = ((s32)itemIndex == gBagMenu->hoveredItemIndex);
 
         if (gBagPosition.pocket != POCKET_KEY_ITEMS && GetItemImportance(itemSlot.itemId) == FALSE)
         {
@@ -2671,7 +2694,7 @@ static void BagMenu_ItemPrintCallback(u8 windowId, u32 itemIndex, u8 y)
             StringExpandPlaceholders(gStringVar4, gText_xVar1);
             offset = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, 119);
             BagMenu_Print(windowId, FONT_NARROW, gStringVar4, offset, y, 0, 0, TEXT_SKIP_DRAW,
-                          isHovered ? COLORID_HOVER_QTY : COLORID_NORMAL);
+                isHovered ? COLORID_HOVER_QTY : COLORID_NORMAL);
         }
         else
         {
@@ -2682,9 +2705,10 @@ static void BagMenu_ItemPrintCallback(u8 windowId, u32 itemIndex, u8 y)
 
         if (isHovered)
             BagMenu_Print(windowId, FONT_NARROW, gMultiuseListMenuTemplate.items[itemIndex].name,
-                          sItemListMenu.item_X, y, 0, 0, TEXT_SKIP_DRAW, COLORID_HOVER_NAME);
+                sItemListMenu.item_X, y, 0, 0, TEXT_SKIP_DRAW, COLORID_HOVER_NAME);
     }
 }
+
 
 static void PrintItemDescription(int itemIndex)
 {
@@ -3602,8 +3626,16 @@ static void OpenContextMenu(u8 taskId)
         }
         else
         {
-            switch (gBagPosition.pocket)
+            // 🌟 TYPESAFE UI-INJEKTION: Lädt dein Custom-Grid unfehlbar exakt beim Auto-Schutz!
+            if (gSpecialVar_ItemId == ITEM_REPEL_TOOL)
             {
+                gBagMenu->contextMenuItemsPtr = sContextMenuItems_AutoRepel;
+                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_AutoRepel);
+            }
+            else
+            {
+                switch (gBagPosition.pocket)
+                {
             case POCKET_ITEMS:
                 gBagMenu->contextMenuItemsPtr = gBagMenu->contextMenuItemsBuffer;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_ItemsPocket);
@@ -3635,9 +3667,11 @@ static void OpenContextMenu(u8 taskId)
                 gBagMenu->contextMenuItemsPtr = sContextMenuItems_BerriesPocket;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BerriesPocket);
                 break;
-            }
-        }
-    }
+                }
+            } // 🌟 REPARATUR: Schließt das Custom-Else für den Auto-Schutz!
+        } // 🌟 REPARATUR: Schließt die allgemeine Taschen-Weiche!
+}
+
     if (gBagMenu->contextMenuNumItems == 1)
         PrintContextMenuItems(BagMenu_AddWindow(ITEMWIN_1x1));
     else if (gBagMenu->contextMenuNumItems == 2)
