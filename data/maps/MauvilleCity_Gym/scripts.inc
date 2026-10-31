@@ -110,7 +110,7 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	special MauvilleGymDeactivatePuzzle
 	special DrawWholeMapView
 	playse SE_UNLOCK
-	call MauvilleCity_Gym_EventScript_GiveMegaStones
+	call MauvilleCity_Gym_EventScript_GiveMegaStone
 	call MauvilleCity_Gym_EventScript_GiveShockWave
 	closemessage
 	delay 30
@@ -131,10 +131,9 @@ MauvilleCity_Gym_EventScript_GiveShockWave2::
 	release
 	end
 
-MauvilleCity_Gym_EventScript_GiveMegaStones::
-	msgbox MauvilleCity_Gym_Text_LoreleiGiveMegaStones, MSGBOX_DEFAULT
+MauvilleCity_Gym_EventScript_GiveMegaStone::
+	msgbox MauvilleCity_Gym_Text_LoreleiGiveMegaStone, MSGBOX_DEFAULT
 	giveitem ITEM_GLALITITE, 1
-	giveitem ITEM_ABOMASITE, 1
 	return
 
 MauvilleCity_Gym_EventScript_GiveShockWave::
@@ -393,10 +392,10 @@ MauvilleCity_Gym_Text_LoreleiAfterBattle:
 	.string "WATTSON: Wahahahah! You beat us both!\n"
 	.string "That earns you my BADGE!$"
 
-MauvilleCity_Gym_Text_LoreleiGiveMegaStones:
-	.string "LORELEI: Take these as well.\p"
-	.string "Two MEGA STONES from my homeland.\n"
-	.string "Use their cold power wisely.$"
+MauvilleCity_Gym_Text_LoreleiGiveMegaStone:
+	.string "LORELEI: Take this as well.\p"
+	.string "A MEGA STONE from my homeland.\n"
+	.string "Use its cold power wisely.$"
 
 MauvilleCity_Gym_Text_ReceivedDynamoBadge:
 	.string "{PLAYER} received the DYNAMO BADGE\n"
