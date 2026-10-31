@@ -4561,15 +4561,52 @@ Pic: Bug Maniac
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Dustox
-Level: 16
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Forretress @ Leftovers
+Ability: Sturdy
+EVs: 252 HP / 4 Atk / 252 Def
+Relaxed Nature
+- Spikes
+- Rapid Spin
+- Gyro Ball
+- Volt Switch
 
-Beautifly
-Level: 16
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Frosmoth @ Heavy-Duty Boots
+Ability: Ice Scales
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Quiver Dance
+- Ice Beam
+- Bug Buzz
+- Giga Drain
+
+Kleavor @ Focus Sash
+Ability: Sharpness
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Stone Axe
+- X-Scissor
+- Close Combat
+- Swords Dance
+
+Lokix @ Choice Band
+Ability: Tinted Lens
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- First Impression
+- Sucker Punch
+- Leech Life
+- U-turn
+
+Heracross @ Flame Orb
+Ability: Guts
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Close Combat
+- Megahorn
+- Knock Off
+- Facade
 
 === TRAINER_JEFFREY_2 ===
 Name: JEFFREY
@@ -6503,22 +6540,43 @@ Pic: Sr And Jr
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Zigzagoon
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Growl
-- Tail Whip
-- Headbutt
-- Odor Sleuth
+Indeedee-F @ Psychic Seed
+Ability: Psychic Surge
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+- Follow Me
+- Psychic
+- Helping Hand
+- Protect
 
-Makuhita
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Focus Energy
-- Arm Thrust
+Armarouge @ Life Orb
+Ability: Flash Fire
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+- Expanding Force
+- Armor Cannon
+- Trick Room
+- Protect
+
+Torkoal @ Charcoal
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+- Eruption
+- Heat Wave
+- Solar Beam
+- Protect
+
+Rhyperior @ Weakness Policy
+Ability: Solid Rock
+EVs: 252 HP / 252 Atk / 4 SpD
+Brave Nature
+- Rock Slide
+- High Horsepower
+- Ice Punch
+- Protect
 
 === TRAINER_ANNA_AND_MEG_2 ===
 Name: ANNA & MEG
@@ -8555,11 +8613,43 @@ Pic: Running Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Doduo
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Dodrio @ Choice Band
+Ability: Early Bird
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Brave Bird
+- Drill Run
+- Knock Off
+- Quick Attack
+
+Talonflame @ Heavy-Duty Boots
+Ability: Gale Wings
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Brave Bird
+- Flare Blitz
+- Swords Dance
+- Roost
+
+Lopunny @ Life Orb
+Ability: Limber
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Fake Out
+- Double-Edge
+- High Jump Kick
+- Ice Punch
+
+Cinderace @ Life Orb
+Ability: Blaze
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Pyro Ball
+- High Jump Kick
+- U-turn
+- Sucker Punch
 
 === TRAINER_DYLAN_2 ===
 Name: DYLAN
@@ -8620,11 +8710,43 @@ Pic: Running Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Doduo
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Politoed @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+- Scald
+- Ice Beam
+- Encore
+- Hypnosis
+
+Floatzel @ Choice Band
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Wave Crash
+- Ice Spinner
+- Crunch
+- Aqua Jet
+
+Barraskewda @ Life Orb
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Psychic Fangs
+- Aqua Jet
+
+Swampert @ Leftovers
+Ability: Torrent
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Earthquake
+- Waterfall
+- Stealth Rock
+- Ice Punch
 
 === TRAINER_MARIA_2 ===
 Name: MARIA
@@ -12443,31 +12565,61 @@ Pic: Pokemon Breeder M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Whismur
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Snorlax @ Leftovers
+Ability: Thick Fat
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+- Body Slam
+- Curse
+- Rest
+- Sleep Talk
 
-Zigzagoon
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Hariyama @ Flame Orb
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Close Combat
+- Knock Off
+- Bullet Punch
+- Fake Out
 
-Aron
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Aggron @ Choice Band
+Ability: Rock Head
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Head Smash
+- Heavy Slam
+- Earthquake
+- Aqua Tail
 
-Poochyena
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Mightyena @ Life Orb
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Crunch
+- Play Rough
+- Sucker Punch
+- Fire Fang
 
-Taillow
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Swellow @ Flame Orb
+Ability: Guts
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Facade
+- Brave Bird
+- U-turn
+- Quick Attack
 
-Makuhita
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Exploud @ Choice Specs
+Ability: Scrappy
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Boomburst
+- Focus Blast
+- Fire Blast
+- Ice Beam
 
 === TRAINER_DAVIS ===
 Name: DAVIS
@@ -12646,31 +12798,61 @@ Pic: Pokemon Breeder F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Wingull
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Pelipper @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Hurricane
+- Scald
+- U-turn
+- Roost
 
-Shroomish
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ludicolo @ Life Orb
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Hydro Pump
+- Giga Drain
+- Ice Beam
+- Fake Out
 
-Marill
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Breloom @ Focus Sash
+Ability: Technician
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Mach Punch
+- Bullet Seed
+- Rock Tomb
+- Spore
 
-Roselia
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Azumarill @ Sitrus Berry
+Ability: Huge Power
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Belly Drum
+- Aqua Jet
+- Play Rough
+- Knock Off
 
-Skitty
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sylveon @ Leftovers
+Ability: Pixilate
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Hyper Voice
+- Calm Mind
+- Wish
+- Protect
 
-Goldeen
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Kingdra @ Choice Specs
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Draco Meteor
+- Hydro Pump
+- Hurricane
+- Flip Turn
 
 === TRAINER_HALLE ===
 Name: HALLE
@@ -17659,11 +17841,43 @@ Pic: Running Triathlete F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Doduo
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Lycanroc @ Focus Sash
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Stone Edge
+- Close Combat
+- Accelerock
+- Swords Dance
+
+Rapidash-Galar @ Life Orb
+Ability: Pastel Veil
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Psycho Cut
+- Play Rough
+- High Horsepower
+- Swords Dance
+
+Mienshao @ Choice Scarf
+Ability: Regenerator
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- High Jump Kick
+- U-turn
+- Knock Off
+- Stone Edge
+
+Arcanine @ Leftovers
+Ability: Intimidate
+EVs: 252 HP / 252 Atk / 4 Spe
+Adamant Nature
+- Flare Blitz
+- Extreme Speed
+- Wild Charge
+- Morning Sun
 
 === TRAINER_BRANDI ===
 Name: BRANDI
@@ -17672,11 +17886,52 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Ralts
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Alakazam @ Focus Sash
+Ability: Magic Guard
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Psychic
+- Focus Blast
+- Shadow Ball
+- Nasty Plot
+
+Slowbro @ Leftovers
+Ability: Regenerator
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Scald
+- Psychic
+- Slack Off
+- Thunder Wave
+
+Espeon @ Choice Specs
+Ability: Magic Bounce
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Psychic
+- Psyshock
+- Shadow Ball
+- Dazzling Gleam
+
+Reuniclus @ Life Orb
+Ability: Magic Guard
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+- Trick Room
+- Psychic
+- Focus Blast
+- Shadow Ball
+
+Hatterene @ Leftovers
+Ability: Magic Bounce
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+- Trick Room
+- Dazzling Gleam
+- Psychic
+- Mystical Fire
 
 === TRAINER_AISHA ===
 Name: AISHA
@@ -17685,11 +17940,43 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Meditite
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Infernape @ Life Orb
+Ability: Iron Fist
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Close Combat
+- Flare Blitz
+- Mach Punch
+- U-turn
+
+Machamp @ Life Orb
+Ability: No Guard
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Dynamic Punch
+- Knock Off
+- Stone Edge
+- Bullet Punch
+
+Quaquaval @ Life Orb
+Ability: Moxie
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Aqua Step
+- Close Combat
+- Brave Bird
+- Aqua Jet
+
+Conkeldurr @ Flame Orb
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Mach Punch
+- Drain Punch
+- Knock Off
+- Ice Punch
 
 === TRAINER_MAKAYLA ===
 Name: MAKAYLA
