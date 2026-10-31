@@ -666,7 +666,7 @@
 #define FLAG_HIDDEN_ITEM_NAVEL_ROCK_TOP_SACRED_ASH           (FLAG_HIDDEN_ITEMS_START + 0x6D)
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
-#define FLAG_HIDDEN_ITEM_Magmacamp_Camerupnite               (FLAG_HIDDEN_ITEMS_START + 0x70)
+#define FLAG_HIDDEN_ITEM_Magmacamp_Camerupnite               FLAG_UNUSED_0x26A // 0x264 was also the Poké Vial gift flag
 #define FLAG_HIDDEN_ITEM_ROUTE_102_Water_Gem                  (FLAG_HIDDEN_ITEMS_START + 0x71)
 
 #define FLAG_UNUSED_0x265  0x265 // Taken: same id as FLAG_HIDDEN_ITEM_ROUTE_102_Water_Gem
