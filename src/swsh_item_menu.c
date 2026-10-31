@@ -600,13 +600,13 @@ static const u8 sText_NothingToSort[] = _("There's nothing to sort!");
 // 🌟 TYPESAFE PROTOTYPEN: Meldet deine beiden Wunsch-Aktionen krisensicher beim Compiler an!
 static void ItemMenu_AutoRepelOn(u8 taskId)
 {
-    gSpecialVar_Result = 1; // Signalisiert der item_use: ANSCHALTEN!
+    gSpecialVar_Result = AUTO_REPEL_SWITCH_ON;
     ItemMenu_UseOutOfBattle(taskId);
 }
 
 static void ItemMenu_AutoRepelOff(u8 taskId)
 {
-    gSpecialVar_Result = 0; // Signalisiert der item_use: ABSCHALTEN!
+    gSpecialVar_Result = AUTO_REPEL_SWITCH_OFF;
     ItemMenu_UseOutOfBattle(taskId);
 }
 

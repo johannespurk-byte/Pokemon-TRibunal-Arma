@@ -1942,19 +1942,33 @@ void ItemUseOutOfBattle_PokeVial(u8 taskId)
 }
 // === POKÉVIAL ITEM LOGIC ENDE ===
 // === modular AUTOMATIC REPEL SYSTEM START ===
-// Schalter: ist der Schutz aus, wird er für 250 Schritte angeschaltet, sonst ausgeschaltet.
+// Die Knöpfe ANSCHALTEN/ABSCHALTEN im Beutel setzen gSpecialVar_Result auf
+// AUTO_REPEL_SWITCH_ON/OFF, jeder andere Weg schaltet um. Solange FLAG_AUTO_REPEL_ON
+// gesetzt ist, zählt UpdateRepelCounter nicht herunter, der Schutz hält also dauerhaft.
 // Wie beim Poké Vial kehrt CloseItemMessage danach zur Item-Liste zurück.
 void ItemUseOutOfBattle_AutoRepel(u8 taskId)
 {
-    if (VarGet(VAR_REPEL_STEP_COUNT) == 0)
+    bool32 switchOn;
+
+    if (gSpecialVar_Result == AUTO_REPEL_SWITCH_ON)
+        switchOn = TRUE;
+    else if (gSpecialVar_Result == AUTO_REPEL_SWITCH_OFF)
+        switchOn = FALSE;
+    else
+        switchOn = !FlagGet(FLAG_AUTO_REPEL_ON);
+    gSpecialVar_Result = 0;
+
+    if (switchOn)
     {
         PlaySE(SE_REPEL);
+        FlagSet(FLAG_AUTO_REPEL_ON);
         VarSet(VAR_REPEL_STEP_COUNT, 250);
         DisplayItemMessage(taskId, FONT_NORMAL, COMPOUND_STRING("Der Auto-Schutz wurde eingeschaltet!\nWilden Pokemon wird der Weg versperrt."), CloseItemMessage);
     }
     else
     {
         PlaySE(SE_SELECT);
+        FlagClear(FLAG_AUTO_REPEL_ON);
         VarSet(VAR_REPEL_STEP_COUNT, 0);
         DisplayItemMessage(taskId, FONT_NORMAL, COMPOUND_STRING("Der Auto-Schutz wurde ausgeschaltet!"), CloseItemMessage);
     }

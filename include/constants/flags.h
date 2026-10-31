@@ -67,7 +67,7 @@
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
+#define FLAG_AUTO_REPEL_ON   0x30 // Auto-Schutz switched on: the repel counter stops counting down
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag
@@ -669,7 +669,7 @@
 #define FLAG_HIDDEN_ITEM_Magmacamp_Camerupnite               (FLAG_HIDDEN_ITEMS_START + 0x70)
 #define FLAG_HIDDEN_ITEM_ROUTE_102_Water_Gem                  (FLAG_HIDDEN_ITEMS_START + 0x71)
 
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
+#define FLAG_RECEIVED_REPEL_TOOL  0x265 // Auto-Schutz from the Devon Corp 2F scientist
 #define FLAG_UNUSED_0x266  0x266 // Unused Flag
 #define FLAG_UNUSED_0x267  0x267 // Unused Flag
 #define FLAG_UNUSED_0x268  0x268 // Unused Flag
