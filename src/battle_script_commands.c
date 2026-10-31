@@ -4988,7 +4988,9 @@ static void Cmd_getswitchedmondata(void)
         return;
 
     enum BattleTrainer trainer = GetBattlerTrainer(battler);
-    assertf(IsValidSwitchIn(trainer, gBattleStruct->monToSwitchIntoId[battler]))
+    assertf(IsValidSwitchIn(trainer, gBattleStruct->monToSwitchIntoId[battler]),
+            "invalid switch-in battler %d mon %d active %d move %d",
+            battler, gBattleStruct->monToSwitchIntoId[battler], gBattlerPartyIndexes[battler], gCurrentMove)
     {
         gBattleStruct->monToSwitchIntoId[battler] = GetArbitraryValidSwitchIn(trainer);
     }
