@@ -72,3 +72,6 @@ CLAUDE.md
 private-notes/*
 notes/*
 .map_version
+
+# FreeFileSync database
+sync.ffs_db
