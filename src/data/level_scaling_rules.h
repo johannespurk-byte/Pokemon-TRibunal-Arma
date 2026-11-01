@@ -47,8 +47,25 @@
 // Rocket Hideout grunts and Giovanni always fight at the current level cap (caps.c)
 #define ROCKET_HIDEOUT_SCALING { .mode = LEVEL_SCALING_TO_LEVEL_CAP }
 
+// Gym leaders and their gym partners fight at the level cap that applies while
+// their badge is still missing (caps.c), not at the player's highest level
+#define GYM_LEADER_SCALING { .mode = LEVEL_SCALING_TO_LEVEL_CAP }
+
 const struct LevelScalingConfig gTrainerLevelScalingRules[TRAINERS_COUNT] =
 {
+    [TRAINER_ROXANNE_1]        = GYM_LEADER_SCALING, // Cap 18
+    [TRAINER_BLAINE]           = GYM_LEADER_SCALING,
+    [TRAINER_BRAWLY_1]         = GYM_LEADER_SCALING, // Cap 36
+    [TRAINER_BRANDON_DEWFORD]  = GYM_LEADER_SCALING,
+    [TRAINER_WATTSON_1]        = GYM_LEADER_SCALING, // Cap 50
+    [TRAINER_LORELEI_MAUVILLE] = GYM_LEADER_SCALING,
+    [TRAINER_FLANNERY_1]       = GYM_LEADER_SCALING, // Cap 60
+    [TRAINER_NORMAN_1]         = GYM_LEADER_SCALING, // Cap 68
+    [TRAINER_MISTY]            = GYM_LEADER_SCALING,
+    [TRAINER_WINONA_1]         = GYM_LEADER_SCALING, // Cap 74
+    [TRAINER_TATE_AND_LIZA_1]  = GYM_LEADER_SCALING, // Cap 80
+    [TRAINER_JUAN_1]           = GYM_LEADER_SCALING, // Cap 90
+
     // In Emerald these names point at the hideout under the Mauville Game Corner (constants/opponents.h)
     [TRAINER_TEAM_ROCKET_GRUNT_8]  = ROCKET_HIDEOUT_SCALING,
     [TRAINER_TEAM_ROCKET_GRUNT_9]  = ROCKET_HIDEOUT_SCALING,
