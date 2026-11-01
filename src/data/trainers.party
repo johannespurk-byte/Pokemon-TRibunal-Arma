@@ -1226,7 +1226,7 @@ IVs: 0 Atk
 - Ice Beam  
 
 Feraligatr @ Life Orb  
-Ability: Sheer Force  
+Ability: Strong Jaw  
 EVs: 252 Atk / 4 SpD / 252 Spe  
 Adamant Nature  
 - Dragon Dance  
@@ -3286,7 +3286,7 @@ Double Battle: No
 AI: Smart Trainer / Prediction
 
 Samurott @ White Herb  
-Ability: Shell Armor  
+Ability: Sharpness  
 EVs: 4 HP / 252 Atk / 252 Spe  
 Adamant Nature  
 - Shell Smash  
@@ -4742,7 +4742,7 @@ IVs: 0 Atk
 - Moongeist Beam  
 
 Delphox @ Delphoxite  
-Ability: Magician  
+Ability: Magic Guard  
 EVs: 252 SpA / 4 SpD / 252 Spe  
 Timid Nature  
 IVs: 0 Atk  
@@ -4949,7 +4949,7 @@ IVs: 0 Atk
 - Ice Beam  
 
 Delphox @ Focus Sash  
-Ability: Magician  
+Ability: Magic Guard  
 EVs: 252 SpA / 4 SpD / 252 Spe  
 Timid Nature  
 IVs: 0 Atk  
@@ -9767,7 +9767,7 @@ Adamant Nature
 - Ice Punch  
 
 Lucario @ Life Orb  
-Ability: Steadfast  
+Ability: Inner Focus  
 EVs: 4 HP / 252 SpA / 252 Spe  
 Timid Nature  
 IVs: 0 Atk  
