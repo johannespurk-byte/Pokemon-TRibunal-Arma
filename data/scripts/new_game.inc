@@ -272,6 +272,9 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_EVER_GRANDE_POKEMON_CENTER_1F_SCOTT
 	setflag FLAG_HIDE_SKY_PILLAR_WALLACE
 	setflag FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL
+	@ Rocket Hideout under the Mauville Game Corner: dropped by a grunt and by Giovanni
+	setflag FLAG_HIDE_LIFT_KEY
+	setflag FLAG_HIDE_SILPH_SCOPE
 	call EventScript_ResetAllBerries
 	end
 

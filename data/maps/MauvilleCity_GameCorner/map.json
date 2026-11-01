@@ -3,7 +3,6 @@
   "name": "MauvilleCity_GameCorner",
   "layout": "LAYOUT_MAUVILLE_CITY_GAME_CORNER",
   "music": "MUS_GAME_CORNER",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_MAUVILLE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -186,6 +185,13 @@
       "elevation": 3,
       "dest_map": "MAP_MAUVILLE_CITY",
       "dest_warp_id": "5"
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_ROCKET_HIDEOUT_B1F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
@@ -382,5 +388,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Roulette_EventScript_Table2"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }

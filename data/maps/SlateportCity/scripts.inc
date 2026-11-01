@@ -125,12 +125,11 @@ SlateportCity_EventScript_EnergyGuru::
 
 	.align 2
 SlateportCity_Pokemart_EnergyGuru:
-	.2byte ITEM_PROTEIN
-	.2byte ITEM_IRON
-	.2byte ITEM_CARBOS
-	.2byte ITEM_ZINC
-	.2byte ITEM_CALCIUM
-	.2byte ITEM_HP_UP
+	.2byte ITEM_CRACKED_POT
+	.2byte  ITEM_CHIPPED_POT 
+	.2byte  ITEM_GALARICA_CUFF
+	.2byte ITEM_GALARICA_WREATH
+	.2byte ITEM_UPGRADE
 	pokemartlistend
 
 SlateportCity_EventScript_EffortRibbonWoman::
@@ -479,17 +478,75 @@ SlateportCity_EventScript_DollClerk::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemartdecoration SlateportCity_PokemartDecor_Dolls
+	pokemart SlateportCity_PokemartDecor_Dolls
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-SlateportCity_PokemartDecor_Dolls:
-	.2byte DECOR_AZURILL_DOLL
-	.2byte DECOR_MARILL_DOLL
-	.2byte DECOR_SKITTY_DOLL
-	pokemartlistend
+SlateportCity_PokemartDecor_Dolls::
+	.2byte ITEM_CHOICE_BAND   @ Wahlband
+	.2byte ITEM_CHOICE_SPECS  @ Wahlglas
+	.2byte ITEM_CHOICE_SCARF  @ Wahlschal
+	.2byte ITEM_LIFE_ORB      @ Leben-Orb
+	.2byte ITEM_TOXIC_ORB     @ Toxik-Orb
+	.2byte ITEM_FLAME_ORB     @ Heiß-Orb
+	.2byte ITEM_ASSAULT_VEST  @ Offensivweste
+	.2byte ITEM_FOCUS_SASH    @ Fokusgurt
+	.2byte ITEM_LEFTOVERS     @ Überreste
+	.2byte ITEM_BLACK_SLUDGE  @ Giftschlamm
+	.2byte ITEM_EVIOLITE      @ Evolith
+	.2byte ITEM_TM01
+	.2byte ITEM_TM02
+	.2byte ITEM_TM03
+	.2byte ITEM_TM04
+	.2byte ITEM_TM05
+	.2byte ITEM_TM06
+	.2byte ITEM_TM07
+	.2byte ITEM_TM08
+	.2byte ITEM_TM09
+	.2byte ITEM_TM10
+	.2byte ITEM_TM11
+	.2byte ITEM_TM12
+	.2byte ITEM_TM13
+	.2byte ITEM_TM14
+	.2byte ITEM_TM15
+	.2byte ITEM_TM16
+	.2byte ITEM_TM17
+	.2byte ITEM_TM18
+	.2byte ITEM_TM19
+	.2byte ITEM_TM20
+	.2byte ITEM_TM21
+	.2byte ITEM_TM22
+	.2byte ITEM_TM23
+	.2byte ITEM_TM24
+	.2byte ITEM_TM25
+	.2byte ITEM_TM26
+	.2byte ITEM_TM27
+	.2byte ITEM_TM28
+	.2byte ITEM_TM29
+	.2byte ITEM_TM30
+	.2byte ITEM_TM31
+	.2byte ITEM_TM32
+	.2byte ITEM_TM33
+	.2byte ITEM_TM34
+	.2byte ITEM_TM35
+	.2byte ITEM_TM36
+	.2byte ITEM_TM37
+	.2byte ITEM_TM38
+	.2byte ITEM_TM39
+	.2byte ITEM_TM40
+	.2byte ITEM_TM41
+	.2byte ITEM_TM42
+	.2byte ITEM_TM43
+	.2byte ITEM_TM44
+	.2byte ITEM_TM45
+	.2byte ITEM_TM46
+	.2byte ITEM_TM47
+	.2byte ITEM_TM48
+	.2byte ITEM_TM49
+	.2byte ITEM_TM50
+	.2byte ITEM_NONE @ 🌟 REPARATUR: Schließt die Assembly-Liste sauber ab!
 
 SlateportCity_EventScript_ComeBackWithSecretPower::
 	msgbox gText_ComeBackWithSecretPower, MSGBOX_DEFAULT
@@ -502,28 +559,26 @@ SlateportCity_EventScript_DecorClerk::
 	goto_if_unset FLAG_RECEIVED_SECRET_POWER, SlateportCity_EventScript_ComeBackWithSecretPower
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemartdecoration SlateportCity_PokemartDecor
+	pokemart SlateportCity_PokemartDecor
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-SlateportCity_PokemartDecor:
-	.2byte DECOR_RED_BRICK
-	.2byte DECOR_BLUE_BRICK
-	.2byte DECOR_YELLOW_BRICK
-	.2byte DECOR_RED_BALLOON
-	.2byte DECOR_BLUE_BALLOON
-	.2byte DECOR_YELLOW_BALLOON
-	.2byte DECOR_C_LOW_NOTE_MAT
-	.2byte DECOR_D_NOTE_MAT
-	.2byte DECOR_E_NOTE_MAT
-	.2byte DECOR_F_NOTE_MAT
-	.2byte DECOR_G_NOTE_MAT
-	.2byte DECOR_A_NOTE_MAT
-	.2byte DECOR_B_NOTE_MAT
-	.2byte DECOR_C_HIGH_NOTE_MAT
-	pokemartlistend
+@ 🌟 KOMPETITIV-MARKT OLYMP: Vollgepackt mit den stärksten Strategie-Items der Pokémon-Geschichte!
+SlateportCity_PokemartDecor::
+	.2byte ITEM_CHOICE_BAND   @ Wahlband
+	.2byte ITEM_CHOICE_SPECS  @ Wahlglas
+	.2byte ITEM_CHOICE_SCARF  @ Wahlschal
+	.2byte ITEM_LIFE_ORB      @ Leben-Orb
+	.2byte ITEM_TOXIC_ORB     @ Toxik-Orb
+	.2byte ITEM_FLAME_ORB     @ Heiß-Orb
+	.2byte ITEM_ASSAULT_VEST  @ Offensivweste
+	.2byte ITEM_FOCUS_SASH    @ Fokusgurt
+	.2byte ITEM_LEFTOVERS     @ Überreste
+	.2byte ITEM_BLACK_SLUDGE  @ Giftschlamm
+	.2byte ITEM_EVIOLITE      @ Evolith
+	.2byte ITEM_NONE          @ 🌟 REPARATUR: Dichtet das Array für den GBA-Compiler perfekt ab!
 
 SlateportCity_EventScript_PowerTMClerk::
 	lock
@@ -536,10 +591,62 @@ SlateportCity_EventScript_PowerTMClerk::
 	end
 
 	.align 2
-SlateportCity_Pokemart_PowerTMs:
-	.2byte ITEM_TM_HIDDEN_POWER
-	.2byte ITEM_TM_SECRET_POWER
-	pokemartlistend
+@ 🌟 TM-MASTER-PIPELINE: Fehlerfrei formatiert mitsamt ITEM_NONE-Abschluss!
+SlateportCity_Pokemart_PowerTMs::
+	.2byte ITEM_TM01
+	.2byte ITEM_TM02
+	.2byte ITEM_TM03
+	.2byte ITEM_TM04
+	.2byte ITEM_TM05
+	.2byte ITEM_TM06
+	.2byte ITEM_TM07
+	.2byte ITEM_TM08
+	.2byte ITEM_TM09
+	.2byte ITEM_TM10
+	.2byte ITEM_TM11
+	.2byte ITEM_TM12
+	.2byte ITEM_TM13
+	.2byte ITEM_TM14
+	.2byte ITEM_TM15
+	.2byte ITEM_TM16
+	.2byte ITEM_TM17
+	.2byte ITEM_TM18
+	.2byte ITEM_TM19
+	.2byte ITEM_TM20
+	.2byte ITEM_TM21
+	.2byte ITEM_TM22
+	.2byte ITEM_TM23
+	.2byte ITEM_TM24
+	.2byte ITEM_TM25
+	.2byte ITEM_TM26
+	.2byte ITEM_TM27
+	.2byte ITEM_TM28
+	.2byte ITEM_TM29
+	.2byte ITEM_TM30
+	.2byte ITEM_TM31
+	.2byte ITEM_TM32
+	.2byte ITEM_TM33
+	.2byte ITEM_TM34
+	.2byte ITEM_TM35
+	.2byte ITEM_TM36
+	.2byte ITEM_TM37
+	.2byte ITEM_TM38
+	.2byte ITEM_TM39
+	.2byte ITEM_TM40
+	.2byte ITEM_TM41
+	.2byte ITEM_TM42
+	.2byte ITEM_TM43
+	.2byte ITEM_TM44
+	.2byte ITEM_TM45
+	.2byte ITEM_TM46
+	.2byte ITEM_TM47
+	.2byte ITEM_TM48
+	.2byte ITEM_TM49
+	.2byte ITEM_TM50
+	.2byte ITEM_NONE
+
+
+
 
 @ Scene with Capt Sterns interview and Team Aqua announcing plans to steal Submarine
 SlateportCity_EventScript_CaptStern::

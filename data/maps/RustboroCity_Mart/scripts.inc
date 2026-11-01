@@ -18,16 +18,21 @@ RustboroCity_Mart_EventScript_PokemartBasic::
 
 	.align 2
 RustboroCity_Mart_Pokemart_Basic:
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_POTION
+	.2byte ITEM_GREAT_BALL       @ 🌟 KORREKTUR: Auf den echten internen Namen ITEM_GREAT_BALL angepasst!
 	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_ESCAPE_ROPE
-	.2byte ITEM_REPEL
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_QUICK_BALL
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_THUNDER_STONE
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_MOON_STONE
+	.2byte ITEM_SUN_STONE
+	.2byte ITEM_SOFT_SAND
+	.2byte ITEM_LIFE_ORB
+	.2byte ITEM_CHOICE_BAND
+	.2byte ITEM_CHOICE_SPECS
+	.2byte ITEM_WHITE_HERB
 	pokemartlistend
 
 RustboroCity_Mart_EventScript_PokemartExpanded::
@@ -38,19 +43,18 @@ RustboroCity_Mart_EventScript_PokemartExpanded::
 
 	.align 2
 RustboroCity_Mart_Pokemart_Expanded:
-	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL       @ 🌟 KORREKTUR: Auf den echten internen Namen ITEM_GREAT_BALL angepasst!
 	.2byte ITEM_TIMER_BALL
-	.2byte ITEM_REPEAT_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_ESCAPE_ROPE
-	.2byte ITEM_REPEL
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_TOXIC_ORB
+	.2byte ITEM_FLAME_ORB
+	.2byte ITEM_SOFT_SAND
+	.2byte ITEM_LIFE_ORB
+	.2byte ITEM_CHOICE_BAND
+	.2byte ITEM_CHOICE_SPECS
+	.2byte ITEM_WHITE_HERB
 	pokemartlistend
+
 
 RustboroCity_Mart_EventScript_PokefanF::
 	msgbox RustboroCity_Mart_Text_BuyingHealsInCaseOfShroomish, MSGBOX_NPC

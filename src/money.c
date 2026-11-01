@@ -156,6 +156,8 @@ void PrintMoneyAmount(u8 windowId, u8 x, u8 y, int amount, u8 speed)
 
     if (numDigits > 8)
         PrependFontIdToFit(gStringVar4, txtPtr + 1 + numDigits, FONT_NORMAL, 54);
+    else // the main font is wider than the original one: fall back to a narrower font when needed
+        PrependFontIdToFit(gStringVar4, gStringVar4 + StringLength(gStringVar4), FONT_NORMAL, 54);
     AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar4, x, y, speed, NULL);
 }
 

@@ -59,6 +59,8 @@
 #include "constants/union_room.h"
 #include "constants/weather.h"
 
+// 🌟 UNFEHLBARER AUTOMATISCHER PALETTEN-FIX
+
 #define SPECIAL_LOCALIDS_START (min(LOCALID_CAMERA, \
                                 min(LOCALID_PLAYER, \
                                 min(LOCALID_BERRY_BLENDER_PLAYER_END - MAX_RFU_PLAYERS + 1, \
@@ -506,6 +508,20 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Npc4Reflection,        OBJ_EVENT_PAL_TAG_NPC_4_REFLECTION},
     {gObjectEventPal_Brendan,               OBJ_EVENT_PAL_TAG_BRENDAN},
     {gObjectEventPal_BrendanReflection,     OBJ_EVENT_PAL_TAG_BRENDAN_REFLECTION},
+    {gObjectEventPal_Ethan,                 OBJ_EVENT_PAL_TAG_ETHAN},
+    {gObjectEventPal_Lyra,                  OBJ_EVENT_PAL_TAG_LYRA},
+    {gObjectEventPal_Lucas,                 OBJ_EVENT_PAL_TAG_LUCAS},
+    {gObjectEventPal_Dawn,                  OBJ_EVENT_PAL_TAG_DAWN},
+    {gObjectEventPal_Hilbert,                  OBJ_EVENT_PAL_TAG_HILBERT},
+    {gObjectEventPal_Hilda,                    OBJ_EVENT_PAL_TAG_HILDA},
+    {gObjectEventPal_Nate,                     OBJ_EVENT_PAL_TAG_NATE},
+    {gObjectEventPal_Rosa,                     OBJ_EVENT_PAL_TAG_ROSA},
+    {gObjectEventPal_Calem,                    OBJ_EVENT_PAL_TAG_CALEM},
+    {gObjectEventPal_Serena,                   OBJ_EVENT_PAL_TAG_SERENA},
+    {gObjectEventPal_Elio,                     OBJ_EVENT_PAL_TAG_ELIO},
+    {gObjectEventPal_Selene,                   OBJ_EVENT_PAL_TAG_SELENE},
+    {gObjectEventPal_Victor,                   OBJ_EVENT_PAL_TAG_VICTOR},
+    {gObjectEventPal_Gloria,                   OBJ_EVENT_PAL_TAG_GLORIA},
     {gObjectEventPal_BridgeReflection,      OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION},
     {gObjectEventPal_PlayerUnderwater,      OBJ_EVENT_PAL_TAG_PLAYER_UNDERWATER},
     {gObjectEventPal_QuintyPlump,           OBJ_EVENT_PAL_TAG_QUINTY_PLUMP},
@@ -531,11 +547,11 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Lugia,                 OBJ_EVENT_PAL_TAG_LUGIA},
     {gObjectEventPal_RubySapphireBrendan,   OBJ_EVENT_PAL_TAG_RS_BRENDAN},
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
-#if IS_FRLG
     {gObjectEventPal_PlayerFrlg,            OBJ_EVENT_PAL_TAG_PLAYER_RED},
     {gObjectEventPal_PlayerReflectionFrlg,  OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION},
     {gObjectEventPal_PlayerFrlg,            OBJ_EVENT_PAL_TAG_PLAYER_GREEN},
     {gObjectEventPal_PlayerReflectionFrlg,  OBJ_EVENT_PAL_TAG_PLAYER_GREEN_REFLECTION},
+#if IS_FRLG
     {gObjectEventPal_NpcBlue,               OBJ_EVENT_PAL_TAG_NPC_BLUE},
     {gObjectEventPal_NpcPink,               OBJ_EVENT_PAL_TAG_NPC_PINK},
     {gObjectEventPal_NpcGreen,              OBJ_EVENT_PAL_TAG_NPC_GREEN},
@@ -1864,7 +1880,7 @@ static u8 TrySetupObjectEventSprite(const struct ObjectEventTemplate *objectEven
     if (objectEvent->graphicsId & OBJ_EVENT_MON && objectEvent->graphicsId & OBJ_EVENT_MON_SHINY)
         objectEvent->shiny = TRUE;
 
-    spriteId = CreateSprite(spriteTemplate, 0, 0, 0);
+    spriteId = CreateSpriteUnchecked(spriteTemplate, 0, 0, 0);
     if (spriteId == MAX_SPRITES)
     {
         gObjectEvents[objectEventId].active = FALSE;
@@ -2048,6 +2064,7 @@ u8 CreateObjectGraphicsSpriteWithTag(u16 graphicsId, void (*callback)(struct Spr
 u8 CreateObjectGraphicsSprite(u16 graphicsId, void (*callback)(struct Sprite *), s16 x, s16 y, u8 subpriority)
 {
     return CreateObjectGraphicsSpriteWithTag(graphicsId, callback, x, y, subpriority, TAG_NONE);
+//CreateObjectGraphicsSprite is used in a load of places that don't handle it returning max_sprites, so this will trigger a fatal_assertf. It should be refactored to not do that!
 }
 
 #define sVirtualObjId   data[0]
@@ -2081,7 +2098,7 @@ u8 CreateVirtualObject(u16 graphicsId, u8 virtualObjId, s16 x, s16 y, u8 elevati
         LoadObjectEventPalette(spriteTemplate.paletteTag);
     }
 
-    spriteId = CreateSpriteAtEnd(&spriteTemplate, x, y, 0);
+    spriteId = CreateSpriteAtEndUnchecked(&spriteTemplate, x, y, 0);
     if (spriteId != MAX_SPRITES)
     {
         sprite = &gSprites[spriteId];
@@ -3023,7 +3040,7 @@ static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y)
         LoadObjectEventPalette(spriteTemplate.paletteTag);
     }
 
-    i = CreateSprite(&spriteTemplate, 0, 0, 0);
+    i = CreateSpriteUnchecked(&spriteTemplate, 0, 0, 0);
     if (i != MAX_SPRITES)
     {
         sprite = &gSprites[i];
@@ -3223,6 +3240,10 @@ const struct ObjectEventGraphicsInfo *GetObjectEventGraphicsInfo(u16 graphicsId)
 {
     if (graphicsId >= OBJ_EVENT_GFX_VARS && graphicsId <= OBJ_EVENT_GFX_VAR_F)
         graphicsId = VarGetObjectEventGraphicsId(graphicsId - OBJ_EVENT_GFX_VARS);
+
+    // Brendan/May als Rivale zeigen die ausgeloste Rivalen-Figur
+    if (!IS_FRLG)
+        graphicsId = GetRivalGraphicsId(graphicsId);
 
     if (graphicsId == OBJ_EVENT_GFX_BARD)
         return gMauvilleOldManGraphicsInfoPointers[GetCurrentMauvilleOldMan()];

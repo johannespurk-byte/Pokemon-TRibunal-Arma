@@ -26,6 +26,7 @@
 #include "strings.h"
 #include "task.h"
 #include "text_window.h"
+#include "trainer_card.h"
 #include "trainer_pokemon_sprites.h"
 #include "trig.h"
 #include "window.h"
@@ -3837,7 +3838,7 @@ static void Task_LoadSizeScreen(u8 taskId)
         gMain.state++;
         break;
     case 5:
-        spriteId = CreateSizeScreenTrainerPic(PlayerGenderToFrontTrainerPicId(gSaveBlock2Ptr->playerGender), 152, 56, 0);
+        spriteId = CreateSizeScreenTrainerPic(TrainerCard_GetPlayerTrainerPic(gSaveBlock2Ptr->playerGender), 152, 56, 0);
         gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_NORMAL;
         gSprites[spriteId].oam.matrixNum = 1;
         gSprites[spriteId].oam.priority = 0;

@@ -59,6 +59,7 @@ static void Task_TitleScreenPhase1(u8);
 static void Task_TitleScreenPhase2(u8);
 static void Task_TitleScreenPhase3(u8);
 static void CB2_GoToMainMenu(void);
+static void CB2_GoToNewGame(void);
 static void CB2_GoToClearSaveDataScreen(void);
 static void CB2_GoToResetRtcScreen(void);
 static void CB2_GoToBerryFixScreen(void);
@@ -82,8 +83,8 @@ static const u32 sTitleScreenLogoShineGfx[] = INCGFX_U32("graphics/title_screen/
 // NEU: Charakter-Sprites für den Titelscreen
 static const u32 sArchieGfx[] = INCGFX_U32("graphics/title_screen/archie_aqua_leader.png", ".4bpp.smol");
 static const u16 sArchiePal[] = INCGFX_U16("graphics/title_screen/archie_aqua_leader.pal", ".gbapal");
-static const u32 sGiovanniGfx[] = INCGFX_U32("graphics/title_screen/giovanni_placeholder.png", ".4bpp.smol");
-static const u16 sGiovanniPal[] = INCGFX_U16("graphics/title_screen/giovanni_placeholder.pal", ".gbapal");
+static const u32 sGiovanniGfx[] = INCGFX_U32("graphics/trainers/front_pics/leader_giovanni_frlg.png", ".4bpp.smol");
+static const u16 sGiovanniPal[] = INCGFX_U16("graphics/trainers/front_pics/leader_giovanni_frlg.png", ".gbapal");
 static const u32 sMaxieGfx[] = INCGFX_U32("graphics/title_screen/maxie_magma_leader.png", ".4bpp.smol");
 static const u16 sMaxiePal[] = INCGFX_U16("graphics/title_screen/maxie_magma_leader.pal", ".gbapal");
 
@@ -958,7 +959,7 @@ static void Task_TitleScreenPhase1(u8 taskId)
         // NEU: Charaktere platzieren (links = Archie, Mitte = Giovanni, rechts = Maxie)
         // Achtung: x/y sind die MITTE des 64x64-Sprites
         CreateSprite(&sArchieSpriteTemplate, 48, 104, 1);
-        CreateSprite(&sGiovanniSpriteTemplate, 138, 112, 1);
+        CreateSprite(&sGiovanniSpriteTemplate, 138, 104, 1);
         CreateSprite(&sMaxieSpriteTemplate, 204, 104, 1);
 
         // NEU: "TRIBUNAL ARMA" Logo (4 Kacheln a 32px, Mitten bei 72/104/136/168 -> mittig auf x=120)
@@ -1028,7 +1029,8 @@ static void Task_TitleScreenPhase2(u8 taskId)
 // Show Rayquaza silhouette and process main title screen input
 static void Task_TitleScreenPhase3(u8 taskId)
 {
-    if (QUICKSTART && JOY_NEW(SELECT_BUTTON))
+    // Quickstart (Debug, nur Nicht-Release-Builds) liegt auf R + Select, Select allein startet ein neues Spiel
+    if (QUICKSTART && JOY_NEW(SELECT_BUTTON) && JOY_HELD(R_BUTTON))
         Quickstart();
 
     if (JOY_NEW(A_BUTTON) || JOY_NEW(START_BUTTON))
@@ -1036,6 +1038,13 @@ static void Task_TitleScreenPhase3(u8 taskId)
         FadeOutBGM(4);
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_WHITEALPHA);
         SetMainCallback2(CB2_GoToMainMenu);
+    }
+    else if (JOY_NEW(SELECT_BUTTON) && !JOY_HELD(B_BUTTON | R_BUTTON) && !gPaletteFade.active)
+    {
+        // B + Select gehören zu den Kombos (Spielstand löschen, Uhr, Beeren-Fix)
+        FadeOutBGM(4);
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+        SetMainCallback2(CB2_GoToNewGame);
     }
     else if (JOY_HELD(CLEAR_SAVE_BUTTON_COMBO) == CLEAR_SAVE_BUTTON_COMBO)
     {
@@ -1076,6 +1085,12 @@ static void CB2_GoToMainMenu(void)
 {
     if (!UpdatePaletteFade())
         SetMainCallback2(CB2_InitMainMenu);
+}
+
+static void CB2_GoToNewGame(void)
+{
+    if (!UpdatePaletteFade())
+        SetMainCallback2(CB2_InitMainMenuNewGame);
 }
 
 static void CB2_GoToCopyrightScreen(void)

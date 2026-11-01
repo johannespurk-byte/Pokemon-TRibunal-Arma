@@ -8,6 +8,7 @@
 #include "field_weather.h"
 #include "gpu_regs.h"
 #include "graphics.h"
+#include "line_break.h"
 #include "main.h"
 #include "malloc.h"
 #include "map_name_popup.h"
@@ -191,15 +192,57 @@ u16 AddTextPrinterParameterized2(u8 windowId, u8 fontId, const u8 *str, u8 speed
     return AddTextPrinter(&printer, speed, callback);
 }
 
+// Breite der längsten Zeile (getrennt durch \n, \l und \p)
+static u32 GetLongestMessageLineWidth(const u8 *str)
+{
+    u8 line[128];
+    u32 len = 0, maxWidth = 0, width;
+
+    for (;; str++)
+    {
+        if (*str == EOS || *str == CHAR_NEWLINE || *str == CHAR_PROMPT_SCROLL || *str == CHAR_PROMPT_CLEAR || len >= ARRAY_COUNT(line) - 1)
+        {
+            line[len] = EOS;
+            width = GetStringWidth(FONT_NORMAL, line, 0);
+            if (width > maxWidth)
+                maxWidth = width;
+            len = 0;
+            if (*str == EOS)
+                break;
+            continue;
+        }
+        line[len++] = *str;
+    }
+    return maxWidth;
+}
+
+// Die Hauptschrift ist breiter als die alte. Texte, deren Zeilen nicht mehr in das
+// Nachrichtenfenster passen, werden automatisch neu umbrochen; passende bleiben unverändert.
+void FitMessageToWidth(u8 *str, u32 maxWidth)
+{
+    if (GetLongestMessageLineWidth(str) <= maxWidth)
+        return;
+    StripLineBreaks(str);
+    BreakStringAutomatic(str, maxWidth, 2, FONT_NORMAL, SHOW_SCROLL_PROMPT);
+}
+
+static void FitMessageToWindow(u8 windowId, u8 *str)
+{
+    // The rounded dialogue frame (WindowFunc_DrawDialogueFrame) covers the window's last tile column
+    FitMessageToWidth(str, (GetWindowAttribute(windowId, WINDOW_WIDTH) - 1) * 8);
+}
+
 void AddTextPrinterForMessage(bool8 allowSkippingDelayWithButtonPress)
 {
     gTextFlags.canABSpeedUpPrint = allowSkippingDelayWithButtonPress;
+    FitMessageToWindow(0, gStringVar4);
     AddTextPrinterParameterized2(0, FONT_NORMAL, gStringVar4, GetPlayerTextSpeedDelay(), NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
 }
 
 void AddTextPrinterWithCustomSpeedForMessage(bool8 allowSkippingDelayWithButtonPress, u8 speed)
 {
     gTextFlags.canABSpeedUpPrint = allowSkippingDelayWithButtonPress;
+    FitMessageToWindow(0, gStringVar4);
     AddTextPrinterParameterized2(0, FONT_NORMAL, gStringVar4, speed, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
 }
 
@@ -409,8 +452,9 @@ void DisplayYesNoMenuWithDefault(u8 initialCursorPos)
 
 u8 AddStartMenuWindow(u8 numActions)
 {
+    // 8 statt 7 Kacheln breit (eine nach links), damit POKéDEX/POKéMON in der breiteren Hauptschrift passen
     if (sStartMenuWindowId == WINDOW_NONE)
-        sStartMenuWindowId = AddWindowParameterized(0, 22, 1, 7, (numActions * 2) + 2, 15, 0x139);
+        sStartMenuWindowId = AddWindowParameterized(0, 21, 1, 8, (numActions * 2) + 2, 15, 0x139);
     return sStartMenuWindowId;
 }
 

@@ -67,7 +67,12 @@
 #define VAR_PC_BOX_TO_SEND_MON_FRLG        0x4037
 #define VAR_FANCLUB_FAN_COUNTER_FRLG       0x4038
 #define VAR_FANCLUB_LOSE_FAN_TIMER_FRLG    0x4039
+#if defined(FIRERED) || defined(LEAFGREEN)
 #define VAR_ELEVATOR_FLOOR                 0x403A
+#else
+// Emerald uses 0x403A for VAR_FARAWAY_ISLAND_STEP_COUNTER; the Rocket Hideout lift under the Mauville Game Corner needs its own var
+#define VAR_ELEVATOR_FLOOR                 0x404E
+#endif
 #define VAR_RESORT_GORGEOUS_REWARD         0x403B
 #define VAR_0x403C                         0x403C // Set to 0x0302, never read
 #define VAR_HERACROSS_SIZE_RECORD          0x403D

@@ -2,6 +2,7 @@
 #include "string_util.h"
 #include "text.h"
 #include "strings.h"
+#include "trainer_card.h"
 #include "union_room_chat.h"
 
 EWRAM_DATA u8 gStringVar1[0x100] = {0};
@@ -483,10 +484,12 @@ static const u8 *ExpandPlaceholder_RivalName(void)
         return gSaveBlock1Ptr->rivalName;
 #endif
 
+    if (!IS_FRLG)
+        return TrainerCard_GetRivalName();
     if (gSaveBlock2Ptr->playerGender == MALE)
-        return (IS_FRLG ? gText_ExpandedPlaceholder_Green : gText_ExpandedPlaceholder_May);
+        return gText_ExpandedPlaceholder_Green;
     else
-        return (IS_FRLG ? gText_ExpandedPlaceholder_Red : gText_ExpandedPlaceholder_Brendan);
+        return gText_ExpandedPlaceholder_Red;
 }
 
 static const u8 *ExpandPlaceholder_Version(void)

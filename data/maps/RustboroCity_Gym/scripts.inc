@@ -5,6 +5,8 @@
 @ --- GLOBALE ANMELDUNG FÜR DEN LINKER ---
 .global RustboroCity_Gym_MapScripts
 .global RustboroCity_Gym_EventScript_Roxanne
+.global RustboroCity_Gym_EventScript_RoxanneDefeated
+.global RustboroCity_Gym_EventScript_Blaine
 .global RustboroCity_Gym_EventScript_Josh
 .global RustboroCity_Gym_EventScript_Tommy
 .global RustboroCity_Gym_EventScript_Marc
@@ -13,15 +15,31 @@
 RustboroCity_Gym_MapScripts::
 	.byte 0
 
+@ ---------------------------------------------------------------------------
+@ ROXANNE: ERSTER KAMPF
+@ Der Introtext wird manuell angezeigt, danach startet der Kampf ohne Standardintro.
+@ ---------------------------------------------------------------------------
 RustboroCity_Gym_EventScript_Roxanne::
 	lock
 	faceplayer
-	
-	@ Unfehlbarer Doppelkampf über das eingebaute standardkonforme Makro!
-	trainerbattle_double TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_Text_RoxanneNeedTwoMons, RustboroCity_Gym_EventScript_RoxanneDefeated
+	msgbox RustboroCity_Gym_Text_RoxanneIntro, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneDefeat, 
+	goto RustboroCity_Gym_EventScript_RoxanneDefeated
 	end
 
+@ ---------------------------------------------------------------------------
+@ ROXANNE BESIEGT: PARTY HEILEN, DANN BLAINE HERAUSFORDERN
+@ ---------------------------------------------------------------------------
 RustboroCity_Gym_EventScript_RoxanneDefeated::
+	msgbox RustboroCity_Gym_Text_RoxanneAfterBattle, MSGBOX_DEFAULT
+	msgbox RustboroCity_Gym_Text_BlaineChallengeIntro, MSGBOX_DEFAULT
+	special HealPlayerParty
+	msgbox RustboroCity_Gym_Text_BlaineAfterHeal, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_BLAINE, RustboroCity_Gym_Text_BlaineDefeat, 
+	goto RustboroCity_Gym_EventScript_BlaineDefeated
+	end
+
+RustboroCity_Gym_EventScript_BlaineDefeated::
 	message RustboroCity_Gym_Text_ReceivedStoneBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -34,7 +52,6 @@ RustboroCity_Gym_EventScript_RoxanneDefeated::
 	call Common_EventScript_SetGymTrainers
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	goto RustboroCity_Gym_EventScript_GiveMegaStone
-	end
 
 @ --- BLAINE ÜBERGIBT DEN FEUER-MEGA-STEIN ---
 RustboroCity_Gym_EventScript_GiveMegaStone::
@@ -43,7 +60,6 @@ RustboroCity_Gym_EventScript_GiveMegaStone::
 	compare VAR_RESULT, 0
 	goto_if_eq RustboroCity_Gym_EventScript_BagIsFullForStone
 	goto RustboroCity_Gym_EventScript_GiveRockTomb
-	end
 
 RustboroCity_Gym_EventScript_BagIsFullForStone::
 	msgbox RustboroCity_Gym_Text_BagIsFull, MSGBOX_DEFAULT
@@ -59,7 +75,7 @@ RustboroCity_Gym_EventScript_GiveRockTomb::
 	release
 	end
 
-@ --- POKéNAV GENERATIONS-ANRUF (MUSS FÜR DEN LINKER DA SEIN) ---
+@ --- POKéNAV GENERATIONS-ANRUF ---
 RustboroCity_Gym_EventScript_RegisterRoxanne::
 	lockall
 	pokenavcall RustboroCity_Gym_Text_RoxanneRegisterCall
@@ -73,6 +89,16 @@ RustboroCity_Gym_EventScript_RegisterRoxanne::
 	setflag FLAG_ENABLE_ROXANNE_MATCH_CALL
 	clearflag FLAG_ENABLE_ROXANNE_FIRST_CALL
 	releaseall
+	end
+
+RustboroCity_Gym_EventScript_Blaine::
+	lock
+	faceplayer
+	msgbox RustboroCity_Gym_Text_BlaineChallengeIntro, MSGBOX_DEFAULT
+	special HealPlayerParty
+	msgbox RustboroCity_Gym_Text_BlaineAfterHeal, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_BLAINE, RustboroCity_Gym_Text_BlaineDefeat, 
+	goto RustboroCity_Gym_EventScript_BlaineDefeated
 	end
 
 RustboroCity_Gym_EventScript_Josh::
@@ -172,30 +198,56 @@ RustboroCity_Gym_Text_MarcDefeat:
 
 RustboroCity_Gym_Text_MarcPostBattle:
 	.string "I have to hand it to our LEADERS.\n"
-	.string "Magma and Stones are unburstable!$"
+	.string "Magma and Stones are unbreakable!$"
 
 RustboroCity_Gym_Text_RoxanneIntro:
-	.string "Hello, I am ROXANNE, the RUSTBORO\n"
-	.string "POKéMON GYM LEADER.\p"
-	.string "And this is my guest partner, BLAINE!\n"
-	.string "We combine Earth and Fire!\p"
-	.string "Please show us your double battle\n"
-	.string "skills!$"
+	.string "Welcome to the RUSTBORO GYM!\p"
+	.string "I am ROXANNE, the Gym Leader.\n"
+	.string "I have devoted myself to studying\n"
+	.string "the strengths of ROCK-type POKéMON.\p"
+	.string "Defeat me, and you may prove that\n"
+	.string "you are ready for the next challenge!\p"
+	.string "Let us begin!$"
 
 RustboroCity_Gym_Text_RoxanneDefeat:
-	.string "So…\n"
-	.string "We lost…\p"
+	.string "So… I have been defeated.\p"
 	.string "Your bond with your POKéMON is\n"
-	.string "truly unbreakable.\p"
-	.string "Please accept the official POKéMON\n"
-	.string "LEAGUE STONE BADGE.$"
+	.string "truly impressive.$"
+
+RustboroCity_Gym_Text_RoxanneAfterBattle:
+	.string "ROXANNE: An excellent battle!\p"
+	.string "BLAINE, the floor is yours.\n"
+	.string "I believe our challenger is ready!$"
+
+RustboroCity_Gym_Text_BlaineChallengeIntro:
+	.string "BLAINE: Ha! Excellent work against\n"
+	.string "ROXANNE! Those rocks couldn't stop you!\p"
+	.string "But your challenge isn't over yet.\n"
+	.string "Now face the blazing power of my\n"
+	.string "FIRE-type POKéMON!\p"
+	.string "I'll restore your team's strength.\n"
+	.string "Catch your breath, then let's battle!$"
+
+RustboroCity_Gym_Text_BlaineAfterHeal:
+	.string "BLAINE: There! Your team is fully\n"
+	.string "restored and ready to go!\p"
+	.string "Now, let's turn up the heat!$"
+
+RustboroCity_Gym_Text_BlaineDefeat:
+	.string "BLAINE: Incredible! Your spirit burns\n"
+	.string "brighter than even my hottest flames!\p"
+	.string "I'll have to train even harder!$"
+
+RustboroCity_Gym_Text_BlainePostBattle:
+	.string "BLAINE: Ha ha! That was a blazing\n"
+	.string "battle! Keep that fire in your heart!$"
 
 RustboroCity_Gym_Text_BlaineGiveMegaStone:
 	.string "BLAINE: For dousing my flames with\n"
 	.string "such hot competitive spirit, you deserve\l"
 	.string "something magical!\p"
 	.string "Take this Mega Stone! It will ignite\n"
-	.string "the true fire hidden within Glurak!$"
+	.string "the true fire hidden within Charizard!$"
 
 RustboroCity_Gym_Text_RoxanneNeedTwoMons:
 	.string "ROXANNE: This is a strict double\n"

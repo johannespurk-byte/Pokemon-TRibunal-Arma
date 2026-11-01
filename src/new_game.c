@@ -36,6 +36,8 @@
 #include "save.h"
 #include "link_rfu.h"
 #include "main.h"
+#include "main_menu.h"
+#include "trainer_card.h"
 #include "contest.h"
 #include "item_menu.h"
 #include "pokemon_storage_system.h"
@@ -233,7 +235,12 @@ void NewGameInitData(void)
     SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
     ResetItemFlags();
     ResetDexNav();
+    // National-Dex ab Spielbeginn (Gen 1–9), nicht erst nach Birchs/Eichs Upgrade
+    EnableNationalPokedex();
     ClearFollowerNPCData();
+    // Im Birk-Intro gewählte Generation (ClearSav1 hat die Variablen oben gelöscht)
+    TrainerCard_SetCharacterPage(NewGameBirchSpeech_GetCharacterPage());
+    TrainerCard_DrawRivalPage();
 }
 
 static void ResetMiniGamesRecords(void)

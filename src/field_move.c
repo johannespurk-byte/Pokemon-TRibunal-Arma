@@ -247,6 +247,38 @@ void SetFieldMoveSource(u8 source)
     sFieldMoveSource = source;
 }
 
+bool32 HasBadgeAndHMForFieldMove(enum FieldMove fieldMove)
+{
+    u16 hm;
+
+    switch (fieldMove)
+    {
+    case FIELD_MOVE_CUT:        hm = ITEM_HM_CUT;        break;
+    case FIELD_MOVE_STRENGTH:   hm = ITEM_HM_STRENGTH;   break;
+    case FIELD_MOVE_SURF:       hm = ITEM_HM_SURF;       break;
+    case FIELD_MOVE_FLY:        hm = ITEM_HM_FLY;        break;
+    case FIELD_MOVE_ROCK_SMASH: hm = ITEM_HM_ROCK_SMASH; break;
+    case FIELD_MOVE_FLASH:      hm = ITEM_HM_FLASH;      break;
+    case FIELD_MOVE_DIVE:       hm = ITEM_HM_DIVE;       break;
+    case FIELD_MOVE_WATERFALL:  hm = ITEM_HM_WATERFALL;  break;
+    default:                    return FALSE;
+    }
+
+    return IsFieldMoveUnlocked(fieldMove) && CheckBagHasItem(hm, 1);
+}
+
+u32 GetFirstNonEggPartySlot(void)
+{
+    u32 i;
+
+    for (i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
+    {
+        if (!GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_IS_EGG))
+            return i;
+    }
+    return PARTY_SIZE;
+}
+
 bool8 CanUseFly(void)
 {
     u32 i;
@@ -256,17 +288,24 @@ bool8 CanUseFly(void)
         return FALSE;
 
     // If they have the badge, check for a Pokémon that can learn Fly.
-    for (i = 0; i < gPlayerPartyCount; i++)
+    for (i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
     {
-        if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG))
+        if (!GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_IS_EGG))
         {
-            u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
+            u16 species = GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES);
             if (CanLearnTeachableMove(species, MOVE_FLY))
             {
                 sFieldMoveSource = FIELD_MOVE_SOURCE_POKEMON;
                 return TRUE; // Found a valid Pokémon
             }
         }
+    }
+
+    // With the badge and HM02 in the bag any Pokémon can fly.
+    if (HasBadgeAndHMForFieldMove(FIELD_MOVE_FLY) && GetFirstNonEggPartySlot() != PARTY_SIZE)
+    {
+        sFieldMoveSource = FIELD_MOVE_SOURCE_POKEMON;
+        return TRUE;
     }
 
     // If no Pokémon is found, check for the Fly Tool item.
@@ -294,17 +333,24 @@ bool8 CanUseFlash(void)
         return FALSE;
 
     // 2. Check for a Pokémon that can learn Flash
-    for (i = 0; i < gPlayerPartyCount; i++)
+    for (i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
     {
-        if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG))
+        if (!GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_IS_EGG))
         {
-            u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
+            u16 species = GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES);
             if (CanLearnTeachableMove(species, MOVE_FLASH))
             {
                 sFieldMoveSource = FIELD_MOVE_SOURCE_POKEMON;
                 return TRUE;
             }
         }
+    }
+
+    // With the badge and HM05 in the bag any Pokémon can use Flash.
+    if (HasBadgeAndHMForFieldMove(FIELD_MOVE_FLASH) && GetFirstNonEggPartySlot() != PARTY_SIZE)
+    {
+        sFieldMoveSource = FIELD_MOVE_SOURCE_POKEMON;
+        return TRUE;
     }
 
     // 3. Check for the item

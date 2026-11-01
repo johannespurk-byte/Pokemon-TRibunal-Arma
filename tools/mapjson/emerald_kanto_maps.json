@@ -1,0 +1,16 @@
+{
+  "maps": [
+    "RocketHideout_B1F_Frlg",
+    "RocketHideout_B2F_Frlg",
+    "RocketHideout_B3F_Frlg",
+    "RocketHideout_B4F_Frlg",
+    "RocketHideout_Elevator_Frlg"
+  ],
+  "layouts": [
+    "LAYOUT_ROCKET_HIDEOUT_B1F",
+    "LAYOUT_ROCKET_HIDEOUT_B2F",
+    "LAYOUT_ROCKET_HIDEOUT_B3F",
+    "LAYOUT_ROCKET_HIDEOUT_B4F",
+    "LAYOUT_ROCKET_HIDEOUT_ELEVATOR"
+  ]
+}

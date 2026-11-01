@@ -425,10 +425,10 @@ static void CreateSpriteAndSetTypeSpriteAttributes(enum Type type, u32 x, u32 y,
     enum BattlerId displayedBattler = GetBattlerAtPosition(position);
     bool32 useHorizontalTransition = IsOnPlayerSide(displayedBattler) && !useDoubleBattleCoords;
     const struct SpriteTemplate* spriteTemplate = gTypesInfo[type].useSecondTypeIconPalette ? &sSpriteTemplate_TypeIcons2 : &sSpriteTemplate_TypeIcons1;
-    u32 spriteId = CreateSpriteAtEnd(spriteTemplate,
-                                     x + (useHorizontalTransition ? TYPE_ICON_REVEAL_DISTANCE : 0),
-                                     y + (useHorizontalTransition ? 0 : TYPE_ICON_REVEAL_DISTANCE),
-                                     UCHAR_MAX);
+    u32 spriteId = CreateSpriteAtEndUnchecked(spriteTemplate,
+                                              x + (useHorizontalTransition ? TYPE_ICON_REVEAL_DISTANCE : 0),
+                                              y + (useHorizontalTransition ? 0 : TYPE_ICON_REVEAL_DISTANCE),
+                                              UCHAR_MAX);
 
     if (spriteId == MAX_SPRITES)
         return;

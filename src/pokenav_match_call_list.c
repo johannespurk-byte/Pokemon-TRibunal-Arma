@@ -350,6 +350,9 @@ enum TrainerPicID GetMatchCallTrainerPic(int index)
         return GetTrainerPicFromId(index);
     }
 
+    if (headerId == MC_HEADER_BRENDAN || headerId == MC_HEADER_MAY)
+        return TrainerCard_GetRivalTrainerPic();
+
     index = MatchCall_GetOverrideFacilityClass(headerId);
     return gFacilityClassToPicIndex[index];
 }

@@ -18,6 +18,10 @@ enum Pocket
 #define LURE_STEP_COUNT         (IS_LAST_USED_LURE(VarGet(VAR_REPEL_STEP_COUNT)) ? REPEL_LURE_STEPS(VarGet(VAR_REPEL_STEP_COUNT)) : 0)
 #define REPEL_STEP_COUNT        (!IS_LAST_USED_LURE(VarGet(VAR_REPEL_STEP_COUNT)) ? REPEL_LURE_STEPS(VarGet(VAR_REPEL_STEP_COUNT)) : 0)
 
+// gSpecialVar_Result values the bag's Auto-Schutz buttons pass to ItemUseOutOfBattle_AutoRepel
+#define AUTO_REPEL_SWITCH_ON    1
+#define AUTO_REPEL_SWITCH_OFF   2
+
 #define ITEM_SELL_FACTOR ((I_SELL_VALUE_FRACTION >= GEN_9) ? 4 : 2)
 
 #endif // GUARD_ITEM_CONSTANTS_H

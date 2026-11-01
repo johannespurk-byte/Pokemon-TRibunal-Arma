@@ -23,6 +23,21 @@ Route109_SeashoreHouse_EventScript_AlreadyGaveIntroduction::
 	end
 
 Route109_SeashoreHouse_EventScript_DefeatedTrainers::
+	goto_if_not_defeated TRAINER_SEASHORE_OWNER, Route109_SeashoreHouse_EventScript_BattleOwner
+	goto Route109_SeashoreHouse_EventScript_GiveSodaPop
+
+Route109_SeashoreHouse_EventScript_BattleOwner::
+	msgbox Route109_SeashoreHouse_Text_OwnerBattleIntro, MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_SEASHORE_OWNER, Route109_SeashoreHouse_Text_OwnerBattleIntro, Route109_SeashoreHouse_Text_OwnerBattleDefeated, Route109_SeashoreHouse_EventScript_OwnerBattleWon
+	msgbox Route109_SeashoreHouse_Text_OwnerBattlePostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+Route109_SeashoreHouse_EventScript_OwnerBattleWon::
+	msgbox Route109_SeashoreHouse_Text_OwnerBattlePostBattle, MSGBOX_DEFAULT
+	goto Route109_SeashoreHouse_EventScript_GiveSodaPop
+
+Route109_SeashoreHouse_EventScript_GiveSodaPop::
 	msgbox Route109_SeashoreHouse_Text_TakeTheseSodaPopBottles, MSGBOX_DEFAULT
 	giveitem ITEM_SODA_POP, 6
 	goto_if_eq VAR_RESULT, FALSE, Route109_SeashoreHouse_EventScript_BagFull
@@ -142,6 +157,22 @@ Route109_SeashoreHouse_Text_NotEnoughMoney:
 Route109_SeashoreHouse_Text_ThatsTooBad:
 	.string "No?\n"
 	.string "That's too bad.$"
+
+Route109_SeashoreHouse_Text_OwnerBattleIntro:
+	.string "So, you defeated all the TRAINERS!\p"
+	.string "But the owner of this house is me,\n"
+	.string "MR. SEA! Let's see how hot you are!\p"
+	.string "I'll give you your reward if you can\n"
+	.string "defeat me, too!$"
+
+Route109_SeashoreHouse_Text_OwnerBattleDefeated:
+	.string "Now THAT was a scorching battle!\n"
+	.string "You really are something!$"
+
+Route109_SeashoreHouse_Text_OwnerBattlePostBattle:
+	.string "You've beaten every TRAINER here,\n"
+	.string "including me! You've earned your\n"
+	.string "reward, hotshot!$"
 
 Route109_SeashoreHouse_Text_DwayneIntro:
 	.string "If you're looking for a battle in the\n"

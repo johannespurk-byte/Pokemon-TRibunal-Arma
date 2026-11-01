@@ -12,14 +12,14 @@ u32 GetCurrentLevelCap(void)
     if (FlagGet(FLAG_SYS_GAME_CLEAR))
         return 100;
 
-    if (FlagGet(FLAG_BADGE08_GET)) return 55; // 8. Orden (Juan)
-    if (FlagGet(FLAG_BADGE07_GET)) return 45; // 7. Orden (Ben & Svenja)
-    if (FlagGet(FLAG_BADGE06_GET)) return 40; // 6. Orden (Wibke)
-    if (FlagGet(FLAG_BADGE05_GET)) return 35; // 5. Orden (Norman)
-    if (FlagGet(FLAG_BADGE04_GET)) return 30; // 4. Orden (Flavia)
-    if (FlagGet(FLAG_BADGE03_GET)) return 24; // 3. Orden (Walter)
-    if (FlagGet(FLAG_BADGE02_GET)) return 19; // 2. Orden (Kamillo)
-    if (FlagGet(FLAG_BADGE01_GET)) return 18; // 1. Orden (Felizia)
+    if (FlagGet(FLAG_BADGE08_GET)) return 100; // 8. Orden (Juan)
+    if (FlagGet(FLAG_BADGE07_GET)) return 90; // 7. Orden (Ben & Svenja)
+    if (FlagGet(FLAG_BADGE06_GET)) return 80; // 6. Orden (Wibke)
+    if (FlagGet(FLAG_BADGE05_GET)) return 74; // 5. Orden (Norman)
+    if (FlagGet(FLAG_BADGE04_GET)) return 68; // 4. Orden (Flavia)
+    if (FlagGet(FLAG_BADGE03_GET)) return 60; // 3. Orden (Walter)
+    if (FlagGet(FLAG_BADGE02_GET)) return 50; // 2. Orden (Kamillo)
+    if (FlagGet(FLAG_BADGE01_GET)) return 36; // 1. Orden (Felizia)
 
     return 18; // Dein custom Start-Cap von Level 8 vor der ersten Arena!
 }

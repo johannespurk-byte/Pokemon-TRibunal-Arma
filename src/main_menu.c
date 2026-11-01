@@ -38,6 +38,8 @@
 #include "text.h"
 #include "text_window.h"
 #include "title_screen.h"
+#include "trainer.h"
+#include "trainer_card.h"
 #include "window.h"
 #include "mystery_gift_menu.h"
 
@@ -572,6 +574,18 @@ void CB2_InitMainMenu(void)
 void CB2_ReinitMainMenu(void)
 {
     InitMainMenu(TRUE);
+}
+
+// Titelbildschirm (Select): überspringt das Hauptmenü und startet direkt das Birk-Intro
+void CB2_InitMainMenuNewGame(void)
+{
+    InitMainMenu(FALSE);
+    DestroyTask(FindTaskIdByFunc(Task_MainMenuCheckSaveFile));
+    gPlttBufferUnfaded[0] = RGB_BLACK;
+    gPlttBufferFaded[0] = RGB_BLACK;
+    FreeAllWindowBuffers();
+    sCurrItemAndOptionMenuCheck = 0;
+    CreateTask(Task_NewGameBirchSpeech_Init, 0);
 }
 
 static u32 InitMainMenu(bool8 returningFromOptionsMenu)
@@ -1298,8 +1312,21 @@ static void HighlightSelectedMainMenuItem(enum PartyMenuType menuType, u8 select
 #define tBrendanSpriteId data[10]
 #define tMaySpriteId data[11]
 
+// Generation (= Trainerkarten-Seite), die im Birk-Intro mit L/R gewählt wird
+#define BIRCH_DEFAULT_CHARACTER_PAGE 2 // Gen 3: Brendan / May
+static EWRAM_DATA u8 sBirchCharacterPage = 0;
+static EWRAM_DATA bool8 sBirchCharacterPageChosen = FALSE;
+
+// Ohne Birk-Intro (z. B. Quickstart) bleibt es bei Gen 3, wie in pokeemerald
+u8 NewGameBirchSpeech_GetCharacterPage(void)
+{
+    return sBirchCharacterPageChosen ? sBirchCharacterPage : BIRCH_DEFAULT_CHARACTER_PAGE;
+}
+
 static void Task_NewGameBirchSpeech_Init(u8 taskId)
 {
+    sBirchCharacterPage = BIRCH_DEFAULT_CHARACTER_PAGE;
+    sBirchCharacterPageChosen = TRUE;
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
     InitBgFromTemplate(&sBirchBgTemplate);
@@ -1330,25 +1357,18 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
 
     ScanlineEffect_Stop();
     ResetSpriteData();
-
-    // ==========================================
-    // ERGÄNZUNG: Fehlenden Ablauf wiederherstellen
-    // ==========================================
-    ResetTasks(); // Bereitet die Task-Struktur vor
-
-    // FIX: Hintergrund-Layer (BG0) war geladen, aber nie sichtbar geschaltet.
-    // InitBgFromTemplate() richtet nur die Register ein, aktiviert den Layer aber nicht -
-    // dafür braucht es zwingend ShowBg(). Deshalb blieb der Bildschirm schwarz.
-    ShowBg(0);
-
-    AddBirchSpeechObjects(taskId); // Lädt die Sprites für Birk und Lotad
-
-    // NUTZT DIE KORREKTE FUNKTION AUS DEINER MAIN_MENU.C:
-    NewGameBirchSpeech_ClearWindow(0);
-
-    // Sagt dem Spiel, welcher Task als nächstes ausgeführt werden soll:
+    FreeAllSpritePalettes();
+    ResetAllPicSprites();
+    AddBirchSpeechObjects(taskId);
+    BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
+    gTasks[taskId].tBG1HOFS = 0;
     gTasks[taskId].func = Task_NewGameBirchSpeech_WaitToShowBirch;
-    // ==========================================
+    gTasks[taskId].tPlayerSpriteId = SPRITE_NONE;
+    gTasks[taskId].data[3] = 0xFF;
+    gTasks[taskId].tTimer = 0xD8;
+    PlayBGM(MUS_ROUTE122);
+    ShowBg(0);
+    ShowBg(1);
 }
 
 
@@ -1412,7 +1432,7 @@ static void Task_NewGameBirchSpeech_ThisIsAPokemon(u8 taskId)
         // sonst wird der PokéBall mit Beldum während Birchs Satz nie ausgelöst.
         // ACHTUNG: Bitte Parameterreihenfolge/Namen gegen eure text.h/text_window.h prüfen,
         // falls der Compiler hier meckert.
-        AddTextPrinterParameterized2(0, FONT_NORMAL, gStringVar4, GetPlayerTextSpeedDelay(), NewGameBirchSpeech_WaitForThisIsPokemonText, TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+        AddTextPrinterParameterized2(0, FONT_NORMAL, gStringVar4, GetPlayerTextSpeedDelay(), NewGameBirchSpeech_WaitForThisIsPokemonText, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
 
         gTasks[taskId].func = Task_NewGameBirchSpeech_MainSpeech;
     }
@@ -1557,10 +1577,55 @@ static void Task_NewGameBirchSpeech_BoyOrGirl(u8 taskId)
     gTasks[taskId].func = Task_NewGameBirchSpeech_WaitToShowGenderMenu;
 }
 
+static void NewGameBirchSpeech_PrintGenerationHint(void)
+{
+    static const u8 sText_Prefix[] = _("Are you a boy or a girl?\nGeneration ");
+    static const u8 sText_Suffix[] = _("   {L_BUTTON}/{R_BUTTON}: change");
+    u8 *str = StringCopy(gStringVar4, sText_Prefix);
+
+    str = StringCopy(str, TrainerCard_GetPageLabel(sBirchCharacterPage));
+    StringCopy(str, sText_Suffix);
+    NewGameBirchSpeech_ClearWindow(0);
+    AddTextPrinterWithCustomSpeedForMessage(FALSE, 0);
+}
+
+// Ersetzt beide Spieler-Sprites durch die Charaktere der gewählten Generation
+static void NewGameBirchSpeech_RecreatePlayerSprites(u8 taskId, u8 oldPage)
+{
+    enum Gender gender;
+
+    // CreateTrainerSprite legt die Vorlage auf dem Stack an, sprite->template zeigt danach ins Leere.
+    // Deshalb Grafik und Palette über die Tags der alten Bilder freigeben statt mit DestroySpriteAndFreeResources.
+    DestroySprite(&gSprites[gTasks[taskId].tBrendanSpriteId]);
+    DestroySprite(&gSprites[gTasks[taskId].tMaySpriteId]);
+    for (gender = MALE; gender < GENDER_COUNT; gender++)
+    {
+        u16 tag = GetTrainerPicTag(TrainerCard_GetPagePlayerPic(oldPage, gender), TRUE);
+
+        FreeSpriteTilesByTag(tag);
+        FreeSpritePaletteByTag(tag);
+    }
+    for (gender = MALE; gender < GENDER_COUNT; gender++)
+    {
+        u8 spriteId = CreateTrainerSprite(TrainerCard_GetPagePlayerPic(sBirchCharacterPage, gender), 180, 60, 0, NULL);
+
+        gSprites[spriteId].callback = SpriteCB_Null;
+        gSprites[spriteId].oam.priority = 0;
+        gSprites[spriteId].invisible = (gender != gTasks[taskId].tPlayerGender);
+        if (gender == MALE)
+            gTasks[taskId].tBrendanSpriteId = spriteId;
+        else
+            gTasks[taskId].tMaySpriteId = spriteId;
+        if (gender == gTasks[taskId].tPlayerGender)
+            gTasks[taskId].tPlayerSpriteId = spriteId;
+    }
+}
+
 static void Task_NewGameBirchSpeech_WaitToShowGenderMenu(u8 taskId)
 {
     if (!RunTextPrintersAndIsPrinter0Active())
     {
+        NewGameBirchSpeech_PrintGenerationHint();
         NewGameBirchSpeech_ShowGenderMenu();
         gTasks[taskId].func = Task_NewGameBirchSpeech_ChooseGender;
     }
@@ -1568,9 +1633,26 @@ static void Task_NewGameBirchSpeech_WaitToShowGenderMenu(u8 taskId)
 
 static void Task_NewGameBirchSpeech_ChooseGender(u8 taskId)
 {
-    enum Gender gender = NewGameBirchSpeech_ProcessGenderMenuInput();
+    enum Gender gender;
     enum Gender gender2;
 
+    // L/R: Generation wechseln (gleiche Seiten wie auf der Trainerkarte)
+    if (JOY_NEW(L_BUTTON) || JOY_NEW(R_BUTTON))
+    {
+        u8 count = TrainerCard_GetPageCount();
+        u8 oldPage = sBirchCharacterPage;
+
+        PlaySE(SE_SELECT);
+        if (JOY_NEW(R_BUTTON))
+            sBirchCharacterPage = (sBirchCharacterPage + 1) % count;
+        else
+            sBirchCharacterPage = (sBirchCharacterPage + count - 1) % count;
+        NewGameBirchSpeech_RecreatePlayerSprites(taskId, oldPage);
+        NewGameBirchSpeech_PrintGenerationHint();
+        return;
+    }
+
+    gender = NewGameBirchSpeech_ProcessGenderMenuInput();
     switch (gender)
     {
     case MALE:
@@ -1992,12 +2074,12 @@ static void AddBirchSpeechObjects(u8 taskId)
     gSprites[lotadSpriteId].oam.priority = 0;
     gSprites[lotadSpriteId].invisible = TRUE;
     gTasks[taskId].tLotadSpriteId = lotadSpriteId;
-    brendanSpriteId = CreateTrainerSprite(FacilityClassToPicIndex(FACILITY_CLASS_BRENDAN), 120, 60, 0, NULL);
+    brendanSpriteId = CreateTrainerSprite(TrainerCard_GetPagePlayerPic(sBirchCharacterPage, MALE), 120, 60, 0, NULL);
     gSprites[brendanSpriteId].callback = SpriteCB_Null;
     gSprites[brendanSpriteId].invisible = TRUE;
     gSprites[brendanSpriteId].oam.priority = 0;
     gTasks[taskId].tBrendanSpriteId = brendanSpriteId;
-    maySpriteId = CreateTrainerSprite(FacilityClassToPicIndex(FACILITY_CLASS_MAY), 120, 60, 0, NULL);
+    maySpriteId = CreateTrainerSprite(TrainerCard_GetPagePlayerPic(sBirchCharacterPage, FEMALE), 120, 60, 0, NULL);
     gSprites[maySpriteId].callback = SpriteCB_Null;
     gSprites[maySpriteId].invisible = TRUE;
     gSprites[maySpriteId].oam.priority = 0;
@@ -2337,12 +2419,9 @@ static void NewGameBirchSpeech_ClearGenderWindow(u8 windowId, bool8 copyToVram)
 static void NewGameBirchSpeech_ClearWindow(u8 windowId)
 {
     u8 bgColor = GetFontAttribute(FONT_NORMAL, FONTATTR_COLOR_BACKGROUND);
-    u8 maxCharWidth = GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_WIDTH);
-    u8 maxCharHeight = GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT);
-    u8 winWidth = GetWindowAttribute(windowId, WINDOW_WIDTH);
-    u8 winHeight = GetWindowAttribute(windowId, WINDOW_HEIGHT);
 
-    FillWindowPixelRect(windowId, bgColor, 0, 0, maxCharWidth * winWidth, maxCharHeight * winHeight);
+    // Ganzes Fenster leeren: die Breite aus Buchstabenbreite * Kacheln ließ rechts Textreste stehen
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(bgColor));
     CopyWindowToVram(windowId, COPYWIN_GFX);
 }
 

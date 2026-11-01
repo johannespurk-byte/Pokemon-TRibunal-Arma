@@ -4,6 +4,13 @@ const u16 gMetatileAttributes_SecretBasePrimary[] = INCBIN_U16("data/tilesets/pr
 const u16 gMetatiles_SecretBaseSecondary[] = INCBIN_U16("data/tilesets/secondary/secret_base/metatiles.bin");
 const u16 gMetatileAttributes_SecretBaseSecondary[] = INCBIN_U16("data/tilesets/secondary/secret_base/metatile_attributes.bin");
 
+// Also built for Emerald: the Rocket Hideout under the Mauville Game Corner uses these FRLG tilesets
+const u16 gMetatiles_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatiles.bin");
+const u16 gMetatileAttributes_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_SilphCo[] = INCBIN_U16("data/tilesets/secondary/silph_co_frlg/metatiles.bin");
+const u16 gMetatileAttributes_SilphCo[] = INCBIN_U16("data/tilesets/secondary/silph_co_frlg/metatile_attributes.bin");
+
 #if !IS_FRLG
 
 const u16 gMetatiles_General[] = INCBIN_U16("data/tilesets/primary/general/metatiles.bin");
@@ -212,9 +219,6 @@ const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/
 
 #else
 
-const u16 gMetatiles_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatiles.bin");
-const u16 gMetatileAttributes_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatile_attributes.bin");
-
 const u16 gMetatiles_GenericBuilding1[] = INCBIN_U16("data/tilesets/secondary/generic_building_1_frlg/metatiles.bin");
 const u16 gMetatileAttributes_GenericBuilding1[] = INCBIN_U16("data/tilesets/secondary/generic_building_1_frlg/metatile_attributes.bin");
 
@@ -337,9 +341,6 @@ const u16 gMetatileAttributes_PowerPlant[] = INCBIN_U16("data/tilesets/secondary
 
 const u16 gMetatiles_SeaCottage[] = INCBIN_U16("data/tilesets/secondary/sea_cottage_frlg/metatiles.bin");
 const u16 gMetatileAttributes_SeaCottage[] = INCBIN_U16("data/tilesets/secondary/sea_cottage_frlg/metatile_attributes.bin");
-
-const u16 gMetatiles_SilphCo[] = INCBIN_U16("data/tilesets/secondary/silph_co_frlg/metatiles.bin");
-const u16 gMetatileAttributes_SilphCo[] = INCBIN_U16("data/tilesets/secondary/silph_co_frlg/metatile_attributes.bin");
 
 const u16 gMetatiles_UndergroundPath[] = INCBIN_U16("data/tilesets/secondary/underground_path_frlg/metatiles.bin");
 const u16 gMetatileAttributes_UndergroundPath[] = INCBIN_U16("data/tilesets/secondary/underground_path_frlg/metatile_attributes.bin");

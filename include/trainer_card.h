@@ -56,4 +56,19 @@ void ShowPlayerTrainerCard(void (*callback)(void));
 void ShowTrainerCardInLink(u8 cardId, void (*callback)(void));
 void TrainerCard_GenerateCardForLinkPlayer(struct TrainerCard *trainerCard);
 
+// Player character chosen via the trainer card generation pages (L/R on the card).
+u8 TrainerCard_GetCharacterPage(void);
+void TrainerCard_SetCharacterPage(u8 page);
+u16 TrainerCard_GetPlayerTrainerPic(u8 gender);
+u8 TrainerCard_GetPageCount(void);
+u16 TrainerCard_GetPagePlayerPic(u8 page, u8 gender);
+const u8 *TrainerCard_GetPageLabel(u8 page);
+
+// Rival (Birch's child): a character of the opposite gender from a page drawn at new game.
+void TrainerCard_DrawRivalPage(void);
+u8 TrainerCard_GetRivalPage(void);
+u8 TrainerCard_GetRivalGender(void);
+u16 TrainerCard_GetRivalTrainerPic(void);
+const u8 *TrainerCard_GetRivalName(void);
+
 #endif // GUARD_TRAINER_CARD_H

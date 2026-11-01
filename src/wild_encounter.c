@@ -1028,6 +1028,9 @@ bool8 UpdateRepelCounter(void)
         return FALSE;
     if (InUnionRoom() == TRUE)
         return FALSE;
+    // The Auto-Schutz holds the counter until it is switched off
+    if (FlagGet(FLAG_AUTO_REPEL_ON))
+        return FALSE;
 
     if (steps != 0)
     {

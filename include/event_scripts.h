@@ -788,5 +788,7 @@ extern const u8 EventScript_Questionnaire[];
 extern const u8 CableClub_EventScript_ShowBattleRecords_Frlg[];
 extern const u8 EventScript_Indigo_UltimateGoal[];
 extern const u8 EventScript_Indigo_HighestAuthority[];
+extern const u8 EventScript_TrainerEggReceived[];
+extern const u8 EventScript_TrainerEggSentToPC[];
 
 #endif // GUARD_EVENT_SCRIPTS_H

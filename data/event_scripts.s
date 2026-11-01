@@ -650,11 +650,6 @@ gStdScripts_End::
 	.include "data/maps/VictoryRoad_1F_Frlg/scripts.inc"
 	.include "data/maps/VictoryRoad_2F_Frlg/scripts.inc"
 	.include "data/maps/VictoryRoad_3F_Frlg/scripts.inc"
-	.include "data/maps/RocketHideout_B1F_Frlg/scripts.inc"
-	.include "data/maps/RocketHideout_B2F_Frlg/scripts.inc"
-	.include "data/maps/RocketHideout_B3F_Frlg/scripts.inc"
-	.include "data/maps/RocketHideout_B4F_Frlg/scripts.inc"
-	.include "data/maps/RocketHideout_Elevator_Frlg/scripts.inc"
 	.include "data/maps/SilphCo_1F_Frlg/scripts.inc"
 	.include "data/maps/SilphCo_2F_Frlg/scripts.inc"
 	.include "data/maps/SilphCo_3F_Frlg/scripts.inc"
@@ -1048,6 +1043,14 @@ gStdScripts_End::
 	.include "data/scripts/pkmn_center_nurse_frlg.inc"
 
 .endif
+
+@ Also built for Emerald: the Rocket Hideout under the Mauville Game Corner
+	.include "data/maps/RocketHideout_B1F_Frlg/scripts.inc"
+	.include "data/maps/RocketHideout_B2F_Frlg/scripts.inc"
+	.include "data/maps/RocketHideout_B3F_Frlg/scripts.inc"
+	.include "data/maps/RocketHideout_B4F_Frlg/scripts.inc"
+	.include "data/maps/RocketHideout_Elevator_Frlg/scripts.inc"
+	.include "data/scripts/item_ball_scripts_rocket_hideout.inc"
 
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"

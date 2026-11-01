@@ -25,17 +25,17 @@
 // Set to any other mode for opt-out behavior (all trainers scaled unless explicitly disabled)
 
 #define B_TRAINER_SCALING_ENABLED           TRUE
-#define B_TRAINER_SCALING_DEFAULT_MODE      LEVEL_SCALING_PARTY_AVG
-#define B_TRAINER_SCALING_LEVEL_AUGMENT     2       // Add/subtract levels from base (-127 to +127)
+#define B_TRAINER_SCALING_DEFAULT_MODE      LEVEL_SCALING_PARTY_HIGHEST
+#define B_TRAINER_SCALING_LEVEL_AUGMENT     0       // Add/subtract levels from base (-127 to +127)
                                                      // Example: -2 makes trainers 2 levels lower
                                                      //          +5 makes trainers 5 levels higher
-#define B_TRAINER_SCALING_LEVEL_VARIATION_PCT 10    // Random level reduction as % of base (0 = none)
+#define B_TRAINER_SCALING_LEVEL_VARIATION_PCT 0    // Random level reduction as % of base (0 = none)
                                                      // Example: 10 means up to 10% reduction
                                                      //          At level 10 → up to 1 level, level 50 → up to 5
 #define B_TRAINER_SCALING_MIN_LEVEL         0       // Minimum level (0 = no minimum)
 #define B_TRAINER_SCALING_MAX_LEVEL         0       // Maximum level (0 = no maximum)
-#define B_TRAINER_SCALING_MANAGE_EVOLUTIONS TRUE    // Auto-devolve Pokemon if level too low
-#define B_TRAINER_SCALING_EXCLUDE_FAINTED   FALSE   // Exclude fainted Pokemon from PARTY_* calculations
+#define B_TRAINER_SCALING_MANAGE_EVOLUTIONS FALSE    // Auto-devolve Pokemon if level too low
+#define B_TRAINER_SCALING_EXCLUDE_FAINTED   TRUE   // Exclude fainted Pokemon from PARTY_* calculations
 #define B_TRAINER_SCALING_SCALE_EVS         FALSE   // Scale defined EVs to scaled level (10 EVs/level, cap 510)
                                                      // Opt-in default; per-trainer override in level_scaling_rules.h
 #define B_TRAINER_SCALING_SCALE_MOVES       FALSE   // Filter trainer-defined moves by legality at scaled level
@@ -83,9 +83,9 @@
 // MOVE_TIER_DEFAULT). Per-item data: src/data/item_progression_tiers.h
 // (default ITEM_TIER_DEFAULT).
 
-#define B_SCALING_TIER_MID_MIN_LEVEL        20
-#define B_SCALING_TIER_LATE_MIN_LEVEL       40
-#define B_SCALING_TIER_ENDGAME_MIN_LEVEL    100
+#define B_SCALING_TIER_MID_MIN_LEVEL        5
+#define B_SCALING_TIER_LATE_MIN_LEVEL       10
+#define B_SCALING_TIER_ENDGAME_MIN_LEVEL    15
 
 // Per-tier BST ceiling for trainer party members at a scaled level. A mon
 // whose post-scale, post-devolution BST exceeds the ceiling for its band
@@ -96,8 +96,8 @@
 //   LATE_MIN_LEVEL   .. ENDGAME_MIN_LEVEL-1-> LATE
 //   level >= ENDGAME_MIN_LEVEL             -> ABOVE_ENDGAME
 
-#define B_SCALING_BST_BELOW_MID             400
-#define B_SCALING_BST_MID                   540
+#define B_SCALING_BST_BELOW_MID             999
+#define B_SCALING_BST_MID                   999
 #define B_SCALING_BST_LATE                  999
 #define B_SCALING_BST_ABOVE_ENDGAME         999
 
@@ -108,15 +108,15 @@
 // per-area or per-species overrides (future enhancement)
 
 #define B_WILD_SCALING_ENABLED              TRUE
-#define B_WILD_SCALING_DEFAULT_MODE         LEVEL_SCALING_PARTY_AVG
-#define B_WILD_SCALING_LEVEL_AUGMENT        -8       // Add/subtract levels from base (-127 to +127)
+#define B_WILD_SCALING_DEFAULT_MODE         LEVEL_SCALING_PARTY_HIGHEST
+#define B_WILD_SCALING_LEVEL_AUGMENT        -2       // Add/subtract levels from base (-127 to +127)
                                                      // Example: -5 makes wild Pokémon 5 levels lower
-#define B_WILD_SCALING_LEVEL_VARIATION_PCT  15      // Random level reduction as % of base (0 = none)
+#define B_WILD_SCALING_LEVEL_VARIATION_PCT  0      // Random level reduction as % of base (0 = none)
                                                      // Example: 15 means up to 15% reduction
                                                      //          At level 10 → up to 1-2 levels, level 50 → up to 7-8
 #define B_WILD_SCALING_MIN_LEVEL            0       // Minimum level (0 = no minimum)
 #define B_WILD_SCALING_MAX_LEVEL            0       // Maximum level (0 = no maximum)
-#define B_WILD_SCALING_MANAGE_EVOLUTIONS    TRUE    // Auto-devolve wild Pokémon if level too low
+#define B_WILD_SCALING_MANAGE_EVOLUTIONS    FALSE    // Auto-devolve wild Pokémon if level too low
 #define B_WILD_SCALING_EXCLUDE_FAINTED      FALSE    // Exclude fainted Pokémon from PARTY_* calculations
 
 // ============================================================================
@@ -126,12 +126,12 @@
 // Overrides allow Pokemon that don't evolve via level-up to appear at specific minimum levels
 // Example: Gengar (trade evolution) can be set to appear at level 30+
 
-#define B_SCALING_USE_OVERRIDES         TRUE    // Enable evolution overrides for trade/stone/special evolutions
+#define B_SCALING_USE_OVERRIDES         FALSE    // Enable evolution overrides for trade/stone/special evolutions
 
 // ============================================================================
 // DEBUG OPTIONS
 // ============================================================================
 
-#define B_SCALING_DEBUG_PRINT           TRUE    // Print scaling calculations to debug console
+#define B_SCALING_DEBUG_PRINT           FALSE    // Print scaling calculations to debug console
 
 #endif // GUARD_CONFIG_LEVEL_SCALING_H

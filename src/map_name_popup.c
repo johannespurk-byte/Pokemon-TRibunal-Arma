@@ -10,6 +10,7 @@
 #include "main.h"
 #include "menu.h"
 #include "map_name_popup.h"
+#include "overworld.h"
 #include "palette.h"
 #include "region_map.h"
 #include "rtc.h"
@@ -375,6 +376,44 @@ enum {
 #define tIncomingPopUp data[3]
 #define tPrintTimer    data[4]
 #define tComfyAnimId   data[5]
+#define tSlideVertical data[6]
+
+// Flash and the Battle Pyramid draw their light circle through WIN0 every scanline,
+// so the Gen 8 pop-up cannot clip itself with WIN0 there.
+static bool32 IsLightCircleActive(void)
+{
+    return GetFlashLevel() != 0 || CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE;
+}
+
+static void SetUpSwShPopUpSlide(struct Task *task)
+{
+    task->tSlideVertical = IsLightCircleActive();
+    if (task->tSlideVertical)
+    {
+        // Slide in from below the screen, which needs no clipping window.
+        SetGpuReg(REG_OFFSET_BG0HOFS, 0);
+        SetGpuReg(REG_OFFSET_BG0VOFS, -POPUP_OFFSCREEN_Y);
+        SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG0 | WINOUT_WINOBJ_BG0);
+    }
+    else
+    {
+        SetGpuReg(REG_OFFSET_BG0VOFS, 0);
+        SetGpuReg(REG_OFFSET_BG0HOFS, -POPUP_OFFSCREEN_X);
+        SetGpuReg(REG_OFFSET_WIN0H, (128 << 8) | 240);
+        SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG1 | WINOUT_WIN01_BG2 | WINOUT_WIN01_BG3 | WINOUT_WIN01_OBJ);
+        SetGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_WIN0_ON);
+    }
+}
+
+static s32 GetSwShPopUpOffscreenOffset(struct Task *task)
+{
+    return task->tSlideVertical ? POPUP_OFFSCREEN_Y : POPUP_OFFSCREEN_X;
+}
+
+static void SetSwShPopUpOffset(struct Task *task, s32 offset)
+{
+    SetGpuReg(task->tSlideVertical ? REG_OFFSET_BG0VOFS : REG_OFFSET_BG0HOFS, offset);
+}
 
 void ShowMapNamePopup(void)
 {
@@ -393,11 +432,7 @@ void ShowMapNamePopup(void)
             else if (OW_POPUP_GENERATION == GEN_8)
             {
                 gPopupTaskId = CreateTask(Task_MapNamePopUpWindow, 90);
-
-                SetGpuReg(REG_OFFSET_BG0HOFS, -POPUP_OFFSCREEN_X);
-                SetGpuReg(REG_OFFSET_WIN0H, (128 << 8) | 240);
-                SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG1 | WINOUT_WIN01_BG2 | WINOUT_WIN01_BG3 | WINOUT_WIN01_OBJ);
-                SetGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_WIN0_ON);
+                SetUpSwShPopUpSlide(&gTasks[gPopupTaskId]);
             }
             else
             {
@@ -449,7 +484,7 @@ static void Task_MapNamePopUpWindow(u8 taskId)
                 struct ComfyAnimEasingConfig config;
                 InitComfyAnimConfig_Easing(&config);
                 config.durationFrames = 20;
-                config.from = Q_24_8(-POPUP_OFFSCREEN_X);
+                config.from = Q_24_8(-GetSwShPopUpOffscreenOffset(task));
                 config.to = Q_24_8(0);
                 config.easingFunc = ComfyAnimEasing_EaseInOutCubic;
                 config.delayFrames = 0;
@@ -458,8 +493,7 @@ static void Task_MapNamePopUpWindow(u8 taskId)
             }
 
             TryAdvanceComfyAnim(&gComfyAnims[task->tComfyAnimId]);
-            s32 xOffset = ReadComfyAnimValueSmooth(&gComfyAnims[task->tComfyAnimId]);
-            SetGpuReg(REG_OFFSET_BG0HOFS, xOffset);
+            SetSwShPopUpOffset(task, ReadComfyAnimValueSmooth(&gComfyAnims[task->tComfyAnimId]));
 
             if (gComfyAnims[task->tComfyAnimId].completed)
             {
@@ -503,7 +537,7 @@ static void Task_MapNamePopUpWindow(u8 taskId)
                 config.durationFrames = 12;
                 s32 currentPos = ReadComfyAnimValueSmooth(&gComfyAnims[task->tComfyAnimId]);
                 config.from = Q_24_8(currentPos);
-                config.to = Q_24_8(-POPUP_OFFSCREEN_X);
+                config.to = Q_24_8(-GetSwShPopUpOffscreenOffset(task));
                 config.easingFunc = ComfyAnimEasing_EaseInOutCubic;
                 config.delayFrames = 0;
                 ReleaseComfyAnim(task->tComfyAnimId);
@@ -512,8 +546,7 @@ static void Task_MapNamePopUpWindow(u8 taskId)
             }
 
             TryAdvanceComfyAnim(&gComfyAnims[task->tComfyAnimId]);
-            s32 xOffset = ReadComfyAnimValueSmooth(&gComfyAnims[task->tComfyAnimId]);
-            SetGpuReg(REG_OFFSET_BG0HOFS, xOffset);
+            SetSwShPopUpOffset(task, ReadComfyAnimValueSmooth(&gComfyAnims[task->tComfyAnimId]));
         }
         else
         {
@@ -534,7 +567,10 @@ static void Task_MapNamePopUpWindow(u8 taskId)
                 // A new pop up window is incoming,
                 // return to the first state to show it.
                 if (OW_POPUP_GENERATION == GEN_8)
+                {
                     ReleaseComfyAnim(task->tComfyAnimId);
+                    SetUpSwShPopUpSlide(task);
+                }
                 task->tState = STATE_PRINT;
                 task->tPrintTimer = 0;
                 task->tIncomingPopUp = FALSE;
@@ -593,7 +629,8 @@ void HideMapNamePopUpWindow(void)
         else if (OW_POPUP_GENERATION == GEN_8)
         {
             ReleaseComfyAnim(gTasks[gPopupTaskId].tComfyAnimId);
-            SetGpuReg(REG_OFFSET_WIN0H, 0xFF);
+            if (!gTasks[gPopupTaskId].tSlideVertical)
+                SetGpuReg(REG_OFFSET_WIN0H, 0xFF);
             SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG0 | WINOUT_WINOBJ_BG0);
         }
 

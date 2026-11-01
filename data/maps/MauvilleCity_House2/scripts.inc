@@ -28,6 +28,8 @@ MauvilleCity_House2_EventScript_AcceptTrade::
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	removeitem ITEM_HARBOR_MAIL
 	setflag FLAG_RECEIVED_COIN_CASE
+	addcoins MAX_COINS
+	msgbox MauvilleCity_House2_Text_CoinCaseIsFull, MSGBOX_DEFAULT
 	goto MauvilleCity_House2_EventScript_ReceivedCoinCase
 	end
 
@@ -58,6 +60,10 @@ MauvilleCity_House2_Text_IllTradeYouCoinCase:
 MauvilleCity_House2_Text_UseCoinCaseAtGameCorner:
 	.string "That COIN CASE can be used\n"
 	.string "at the GAME CORNER.$"
+
+MauvilleCity_House2_Text_CoinCaseIsFull:
+	.string "Oh, and it's still full!\n"
+	.string "{PLAYER} received 9,999 COINS!$"
 
 MauvilleCity_House2_Text_ThatsDisappointing:
 	.string "Oh, that's disappointing.\p"

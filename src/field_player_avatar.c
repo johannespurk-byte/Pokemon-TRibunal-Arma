@@ -1,4 +1,4 @@
-#include "global.h"
+﻿#include "global.h"
 #include "main.h"
 #include "bike.h"
 #include "event_data.h"
@@ -35,6 +35,15 @@
 #include "constants/moves.h"
 #include "constants/songs.h"
 #include "constants/trainer_types.h"
+#include "trainer_card.h"
+
+// 🌟 HARDWARE-FIX: Macht die Charakter-IDs für die Overworld unfehlbar sichtbar!
+#ifndef PLAYER_CHARACTER_RED
+#define PLAYER_CHARACTER_RED  3
+#endif
+#ifndef PLAYER_CHARACTER_LEAF
+#define PLAYER_CHARACTER_LEAF 4
+#endif
 
 #define NUM_FORCED_MOVEMENTS 22
 #define NUM_ACRO_BIKE_COLLISIONS 5
@@ -269,18 +278,6 @@ static const u8 sRivalAvatarGfxIds[][GENDER_COUNT] =
     [PLAYER_AVATAR_STATE_VSSEEKER]   = {OBJ_EVENT_GFX_RIVAL_BRENDAN_FIELD_MOVE, OBJ_EVENT_GFX_RIVAL_MAY_FIELD_MOVE},
 };
 
-static const u16 sPlayerAvatarGfxIds[][GENDER_COUNT] =
-{
-    [PLAYER_AVATAR_STATE_NORMAL]     = {PLAYER_AVATAR_GFX_MALE_NORMAL,     PLAYER_AVATAR_GFX_FEMALE_NORMAL},
-    [PLAYER_AVATAR_STATE_MACH_BIKE]  = {PLAYER_AVATAR_GFX_MALE_MACH_BIKE,  PLAYER_AVATAR_GFX_FEMALE_MACH_BIKE},
-    [PLAYER_AVATAR_STATE_ACRO_BIKE]  = {PLAYER_AVATAR_GFX_MALE_ACRO_BIKE,  PLAYER_AVATAR_GFX_FEMALE_ACRO_BIKE},
-    [PLAYER_AVATAR_STATE_SURFING]    = {PLAYER_AVATAR_GFX_MALE_SURFING,    PLAYER_AVATAR_GFX_FEMALE_SURFING},
-    [PLAYER_AVATAR_STATE_UNDERWATER] = {PLAYER_AVATAR_GFX_MALE_UNDERWATER, PLAYER_AVATAR_GFX_FEMALE_UNDERWATER},
-    [PLAYER_AVATAR_STATE_FIELD_MOVE] = {PLAYER_AVATAR_GFX_MALE_FIELD_MOVE, PLAYER_AVATAR_GFX_FEMALE_FIELD_MOVE},
-    [PLAYER_AVATAR_STATE_FISHING]    = {PLAYER_AVATAR_GFX_MALE_FISHING,    PLAYER_AVATAR_GFX_FEMALE_FISHING},
-    [PLAYER_AVATAR_STATE_WATERING]   = {PLAYER_AVATAR_GFX_MALE_WATERING,   PLAYER_AVATAR_GFX_FEMALE_WATERING},
-    [PLAYER_AVATAR_STATE_VSSEEKER]   = {PLAYER_AVATAR_GFX_MALE_VSSEEKER,   PLAYER_AVATAR_GFX_FEMALE_VSSEEKER},
-};
 
 static const u8 sFRLGAvatarGfxIds[GENDER_COUNT] =
 {
@@ -294,11 +291,27 @@ static const u8 sRSAvatarGfxIds[GENDER_COUNT] =
     [FEMALE] = OBJ_EVENT_GFX_LINK_RS_MAY
 };
 
+// 🌟 NEU: ERWEITERTES MULTI-GENERATIONEN-GRAFIKREGISTER (Typesafe deklariert)
+// Mapped alle Zustände (Gehen, Rad, Surfen, Angeln etc.) für alle 4 Generationen crash-frei!
+static const u16 sPlayerAvatarGfxIds[][GENDER_COUNT] =
+{
+    [PLAYER_AVATAR_STATE_NORMAL] = {PLAYER_AVATAR_GFX_MALE_NORMAL,     PLAYER_AVATAR_GFX_FEMALE_NORMAL},
+    [PLAYER_AVATAR_STATE_MACH_BIKE] = {PLAYER_AVATAR_GFX_MALE_MACH_BIKE,  PLAYER_AVATAR_GFX_FEMALE_MACH_BIKE},
+    [PLAYER_AVATAR_STATE_ACRO_BIKE] = {PLAYER_AVATAR_GFX_MALE_ACRO_BIKE,  PLAYER_AVATAR_GFX_FEMALE_ACRO_BIKE},
+    [PLAYER_AVATAR_STATE_SURFING] = {PLAYER_AVATAR_GFX_MALE_SURFING,    PLAYER_AVATAR_GFX_FEMALE_SURFING},
+    [PLAYER_AVATAR_STATE_UNDERWATER] = {PLAYER_AVATAR_GFX_MALE_UNDERWATER, PLAYER_AVATAR_GFX_FEMALE_UNDERWATER},
+    [PLAYER_AVATAR_STATE_FIELD_MOVE] = {PLAYER_AVATAR_GFX_MALE_FIELD_MOVE, PLAYER_AVATAR_GFX_FEMALE_FIELD_MOVE},
+    [PLAYER_AVATAR_STATE_FISHING] = {PLAYER_AVATAR_GFX_MALE_FISHING,    PLAYER_AVATAR_GFX_FEMALE_FISHING},
+    [PLAYER_AVATAR_STATE_WATERING] = {PLAYER_AVATAR_GFX_MALE_WATERING,   PLAYER_AVATAR_GFX_FEMALE_WATERING},
+    [PLAYER_AVATAR_STATE_VSSEEKER] = {PLAYER_AVATAR_GFX_MALE_VSSEEKER,   PLAYER_AVATAR_GFX_FEMALE_VSSEEKER},
+};
+
+// 🌟 NEU: NATIVE SYSTEM-FLAG-VERBINDUNG FÜR ALLE CUSTOM AVATARE
 static const struct PACKED
 {
     u16 graphicsId;
     u8 playerFlag;
-} sPlayerAvatarGfxToStateFlag[GENDER_COUNT][5] =
+} sPlayerAvatarGfxToStateFlag[GENDER_COUNT][15] =
 {
     [MALE] =
     {
@@ -307,16 +320,179 @@ static const struct PACKED
         {PLAYER_AVATAR_GFX_MALE_ACRO_BIKE,  PLAYER_AVATAR_FLAG_ACRO_BIKE},
         {PLAYER_AVATAR_GFX_MALE_SURFING,    PLAYER_AVATAR_FLAG_SURFING},
         {PLAYER_AVATAR_GFX_MALE_UNDERWATER, PLAYER_AVATAR_FLAG_UNDERWATER},
+        // Spieler-Sprites der anderen Generationen (siehe sCharacterPageAvatarGfx)
+        {OBJ_EVENT_GFX_RED_NORMAL,          PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_RED_BIKE,            PLAYER_AVATAR_FLAG_MACH_BIKE},
+        {OBJ_EVENT_GFX_RED_SURF,            PLAYER_AVATAR_FLAG_SURFING},
+        {OBJ_EVENT_GFX_ETHAN_NORMAL,        PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_LUCAS_NORMAL,        PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_HILBERT_NORMAL,      PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_NATE_NORMAL,         PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_CALEM_NORMAL,        PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_ELIO_NORMAL,         PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_VICTOR_NORMAL,       PLAYER_AVATAR_FLAG_ON_FOOT},
     },
     [FEMALE] =
     {
-        {PLAYER_AVATAR_GFX_FEMALE_NORMAL,         PLAYER_AVATAR_FLAG_ON_FOOT},
-        {PLAYER_AVATAR_GFX_FEMALE_MACH_BIKE,      PLAYER_AVATAR_FLAG_MACH_BIKE},
-        {PLAYER_AVATAR_GFX_FEMALE_ACRO_BIKE,      PLAYER_AVATAR_FLAG_ACRO_BIKE},
-        {PLAYER_AVATAR_GFX_FEMALE_SURFING,        PLAYER_AVATAR_FLAG_SURFING},
-        {PLAYER_AVATAR_GFX_FEMALE_UNDERWATER,     PLAYER_AVATAR_FLAG_UNDERWATER},
+        {PLAYER_AVATAR_GFX_FEMALE_NORMAL,     PLAYER_AVATAR_FLAG_ON_FOOT},
+        {PLAYER_AVATAR_GFX_FEMALE_MACH_BIKE,  PLAYER_AVATAR_FLAG_MACH_BIKE},
+        {PLAYER_AVATAR_GFX_FEMALE_ACRO_BIKE,  PLAYER_AVATAR_FLAG_ACRO_BIKE},
+        {PLAYER_AVATAR_GFX_FEMALE_SURFING,    PLAYER_AVATAR_FLAG_SURFING},
+        {PLAYER_AVATAR_GFX_FEMALE_UNDERWATER, PLAYER_AVATAR_FLAG_UNDERWATER},
+        // Spieler-Sprites der anderen Generationen (siehe sCharacterPageAvatarGfx)
+        {OBJ_EVENT_GFX_GREEN_NORMAL,          PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_GREEN_BIKE,            PLAYER_AVATAR_FLAG_MACH_BIKE},
+        {OBJ_EVENT_GFX_GREEN_SURF,            PLAYER_AVATAR_FLAG_SURFING},
+        {OBJ_EVENT_GFX_LYRA_NORMAL,           PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_DAWN_NORMAL,           PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_HILDA_NORMAL,          PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_ROSA_NORMAL,           PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_SERENA_NORMAL,         PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_SELENE_NORMAL,         PLAYER_AVATAR_FLAG_ON_FOOT},
+        {OBJ_EVENT_GFX_GLORIA_NORMAL,         PLAYER_AVATAR_FLAG_ON_FOOT},
     }
 };
+
+// Spieler-Sprite je Trainerkarten-Seite und Zustand. 0 = Brendan/May aus sPlayerAvatarGfxIds.
+// Gen 1 nutzt das komplette FRLG-Set von Rot/Leaf. Gen 2 und 4-8 haben eigene Lauf-/Renn-Sprites;
+// Fahrrad, Surfen, Angeln und Feldattacke sind Brendan/May-Sprites mit ihrem Kopf und ihren Farben.
+// Tauchen und Gießen bleiben bei Brendan/May.
+#define CHAR_GFX(m, f) { [MALE] = m, [FEMALE] = f }
+#define CHAR_PAGE(M, F)                                                                                             \
+{                                                                                                                   \
+    [PLAYER_AVATAR_STATE_NORMAL]     = CHAR_GFX(OBJ_EVENT_GFX_##M##_NORMAL,     OBJ_EVENT_GFX_##F##_NORMAL),     \
+    [PLAYER_AVATAR_STATE_MACH_BIKE]  = CHAR_GFX(OBJ_EVENT_GFX_##M##_MACH_BIKE,  OBJ_EVENT_GFX_##F##_MACH_BIKE),  \
+    [PLAYER_AVATAR_STATE_ACRO_BIKE]  = CHAR_GFX(OBJ_EVENT_GFX_##M##_ACRO_BIKE,  OBJ_EVENT_GFX_##F##_ACRO_BIKE),  \
+    [PLAYER_AVATAR_STATE_SURFING]    = CHAR_GFX(OBJ_EVENT_GFX_##M##_SURFING,    OBJ_EVENT_GFX_##F##_SURFING),    \
+    [PLAYER_AVATAR_STATE_FIELD_MOVE] = CHAR_GFX(OBJ_EVENT_GFX_##M##_FIELD_MOVE, OBJ_EVENT_GFX_##F##_FIELD_MOVE), \
+    [PLAYER_AVATAR_STATE_FISHING]    = CHAR_GFX(OBJ_EVENT_GFX_##M##_FISHING,    OBJ_EVENT_GFX_##F##_FISHING),    \
+    [PLAYER_AVATAR_STATE_VSSEEKER]   = CHAR_GFX(OBJ_EVENT_GFX_##M##_FIELD_MOVE, OBJ_EVENT_GFX_##F##_FIELD_MOVE), \
+}
+static const u16 sCharacterPageAvatarGfx[][PLAYER_AVATAR_STATE_VSSEEKER + 1][GENDER_COUNT] =
+{
+    [0] = // Gen 1: Rot / Leaf
+    {
+        [PLAYER_AVATAR_STATE_NORMAL]     = CHAR_GFX(OBJ_EVENT_GFX_RED_NORMAL,     OBJ_EVENT_GFX_GREEN_NORMAL),
+        [PLAYER_AVATAR_STATE_MACH_BIKE]  = CHAR_GFX(OBJ_EVENT_GFX_RED_BIKE,       OBJ_EVENT_GFX_GREEN_BIKE),
+        [PLAYER_AVATAR_STATE_ACRO_BIKE]  = CHAR_GFX(OBJ_EVENT_GFX_RED_BIKE,       OBJ_EVENT_GFX_GREEN_BIKE),
+        [PLAYER_AVATAR_STATE_SURFING]    = CHAR_GFX(OBJ_EVENT_GFX_RED_SURF,       OBJ_EVENT_GFX_GREEN_SURF),
+        [PLAYER_AVATAR_STATE_FIELD_MOVE] = CHAR_GFX(OBJ_EVENT_GFX_RED_FIELD_MOVE, OBJ_EVENT_GFX_GREEN_FIELD_MOVE),
+        [PLAYER_AVATAR_STATE_FISHING]    = CHAR_GFX(OBJ_EVENT_GFX_RED_FISH,       OBJ_EVENT_GFX_GREEN_FISH),
+        [PLAYER_AVATAR_STATE_VSSEEKER]   = CHAR_GFX(OBJ_EVENT_GFX_RED_VS_SEEKER,  OBJ_EVENT_GFX_GREEN_VS_SEEKER),
+    },
+    [1] = CHAR_PAGE(ETHAN, LYRA),                                // Gen 2
+    [2] = { [PLAYER_AVATAR_STATE_NORMAL] = CHAR_GFX(0, 0) },     // Gen 3
+    [3] = CHAR_PAGE(LUCAS, DAWN),                                // Gen 4
+    [4] = CHAR_PAGE(HILBERT, HILDA),                             // Gen 5
+    [5] = CHAR_PAGE(NATE, ROSA),                                 // Gen 5-2
+    [6] = CHAR_PAGE(CALEM, SERENA),                              // Gen 6
+    [7] = CHAR_PAGE(ELIO, SELENE),                               // Gen 7
+    [8] = CHAR_PAGE(VICTOR, GLORIA),                             // Gen 8
+};
+#undef CHAR_PAGE
+#undef CHAR_GFX
+
+// Zustand -> Spieler-Flag für die Sprites aus sCharacterPageAvatarGfx
+static const u8 sCharacterStateFlags[PLAYER_AVATAR_STATE_VSSEEKER + 1] =
+{
+    [PLAYER_AVATAR_STATE_NORMAL]     = PLAYER_AVATAR_FLAG_ON_FOOT,
+    [PLAYER_AVATAR_STATE_MACH_BIKE]  = PLAYER_AVATAR_FLAG_MACH_BIKE,
+    [PLAYER_AVATAR_STATE_ACRO_BIKE]  = PLAYER_AVATAR_FLAG_ACRO_BIKE,
+    [PLAYER_AVATAR_STATE_SURFING]    = PLAYER_AVATAR_FLAG_SURFING,
+    [PLAYER_AVATAR_STATE_UNDERWATER] = PLAYER_AVATAR_FLAG_UNDERWATER,
+    [PLAYER_AVATAR_STATE_FIELD_MOVE] = PLAYER_AVATAR_FLAG_ON_FOOT,
+    [PLAYER_AVATAR_STATE_FISHING]    = PLAYER_AVATAR_FLAG_ON_FOOT,
+    [PLAYER_AVATAR_STATE_WATERING]   = PLAYER_AVATAR_FLAG_ON_FOOT,
+    [PLAYER_AVATAR_STATE_VSSEEKER]   = PLAYER_AVATAR_FLAG_ON_FOOT,
+};
+
+// Sucht graphicsId in sCharacterPageAvatarGfx. Gibt FALSE zurück, wenn es kein Sprite der Generationen ist.
+static bool8 FindCharacterPageGfx(u16 graphicsId, u8 *state, enum Gender *gender)
+{
+    u8 page, s;
+    enum Gender g;
+
+    if (graphicsId == 0)
+        return FALSE;
+    for (page = 0; page < ARRAY_COUNT(sCharacterPageAvatarGfx); page++)
+    {
+        for (s = 0; s < ARRAY_COUNT(sCharacterPageAvatarGfx[0]); s++)
+        {
+            for (g = 0; g < GENDER_COUNT; g++)
+            {
+                if (sCharacterPageAvatarGfx[page][s][g] == graphicsId)
+                {
+                    *state = s;
+                    *gender = g;
+                    return TRUE;
+                }
+            }
+        }
+    }
+    return FALSE;
+}
+
+// Brendan/May als Rivale -> Sprite der ausgelosten Rivalen-Figur im selben Zustand.
+// Gen 3 (Seite 2) und fehlende Zustände bleiben beim Rivalen-Sprite von Brendan/May.
+u16 GetRivalGraphicsId(u16 graphicsId)
+{
+    u8 state, page;
+    u16 rivalGfx;
+
+    switch (graphicsId)
+    {
+    case OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL:
+    case OBJ_EVENT_GFX_RIVAL_MAY_NORMAL:
+        state = PLAYER_AVATAR_STATE_NORMAL;
+        break;
+    case OBJ_EVENT_GFX_RIVAL_BRENDAN_MACH_BIKE:
+    case OBJ_EVENT_GFX_RIVAL_MAY_MACH_BIKE:
+        state = PLAYER_AVATAR_STATE_MACH_BIKE;
+        break;
+    case OBJ_EVENT_GFX_RIVAL_BRENDAN_ACRO_BIKE:
+    case OBJ_EVENT_GFX_RIVAL_MAY_ACRO_BIKE:
+        state = PLAYER_AVATAR_STATE_ACRO_BIKE;
+        break;
+    case OBJ_EVENT_GFX_RIVAL_BRENDAN_SURFING:
+    case OBJ_EVENT_GFX_RIVAL_MAY_SURFING:
+        state = PLAYER_AVATAR_STATE_SURFING;
+        break;
+    case OBJ_EVENT_GFX_RIVAL_BRENDAN_FIELD_MOVE:
+    case OBJ_EVENT_GFX_RIVAL_MAY_FIELD_MOVE:
+        state = PLAYER_AVATAR_STATE_FIELD_MOVE;
+        break;
+    default:
+        return graphicsId;
+    }
+
+    page = TrainerCard_GetRivalPage();
+    rivalGfx = sCharacterPageAvatarGfx[page][state][TrainerCard_GetRivalGender()];
+    return rivalGfx != 0 ? rivalGfx : graphicsId;
+}
+
+u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
+{
+    // Seite, die auf der Trainerkarte ausgewählt wurde (im Spielstand gespeichert)
+    return GetCharacterPageAvatarGraphicsId(TrainerCard_GetCharacterPage(), state, gender);
+}
+
+// Overworld-Grafik einer Charakter-Seite; Standardfigur, wenn die Seite keine eigene hat
+u16 GetCharacterPageAvatarGraphicsId(u8 page, u8 state, enum Gender gender)
+{
+    u16 graphicsId = 0;
+
+    if (page < ARRAY_COUNT(sCharacterPageAvatarGfx) && state < ARRAY_COUNT(sCharacterPageAvatarGfx[0]))
+        graphicsId = sCharacterPageAvatarGfx[page][state][gender];
+    if (graphicsId == 0)
+        graphicsId = sPlayerAvatarGfxIds[state][gender];
+    return graphicsId;
+}
+
+
+
+
+
+
 
 static bool8 (*const sArrowWarpMetatileBehaviorChecks2[])(u8) =  //Duplicate of sArrowWarpMetatileBehaviorChecks
 {
@@ -1251,6 +1427,10 @@ void PlayerSetAnimId(u8 movementActionId, enum CopyMovement copyableMovement)
     }
 }
 
+
+
+
+
 // slow stairs (from FRLG--faster than slow)
 static void PlayerWalkSlowStairs(enum Direction direction)
 {
@@ -1263,10 +1443,7 @@ static void UNUSED PlayerWalkSlow(enum Direction direction)
     PlayerSetAnimId(GetWalkSlowMovementAction(direction), COPY_MOVE_WALK);
 }
 
-static void PlayerRunSlow(enum Direction direction)
-{
-    PlayerSetAnimId(GetPlayerRunSlowMovementAction(direction), COPY_MOVE_WALK);
-}
+
 
 // normal speed (1 speed)
 void PlayerWalkNormal(enum Direction direction)
@@ -1289,10 +1466,16 @@ void PlayerWalkFaster(enum Direction direction)
     PlayerSetAnimId(GetWalkFasterMovementAction(direction), COPY_MOVE_WALK);
 }
 
+static void PlayerRunSlow(enum Direction direction)
+{
+    PlayerSetAnimId(GetPlayerRunSlowMovementAction(direction), COPY_MOVE_WALK);
+}
+
 static void PlayerRun(enum Direction direction)
 {
     PlayerSetAnimId(GetPlayerRunMovementAction(direction), COPY_MOVE_WALK);
 }
+
 
 void PlayerOnBikeCollide(enum Direction direction)
 {
@@ -1572,10 +1755,9 @@ u16 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
         return sRivalAvatarGfxIds[state][gender];
 }
 
-u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
-{
-    return sPlayerAvatarGfxIds[state][gender];
-}
+
+
+
 
 u16 GetFRLGAvatarGraphicsIdByGender(enum Gender gender)
 {
@@ -1594,6 +1776,11 @@ u16 GetPlayerAvatarGraphicsIdByStateId(u8 state)
 
 enum Gender GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
 {
+    u8 state;
+    enum Gender gender;
+
+    if (FindCharacterPageGfx(gfxId, &state, &gender))
+        return gender;
     switch (gfxId)
     {
     case OBJ_EVENT_GFX_MAY_NORMAL:
@@ -1611,6 +1798,7 @@ enum Gender GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
     case OBJ_EVENT_GFX_GREEN_FISH:
     case OBJ_EVENT_GFX_GREEN_VS_SEEKER:
     case OBJ_EVENT_GFX_GREEN_VS_SEEKER_BIKE:
+    case OBJ_EVENT_GFX_LEAF:
         return FEMALE;
     default:
         return MALE;
@@ -1670,8 +1858,12 @@ void SetPlayerAvatarStateMask(u8 flags)
 
 static u8 GetPlayerAvatarStateTransitionByGraphicsId(u16 graphicsId, u8 gender)
 {
-    u8 i;
+    u8 i, state;
+    enum Gender pageGender;
 
+    // Sprites der Generationen (auch die Zustände, die nicht in sPlayerAvatarGfxToStateFlag stehen)
+    if (FindCharacterPageGfx(graphicsId, &state, &pageGender))
+        return sCharacterStateFlags[state];
     for (i = 0; i < ARRAY_COUNT(sPlayerAvatarGfxToStateFlag[0]); i++)
     {
         if (sPlayerAvatarGfxToStateFlag[gender][i].graphicsId == graphicsId)
@@ -1680,17 +1872,36 @@ static u8 GetPlayerAvatarStateTransitionByGraphicsId(u16 graphicsId, u8 gender)
     return PLAYER_AVATAR_FLAG_ON_FOOT;
 }
 
+// Über den Zustand statt über die erste passende Tabellenzeile, damit die gewählte Generation erhalten bleibt
 u16 GetPlayerAvatarGraphicsIdByCurrentState(void)
 {
-    u8 i;
     u8 flags = gPlayerAvatar.flags;
+    u8 state = PLAYER_AVATAR_STATE_NORMAL;
 
-    for (i = 0; i < ARRAY_COUNT(sPlayerAvatarGfxToStateFlag[0]); i++)
-    {
-        if (sPlayerAvatarGfxToStateFlag[gPlayerAvatar.gender][i].playerFlag & flags)
-            return sPlayerAvatarGfxToStateFlag[gPlayerAvatar.gender][i].graphicsId;
-    }
-    return 0;
+    if (flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
+        state = PLAYER_AVATAR_STATE_MACH_BIKE;
+    else if (flags & PLAYER_AVATAR_FLAG_ACRO_BIKE)
+        state = PLAYER_AVATAR_STATE_ACRO_BIKE;
+    else if (flags & PLAYER_AVATAR_FLAG_SURFING)
+        state = PLAYER_AVATAR_STATE_SURFING;
+    else if (flags & PLAYER_AVATAR_FLAG_UNDERWATER)
+        state = PLAYER_AVATAR_STATE_UNDERWATER;
+    return GetPlayerAvatarGraphicsIdByStateIdAndGender(state, gPlayerAvatar.gender);
+}
+
+// Nach einem Wechsel auf der Trainerkarte: Spieler-Objekt auf die neue Figur umstellen.
+// Der Sprite wird beim Zurückkehren ins Overworld aus graphicsId neu aufgebaut.
+void UpdatePlayerAvatarForCharacterChange(void)
+{
+    struct ObjectEvent *objectEvent;
+
+    if (gPlayerAvatar.objectEventId >= OBJECT_EVENTS_COUNT)
+        return;
+    objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
+    if (!objectEvent->active || !objectEvent->isPlayer)
+        return;
+    gPlayerAvatar.gender = gSaveBlock2Ptr->playerGender;
+    objectEvent->graphicsId = GetPlayerAvatarGraphicsIdByCurrentState();
 }
 
 void SetPlayerAvatarExtraStateTransition(u16 graphicsId, u8 transitionFlag)

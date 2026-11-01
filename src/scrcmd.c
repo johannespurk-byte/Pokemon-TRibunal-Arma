@@ -2345,7 +2345,7 @@ bool8 ScrCmd_checkfieldmove(struct ScriptContext *ctx)
     u32 i;
 
     // 1. Check for a party Pokémon that can learn the move.
-    for (i = 0; i < gPlayerPartyCount; i++)
+    for (i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
     {
         enum Species species = GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES);
         if (!species)
@@ -2365,6 +2365,18 @@ bool8 ScrCmd_checkfieldmove(struct ScriptContext *ctx)
                 gSpecialVar_Result = PARTY_SIZE;
                 return FALSE;
             }
+        }
+    }
+
+    // With the badge and the HM in the bag the first Pokémon uses the move, even if it can't learn it.
+    if (HasBadgeAndHMForFieldMove(fieldMove))
+    {
+        i = GetFirstNonEggPartySlot();
+        if (i != PARTY_SIZE)
+        {
+            gSpecialVar_Result = i;
+            SetFieldMoveSource(FIELD_MOVE_SOURCE_POKEMON);
+            return FALSE;
         }
     }
 
