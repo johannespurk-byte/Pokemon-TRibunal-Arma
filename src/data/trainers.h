@@ -3175,7 +3175,7 @@
 #line 1232
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 1229
-            .ability = ABILITY_SHEER_FORCE,
+            .ability = ABILITY_STRONG_JAW,
 #line 1232
             .lvl = 100,
             .ball = POKEBALL_COUNT,
@@ -8741,7 +8741,7 @@
 #line 3292
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 3289
-            .ability = ABILITY_SHELL_ARMOR,
+            .ability = ABILITY_SHARPNESS,
 #line 3292
             .lvl = 100,
             .ball = POKEBALL_COUNT,
@@ -12837,7 +12837,7 @@
 #line 4748
             .iv = TRAINER_PARTY_IVS(31, 0, 31, 31, 31, 31),
 #line 4745
-            .ability = ABILITY_MAGICIAN,
+            .ability = ABILITY_MAGIC_GUARD,
 #line 4749
             .lvl = 100,
             .ball = POKEBALL_COUNT,
@@ -13411,7 +13411,7 @@
 #line 4955
             .iv = TRAINER_PARTY_IVS(31, 0, 31, 31, 31, 31),
 #line 4952
-            .ability = ABILITY_MAGICIAN,
+            .ability = ABILITY_MAGIC_GUARD,
 #line 4956
             .lvl = 100,
             .ball = POKEBALL_COUNT,
@@ -26609,7 +26609,7 @@
 #line 9773
             .iv = TRAINER_PARTY_IVS(31, 0, 31, 31, 31, 31),
 #line 9770
-            .ability = ABILITY_STEADFAST,
+            .ability = ABILITY_INNER_FOCUS,
 #line 9774
             .lvl = 100,
             .ball = POKEBALL_COUNT,
