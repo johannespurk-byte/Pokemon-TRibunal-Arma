@@ -136,3 +136,76 @@ Der Text steht in `data/maps/RocketHideout_B4F_Frlg/scripts.inc`.
 
 - Giovanni in der Silph Co. bleibt unverändert.
 - Die Arena von Vertania wird ein eigenes Custom-Event.
+
+## Arenaleiter
+
+Felizia, Kamillo und Walter haben einen Partner eines anderen Typs.
+Nach dem Kampf gegen den Leiter wird das Team geheilt, dann fordert der Partner den Spieler heraus.
+Norman und Misty kämpfen zusammen gegen den Spieler.
+
+### Level
+
+Leiter und Partner kämpfen mit `LEVEL_SCALING_TO_LEVEL_CAP` (`GYM_LEADER_SCALING` in `src/data/level_scaling_rules.h`).
+Jedes Pokémon hat genau die Level-Grenze, die gilt, solange der Orden noch fehlt.
+Normale Arenatrainer skalieren weiter auf das höchste Level im Team des Spielers.
+Die Rematches (`_2` … `_5`) sind unverändert.
+`test/gym_leader_levels.c` prüft die Level.
+
+| Arena | Leiter | Partner | Level |
+|---|---|---|---|
+| Metarost | Felizia (`ROXANNE_1`) | Pyro (`BLAINE`) | 18 |
+| Faustauhaven | Kamillo (`BRAWLY_1`) | Brandon (`BRANDON_DEWFORD`) | 36 |
+| Malvenfroh | Walter (`WATTSON_1`) | Lorelei (`LORELEI_MAUVILLE`) | 50 |
+| Bad Lavastadt | Flavia (`FLANNERY_1`) | – | 60 |
+| Blütenburg | Norman (`NORMAN_1`) | Misty (`MISTY`) | 68 |
+| Baumhausen | Wibke (`WINONA_1`) | – | 74 |
+| Moosbach | Ben & Svenja (`TATE_AND_LIZA_1`) | – | 80 |
+| Xeneroville | Wellenhaupt (`JUAN_1`) | – | 90 |
+
+### Malvenfroh
+
+Walter hat sechs Elektro-Pokémon mit Schutzschilden, Schwebe-Nutzern gegen Boden-Attacken und Mega-Voltenso als Ass.
+Lorelei aus den Top Vier von Kanto hat ein Eis-Team gegen die Boden-Pokémon, die man gegen Walter einsetzt.
+Sie beginnt mit Auroraschleier, ihr Ass ist Gigadynamax-Lapras.
+Für beide Siege gibt es den Dynamo-Orden, TM Schockwelle und von Lorelei den Firnontorit.
+Wer gegen Lorelei verliert, startet wieder bei ihr, nicht bei Walter.
+Die Arenatrainer haben je fünf Pokémon mit Item, EVs, Wesen und Fähigkeit, Heiko hat sechs mit Mega-Guardevoir als Ass.
+
+## Trainer
+
+- **Teams:** Die Trainer der Arena Malvenfroh und von Route 117 haben volle Teams mit Item, EVs, Wesen und Fähigkeit und die KI `Smart Trainer / Prediction`.
+- **Fähigkeiten:** Jedes Trainer-Pokémon hat eine Fähigkeit, die seine Art in Generation 9 noch hat. Sonst stürzt das Spiel mit „ILLEGAL ABILITY“ ab. `test/trainer_parties.c` erzeugt jedes Team aus `src/data/trainers.party` und findet solche Fehler.
+- **Eier:** Arenaleiter, Top Vier, Champs, Rivalen und Bosse (auch Giovanni, Misty und Brandon) geben keine Trainer-Eier.
+
+## VMs außerhalb des Kampfes
+
+Zerschneider, Stärke, Surfer, Fliegen, Zertrümmerer, Blitz, Taucher und Kaskade brauchen kein Pokémon, das die Attacke lernen kann.
+Orden und VM im Beutel reichen, dann setzt das erste Pokémon im Team die Attacke ein.
+Fliegen und Blitz stehen im Teammenü bei jedem Pokémon.
+Im Kampf ändert sich nichts.
+Der Code steht in `src/field_move.c`, der Test in `test/field_move_hm.c`.
+
+## Wilde Pokémon
+
+### Graphitport City (Angeln)
+
+| Angel | Pokémon | Level |
+|---|---|---|
+| Angel | Paldea-Felino, Nigiragi | 5–10 |
+| Profiangel | Calamanero, Welsar, Wailmer | 10–30 |
+| Superangel | Walraisa, Milotic | 25–35 |
+| Superangel | Wailmer | 20–45 |
+
+Die Änderungen stehen in `src/data/wild_encounters.json`.
+
+## Weitere Änderungen
+
+- **Auto-Schutz:** Der Wissenschaftler in Devon Corp. 2F gibt das Auto-Schutz-Item (`ITEM_REPEL_TOOL`), sobald die Devon-Waren zurück sind. Eingeschaltet bleibt es an, bis man es im Beutel ausschaltet (`FLAG_AUTO_REPEL_ON`).
+- **Herr Stein:** Pokémon-Center schreiben nicht mehr in `VAR_DEVON_CORP_3F_STATE`. Spielstände, bei denen die Szene dadurch übersprungen wurde, spielen sie in Devon 3F von ihrem Startpunkt aus ab.
+- **Rusturf Tunnel:** Die Szenen mit dem Aqua-Rüpel, Peeko und Mr. Brack sowie mit dem Paar an den Felsen laufen auf dem neuen Layout.
+- **Magmacamp:** Der versteckte Cameruptit liegt auf `FLAG_UNUSED_0x26A` und kann gefunden werden.
+- **PC-Boxen:** L und R wechseln die Box in jedem Tastenmodus.
+- **Blitz:** Die Licht-Animation endet auch, wenn sich die Helligkeit nicht ändert. Vorher hing das Spiel nach Kamillos Orden (`test/field_flash.c`).
+- **Ortsname:** In dunklen Orten mit Blitz (und in der Kampfpyramide) fährt das Ortsschild von unten herein, damit der Lichtkreis es nicht abschneidet.
+- **Kampftext:** Geschützte Leerzeichen sind wieder leer statt `~`, Trainersprüche werden neu umbrochen.
+- **Sprites:** Sind alle 64 Sprite-Plätze belegt (z. B. Gewitter auf Route 116), fehlen einzelne Grashalme oder Regentropfen, statt dass das Spiel abstürzt.
