@@ -2697,6 +2697,15 @@ static inline bool32 IsAnyAbilityPopUpActive(void)
     return activeAbilityPopUps;
 }
 
+// The pop up, the last used ball window and the move info window share this
+// palette. It is loaded with the healthboxes and kept for the whole battle:
+// freeing it when one of them closed let a stat change animation take the
+// slot while another still showed, which turned that one black.
+void LoadAbilityPopUpPalette(void)
+{
+    LoadSpritePalette(&sSpritePalette_AbilityPopUp);
+}
+
 void CreateAbilityPopUp(enum BattlerId battler, enum Ability ability, bool32 isDoubleBattle)
 {
     u8 *spriteIds;
@@ -2715,8 +2724,7 @@ void CreateAbilityPopUp(enum BattlerId battler, enum Ability ability, bool32 isD
             return;
     }
 
-    if (!IsAnyAbilityPopUpActive())
-        LoadSpritePalette(&sSpritePalette_AbilityPopUp);
+    LoadAbilityPopUpPalette();
 
     tileTag = (TAG_ABILITY_POP_UP_PLAYER1 + battler);
     if (IndexOfSpriteTileTag(tileTag) == 0xFF)
@@ -2746,7 +2754,7 @@ void CreateAbilityPopUp(enum BattlerId battler, enum Ability ability, bool32 isD
     gSprites[spriteIds[1]].oam.tileNum += 32; // Second half of the pop up tiles.
 
     // Create only one instance, as it's only used for
-    // tracking the SpriteSheet(s) and SpritePalette.
+    // tracking the SpriteSheet(s).
     if (!IsAnyAbilityPopUpActive())
         CreateTask(Task_FreeAbilityPopUpGfx, 5);
 
@@ -2853,7 +2861,6 @@ static void Task_FreeAbilityPopUpGfx(u8 taskId)
             if (IndexOfSpriteTileTag(TAG_ABILITY_POP_UP_PLAYER1 + battler) != 0xFF)
                 FreeSpriteTilesByTag(TAG_ABILITY_POP_UP_PLAYER1 + battler);
         }
-        FreeSpritePaletteByTag(TAG_ABILITY_POP_UP);
         DestroyTask(taskId);
     }
 }
@@ -3031,8 +3038,6 @@ void TryAddLastUsedBallItemSprites(void)
 static void DestroyLastUsedBallWinGfx(struct Sprite *sprite)
 {
     FreeSpriteTilesByTag(TAG_LAST_BALL_WINDOW);
-    if (GetSpriteTileStartByTag(MOVE_INFO_WINDOW_TAG) == 0xFFFF)
-        FreeSpritePaletteByTag(TAG_ABILITY_POP_UP);
     DestroySprite(sprite);
     gBattleStruct->ballSpriteIds[1] = MAX_SPRITES;
 }
@@ -3075,8 +3080,6 @@ void TryToHideMoveInfoWindow(void)
 static void DestroyMoveInfoWinGfx(struct Sprite *sprite)
 {
     FreeSpriteTilesByTag(MOVE_INFO_WINDOW_TAG);
-    if (GetSpriteTileStartByTag(TAG_LAST_BALL_WINDOW) == 0xFFFF)
-        FreeSpritePaletteByTag(TAG_ABILITY_POP_UP);
     DestroySprite(sprite);
     gBattleStruct->moveInfoSpriteId = MAX_SPRITES;
 }
