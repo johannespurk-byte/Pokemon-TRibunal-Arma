@@ -945,7 +945,8 @@ static void UpdateFlashLevelEffect(u8 taskId)
         SetFlashScanlineEffectWindowBoundaries(gScanlineEffectRegBuffers[gScanlineEffect.srcBuffer], tFlashCenterX, tFlashCenterY, tCurFlashRadius);
         tState = 0;
         tCurFlashRadius += tFlashRadiusDelta;
-        if (tCurFlashRadius > tDestFlashRadius)
+        if ((tFlashRadiusDelta > 0 && tCurFlashRadius > tDestFlashRadius)
+         || (tFlashRadiusDelta < 0 && tCurFlashRadius < tDestFlashRadius))
         {
             if (tClearScanlineEffect == 1)
             {
@@ -1025,7 +1026,9 @@ static u8 StartUpdateFlashLevelEffect(s32 centerX, s32 centerY, s32 initialFlash
     tFlashCenterY = centerY;
     tClearScanlineEffect = clearScanlineEffect;
 
-    if (initialFlashRadius < destFlashRadius)
+    // An unchanged radius counts up so UpdateFlashLevelEffect stops at once instead of
+    // shrinking forever and leaving the script waiting.
+    if (initialFlashRadius <= destFlashRadius)
         tFlashRadiusDelta = delta;
     else
         tFlashRadiusDelta = -delta;
