@@ -744,6 +744,7 @@ bool8 BattleLoadAllHealthBoxesGfx(u8 state)
             if (gBattleTypeFlags & BATTLE_TYPE_SAFARI)
                 LoadSpritePalette(&sSpritePalettes_HealthBoxHealthBar[2]);
             CategoryIcons_LoadSpritesGfx();
+            LoadAbilityPopUpPalette();
         }
         else if (!IsDoubleBattle())
         {
