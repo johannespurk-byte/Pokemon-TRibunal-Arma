@@ -7,7 +7,7 @@ MauvilleCity_GameCorner_MapScripts::
 	.set TM_FLAMETHROWER_COINS, 4000
 	.set TM_THUNDERBOLT_COINS, 4000
 	.set TM_ICE_BEAM_COINS, 4000
-	.set DOLL_COINS, 1000
+	.set MEGA_MON_COINS, MAX_COINS
 
 	.set COINS_PRICE_50,  1000
 	.set COINS_PRICE_500, 10000
@@ -104,109 +104,142 @@ MauvilleCity_GameCorner_EventScript_PrizeCornerDolls::
 	faceplayer
 	msgbox MauvilleCity_GameCorner_Text_ExchangeCoinsForPrizes, MSGBOX_DEFAULT
 	checkitem ITEM_COIN_CASE
-	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_GameCorner_EventScript_ChooseDollPrizeMessage
+	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_GameCorner_EventScript_ChooseMegaPrizeMessage
 	release
 	end
 
-MauvilleCity_GameCorner_EventScript_ChooseDollPrizeMessage::
+MauvilleCity_GameCorner_EventScript_ChooseMegaPrizeMessage::
 	message MauvilleCity_GameCorner_Text_WhichPrize
 	waitmessage
-	setvar VAR_TEMP_1, 0
 	showcoinsbox 1, 1
-	goto MauvilleCity_GameCorner_EventScript_ChooseDollPrize
+	goto MauvilleCity_GameCorner_EventScript_ChooseMegaPrize
 
-MauvilleCity_GameCorner_EventScript_ReturnToChooseDollPrize::
+MauvilleCity_GameCorner_EventScript_ReturnToChooseMegaPrize::
 	message MauvilleCity_GameCorner_Text_WhichPrize
 	waitmessage
-	goto MauvilleCity_GameCorner_EventScript_ChooseDollPrize
+	goto MauvilleCity_GameCorner_EventScript_ChooseMegaPrize
 
-MauvilleCity_GameCorner_EventScript_ChooseDollPrize::
-	multichoice 12, 0, MULTI_GAME_CORNER_DOLLS, FALSE
+@ Each prize is a rare Pokemon at the current level cap holding its Mega
+@ Stone. VAR_0x8004 is the species, VAR_0x8005 the held Mega Stone and
+@ VAR_0x8008 a second Mega Stone for the bag, or ITEM_NONE.
+MauvilleCity_GameCorner_EventScript_ChooseMegaPrize::
+	dynmultichoice 12, 0, FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, MauvilleCity_GameCorner_Text_MegaGarchomp, MauvilleCity_GameCorner_Text_MegaMewtwo, MauvilleCity_GameCorner_Text_MegaLatias, MauvilleCity_GameCorner_Text_MegaLatios, MauvilleCity_GameCorner_Text_MegaHeatran, MauvilleCity_GameCorner_Text_MegaDarkrai, MauvilleCity_GameCorner_Text_MegaDiancie, MauvilleCity_GameCorner_Text_MegaZygarde, MauvilleCity_GameCorner_Text_MegaFloette, MauvilleCity_GameCorner_Text_MegaMagearna, MauvilleCity_GameCorner_Text_MegaZeraora, gText_Exit
+	setvar VAR_0x8008, ITEM_NONE
 	switch VAR_RESULT
-	case 0, MauvilleCity_GameCorner_EventScript_TreeckoDoll
-	case 1, MauvilleCity_GameCorner_EventScript_TorchicDoll
-	case 2, MauvilleCity_GameCorner_EventScript_MudkipDoll
-	case 3, MauvilleCity_GameCorner_EventScript_CancelDollSelect
-	goto MauvilleCity_GameCorner_EventScript_CancelDollSelect
+	case 0, MauvilleCity_GameCorner_EventScript_MegaGarchomp
+	case 1, MauvilleCity_GameCorner_EventScript_MegaMewtwo
+	case 2, MauvilleCity_GameCorner_EventScript_MegaLatias
+	case 3, MauvilleCity_GameCorner_EventScript_MegaLatios
+	case 4, MauvilleCity_GameCorner_EventScript_MegaHeatran
+	case 5, MauvilleCity_GameCorner_EventScript_MegaDarkrai
+	case 6, MauvilleCity_GameCorner_EventScript_MegaDiancie
+	case 7, MauvilleCity_GameCorner_EventScript_MegaZygarde
+	case 8, MauvilleCity_GameCorner_EventScript_MegaFloette
+	case 9, MauvilleCity_GameCorner_EventScript_MegaMagearna
+	case 10, MauvilleCity_GameCorner_EventScript_MegaZeraora
+	goto MauvilleCity_GameCorner_EventScript_CancelMegaSelect
 	end
 
-MauvilleCity_GameCorner_EventScript_TreeckoDoll::
-	setvar VAR_TEMP_1, 1
-	bufferdecorationname STR_VAR_1, DECOR_TREECKO_DOLL
-	goto MauvilleCity_GameCorner_EventScript_ConfirmDollPrize
+MauvilleCity_GameCorner_EventScript_MegaGarchomp::
+	setvar VAR_0x8004, SPECIES_GARCHOMP
+	setvar VAR_0x8005, ITEM_GARCHOMPITE
+	setvar VAR_0x8008, ITEM_GARCHOMPITE_Z
+	goto MauvilleCity_GameCorner_EventScript_ConfirmMegaPrize
 
-MauvilleCity_GameCorner_EventScript_TorchicDoll::
-	setvar VAR_TEMP_1, 2
-	bufferdecorationname STR_VAR_1, DECOR_TORCHIC_DOLL
-	goto MauvilleCity_GameCorner_EventScript_ConfirmDollPrize
+MauvilleCity_GameCorner_EventScript_MegaMewtwo::
+	setvar VAR_0x8004, SPECIES_MEWTWO
+	setvar VAR_0x8005, ITEM_MEWTWONITE_X
+	setvar VAR_0x8008, ITEM_MEWTWONITE_Y
+	goto MauvilleCity_GameCorner_EventScript_ConfirmMegaPrize
 
-MauvilleCity_GameCorner_EventScript_MudkipDoll::
-	setvar VAR_TEMP_1, 3
-	bufferdecorationname STR_VAR_1, DECOR_MUDKIP_DOLL
-	goto MauvilleCity_GameCorner_EventScript_ConfirmDollPrize
+MauvilleCity_GameCorner_EventScript_MegaLatias::
+	setvar VAR_0x8004, SPECIES_LATIAS
+	setvar VAR_0x8005, ITEM_LATIASITE
+	goto MauvilleCity_GameCorner_EventScript_ConfirmMegaPrize
 
-MauvilleCity_GameCorner_EventScript_ConfirmDollPrize::
+MauvilleCity_GameCorner_EventScript_MegaLatios::
+	setvar VAR_0x8004, SPECIES_LATIOS
+	setvar VAR_0x8005, ITEM_LATIOSITE
+	goto MauvilleCity_GameCorner_EventScript_ConfirmMegaPrize
+
+MauvilleCity_GameCorner_EventScript_MegaHeatran::
+	setvar VAR_0x8004, SPECIES_HEATRAN
+	setvar VAR_0x8005, ITEM_HEATRANITE
+	goto MauvilleCity_GameCorner_EventScript_ConfirmMegaPrize
+
+MauvilleCity_GameCorner_EventScript_MegaDarkrai::
+	setvar VAR_0x8004, SPECIES_DARKRAI
+	setvar VAR_0x8005, ITEM_DARKRANITE
+	goto MauvilleCity_GameCorner_EventScript_ConfirmMegaPrize
+
+MauvilleCity_GameCorner_EventScript_MegaDiancie::
+	setvar VAR_0x8004, SPECIES_DIANCIE
+	setvar VAR_0x8005, ITEM_DIANCITE
+	goto MauvilleCity_GameCorner_EventScript_ConfirmMegaPrize
+
+@ Zygardite only works on Zygarde Complete, which Power Construct turns
+@ the 50% Forme into below half HP.
+MauvilleCity_GameCorner_EventScript_MegaZygarde::
+	setvar VAR_0x8004, SPECIES_ZYGARDE_50_POWER_CONSTRUCT
+	setvar VAR_0x8005, ITEM_ZYGARDITE
+	goto MauvilleCity_GameCorner_EventScript_ConfirmMegaPrize
+
+MauvilleCity_GameCorner_EventScript_MegaFloette::
+	setvar VAR_0x8004, SPECIES_FLOETTE_ETERNAL
+	setvar VAR_0x8005, ITEM_FLOETTITE
+	goto MauvilleCity_GameCorner_EventScript_ConfirmMegaPrize
+
+MauvilleCity_GameCorner_EventScript_MegaMagearna::
+	setvar VAR_0x8004, SPECIES_MAGEARNA
+	setvar VAR_0x8005, ITEM_MAGEARNITE
+	goto MauvilleCity_GameCorner_EventScript_ConfirmMegaPrize
+
+MauvilleCity_GameCorner_EventScript_MegaZeraora::
+	setvar VAR_0x8004, SPECIES_ZERAORA
+	setvar VAR_0x8005, ITEM_ZERAORITE
+	goto MauvilleCity_GameCorner_EventScript_ConfirmMegaPrize
+
+MauvilleCity_GameCorner_EventScript_ConfirmMegaPrize::
+	bufferspeciesname STR_VAR_1, VAR_0x8004
 	msgbox MauvilleCity_GameCorner_Text_SoYourChoiceIsX, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, MauvilleCity_GameCorner_EventScript_CancelDollSelect
-	switch VAR_TEMP_1
-	case 1, MauvilleCity_GameCorner_EventScript_BuyTreeckoDoll
-	case 2, MauvilleCity_GameCorner_EventScript_BuyTorchicDoll
-	case 3, MauvilleCity_GameCorner_EventScript_BuyMudkipDoll
-	end
-
-MauvilleCity_GameCorner_EventScript_BuyTreeckoDoll::
+	goto_if_eq VAR_RESULT, NO, MauvilleCity_GameCorner_EventScript_CancelMegaSelect
 	checkcoins VAR_TEMP_2
-	goto_if_lt VAR_TEMP_2, DOLL_COINS, MauvilleCity_GameCorner_EventScript_NotEnoughCoinsForDoll
-	bufferdecorationname STR_VAR_2, DECOR_TREECKO_DOLL
-	checkdecorspace DECOR_TREECKO_DOLL
-	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_NoRoomForDoll
-	removecoins DOLL_COINS
-	adddecoration DECOR_TREECKO_DOLL
+	goto_if_lt VAR_TEMP_2, MEGA_MON_COINS, MauvilleCity_GameCorner_EventScript_NotEnoughCoinsForMega
+	specialvar VAR_0x8006, GetLevelCapForScript
+	givemon VAR_0x8004, VAR_0x8006, VAR_0x8005
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, MauvilleCity_GameCorner_EventScript_NoRoomForMega
+	copyvar VAR_0x8007, VAR_RESULT
+	removecoins MEGA_MON_COINS
 	updatecoinsbox 1, 1
-	playse SE_SHOP
-	msgbox MauvilleCity_GameCorner_Text_SendToYourHomePC, MSGBOX_DEFAULT
-	goto MauvilleCity_GameCorner_EventScript_ReturnToChooseDollPrize
+	bufferspeciesname STR_VAR_2, VAR_0x8004
+	bufferitemname STR_VAR_3, VAR_0x8005
+	playfanfare MUS_OBTAIN_ITEM
+	message MauvilleCity_GameCorner_Text_ReceivedMegaMon
+	waitmessage
+	waitfanfare
+	call_if_ne VAR_0x8007, MON_GIVEN_TO_PARTY, MauvilleCity_GameCorner_EventScript_MegaMonSentToPC
+	@ Pokemon with two Mega Evolutions get the second stone in the bag.
+	goto_if_eq VAR_0x8008, ITEM_NONE, MauvilleCity_GameCorner_EventScript_ReturnToChooseMegaPrize
+	giveitem VAR_0x8008
+	goto MauvilleCity_GameCorner_EventScript_ReturnToChooseMegaPrize
 	end
 
-MauvilleCity_GameCorner_EventScript_BuyTorchicDoll::
-	checkcoins VAR_TEMP_2
-	goto_if_lt VAR_TEMP_2, DOLL_COINS, MauvilleCity_GameCorner_EventScript_NotEnoughCoinsForDoll
-	bufferdecorationname STR_VAR_2, DECOR_TORCHIC_DOLL
-	checkdecorspace DECOR_TORCHIC_DOLL
-	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_NoRoomForDoll
-	removecoins DOLL_COINS
-	adddecoration DECOR_TORCHIC_DOLL
-	updatecoinsbox 1, 1
-	playse SE_SHOP
-	msgbox MauvilleCity_GameCorner_Text_SendToYourHomePC, MSGBOX_DEFAULT
-	goto MauvilleCity_GameCorner_EventScript_ReturnToChooseDollPrize
-	end
+MauvilleCity_GameCorner_EventScript_MegaMonSentToPC::
+	copyvar VAR_TEMP_TRANSFERRED_SPECIES, VAR_0x8004
+	call Common_EventScript_TransferredToPC
+	return
 
-MauvilleCity_GameCorner_EventScript_BuyMudkipDoll::
-	checkcoins VAR_TEMP_2
-	goto_if_lt VAR_TEMP_2, DOLL_COINS, MauvilleCity_GameCorner_EventScript_NotEnoughCoinsForDoll
-	bufferdecorationname STR_VAR_2, DECOR_MUDKIP_DOLL
-	checkdecorspace DECOR_MUDKIP_DOLL
-	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_NoRoomForDoll
-	removecoins DOLL_COINS
-	adddecoration DECOR_MUDKIP_DOLL
-	updatecoinsbox 1, 1
-	playse SE_SHOP
-	msgbox MauvilleCity_GameCorner_Text_SendToYourHomePC, MSGBOX_DEFAULT
-	goto MauvilleCity_GameCorner_EventScript_ReturnToChooseDollPrize
-	end
-
-MauvilleCity_GameCorner_EventScript_NotEnoughCoinsForDoll::
+MauvilleCity_GameCorner_EventScript_NotEnoughCoinsForMega::
 	msgbox MauvilleCity_GameCorner_Text_NotEnoughCoins, MSGBOX_DEFAULT
-	goto MauvilleCity_GameCorner_EventScript_ReturnToChooseDollPrize
+	goto MauvilleCity_GameCorner_EventScript_ReturnToChooseMegaPrize
 	end
 
-MauvilleCity_GameCorner_EventScript_NoRoomForDoll::
-	call Common_EventScript_NoRoomForDecor
-	goto MauvilleCity_GameCorner_EventScript_ReturnToChooseDollPrize
+MauvilleCity_GameCorner_EventScript_NoRoomForMega::
+	msgbox gText_NoMoreRoomForPokemon, MSGBOX_DEFAULT
+	goto MauvilleCity_GameCorner_EventScript_ReturnToChooseMegaPrize
 	end
 
-MauvilleCity_GameCorner_EventScript_CancelDollSelect::
+MauvilleCity_GameCorner_EventScript_CancelMegaSelect::
 	msgbox MauvilleCity_GameCorner_Text_OhIsThatSo, MSGBOX_DEFAULT
 	hidecoinsbox 0, 0
 	release
@@ -684,6 +717,43 @@ MauvilleCity_GameCorner_Text_OhIsThatSo:
 	.string "Oh, is that so? \n"
 	.string "You need to save some COINS before\l"
 	.string "coming back here.$"
+
+MauvilleCity_GameCorner_Text_MegaGarchomp:
+	.string "Garchomp{CLEAR_TO 56}9,999 COINS$"
+
+MauvilleCity_GameCorner_Text_MegaMewtwo:
+	.string "Mewtwo{CLEAR_TO 56}9,999 COINS$"
+
+MauvilleCity_GameCorner_Text_MegaLatias:
+	.string "Latias{CLEAR_TO 56}9,999 COINS$"
+
+MauvilleCity_GameCorner_Text_MegaLatios:
+	.string "Latios{CLEAR_TO 56}9,999 COINS$"
+
+MauvilleCity_GameCorner_Text_MegaHeatran:
+	.string "Heatran{CLEAR_TO 56}9,999 COINS$"
+
+MauvilleCity_GameCorner_Text_MegaDarkrai:
+	.string "Darkrai{CLEAR_TO 56}9,999 COINS$"
+
+MauvilleCity_GameCorner_Text_MegaDiancie:
+	.string "Diancie{CLEAR_TO 56}9,999 COINS$"
+
+MauvilleCity_GameCorner_Text_MegaZygarde:
+	.string "Zygarde{CLEAR_TO 56}9,999 COINS$"
+
+MauvilleCity_GameCorner_Text_MegaFloette:
+	.string "Floette{CLEAR_TO 56}9,999 COINS$"
+
+MauvilleCity_GameCorner_Text_MegaMagearna:
+	.string "Magearna{CLEAR_TO 56}9,999 COINS$"
+
+MauvilleCity_GameCorner_Text_MegaZeraora:
+	.string "Zeraora{CLEAR_TO 56}9,999 COINS$"
+
+MauvilleCity_GameCorner_Text_ReceivedMegaMon:
+	.string "{PLAYER} received {STR_VAR_2}\n"
+	.string "holding the {STR_VAR_3}!$"
 
 MauvilleCity_GameCorner_Text_SoYourChoiceIsX:
 	.string "So your choice is {STR_VAR_1}?$"

@@ -24,6 +24,12 @@ u32 GetCurrentLevelCap(void)
     return 18; // Dein custom Start-Cap von Level 8 vor der ersten Arena!
 }
 
+// Lets scripts give Pokémon at the current level cap.
+void GetLevelCapForScript(void)
+{
+    gSpecialVar_Result = GetCurrentLevelCap();
+}
+
 
   
 
