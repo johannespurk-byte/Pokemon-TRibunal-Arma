@@ -1233,281 +1233,310 @@ Route110_Text_KalebPostBattle:
 	.string "could, my pretties.$"
 
 Route111_Text_DrewIntro:
-	.string "Oh, hey! Those GO-GOGGLES suit you.\n"
-	.string "But I think they look better on me.\p"
-	.string "Let's decide who they look better on\n"
-	.string "with a battle!$"
+	.string "I'm BROCK, the rock-solid\n"
+	.string "GYM LEADER of PEWTER CITY!\p"
+	.string "Out here, the sandstorm is on\n"
+	.string "my side. Can you see through it?$"
 
 Route111_Text_DrewDefeat:
-	.string "I couldn't see what was happening at\n"
-	.string "my sides because of the GO-GOGGLES.$"
+	.string "You broke through the sand and\n"
+	.string "the rock. Impressive!$"
 
 Route111_Text_DrewPostBattle:
-	.string "The GO-GOGGLES make it possible to\n"
-	.string "get through sandstorms.\l"
-	.string "That makes me happy!$"
+	.string "A sandstorm makes ROCK POKéMON\n"
+	.string "tougher against special attacks.\l"
+	.string "Never forget that out here.$"
 
 Route111_Text_HeidiIntro:
-	.string "I'm having a picnic in the desert.\p"
-	.string "You can always find a TRAINER,\n"
-	.string "so I can enjoy a battle here, too!$"
+	.string "I'm GRETA, the ARENA TYCOON!\p"
+	.string "The desert is my arena now.\n"
+	.string "The sand gives my POKéMON power!$"
 
 Route111_Text_HeidiDefeat:
-	.string "Ohhh! You're mean!$"
+	.string "Whoa! You've got guts!\n"
+	.string "The sand didn't stop you at all!$"
 
 Route111_Text_HeidiPostBattle:
-	.string "When you're battling in a sandstorm,\n"
-	.string "watch out for your POKéMON's HP.\p"
-	.string "It can faint if you don't keep\n"
-	.string "an eye on it!$"
+	.string "SAND FORCE powers up ROCK, GROUND\n"
+	.string "and STEEL moves in a sandstorm.\p"
+	.string "Keep an eye on your HP while the\n"
+	.string "sand is blowing!$"
 
 Route111_Text_BeauIntro:
-	.string "Wearing these GO-GOGGLES makes me\n"
-	.string "feel like a superhero.\l"
-	.string "Right now, nobody can beat me!$"
+	.string "I am KOGA, master of poison and\n"
+	.string "of the ninja arts!\p"
+	.string "Hidden in the sand, my POKéMON\n"
+	.string "will never be hit!$"
 
 Route111_Text_BeauDefeat:
-	.string "I can't win on spirit alone…$"
+	.string "Fwahahaha!\n"
+	.string "You saw through my sand veil!$"
 
 Route111_Text_BeauPostBattle:
-	.string "I'm going to be a real hero one day.\n"
-	.string "I'm going to work harder to make me\l"
-	.string "and my POKéMON stronger.$"
+	.string "SAND VEIL makes POKéMON harder to\n"
+	.string "hit in a sandstorm.\l"
+	.string "A true ninja never stands in sight.$"
 
 Route111_Text_BeckyIntro:
-	.string "I heard there are fossils to be found\n"
-	.string "in the desert. Where could they be?$"
+	.string "I am SABRINA.\n"
+	.string "I foresaw your arrival.\p"
+	.string "Sun, rain, sand or snow…\n"
+	.string "Weather tricks mean nothing to me!$"
 
 Route111_Text_BeckyDefeat:
-	.string "I came up short…$"
+	.string "This loss…\n"
+	.string "Even I did not foresee it.$"
 
 Route111_Text_BeckyPostBattle:
-	.string "If they can find fossils in the desert,\n"
-	.string "it must have been a sea before.$"
+	.string "CLOUD NINE cancels all weather.\n"
+	.string "OVERCOAT blocks sandstorm damage.\p"
+	.string "The best answer to weather is\n"
+	.string "to take it away.$"
 
 Route111_Text_DustyIntro:
-	.string "For thirty years I have searched for\n"
-	.string "ancient ruins!\l"
-	.string "I am to be challenged?$"
+	.string "I am LANCE, of the ELITE FOUR.\p"
+	.string "Even DRAGON POKéMON master the\n"
+	.string "sandstorm. Prepare yourself!$"
 
 Route111_Text_DustyDefeat:
-	.string "While I have searched for ruins,\n"
-	.string "I've not searched for strong POKéMON.$"
+	.string "I see…\n"
+	.string "You are a superior trainer.$"
 
 Route111_Text_DustyPostBattle:
-	.string "For thirty years I have searched for\n"
-	.string "ancient ruins!\p"
-	.string "No, wait, was that forty years?\n"
-	.string "Which was it now?$"
+	.string "SAND RUSH doubles a POKéMON's\n"
+	.string "speed in a sandstorm.\l"
+	.string "Strike first or fall.$"
 
 Route111_Text_DustyRegister:
-	.string "I haven't been searching for any\n"
-	.string "tough POKéMON.\p"
-	.string "But, for some reason, I sure do like\n"
-	.string "POKéNAVS.$"
+	.string "Let's stay in touch.\n"
+	.string "I want a rematch one day.$"
 
 Route111_Text_DustyRematchIntro:
-	.string "For thirty years I have searched for\n"
-	.string "ancient ruins!\p"
-	.string "No, wait, was that forty years?\n"
-	.string "Anyway, am I to be challenged?$"
+	.string "The sandstorm still rages, and so\n"
+	.string "does my DRAGON spirit!\l"
+	.string "Shall we battle again?$"
 
 Route111_Text_DustyRematchDefeat:
-	.string "I've found no ruins, nor have I found\n"
-	.string "any strong POKéMON…$"
+	.string "Again you have bested me.\n"
+	.string "Remarkable.$"
 
 Route111_Text_DustyPostRematch:
-	.string "For thirty years I have searched for\n"
-	.string "ancient ruins!\p"
-	.string "No, wait, was that forty years\n"
-	.string "I've searched?\p"
-	.string "Hmm… It could even be fifty…\n"
-	.string "How long have I been at this?$"
+	.string "You will go far.\n"
+	.string "I will be waiting at the top.$"
 
 Route111_Text_TravisIntro:
-	.string "I'm full of pep!\n"
-	.string "And my POKéMON is peppy, too!$"
+	.string "I'm TUCKER, the DOME ACE!\p"
+	.string "Your weakness? You underestimate\n"
+	.string "the desert. I'll show you!$"
 
 Route111_Text_TravisDefeat:
-	.string "My POKéMON lost its pep…$"
+	.string "Splendid!\n"
+	.string "You're quite something!$"
 
 Route111_Text_TravisPostBattle:
-	.string "When I see a TRAINER with a lot of pep,\n"
-	.string "I can't help looking.$"
+	.string "SAND SPIT whips up a sandstorm\n"
+	.string "whenever the POKéMON gets hit.\l"
+	.string "Every attack feeds the storm!$"
 
 Route111_Text_IreneIntro:
-	.string "I don't know where you're going,\n"
-	.string "but would you like to battle?$"
+	.string "I am LORELEI of the ELITE FOUR.\p"
+	.string "My snow even reaches the desert.\n"
+	.string "Two against two. Freeze!$"
 
 Route111_Text_IreneDefeat:
-	.string "Oh, you're disgustingly good!$"
+	.string "You melted through my snowstorm…\n"
+	.string "How dare you!$"
+
+Route111_Text_IreneNotEnoughMons:
+	.string "My snowstorm needs two partners.\n"
+	.string "Bring at least two POKéMON.$"
 
 Route111_Text_IrenePostBattle:
-	.string "I'm thinking that I should go to\n"
-	.string "MT. CHIMNEY, but the view around\l"
-	.string "here is very nice, too.$"
+	.string "In snow, BLIZZARD never misses.\n"
+	.string "SLUSH RUSH doubles speed, too.$"
 
 Route111_Text_DaisukeIntro:
-	.string "To train myself, I challenge all\n"
-	.string "whom I meet!$"
+	.string "I'm BRUNO of the ELITE FOUR!\p"
+	.string "Rain and muscle! TAILWIND and\n"
+	.string "SWIFT SWIM! Two on two! Hoo hah!$"
 
 Route111_Text_DaisukeDefeat:
-	.string "Uncle! I give up!$"
+	.string "Why? How could I lose?$"
+
+Route111_Text_DaisukeNotEnoughMons:
+	.string "Hoo hah! I fight two against two!\n"
+	.string "Bring at least two POKéMON!$"
 
 Route111_Text_DaisukePostBattle:
-	.string "All I can do is keep training until\n"
-	.string "I can defeat strong TRAINERS such\l"
-	.string "as yourself.$"
+	.string "DRY SKIN heals in the rain, and\n"
+	.string "SWIFT SWIM doubles speed.\l"
+	.string "Rain and fists go well together!$"
 
 Route111_Text_WiltonIntro:
-	.string "Show me how much you've toughened\n"
-	.string "your POKéMON.$"
+	.string "I'm MISTY, the tomboyish mermaid\n"
+	.string "of CERULEAN CITY!\p"
+	.string "Even in the desert,\n"
+	.string "I bring the rain! Let's go!$"
 
 Route111_Text_WiltonDefeat:
-	.string "I see, you've toughened them\n"
-	.string "considerably.$"
+	.string "Wow!\n"
+	.string "You're too much!$"
 
 Route111_Text_WiltonPostBattle:
-	.string "POKéMON and TRAINERS learn much\n"
-	.string "through battling.\p"
-	.string "What's important is to never give up\n"
-	.string "even if you lose.$"
+	.string "In the rain, THUNDER never misses\n"
+	.string "and WATER moves hit way harder!$"
 
 Route111_Text_WiltonRegister:
-	.string "There is much to be learned from\n"
-	.string "your training style.\p"
-	.string "I request a rematch if it\n"
-	.string "behooves you.$"
+	.string "You're good! Let's trade numbers.\n"
+	.string "I want a rematch!$"
 
 Route111_Text_WiltonRematchIntro:
-	.string "We're training here to elevate our\n"
-	.string "game to the next level.\l"
-	.string "Stay and train with us!$"
+	.string "It's still raining where I am!\n"
+	.string "Ready for round two?$"
 
 Route111_Text_WiltonRematchDefeat:
-	.string "Ooh, you're decent!$"
+	.string "No way!\n"
+	.string "You beat me again!$"
 
 Route111_Text_WiltonPostRematch:
-	.string "Since you're that strong, you should\n"
+	.string "With that strength, you should\n"
 	.string "aim for the POKéMON LEAGUE.$"
 
 Route111_Text_BrookeIntro:
-	.string "Oh, your POKéMON look like serious\n"
-	.string "actors.\l"
-	.string "I have to ask you for an engagement.$"
+	.string "I am ANABEL, the SALON MAIDEN.\p"
+	.string "Under the blazing sun, ancient\n"
+	.string "power awakens. Let me show you.$"
 
 Route111_Text_BrookeDefeat:
-	.string "They didn't just look strong,\n"
-	.string "they are strong!$"
+	.string "Your strength…\n"
+	.string "I felt it under the sun.$"
 
 Route111_Text_BrookePostBattle:
-	.string "I thought I was raising my POKéMON\n"
-	.string "diligently, but, oh no, there is still\l"
-	.string "much to be done.$"
+	.string "PROTOSYNTHESIS awakens in harsh\n"
+	.string "sunlight and boosts a POKéMON's\l"
+	.string "best stat.$"
 
 Route111_Text_BrookeRegister:
-	.string "I wish I could become friends with\n"
-	.string "more strong people like you!$"
+	.string "I would like to battle you again.\n"
+	.string "Let us stay in touch.$"
 
 Route111_Text_BrookeRematchIntro:
-	.string "You can make POKéMON stronger or\n"
-	.string "weaker depending on the moves you\l"
-	.string "teach them.\p"
-	.string "What kinds of moves do your POKéMON\n"
-	.string "know?$"
+	.string "The sun is shining again.\n"
+	.string "Are you ready?$"
 
 Route111_Text_BrookeRematchDefeat:
-	.string "You've taught them good moves!$"
+	.string "You are as strong as I remember.$"
 
 Route111_Text_BrookePostRematch:
-	.string "Maybe I should have stopped my\n"
-	.string "POKéMON from evolving until they\l"
-	.string "learned better moves…$"
+	.string "Weather is a battle of timing.\n"
+	.string "Whoever controls it, wins.$"
 
 Route111_Text_CeliaIntro:
-	.string "I shouldn't have come to a place like\n"
-	.string "this for a picnic!$"
+	.string "I'm LUCY, the PIKE QUEEN.\p"
+	.string "The rain is my domain.\n"
+	.string "Two against two.$"
 
 Route111_Text_CeliaDefeat:
-	.string "Aww!\n"
-	.string "I really shouldn't have come!$"
+	.string "…\n"
+	.string "I lost.$"
+
+Route111_Text_CeliaNotEnoughMons:
+	.string "Two POKéMON.\n"
+	.string "Come back when you have them.$"
 
 Route111_Text_CeliaPostBattle:
-	.string "In a sandstorm like this, I can't set\n"
-	.string "the places for a picnic even with my\l"
-	.string "GO-GOGGLES on…$"
+	.string "Set the rain, then strike fast.\n"
+	.string "That's all there is to it.$"
 
 Route111_Text_BryanIntro:
-	.string "How tough are you?\n"
-	.string "We shall expose that secret!$"
+	.string "I'm NOLAND, the FACTORY HEAD!\p"
+	.string "Knowledge of the sands is\n"
+	.string "the key to victory. Let's go!$"
 
 Route111_Text_BryanDefeat:
-	.string "Oh! Your strength!\n"
-	.string "It is shrouded in mystery!$"
+	.string "Smart work!\n"
+	.string "You knew what you were doing!$"
 
 Route111_Text_BryanPostBattle:
-	.string "This desert hoards mysteries in\n"
-	.string "its shifting sands!$"
+	.string "A sandstorm chips away at every\n"
+	.string "POKéMON that isn't ROCK, GROUND\l"
+	.string "or STEEL type.$"
 
 Route111_Text_BrandenIntro:
-	.string "I'll give you some of my sandwich\n"
-	.string "if you'll lose.$"
+	.string "I am SPENSER, the PALACE MAVEN.\p"
+	.string "My CASTFORM changes with the sky.\n"
+	.string "Rain or sun, we are ready!$"
 
 Route111_Text_BrandenDefeat:
-	.string "Tch! I thought a sandwich would be\n"
-	.string "enough of a bribe…$"
+	.string "Gwahahaha!\n"
+	.string "The weather turned on me!$"
 
 Route111_Text_BrandenPostBattle:
-	.string "My SANDSHREW loves eating\n"
-	.string "my sandwiches.$"
+	.string "WEATHER BALL changes its type and\n"
+	.string "doubles its power in any weather.$"
 
 Route111_Text_TyronIntro:
-	.string "This is my favorite kind of POKéMON!$"
+	.string "I'm BRANDON, the PYRAMID KING!\p"
+	.string "In the sandstorm, my ROCK POKéMON\n"
+	.string "become unbreakable walls!$"
 
 Route111_Text_TyronDefeat:
-	.string "Wait!\n"
-	.string "Did you get a good look at my POKéMON?$"
+	.string "Hahaha!\n"
+	.string "You've got real courage!$"
 
 Route111_Text_TyronPostBattle:
-	.string "When having a battle, I get a kick out\n"
-	.string "of showing off my POKéMON.\p"
-	.string "I bet everyone feels that way when\n"
-	.string "they enter a battle!$"
+	.string "ROCK POKéMON get a boost to their\n"
+	.string "SP. DEF in a sandstorm.\l"
+	.string "A true wall stands firm!$"
 
 Route111_Text_CelinaIntro:
-	.string "Show me how to put a little excitement\n"
-	.string "into my life.$"
+	.string "I'm ERIKA of CELADON CITY.\p"
+	.string "The sun makes my flowers bloom.\n"
+	.string "Shall we battle, two on two?$"
 
 Route111_Text_CelinaDefeat:
-	.string "Oh… My…\n"
-	.string "That was too much excitement.$"
+	.string "Oh!\n"
+	.string "I concede defeat.$"
+
+Route111_Text_CelinaNotEnoughMons:
+	.string "Oh, I battle two against two.\n"
+	.string "Please bring two POKéMON.$"
 
 Route111_Text_CelinaPostBattle:
-	.string "My pulse is still racing.\n"
-	.string "You're one fabulous TRAINER.$"
+	.string "CHLOROPHYLL doubles speed in sun.\n"
+	.string "SOLAR BEAM needs no charge, too.$"
 
 Route111_Text_HaydenIntro:
-	.string "When you're as famished as I am,\n"
-	.string "there is no room for pity!$"
+	.string "Hah! I'm BLAINE, the hotheaded\n"
+	.string "quiz master!\p"
+	.string "Question: what's hotter than the\n"
+	.string "desert? My double battle!$"
 
 Route111_Text_HaydenDefeat:
-	.string "Groan…$"
+	.string "I have burned down to nothing!\n"
+	.string "Not even ashes remain!$"
+
+Route111_Text_HaydenNotEnoughMons:
+	.string "Hah! I fight two at once!\n"
+	.string "Bring at least two POKéMON!$"
 
 Route111_Text_HaydenPostBattle:
-	.string "My stomach is grumbling!\n"
-	.string "Maybe I can grill some BERRIES…$"
+	.string "Quiz! What does DROUGHT do?\n"
+	.string "It brings harsh sunlight!\l"
+	.string "FIRE moves burn even hotter!$"
 
 Route111_Text_BiancaIntro:
-	.string "Did you come from MAUVILLE?\n"
-	.string "Then you should be full of energy!$"
+	.string "I'm AGATHA of the ELITE FOUR.\p"
+	.string "Snow in the desert? My ghosts\n"
+	.string "love a chill, child!$"
 
 Route111_Text_BiancaDefeat:
-	.string "Ooh lala!\n"
-	.string "That's a lot to take!$"
+	.string "Oh ho!\n"
+	.string "You are something special!$"
 
 Route111_Text_BiancaPostBattle:
-	.string "This road here…\n"
-	.string "You have quite a ways to travel.$"
+	.string "SNOW CLOAK hides POKéMON in snow.\n"
+	.string "AURORA VEIL halves the damage.$"
 
 Route112_Text_BriceIntro:
 	.string "Hahahaha!\n"

@@ -471,12 +471,12 @@ Route111_EventScript_Travis::
 	end
 
 Route111_EventScript_Irene::
-	trainerbattle_single TRAINER_IRENE, Route111_Text_IreneIntro, Route111_Text_IreneDefeat
+	trainerbattle_double TRAINER_IRENE, Route111_Text_IreneIntro, Route111_Text_IreneDefeat, Route111_Text_IreneNotEnoughMons
 	msgbox Route111_Text_IrenePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route111_EventScript_Daisuke::
-	trainerbattle_single TRAINER_DAISUKE, Route111_Text_DaisukeIntro, Route111_Text_DaisukeDefeat
+	trainerbattle_double TRAINER_DAISUKE, Route111_Text_DaisukeIntro, Route111_Text_DaisukeDefeat, Route111_Text_DaisukeNotEnoughMons
 	msgbox Route111_Text_DaisukePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -523,7 +523,7 @@ Route111_EventScript_RematchBrooke::
 	end
 
 Route111_EventScript_Hayden::
-	trainerbattle_single TRAINER_HAYDEN, Route111_Text_HaydenIntro, Route111_Text_HaydenDefeat
+	trainerbattle_double TRAINER_HAYDEN, Route111_Text_HaydenIntro, Route111_Text_HaydenDefeat, Route111_Text_HaydenNotEnoughMons
 	msgbox Route111_Text_HaydenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -538,12 +538,12 @@ Route111_EventScript_Tyron::
 	end
 
 Route111_EventScript_Celina::
-	trainerbattle_single TRAINER_CELINA, Route111_Text_CelinaIntro, Route111_Text_CelinaDefeat
+	trainerbattle_double TRAINER_CELINA, Route111_Text_CelinaIntro, Route111_Text_CelinaDefeat, Route111_Text_CelinaNotEnoughMons
 	msgbox Route111_Text_CelinaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route111_EventScript_Celia::
-	trainerbattle_single TRAINER_CELIA, Route111_Text_CeliaIntro, Route111_Text_CeliaDefeat
+	trainerbattle_double TRAINER_CELIA, Route111_Text_CeliaIntro, Route111_Text_CeliaDefeat, Route111_Text_CeliaNotEnoughMons
 	msgbox Route111_Text_CeliaPostBattle, MSGBOX_AUTOCLOSE
 	end
 

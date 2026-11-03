@@ -916,21 +916,49 @@ Level: 34
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_DUSTY_1 ===
-Name: DUSTY
-Class: Ruin Maniac
-Pic: Ruin Maniac
+Name: LANCE
+Class: Elite Four Frlg
+Pic: Elite Four Lance Frlg
 Gender: Male
-Music: Hiker
+Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Sandslash
-Level: 23
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
+Tyranitar @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Stealth Rock
+- Stone Edge
+- Crunch
+- Earthquake
+
+Excadrill @ Life Orb
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Swords Dance
+- Earthquake
+- Iron Head
+- Rock Slide
+
+Sandslash @ Leftovers
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Earthquake
+- Knock Off
+- Rapid Spin
+
+Garchomp @ Bright Powder
+Ability: Sand Veil
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Earthquake
+- Dragon Claw
+- Stone Edge
 
 === TRAINER_CHIP ===
 Name: CHIP
@@ -991,72 +1019,184 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Poison Sting
 
 === TRAINER_DUSTY_2 ===
-Name: DUSTY
-Class: Ruin Maniac
-Pic: Ruin Maniac
+Name: LANCE
+Class: Elite Four Frlg
+Pic: Elite Four Lance Frlg
 Gender: Male
-Music: Hiker
+Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Sandslash
-Level: 27
-IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
+Tyranitar @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Stealth Rock
+- Stone Edge
+- Crunch
+- Earthquake
+
+Excadrill @ Life Orb
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Swords Dance
+- Earthquake
+- Iron Head
+- Rock Slide
+
+Sandslash @ Leftovers
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Earthquake
+- Knock Off
+- Rapid Spin
+
+Garchomp @ Bright Powder
+Ability: Sand Veil
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Earthquake
+- Dragon Claw
+- Stone Edge
 
 === TRAINER_DUSTY_3 ===
-Name: DUSTY
-Class: Ruin Maniac
-Pic: Ruin Maniac
+Name: LANCE
+Class: Elite Four Frlg
+Pic: Elite Four Lance Frlg
 Gender: Male
-Music: Hiker
+Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Sandslash
-Level: 30
-IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
+Tyranitar @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Stealth Rock
+- Stone Edge
+- Crunch
+- Earthquake
+
+Excadrill @ Life Orb
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Swords Dance
+- Earthquake
+- Iron Head
+- Rock Slide
+
+Sandslash @ Leftovers
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Earthquake
+- Knock Off
+- Rapid Spin
+
+Garchomp @ Bright Powder
+Ability: Sand Veil
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Earthquake
+- Dragon Claw
+- Stone Edge
 
 === TRAINER_DUSTY_4 ===
-Name: DUSTY
-Class: Ruin Maniac
-Pic: Ruin Maniac
+Name: LANCE
+Class: Elite Four Frlg
+Pic: Elite Four Lance Frlg
 Gender: Male
-Music: Hiker
+Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Sandslash
-Level: 33
-IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
+Tyranitar @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Stealth Rock
+- Stone Edge
+- Crunch
+- Earthquake
+
+Excadrill @ Life Orb
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Swords Dance
+- Earthquake
+- Iron Head
+- Rock Slide
+
+Sandslash @ Leftovers
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Earthquake
+- Knock Off
+- Rapid Spin
+
+Garchomp @ Bright Powder
+Ability: Sand Veil
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Earthquake
+- Dragon Claw
+- Stone Edge
 
 === TRAINER_DUSTY_5 ===
-Name: DUSTY
-Class: Ruin Maniac
-Pic: Ruin Maniac
+Name: LANCE
+Class: Elite Four Frlg
+Pic: Elite Four Lance Frlg
 Gender: Male
-Music: Hiker
+Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Sandslash
-Level: 36
-IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
+Tyranitar @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Stealth Rock
+- Stone Edge
+- Crunch
+- Earthquake
+
+Excadrill @ Life Orb
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Swords Dance
+- Earthquake
+- Iron Head
+- Rock Slide
+
+Sandslash @ Leftovers
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Earthquake
+- Knock Off
+- Rapid Spin
+
+Garchomp @ Bright Powder
+Ability: Sand Veil
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Earthquake
+- Dragon Claw
+- Stone Edge
 
 === TRAINER_GABBY_AND_TY_1 ===
 Name: GABBY & TY
@@ -1744,26 +1884,50 @@ Level: 46
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_WILTON_1 ===
-Name: WILTON
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
+Name: MISTY
+Class: Leader Frlg
+Pic: Leader Misty Frlg
+Gender: Female
+Music: Intense
 Items: Super Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction
 
-Electrike
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Politoed @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+- Scald
+- Ice Beam
+- Encore
+- Protect
 
-Wailmer
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Kingdra @ Choice Specs
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Hydro Pump
+- Draco Meteor
+- Ice Beam
+- Surf
 
-Makuhita
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Manectric @ Life Orb
+Ability: Lightning Rod
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunder
+- Overheat
+- Volt Switch
+- Snarl
+
+Barraskewda @ Choice Band
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Psychic Fangs
+- Aqua Jet
 
 === TRAINER_EDGAR ===
 Name: EDGAR
@@ -1872,92 +2036,188 @@ Level: 42
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_WILTON_2 ===
-Name: WILTON
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
+Name: MISTY
+Class: Leader Frlg
+Pic: Leader Misty Frlg
+Gender: Female
+Music: Intense
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction
 
-Electrike
-Level: 26
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Politoed @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+- Scald
+- Ice Beam
+- Encore
+- Protect
 
-Wailmer
-Level: 26
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Kingdra @ Choice Specs
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Hydro Pump
+- Draco Meteor
+- Ice Beam
+- Surf
 
-Makuhita
-Level: 26
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Manectric @ Life Orb
+Ability: Lightning Rod
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunder
+- Overheat
+- Volt Switch
+- Snarl
+
+Barraskewda @ Choice Band
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Psychic Fangs
+- Aqua Jet
 
 === TRAINER_WILTON_3 ===
-Name: WILTON
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
+Name: MISTY
+Class: Leader Frlg
+Pic: Leader Misty Frlg
+Gender: Female
+Music: Intense
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction
 
-Manectric
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Politoed @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+- Scald
+- Ice Beam
+- Encore
+- Protect
 
-Wailmer
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Kingdra @ Choice Specs
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Hydro Pump
+- Draco Meteor
+- Ice Beam
+- Surf
 
-Makuhita
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Manectric @ Life Orb
+Ability: Lightning Rod
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunder
+- Overheat
+- Volt Switch
+- Snarl
+
+Barraskewda @ Choice Band
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Psychic Fangs
+- Aqua Jet
 
 === TRAINER_WILTON_4 ===
-Name: WILTON
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
+Name: MISTY
+Class: Leader Frlg
+Pic: Leader Misty Frlg
+Gender: Female
+Music: Intense
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction
 
-Manectric
-Level: 32
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Politoed @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+- Scald
+- Ice Beam
+- Encore
+- Protect
 
-Wailmer
-Level: 32
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Kingdra @ Choice Specs
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Hydro Pump
+- Draco Meteor
+- Ice Beam
+- Surf
 
-Makuhita
-Level: 32
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Manectric @ Life Orb
+Ability: Lightning Rod
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunder
+- Overheat
+- Volt Switch
+- Snarl
+
+Barraskewda @ Choice Band
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Psychic Fangs
+- Aqua Jet
 
 === TRAINER_WILTON_5 ===
-Name: WILTON
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
+Name: MISTY
+Class: Leader Frlg
+Pic: Leader Misty Frlg
+Gender: Female
+Music: Intense
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction
 
-Manectric
-Level: 35
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
+Politoed @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+- Scald
+- Ice Beam
+- Encore
+- Protect
 
-Wailmer
-Level: 35
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
+Kingdra @ Choice Specs
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Hydro Pump
+- Draco Meteor
+- Ice Beam
+- Surf
 
-Hariyama
-Level: 35
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
+Manectric @ Life Orb
+Ability: Lightning Rod
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunder
+- Overheat
+- Volt Switch
+- Snarl
+
+Barraskewda @ Choice Band
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Psychic Fangs
+- Aqua Jet
 
 === TRAINER_WARREN ===
 Name: WARREN
@@ -2115,26 +2375,41 @@ Level: 45
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_BROOKE_1 ===
-Name: BROOKE
-Class: Cooltrainer
-Pic: Cooltrainer F
+Name: ANABEL
+Class: Salon Maiden
+Pic: Salon Maiden Anabel
 Gender: Female
-Music: Cool
+Music: Intense
 Items: Super Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction
 
-Wingull
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Torkoal @ Heat Rock
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+- Eruption
+- Heat Wave
+- Solar Beam
+- Yawn
 
-Numel
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Great Tusk @ Leftovers
+Ability: Protosynthesis
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Rapid Spin
+- Headlong Rush
+- Close Combat
+- Ice Spinner
 
-Roselia
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Leafeon @ Life Orb
+Ability: Chlorophyll
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Leaf Blade
+- Knock Off
+- X-Scissor
 
 === TRAINER_JENNIFER ===
 Name: JENNIFER
@@ -2241,92 +2516,152 @@ Level: 42
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_BROOKE_2 ===
-Name: BROOKE
-Class: Cooltrainer
-Pic: Cooltrainer F
+Name: ANABEL
+Class: Salon Maiden
+Pic: Salon Maiden Anabel
 Gender: Female
-Music: Cool
+Music: Intense
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction
 
-Wingull
-Level: 26
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Torkoal @ Heat Rock
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+- Eruption
+- Heat Wave
+- Solar Beam
+- Yawn
 
-Numel
-Level: 26
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Great Tusk @ Leftovers
+Ability: Protosynthesis
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Rapid Spin
+- Headlong Rush
+- Close Combat
+- Ice Spinner
 
-Roselia
-Level: 26
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Leafeon @ Life Orb
+Ability: Chlorophyll
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Leaf Blade
+- Knock Off
+- X-Scissor
 
 === TRAINER_BROOKE_3 ===
-Name: BROOKE
-Class: Cooltrainer
-Pic: Cooltrainer F
+Name: ANABEL
+Class: Salon Maiden
+Pic: Salon Maiden Anabel
 Gender: Female
-Music: Cool
+Music: Intense
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction
 
-Pelipper
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Torkoal @ Heat Rock
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+- Eruption
+- Heat Wave
+- Solar Beam
+- Yawn
 
-Numel
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Great Tusk @ Leftovers
+Ability: Protosynthesis
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Rapid Spin
+- Headlong Rush
+- Close Combat
+- Ice Spinner
 
-Roselia
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Leafeon @ Life Orb
+Ability: Chlorophyll
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Leaf Blade
+- Knock Off
+- X-Scissor
 
 === TRAINER_BROOKE_4 ===
-Name: BROOKE
-Class: Cooltrainer
-Pic: Cooltrainer F
+Name: ANABEL
+Class: Salon Maiden
+Pic: Salon Maiden Anabel
 Gender: Female
-Music: Cool
+Music: Intense
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction
 
-Pelipper
-Level: 32
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Torkoal @ Heat Rock
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+- Eruption
+- Heat Wave
+- Solar Beam
+- Yawn
 
-Numel
-Level: 32
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Great Tusk @ Leftovers
+Ability: Protosynthesis
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Rapid Spin
+- Headlong Rush
+- Close Combat
+- Ice Spinner
 
-Roselia
-Level: 32
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Leafeon @ Life Orb
+Ability: Chlorophyll
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Leaf Blade
+- Knock Off
+- X-Scissor
 
 === TRAINER_BROOKE_5 ===
-Name: BROOKE
-Class: Cooltrainer
-Pic: Cooltrainer F
+Name: ANABEL
+Class: Salon Maiden
+Pic: Salon Maiden Anabel
 Gender: Female
-Music: Cool
+Music: Intense
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction
 
-Pelipper
-Level: 34
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
+Torkoal @ Heat Rock
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+- Eruption
+- Heat Wave
+- Solar Beam
+- Yawn
 
-Camerupt
-Level: 34
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
+Great Tusk @ Leftovers
+Ability: Protosynthesis
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Rapid Spin
+- Headlong Rush
+- Close Combat
+- Ice Spinner
 
-Roselia
-Level: 34
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
+Leafeon @ Life Orb
+Ability: Chlorophyll
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Leaf Blade
+- Knock Off
+- X-Scissor
 
 === TRAINER_PATRICIA ===
 Name: PATRICIA
@@ -3831,17 +4166,40 @@ Level: 26
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_DAISUKE ===
-Name: DAISUKE
-Class: Black Belt
-Pic: Black Belt
+Name: BRUNO
+Class: Elite Four Frlg
+Pic: Elite Four Bruno Frlg
 Gender: Male
 Music: Intense
-Double Battle: No
-AI: Smart Trainer
+Double Battle: Yes
+AI: Smart Trainer / Prediction
 
-Machop
-Level: 19
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Pelipper @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+- Hurricane
+- Hydro Pump
+- Tailwind
+- U-turn
+
+Poliwrath @ Life Orb
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Belly Drum
+- Liquidation
+- Close Combat
+- Ice Punch
+
+Toxicroak @ Black Sludge
+Ability: Dry Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Drain Punch
+- Gunk Shot
+- Sucker Punch
 
 === TRAINER_ATSUSHI ===
 Name: ATSUSHI
@@ -4267,54 +4625,76 @@ Level: 35
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_DREW ===
-Name: DREW
-Class: Camper
-Pic: Camper
+Name: BROCK
+Class: Leader Frlg
+Pic: Leader Brock Frlg
 Gender: Male
-Music: Male
+Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Sandshrew
-Level: 23
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Dig
-- Sand Attack
-- Poison Sting
-- Slash
+Gigalith @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Stealth Rock
+- Stone Edge
+- Earthquake
+- Explosion
+
+Lycanroc @ Life Orb
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Accelerock
+- Stone Edge
+- Close Combat
+
+Dugtrio @ Choice Band
+Ability: Sand Force
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Stone Edge
+- Sucker Punch
+- Iron Head
 
 === TRAINER_BEAU ===
-Name: BEAU
-Class: Camper
-Pic: Camper
+Name: KOGA
+Class: Leader Frlg
+Pic: Leader Koga Frlg
 Gender: Male
-Music: Male
+Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Baltoy
-Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Claydol @ Smooth Rock
+Ability: Levitate
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+- Sandstorm
+- Earth Power
+- Psychic
 - Rapid Spin
-- Mud Slap
-- Psybeam
-- Rock Tomb
 
-Sandshrew
-Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Sting
-- Sand Attack
-- Scratch
-- Dig
+Cacturne @ Bright Powder
+Ability: Sand Veil
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Spikes
+- Leech Seed
+- Sucker Punch
+- Seed Bomb
 
-Baltoy
-Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Rapid Spin
-- Mud Slap
-- Psybeam
-- Rock Tomb
+Gliscor @ Bright Powder
+Ability: Sand Veil
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Earthquake
+- Knock Off
+- Toxic
+- Roost
 
 === TRAINER_LARRY ===
 Name: LARRY
@@ -4390,17 +4770,40 @@ Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TRAVIS ===
-Name: TRAVIS
-Class: Camper
-Pic: Camper
+Name: TUCKER
+Class: Dome Ace
+Pic: Dome Ace Tucker
 Gender: Male
-Music: Male
+Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Sandshrew
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sandaconda @ Leftovers
+Ability: Sand Spit
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Coil
+- High Horsepower
+- Stone Edge
+- Glare
+
+Stoutland @ Choice Band
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Double-Edge
+- Crunch
+- Play Rough
+- Wild Charge
+
+Sandslash @ Bright Powder
+Ability: Sand Veil
+EVs: 252 HP / 252 Atk / 4 Def
+Adamant Nature
+- Swords Dance
+- Earthquake
+- Knock Off
+- Stone Edge
 
 === TRAINER_ETHAN_2 ===
 Name: ETHAN
@@ -10496,54 +10899,76 @@ Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HEIDI ===
-Name: HEIDI
-Class: Picnicker
-Pic: Picnicker
+Name: GRETA
+Class: Arena Tycoon
+Pic: Arena Tycoon Greta
 Gender: Female
-Music: Girl
+Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Sandshrew
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Dig
-- Sand Attack
-- Poison Sting
-- Slash
+Hippowdon @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Stealth Rock
+- Slack Off
+- Earthquake
+- Whirlwind
 
-Baltoy
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Excadrill @ Life Orb
+Ability: Sand Force
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Earthquake
+- Iron Head
+- Rock Slide
 - Rapid Spin
-- Mud Slap
-- Psybeam
-- Rock Tomb
+
+Probopass @ Leftovers
+Ability: Sand Force
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+- Power Gem
+- Flash Cannon
+- Earth Power
+- Volt Switch
 
 === TRAINER_BECKY ===
-Name: BECKY
-Class: Picnicker
-Pic: Picnicker
+Name: SABRINA
+Class: Leader Frlg
+Pic: Leader Sabrina Frlg
 Gender: Female
-Music: Girl
+Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Sandshrew
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Sand Attack
-- Poison Sting
-- Slash
-- Dig
+Golduck @ Life Orb
+Ability: Cloud Nine
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Nasty Plot
+- Hydro Pump
+- Ice Beam
+- Focus Blast
 
-Marill
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Rollout
-- Bubble Beam
-- Tail Whip
-- Defense Curl
+Altaria @ Leftovers
+Ability: Cloud Nine
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Dragon Dance
+- Dragon Claw
+- Earthquake
+- Roost
+
+Mandibuzz @ Safety Goggles
+Ability: Overcoat
+EVs: 252 HP / 4 SpD / 252 Def
+Impish Nature
+- Roost
+- Foul Play
+- U-turn
+- Defog
 
 === TRAINER_CAROL ===
 Name: CAROL
@@ -10635,21 +11060,40 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Mirror Coat
 
 === TRAINER_IRENE ===
-Name: IRENE
-Class: Picnicker
-Pic: Picnicker
+Name: LORELEI
+Class: Elite Four Frlg
+Pic: Elite Four Lorelei Frlg
 Gender: Female
-Music: Girl
-Double Battle: No
-AI: Smart Trainer
+Music: Intense
+Double Battle: Yes
+AI: Smart Trainer / Prediction
 
-Shroomish
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Abomasnow @ Light Clay
+Ability: Snow Warning
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+- Aurora Veil
+- Blizzard
+- Giga Drain
+- Ice Shard
 
-Marill
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sandslash-Alola @ Life Orb
+Ability: Slush Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Icicle Crash
+- Iron Head
+- Earthquake
+
+Cetitan @ Sitrus Berry
+Ability: Slush Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Belly Drum
+- Icicle Crash
+- Ice Shard
+- Earthquake
 
 === TRAINER_DIANA_2 ===
 Name: DIANA
@@ -16963,56 +17407,148 @@ Level: 15
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_TYRON ===
-Name: TYRON
-Class: Camper
-Pic: Camper
+Name: BRANDON
+Class: Pyramid King
+Pic: Pyramid King Brandon
 Gender: Male
-Music: Male
+Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Sandshrew
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Tyranitar @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+- Stealth Rock
+- Rock Slide
+- Crunch
+- Thunder Wave
+
+Garganacl @ Leftovers
+Ability: Purifying Salt
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+- Salt Cure
+- Recover
+- Protect
+- Iron Defense
+
+Glimmora @ Focus Sash
+Ability: Toxic Debris
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Mortal Spin
+- Power Gem
+- Sludge Wave
+- Earth Power
 
 === TRAINER_CELINA ===
-Name: CELINA
-Class: Aroma Lady
-Pic: Aroma Lady
+Name: ERIKA
+Class: Leader Frlg
+Pic: Leader Erika Frlg
 Gender: Female
-Music: Female
-Double Battle: No
-AI: Smart Trainer
+Music: Intense
+Double Battle: Yes
+AI: Smart Trainer / Prediction
 
-Roselia
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ninetales @ Heat Rock
+Ability: Drought
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Nasty Plot
+- Heat Wave
+- Solar Beam
+- Will-O-Wisp
+
+Venusaur @ Life Orb
+Ability: Chlorophyll
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Growth
+- Solar Beam
+- Sludge Bomb
+- Weather Ball
+
+Lilligant @ Focus Sash
+Ability: Chlorophyll
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Quiver Dance
+- Giga Drain
+- Pollen Puff
+- Sleep Powder
 
 === TRAINER_BIANCA ===
-Name: BIANCA
-Class: Picnicker
-Pic: Picnicker
+Name: AGATHA
+Class: Elite Four Frlg
+Pic: Elite Four Agatha Frlg
 Gender: Female
-Music: Girl
+Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Shroomish
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ninetales-Alola @ Light Clay
+Ability: Snow Warning
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Aurora Veil
+- Blizzard
+- Moonblast
+- Freeze-Dry
+
+Beartic @ Choice Band
+Ability: Slush Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Icicle Crash
+- Close Combat
+- Aqua Jet
+- Stone Edge
+
+Froslass @ Bright Powder
+Ability: Snow Cloak
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Spikes
+- Will-O-Wisp
+- Shadow Ball
+- Blizzard
 
 === TRAINER_HAYDEN ===
-Name: HAYDEN
-Class: Kindler
-Pic: Kindler
+Name: BLAINE
+Class: Leader Frlg
+Pic: Leader Blaine Frlg
 Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Smart Trainer
+Music: Intense
+Double Battle: Yes
+AI: Smart Trainer / Prediction
 
-Numel
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Torkoal @ Heat Rock
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+- Eruption
+- Heat Wave
+- Solar Beam
+- Protect
+
+Charizard @ Choice Specs
+Ability: Solar Power
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Heat Wave
+- Air Slash
+- Solar Beam
+- Focus Blast
+
+Houndoom @ Life Orb
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Nasty Plot
+- Heat Wave
+- Dark Pulse
+- Solar Beam
 
 === TRAINER_SOPHIE ===
 Name: SOPHIE
@@ -17572,55 +18108,112 @@ Jolly Nature
 - Iron Head  
 
 === TRAINER_CELIA ===
-Name: CELIA
-Class: Picnicker
-Pic: Picnicker
+Name: LUCY
+Class: Pike Queen
+Pic: Pike Queen Lucy
 Gender: Female
-Music: Girl
-Double Battle: No
-AI: Smart Trainer
+Music: Intense
+Double Battle: Yes
+AI: Smart Trainer / Prediction
 
-Marill
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Pelipper @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+- Hurricane
+- Scald
+- U-turn
+- Roost
 
-Lombre
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ludicolo @ Life Orb
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Hydro Pump
+- Giga Drain
+- Ice Beam
+- Focus Blast
+
+Seismitoad @ Leftovers
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Hydro Pump
+- Earth Power
+- Sludge Bomb
+- Stealth Rock
 
 === TRAINER_BRYAN ===
-Name: BRYAN
-Class: Ruin Maniac
-Pic: Ruin Maniac
+Name: NOLAND
+Class: Factory Head
+Pic: Factory Head Noland
 Gender: Male
-Music: Hiker
+Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Sandshrew
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Hippowdon @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Stealth Rock
+- Earthquake
+- Stone Edge
+- Yawn
 
-Sandslash
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sandslash @ Life Orb
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Earthquake
+- Stone Edge
+- Knock Off
+
+Dugtrio @ Bright Powder
+Ability: Sand Veil
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Stone Edge
+- Sucker Punch
+- Memento
 
 === TRAINER_BRANDEN ===
-Name: BRANDEN
-Class: Camper
-Pic: Camper
+Name: SPENSER
+Class: Palace Maven
+Pic: Palace Maven Spenser
 Gender: Male
-Music: Male
+Music: Intense
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Prediction
 
-Taillow
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Castform @ Damp Rock
+Ability: Forecast
+EVs: 252 HP / 252 SpA / 4 Spe
+Modest Nature
+- Rain Dance
+- Sunny Day
+- Weather Ball
+- Thunder
 
-Nuzleaf
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Shiftry @ Life Orb
+Ability: Chlorophyll
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Swords Dance
+- Leaf Blade
+- Knock Off
+- Sucker Punch
+
+Drednaw @ White Herb
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Shell Smash
+- Liquidation
+- Stone Edge
+- Earthquake
 
 === TRAINER_BRYANT ===
 Name: BRYANT
