@@ -81,7 +81,7 @@ MauvilleCity_Gym_EventScript_Wattson::
 	goto_if_unset FLAG_RECEIVED_TM_SHOCK_WAVE, MauvilleCity_Gym_EventScript_GiveShockWave2
 	goto_if_eq VAR_NEW_MAUVILLE_STATE, 2, MauvilleCity_Gym_EventScript_CompletedNewMauville
 	msgbox MauvilleCity_Gym_Text_WattsonPostBattle, MSGBOX_DEFAULT
-	release
+	goto MauvilleCity_Gym_EventScript_OfferFossilRuins
 	end
 
 @ After WATTSON, his partner LORELEI challenges the player; the badge comes after both
@@ -120,7 +120,7 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_WATTSON_MATCH_CALL
-	release
+	goto MauvilleCity_Gym_EventScript_OfferFossilRuins
 	end
 
 MauvilleCity_Gym_EventScript_GiveShockWave2::
@@ -145,6 +145,23 @@ MauvilleCity_Gym_EventScript_GiveShockWave::
 
 MauvilleCity_Gym_EventScript_CompletedNewMauville::
 	msgbox MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor, MSGBOX_DEFAULT
+	goto MauvilleCity_Gym_EventScript_OfferFossilRuins
+	end
+
+@ After the badge, WATTSON offers to send the player straight to the Fossil Ruins
+MauvilleCity_Gym_EventScript_OfferFossilRuins::
+	msgbox MauvilleCity_Gym_Text_WattsonOfferFossilRuins, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MauvilleCity_Gym_EventScript_DeclineFossilRuins
+	msgbox MauvilleCity_Gym_Text_WattsonSendToFossilRuins, MSGBOX_DEFAULT
+	closemessage
+	playse SE_WARP_IN
+	warpteleport MAP_Fossil_Ruins, 0
+	waitstate
+	release
+	end
+
+MauvilleCity_Gym_EventScript_DeclineFossilRuins::
+	msgbox MauvilleCity_Gym_Text_WattsonDeclineFossilRuins, MSGBOX_DEFAULT
 	release
 	end
 
@@ -426,6 +443,20 @@ MauvilleCity_Gym_Text_WattsonPostBattle:
 MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor:
 	.string "Wahahahah!\n"
 	.string "Go forth and endeavor, youngster!$"
+
+MauvilleCity_Gym_Text_WattsonOfferFossilRuins:
+	.string "Wahahahah! See my TELEPORTER?\n"
+	.string "It goes right to the FOSSIL RUINS!\p"
+	.string "Why not try your luck there first?\n"
+	.string "Shall I send you over?$"
+
+MauvilleCity_Gym_Text_WattsonSendToFossilRuins:
+	.string "Wahahahah! Hold on tight!\n"
+	.string "Good luck, youngster!$"
+
+MauvilleCity_Gym_Text_WattsonDeclineFossilRuins:
+	.string "Wahahahah! Just talk to me\n"
+	.string "whenever you want to go!$"
 
 MauvilleCity_Gym_Text_GymStatue:
 	.string "MAUVILLE CITY POKéMON GYM$"
