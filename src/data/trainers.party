@@ -922,21 +922,36 @@ Pic: Elite Four Lance Frlg
 Gender: Male
 Music: Intense
 Double Battle: No
+Party Size: 4
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Tyranitar @ Smooth Rock
 Ability: Sand Stream
 EVs: 252 HP / 252 Atk / 4 SpD
 Adamant Nature
+Tags: Lead / Weather Setter
 - Stealth Rock
 - Stone Edge
 - Crunch
 - Earthquake
 
+Hippowdon @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+Tags: Lead / Weather Setter
+- Stealth Rock
+- Slack Off
+- Earthquake
+- Yawn
+
 Excadrill @ Life Orb
 Ability: Sand Rush
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
+Tags: Weather Abuser
 - Swords Dance
 - Earthquake
 - Iron Head
@@ -946,19 +961,69 @@ Sandslash @ Leftovers
 Ability: Sand Rush
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Swords Dance
 - Earthquake
 - Knock Off
 - Rapid Spin
 
+Dugtrio @ Focus Sash
+Ability: Sand Force
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Weather Abuser
+- Earthquake
+- Stone Edge
+- Sucker Punch
+- Memento
+
+Lycanroc @ Choice Band
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Weather Abuser
+- Accelerock
+- Stone Edge
+- Close Combat
+- Crunch
+
+Gliscor @ Toxic Orb
+Ability: Poison Heal
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Earthquake
+- Knock Off
+- Protect
+- Roost
+
+Krookodile @ Choice Scarf
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Knock Off
+- Stone Edge
+- Close Combat
+
 Garchomp @ Bright Powder
 Ability: Sand Veil
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Ace
 - Swords Dance
 - Earthquake
 - Dragon Claw
 - Stone Edge
+
+Flygon @ Soft Sand
+Ability: Levitate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Dragon Dance
+- Earthquake
+- Dragon Claw
+- Fire Punch
 
 === TRAINER_CHIP ===
 Name: CHIP
@@ -1025,21 +1090,36 @@ Pic: Elite Four Lance Frlg
 Gender: Male
 Music: Intense
 Double Battle: No
+Party Size: 4
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Tyranitar @ Smooth Rock
 Ability: Sand Stream
 EVs: 252 HP / 252 Atk / 4 SpD
 Adamant Nature
+Tags: Lead / Weather Setter
 - Stealth Rock
 - Stone Edge
 - Crunch
 - Earthquake
 
+Hippowdon @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+Tags: Lead / Weather Setter
+- Stealth Rock
+- Slack Off
+- Earthquake
+- Yawn
+
 Excadrill @ Life Orb
 Ability: Sand Rush
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
+Tags: Weather Abuser
 - Swords Dance
 - Earthquake
 - Iron Head
@@ -1049,19 +1129,69 @@ Sandslash @ Leftovers
 Ability: Sand Rush
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Swords Dance
 - Earthquake
 - Knock Off
 - Rapid Spin
 
+Dugtrio @ Focus Sash
+Ability: Sand Force
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Weather Abuser
+- Earthquake
+- Stone Edge
+- Sucker Punch
+- Memento
+
+Lycanroc @ Choice Band
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Weather Abuser
+- Accelerock
+- Stone Edge
+- Close Combat
+- Crunch
+
+Gliscor @ Toxic Orb
+Ability: Poison Heal
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Earthquake
+- Knock Off
+- Protect
+- Roost
+
+Krookodile @ Choice Scarf
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Knock Off
+- Stone Edge
+- Close Combat
+
 Garchomp @ Bright Powder
 Ability: Sand Veil
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Ace
 - Swords Dance
 - Earthquake
 - Dragon Claw
 - Stone Edge
+
+Flygon @ Soft Sand
+Ability: Levitate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Dragon Dance
+- Earthquake
+- Dragon Claw
+- Fire Punch
 
 === TRAINER_DUSTY_3 ===
 Name: LANCE
@@ -1070,21 +1200,36 @@ Pic: Elite Four Lance Frlg
 Gender: Male
 Music: Intense
 Double Battle: No
+Party Size: 5
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Tyranitar @ Smooth Rock
 Ability: Sand Stream
 EVs: 252 HP / 252 Atk / 4 SpD
 Adamant Nature
+Tags: Lead / Weather Setter
 - Stealth Rock
 - Stone Edge
 - Crunch
 - Earthquake
 
+Hippowdon @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+Tags: Lead / Weather Setter
+- Stealth Rock
+- Slack Off
+- Earthquake
+- Yawn
+
 Excadrill @ Life Orb
 Ability: Sand Rush
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
+Tags: Weather Abuser
 - Swords Dance
 - Earthquake
 - Iron Head
@@ -1094,19 +1239,69 @@ Sandslash @ Leftovers
 Ability: Sand Rush
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Swords Dance
 - Earthquake
 - Knock Off
 - Rapid Spin
 
+Dugtrio @ Focus Sash
+Ability: Sand Force
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Weather Abuser
+- Earthquake
+- Stone Edge
+- Sucker Punch
+- Memento
+
+Lycanroc @ Choice Band
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Weather Abuser
+- Accelerock
+- Stone Edge
+- Close Combat
+- Crunch
+
+Gliscor @ Toxic Orb
+Ability: Poison Heal
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Earthquake
+- Knock Off
+- Protect
+- Roost
+
+Krookodile @ Choice Scarf
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Knock Off
+- Stone Edge
+- Close Combat
+
 Garchomp @ Bright Powder
 Ability: Sand Veil
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Ace
 - Swords Dance
 - Earthquake
 - Dragon Claw
 - Stone Edge
+
+Flygon @ Soft Sand
+Ability: Levitate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Dragon Dance
+- Earthquake
+- Dragon Claw
+- Fire Punch
 
 === TRAINER_DUSTY_4 ===
 Name: LANCE
@@ -1115,21 +1310,36 @@ Pic: Elite Four Lance Frlg
 Gender: Male
 Music: Intense
 Double Battle: No
+Party Size: 5
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Tyranitar @ Smooth Rock
 Ability: Sand Stream
 EVs: 252 HP / 252 Atk / 4 SpD
 Adamant Nature
+Tags: Lead / Weather Setter
 - Stealth Rock
 - Stone Edge
 - Crunch
 - Earthquake
 
+Hippowdon @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+Tags: Lead / Weather Setter
+- Stealth Rock
+- Slack Off
+- Earthquake
+- Yawn
+
 Excadrill @ Life Orb
 Ability: Sand Rush
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
+Tags: Weather Abuser
 - Swords Dance
 - Earthquake
 - Iron Head
@@ -1139,19 +1349,69 @@ Sandslash @ Leftovers
 Ability: Sand Rush
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Swords Dance
 - Earthquake
 - Knock Off
 - Rapid Spin
 
+Dugtrio @ Focus Sash
+Ability: Sand Force
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Weather Abuser
+- Earthquake
+- Stone Edge
+- Sucker Punch
+- Memento
+
+Lycanroc @ Choice Band
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Weather Abuser
+- Accelerock
+- Stone Edge
+- Close Combat
+- Crunch
+
+Gliscor @ Toxic Orb
+Ability: Poison Heal
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Earthquake
+- Knock Off
+- Protect
+- Roost
+
+Krookodile @ Choice Scarf
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Knock Off
+- Stone Edge
+- Close Combat
+
 Garchomp @ Bright Powder
 Ability: Sand Veil
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Ace
 - Swords Dance
 - Earthquake
 - Dragon Claw
 - Stone Edge
+
+Flygon @ Soft Sand
+Ability: Levitate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Dragon Dance
+- Earthquake
+- Dragon Claw
+- Fire Punch
 
 === TRAINER_DUSTY_5 ===
 Name: LANCE
@@ -1160,21 +1420,36 @@ Pic: Elite Four Lance Frlg
 Gender: Male
 Music: Intense
 Double Battle: No
+Party Size: 6
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Tyranitar @ Smooth Rock
 Ability: Sand Stream
 EVs: 252 HP / 252 Atk / 4 SpD
 Adamant Nature
+Tags: Lead / Weather Setter
 - Stealth Rock
 - Stone Edge
 - Crunch
 - Earthquake
 
+Hippowdon @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+Tags: Lead / Weather Setter
+- Stealth Rock
+- Slack Off
+- Earthquake
+- Yawn
+
 Excadrill @ Life Orb
 Ability: Sand Rush
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
+Tags: Weather Abuser
 - Swords Dance
 - Earthquake
 - Iron Head
@@ -1184,19 +1459,69 @@ Sandslash @ Leftovers
 Ability: Sand Rush
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Swords Dance
 - Earthquake
 - Knock Off
 - Rapid Spin
 
+Dugtrio @ Focus Sash
+Ability: Sand Force
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Weather Abuser
+- Earthquake
+- Stone Edge
+- Sucker Punch
+- Memento
+
+Lycanroc @ Choice Band
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Weather Abuser
+- Accelerock
+- Stone Edge
+- Close Combat
+- Crunch
+
+Gliscor @ Toxic Orb
+Ability: Poison Heal
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Earthquake
+- Knock Off
+- Protect
+- Roost
+
+Krookodile @ Choice Scarf
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Knock Off
+- Stone Edge
+- Close Combat
+
 Garchomp @ Bright Powder
 Ability: Sand Veil
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Ace
 - Swords Dance
 - Earthquake
 - Dragon Claw
 - Stone Edge
+
+Flygon @ Soft Sand
+Ability: Levitate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Dragon Dance
+- Earthquake
+- Dragon Claw
+- Fire Punch
 
 === TRAINER_GABBY_AND_TY_1 ===
 Name: GABBY & TY
@@ -1891,21 +2216,36 @@ Gender: Female
 Music: Intense
 Items: Super Potion
 Double Battle: No
+Party Size: 4
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Politoed @ Damp Rock
 Ability: Drizzle
 EVs: 252 HP / 4 SpA / 252 Def
 Bold Nature
+Tags: Lead / Weather Setter
 - Scald
 - Ice Beam
 - Encore
 - Protect
 
+Pelipper @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+Tags: Lead / Weather Setter
+- Hurricane
+- Scald
+- U-turn
+- Roost
+
 Kingdra @ Choice Specs
 Ability: Swift Swim
 EVs: 4 HP / 252 SpA / 252 Spe
 Modest Nature
+Tags: Weather Abuser
 - Hydro Pump
 - Draco Meteor
 - Ice Beam
@@ -1924,9 +2264,58 @@ Barraskewda @ Choice Band
 Ability: Swift Swim
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
+Tags: Weather Abuser
 - Liquidation
 - Close Combat
 - Psychic Fangs
+- Aqua Jet
+
+Ludicolo @ Leftovers
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+Tags: Weather Abuser
+- Hydro Pump
+- Giga Drain
+- Ice Beam
+- Focus Blast
+
+Starmie @ Focus Sash
+Ability: Natural Cure
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Hydro Pump
+- Psychic
+- Thunder
+- Rapid Spin
+
+Ferrothorn @ Rocky Helmet
+Ability: Iron Barbs
+EVs: 252 HP / 4 Atk / 252 SpD
+Sassy Nature
+- Spikes
+- Leech Seed
+- Power Whip
+- Gyro Ball
+
+Gyarados @ Sitrus Berry
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Dragon Dance
+- Waterfall
+- Bounce
+- Earthquake
+
+Kabutops @ White Herb
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Ace
+- Shell Smash
+- Liquidation
+- Stone Edge
 - Aqua Jet
 
 === TRAINER_EDGAR ===
@@ -2043,21 +2432,36 @@ Gender: Female
 Music: Intense
 Items: Hyper Potion
 Double Battle: No
+Party Size: 4
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Politoed @ Damp Rock
 Ability: Drizzle
 EVs: 252 HP / 4 SpA / 252 Def
 Bold Nature
+Tags: Lead / Weather Setter
 - Scald
 - Ice Beam
 - Encore
 - Protect
 
+Pelipper @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+Tags: Lead / Weather Setter
+- Hurricane
+- Scald
+- U-turn
+- Roost
+
 Kingdra @ Choice Specs
 Ability: Swift Swim
 EVs: 4 HP / 252 SpA / 252 Spe
 Modest Nature
+Tags: Weather Abuser
 - Hydro Pump
 - Draco Meteor
 - Ice Beam
@@ -2076,9 +2480,58 @@ Barraskewda @ Choice Band
 Ability: Swift Swim
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
+Tags: Weather Abuser
 - Liquidation
 - Close Combat
 - Psychic Fangs
+- Aqua Jet
+
+Ludicolo @ Leftovers
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+Tags: Weather Abuser
+- Hydro Pump
+- Giga Drain
+- Ice Beam
+- Focus Blast
+
+Starmie @ Focus Sash
+Ability: Natural Cure
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Hydro Pump
+- Psychic
+- Thunder
+- Rapid Spin
+
+Ferrothorn @ Rocky Helmet
+Ability: Iron Barbs
+EVs: 252 HP / 4 Atk / 252 SpD
+Sassy Nature
+- Spikes
+- Leech Seed
+- Power Whip
+- Gyro Ball
+
+Gyarados @ Sitrus Berry
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Dragon Dance
+- Waterfall
+- Bounce
+- Earthquake
+
+Kabutops @ White Herb
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Ace
+- Shell Smash
+- Liquidation
+- Stone Edge
 - Aqua Jet
 
 === TRAINER_WILTON_3 ===
@@ -2089,21 +2542,36 @@ Gender: Female
 Music: Intense
 Items: Hyper Potion
 Double Battle: No
+Party Size: 5
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Politoed @ Damp Rock
 Ability: Drizzle
 EVs: 252 HP / 4 SpA / 252 Def
 Bold Nature
+Tags: Lead / Weather Setter
 - Scald
 - Ice Beam
 - Encore
 - Protect
 
+Pelipper @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+Tags: Lead / Weather Setter
+- Hurricane
+- Scald
+- U-turn
+- Roost
+
 Kingdra @ Choice Specs
 Ability: Swift Swim
 EVs: 4 HP / 252 SpA / 252 Spe
 Modest Nature
+Tags: Weather Abuser
 - Hydro Pump
 - Draco Meteor
 - Ice Beam
@@ -2122,9 +2590,58 @@ Barraskewda @ Choice Band
 Ability: Swift Swim
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
+Tags: Weather Abuser
 - Liquidation
 - Close Combat
 - Psychic Fangs
+- Aqua Jet
+
+Ludicolo @ Leftovers
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+Tags: Weather Abuser
+- Hydro Pump
+- Giga Drain
+- Ice Beam
+- Focus Blast
+
+Starmie @ Focus Sash
+Ability: Natural Cure
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Hydro Pump
+- Psychic
+- Thunder
+- Rapid Spin
+
+Ferrothorn @ Rocky Helmet
+Ability: Iron Barbs
+EVs: 252 HP / 4 Atk / 252 SpD
+Sassy Nature
+- Spikes
+- Leech Seed
+- Power Whip
+- Gyro Ball
+
+Gyarados @ Sitrus Berry
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Dragon Dance
+- Waterfall
+- Bounce
+- Earthquake
+
+Kabutops @ White Herb
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Ace
+- Shell Smash
+- Liquidation
+- Stone Edge
 - Aqua Jet
 
 === TRAINER_WILTON_4 ===
@@ -2135,21 +2652,36 @@ Gender: Female
 Music: Intense
 Items: Full Restore
 Double Battle: No
+Party Size: 5
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Politoed @ Damp Rock
 Ability: Drizzle
 EVs: 252 HP / 4 SpA / 252 Def
 Bold Nature
+Tags: Lead / Weather Setter
 - Scald
 - Ice Beam
 - Encore
 - Protect
 
+Pelipper @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+Tags: Lead / Weather Setter
+- Hurricane
+- Scald
+- U-turn
+- Roost
+
 Kingdra @ Choice Specs
 Ability: Swift Swim
 EVs: 4 HP / 252 SpA / 252 Spe
 Modest Nature
+Tags: Weather Abuser
 - Hydro Pump
 - Draco Meteor
 - Ice Beam
@@ -2168,9 +2700,58 @@ Barraskewda @ Choice Band
 Ability: Swift Swim
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
+Tags: Weather Abuser
 - Liquidation
 - Close Combat
 - Psychic Fangs
+- Aqua Jet
+
+Ludicolo @ Leftovers
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+Tags: Weather Abuser
+- Hydro Pump
+- Giga Drain
+- Ice Beam
+- Focus Blast
+
+Starmie @ Focus Sash
+Ability: Natural Cure
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Hydro Pump
+- Psychic
+- Thunder
+- Rapid Spin
+
+Ferrothorn @ Rocky Helmet
+Ability: Iron Barbs
+EVs: 252 HP / 4 Atk / 252 SpD
+Sassy Nature
+- Spikes
+- Leech Seed
+- Power Whip
+- Gyro Ball
+
+Gyarados @ Sitrus Berry
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Dragon Dance
+- Waterfall
+- Bounce
+- Earthquake
+
+Kabutops @ White Herb
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Ace
+- Shell Smash
+- Liquidation
+- Stone Edge
 - Aqua Jet
 
 === TRAINER_WILTON_5 ===
@@ -2181,21 +2762,36 @@ Gender: Female
 Music: Intense
 Items: Full Restore
 Double Battle: No
+Party Size: 6
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Politoed @ Damp Rock
 Ability: Drizzle
 EVs: 252 HP / 4 SpA / 252 Def
 Bold Nature
+Tags: Lead / Weather Setter
 - Scald
 - Ice Beam
 - Encore
 - Protect
 
+Pelipper @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+Tags: Lead / Weather Setter
+- Hurricane
+- Scald
+- U-turn
+- Roost
+
 Kingdra @ Choice Specs
 Ability: Swift Swim
 EVs: 4 HP / 252 SpA / 252 Spe
 Modest Nature
+Tags: Weather Abuser
 - Hydro Pump
 - Draco Meteor
 - Ice Beam
@@ -2214,9 +2810,58 @@ Barraskewda @ Choice Band
 Ability: Swift Swim
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
+Tags: Weather Abuser
 - Liquidation
 - Close Combat
 - Psychic Fangs
+- Aqua Jet
+
+Ludicolo @ Leftovers
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+Tags: Weather Abuser
+- Hydro Pump
+- Giga Drain
+- Ice Beam
+- Focus Blast
+
+Starmie @ Focus Sash
+Ability: Natural Cure
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Hydro Pump
+- Psychic
+- Thunder
+- Rapid Spin
+
+Ferrothorn @ Rocky Helmet
+Ability: Iron Barbs
+EVs: 252 HP / 4 Atk / 252 SpD
+Sassy Nature
+- Spikes
+- Leech Seed
+- Power Whip
+- Gyro Ball
+
+Gyarados @ Sitrus Berry
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Dragon Dance
+- Waterfall
+- Bounce
+- Earthquake
+
+Kabutops @ White Herb
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Ace
+- Shell Smash
+- Liquidation
+- Stone Edge
 - Aqua Jet
 
 === TRAINER_WARREN ===
@@ -2382,21 +3027,36 @@ Gender: Female
 Music: Intense
 Items: Super Potion
 Double Battle: No
+Party Size: 4
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Torkoal @ Heat Rock
 Ability: Drought
 EVs: 252 HP / 252 SpA / 4 SpD
 Quiet Nature
+Tags: Lead / Weather Setter
 - Eruption
 - Heat Wave
 - Solar Beam
 - Yawn
 
+Ninetales @ Heat Rock
+Ability: Drought
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Lead / Weather Setter
+- Nasty Plot
+- Fire Blast
+- Solar Beam
+- Extrasensory
+
 Great Tusk @ Leftovers
 Ability: Protosynthesis
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Rapid Spin
 - Headlong Rush
 - Close Combat
@@ -2406,10 +3066,69 @@ Leafeon @ Life Orb
 Ability: Chlorophyll
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Swords Dance
 - Leaf Blade
 - Knock Off
 - X-Scissor
+
+Espeon @ Choice Specs
+Ability: Magic Bounce
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Psychic
+- Shadow Ball
+- Dazzling Gleam
+- Morning Sun
+
+Walking Wake @ Booster Energy
+Ability: Protosynthesis
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Weather Abuser
+- Hydro Steam
+- Draco Meteor
+- Flamethrower
+- Agility
+
+Gardevoir @ Focus Sash
+Ability: Trace
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Moonblast
+- Psychic
+- Mystical Fire
+- Calm Mind
+
+Exeggutor @ Choice Band
+Ability: Chlorophyll
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Weather Abuser
+- Wood Hammer
+- Zen Headbutt
+- Earthquake
+- Flare Blitz
+
+Scream Tail @ Booster Energy
+Ability: Protosynthesis
+EVs: 252 HP / 4 SpA / 252 Spe
+Timid Nature
+Tags: Ace
+- Dazzling Gleam
+- Psychic
+- Encore
+- Wish
+
+Gouging Fire @ Booster Energy
+Ability: Protosynthesis
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Ace
+- Dragon Dance
+- Heat Crash
+- Dragon Claw
+- Morning Sun
 
 === TRAINER_JENNIFER ===
 Name: JENNIFER
@@ -2523,21 +3242,36 @@ Gender: Female
 Music: Intense
 Items: Hyper Potion
 Double Battle: No
+Party Size: 4
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Torkoal @ Heat Rock
 Ability: Drought
 EVs: 252 HP / 252 SpA / 4 SpD
 Quiet Nature
+Tags: Lead / Weather Setter
 - Eruption
 - Heat Wave
 - Solar Beam
 - Yawn
 
+Ninetales @ Heat Rock
+Ability: Drought
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Lead / Weather Setter
+- Nasty Plot
+- Fire Blast
+- Solar Beam
+- Extrasensory
+
 Great Tusk @ Leftovers
 Ability: Protosynthesis
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Rapid Spin
 - Headlong Rush
 - Close Combat
@@ -2547,10 +3281,69 @@ Leafeon @ Life Orb
 Ability: Chlorophyll
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Swords Dance
 - Leaf Blade
 - Knock Off
 - X-Scissor
+
+Espeon @ Choice Specs
+Ability: Magic Bounce
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Psychic
+- Shadow Ball
+- Dazzling Gleam
+- Morning Sun
+
+Walking Wake @ Booster Energy
+Ability: Protosynthesis
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Weather Abuser
+- Hydro Steam
+- Draco Meteor
+- Flamethrower
+- Agility
+
+Gardevoir @ Focus Sash
+Ability: Trace
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Moonblast
+- Psychic
+- Mystical Fire
+- Calm Mind
+
+Exeggutor @ Choice Band
+Ability: Chlorophyll
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Weather Abuser
+- Wood Hammer
+- Zen Headbutt
+- Earthquake
+- Flare Blitz
+
+Scream Tail @ Booster Energy
+Ability: Protosynthesis
+EVs: 252 HP / 4 SpA / 252 Spe
+Timid Nature
+Tags: Ace
+- Dazzling Gleam
+- Psychic
+- Encore
+- Wish
+
+Gouging Fire @ Booster Energy
+Ability: Protosynthesis
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Ace
+- Dragon Dance
+- Heat Crash
+- Dragon Claw
+- Morning Sun
 
 === TRAINER_BROOKE_3 ===
 Name: ANABEL
@@ -2560,21 +3353,36 @@ Gender: Female
 Music: Intense
 Items: Hyper Potion
 Double Battle: No
+Party Size: 5
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Torkoal @ Heat Rock
 Ability: Drought
 EVs: 252 HP / 252 SpA / 4 SpD
 Quiet Nature
+Tags: Lead / Weather Setter
 - Eruption
 - Heat Wave
 - Solar Beam
 - Yawn
 
+Ninetales @ Heat Rock
+Ability: Drought
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Lead / Weather Setter
+- Nasty Plot
+- Fire Blast
+- Solar Beam
+- Extrasensory
+
 Great Tusk @ Leftovers
 Ability: Protosynthesis
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Rapid Spin
 - Headlong Rush
 - Close Combat
@@ -2584,10 +3392,69 @@ Leafeon @ Life Orb
 Ability: Chlorophyll
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Swords Dance
 - Leaf Blade
 - Knock Off
 - X-Scissor
+
+Espeon @ Choice Specs
+Ability: Magic Bounce
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Psychic
+- Shadow Ball
+- Dazzling Gleam
+- Morning Sun
+
+Walking Wake @ Booster Energy
+Ability: Protosynthesis
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Weather Abuser
+- Hydro Steam
+- Draco Meteor
+- Flamethrower
+- Agility
+
+Gardevoir @ Focus Sash
+Ability: Trace
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Moonblast
+- Psychic
+- Mystical Fire
+- Calm Mind
+
+Exeggutor @ Choice Band
+Ability: Chlorophyll
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Weather Abuser
+- Wood Hammer
+- Zen Headbutt
+- Earthquake
+- Flare Blitz
+
+Scream Tail @ Booster Energy
+Ability: Protosynthesis
+EVs: 252 HP / 4 SpA / 252 Spe
+Timid Nature
+Tags: Ace
+- Dazzling Gleam
+- Psychic
+- Encore
+- Wish
+
+Gouging Fire @ Booster Energy
+Ability: Protosynthesis
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Ace
+- Dragon Dance
+- Heat Crash
+- Dragon Claw
+- Morning Sun
 
 === TRAINER_BROOKE_4 ===
 Name: ANABEL
@@ -2597,21 +3464,36 @@ Gender: Female
 Music: Intense
 Items: Full Restore
 Double Battle: No
+Party Size: 5
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Torkoal @ Heat Rock
 Ability: Drought
 EVs: 252 HP / 252 SpA / 4 SpD
 Quiet Nature
+Tags: Lead / Weather Setter
 - Eruption
 - Heat Wave
 - Solar Beam
 - Yawn
 
+Ninetales @ Heat Rock
+Ability: Drought
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Lead / Weather Setter
+- Nasty Plot
+- Fire Blast
+- Solar Beam
+- Extrasensory
+
 Great Tusk @ Leftovers
 Ability: Protosynthesis
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Rapid Spin
 - Headlong Rush
 - Close Combat
@@ -2621,10 +3503,69 @@ Leafeon @ Life Orb
 Ability: Chlorophyll
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Swords Dance
 - Leaf Blade
 - Knock Off
 - X-Scissor
+
+Espeon @ Choice Specs
+Ability: Magic Bounce
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Psychic
+- Shadow Ball
+- Dazzling Gleam
+- Morning Sun
+
+Walking Wake @ Booster Energy
+Ability: Protosynthesis
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Weather Abuser
+- Hydro Steam
+- Draco Meteor
+- Flamethrower
+- Agility
+
+Gardevoir @ Focus Sash
+Ability: Trace
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Moonblast
+- Psychic
+- Mystical Fire
+- Calm Mind
+
+Exeggutor @ Choice Band
+Ability: Chlorophyll
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Weather Abuser
+- Wood Hammer
+- Zen Headbutt
+- Earthquake
+- Flare Blitz
+
+Scream Tail @ Booster Energy
+Ability: Protosynthesis
+EVs: 252 HP / 4 SpA / 252 Spe
+Timid Nature
+Tags: Ace
+- Dazzling Gleam
+- Psychic
+- Encore
+- Wish
+
+Gouging Fire @ Booster Energy
+Ability: Protosynthesis
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Ace
+- Dragon Dance
+- Heat Crash
+- Dragon Claw
+- Morning Sun
 
 === TRAINER_BROOKE_5 ===
 Name: ANABEL
@@ -2634,21 +3575,36 @@ Gender: Female
 Music: Intense
 Items: Full Restore
 Double Battle: No
+Party Size: 6
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Torkoal @ Heat Rock
 Ability: Drought
 EVs: 252 HP / 252 SpA / 4 SpD
 Quiet Nature
+Tags: Lead / Weather Setter
 - Eruption
 - Heat Wave
 - Solar Beam
 - Yawn
 
+Ninetales @ Heat Rock
+Ability: Drought
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Lead / Weather Setter
+- Nasty Plot
+- Fire Blast
+- Solar Beam
+- Extrasensory
+
 Great Tusk @ Leftovers
 Ability: Protosynthesis
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Rapid Spin
 - Headlong Rush
 - Close Combat
@@ -2658,10 +3614,69 @@ Leafeon @ Life Orb
 Ability: Chlorophyll
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Swords Dance
 - Leaf Blade
 - Knock Off
 - X-Scissor
+
+Espeon @ Choice Specs
+Ability: Magic Bounce
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Psychic
+- Shadow Ball
+- Dazzling Gleam
+- Morning Sun
+
+Walking Wake @ Booster Energy
+Ability: Protosynthesis
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Weather Abuser
+- Hydro Steam
+- Draco Meteor
+- Flamethrower
+- Agility
+
+Gardevoir @ Focus Sash
+Ability: Trace
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Moonblast
+- Psychic
+- Mystical Fire
+- Calm Mind
+
+Exeggutor @ Choice Band
+Ability: Chlorophyll
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Weather Abuser
+- Wood Hammer
+- Zen Headbutt
+- Earthquake
+- Flare Blitz
+
+Scream Tail @ Booster Energy
+Ability: Protosynthesis
+EVs: 252 HP / 4 SpA / 252 Spe
+Timid Nature
+Tags: Ace
+- Dazzling Gleam
+- Psychic
+- Encore
+- Wish
+
+Gouging Fire @ Booster Energy
+Ability: Protosynthesis
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Ace
+- Dragon Dance
+- Heat Crash
+- Dragon Claw
+- Morning Sun
 
 === TRAINER_PATRICIA ===
 Name: PATRICIA
@@ -4172,21 +5187,36 @@ Pic: Elite Four Bruno Frlg
 Gender: Male
 Music: Intense
 Double Battle: Yes
+Party Size: 4
+Pool Rules: Weather Doubles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Pelipper @ Damp Rock
 Ability: Drizzle
 EVs: 252 HP / 4 SpA / 252 Def
 Bold Nature
+Tags: Lead / Weather Setter
 - Hurricane
 - Hydro Pump
 - Tailwind
 - U-turn
 
+Politoed @ Leftovers
+Ability: Drizzle
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+Tags: Lead / Weather Setter
+- Scald
+- Ice Beam
+- Hypnosis
+- Protect
+
 Poliwrath @ Life Orb
 Ability: Swift Swim
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
+Tags: Lead / Weather Abuser
 - Belly Drum
 - Liquidation
 - Close Combat
@@ -4196,10 +5226,49 @@ Toxicroak @ Black Sludge
 Ability: Dry Skin
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Swords Dance
 - Drain Punch
 - Gunk Shot
 - Sucker Punch
+
+Hitmontop @ Sitrus Berry
+Ability: Intimidate
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Fake Out
+- Close Combat
+- Sucker Punch
+- Wide Guard
+
+Machamp @ Assault Vest
+Ability: No Guard
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Dynamic Punch
+- Stone Edge
+- Knock Off
+- Bullet Punch
+
+Kingler @ Choice Band
+Ability: Tough Claws
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Ace
+- Crabhammer
+- Superpower
+- Rock Slide
+- Knock Off
+
+Quaquaval @ Focus Sash
+Ability: Moxie
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Aqua Step
+- Close Combat
+- Ice Spinner
+- Protect
 
 === TRAINER_ATSUSHI ===
 Name: ATSUSHI
@@ -4631,21 +5700,36 @@ Pic: Leader Brock Frlg
 Gender: Male
 Music: Intense
 Double Battle: No
+Party Size: 4
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Gigalith @ Smooth Rock
 Ability: Sand Stream
 EVs: 252 HP / 252 Atk / 4 SpD
 Adamant Nature
+Tags: Lead / Weather Setter
 - Stealth Rock
 - Stone Edge
 - Earthquake
 - Explosion
 
+Tyranitar @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Tags: Lead / Weather Setter
+- Stealth Rock
+- Rock Slide
+- Crunch
+- Fire Punch
+
 Lycanroc @ Life Orb
 Ability: Sand Rush
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Swords Dance
 - Accelerock
 - Stone Edge
@@ -4655,10 +5739,50 @@ Dugtrio @ Choice Band
 Ability: Sand Force
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Earthquake
 - Stone Edge
 - Sucker Punch
 - Iron Head
+
+Golem @ Bright Powder
+Ability: Sand Veil
+EVs: 252 HP / 252 Atk / 4 Def
+Adamant Nature
+Tags: Weather Abuser
+- Stealth Rock
+- Earthquake
+- Stone Edge
+- Explosion
+
+Barbaracle @ White Herb
+Ability: Tough Claws
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Shell Smash
+- Stone Edge
+- Liquidation
+- Cross Chop
+
+Aerodactyl @ Focus Sash
+Ability: Rock Head
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Double-Edge
+- Stone Edge
+- Earthquake
+- Taunt
+
+Rhyperior @ Weakness Policy
+Ability: Solid Rock
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Tags: Ace
+- Rock Polish
+- Stone Edge
+- High Horsepower
+- Megahorn
 
 === TRAINER_BEAU ===
 Name: KOGA
@@ -4667,34 +5791,88 @@ Pic: Leader Koga Frlg
 Gender: Male
 Music: Intense
 Double Battle: No
+Party Size: 4
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Claydol @ Smooth Rock
 Ability: Levitate
 EVs: 252 HP / 4 SpA / 252 Def
 Bold Nature
+Tags: Lead / Weather Setter
 - Sandstorm
 - Earth Power
 - Psychic
 - Rapid Spin
 
+Hippowdon @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+Tags: Lead / Weather Setter
+- Stealth Rock
+- Slack Off
+- Earthquake
+- Toxic
+
 Cacturne @ Bright Powder
 Ability: Sand Veil
 EVs: 252 HP / 252 Atk / 4 SpD
 Adamant Nature
+Tags: Weather Abuser
 - Spikes
 - Leech Seed
 - Sucker Punch
 - Seed Bomb
 
-Gliscor @ Bright Powder
+Sandslash @ Leftovers
 Ability: Sand Veil
+EVs: 252 HP / 252 Atk / 4 Def
+Impish Nature
+Tags: Weather Abuser
+- Spikes
+- Earthquake
+- Knock Off
+- Toxic
+
+Muk @ Black Sludge
+Ability: Poison Touch
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Gunk Shot
+- Knock Off
+- Toxic Spikes
+- Drain Punch
+
+Crobat @ Choice Band
+Ability: Infiltrator
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Brave Bird
+- Cross Poison
+- U-turn
+- Super Fang
+
+Gliscor @ Toxic Orb
+Ability: Poison Heal
 EVs: 252 HP / 4 Atk / 252 Def
 Impish Nature
+Tags: Ace
 - Earthquake
 - Knock Off
 - Toxic
 - Roost
+
+Nidoking @ Life Orb
+Ability: Sheer Force
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Ace
+- Earth Power
+- Sludge Wave
+- Ice Beam
+- Flamethrower
 
 === TRAINER_LARRY ===
 Name: LARRY
@@ -4776,21 +5954,36 @@ Pic: Dome Ace Tucker
 Gender: Male
 Music: Intense
 Double Battle: No
+Party Size: 4
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Sandaconda @ Leftovers
 Ability: Sand Spit
 EVs: 252 HP / 4 Atk / 252 Def
 Impish Nature
+Tags: Lead / Weather Setter
 - Coil
 - High Horsepower
 - Stone Edge
 - Glare
 
+Hippowdon @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+Tags: Lead / Weather Setter
+- Stealth Rock
+- Slack Off
+- Earthquake
+- Whirlwind
+
 Stoutland @ Choice Band
 Ability: Sand Rush
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Double-Edge
 - Crunch
 - Play Rough
@@ -4800,10 +5993,50 @@ Sandslash @ Bright Powder
 Ability: Sand Veil
 EVs: 252 HP / 252 Atk / 4 Def
 Adamant Nature
+Tags: Weather Abuser
 - Swords Dance
 - Earthquake
 - Knock Off
 - Stone Edge
+
+Excadrill @ Focus Sash
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Weather Abuser
+- Swords Dance
+- Earthquake
+- Iron Head
+- Rapid Spin
+
+Hitmonlee @ Life Orb
+Ability: Reckless
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- High Jump Kick
+- Knock Off
+- Stone Edge
+- Fake Out
+
+Lucario @ Expert Belt
+Ability: Justified
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Swords Dance
+- Close Combat
+- Extreme Speed
+- Meteor Mash
+
+Garchomp @ Choice Scarf
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Earthquake
+- Outrage
+- Stone Edge
+- Fire Fang
 
 === TRAINER_ETHAN_2 ===
 Name: ETHAN
@@ -10905,21 +12138,36 @@ Pic: Arena Tycoon Greta
 Gender: Female
 Music: Intense
 Double Battle: No
+Party Size: 4
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Hippowdon @ Smooth Rock
 Ability: Sand Stream
 EVs: 252 HP / 4 Atk / 252 Def
 Impish Nature
+Tags: Lead / Weather Setter
 - Stealth Rock
 - Slack Off
 - Earthquake
 - Whirlwind
 
+Tyranitar @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+Tags: Lead / Weather Setter
+- Stealth Rock
+- Rock Slide
+- Crunch
+- Thunder Wave
+
 Excadrill @ Life Orb
 Ability: Sand Force
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
+Tags: Weather Abuser
 - Earthquake
 - Iron Head
 - Rock Slide
@@ -10929,10 +12177,49 @@ Probopass @ Leftovers
 Ability: Sand Force
 EVs: 252 HP / 252 SpA / 4 SpD
 Modest Nature
+Tags: Weather Abuser
 - Power Gem
 - Flash Cannon
 - Earth Power
 - Volt Switch
+
+Steelix @ Choice Band
+Ability: Sheer Force
+EVs: 252 HP / 252 Atk / 4 Def
+Adamant Nature
+- Iron Tail
+- Earthquake
+- Stone Edge
+- Crunch
+
+Bronzong @ Mental Herb
+Ability: Levitate
+EVs: 252 HP / 4 Atk / 252 SpD
+Sassy Nature
+- Trick Room
+- Gyro Ball
+- Earthquake
+- Stealth Rock
+
+Garganacl @ Sitrus Berry
+Ability: Purifying Salt
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+Tags: Ace
+- Salt Cure
+- Recover
+- Protect
+- Iron Defense
+
+Hippowdon @ Choice Scarf
+Ability: Sand Force
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Earthquake
+- Stone Edge
+- Crunch
+- Ice Fang
 
 === TRAINER_BECKY ===
 Name: SABRINA
@@ -10941,12 +12228,16 @@ Pic: Leader Sabrina Frlg
 Gender: Female
 Music: Intense
 Double Battle: No
+Party Size: 4
+Pool Rules: Basic
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Golduck @ Life Orb
 Ability: Cloud Nine
 EVs: 4 HP / 252 SpA / 252 Spe
 Timid Nature
+Tags: Lead
 - Nasty Plot
 - Hydro Pump
 - Ice Beam
@@ -10956,6 +12247,7 @@ Altaria @ Leftovers
 Ability: Cloud Nine
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
+Tags: Lead
 - Dragon Dance
 - Dragon Claw
 - Earthquake
@@ -10969,6 +12261,53 @@ Impish Nature
 - Foul Play
 - U-turn
 - Defog
+
+Lickilicky @ Assault Vest
+Ability: Cloud Nine
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Tags: Ace
+- Body Slam
+- Knock Off
+- Earthquake
+- Explosion
+
+Alakazam @ Focus Sash
+Ability: Magic Guard
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Psychic
+- Shadow Ball
+- Focus Blast
+- Nasty Plot
+
+Espeon @ Choice Specs
+Ability: Magic Bounce
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Psychic
+- Dazzling Gleam
+- Shadow Ball
+- Morning Sun
+
+Forretress @ Rocky Helmet
+Ability: Overcoat
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Spikes
+- Rapid Spin
+- Gyro Ball
+- Volt Switch
+
+Gardevoir @ Expert Belt
+Ability: Trace
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Ace
+- Moonblast
+- Psychic
+- Mystical Fire
+- Calm Mind
 
 === TRAINER_CAROL ===
 Name: CAROL
@@ -11066,21 +12405,36 @@ Pic: Elite Four Lorelei Frlg
 Gender: Female
 Music: Intense
 Double Battle: Yes
+Party Size: 4
+Pool Rules: Weather Doubles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Abomasnow @ Light Clay
 Ability: Snow Warning
 EVs: 252 HP / 252 SpA / 4 SpD
 Quiet Nature
+Tags: Lead / Weather Setter
 - Aurora Veil
 - Blizzard
 - Giga Drain
 - Ice Shard
 
+Ninetales-Alola @ Icy Rock
+Ability: Snow Warning
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Lead / Weather Setter
+- Aurora Veil
+- Blizzard
+- Moonblast
+- Encore
+
 Sandslash-Alola @ Life Orb
 Ability: Slush Rush
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Lead / Weather Abuser
 - Swords Dance
 - Icicle Crash
 - Iron Head
@@ -11090,10 +12444,50 @@ Cetitan @ Sitrus Berry
 Ability: Slush Rush
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
+Tags: Weather Abuser
 - Belly Drum
 - Icicle Crash
 - Ice Shard
 - Earthquake
+
+Arctozolt @ Choice Band
+Ability: Slush Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Weather Abuser
+- Bolt Beak
+- Icicle Crash
+- Low Kick
+- Stomping Tantrum
+
+Lapras @ Leftovers
+Ability: Water Absorb
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+- Freeze-Dry
+- Hydro Pump
+- Ice Shard
+- Protect
+
+Cloyster @ Focus Sash
+Ability: Skill Link
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Shell Smash
+- Icicle Spear
+- Rock Blast
+- Protect
+
+Glaceon @ Choice Specs
+Ability: Ice Body
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+Tags: Ace
+- Blizzard
+- Freeze-Dry
+- Shadow Ball
+- Water Pulse
 
 === TRAINER_DIANA_2 ===
 Name: DIANA
@@ -17413,25 +18807,30 @@ Pic: Pyramid King Brandon
 Gender: Male
 Music: Intense
 Double Battle: No
+Party Size: 4
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Tyranitar @ Smooth Rock
 Ability: Sand Stream
 EVs: 252 HP / 4 Atk / 252 SpD
 Careful Nature
+Tags: Lead / Weather Setter
 - Stealth Rock
 - Rock Slide
 - Crunch
 - Thunder Wave
 
-Garganacl @ Leftovers
-Ability: Purifying Salt
-EVs: 252 HP / 4 Atk / 252 SpD
-Careful Nature
-- Salt Cure
-- Recover
-- Protect
-- Iron Defense
+Gigalith @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Tags: Lead / Weather Setter
+- Stealth Rock
+- Stone Edge
+- Earthquake
+- Explosion
 
 Glimmora @ Focus Sash
 Ability: Toxic Debris
@@ -17442,6 +18841,55 @@ Timid Nature
 - Sludge Wave
 - Earth Power
 
+Excadrill @ Life Orb
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Weather Abuser
+- Swords Dance
+- Earthquake
+- Iron Head
+- Rock Slide
+
+Lycanroc @ Choice Band
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Weather Abuser
+- Accelerock
+- Stone Edge
+- Close Combat
+- Psychic Fangs
+
+Regirock @ Chesto Berry
+Ability: Clear Body
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+- Curse
+- Rest
+- Stone Edge
+- Drain Punch
+
+Garganacl @ Leftovers
+Ability: Purifying Salt
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+Tags: Ace
+- Salt Cure
+- Recover
+- Protect
+- Iron Defense
+
+Registeel @ Assault Vest
+Ability: Clear Body
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Tags: Ace
+- Iron Head
+- Body Press
+- Earthquake
+- Heavy Slam
+
 === TRAINER_CELINA ===
 Name: ERIKA
 Class: Leader Frlg
@@ -17449,21 +18897,36 @@ Pic: Leader Erika Frlg
 Gender: Female
 Music: Intense
 Double Battle: Yes
+Party Size: 4
+Pool Rules: Weather Doubles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Ninetales @ Heat Rock
 Ability: Drought
 EVs: 4 HP / 252 SpA / 252 Spe
 Timid Nature
+Tags: Lead / Weather Setter
 - Nasty Plot
 - Heat Wave
 - Solar Beam
 - Will-O-Wisp
 
+Torkoal @ Charcoal
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+Tags: Lead / Weather Setter
+- Eruption
+- Heat Wave
+- Solar Beam
+- Protect
+
 Venusaur @ Life Orb
 Ability: Chlorophyll
 EVs: 4 HP / 252 SpA / 252 Spe
 Modest Nature
+Tags: Lead / Weather Abuser
 - Growth
 - Solar Beam
 - Sludge Bomb
@@ -17473,10 +18936,51 @@ Lilligant @ Focus Sash
 Ability: Chlorophyll
 EVs: 4 HP / 252 SpA / 252 Spe
 Timid Nature
+Tags: Weather Abuser
 - Quiver Dance
 - Giga Drain
 - Pollen Puff
 - Sleep Powder
+
+Jumpluff @ Leftovers
+Ability: Chlorophyll
+EVs: 252 HP / 4 Def / 252 Spe
+Jolly Nature
+Tags: Weather Abuser
+- Sleep Powder
+- Leech Seed
+- Tailwind
+- Protect
+
+Vileplume @ Black Sludge
+Ability: Chlorophyll
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+Tags: Weather Abuser
+- Sludge Bomb
+- Giga Drain
+- Moonblast
+- Strength Sap
+
+Victreebel @ Choice Specs
+Ability: Chlorophyll
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+Tags: Ace
+- Solar Beam
+- Sludge Bomb
+- Weather Ball
+- Giga Drain
+
+Tangrowth @ Assault Vest
+Ability: Regenerator
+EVs: 252 HP / 4 Atk / 252 SpD
+Sassy Nature
+Tags: Ace
+- Power Whip
+- Knock Off
+- Earthquake
+- Sludge Bomb
 
 === TRAINER_BIANCA ===
 Name: AGATHA
@@ -17485,21 +18989,36 @@ Pic: Elite Four Agatha Frlg
 Gender: Female
 Music: Intense
 Double Battle: No
+Party Size: 4
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Ninetales-Alola @ Light Clay
 Ability: Snow Warning
 EVs: 4 HP / 252 SpA / 252 Spe
 Timid Nature
+Tags: Lead / Weather Setter
 - Aurora Veil
 - Blizzard
 - Moonblast
 - Freeze-Dry
 
+Abomasnow @ Icy Rock
+Ability: Snow Warning
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Tags: Lead / Weather Setter
+- Leech Seed
+- Ice Shard
+- Wood Hammer
+- Blizzard
+
 Beartic @ Choice Band
 Ability: Slush Rush
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
+Tags: Weather Abuser
 - Icicle Crash
 - Close Combat
 - Aqua Jet
@@ -17509,10 +19028,48 @@ Froslass @ Bright Powder
 Ability: Snow Cloak
 EVs: 4 HP / 252 SpA / 252 Spe
 Timid Nature
+Tags: Weather Abuser
 - Spikes
 - Will-O-Wisp
 - Shadow Ball
 - Blizzard
+
+Gengar @ Life Orb
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Shadow Ball
+- Sludge Wave
+- Focus Blast
+- Nasty Plot
+
+Mismagius @ Leftovers
+Ability: Levitate
+EVs: 252 HP / 4 SpA / 252 Spe
+Timid Nature
+- Will-O-Wisp
+- Hex
+- Pain Split
+- Taunt
+
+Chandelure @ Choice Specs
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+Tags: Ace
+- Shadow Ball
+- Fire Blast
+- Energy Ball
+- Trick
+
+Dusknoir @ Weakness Policy
+Ability: Frisk
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Tags: Ace
+- Trick Room
+- Shadow Sneak
+- Poltergeist
+- Ice Punch
 
 === TRAINER_HAYDEN ===
 Name: BLAINE
@@ -17521,21 +19078,36 @@ Pic: Leader Blaine Frlg
 Gender: Male
 Music: Intense
 Double Battle: Yes
+Party Size: 4
+Pool Rules: Weather Doubles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Torkoal @ Heat Rock
 Ability: Drought
 EVs: 252 HP / 252 SpA / 4 SpD
 Quiet Nature
+Tags: Lead / Weather Setter
 - Eruption
 - Heat Wave
 - Solar Beam
+- Protect
+
+Ninetales @ Charcoal
+Ability: Drought
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Lead / Weather Setter
+- Heat Wave
+- Solar Beam
+- Will-O-Wisp
 - Protect
 
 Charizard @ Choice Specs
 Ability: Solar Power
 EVs: 4 HP / 252 SpA / 252 Spe
 Timid Nature
+Tags: Lead / Weather Abuser
 - Heat Wave
 - Air Slash
 - Solar Beam
@@ -17545,10 +19117,50 @@ Houndoom @ Life Orb
 Ability: Flash Fire
 EVs: 4 HP / 252 SpA / 252 Spe
 Timid Nature
+Tags: Weather Abuser
 - Nasty Plot
 - Heat Wave
 - Dark Pulse
 - Solar Beam
+
+Arcanine @ Sitrus Berry
+Ability: Intimidate
+EVs: 252 HP / 4 Atk / 252 Spe
+Jolly Nature
+- Flare Blitz
+- Extreme Speed
+- Snarl
+- Protect
+
+Rapidash @ Focus Sash
+Ability: Flash Fire
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Weather Abuser
+- Flare Blitz
+- High Horsepower
+- Wild Charge
+- Protect
+
+Volcarona @ Leftovers
+Ability: Flame Body
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Ace
+- Quiver Dance
+- Fiery Dance
+- Giga Drain
+- Protect
+
+Magmortar @ Expert Belt
+Ability: Flame Body
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+Tags: Ace
+- Heat Wave
+- Thunderbolt
+- Focus Blast
+- Protect
 
 === TRAINER_SOPHIE ===
 Name: SOPHIE
@@ -18114,34 +19726,90 @@ Pic: Pike Queen Lucy
 Gender: Female
 Music: Intense
 Double Battle: Yes
+Party Size: 4
+Pool Rules: Weather Doubles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Pelipper @ Damp Rock
 Ability: Drizzle
 EVs: 252 HP / 4 SpA / 252 Def
 Bold Nature
+Tags: Lead / Weather Setter
 - Hurricane
 - Scald
 - U-turn
 - Roost
 
+Politoed @ Sitrus Berry
+Ability: Drizzle
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+Tags: Lead / Weather Setter
+- Scald
+- Ice Beam
+- Helping Hand
+- Protect
+
 Ludicolo @ Life Orb
 Ability: Swift Swim
 EVs: 4 HP / 252 SpA / 252 Spe
 Modest Nature
+Tags: Lead / Weather Abuser
 - Hydro Pump
 - Giga Drain
 - Ice Beam
-- Focus Blast
+- Fake Out
 
 Seismitoad @ Leftovers
 Ability: Swift Swim
 EVs: 4 HP / 252 SpA / 252 Spe
 Modest Nature
+Tags: Weather Abuser
 - Hydro Pump
 - Earth Power
 - Sludge Bomb
 - Stealth Rock
+
+Qwilfish @ Focus Sash
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Weather Abuser
+- Spikes
+- Liquidation
+- Gunk Shot
+- Destiny Bond
+
+Floatzel @ Choice Band
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Weather Abuser
+- Wave Crash
+- Ice Spinner
+- Crunch
+- Aqua Jet
+
+Dhelmise @ Assault Vest
+Ability: Steelworker
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+Tags: Ace
+- Anchor Shot
+- Power Whip
+- Liquidation
+- Rapid Spin
+
+Kingdra @ Choice Specs
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+Tags: Ace
+- Muddy Water
+- Draco Meteor
+- Hurricane
+- Ice Beam
 
 === TRAINER_BRYAN ===
 Name: NOLAND
@@ -18150,21 +19818,36 @@ Pic: Factory Head Noland
 Gender: Male
 Music: Intense
 Double Battle: No
+Party Size: 4
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Hippowdon @ Smooth Rock
 Ability: Sand Stream
 EVs: 252 HP / 252 Atk / 4 SpD
 Adamant Nature
+Tags: Lead / Weather Setter
 - Stealth Rock
 - Earthquake
 - Stone Edge
 - Yawn
 
+Tyranitar @ Smooth Rock
+Ability: Sand Stream
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Lead / Weather Setter
+- Dragon Dance
+- Stone Edge
+- Crunch
+- Earthquake
+
 Sandslash @ Life Orb
 Ability: Sand Rush
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Swords Dance
 - Earthquake
 - Stone Edge
@@ -18174,10 +19857,50 @@ Dugtrio @ Bright Powder
 Ability: Sand Veil
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Earthquake
 - Stone Edge
 - Sucker Punch
 - Memento
+
+Stoutland @ Choice Band
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Weather Abuser
+- Double-Edge
+- Crunch
+- Play Rough
+- Superpower
+
+Skarmory @ Rocky Helmet
+Ability: Sturdy
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Spikes
+- Brave Bird
+- Roost
+- Whirlwind
+
+Krookodile @ Choice Scarf
+Ability: Moxie
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Earthquake
+- Knock Off
+- Stone Edge
+- Close Combat
+
+Excadrill @ Focus Sash
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Ace
+- Swords Dance
+- Earthquake
+- Iron Head
+- Rapid Spin
 
 === TRAINER_BRANDEN ===
 Name: SPENSER
@@ -18186,21 +19909,36 @@ Pic: Palace Maven Spenser
 Gender: Male
 Music: Intense
 Double Battle: No
+Party Size: 4
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
 
 Castform @ Damp Rock
 Ability: Forecast
 EVs: 252 HP / 252 SpA / 4 Spe
 Modest Nature
+Tags: Lead / Weather Setter
 - Rain Dance
 - Sunny Day
 - Weather Ball
 - Thunder
 
+Castform @ Heat Rock
+Ability: Forecast
+EVs: 252 HP / 252 SpA / 4 Spe
+Modest Nature
+Tags: Lead / Weather Setter
+- Sunny Day
+- Hail
+- Weather Ball
+- Solar Beam
+
 Shiftry @ Life Orb
 Ability: Chlorophyll
 EVs: 4 HP / 252 Atk / 252 Spe
 Jolly Nature
+Tags: Weather Abuser
 - Swords Dance
 - Leaf Blade
 - Knock Off
@@ -18210,10 +19948,60 @@ Drednaw @ White Herb
 Ability: Swift Swim
 EVs: 4 HP / 252 Atk / 252 Spe
 Adamant Nature
+Tags: Weather Abuser
 - Shell Smash
 - Liquidation
 - Stone Edge
 - Earthquake
+
+Lilligant @ Leftovers
+Ability: Chlorophyll
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Weather Abuser
+- Quiver Dance
+- Giga Drain
+- Pollen Puff
+- Sleep Powder
+
+Golduck @ Choice Specs
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+Tags: Weather Abuser
+- Hydro Pump
+- Ice Beam
+- Focus Blast
+- Psychic
+
+Kecleon @ Rocky Helmet
+Ability: Protean
+EVs: 252 HP / 252 Atk / 4 Def
+Adamant Nature
+- Shadow Sneak
+- Knock Off
+- Drain Punch
+- Recover
+
+Kingdra @ Sitrus Berry
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Ace
+- Dragon Dance
+- Waterfall
+- Outrage
+- Iron Head
+
+Lapras @ Assault Vest
+Ability: Hydration
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+Tags: Ace
+- Hydro Pump
+- Freeze-Dry
+- Thunderbolt
+- Rest
 
 === TRAINER_BRYANT ===
 Name: BRYANT
