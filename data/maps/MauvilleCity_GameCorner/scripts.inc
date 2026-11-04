@@ -502,6 +502,19 @@ MauvilleCity_GameCorner_EventScript_OldMan::
 MauvilleCity_GameCorner_EventScript_Cook::
 	lock
 	faceplayer
+	@ Backup Harbor Mail, in case the player missed the one from the Rock Smash guy
+	goto_if_set FLAG_RECEIVED_GAME_CORNER_HARBOR_MAIL, MauvilleCity_GameCorner_EventScript_CookNormal
+	checkitem ITEM_COIN_CASE
+	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_GameCorner_EventScript_CookNormal
+	msgbox MauvilleCity_GameCorner_Text_CookTakeHarborMail, MSGBOX_DEFAULT
+	giveitem ITEM_HARBOR_MAIL
+	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_NPCReturnToSlots
+	setflag FLAG_RECEIVED_GAME_CORNER_HARBOR_MAIL
+	msgbox MauvilleCity_GameCorner_Text_CookTradeHarborMail, MSGBOX_DEFAULT
+	goto MauvilleCity_GameCorner_EventScript_NPCReturnToSlots
+	end
+
+MauvilleCity_GameCorner_EventScript_CookNormal::
 	msgbox MauvilleCity_GameCorner_Text_EasyToLoseTrackOfTime, MSGBOX_DEFAULT
 	goto MauvilleCity_GameCorner_EventScript_NPCReturnToSlots
 	end
@@ -810,6 +823,17 @@ MauvilleCity_GameCorner_Text_RouletteTablesDifferentRates:
 MauvilleCity_GameCorner_Text_EasyToLoseTrackOfTime:
 	.string "It's easy to lose track of time in here. \n"
 	.string "I should get back to work.$"
+
+MauvilleCity_GameCorner_Text_CookTakeHarborMail:
+	.string "No COIN CASE? Then you can't play!\p"
+	.string "Here, I don't need this letter.\n"
+	.string "Take it!$"
+
+MauvilleCity_GameCorner_Text_CookTradeHarborMail:
+	.string "A lady here in MAUVILLE collects\n"
+	.string "that kind of MAIL.\p"
+	.string "She might trade you a COIN CASE\n"
+	.string "for it!$"
 
 MauvilleCity_GameCorner_Text_CoinsAreNeededToPlay:
 	.string "COINS are needed to play here\n"

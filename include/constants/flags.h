@@ -1684,6 +1684,7 @@
 #define FLAG_HIDE_LIFT_KEY                                 FLAG_UNUSED_0x020 // Rocket Hideout under the Mauville Game Corner
 #define FLAG_HIDE_SILPH_SCOPE                              FLAG_UNUSED_0x021 // Rocket Hideout under the Mauville Game Corner
 #define FLAG_HIDE_HIDEOUT_GIOVANNI                         FLAG_UNUSED_0x022 // Rocket Hideout under the Mauville Game Corner
+#define FLAG_RECEIVED_GAME_CORNER_HARBOR_MAIL              FLAG_UNUSED_0x031 // Backup Harbor Mail from the Game Corner cook
 #define FLAG_HIDE_TOWN_MAP                                 0
 #define FLAG_HIDE_POKEDEX                                  0
 #define FLAG_HIDE_CERULEAN_ROCKET                          0
