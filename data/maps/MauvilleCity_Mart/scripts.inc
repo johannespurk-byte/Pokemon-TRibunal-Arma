@@ -25,6 +25,10 @@ MauvilleCity_Mart_Pokemart:
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_X_ACCURACY
+	.2byte ITEM_ICE_STONE
+	.2byte ITEM_SHINY_STONE
+	.2byte ITEM_DUSK_STONE
+	.2byte ITEM_DAWN_STONE
 	pokemartlistend
 
 MauvilleCity_Mart_EventScript_ExpertM::
