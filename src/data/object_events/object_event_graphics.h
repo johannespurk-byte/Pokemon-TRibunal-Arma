@@ -590,7 +590,6 @@ const u16 gObjectEventPal_PlayerReflectionFrlg[] = INCGFX_U16("graphics/object_e
 const u16 gObjectEventPal_NpcBlue[] = INCGFX_U16("graphics/object_events/palettes/npc_blue.pal", ".gbapal");
 const u16 gObjectEventPal_NpcPink[] = INCGFX_U16("graphics/object_events/palettes/npc_pink.pal", ".gbapal");
 const u16 gObjectEventPal_NpcGreen[] = INCGFX_U16("graphics/object_events/palettes/npc_green.pal", ".gbapal");
-const u16 gObjectEventPal_NpcWhite[] = INCGFX_U16("graphics/object_events/palettes/npc_white.pal", ".gbapal");
 const u16 gObjectEventPal_NpcBlueReflection[] = INCGFX_U16("graphics/object_events/palettes/npc_blue_reflection.pal", ".gbapal");
 const u16 gObjectEventPal_NpcPinkReflection[] = INCGFX_U16("graphics/object_events/palettes/npc_pink_reflection.pal", ".gbapal");
 const u16 gObjectEventPal_NpcGreenReflection[] = INCGFX_U16("graphics/object_events/palettes/npc_green_reflection.pal", ".gbapal");
@@ -598,7 +597,6 @@ const u16 gObjectEventPal_NpcWhiteReflection[] = INCGFX_U16("graphics/object_eve
 
 const u16 gObjectEventPic_Pokedex[] = INCGFX_U16("graphics/object_events/pics/misc/pokedex.png", ".4bpp");
 const u16 gObjectEventPic_TownMap[] = INCGFX_U16("graphics/object_events/pics/misc/town_map.png", ".4bpp", "-mwidth 2 -mheight 2");
-const u16 gObjectEventPic_Giovanni[] = INCGFX_U16("graphics/object_events/pics/people/giovanni.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_Blaine[] = INCGFX_U16("graphics/object_events/pics/people/blaine.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_Sabrina[] = INCGFX_U16("graphics/object_events/pics/people/sabrina.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_Daisy[] = INCGFX_U16("graphics/object_events/pics/people/daisy.png", ".4bpp", "-mwidth 2 -mheight 4");
@@ -665,7 +663,6 @@ const u16 gObjectEventPic_Bruno[] = INCGFX_U16("graphics/object_events/pics/peop
 const u16 gObjectEventPic_Clerk[] = INCGFX_U16("graphics/object_events/pics/people/clerk.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_MGDeliveryman[] = INCGFX_U16("graphics/object_events/pics/people/mg_deliveryman.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_TrainerTowerDude[] = INCGFX_U16("graphics/object_events/pics/people/trainer_tower_dude.png", ".4bpp", "-mwidth 2 -mheight 4");
-const u16 gObjectEventPic_RocketM[] = INCGFX_U16("graphics/object_events/pics/people/rocket_m.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_Celio[] = INCGFX_U16("graphics/object_events/pics/people/celio.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_Agatha[] = INCGFX_U16("graphics/object_events/pics/people/agatha.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_Misty[] = INCGFX_U16("graphics/object_events/pics/people/misty.png", ".4bpp", "-mwidth 2 -mheight 4");
@@ -735,3 +732,8 @@ const u16 gObjectEventPic_PidgeyOld[] = INCGFX_U16("graphics/object_events/pics/
 const u16 gObjectEventPic_ClefairyOld[] = INCGFX_U16("graphics/object_events/pics/pokemon_old/clefairy.png", ".4bpp", "-mwidth 2 -mheight 2");
 
 #endif // IS_FRLG
+
+// Also built for Emerald: the Rocket Hideout under the Mauville Game Corner uses these FRLG sprites
+const u16 gObjectEventPic_RocketM[] = INCGFX_U16("graphics/object_events/pics/people/rocket_m.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u16 gObjectEventPic_Giovanni[] = INCGFX_U16("graphics/object_events/pics/people/giovanni.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u16 gObjectEventPal_NpcWhite[] = INCGFX_U16("graphics/object_events/palettes/npc_white.pal", ".gbapal");
