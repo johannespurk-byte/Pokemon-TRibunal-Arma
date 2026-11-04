@@ -469,19 +469,28 @@ string generate_groups_text(Json groups_data, vector<string> &invalid_maps) {
     vector<string> valid_groups;
     for (auto &key : groups_data["group_order"].array_items()) {
         string group = json_to_string(key);
-        vector<string> valid_maps;
+        // Keep every slot of a group that has at least one valid map, so the
+        // map numbers in map_groups.h (which count all maps of the group) still
+        // point at the right header. Maps not built for this version become NULL.
+        // This matters for groups that are only partly shared with Emerald,
+        // e.g. the Rocket Hideout in gMapGroup_Dungeons_Frlg.
+        vector<string> group_entries;
+        bool has_valid_map = false;
         auto maps = groups_data[group].array_items();
         for (Json &map_name : maps) {
             string map_name_str = json_to_string(map_name);
             auto it = find(invalid_maps.begin(), invalid_maps.end(), map_name_str);
             if (it == invalid_maps.end()) {
-                valid_maps.push_back(map_name_str);
+                group_entries.push_back(map_name_str);
+                has_valid_map = true;
+            } else {
+                group_entries.push_back("NULL");
             }
         }
 
-        if (valid_maps.size() > 0) {
+        if (has_valid_map) {
             text << group << "::\n";
-            for (string map : valid_maps)
+            for (string map : group_entries)
                 text << "\t.4byte " << map << "\n";
             text << "\n";
             valid_groups.push_back(group);
