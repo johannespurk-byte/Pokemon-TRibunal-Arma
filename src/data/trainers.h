@@ -64866,7 +64866,7 @@
             },
             {
 #line 23723
-            .species = SPECIES_RHYDON,
+            .species = SPECIES_RHYPERIOR,
 #line 23723
             .gender = TRAINER_MON_MALE,
 #line 23723
