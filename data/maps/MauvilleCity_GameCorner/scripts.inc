@@ -870,3 +870,13 @@ MauvilleCity_GameCorner_Text_CantPlayWithNoCoinCase:
 	.string "You can't play if you don't have\n"
 	.string "a COIN CASE.$"
 
+
+@ Step trigger in the top-left corner: leads down to the Rocket Hideout.
+@ Warp 2 at (0,2) is only the arrival point when coming back up.
+MauvilleCity_GameCorner_EventScript_EnterRocketHideout::
+	lockall
+	playse SE_EXIT
+	warp MAP_ROCKET_HIDEOUT_B1F, 0
+	waitstate
+	releaseall
+	end

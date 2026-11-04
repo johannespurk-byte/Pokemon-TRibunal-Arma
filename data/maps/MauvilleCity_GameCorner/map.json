@@ -188,13 +188,23 @@
     },
     {
       "x": 0,
-      "y": 1,
+      "y": 2,
       "elevation": 0,
       "dest_map": "MAP_ROCKET_HIDEOUT_B1F",
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 1,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "MauvilleCity_GameCorner_EventScript_EnterRocketHideout"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
