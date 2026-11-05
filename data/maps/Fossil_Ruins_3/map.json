@@ -16,7 +16,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 15,
+      "x": 16,
       "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -91,6 +91,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAXIE",
+      "x": 14,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -99,6 +112,13 @@
       "y": 17,
       "elevation": 0,
       "dest_map": "MAP_FOSSIL_RUINS_2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 15,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE111",
       "dest_warp_id": "0"
     }
   ],
