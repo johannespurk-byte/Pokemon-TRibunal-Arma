@@ -26114,3 +26114,586 @@ Gigantamax: Yes
 - Thunderbolt
 - Perish Song
 
+=== TRAINER_MAXIE_FOSSIL_RUINS ===
+Name: MAXIE
+Class: Magma Leader
+Pic: Magma Leader Maxie
+Gender: Male
+Music: Magma
+Double Battle: No
+Mugshot: Purple
+Party Size: 6
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Camerupt @ Cameruptite
+Ability: Solid Rock
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+IVs: 0 Atk
+- Eruption
+- Earth Power
+- Flash Cannon
+- Stealth Rock
+
+Mightyena @ Choice Band
+Ability: Moxie
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Crunch
+- Play Rough
+- Sucker Punch
+- Fire Fang
+
+Crobat @ Heavy-Duty Boots
+Ability: Infiltrator
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Brave Bird
+- Cross Poison
+- U-turn
+- Roost
+
+Torkoal @ Heat Rock
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+IVs: 0 Atk
+- Eruption
+- Earth Power
+- Stealth Rock
+- Yawn
+
+Groudon @ Red Orb
+Ability: Drought
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Precipice Blades
+- Stone Edge
+- Fire Punch
+- Swords Dance
+
+Hippowdon @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Earthquake
+- Slack Off
+- Stealth Rock
+- Whirlwind
+
+Excadrill @ Life Orb
+Ability: Mold Breaker
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Iron Head
+- Rock Slide
+- Swords Dance
+
+Garchomp @ Garchompite
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Dragon Claw
+- Fire Fang
+- Swords Dance
+
+Krookodile @ Choice Scarf
+Ability: Moxie
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Knock Off
+- Stone Edge
+- Gunk Shot
+
+Landorus-Therian @ Assault Vest
+Ability: Intimidate
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Earthquake
+- U-turn
+- Stone Edge
+- Knock Off
+
+Rhyperior @ Weakness Policy
+Ability: Solid Rock
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Megahorn
+- Ice Punch
+
+Nidoking @ Expert Belt
+Ability: Sheer Force
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Earth Power
+- Sludge Wave
+- Flamethrower
+- Ice Beam
+
+Magcargo @ Focus Sash
+Ability: Weak Armor
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+IVs: 0 Atk
+- Shell Smash
+- Lava Plume
+- Earth Power
+- Ancient Power
+
+Arcanine @ Rocky Helmet
+Ability: Intimidate
+EVs: 252 HP / 252 Atk / 4 Spe
+Adamant Nature
+- Flare Blitz
+- Extreme Speed
+- Wild Charge
+- Morning Sun
+
+Typhlosion @ Charcoal
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Eruption
+- Focus Blast
+- Extrasensory
+- Earthquake
+
+Heatran @ Leftovers
+Ability: Flash Fire
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+IVs: 0 Atk
+- Magma Storm
+- Earth Power
+- Flash Cannon
+- Taunt
+
+Volcarona @ Firium Z
+Ability: Flame Body
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Quiver Dance
+- Fiery Dance
+- Bug Buzz
+- Giga Drain
+
+Ceruledge @ Muscle Band
+Ability: Flash Fire
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Bitter Blade
+- Shadow Sneak
+- Close Combat
+- Swords Dance
+
+Skeledirge @ Sitrus Berry
+Ability: Unaware
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+IVs: 0 Atk
+- Torch Song
+- Shadow Ball
+- Slack Off
+- Will-O-Wisp
+
+Gliscor @ Toxic Orb
+Ability: Poison Heal
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Earthquake
+- Facade
+- Protect
+- Toxic
+
+Ninetales @ Wide Lens
+Ability: Drought
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Flamethrower
+- Solar Beam
+- Nasty Plot
+- Extrasensory
+
+Sandaconda @ Lum Berry
+Ability: Sand Spit
+EVs: 252 HP / 252 Atk / 4 Def
+Adamant Nature
+- Coil
+- Earthquake
+- Stone Edge
+- Glare
+
+Flygon @ Soft Sand
+Ability: Levitate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Outrage
+- U-turn
+- Fire Punch
+
+Houndoom @ Houndoominite
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Dark Pulse
+- Fire Blast
+- Nasty Plot
+- Sludge Bomb
+
+Coalossal @ Shell Bell
+Ability: Steam Engine
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+IVs: 0 Atk
+- Heat Wave
+- Earth Power
+- Meteor Beam
+- Stealth Rock
+
+Talonflame @ Sharp Beak
+Ability: Gale Wings
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Brave Bird
+- Flare Blitz
+- U-turn
+- Swords Dance
+
+Ursaluna @ Flame Orb
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Facade
+- Headlong Rush
+- Crunch
+- Swords Dance
+
+Entei @ Silk Scarf
+Ability: Pressure
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Sacred Fire
+- Extreme Speed
+- Stone Edge
+- Bulldoze
+
+Weezing @ Black Sludge
+Ability: Levitate
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+IVs: 0 Atk
+- Sludge Bomb
+- Flamethrower
+- Will-O-Wisp
+- Pain Split
+
+Claydol @ Mental Herb
+Ability: Levitate
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+IVs: 0 Atk
+- Earth Power
+- Psychic
+- Rapid Spin
+- Stealth Rock
+
+=== TRAINER_GIOVANNI_FOSSIL_RUINS ===
+Name: GIOVANNI
+Class: Boss Frlg
+Pic: Leader Giovanni Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+Mugshot: Purple
+Party Size: 6
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Dugtrio @ Focus Sash
+Ability: Arena Trap
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Sucker Punch
+- Stone Edge
+- Memento
+
+Persian @ Life Orb
+Ability: Technician
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Fake Out
+- Knock Off
+- Aerial Ace
+- U-turn
+
+Nidoqueen @ Black Sludge
+Ability: Sheer Force
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+IVs: 0 Atk
+- Earth Power
+- Sludge Wave
+- Ice Beam
+- Stealth Rock
+
+Nidoking @ Expert Belt
+Ability: Sheer Force
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Earth Power
+- Sludge Wave
+- Thunderbolt
+- Ice Beam
+
+Rhyperior @ Choice Band
+Ability: Solid Rock
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Megahorn
+- Ice Punch
+
+Marowak-Alola @ Thick Club
+Ability: Lightning Rod
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Flare Blitz
+- Shadow Bone
+- Bonemerang
+- Swords Dance
+
+Kangaskhan @ Kangaskhanite
+Ability: Scrappy
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Fake Out
+- Double-Edge
+- Earthquake
+- Sucker Punch
+
+Tyranitar @ Tyranitarite
+Ability: Sand Stream
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Dragon Dance
+- Stone Edge
+- Crunch
+- Earthquake
+
+Mewtwo @ Mewtwonite Y
+Ability: Pressure
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Psystrike
+- Ice Beam
+- Fire Blast
+- Recover
+
+Steelix @ Steelixite
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Earthquake
+- Heavy Slam
+- Stone Edge
+- Rock Polish
+
+Hippowdon @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Earthquake
+- Slack Off
+- Stealth Rock
+- Whirlwind
+
+Excadrill @ Air Balloon
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Iron Head
+- Rapid Spin
+- Swords Dance
+
+Donphan @ Assault Vest
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Earthquake
+- Ice Shard
+- Knock Off
+- Rapid Spin
+
+Sandslash @ Rocky Helmet
+Ability: Sand Rush
+EVs: 252 HP / 252 Atk / 4 Spe
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Knock Off
+- Stealth Rock
+
+Gliscor @ Toxic Orb
+Ability: Poison Heal
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Earthquake
+- Facade
+- Protect
+- Toxic
+
+Arbok @ Lum Berry
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Gunk Shot
+- Earthquake
+- Coil
+- Glare
+
+Weezing-Galar @ Leftovers
+Ability: Neutralizing Gas
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+IVs: 0 Atk
+- Strange Steam
+- Sludge Bomb
+- Will-O-Wisp
+- Defog
+
+Muk-Alola @ Shuca Berry
+Ability: Poison Touch
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Knock Off
+- Gunk Shot
+- Ice Punch
+- Shadow Sneak
+
+Honchkrow @ Scope Lens
+Ability: Super Luck
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Brave Bird
+- Night Slash
+- Sucker Punch
+- Heat Wave
+
+Golem @ Groundium Z
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 Def
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Fire Punch
+- Stealth Rock
+
+Ting-Lu @ Sitrus Berry
+Ability: Vessel of Ruin
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+- Earthquake
+- Ruination
+- Stealth Rock
+- Whirlwind
+
+Great Tusk @ Booster Energy
+Ability: Protosynthesis
+EVs: 252 HP / 252 Atk / 4 Spe
+Adamant Nature
+- Headlong Rush
+- Close Combat
+- Ice Spinner
+- Rapid Spin
+
+Gyarados @ Gyaradosite
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Dragon Dance
+- Waterfall
+- Crunch
+- Earthquake
+
+Machamp @ Muscle Band
+Ability: No Guard
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Dynamic Punch
+- Stone Edge
+- Bullet Punch
+- Knock Off
+
+Landorus-Therian @ Choice Scarf
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- U-turn
+- Stone Edge
+- Knock Off
+
+Mamoswine @ Never-Melt Ice
+Ability: Thick Fat
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Icicle Crash
+- Ice Shard
+- Knock Off
+
+Krookodile @ Black Glasses
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Knock Off
+- Stone Edge
+- Stealth Rock
+
+Clodsire @ Mental Herb
+Ability: Unaware
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Earthquake
+- Poison Jab
+- Recover
+- Toxic Spikes
+
+Garchomp @ Yache Berry
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Dragon Claw
+- Stone Edge
+- Stealth Rock
+
+Scizor @ Scizorite
+Ability: Technician
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Bullet Punch
+- Bug Bite
+- Close Combat
+- Swords Dance
+
