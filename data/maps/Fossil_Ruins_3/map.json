@@ -94,16 +94,31 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAXIE",
+      "local_id": "LOCALID_FOSSIL_RUINS_3_MAXIE",
       "x": 14,
       "y": 3,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "3",
+      "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_FOSSIL_RUINS_3_MAXIE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GIOVANNI",
+      "local_id": "LOCALID_FOSSIL_RUINS_3_GIOVANNI",
+      "x": 14,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_FOSSIL_RUINS_3_GIOVANNI"
     }
   ],
   "warp_events": [
@@ -122,6 +137,16 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 3,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Fossil_Ruins_3_EventScript_Showdown"
+    }
+  ],
   "bg_events": []
 }
