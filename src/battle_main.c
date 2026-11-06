@@ -1751,6 +1751,16 @@ static void CB2_HandleStartMultiBattle(void)
 
 void BattleMainCB2(void)
 {
+#if B_ANIM_EXTRA_TICK_INTERVAL > 0
+    if (gAnimScriptActive
+     && !(gBattleTypeFlags & BATTLE_TYPE_LINK)
+     && gMain.vblankCounter2 % B_ANIM_EXTRA_TICK_INTERVAL == 0)
+    {
+        AnimateSprites();
+        RunTasks();
+    }
+#endif
+
     AnimateSprites();
     BuildOamBuffer();
     RunTextPrinters();
