@@ -2645,19 +2645,6 @@ static const struct SpriteFrameImage sPicTable_Man[] = {
     overworld_frame(gObjectEventPic_Man, 2, 4, 9),
 };
 
-static const struct SpriteFrameImage sPicTable_Rocker[] = {
-    overworld_frame(gObjectEventPic_Rocker, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Rocker, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Rocker, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Rocker, 2, 4, 3),
-    overworld_frame(gObjectEventPic_Rocker, 2, 4, 4),
-    overworld_frame(gObjectEventPic_Rocker, 2, 4, 5),
-    overworld_frame(gObjectEventPic_Rocker, 2, 4, 6),
-    overworld_frame(gObjectEventPic_Rocker, 2, 4, 7),
-    overworld_frame(gObjectEventPic_Rocker, 2, 4, 8),
-    overworld_frame(gObjectEventPic_Rocker, 2, 4, 9),
-};
-
 static const struct SpriteFrameImage sPicTable_MrFuji[] = {
     overworld_frame(gObjectEventPic_MrFuji, 2, 4, 0),
     overworld_frame(gObjectEventPic_MrFuji, 2, 4, 1),
@@ -3494,7 +3481,20 @@ static const struct SpriteFrameImage sPicTable_MomFrlg[] = {
 
 #endif // IS_FRLG
 
-// Also built for Emerald: the Rocket Hideout under the Mauville Game Corner uses these FRLG sprites
+// Also built for Emerald: the Rocket Hideout under the Mauville Game Corner and Route 117 use these FRLG sprites
+static const struct SpriteFrameImage sPicTable_Rocker[] = {
+    overworld_frame(gObjectEventPic_Rocker, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Rocker, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Rocker, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Rocker, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Rocker, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Rocker, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Rocker, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Rocker, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Rocker, 2, 4, 8),
+    overworld_frame(gObjectEventPic_Rocker, 2, 4, 9),
+};
+
 static const struct SpriteFrameImage sPicTable_RocketM[] = {
     overworld_frame(gObjectEventPic_RocketM, 2, 4, 0),
     overworld_frame(gObjectEventPic_RocketM, 2, 4, 1),

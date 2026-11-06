@@ -587,7 +587,6 @@ const u16 gObjectEventPic_GreenVSSeekerBike[] = INCGFX_U16("graphics/object_even
 const u16 gObjectEventPal_PlayerFrlg[] = INCGFX_U16("graphics/object_events/palettes/player_frlg.pal", ".gbapal");
 const u16 gObjectEventPal_PlayerReflectionFrlg[] = INCGFX_U16("graphics/object_events/palettes/player_reflection_frlg.pal", ".gbapal");
 #if IS_FRLG
-const u16 gObjectEventPal_NpcBlue[] = INCGFX_U16("graphics/object_events/palettes/npc_blue.pal", ".gbapal");
 const u16 gObjectEventPal_NpcPink[] = INCGFX_U16("graphics/object_events/palettes/npc_pink.pal", ".gbapal");
 const u16 gObjectEventPal_NpcGreen[] = INCGFX_U16("graphics/object_events/palettes/npc_green.pal", ".gbapal");
 const u16 gObjectEventPal_NpcBlueReflection[] = INCGFX_U16("graphics/object_events/palettes/npc_blue_reflection.pal", ".gbapal");
@@ -652,7 +651,6 @@ const u16 gObjectEventPic_HikerFrlg[] = INCGFX_U16("graphics/object_events/pics/
 const u16 gObjectEventPic_Biker[] = INCGFX_U16("graphics/object_events/pics/people/biker.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u16 gObjectEventPic_GymGuy[] = INCGFX_U16("graphics/object_events/pics/people/gym_guy.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_Man[] = INCGFX_U16("graphics/object_events/pics/people/man.png", ".4bpp", "-mwidth 2 -mheight 4");
-const u16 gObjectEventPic_Rocker[] = INCGFX_U16("graphics/object_events/pics/people/rocker.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_ProfOak[] = INCGFX_U16("graphics/object_events/pics/people/prof_oak.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_Blue[] = INCGFX_U16("graphics/object_events/pics/people/blue.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_NurseFrlg[] = INCGFX_U16("graphics/object_events/pics/people/nurse_frlg.png", ".4bpp", "-mwidth 2 -mheight 4");
@@ -733,7 +731,9 @@ const u16 gObjectEventPic_ClefairyOld[] = INCGFX_U16("graphics/object_events/pic
 
 #endif // IS_FRLG
 
-// Also built for Emerald: the Rocket Hideout under the Mauville Game Corner uses these FRLG sprites
+// Also built for Emerald: the Rocket Hideout under the Mauville Game Corner and Route 117 use these FRLG sprites
+const u16 gObjectEventPic_Rocker[] = INCGFX_U16("graphics/object_events/pics/people/rocker.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u16 gObjectEventPal_NpcBlue[] = INCGFX_U16("graphics/object_events/palettes/npc_blue.pal", ".gbapal");
 const u16 gObjectEventPic_RocketM[] = INCGFX_U16("graphics/object_events/pics/people/rocket_m.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_Giovanni[] = INCGFX_U16("graphics/object_events/pics/people/giovanni.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPal_NpcWhite[] = INCGFX_U16("graphics/object_events/palettes/npc_white.pal", ".gbapal");
