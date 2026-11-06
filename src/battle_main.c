@@ -1752,7 +1752,7 @@ static void CB2_HandleStartMultiBattle(void)
 void BattleMainCB2(void)
 {
 #if B_ANIM_SPEED_MULTIPLIER > 1
-    if (gAnimScriptActive && !(gBattleTypeFlags & BATTLE_TYPE_LINK))
+    if ((gAnimScriptActive || gDoingBattleAnim) && !(gBattleTypeFlags & BATTLE_TYPE_LINK))
     {
         for (u32 i = 1; i < B_ANIM_SPEED_MULTIPLIER; i++)
         {
