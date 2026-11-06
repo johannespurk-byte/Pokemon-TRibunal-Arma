@@ -3,7 +3,7 @@
   "name": "Fossil_Ruins_3",
   "layout": "LAYOUT_FOSSIL_RUINS_3",
   "music": "MUS_HG_ROCK_TUNNEL",
-  "region_map_section": "MAPSEC_MT_MOON",
+  "region_map_section": "MAPSEC_FOSSIL_RUINS_3",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
@@ -127,7 +127,7 @@
       "y": 17,
       "elevation": 0,
       "dest_map": "MAP_FOSSIL_RUINS_2",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 15,
