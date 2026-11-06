@@ -1626,6 +1626,30 @@
       "y": 4,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_FOSSIL_RUINS_1",
+      "name": "Fossil Ruins 1",
+      "x": 5,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_FOSSIL_RUINS_2",
+      "name": "Fossil Ruins 2",
+      "x": 6,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_FOSSIL_RUINS_3",
+      "name": "Fossil Ruins 3",
+      "x": 7,
+      "y": 7,
+      "width": 1,
+      "height": 1
     }
   ]
 }
