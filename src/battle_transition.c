@@ -1044,6 +1044,20 @@ static void Task_BattleTransition(u8 taskId)
     while (sTaskHandlers[gTasks[taskId].tState](&gTasks[taskId]));
 }
 
+// Speeds up the transition by running its task and the sprites several times per frame.
+// Looks the task up again each time, because it may destroy itself.
+static void RunTransitionExtraTicks(TaskFunc func)
+{
+    for (u32 i = 1; i < B_TRANSITION_SPEED_MULTIPLIER; i++)
+    {
+        u8 taskId = FindTaskIdByFunc(func);
+        if (taskId == TASK_NONE)
+            break;
+        func(taskId);
+        AnimateSprites();
+    }
+}
+
 static bool8 Transition_StartIntro(struct Task *task)
 {
     SetWeatherScreenFadeOut();
@@ -1066,6 +1080,8 @@ static bool8 Transition_StartIntro(struct Task *task)
 
 static bool8 Transition_WaitForIntro(struct Task *task)
 {
+    RunTransitionExtraTicks(Task_BattleTransition_Intro);
+    RunTransitionExtraTicks(sTasks_Intro[task->tTransitionId]);
     if (FindTaskIdByFunc(sTasks_Intro[task->tTransitionId]) == TASK_NONE)
     {
         task->tState++;
@@ -1087,6 +1103,7 @@ static bool8 Transition_StartMain(struct Task *task)
 static bool8 Transition_WaitForMain(struct Task *task)
 {
     task->tTransitionDone = FALSE;
+    RunTransitionExtraTicks(sTasks_Main[task->tTransitionId]);
     if (FindTaskIdByFunc(sTasks_Main[task->tTransitionId]) == TASK_NONE)
         task->tTransitionDone = TRUE;
     return FALSE;
