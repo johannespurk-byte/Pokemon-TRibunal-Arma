@@ -755,7 +755,6 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_WOMAN_1_FRLG]             = &gObjectEventGraphicsInfo_Woman1Frlg,
     [OBJ_EVENT_GFX_CRUSH_GIRL]               = &gObjectEventGraphicsInfo_CrushGirl,
     [OBJ_EVENT_GFX_MAN]                      = &gObjectEventGraphicsInfo_Man,
-    [OBJ_EVENT_GFX_ROCKER]                   = &gObjectEventGraphicsInfo_Rocker,
     [OBJ_EVENT_GFX_FAT_MAN_FRLG]             = &gObjectEventGraphicsInfo_FatManFrlg,
     [OBJ_EVENT_GFX_WOMAN_2_FRLG]             = &gObjectEventGraphicsInfo_Woman2Frlg,
     [OBJ_EVENT_GFX_BEAUTY_FRLG]              = &gObjectEventGraphicsInfo_BeautyFrlg,
@@ -876,7 +875,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
 #endif // IS_FRLG
 
-// Also built for Emerald: the Rocket Hideout under the Mauville Game Corner uses these FRLG sprites
+// Also built for Emerald: the Rocket Hideout under the Mauville Game Corner and Route 117 use these FRLG sprites
+    [OBJ_EVENT_GFX_ROCKER]                   = &gObjectEventGraphicsInfo_Rocker,
     [OBJ_EVENT_GFX_ROCKET_M]                 = &gObjectEventGraphicsInfo_RocketM,
     [OBJ_EVENT_GFX_GIOVANNI]                 = &gObjectEventGraphicsInfo_Giovanni,
 	[OBJ_EVENT_GFX_ETHAN_NORMAL] = &gObjectEventGraphicsInfo_EthanNormal,
