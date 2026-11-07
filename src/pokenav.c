@@ -1,4 +1,5 @@
 #include "global.h"
+#include "bg.h"
 #include "malloc.h"
 #include "task.h"
 #include "main.h"
@@ -462,6 +463,13 @@ static void Task_Pokenav(u8 taskId)
         // Wait for LoopedTask_InitPokenavMenu to finish
         if (PokenavMainMenuLoopedTaskIsActive())
             break;
+        // The PokéNav menu slides its header away when opening a feature. Without that menu, do it here
+        if (sPoketchStartMenu == POKENAV_REGION_MAP || sPoketchStartMenu == POKENAV_MATCH_CALL)
+        {
+            ChangeBgY(0, 0x2000, BG_COORD_SET);
+            // The features fade all palettes but this one (header and help bar), which the menu has faded in
+            CpuCopy16(&gPlttBufferUnfaded[BG_PLTT_ID(0)], &gPlttBufferFaded[BG_PLTT_ID(0)], PLTT_SIZE_4BPP);
+        }
         if (SetActivePokenavMenu(sPoketchStartMenu != 0 ? sPoketchStartMenu : POKENAV_MAIN_MENU))
         {
             tState = 4;
