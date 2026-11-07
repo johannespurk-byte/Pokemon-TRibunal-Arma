@@ -8,6 +8,7 @@
 #include "battle_message.h"
 #include "battle_pike.h"
 #include "battle_pyramid.h"
+#include "battle_music.h"
 #include "battle_setup.h"
 #include "battle_tower.h"
 #include "battle_z_move.h"
@@ -5265,7 +5266,7 @@ bool32 IsSpeciesInHoennDex(enum Species species)
         return TRUE;
 }
 
-u16 GetBattleBGM(void)
+static u16 GetOriginalBattleBGM(void)
 {
     if (gBattleTypeFlags & BATTLE_TYPE_LEGENDARY)
     {
@@ -5356,6 +5357,67 @@ u16 GetBattleBGM(void)
         else
             return MUS_BW_VS_WILD_STRONG;
     }
+}
+
+static u32 GetBattleMusicCategory(void)
+{
+    enum TrainerClassID trainerClass;
+
+    if (gBattleTypeFlags & BATTLE_TYPE_LEGENDARY)
+        return BATTLE_MUSIC_LEGENDARY;
+    if (!(gBattleTypeFlags & BATTLE_TYPE_TRAINER))
+        return BATTLE_MUSIC_WILD;
+
+    if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
+        trainerClass = GetFrontierOpponentClass(TRAINER_BATTLE_PARAM.opponentA);
+    else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER_HILL)
+        trainerClass = TRAINER_CLASS_EXPERT;
+    else
+        trainerClass = GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA);
+
+    switch (trainerClass)
+    {
+    case TRAINER_CLASS_AQUA_LEADER:
+    case TRAINER_CLASS_MAGMA_LEADER:
+    case TRAINER_CLASS_TEAM_AQUA:
+    case TRAINER_CLASS_TEAM_MAGMA:
+    case TRAINER_CLASS_AQUA_ADMIN:
+    case TRAINER_CLASS_MAGMA_ADMIN:
+    case TRAINER_CLASS_TEAM_ROCKET_FRLG:
+        return BATTLE_MUSIC_TEAM;
+    case TRAINER_CLASS_RIVAL:
+        return BATTLE_MUSIC_RIVAL;
+    case TRAINER_CLASS_LEADER:
+    case TRAINER_CLASS_LEADER_FRLG:
+    case TRAINER_CLASS_SALON_MAIDEN:
+    case TRAINER_CLASS_DOME_ACE:
+    case TRAINER_CLASS_PALACE_MAVEN:
+    case TRAINER_CLASS_ARENA_TYCOON:
+    case TRAINER_CLASS_FACTORY_HEAD:
+    case TRAINER_CLASS_PIKE_QUEEN:
+    case TRAINER_CLASS_PYRAMID_KING:
+        return BATTLE_MUSIC_LEADER;
+    case TRAINER_CLASS_ELITE_FOUR:
+    case TRAINER_CLASS_ELITE_FOUR_FRLG:
+    case TRAINER_CLASS_CHAMPION:
+    case TRAINER_CLASS_CHAMPION_FRLG:
+        return BATTLE_MUSIC_LEAGUE;
+    default:
+        return BATTLE_MUSIC_TRAINER;
+    }
+}
+
+u16 GetBattleBGM(void)
+{
+    u16 song;
+
+    if (gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK))
+        return GetOriginalBattleBGM();
+
+    // Same seed for the whole battle, because this runs more than once per battle
+    song = BattleMusic_GetSongForBattle(GetBattleMusicCategory(),
+                                        GetMonData(&gParties[B_TRAINER_OPPONENT_A][0], MON_DATA_PERSONALITY) + TRAINER_BATTLE_PARAM.opponentA);
+    return song != 0 ? song : GetOriginalBattleBGM();
 }
 
 void PlayBattleBGM(void)
