@@ -314,7 +314,9 @@ bool32 WaitForPokenavShutdownFade(void)
 {
     if (!gPaletteFade.active)
     {
-        FreeMenuHandlerSubstruct2();
+        // Not allocated if the Pokétch opened a feature without the PokéNav menu
+        if (GetSubstructPtr(POKENAV_SUBSTRUCT_MENU_GFX) != NULL)
+            FreeMenuHandlerSubstruct2();
         CleanupPokenavMainMenuResources();
         FreeAllWindowBuffers();
         return FALSE;

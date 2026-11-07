@@ -314,6 +314,7 @@ u32 GetSelectedConditionSearch(void);
 
 void CB2_InitPokeNav(void);
 u32 CreateLoopedTask(LoopedTask loopedTask, u32 priority);
+void OpenPokenavFromPoketch(u32 menuId);
 bool32 FuncIsActiveLoopedTask(LoopedTask func);
 void *GetSubstructPtr(u32 index);
 void FreePokenavSubstruct(u32 index);
