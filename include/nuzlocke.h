@@ -2,6 +2,7 @@
 #define GUARD_NUZLOCKE_H
 
 bool32 Nuzlocke_IsActive(void);
+u32 Nuzlocke_GetEncounterArea(void);
 void Nuzlocke_OnBattleStart(void);
 bool32 Nuzlocke_IsCatchBlocked(void);
 void Nuzlocke_MarkFaintedPartyMonsDead(void);

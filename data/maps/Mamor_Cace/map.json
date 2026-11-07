@@ -3,7 +3,7 @@
   "name": "Mamor_Cace",
   "layout": "LAYOUT_MAMOR_CACE",
   "music": "MUS_HG_MT_MOON_SQUARE",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_MARMOR_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_SANDSTORM",
   "map_type": "MAP_TYPE_UNDERGROUND",

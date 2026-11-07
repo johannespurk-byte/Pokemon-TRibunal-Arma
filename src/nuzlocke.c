@@ -2,10 +2,13 @@
 #include "nuzlocke.h"
 #include "battle.h"
 #include "event_data.h"
+#include "field_player_avatar.h"
+#include "fieldmap.h"
 #include "overworld.h"
 #include "pokedex.h"
 #include "pokemon.h"
 #include "constants/battle.h"
+#include "constants/maps.h"
 #include "constants/region_map_sections.h"
 
 // Nuzlocke-Modus, im Optionsmenü an- und ausschaltbar (gSaveBlock2Ptr->optionsNuzlocke).
@@ -16,7 +19,15 @@
 // - Pokémon, die besiegt werden, sind tot: das Pokémon-Center und der PC heilen sie nicht mehr,
 //   und Items wirken auf besiegte Pokémon nicht. Ausgeschaltet heilt alles wieder normal.
 
-STATIC_ASSERT(MAPSEC_COUNT <= sizeof(gSaveBlock1Ptr->nuzlockeEncounters) * 8, NuzlockeEncountersTooSmall);
+// Route 104 und 112 sind je eine Karte, aber zwei getrennte Stücke (durch den Petalburg-Wald bzw.
+// den Schlotberg). Das obere Stück hat ein eigenes Bit, ganz am Ende, damit neue MAPSECs es nicht verschieben.
+#define NUZLOCKE_AREA_ROUTE_104_NORTH 255
+#define NUZLOCKE_AREA_ROUTE_112_NORTH 254
+#define ROUTE_104_NORTH_MAX_Y 33 // oberes Stück bis y=30, unteres ab y=38
+#define ROUTE_112_NORTH_MAX_Y 17 // oberes Stück bis y=13, unteres ab y=23
+
+STATIC_ASSERT(MAPSEC_COUNT <= NUZLOCKE_AREA_ROUTE_112_NORTH, NuzlockeAreasOverlapMapsecs);
+STATIC_ASSERT(NUZLOCKE_AREA_ROUTE_104_NORTH < sizeof(gSaveBlock1Ptr->nuzlockeEncounters) * 8, NuzlockeEncountersTooSmall);
 
 // Ob in diesem Kampf ein Ball geworfen werden darf, gesetzt bei Kampfbeginn
 static EWRAM_DATA bool8 sCatchAllowed = FALSE;
@@ -24,6 +35,23 @@ static EWRAM_DATA bool8 sCatchAllowed = FALSE;
 bool32 Nuzlocke_IsActive(void)
 {
     return gSaveBlock2Ptr->optionsNuzlocke;
+}
+
+u32 Nuzlocke_GetEncounterArea(void)
+{
+    s16 x, y;
+
+    PlayerGetDestCoords(&x, &y);
+    y -= MAP_OFFSET;
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE104)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE104)
+     && y <= ROUTE_104_NORTH_MAX_Y)
+        return NUZLOCKE_AREA_ROUTE_104_NORTH;
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE112)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE112)
+     && y <= ROUTE_112_NORTH_MAX_Y)
+        return NUZLOCKE_AREA_ROUTE_112_NORTH;
+    return gMapHeader.regionMapSectionId;
 }
 
 static bool32 IsEncounterUsed(u32 mapsec)
@@ -40,6 +68,7 @@ void Nuzlocke_OnBattleStart(void)
 {
     struct Pokemon *wildMon = &gParties[B_TRAINER_OPPONENT_A][0];
     u32 mapsec = gMapHeader.regionMapSectionId;
+    u32 area;
     bool32 isDupe;
 
     sCatchAllowed = TRUE;
@@ -50,8 +79,9 @@ void Nuzlocke_OnBattleStart(void)
         return;
 
     isDupe = GetSetPokedexFlag(SpeciesToNationalPokedexNum(GetMonData(wildMon, MON_DATA_SPECIES)), FLAG_GET_CAUGHT);
-    if (!IsEncounterUsed(mapsec) && !isDupe)
-        SetEncounterUsed(mapsec);
+    area = Nuzlocke_GetEncounterArea();
+    if (!IsEncounterUsed(area) && !isDupe)
+        SetEncounterUsed(area);
     else
         sCatchAllowed = IsMonShiny(wildMon);
 }
