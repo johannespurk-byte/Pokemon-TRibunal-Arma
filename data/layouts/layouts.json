@@ -10322,6 +10322,19 @@
       "border_height": 2,
       "border_width": 2,
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_FOSSIL_RUINS_4",
+      "name": "Fossil_Ruins_4_Layout",
+      "width": 34,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_DistortionRuins",
+      "border_filepath": "data/layouts/Fossil_Ruins_4/border.bin",
+      "blockdata_filepath": "data/layouts/Fossil_Ruins_4/map.bin",
+      "border_height": 2,
+      "border_width": 2,
+      "layout_version": "emerald"
     }
   ]
 }

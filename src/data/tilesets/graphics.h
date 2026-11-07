@@ -3049,3 +3049,25 @@ const u16 ALIGNED(4) gTilesetPalettes_General_Frlg[][16] =
 const u32 gTilesetTiles_General_Frlg[] = INCGFX_U32("data/tilesets/primary/general_frlg/tiles.png", ".4bpp.smol");
 
 #endif // IS_FRLG
+
+const u32 gTilesetTiles_DistortionRuins[] = INCGFX_U32("data/tilesets/secondary/distortion_ruins/tiles.png", ".4bpp.fastSmol");
+
+const u16 gTilesetPalettes_DistortionRuins[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/distortion_ruins/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/distortion_ruins/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/distortion_ruins/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/distortion_ruins/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/distortion_ruins/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/distortion_ruins/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/distortion_ruins/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/distortion_ruins/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/distortion_ruins/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/distortion_ruins/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/distortion_ruins/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/distortion_ruins/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/distortion_ruins/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/distortion_ruins/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/distortion_ruins/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/distortion_ruins/palettes/15.pal", ".gbapal"),
+};

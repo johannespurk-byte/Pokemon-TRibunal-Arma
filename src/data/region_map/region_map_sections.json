@@ -1658,6 +1658,14 @@
       "y": 11,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_FOSSIL_RUINS_4",
+      "name": "Fossil Ruins 4",
+      "x": 4,
+      "y": 7,
+      "width": 1,
+      "height": 1
     }
   ]
 }
