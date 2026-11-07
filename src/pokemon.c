@@ -5284,6 +5284,9 @@ static u16 GetOriginalBattleBGM(void)
         case SPECIES_REGIELEKI:
         case SPECIES_REGIDRAGO:
             return MUS_VS_REGI;
+        case SPECIES_GIRATINA_ALTERED:
+        case SPECIES_GIRATINA_ORIGIN:
+            return MUS_PL_VS_GIRATINA;
         default:
             return MUS_RG_VS_LEGEND;
         }
@@ -5407,17 +5410,23 @@ static u32 GetBattleMusicCategory(void)
     }
 }
 
-u16 GetBattleBGM(void)
+// The remixer's choice wins over the original music, also over the songs that scripted battles pass in
+static u16 ApplyBattleMusicChoice(u16 originalSong)
 {
     u16 song;
 
     if (gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK))
-        return GetOriginalBattleBGM();
+        return originalSong;
 
     // Same seed for the whole battle, because this runs more than once per battle
     song = BattleMusic_GetSongForBattle(GetBattleMusicCategory(),
                                         GetMonData(&gParties[B_TRAINER_OPPONENT_A][0], MON_DATA_PERSONALITY) + TRAINER_BATTLE_PARAM.opponentA);
-    return song != 0 ? song : GetOriginalBattleBGM();
+    return song != 0 ? song : originalSong;
+}
+
+u16 GetBattleBGM(void)
+{
+    return ApplyBattleMusicChoice(GetOriginalBattleBGM());
 }
 
 void PlayBattleBGM(void)
@@ -5432,7 +5441,7 @@ void PlayMapChosenOrBattleBGM(u16 songId)
     ResetMapMusic();
     m4aMPlayAllStop();
     if (songId)
-        PlayNewMapMusic(songId);
+        PlayNewMapMusic(ApplyBattleMusicChoice(songId));
     else
         PlayNewMapMusic(GetBattleBGM());
 }
@@ -5454,7 +5463,7 @@ void CreateTask_PlayMapChosenOrBattleBGM(u16 songId)
 static void Task_PlayMapChosenOrBattleBGM(u8 taskId)
 {
     if (gTasks[taskId].tSongId)
-        PlayNewMapMusic(gTasks[taskId].tSongId);
+        PlayNewMapMusic(ApplyBattleMusicChoice(gTasks[taskId].tSongId));
     else
         PlayNewMapMusic(GetBattleBGM());
     DestroyTask(taskId);

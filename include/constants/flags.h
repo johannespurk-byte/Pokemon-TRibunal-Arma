@@ -1688,6 +1688,9 @@
 #define FLAG_ITEM_FOSSIL_RUINS_3_NEVER_MELT_ICE            FLAG_UNUSED_0x032 // Item ball at the end of the Fossil Ruins 3 ice maze
 #define FLAG_HIDE_FOSSIL_RUINS_3_MAXIE                     FLAG_UNUSED_0x033 // Maxie leaves after his fight in Fossil Ruins 3
 #define FLAG_HIDE_FOSSIL_RUINS_3_GIOVANNI                  FLAG_UNUSED_0x034 // Giovanni leaves after his fight in Fossil Ruins 3
+#define FLAG_HIDE_FOSSIL_RUINS_4_GIRATINA                  FLAG_UNUSED_0x035 // Giratina is gone after it was caught or defeated
+#define FLAG_ITEM_FOSSIL_RUINS_4_SPELL_TAG                 FLAG_UNUSED_0x036 // Item ball in Fossil Ruins 4
+#define FLAG_ITEM_FOSSIL_RUINS_4_REAPER_CLOTH              FLAG_UNUSED_0x037 // Item ball behind the boulder in Fossil Ruins 4
 #define FLAG_HIDE_TOWN_MAP                                 0
 #define FLAG_HIDE_POKEDEX                                  0
 #define FLAG_HIDE_CERULEAN_ROCKET                          0
