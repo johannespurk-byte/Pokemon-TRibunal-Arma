@@ -7,6 +7,7 @@
 #include "palette.h"
 #include "pokemon_storage_system.h"
 #include "pokenav.h"
+#include "poketch.h"
 
 #define LOOPED_TASK_DECODE_STATE(action) (action - 5)
 
@@ -205,6 +206,8 @@ const struct PokenavCallbacks PokenavMenuCallbacks[15] =
 
 EWRAM_DATA u8 gNextLoopedTaskId = 0;
 EWRAM_DATA struct PokenavResources *gPokenavResources = NULL;
+// Set while the Pokétch opened the PokéNav: the menu to start in, and the way back is to the Pokétch
+static EWRAM_DATA u32 sPoketchStartMenu = 0;
 
 // code
 u32 CreateLoopedTask(LoopedTask loopedTask, u32 priority)
@@ -330,6 +333,19 @@ void CB2_InitPokeNav(void)
     }
 }
 
+void OpenPokenavFromPoketch(u32 menuId)
+{
+    sPoketchStartMenu = menuId;
+    SetMainCallback2(CB2_InitPokeNav);
+}
+
+// The feature was opened directly, so leaving it goes back to the Pokétch instead of the PokéNav menu
+static bool32 IsLeavingPoketchFeature(u32 menuId)
+{
+    return (sPoketchStartMenu == POKENAV_REGION_MAP && menuId == POKENAV_MAIN_MENU_CURSOR_ON_MAP)
+        || (sPoketchStartMenu == POKENAV_MATCH_CALL && menuId == POKENAV_MAIN_MENU_CURSOR_ON_MATCH_CALL);
+}
+
 void OpenPokenavForTutorial(void)
 {
     SetMainCallback2(CB2_InitPokenavForTutorial);
@@ -446,8 +462,16 @@ static void Task_Pokenav(u8 taskId)
         // Wait for LoopedTask_InitPokenavMenu to finish
         if (PokenavMainMenuLoopedTaskIsActive())
             break;
-        SetActivePokenavMenu(POKENAV_MAIN_MENU);
-        tState = 4;
+        if (SetActivePokenavMenu(sPoketchStartMenu != 0 ? sPoketchStartMenu : POKENAV_MAIN_MENU))
+        {
+            tState = 4;
+        }
+        else
+        {
+            // Out of memory: the menu's loop task functions were never set
+            ShutdownPokenav();
+            tState = 5;
+        }
         break;
     case 2:
         if (IsActiveMenuLoopTaskActive())
@@ -457,6 +481,13 @@ static void Task_Pokenav(u8 taskId)
         menuId = GetCurrentMenuCB();
         if (menuId == POKENAV_MENU_FUNC_EXIT)
         {
+            ShutdownPokenav();
+            tState = 5;
+        }
+        else if (IsLeavingPoketchFeature(menuId))
+        {
+            PokenavMenuCallbacks[gPokenavResources->currentMenuIndex].free2();
+            PokenavMenuCallbacks[gPokenavResources->currentMenuIndex].free1();
             ShutdownPokenav();
             tState = 5;
         }
@@ -492,7 +523,12 @@ static void Task_Pokenav(u8 taskId)
 
             FreeMenuHandlerSubstruct1();
             FreePokenavResources();
-            if (calledFromScript)
+            if (sPoketchStartMenu != 0)
+            {
+                sPoketchStartMenu = 0;
+                SetMainCallback2(CB2_InitPoketch);
+            }
+            else if (calledFromScript)
                 SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
             else
                 SetMainCallback2(CB2_ReturnToFieldWithOpenMenu);

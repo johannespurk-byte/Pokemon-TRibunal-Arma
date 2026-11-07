@@ -19,10 +19,6 @@
 // - Pokémon, die besiegt werden, sind tot: das Pokémon-Center und der PC heilen sie nicht mehr,
 //   und Items wirken auf besiegte Pokémon nicht. Ausgeschaltet heilt alles wieder normal.
 
-// Route 104 und 112 sind je eine Karte, aber zwei getrennte Stücke (durch den Petalburg-Wald bzw.
-// den Schlotberg). Das obere Stück hat ein eigenes Bit, ganz am Ende, damit neue MAPSECs es nicht verschieben.
-#define NUZLOCKE_AREA_ROUTE_104_NORTH 255
-#define NUZLOCKE_AREA_ROUTE_112_NORTH 254
 #define ROUTE_104_NORTH_MAX_Y 33 // oberes Stück bis y=30, unteres ab y=38
 #define ROUTE_112_NORTH_MAX_Y 17 // oberes Stück bis y=13, unteres ab y=23
 
@@ -54,9 +50,9 @@ u32 Nuzlocke_GetEncounterArea(void)
     return gMapHeader.regionMapSectionId;
 }
 
-static bool32 IsEncounterUsed(u32 mapsec)
+bool32 Nuzlocke_IsAreaUsed(u32 area)
 {
-    return (gSaveBlock1Ptr->nuzlockeEncounters[mapsec / 8] >> (mapsec % 8)) & 1;
+    return (gSaveBlock1Ptr->nuzlockeEncounters[area / 8] >> (area % 8)) & 1;
 }
 
 static void SetEncounterUsed(u32 mapsec)
@@ -80,7 +76,7 @@ void Nuzlocke_OnBattleStart(void)
 
     isDupe = GetSetPokedexFlag(SpeciesToNationalPokedexNum(GetMonData(wildMon, MON_DATA_SPECIES)), FLAG_GET_CAUGHT);
     area = Nuzlocke_GetEncounterArea();
-    if (!IsEncounterUsed(area) && !isDupe)
+    if (!Nuzlocke_IsAreaUsed(area) && !isDupe)
         SetEncounterUsed(area);
     else
         sCatchAllowed = IsMonShiny(wildMon);
