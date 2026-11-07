@@ -1,7 +1,6 @@
 #include "global.h"
 #include "nuzlocke.h"
 #include "battle.h"
-#include "event_data.h"
 #include "field_player_avatar.h"
 #include "fieldmap.h"
 #include "overworld.h"
@@ -15,7 +14,7 @@
 // Solange er an ist:
 // - Pro Gebiet (Kartenabschnitt) kann nur die erste wilde Begegnung gefangen werden.
 //   Arten, die schon gefangen wurden, zählen nicht (Dupes-Klausel), Shinys sind immer fangbar.
-//   Begegnungen zählen erst, wenn der Spieler den Pokédex hat.
+//   Begegnungen zählen von Anfang an, nur Birchs Starter-Kampf und Wallys Fang-Tutorial nicht.
 // - Pokémon, die besiegt werden, sind tot: das Pokémon-Center und der PC heilen sie nicht mehr,
 //   und Items wirken auf besiegte Pokémon nicht. Ausgeschaltet heilt alles wieder normal.
 
@@ -70,7 +69,6 @@ void Nuzlocke_OnBattleStart(void)
     sCatchAllowed = TRUE;
     if (!Nuzlocke_IsActive()
      || gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED | BATTLE_TYPE_FIRST_BATTLE | BATTLE_TYPE_CATCH_TUTORIAL)
-     || !FlagGet(FLAG_SYS_POKEDEX_GET)
      || mapsec >= MAPSEC_COUNT)
         return;
 

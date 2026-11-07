@@ -1,4 +1,5 @@
 #include "global.h"
+#include "battle_music.h"
 #include "bg.h"
 #include "decompress.h"
 #include "event_data.h"
@@ -37,6 +38,7 @@ enum
     POKETCH_APP_CLOCK,
     POKETCH_APP_TEAM,
     POKETCH_APP_NUZLOCKE,
+    POKETCH_APP_MUSIC,
     POKETCH_APP_MAP,
     POKETCH_APP_MATCH_CALL,
     POKETCH_APP_MORE,
@@ -116,7 +118,8 @@ static const u8 *const sAppNames[POKETCH_APP_COUNT] =
     [POKETCH_APP_CLOCK]      = COMPOUND_STRING("CLOCK"),
     [POKETCH_APP_TEAM]       = COMPOUND_STRING("TEAM"),
     [POKETCH_APP_NUZLOCKE]   = COMPOUND_STRING("NUZLOCKE"),
-    [POKETCH_APP_MAP]        = COMPOUND_STRING("MAP"),
+    [POKETCH_APP_MUSIC]      = COMPOUND_STRING("BATTLE MUSIC"),
+    [POKETCH_APP_MAP]       = COMPOUND_STRING("MAP"),
     [POKETCH_APP_MATCH_CALL] = COMPOUND_STRING("MATCH CALL"),
     [POKETCH_APP_MORE]       = COMPOUND_STRING("MORE"),
 };
@@ -125,6 +128,8 @@ static EWRAM_DATA u8 sCurrentApp = POKETCH_APP_CLOCK; // bleibt erhalten, damit 
 static EWRAM_DATA u8 sIconIds[PARTY_SIZE] = {0};
 static EWRAM_DATA s8 sLastSecond = 0;
 static EWRAM_DATA u32 sPokenavMenuToOpen = 0; // die Menü-IDs passen nicht in ein s16-Taskfeld
+static EWRAM_DATA u8 sMusicCategory = 0;
+static EWRAM_DATA bool8 sIsPreviewingMusic = FALSE;
 static EWRAM_DATA void *sBgTilemapBuffer = NULL;
 
 static void Task_Poketch_WaitFadeIn(u8 taskId);
@@ -369,6 +374,40 @@ static void DrawNuzlockeApp(void)
     }
 }
 
+static void DrawMusicApp(void)
+{
+    u32 i;
+
+    for (i = 0; i < BATTLE_MUSIC_CATEGORY_COUNT; i++)
+    {
+        u32 y = 16 + i * 14;
+        const u8 *colors = sTextColors;
+
+        if (i == sMusicCategory)
+        {
+            FillLcdRect(COLOR_LCD_DARK, 2, y, LCD_WIDTH * 8 - 4, 13);
+            colors = sTextColorsInverted;
+        }
+        AddTextPrinterParameterized3(WIN_LCD, FONT_SMALL, 5, y, colors, TEXT_SKIP_DRAW, BattleMusic_GetCategoryName(i));
+        AddTextPrinterParameterized3(WIN_LCD, FONT_SMALL, 66, y, colors, TEXT_SKIP_DRAW, BattleMusic_GetChoiceName(BattleMusic_GetChoice(i)));
+    }
+    if (sIsPreviewingMusic)
+        PrintText(FONT_SMALL, 5, 115, COMPOUND_STRING("Playing... A: stop"));
+    else if (BattleMusic_GetChoiceSong(BattleMusic_GetChoice(sMusicCategory)) != 0)
+        PrintText(FONT_SMALL, 5, 115, COMPOUND_STRING("Left/Right: change   A: listen"));
+    else
+        PrintText(FONT_SMALL, 5, 115, COMPOUND_STRING("Left/Right: change"));
+}
+
+static void StopMusicPreview(void)
+{
+    if (sIsPreviewingMusic)
+    {
+        sIsPreviewingMusic = FALSE;
+        PlayBGM(GetCurrentMapMusic());
+    }
+}
+
 static bool32 IsMatchCallAvailable(void)
 {
     return FlagGet(FLAG_ADDED_MATCH_CALL_TO_POKENAV);
@@ -397,6 +436,9 @@ static void DrawCurrentApp(void)
         break;
     case POKETCH_APP_NUZLOCKE:
         DrawNuzlockeApp();
+        break;
+    case POKETCH_APP_MUSIC:
+        DrawMusicApp();
         break;
     case POKETCH_APP_MAP:
         DrawLauncherApp(COMPOUND_STRING("HOENN MAP"), COMPOUND_STRING("Where am I?"), COMPOUND_STRING("A: OPEN"));
@@ -483,8 +525,54 @@ static void Task_Poketch_WaitFadeIn(u8 taskId)
 static void SwitchApp(s32 delta)
 {
     PlaySE(SE_SELECT);
+    StopMusicPreview();
     sCurrentApp = (sCurrentApp + POKETCH_APP_COUNT + delta) % POKETCH_APP_COUNT;
     DrawCurrentApp();
+}
+
+// Returns TRUE if the music app used the input
+static bool32 HandleMusicInput(void)
+{
+    u32 choice = BattleMusic_GetChoice(sMusicCategory);
+    u32 count = BattleMusic_GetChoiceCount();
+
+    if (JOY_NEW(DPAD_UP))
+    {
+        sMusicCategory = (sMusicCategory + BATTLE_MUSIC_CATEGORY_COUNT - 1) % BATTLE_MUSIC_CATEGORY_COUNT;
+    }
+    else if (JOY_NEW(DPAD_DOWN))
+    {
+        sMusicCategory = (sMusicCategory + 1) % BATTLE_MUSIC_CATEGORY_COUNT;
+    }
+    else if (JOY_REPEAT(DPAD_RIGHT))
+    {
+        BattleMusic_SetChoice(sMusicCategory, (choice + 1) % count);
+    }
+    else if (JOY_REPEAT(DPAD_LEFT))
+    {
+        BattleMusic_SetChoice(sMusicCategory, (choice + count - 1) % count);
+    }
+    else if (JOY_NEW(A_BUTTON))
+    {
+        u16 song = BattleMusic_GetChoiceSong(choice);
+
+        if (sIsPreviewingMusic)
+        {
+            StopMusicPreview();
+        }
+        else if (song != 0)
+        {
+            sIsPreviewingMusic = TRUE;
+            PlayBGM(song);
+        }
+    }
+    else
+    {
+        return FALSE;
+    }
+    PlaySE(SE_SELECT);
+    DrawCurrentApp();
+    return TRUE;
 }
 
 static void FreePoketchResources(void)
@@ -505,16 +593,23 @@ static void StartPokenavApp(u8 taskId, u32 menuId)
 
 static void Task_Poketch_Input(u8 taskId)
 {
-    if (JOY_NEW(R_BUTTON | DPAD_RIGHT))
+    bool32 isMusicApp = (sCurrentApp == POKETCH_APP_MUSIC);
+
+    if (JOY_NEW(R_BUTTON) || (!isMusicApp && JOY_NEW(DPAD_RIGHT)))
     {
         SwitchApp(1);
     }
-    else if (JOY_NEW(L_BUTTON | DPAD_LEFT))
+    else if (JOY_NEW(L_BUTTON) || (!isMusicApp && JOY_NEW(DPAD_LEFT)))
     {
         SwitchApp(-1);
     }
+    else if (isMusicApp && !JOY_NEW(B_BUTTON) && HandleMusicInput())
+    {
+        // handled
+    }
     else if (JOY_NEW(B_BUTTON))
     {
+        StopMusicPreview();
         PlaySE(SE_POKENAV_OFF);
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
         gTasks[taskId].func = Task_Poketch_FadeToField;
