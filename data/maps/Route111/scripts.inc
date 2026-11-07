@@ -265,6 +265,7 @@ Route111_EventScript_Victor::
 Route111_EventScript_BattleWinstrates::
 	msgbox Route111_Text_VictorIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_VICTOR, Route111_Text_VictorDefeat
+	call Route111_EventScript_WinstrateHeal
 	applymovement LOCALID_ROUTE111_VICTOR, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	call Route111_EventScript_OpenWinstrateDoor
@@ -283,6 +284,7 @@ Route111_EventScript_BattleWinstrates::
 	call Route111_EventScript_CloseWinstrateDoor
 	msgbox Route111_Text_VictoriaIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_VICTORIA, Route111_Text_VictoriaDefeat
+	call Route111_EventScript_WinstrateHeal
 	applymovement LOCALID_ROUTE111_VICTORIA, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	call Route111_EventScript_OpenWinstrateDoor
@@ -301,6 +303,7 @@ Route111_EventScript_BattleWinstrates::
 	call Route111_EventScript_CloseWinstrateDoor
 	msgbox Route111_Text_ViviIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_VIVI, Route111_Text_ViviDefeat
+	call Route111_EventScript_WinstrateHeal
 	applymovement LOCALID_ROUTE111_VIVI, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	call Route111_EventScript_OpenWinstrateDoor
@@ -319,6 +322,7 @@ Route111_EventScript_BattleWinstrates::
 	call Route111_EventScript_CloseWinstrateDoor
 	msgbox Route111_Text_VickyIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_VICKY, Route111_Text_VickyDefeat
+	call Route111_EventScript_WinstrateHeal
 	msgbox Route111_Text_VickyPostBattle, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ROUTE111_VICKY, Common_Movement_WalkInPlaceFasterUp
@@ -330,6 +334,13 @@ Route111_EventScript_BattleWinstrates::
 	call Route111_EventScript_CloseWinstrateDoor
 	release
 	end
+
+Route111_EventScript_WinstrateHeal::
+	special HealPlayerParty
+	playfanfare MUS_HEAL
+	waitfanfare
+	msgbox Route111_Text_WinstrateHeal, MSGBOX_DEFAULT
+	return
 
 Route111_EventScript_OpenWinstrateDoor::
 	opendoor 13, 113
@@ -577,6 +588,10 @@ Route111_Text_VictorIntro:
 Route111_Text_VictorDefeat:
 	.string "Aiyah!\n"
 	.string "You're a lot tougher than I expected!$"
+
+Route111_Text_WinstrateHeal:
+	.string "Your POKéMON were healed\n"
+	.string "for the next battle!$"
 
 Route111_Text_VictorPostBattle:
 	.string "Hey, all!\n"
