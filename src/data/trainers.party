@@ -8544,15 +8544,193 @@ Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Smart Trainer
+Party Size: 6
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
 
-Taillow @ Oran Berry
-Level: 16
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Garchomp @ Garchompite
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Dragon Claw
+- Stone Edge
+- Swords Dance
 
-Zigzagoon @ Oran Berry
-Level: 16
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Metagross @ Metagrossite
+Ability: Clear Body
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Meteor Mash
+- Zen Headbutt
+- Earthquake
+- Bullet Punch
+
+Salamence @ Salamencite
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Double-Edge
+- Earthquake
+- Fire Fang
+- Dragon Dance
+
+Scizor @ Scizorite
+Ability: Technician
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Bullet Punch
+- Bug Bite
+- Superpower
+- Swords Dance
+
+Lucario @ Lucarionite
+Ability: Inner Focus
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Close Combat
+- Meteor Mash
+- Bullet Punch
+- Swords Dance
+
+Gyarados @ Gyaradosite
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Waterfall
+- Crunch
+- Earthquake
+- Dragon Dance
+
+Tyranitar @ Choice Band
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Stone Edge
+- Crunch
+- Earthquake
+- Fire Punch
+
+Dragonite @ Weakness Policy
+Ability: Multiscale
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Outrage
+- Extreme Speed
+- Earthquake
+- Dragon Dance
+
+Excadrill @ Focus Sash
+Ability: Mold Breaker
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Lead
+- Stealth Rock
+- Earthquake
+- Iron Head
+- Rapid Spin
+
+Breloom @ Life Orb
+Ability: Technician
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Lead
+- Spore
+- Mach Punch
+- Bullet Seed
+- Rock Tomb
+
+Mamoswine @ Expert Belt
+Ability: Thick Fat
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Lead
+- Earthquake
+- Icicle Crash
+- Ice Shard
+- Stealth Rock
+
+Weavile @ Silk Scarf
+Ability: Pressure
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Knock Off
+- Ice Shard
+- Low Kick
+- Swords Dance
+
+Kingambit @ Leftovers
+Ability: Supreme Overlord
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Kowtow Cleave
+- Iron Head
+- Sucker Punch
+- Swords Dance
+
+Dragapult @ Choice Scarf
+Ability: Infiltrator
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Dragon Darts
+- Phantom Force
+- U-turn
+- Sucker Punch
+
+Ursaluna @ Flame Orb
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Facade
+- Headlong Rush
+- Crunch
+- Swords Dance
+
+Baxcalibur @ Loaded Dice
+Ability: Thermal Exchange
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Icicle Spear
+- Glacial Lance
+- Earthquake
+- Dragon Dance
+
+Hawlucha @ Sitrus Berry
+Ability: Unburden
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Acrobatics
+- Close Combat
+- Stone Edge
+- Swords Dance
+
+Crawdaunt @ Lum Berry
+Ability: Adaptability
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Knock Off
+- Crabhammer
+- Aqua Jet
+- Dragon Dance
+
+Conkeldurr @ Toxic Orb
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Drain Punch
+- Mach Punch
+- Knock Off
+- Facade
+
+Krookodile @ Assault Vest
+Ability: Moxie
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Knock Off
+- Stone Edge
+- Close Combat
 
 === TRAINER_MIGUEL_1 ===
 Name: MIGUEL
@@ -8683,11 +8861,194 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Smart Trainer
+Party Size: 6
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
 
-Roselia @ Oran Berry
-Level: 17
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Venusaur @ Venusaurite
+Ability: Overgrow
+EVs: 252 HP / 4 Def / 252 SpD
+Calm Nature
+- Giga Drain
+- Sludge Bomb
+- Synthesis
+- Earth Power
+
+Slowbro @ Slowbronite
+Ability: Regenerator
+EVs: 252 HP / 4 Atk / 252 Def
+Bold Nature
+- Scald
+- Psychic
+- Slack Off
+- Thunder Wave
+
+Sableye @ Sablenite
+Ability: Prankster
+EVs: 252 HP / 4 Def / 252 SpD
+Careful Nature
+- Will-O-Wisp
+- Recover
+- Foul Play
+- Knock Off
+
+Blissey @ Leftovers
+Ability: Natural Cure
+EVs: 252 HP / 4 Atk / 252 Def
+Bold Nature
+- Seismic Toss
+- Soft-Boiled
+- Toxic
+- Heal Bell
+
+Toxapex @ Black Sludge
+Ability: Regenerator
+EVs: 252 HP / 4 Atk / 252 Def
+Bold Nature
+- Scald
+- Toxic
+- Recover
+- Haze
+
+Corviknight @ Rocky Helmet
+Ability: Pressure
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Brave Bird
+- U-turn
+- Roost
+- Defog
+
+Ferrothorn @ Mental Herb
+Ability: Iron Barbs
+EVs: 252 HP / 4 Atk / 252 Def
+Relaxed Nature
+Tags: Lead
+- Power Whip
+- Knock Off
+- Leech Seed
+- Stealth Rock
+
+Gliscor @ Toxic Orb
+Ability: Poison Heal
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Earthquake
+- Toxic
+- Protect
+- Roost
+
+Skarmory @ Shed Shell
+Ability: Sturdy
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+Tags: Lead
+- Brave Bird
+- Spikes
+- Whirlwind
+- Roost
+
+Clefable @ Sticky Barb
+Ability: Magic Guard
+EVs: 252 HP / 4 Atk / 252 Def
+Bold Nature
+- Moonblast
+- Soft-Boiled
+- Calm Mind
+- Thunder Wave
+
+Swampert @ Sitrus Berry
+Ability: Torrent
+EVs: 252 HP / 4 Atk / 252 Def
+Relaxed Nature
+Tags: Lead
+- Earthquake
+- Scald
+- Stealth Rock
+- Toxic
+
+Umbreon @ Light Clay
+Ability: Synchronize
+EVs: 252 HP / 4 Def / 252 SpD
+Calm Nature
+- Foul Play
+- Wish
+- Protect
+- Toxic
+
+Vaporeon @ Wide Lens
+Ability: Water Absorb
+EVs: 252 HP / 4 Atk / 252 Def
+Bold Nature
+- Scald
+- Wish
+- Protect
+- Ice Beam
+
+Tangrowth @ Assault Vest
+Ability: Regenerator
+EVs: 252 HP / 252 Atk / 4 SpD
+Relaxed Nature
+- Giga Drain
+- Knock Off
+- Earthquake
+- Sludge Bomb
+
+Mandibuzz @ Heavy-Duty Boots
+Ability: Overcoat
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Foul Play
+- Roost
+- Toxic
+- Defog
+
+Milotic @ Flame Orb
+Ability: Marvel Scale
+EVs: 252 HP / 4 Atk / 252 Def
+Bold Nature
+- Scald
+- Recover
+- Ice Beam
+- Haze
+
+Dondozo @ Chesto Berry
+Ability: Unaware
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+- Waterfall
+- Earthquake
+- Rest
+- Sleep Talk
+
+Hippowdon @ Smooth Rock
+Ability: Sand Stream
+EVs: 252 HP / 4 Atk / 252 Def
+Impish Nature
+Tags: Lead
+- Earthquake
+- Slack Off
+- Stealth Rock
+- Whirlwind
+
+Porygon2 @ Eviolite
+Ability: Trace
+EVs: 252 HP / 4 Atk / 252 Def
+Bold Nature
+- Tri Attack
+- Ice Beam
+- Recover
+- Toxic
+
+Gastrodon @ Mystic Water
+Ability: Storm Drain
+EVs: 252 HP / 4 Def / 252 SpD
+Calm Nature
+- Scald
+- Earth Power
+- Recover
+- Clear Smog
 
 === TRAINER_VANESSA ===
 Name: VANESSA
@@ -8918,15 +9279,198 @@ Pic: Expert F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+Party Size: 6
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
 
-Meditite
-Level: 18
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Medicham @ Medichamite
+Ability: Pure Power
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
 - High Jump Kick
-- Meditate
-- Confusion
-- Detect
+- Zen Headbutt
+- Bullet Punch
+- Ice Punch
+
+Gallade @ Galladite
+Ability: Steadfast
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Close Combat
+- Zen Headbutt
+- Knock Off
+- Swords Dance
+
+Alakazam @ Alakazite
+Ability: Magic Guard
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Psychic
+- Focus Blast
+- Shadow Ball
+- Calm Mind
+
+Blaziken @ Blazikenite
+Ability: Speed Boost
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Flare Blitz
+- High Jump Kick
+- Knock Off
+- Swords Dance
+
+Gardevoir @ Gardevoirite
+Ability: Trace
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Hyper Voice
+- Psychic
+- Focus Blast
+- Calm Mind
+
+Heracross @ Heracronite
+Ability: Guts
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Pin Missile
+- Close Combat
+- Rock Blast
+- Swords Dance
+
+Infernape @ Life Orb
+Ability: Iron Fist
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Close Combat
+- Flare Blitz
+- Mach Punch
+- Swords Dance
+
+Hitmonlee @ Choice Band
+Ability: Reckless
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- High Jump Kick
+- Knock Off
+- Blaze Kick
+- Mach Punch
+
+Hitmontop @ Assault Vest
+Ability: Intimidate
+EVs: 252 HP / 252 Atk / 4 SpD
+Impish Nature
+Tags: Lead
+- Close Combat
+- Rapid Spin
+- Sucker Punch
+- Fake Out
+
+Reuniclus @ Rocky Helmet
+Ability: Magic Guard
+EVs: 252 HP / 4 Atk / 252 Def
+Bold Nature
+- Psychic
+- Focus Blast
+- Recover
+- Calm Mind
+
+Espeon @ Lum Berry
+Ability: Magic Bounce
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Psychic
+- Shadow Ball
+- Dazzling Gleam
+- Morning Sun
+
+Mienshao @ Sitrus Berry
+Ability: Regenerator
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+Tags: Lead
+- Close Combat
+- Knock Off
+- U-turn
+- Fake Out
+
+Grimmsnarl @ Light Clay
+Ability: Prankster
+EVs: 252 HP / 4 Atk / 252 Def
+Careful Nature
+Tags: Lead
+- Reflect
+- Light Screen
+- Spirit Break
+- Thunder Wave
+
+Hatterene @ Mental Herb
+Ability: Magic Bounce
+EVs: 4 HP / 252 SpA / 252 Spe
+Quiet Nature
+IVs: 0 Atk
+- Psychic
+- Dazzling Gleam
+- Mystical Fire
+- Trick Room
+
+Bronzong @ Leftovers
+Ability: Levitate
+EVs: 252 HP / 4 Atk / 252 Def
+Relaxed Nature
+- Gyro Ball
+- Zen Headbutt
+- Trick Room
+- Stealth Rock
+
+Slowking @ Choice Specs
+Ability: Regenerator
+EVs: 252 HP / 4 Def / 252 SpD
+Modest Nature
+- Psychic
+- Scald
+- Flamethrower
+- Trick
+
+Hariyama @ Flame Orb
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Close Combat
+- Bullet Punch
+- Knock Off
+- Fake Out
+
+Sawk @ Focus Sash
+Ability: Sturdy
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Close Combat
+- Ice Punch
+- Knock Off
+- Bulk Up
+
+Grumpig @ Expert Belt
+Ability: Thick Fat
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Psychic
+- Focus Blast
+- Shadow Ball
+- Calm Mind
+
+Bewear @ Choice Scarf
+Ability: Fluffy
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Close Combat
+- Double-Edge
+- Earthquake
+- Ice Punch
 
 === TRAINER_SHELBY_1 ===
 Name: SHELBY
@@ -16491,19 +17035,210 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+Party Size: 6
+Pool Rules: Weather Singles
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
 
-Marill
-Level: 15
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Politoed @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 4 Def / 252 SpD
+Calm Nature
+Tags: Lead / Weather Setter
+- Scald
+- Ice Beam
+- Encore
+- Hypnosis
 
-Shroomish
-Level: 15
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Pelipper @ Wacan Berry
+Ability: Drizzle
+EVs: 252 HP / 4 Atk / 252 Def
+Bold Nature
+Tags: Lead / Weather Setter
+- Hurricane
+- Scald
+- U-turn
+- Roost
 
-Numel
-Level: 15
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Swampert @ Swampertite
+Ability: Torrent
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Weather Abuser
+- Waterfall
+- Earthquake
+- Ice Punch
+- Superpower
+
+Blastoise @ Blastoisinite
+Ability: Rain Dish
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Water Pulse
+- Dark Pulse
+- Aura Sphere
+- Ice Beam
+
+Sharpedo @ Sharpedonite
+Ability: Speed Boost
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Liquidation
+- Crunch
+- Ice Fang
+- Protect
+
+Ampharos @ Ampharosite
+Ability: Static
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+IVs: 0 Atk
+- Thunder
+- Dragon Pulse
+- Focus Blast
+- Volt Switch
+
+Kingdra @ Choice Specs
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+IVs: 0 Atk
+Tags: Weather Abuser
+- Hydro Pump
+- Draco Meteor
+- Ice Beam
+- Flash Cannon
+
+Ludicolo @ Life Orb
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+IVs: 0 Atk
+Tags: Weather Abuser
+- Hydro Pump
+- Giga Drain
+- Ice Beam
+- Focus Blast
+
+Kabutops @ Focus Sash
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Weather Abuser
+- Waterfall
+- Stone Edge
+- Aqua Jet
+- Swords Dance
+
+Omastar @ White Herb
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+IVs: 0 Atk
+Tags: Weather Abuser
+- Hydro Pump
+- Ice Beam
+- Earth Power
+- Shell Smash
+
+Seismitoad @ Expert Belt
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+IVs: 0 Atk
+Tags: Weather Abuser
+- Hydro Pump
+- Earth Power
+- Sludge Wave
+- Focus Blast
+
+Barraskewda @ Choice Band
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Weather Abuser
+- Liquidation
+- Close Combat
+- Psychic Fangs
+- Aqua Jet
+
+Drednaw @ Sitrus Berry
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Tags: Weather Abuser
+- Liquidation
+- Stone Edge
+- Earthquake
+- Shell Smash
+
+Golduck @ Wise Glasses
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+Tags: Weather Abuser
+- Hydro Pump
+- Psychic
+- Ice Beam
+- Calm Mind
+
+Toxicroak @ Black Sludge
+Ability: Dry Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Gunk Shot
+- Drain Punch
+- Sucker Punch
+- Swords Dance
+
+Lanturn @ Leftovers
+Ability: Volt Absorb
+EVs: 252 HP / 4 Def / 252 SpD
+Calm Nature
+- Thunder
+- Scald
+- Ice Beam
+- Thunder Wave
+
+Jellicent @ Colbur Berry
+Ability: Water Absorb
+EVs: 252 HP / 4 Atk / 252 Def
+Bold Nature
+- Scald
+- Shadow Ball
+- Recover
+- Will-O-Wisp
+
+Tentacruel @ Muscle Band
+Ability: Rain Dish
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Scald
+- Sludge Wave
+- Rapid Spin
+- Toxic Spikes
+
+Starmie @ Wide Lens
+Ability: Natural Cure
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Hydro Pump
+- Psychic
+- Thunder
+- Ice Beam
+
+Azumarill @ Assault Vest
+Ability: Huge Power
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Play Rough
+- Liquidation
+- Aqua Jet
+- Superpower
 
 === TRAINER_HALEY_2 ===
 Name: HALEY
