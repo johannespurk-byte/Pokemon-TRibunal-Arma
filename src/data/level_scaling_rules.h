@@ -51,6 +51,9 @@
 // their badge is still missing (caps.c), not at the player's highest level
 #define GYM_LEADER_SCALING { .mode = LEVEL_SCALING_TO_LEVEL_CAP }
 
+// Route 112 trainers fight just below the level cap
+#define ROUTE_112_SCALING { .mode = LEVEL_SCALING_TO_LEVEL_CAP, .levelAugmentAdd = -2 }
+
 const struct LevelScalingConfig gTrainerLevelScalingRules[TRAINERS_COUNT] =
 {
     [TRAINER_ROXANNE_1]        = GYM_LEADER_SCALING, // Cap 18
@@ -65,6 +68,12 @@ const struct LevelScalingConfig gTrainerLevelScalingRules[TRAINERS_COUNT] =
     [TRAINER_VICTORIA]         = GYM_LEADER_SCALING,
     [TRAINER_VIVI]             = GYM_LEADER_SCALING,
     [TRAINER_VICKY]            = GYM_LEADER_SCALING,
+    [TRAINER_BRICE] = ROUTE_112_SCALING,
+    [TRAINER_LARRY] = ROUTE_112_SCALING,
+    [TRAINER_CAROL] = ROUTE_112_SCALING,
+    [TRAINER_TRENT_1] = ROUTE_112_SCALING,
+    [TRAINER_BRYANT] = ROUTE_112_SCALING,
+    [TRAINER_SHAYLA] = ROUTE_112_SCALING,
     [TRAINER_FLANNERY_1]       = GYM_LEADER_SCALING, // Cap 60
     [TRAINER_NORMAN_1]         = GYM_LEADER_SCALING, // Cap 68
     [TRAINER_MISTY]            = GYM_LEADER_SCALING,

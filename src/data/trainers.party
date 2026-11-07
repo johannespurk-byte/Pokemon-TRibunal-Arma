@@ -5883,9 +5883,38 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Nuzleaf
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Shiftry @ Life Orb
+Level: 58
+Ability: Pickpocket
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Brick Break
+- Leaf Blade
+- Sucker Punch
+- Swords Dance
+
+
+Torterra @ Leftovers
+Level: 58
+Ability: Overgrow
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Wood Hammer
+- Earthquake
+- Rock Slide
+- Synthesis
+
+
+Cacturne @ Focus Sash
+Level: 58
+Ability: Water Absorb
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Seed Bomb
+- Sucker Punch
+- Spikes
+- Swords Dance
+
 
 === TRAINER_SHANE ===
 Name: SHANE
@@ -13089,13 +13118,49 @@ Music: Girl
 Double Battle: No
 AI: Smart Trainer
 
-Taillow
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Pelipper @ Damp Rock
+Level: 58
+Ability: Drizzle
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Hurricane
+- Surf
+- Ice Beam
+- Roost
 
-Lombre
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Ludicolo @ Life Orb
+Level: 58
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Giga Drain
+- Surf
+- Ice Beam
+- Leech Seed
+
+
+Swellow @ Flame Orb
+Level: 58
+Ability: Guts
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Facade
+- Brave Bird
+- Steel Wing
+- Quick Attack
+
+
+Azumarill @ Sitrus Berry
+Level: 58
+Ability: Huge Power
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Aqua Jet
+- Play Rough
+- Waterfall
+- Superpower
+
 
 === TRAINER_NANCY ===
 Name: NANCY
@@ -17726,13 +17791,49 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Numel
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Golem @ Leftovers
+Level: 58
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Stealth Rock
+- Earthquake
+- Rock Slide
+- Fire Punch
 
-Machop
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Machamp @ Flame Orb
+Level: 58
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Close Combat
+- Knock Off
+- Facade
+- Rock Slide
+
+
+Donphan @ Rocky Helmet
+Level: 58
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Earthquake
+- Knock Off
+- Rapid Spin
+- Ice Shard
+
+
+Hariyama @ Assault Vest
+Level: 58
+Ability: Thick Fat
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Close Combat
+- Knock Off
+- Heavy Slam
+- Bullet Punch
+
 
 === TRAINER_TRENT_1 ===
 Name: TRENT
@@ -17743,17 +17844,49 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Geodude
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Golem-Alola @ Assault Vest
+Level: 58
+Ability: Galvanize
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Double-Edge
+- Rock Slide
+- Earthquake
+- Fire Punch
 
-Geodude
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Geodude
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Rhyperior @ Leftovers
+Level: 58
+Ability: Solid Rock
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Megahorn
+- Ice Punch
+
+
+Aggron @ Sitrus Berry
+Level: 58
+Ability: Rock Head
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Head Smash
+- Iron Head
+- Earthquake
+- Stealth Rock
+
+
+Steelix @ Rocky Helmet
+Level: 58
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Earthquake
+- Iron Tail
+- Stone Edge
+- Roar
+
 
 === TRAINER_LENNY ===
 Name: LENNY
@@ -21102,13 +21235,49 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Numel
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Torkoal @ Heat Rock
+Level: 58
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+- Lava Plume
+- Solar Beam
+- Yawn
+- Rapid Spin
 
-Slugma
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Camerupt @ Sitrus Berry
+Level: 58
+Ability: Solid Rock
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+- Earth Power
+- Flamethrower
+- Yawn
+- Ancient Power
+
+
+Magcargo @ White Herb
+Level: 58
+Ability: Flame Body
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Shell Smash
+- Lava Plume
+- Earth Power
+- Ancient Power
+
+
+Arcanine @ Life Orb
+Level: 58
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Flare Blitz
+- Extreme Speed
+- Thunder Fang
+- Close Combat
+
 
 === TRAINER_SHAYLA ===
 Name: SHAYLA
@@ -21119,13 +21288,38 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Shroomish
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Breloom @ Focus Sash
+Level: 58
+Ability: Technician
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Spore
+- Bullet Seed
+- Mach Punch
+- Rock Tomb
 
-Roselia
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Roserade @ Black Sludge
+Level: 58
+Ability: Natural Cure
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Sludge Bomb
+- Giga Drain
+- Shadow Ball
+- Spikes
+
+
+Bellossom @ Leftovers
+Level: 58
+Ability: Chlorophyll
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Quiver Dance
+- Giga Drain
+- Moonblast
+- Sleep Powder
+
 
 === TRAINER_KYRA ===
 Name: KYRA
