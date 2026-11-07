@@ -1,5 +1,17 @@
 Fossil_Ruins_4_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Fossil_Ruins_4_OnResume
 	.byte 0
+
+Fossil_Ruins_4_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, Fossil_Ruins_4_EventScript_TryRemoveGiratina
+	end
+
+@ A caught Giratina leaves right away, not only when the map is loaded again
+Fossil_Ruins_4_EventScript_TryRemoveGiratina::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_FOSSIL_RUINS_4_GIRATINA
+	return
 
 Fossil_Ruins_4_EventScript_Giratina::
 	lockall
