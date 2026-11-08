@@ -64,6 +64,7 @@ static void ForceStairsMovement(u32, s16*, s16*);
 static const u8 sText_PlayerScurriedToCenter[] = _("{PLAYER} scurried to a POKéMON CENTER,\nprotecting the exhausted and fainted\nPOKéMON from further harm…\p");
 static const u8 sText_PlayerScurriedBackHome[] = _("{PLAYER} scurried back home, protecting\nthe exhausted and fainted POKéMON from\nfurther harm…\p");
 static const u8 sText_PlayerRegroupCenter[] = _("{PLAYER} scurried to a POKéMON CENTER,\nto regroup and reconsider the battle\nstrategy…\p");
+static const u8 sText_PlayerScurriedToRestStop[] = _("{PLAYER} scurried to the OLD LADY'S\nREST STOP, protecting the exhausted\nand fainted POKéMON from further harm…\p");
 static const u8 sText_PlayerRegroupHome[] = _("{PLAYER} scurried back home, to regroup\nand reconsider the battle strategy…\p");
 
 // data[0] is used universally by tasks in this file as a state for switches
@@ -1379,6 +1380,7 @@ static const u8 sWhiteoutTextColors[] = { TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DAR
 #define tWindowId      data[1]
 #define tPrintState    data[2]
 #define tIsPlayerHouse data[3]
+#define WHITEOUT_DEST_OLD_LADY 2 // tIsPlayerHouse value for the Route 111 rest stop
 
 static bool32 PrintWhiteOutRecoveryMessage(u8 taskId, const u8 *text, u32 x, u32 y)
 {
@@ -1417,6 +1419,9 @@ static const u8 *GenerateRecoveryMessage(u8 taskId)
     bool32 forfeitTrainer = DidPlayerForfeitNormalTrainerBattle();
     bool32 destinationIsPlayersHouse = (gTasks[taskId].tIsPlayerHouse == TRUE);
 
+    if (gTasks[taskId].tIsPlayerHouse == WHITEOUT_DEST_OLD_LADY)
+        return sText_PlayerScurriedToRestStop;
+
     if (forfeitTrainer && destinationIsPlayersHouse)
         return sText_PlayerRegroupHome;
     else if (forfeitTrainer && !destinationIsPlayersHouse)
@@ -1442,6 +1447,8 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
         CopyWindowToVram(windowId, COPYWIN_FULL);
 
         gTasks[taskId].tIsPlayerHouse = IsLastHealLocationPlayerHouse();
+        if (IsLastHealLocationOldLadysRestStop())
+            gTasks[taskId].tIsPlayerHouse = WHITEOUT_DEST_OLD_LADY;
         gTasks[taskId].tState = WHITEOUT_CUTSCENE_PRINT_MSG;
         break;
     case WHITEOUT_CUTSCENE_PRINT_MSG:
@@ -1467,7 +1474,11 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
         if (WaitForWeatherFadeIn() == TRUE)
         {
             DestroyTask(taskId);
-            if (gTasks[taskId].tIsPlayerHouse)
+            if (gTasks[taskId].tIsPlayerHouse == WHITEOUT_DEST_OLD_LADY)
+            {
+                ScriptContext_SetupScript(EventScript_AfterWhiteOutOldLadyHeal);
+            }
+            else if (gTasks[taskId].tIsPlayerHouse)
             {
                 if (IS_FRLG)
                     StringCopy(gStringVar1, COMPOUND_STRING("PROF. OAK"));

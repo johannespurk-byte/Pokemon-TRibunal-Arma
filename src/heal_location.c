@@ -77,6 +77,11 @@ bool32 IsLastHealLocationPlayerHouse()
     return FALSE;
 }
 
+bool32 IsLastHealLocationOldLadysRestStop(void)
+{
+    return IsLastHealLocation(HEAL_LOCATION_ROUTE111_OLD_LADYS_REST_STOP);
+}
+
 u32 GetHealNpcLocalId(u32 healLocationId)
 {
     if (healLocationId == HEAL_LOCATION_NONE || healLocationId >= NUM_HEAL_LOCATIONS)

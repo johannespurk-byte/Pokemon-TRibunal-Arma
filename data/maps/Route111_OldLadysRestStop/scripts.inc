@@ -4,6 +4,20 @@ Route111_OldLadysRestStop_MapScripts::
 
 Route111_OldLadysRestStop_OnTransition:
 	setflag FLAG_LANDMARK_OLD_LADY_REST_SHOP
+	setrespawn HEAL_LOCATION_ROUTE111_OLD_LADYS_REST_STOP
+	end
+
+@ Used after a whiteout when this rest stop was the last place the player rested
+EventScript_AfterWhiteOutOldLadyHeal::
+	lockall
+	textcolor NPC_TEXT_COLOR_FEMALE
+	applymovement LOCALID_OLD_LADYS_REST_STOP_OLD_LADY, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox Route111_OldLadysRestStop_Text_WhiteOutWelcome, MSGBOX_DEFAULT
+	call Common_EventScript_OutOfCenterPartyHeal
+	msgbox Route111_OldLadysRestStop_Text_WhiteOutHealed, MSGBOX_DEFAULT
+	fadedefaultbgm
+	releaseall
 	end
 
 Route111_OldLadysRestStop_EventScript_OldLady::
@@ -43,6 +57,17 @@ Route111_OldLadysRestStop_Text_StillTiredTakeAnotherRest:
 	.string "Are your POKéMON still tired?\p"
 	.string "You should take another rest here.\n"
 	.string "That's a fine idea. You should do that.$"
+
+Route111_OldLadysRestStop_Text_WhiteOutWelcome:
+	.string "Oh, dear, dear!\n"
+	.string "You came back all worn out.\p"
+	.string "Sit down and rest up here.\n"
+	.string "That's a fine idea!$"
+
+Route111_OldLadysRestStop_Text_WhiteOutHealed:
+	.string "There you go! Your POKéMON are\n"
+	.string "full of energy again.\p"
+	.string "Come back whenever you need a rest.$"
 
 Route111_OldLadysRestStop_Text_DontNeedToBeShy:
 	.string "Is that so?\n"
