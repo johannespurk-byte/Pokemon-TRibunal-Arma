@@ -7,6 +7,8 @@ Common_EventScript_PkmnCenterNurse::
 	checkitem ITEM_POKE_VIAL
 	goto_if_eq VAR_RESULT, FALSE, EventScript_PkmnCenterNurse_GiveVial
 	@ === POKÉVIAL AUTOMATIC GIFT ENDE ===
+	@ Without a Pokétch yet, the nurse hands one over first
+	goto_if_unset FLAG_SYS_POKENAV_GET, EventScript_PkmnCenterNurse_GivePoketch
 	setvar VAR_0x8004, 0
 .if !IS_FRLG
 	specialvar VAR_RESULT, CountPlayerTrainerStars
@@ -155,6 +157,28 @@ EventScript_PkmnCenterNurse_GiveVial:
 
 
 
+
+EventScript_PkmnCenterNurse_GivePoketch:
+	msgbox Text_NurseGivesPoketchText, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	message Text_ReceivedPoketch
+	waitfanfare
+	waitmessage
+	setflag FLAG_SYS_POKENAV_GET
+	msgbox Text_NurseExplainsPoketch, MSGBOX_DEFAULT
+	closemessage
+	goto Common_EventScript_PkmnCenterNurse
+
+Text_NurseGivesPoketchText:
+	.string "SCHWESTER JOY: Du hast ja noch\n"
+	.string "kein POKéTCH! Hier, nimm eins mit.$"
+
+Text_ReceivedPoketch:
+	.string "{PLAYER} erhält das POKéTCH!$"
+
+Text_NurseExplainsPoketch:
+	.string "Du öffnest es im START-Menü.\n"
+	.string "Viel Erfolg auf deiner Reise!$"
 
 Text_NurseGivesVialText:
 	.string "SCHWESTER JOY: Willkommen! Da du neu\n"
