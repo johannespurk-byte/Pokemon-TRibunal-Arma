@@ -194,6 +194,7 @@ static void Task_HandleMainMenuInput(u8);
 static void Task_HandleMainMenuAPressed(u8);
 static void Task_HandleMainMenuBPressed(u8);
 static void Task_NewGameBirchSpeech_Init(u8);
+static void Task_IntroStory_Init(u8);
 static void Task_DisplayMainMenuInvalidActionError(u8);
 static void AddBirchSpeechObjects(u8);
 static void Task_NewGameBirchSpeech_WaitToShowBirch(u8);
@@ -585,7 +586,7 @@ void CB2_InitMainMenuNewGame(void)
     gPlttBufferFaded[0] = RGB_BLACK;
     FreeAllWindowBuffers();
     sCurrItemAndOptionMenuCheck = 0;
-    CreateTask(Task_NewGameBirchSpeech_Init, 0);
+    CreateTask(Task_IntroStory_Init, 0);
 }
 
 static u32 InitMainMenu(bool8 returningFromOptionsMenu)
@@ -1108,8 +1109,8 @@ static void Task_HandleMainMenuAPressed(u8 taskId)
             gPlttBufferFaded[0] = RGB_BLACK;
             FreeAllWindowBuffers();
 
-            // Startet das Professor Birk Intro:
-            gTasks[taskId].func = Task_NewGameBirchSpeech_Init;
+            // Startet die Vorgeschichte, danach das Professor Birk Intro:
+            gTasks[taskId].func = Task_IntroStory_Init;
             break;
         case ACTION_CONTINUE:
             gPlttBufferUnfaded[0] = RGB_BLACK;
@@ -1322,6 +1323,187 @@ u8 NewGameBirchSpeech_GetCharacterPage(void)
 {
     return sBirchCharacterPageChosen ? sBirchCharacterPage : BIRCH_DEFAULT_CHARACTER_PAGE;
 }
+
+// Vorgeschichte vor dem Birk-Intro: weißer Text auf Schwarz, A blättert, B oder START überspringt
+static const u8 *const sIntroStoryPages[] =
+{
+    COMPOUND_STRING("For years, TEAM AQUA and\n"
+                    "TEAM MAGMA fought each other.\n"
+                    "One wanted to grow the sea,\n"
+                    "the other to grow the land.\n"
+                    "\n"
+                    "Their feud kept HOENN\n"
+                    "in balance."),
+    COMPOUND_STRING("Then GIOVANNI came.\n"
+                    "\n"
+                    "The boss of TEAM ROCKET gave\n"
+                    "both teams what neither could\n"
+                    "get alone: money, machines\n"
+                    "and a common enemy."),
+    COMPOUND_STRING("AQUA, ROCKET and MAGMA\n"
+                    "became one: ARMA.\n"
+                    "\n"
+                    "At its head sits the TRIBUNAL:\n"
+                    "ARCHIE, MAXIE and GIOVANNI.\n"
+                    "In secret, it decides who\n"
+                    "shall rule HOENN."),
+    COMPOUND_STRING("Their goal lies deep below\n"
+                    "the FOSSIL RUINS.\n"
+                    "\n"
+                    "There, rifts open into a\n"
+                    "distorted world, where a\n"
+                    "POKéMON waits that defies\n"
+                    "space and time."),
+    COMPOUND_STRING("The GYM LEADERS sense that\n"
+                    "something is wrong.\n"
+                    "But ARMA has eyes everywhere.\n"
+                    "\n"
+                    "Then you move to LITTLEROOT\n"
+                    "TOWN: a newcomer nobody\n"
+                    "is watching."),
+    COMPOUND_STRING("For the brave, one harsh\n"
+                    "rule applies: whoever falls\n"
+                    "does not come back.\n"
+                    "Every POKéMON counts."),
+    COMPOUND_STRING("The TRIBUNAL has already\n"
+                    "passed its judgment on HOENN.\n"
+                    "\n"
+                    "Now it is up to you\n"
+                    "to break it."),
+};
+
+static const struct WindowTemplate sIntroStoryWindows[] =
+{
+    {
+        .bg = 0,
+        .tilemapLeft = 2,
+        .tilemapTop = 2,
+        .width = 26,
+        .height = 16,
+        .paletteNum = 15,
+        .baseBlock = 1
+    },
+    DUMMY_WIN_TEMPLATE
+};
+
+static const u16 sIntroStoryTextPal[] = {RGB_BLACK, RGB_WHITE, RGB(10, 10, 12)};
+static const u8 sIntroStoryTextColors[] = {TEXT_COLOR_TRANSPARENT, 1, 2};
+
+#define tStoryPage data[0]
+#define tStoryEnd  data[1]
+#define tStoryABSpeedUp data[2]
+#define tStoryMidSpeed  data[3]
+
+static void Task_IntroStory_WaitInput(u8 taskId);
+static void Task_IntroStory_WaitFadeOut(u8 taskId);
+static void Task_IntroStory_End(u8 taskId);
+
+#define INTRO_STORY_TEXT_SPEED 6 // with forced mid text speed: about 35 letters per second
+
+static void IntroStory_PrintPage(u32 page)
+{
+    FillWindowPixelBuffer(0, PIXEL_FILL(0));
+    CopyWindowToVram(0, COPYWIN_GFX);
+    AddTextPrinterParameterized4(0, FONT_NORMAL, 4, 4, 0, 0, sIntroStoryTextColors, INTRO_STORY_TEXT_SPEED, sIntroStoryPages[page]);
+}
+
+static void Task_IntroStory_Init(u8 taskId)
+{
+    SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_1D_MAP);
+    SetGpuReg(REG_OFFSET_WININ, 0);
+    SetGpuReg(REG_OFFSET_WINOUT, 0);
+    SetGpuReg(REG_OFFSET_BLDCNT, 0);
+    SetGpuReg(REG_OFFSET_BLDALPHA, 0);
+    SetGpuReg(REG_OFFSET_BLDY, 0);
+    ChangeBgX(0, 0, BG_COORD_SET);
+    ChangeBgY(0, 0, BG_COORD_SET);
+    // The main menu's windows are gone; these get their own tilemap
+    UnsetBgTilemapBuffer(0);
+    InitWindows(sIntroStoryWindows);
+    DeactivateAllTextPrinters();
+    LoadPalette(sIntroStoryTextPal, BG_PLTT_ID(15), sizeof(sIntroStoryTextPal));
+    gPlttBufferUnfaded[0] = RGB_BLACK;
+    gPlttBufferFaded[0] = RGB_BLACK;
+    FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 32, 32);
+    PutWindowTilemap(0);
+    CopyBgTilemapBufferToVram(0);
+    gTasks[taskId].tStoryPage = 0;
+    gTasks[taskId].tStoryEnd = FALSE;
+    gTasks[taskId].tStoryABSpeedUp = gTextFlags.canABSpeedUpPrint;
+    gTextFlags.canABSpeedUpPrint = TRUE;
+    // The player's text speed may be instant, which would show each page at once
+    gTasks[taskId].tStoryMidSpeed = gTextFlags.forceMidTextSpeed;
+    gTextFlags.forceMidTextSpeed = TRUE;
+    IntroStory_PrintPage(0);
+    BlendPalettes(PALETTES_ALL, 16, RGB_BLACK);
+    BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
+    SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_1D_MAP | DISPCNT_BG0_ON);
+    ShowBg(0);
+    PlayBGM(MUS_ABNORMAL_WEATHER);
+    gTasks[taskId].func = Task_IntroStory_WaitInput;
+}
+
+static void Task_IntroStory_WaitInput(u8 taskId)
+{
+    if (gPaletteFade.active)
+        return;
+
+    if (JOY_NEW(B_BUTTON | START_BUTTON))
+    {
+        gTasks[taskId].tStoryEnd = TRUE;
+    }
+    else
+    {
+        // A while the page is still being written speeds it up; once it is done, A turns the page
+        RunTextPrinters();
+        if (IsTextPrinterActiveOnWindow(0) || !JOY_NEW(A_BUTTON))
+            return;
+        gTasks[taskId].tStoryEnd = (gTasks[taskId].tStoryPage + 1 >= (s32)ARRAY_COUNT(sIntroStoryPages));
+    }
+    PlaySE(SE_SELECT);
+    BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+    gTasks[taskId].func = Task_IntroStory_WaitFadeOut;
+}
+
+static void Task_IntroStory_WaitFadeOut(u8 taskId)
+{
+    if (gPaletteFade.active)
+        return;
+
+    if (!gTasks[taskId].tStoryEnd)
+    {
+        IntroStory_PrintPage(++gTasks[taskId].tStoryPage);
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
+        gTasks[taskId].func = Task_IntroStory_WaitInput;
+        return;
+    }
+
+    // Leave a clean BG0 for the Birch intro, which sets up its own windows
+    DeactivateAllTextPrinters();
+    gTextFlags.canABSpeedUpPrint = gTasks[taskId].tStoryABSpeedUp;
+    gTextFlags.forceMidTextSpeed = gTasks[taskId].tStoryMidSpeed;
+    FillWindowPixelBuffer(0, PIXEL_FILL(0));
+    CopyWindowToVram(0, COPYWIN_GFX);
+    FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 32, 32);
+    CopyBgTilemapBufferToVram(0);
+    SetGpuReg(REG_OFFSET_DISPCNT, 0);
+    gTasks[taskId].func = Task_IntroStory_End;
+}
+
+// One frame later, once the cleared tilemap is in VRAM
+static void Task_IntroStory_End(u8 taskId)
+{
+    FreeAllWindowBuffers();
+    UnsetBgTilemapBuffer(0);
+    gTasks[taskId].tStoryPage = 0;
+    gTasks[taskId].tStoryEnd = 0;
+    gTasks[taskId].func = Task_NewGameBirchSpeech_Init;
+}
+
+#undef tStoryPage
+#undef tStoryEnd
+#undef tStoryABSpeedUp
+#undef tStoryMidSpeed
 
 static void Task_NewGameBirchSpeech_Init(u8 taskId)
 {
