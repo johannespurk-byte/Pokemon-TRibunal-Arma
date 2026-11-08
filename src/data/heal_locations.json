@@ -357,6 +357,16 @@
       "y": 4,
       "respawn_map": "MAP_ROUTE111_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_ROUTE111_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_ROUTE111_OLD_LADYS_REST_STOP",
+      "map": "MAP_ROUTE111_OLD_LADYS_REST_STOP",
+      "x": 6,
+      "y": 4,
+      "respawn_map": "MAP_ROUTE111_OLD_LADYS_REST_STOP",
+      "respawn_npc": "LOCALID_OLD_LADYS_REST_STOP_OLD_LADY",
+      "respawn_x": 6,
+      "respawn_y": 4
     }
   ]
 }
