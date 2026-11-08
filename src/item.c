@@ -200,6 +200,8 @@ struct ItemSlot NONNULL BagPocket_GetSlotData(struct BagPocket *pocket, u32 pock
     case POCKET_POKE_BALLS:
     case POCKET_TM_HM:
     case POCKET_BERRIES:
+    case POCKET_MEGA_STONES:
+    case POCKET_EVO_ITEMS:
         return BagPocket_GetSlotDataGeneric(pocket, pocketPos);
     case POCKET_DUMMY:
         return BagPocket_GetSlotDataPC(pocket, pocketPos);
@@ -223,6 +225,8 @@ void NONNULL BagPocket_SetSlotData(struct BagPocket *pocket, u32 pocketPos, stru
     case POCKET_POKE_BALLS:
     case POCKET_TM_HM:
     case POCKET_BERRIES:
+    case POCKET_MEGA_STONES:
+    case POCKET_EVO_ITEMS:
         BagPocket_SetSlotDataGeneric(pocket, pocketPos, newSlot);
         break;
     case POCKET_DUMMY:
@@ -263,6 +267,14 @@ void SetBagItemsPointers(void)
     gBagPockets[POCKET_BERRIES].itemSlots = gSaveBlock1Ptr->bag.berries;
     gBagPockets[POCKET_BERRIES].capacity = BAG_BERRIES_COUNT;
     gBagPockets[POCKET_BERRIES].id = POCKET_BERRIES;
+
+    gBagPockets[POCKET_MEGA_STONES].itemSlots = gSaveBlock1Ptr->bagMegaStones;
+    gBagPockets[POCKET_MEGA_STONES].capacity = BAG_MEGA_STONES_COUNT;
+    gBagPockets[POCKET_MEGA_STONES].id = POCKET_MEGA_STONES;
+
+    gBagPockets[POCKET_EVO_ITEMS].itemSlots = gSaveBlock1Ptr->bagEvoItems;
+    gBagPockets[POCKET_EVO_ITEMS].capacity = BAG_EVO_ITEMS_COUNT;
+    gBagPockets[POCKET_EVO_ITEMS].id = POCKET_EVO_ITEMS;
 }
 
 u8 *CopyItemName(enum Item itemId, u8 *dst)
@@ -655,6 +667,33 @@ void MoveItemSlotInPC(struct ItemSlot *itemSlots, u32 from, u32 to)
 {
     struct BagPocket dummyPocket = DUMMY_PC_BAG_POCKET;
     return BagPocket_MoveItemSlot(&dummyPocket, from, to);
+}
+
+// Items that sit in an older pocket (e.g. Mega Stones in the Items pocket of a save made
+// before the Mega Stone and Evolution pockets existed) are moved to the pocket they belong to now.
+void MoveBagItemsToTheirPockets(void)
+{
+    u32 i;
+    bool32 moved = FALSE;
+    struct BagPocket *pocket = &gBagPockets[POCKET_ITEMS];
+
+    for (i = 0; i < pocket->capacity; i++)
+    {
+        struct ItemSlot slot = BagPocket_GetSlotData(pocket, i);
+        enum Pocket target;
+
+        if (slot.itemId == ITEM_NONE)
+            continue;
+        target = GetItemPocket(slot.itemId);
+        if (target != POCKET_MEGA_STONES && target != POCKET_EVO_ITEMS)
+            continue;
+        if (!BagPocket_AddItem(&gBagPockets[target], slot.itemId, slot.quantity))
+            continue;
+        BagPocket_SetSlotData(pocket, i, (struct ItemSlot) {0});
+        moved = TRUE;
+    }
+    if (moved)
+        CompactItemsInBagPocket(POCKET_ITEMS);
 }
 
 void ClearBag(void)

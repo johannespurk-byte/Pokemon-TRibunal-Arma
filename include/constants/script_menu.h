@@ -222,6 +222,8 @@ enum
 #define STDSTRING_VOLCANO_BADGE    36
 #define STDSTRING_EARTH_BADGE      37
 #define STDSTRING_COINS            38
+#define STDSTRING_MEGA_STONES      39
+#define STDSTRING_EVO_ITEMS        40
 
 // Dynamic Multichoice Callbacks
 

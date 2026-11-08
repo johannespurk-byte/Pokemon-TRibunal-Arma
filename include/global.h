@@ -1211,6 +1211,9 @@ struct SaveBlock1
     struct DaycareMon route5DayCareMon;
 #endif
     u8 nuzlockeEncounters[32]; // Nuzlocke: ein Bit je Kartenabschnitt (MAPSEC), dessen Begegnung verbraucht ist
+    // Extra bag pockets; kept at the end so older saves load unchanged (they read as empty)
+    struct ItemSlot bagMegaStones[BAG_MEGA_STONES_COUNT];
+    struct ItemSlot bagEvoItems[BAG_EVO_ITEMS_COUNT];
     // sizeof: 0x3???
 };
 
