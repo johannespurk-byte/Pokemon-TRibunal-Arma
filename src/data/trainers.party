@@ -9952,9 +9952,35 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Trapinch
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Flygon @ Life Orb
+Level: 58
+Ability: Levitate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Dragon Claw
+- Fire Punch
+- Rock Slide
+
+Lucario @ Life Orb
+Level: 58
+Ability: Inner Focus
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Aura Sphere
+- Dragon Pulse
+- Dark Pulse
+- Nasty Plot
+
+Mamoswine @ Focus Sash
+Level: 58
+Ability: Thick Fat
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Icicle Crash
+- Ice Shard
+- Stealth Rock
 
 === TRAINER_DILLON ===
 Name: DILLON
@@ -9965,9 +9991,35 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Aron
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Garchomp @ Rocky Helmet
+Level: 58
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Dragon Claw
+- Fire Fang
+- Swords Dance
+
+Krookodile @ Life Orb
+Level: 58
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Crunch
+- Rock Slide
+- Bulk Up
+
+Gallade @ Lum Berry
+Level: 58
+Ability: Sharpness
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Sacred Sword
+- Psycho Cut
+- Leaf Blade
+- Swords Dance
 
 === TRAINER_CALVIN_2 ===
 Name: CALVIN
@@ -11952,29 +12004,45 @@ Gender: Male
 Music: Suspicious
 Double Battle: No
 
-Koffing
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Smog
-- Self Destruct
+Weezing @ Black Sludge
+Level: 58
+Ability: Levitate
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Sludge Bomb
+- Toxic
+- Fire Blast
+- Pain Split
 
-Koffing
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Smog
-- Self Destruct
+Crobat @ Life Orb
+Level: 58
+Ability: Inner Focus
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Brave Bird
+- Cross Poison
+- Taunt
+- Zen Headbutt
 
-Koffing
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Sludge
-- Self Destruct
+Greninja @ Life Orb
+Level: 58
+Ability: Torrent
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Surf
+- Extrasensory
+- Ice Beam
+- Water Shuriken
+
+Toxicroak @ Black Sludge
+Level: 58
+Ability: Dry Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Poison Jab
+- Drain Punch
+- Sucker Punch
+- Swords Dance
 
 === TRAINER_LUNG ===
 Name: LUNG
@@ -11984,13 +12052,35 @@ Gender: Male
 Music: Suspicious
 Double Battle: No
 
-Koffing
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ninjask @ Focus Sash
+Level: 58
+Ability: Speed Boost
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- X-Scissor
+- Aerial Ace
+- Swords Dance
+- Baton Pass
 
-Ninjask
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Scizor @ Life Orb
+Level: 58
+Ability: Technician
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Bullet Punch
+- Iron Head
+- Swords Dance
+- X-Scissor
+
+Weavile @ Life Orb
+Level: 58
+Ability: Pressure
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Icicle Crash
+- Throat Chop
+- Ice Shard
+- Swords Dance
 
 === TRAINER_LAO_2 ===
 Name: LAO
@@ -12000,34 +12090,45 @@ Gender: Male
 Music: Suspicious
 Double Battle: No
 
-Koffing
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Sludge
-- Self Destruct
+Weezing @ Black Sludge
+Level: 58
+Ability: Levitate
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Sludge Bomb
+- Toxic
+- Fire Blast
+- Pain Split
 
-Koffing
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Sludge
+Crobat @ Life Orb
+Level: 58
+Ability: Inner Focus
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Brave Bird
+- Cross Poison
+- Taunt
+- Zen Headbutt
 
-Koffing
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Sludge
-- Self Destruct
+Greninja @ Life Orb
+Level: 58
+Ability: Torrent
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Surf
+- Extrasensory
+- Ice Beam
+- Water Shuriken
 
-Koffing
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Sludge
+Toxicroak @ Black Sludge
+Level: 58
+Ability: Dry Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Poison Jab
+- Drain Punch
+- Sucker Punch
+- Swords Dance
 
 === TRAINER_LAO_3 ===
 Name: LAO
@@ -12037,34 +12138,45 @@ Gender: Male
 Music: Suspicious
 Double Battle: No
 
-Koffing
-Level: 27
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Poison Gas
-- Tackle
-- Sludge
-- Self Destruct
+Weezing @ Black Sludge
+Level: 58
+Ability: Levitate
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Sludge Bomb
+- Toxic
+- Fire Blast
+- Pain Split
 
-Koffing
-Level: 27
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Poison Gas
-- Tackle
-- Sludge
-- Self Destruct
+Crobat @ Life Orb
+Level: 58
+Ability: Inner Focus
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Brave Bird
+- Cross Poison
+- Taunt
+- Zen Headbutt
 
-Koffing
-Level: 27
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Poison Gas
-- Tackle
-- Sludge
+Greninja @ Life Orb
+Level: 58
+Ability: Torrent
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Surf
+- Extrasensory
+- Ice Beam
+- Water Shuriken
 
-Koffing
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Tackle
-- Sludge
+Toxicroak @ Black Sludge
+Level: 58
+Ability: Dry Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Poison Jab
+- Drain Punch
+- Sucker Punch
+- Swords Dance
 
 === TRAINER_LAO_4 ===
 Name: LAO
@@ -12074,32 +12186,45 @@ Gender: Male
 Music: Suspicious
 Double Battle: No
 
-Koffing
-Level: 30
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Poison Gas
-- Tackle
-- Sludge
+Weezing @ Black Sludge
+Level: 58
+Ability: Levitate
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Sludge Bomb
+- Toxic
+- Fire Blast
+- Pain Split
 
-Koffing
-Level: 30
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Poison Gas
-- Tackle
-- Sludge
+Crobat @ Life Orb
+Level: 58
+Ability: Inner Focus
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Brave Bird
+- Cross Poison
+- Taunt
+- Zen Headbutt
 
-Koffing
-Level: 30
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Poison Gas
-- Tackle
-- Sludge
+Greninja @ Life Orb
+Level: 58
+Ability: Torrent
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Surf
+- Extrasensory
+- Ice Beam
+- Water Shuriken
 
-Koffing
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Tackle
-- Sludge
+Toxicroak @ Black Sludge
+Level: 58
+Ability: Dry Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Poison Jab
+- Drain Punch
+- Sucker Punch
+- Swords Dance
 
 === TRAINER_LAO_5 ===
 Name: LAO
@@ -12109,34 +12234,45 @@ Gender: Male
 Music: Suspicious
 Double Battle: No
 
-Koffing
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Poison Gas
-- Tackle
-- Sludge
+Weezing @ Black Sludge
+Level: 58
+Ability: Levitate
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Sludge Bomb
+- Toxic
+- Fire Blast
+- Pain Split
 
-Koffing
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Poison Gas
-- Tackle
-- Sludge
-- Self Destruct
+Crobat @ Life Orb
+Level: 58
+Ability: Inner Focus
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Brave Bird
+- Cross Poison
+- Taunt
+- Zen Headbutt
 
-Koffing
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Poison Gas
-- Tackle
-- Sludge
-- Self Destruct
+Greninja @ Life Orb
+Level: 58
+Ability: Torrent
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Surf
+- Extrasensory
+- Ice Beam
+- Water Shuriken
 
-Weezing @ Smoke Ball
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Tackle
-- Sludge
+Toxicroak @ Black Sludge
+Level: 58
+Ability: Dry Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Poison Jab
+- Drain Punch
+- Sucker Punch
+- Swords Dance
 
 === TRAINER_JOCELYN ===
 Name: JOCELYN
@@ -12360,13 +12496,35 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Numel
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Ember
-- Tackle
-- Magnitude
-- Sunny Day
+Ninetales @ Heat Rock
+Level: 58
+Ability: Drought
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Flamethrower
+- Solar Beam
+- Extrasensory
+- Will-O-Wisp
+
+Venusaur @ Life Orb
+Level: 58
+Ability: Chlorophyll
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Giga Drain
+- Sludge Bomb
+- Sleep Powder
+- Growth
+
+Typhlosion @ Choice Specs
+Level: 58
+Ability: Blaze
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Eruption
+- Fire Blast
+- Extrasensory
+- Solar Beam
 
 === TRAINER_CLARISSA ===
 Name: CLARISSA
@@ -12411,13 +12569,35 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Numel
-Level: 29
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-- Ember
-- Tackle
-- Magnitude
-- Sunny Day
+Ninetales @ Heat Rock
+Level: 58
+Ability: Drought
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Flamethrower
+- Solar Beam
+- Extrasensory
+- Will-O-Wisp
+
+Venusaur @ Life Orb
+Level: 58
+Ability: Chlorophyll
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Giga Drain
+- Sludge Bomb
+- Sleep Powder
+- Growth
+
+Typhlosion @ Choice Specs
+Level: 58
+Ability: Blaze
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Eruption
+- Fire Blast
+- Extrasensory
+- Solar Beam
 
 === TRAINER_MADELINE_3 ===
 Name: MADELINE
@@ -12428,13 +12608,35 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Numel
-Level: 32
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Ember
-- Take Down
-- Magnitude
-- Sunny Day
+Ninetales @ Heat Rock
+Level: 58
+Ability: Drought
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Flamethrower
+- Solar Beam
+- Extrasensory
+- Will-O-Wisp
+
+Venusaur @ Life Orb
+Level: 58
+Ability: Chlorophyll
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Giga Drain
+- Sludge Bomb
+- Sleep Powder
+- Growth
+
+Typhlosion @ Choice Specs
+Level: 58
+Ability: Blaze
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Eruption
+- Fire Blast
+- Extrasensory
+- Solar Beam
 
 === TRAINER_MADELINE_4 ===
 Name: MADELINE
@@ -12445,21 +12647,35 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Roselia
-Level: 34
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Leech Seed
-- Mega Drain
-- Grass Whistle
-- Sunny Day
-
-Numel
-Level: 34
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Ninetales @ Heat Rock
+Level: 58
+Ability: Drought
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
 - Flamethrower
-- Take Down
-- Magnitude
-- Sunny Day
+- Solar Beam
+- Extrasensory
+- Will-O-Wisp
+
+Venusaur @ Life Orb
+Level: 58
+Ability: Chlorophyll
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Giga Drain
+- Sludge Bomb
+- Sleep Powder
+- Growth
+
+Typhlosion @ Choice Specs
+Level: 58
+Ability: Blaze
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Eruption
+- Fire Blast
+- Extrasensory
+- Solar Beam
 
 === TRAINER_MADELINE_5 ===
 Name: MADELINE
@@ -12470,21 +12686,35 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Roselia
-Level: 37
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Leech Seed
-- Giga Drain
-- Solar Beam
-- Sunny Day
-
-Camerupt
-Level: 37
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Ninetales @ Heat Rock
+Level: 58
+Ability: Drought
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
 - Flamethrower
-- Take Down
-- Earthquake
-- Sunny Day
+- Solar Beam
+- Extrasensory
+- Will-O-Wisp
+
+Venusaur @ Life Orb
+Level: 58
+Ability: Chlorophyll
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Giga Drain
+- Sludge Bomb
+- Sleep Powder
+- Growth
+
+Typhlosion @ Choice Specs
+Level: 58
+Ability: Blaze
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Eruption
+- Fire Blast
+- Extrasensory
+- Solar Beam
 
 === TRAINER_BEVERLY ===
 Name: BEVERLY
@@ -19223,13 +19453,45 @@ Music: Twins
 Double Battle: Yes
 AI: Smart Trainer
 
-Spinda
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Plusle @ Sitrus Berry
+Level: 58
+Ability: Plus
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunderbolt
+- Nasty Plot
+- Encore
+- Protect
 
-Spinda
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Minun @ Sitrus Berry
+Level: 58
+Ability: Minus
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Thunderbolt
+- Nasty Plot
+- Helping Hand
+- Protect
+
+Spinda @ Life Orb
+Level: 58
+Ability: Super Luck
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Fake Out
+- Double-Edge
+- Sucker Punch
+- Teeter Dance
+
+Clefable @ Leftovers
+Level: 58
+Ability: Magic Guard
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+- Moonblast
+- Follow Me
+- Moonlight
+- Thunder Wave
 
 === TRAINER_KIM_AND_IRIS ===
 Name: KIM & IRIS
@@ -20394,13 +20656,35 @@ Music: Girl
 Double Battle: No
 AI: Smart Trainer
 
-Marill
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Togekiss @ Leftovers
+Level: 58
+Ability: Serene Grace
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Air Slash
+- Aura Sphere
+- Flamethrower
+- Nasty Plot
 
-Lombre
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Milotic @ Leftovers
+Level: 58
+Ability: Marvel Scale
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Surf
+- Ice Beam
+- Recover
+- Haze
+
+Whimsicott @ Focus Sash
+Level: 58
+Ability: Prankster
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Moonblast
+- Giga Drain
+- Tailwind
+- Encore
 
 === TRAINER_COBY ===
 Name: COBY
@@ -20411,13 +20695,45 @@ Music: Cool
 Double Battle: No
 AI: Smart Trainer
 
-Skarmory
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Skarmory @ Rocky Helmet
+Level: 58
+Ability: Sturdy
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Brave Bird
+- Spikes
+- Stealth Rock
+- Whirlwind
 
-Swellow
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Staraptor @ Life Orb
+Level: 58
+Ability: Reckless
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Brave Bird
+- Close Combat
+- Quick Attack
+- Double-Edge
+
+Altaria @ Lum Berry
+Level: 58
+Ability: Natural Cure
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Dragon Dance
+- Dragon Claw
+- Earthquake
+- Roost
+
+Talonflame @ Life Orb
+Level: 58
+Ability: Gale Wings
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Brave Bird
+- Flare Blitz
+- Roost
+- Swords Dance
 
 === TRAINER_LAWRENCE ===
 Name: LAWRENCE
@@ -20428,13 +20744,35 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Baltoy
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Claydol @ Leftovers
+Level: 58
+Ability: Levitate
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+- Earth Power
+- Psychic
+- Rapid Spin
+- Ice Beam
 
-Sandshrew
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Hippowdon @ Leftovers
+Level: 58
+Ability: Sand Stream
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Earthquake
+- Slack Off
+- Yawn
+- Whirlwind
+
+Excadrill @ Life Orb
+Level: 58
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Brick Break
+- Rock Slide
+- Swords Dance
 
 === TRAINER_WYATT ===
 Name: WYATT
@@ -20445,13 +20783,45 @@ Music: Suspicious
 Double Battle: No
 AI: Smart Trainer
 
-Aron
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Tyranitar @ Leftovers
+Level: 58
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Stone Edge
+- Crunch
+- Earthquake
+- Dragon Dance
 
-Aron
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Haxorus @ Lum Berry
+Level: 58
+Ability: Mold Breaker
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Dragon Dance
+- Outrage
+- Earthquake
+- Night Slash
+
+Dragonite @ Leftovers
+Level: 58
+Ability: Multiscale
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Dragon Dance
+- Extreme Speed
+- Earthquake
+- Fire Punch
+
+Metagross @ Assault Vest
+Level: 58
+Ability: Clear Body
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Meteor Mash
+- Zen Headbutt
+- Earthquake
+- Bullet Punch
 
 === TRAINER_ANGELINA ===
 Name: ANGELINA
