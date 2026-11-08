@@ -462,6 +462,8 @@ static const u8 *const sPocketNamesStringsTable[] =
     [POCKET_POKE_BALLS]             = COMPOUND_STRING("Poké Balls"),
     [POCKET_TM_HM]                  = COMPOUND_STRING("TMs & HMs"),
     [POCKET_BERRIES]                = COMPOUND_STRING("Berries"),
+    [POCKET_MEGA_STONES]            = COMPOUND_STRING("Mega Stones"),
+    [POCKET_EVO_ITEMS]              = COMPOUND_STRING("Evo Items"),
     [POCKET_KEY_ITEMS]              = COMPOUND_STRING("Key Items"),
 #if SWSH_ITEM_MENU_BATTLE_POCKETS
     [BATTLE_POCKET_MEDICINE]        = COMPOUND_STRING("Medicine"),
@@ -1621,6 +1623,7 @@ void QuizLadyOpenBagMenu(void)
 
 void GoToBagMenu(u8 location, u8 pocket, MainCallback exitCallback)
 {
+    MoveBagItemsToTheirPockets();
     gBagMenu = AllocZeroed(sizeof(*gBagMenu));
     if (gBagMenu == NULL)
     {
@@ -3637,6 +3640,8 @@ static void OpenContextMenu(u8 taskId)
                 switch (gBagPosition.pocket)
                 {
             case POCKET_ITEMS:
+            case POCKET_MEGA_STONES: // same choices as the Items pocket (use, give, toss)
+            case POCKET_EVO_ITEMS:
                 gBagMenu->contextMenuItemsPtr = gBagMenu->contextMenuItemsBuffer;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_ItemsPocket);
                 memcpy(&gBagMenu->contextMenuItemsBuffer, &sContextMenuItems_ItemsPocket, sizeof(sContextMenuItems_ItemsPocket));
