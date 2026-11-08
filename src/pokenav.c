@@ -9,6 +9,7 @@
 #include "pokemon_storage_system.h"
 #include "pokenav.h"
 #include "poketch.h"
+#include "window.h"
 
 #define LOOPED_TASK_DECODE_STATE(action) (action - 5)
 
@@ -463,6 +464,14 @@ static void Task_Pokenav(u8 taskId)
         // Wait for LoopedTask_InitPokenavMenu to finish
         if (PokenavMainMenuLoopedTaskIsActive())
             break;
+        if (sPoketchStartMenu != 0)
+        {
+            // Opened from the field, backgrounds 1 to 3 still have the overworld's tilemap buffers when the menu sets up
+            // its windows, so the features' windows use the buffers the features set. After the Pokétch or the Hoenn map
+            // some have none, and a feature's first window would replace its background, e.g. Match Call's frame
+            for (u32 bg = 1; bg < NUM_BACKGROUNDS; bg++)
+                UseBgTilemapBufferForWindows(bg);
+        }
         // The PokéNav menu slides its header away when opening a feature. Without that menu, do it here
         if (sPoketchStartMenu == POKENAV_REGION_MAP || sPoketchStartMenu == POKENAV_MATCH_CALL)
         {

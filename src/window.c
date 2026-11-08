@@ -282,6 +282,14 @@ void RemoveAllWindowsOnBg(u32 bgId)
     }
 }
 
+// Windows added later on this background draw into the tilemap buffer the background has then,
+// as InitWindows does for a background that already has one, instead of replacing it with a new one
+void UseBgTilemapBufferForWindows(u32 bg)
+{
+    if (bg < NUM_BACKGROUNDS && gWindowBgTilemapBuffers[bg] == NULL)
+        gWindowBgTilemapBuffers[bg] = DummyWindowBgTilemap;
+}
+
 void FreeAllWindowBuffers(void)
 {
     int i;
