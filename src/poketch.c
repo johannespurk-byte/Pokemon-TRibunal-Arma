@@ -41,7 +41,6 @@ enum
     POKETCH_APP_MUSIC,
     POKETCH_APP_MAP,
     POKETCH_APP_MATCH_CALL,
-    POKETCH_APP_MORE,
     POKETCH_APP_COUNT,
 };
 
@@ -121,7 +120,6 @@ static const u8 *const sAppNames[POKETCH_APP_COUNT] =
     [POKETCH_APP_MUSIC]      = COMPOUND_STRING("BATTLE MUSIC"),
     [POKETCH_APP_MAP]       = COMPOUND_STRING("MAP"),
     [POKETCH_APP_MATCH_CALL] = COMPOUND_STRING("MATCH CALL"),
-    [POKETCH_APP_MORE]       = COMPOUND_STRING("MORE"),
 };
 
 static EWRAM_DATA u8 sCurrentApp = POKETCH_APP_CLOCK; // bleibt erhalten, damit man nach der Karte hier landet
@@ -449,9 +447,6 @@ static void DrawCurrentApp(void)
         else
             DrawLauncherApp(COMPOUND_STRING("MATCH CALL"), COMPOUND_STRING("Not available yet"), gText_EmptyString2);
         break;
-    case POKETCH_APP_MORE:
-        DrawLauncherApp(COMPOUND_STRING("MORE"), COMPOUND_STRING("Condition and ribbons"), COMPOUND_STRING("A: OPEN"));
-        break;
     }
     CopyWindowToVram(WIN_LCD, COPYWIN_GFX);
 }
@@ -620,8 +615,6 @@ static void Task_Poketch_Input(u8 taskId)
             StartPokenavApp(taskId, POKENAV_REGION_MAP);
         else if (sCurrentApp == POKETCH_APP_MATCH_CALL && IsMatchCallAvailable())
             StartPokenavApp(taskId, POKENAV_MATCH_CALL);
-        else if (sCurrentApp == POKETCH_APP_MORE)
-            StartPokenavApp(taskId, POKENAV_MAIN_MENU);
     }
     else if (sCurrentApp == POKETCH_APP_CLOCK)
     {
