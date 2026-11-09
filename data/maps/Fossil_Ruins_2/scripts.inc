@@ -85,3 +85,11 @@ Fossil_Ruins_2_Text_BertDefeated::
 Fossil_Ruins_2_Text_BertPostBattle::
 	.string "Es gibt hier noch so viel zu erforschen.\n"
 	.string "Vielleicht finden wir noch mehr Kristalle.$"
+
+Fossil_Ruins_2_EventScript_StarPiece::
+	finditem ITEM_STAR_PIECE
+	end
+
+Fossil_Ruins_2_EventScript_MaxRevive::
+	finditem ITEM_MAX_REVIVE
+	end
