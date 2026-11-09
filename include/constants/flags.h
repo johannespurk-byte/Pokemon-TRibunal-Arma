@@ -1691,6 +1691,10 @@
 #define FLAG_HIDE_FOSSIL_RUINS_4_GIRATINA                  FLAG_UNUSED_0x035 // Giratina is gone after it was caught or defeated
 #define FLAG_ITEM_FOSSIL_RUINS_4_SPELL_TAG                 FLAG_UNUSED_0x036 // Item ball in Fossil Ruins 4
 #define FLAG_ITEM_FOSSIL_RUINS_4_REAPER_CLOTH              FLAG_UNUSED_0x037 // Item ball behind the boulder in Fossil Ruins 4
+#define FLAG_ITEM_FOSSIL_RUINS_RARE_CANDY                  FLAG_UNUSED_0x038 // Item ball in Fossil Ruins 1
+#define FLAG_ITEM_FOSSIL_RUINS_HARD_STONE                  FLAG_UNUSED_0x039 // Item ball in Fossil Ruins 1
+#define FLAG_ITEM_FOSSIL_RUINS_2_STAR_PIECE                FLAG_UNUSED_0x03A // Item ball in Fossil Ruins 2
+#define FLAG_ITEM_FOSSIL_RUINS_2_MAX_REVIVE                FLAG_UNUSED_0x03B // Item ball in Fossil Ruins 2
 #define FLAG_HIDE_TOWN_MAP                                 0
 #define FLAG_HIDE_POKEDEX                                  0
 #define FLAG_HIDE_CERULEAN_ROCKET                          0
