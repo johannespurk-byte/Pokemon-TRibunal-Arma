@@ -4412,9 +4412,71 @@ Music: Suspicious
 Double Battle: No
 AI: Smart Trainer
 
-Aron
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Aggron @ Leftovers
+Level: 58
+Ability: Rock Head
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Head Smash
+- Superpower
+- Earthquake
+- Stealth Rock
+
+Tyranitar @ Choice Band
+Level: 58
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Crunch
+- Earthquake
+- Fire Punch
+
+Rhyperior @ Weakness Policy
+Level: 58
+Ability: Solid Rock
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Megahorn
+- Ice Punch
+
+Nidoking @ Life Orb
+Level: 58
+Ability: Sheer Force
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Earth Power
+- Surf
+- Ice Beam
+- Thunderbolt
+
+Lapras @ Leftovers
+Level: 58
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Thunderbolt
+- Confuse Ray
+
+Kangaskhan @ Kangaskhanite
+Level: 58
+Ability: Scrappy
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Fake Out
+- Double-Edge
+- Earthquake
+- Sucker Punch
 
 === TRAINER_THALIA_1 ===
 Name: THALIA
@@ -4468,9 +4530,71 @@ Music: Suspicious
 Double Battle: No
 AI: Smart Trainer
 
-Lairon
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Aggron @ Leftovers
+Level: 58
+Ability: Rock Head
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Head Smash
+- Superpower
+- Earthquake
+- Stealth Rock
+
+Tyranitar @ Choice Band
+Level: 58
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Crunch
+- Earthquake
+- Fire Punch
+
+Rhyperior @ Weakness Policy
+Level: 58
+Ability: Solid Rock
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Megahorn
+- Ice Punch
+
+Nidoking @ Life Orb
+Level: 58
+Ability: Sheer Force
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Earth Power
+- Surf
+- Ice Beam
+- Thunderbolt
+
+Lapras @ Leftovers
+Level: 58
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Thunderbolt
+- Confuse Ray
+
+Kangaskhan @ Kangaskhanite
+Level: 58
+Ability: Scrappy
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Fake Out
+- Double-Edge
+- Earthquake
+- Sucker Punch
 
 === TRAINER_STEVE_3 ===
 Name: STEVE
@@ -4481,13 +4605,71 @@ Music: Suspicious
 Double Battle: No
 AI: Smart Trainer
 
-Lairon
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Aggron @ Leftovers
+Level: 58
+Ability: Rock Head
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Head Smash
+- Superpower
+- Earthquake
+- Stealth Rock
 
-Rhyhorn
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Tyranitar @ Choice Band
+Level: 58
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Crunch
+- Earthquake
+- Fire Punch
+
+Rhyperior @ Weakness Policy
+Level: 58
+Ability: Solid Rock
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Megahorn
+- Ice Punch
+
+Nidoking @ Life Orb
+Level: 58
+Ability: Sheer Force
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Earth Power
+- Surf
+- Ice Beam
+- Thunderbolt
+
+Lapras @ Leftovers
+Level: 58
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Thunderbolt
+- Confuse Ray
+
+Kangaskhan @ Kangaskhanite
+Level: 58
+Ability: Scrappy
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Fake Out
+- Double-Edge
+- Earthquake
+- Sucker Punch
 
 === TRAINER_STEVE_4 ===
 Name: STEVE
@@ -4498,13 +4680,71 @@ Music: Suspicious
 Double Battle: No
 AI: Smart Trainer
 
-Lairon
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Aggron @ Leftovers
+Level: 58
+Ability: Rock Head
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Head Smash
+- Superpower
+- Earthquake
+- Stealth Rock
 
-Rhyhorn
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Tyranitar @ Choice Band
+Level: 58
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Crunch
+- Earthquake
+- Fire Punch
+
+Rhyperior @ Weakness Policy
+Level: 58
+Ability: Solid Rock
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Megahorn
+- Ice Punch
+
+Nidoking @ Life Orb
+Level: 58
+Ability: Sheer Force
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Earth Power
+- Surf
+- Ice Beam
+- Thunderbolt
+
+Lapras @ Leftovers
+Level: 58
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Thunderbolt
+- Confuse Ray
+
+Kangaskhan @ Kangaskhanite
+Level: 58
+Ability: Scrappy
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Fake Out
+- Double-Edge
+- Earthquake
+- Sucker Punch
 
 === TRAINER_STEVE_5 ===
 Name: STEVE
@@ -4515,13 +4755,71 @@ Music: Suspicious
 Double Battle: No
 AI: Smart Trainer
 
-Aggron
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Aggron @ Leftovers
+Level: 58
+Ability: Rock Head
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Head Smash
+- Superpower
+- Earthquake
+- Stealth Rock
 
-Rhydon
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Tyranitar @ Choice Band
+Level: 58
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Crunch
+- Earthquake
+- Fire Punch
+
+Rhyperior @ Weakness Policy
+Level: 58
+Ability: Solid Rock
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Megahorn
+- Ice Punch
+
+Nidoking @ Life Orb
+Level: 58
+Ability: Sheer Force
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Earth Power
+- Surf
+- Ice Beam
+- Thunderbolt
+
+Lapras @ Leftovers
+Level: 58
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Thunderbolt
+- Confuse Ray
+
+Kangaskhan @ Kangaskhanite
+Level: 58
+Ability: Scrappy
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Fake Out
+- Double-Edge
+- Earthquake
+- Sucker Punch
 
 === TRAINER_LUIS ===
 Name: LUIS
@@ -5617,13 +5915,71 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Slugma
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Torkoal @ Heat Rock
+Level: 58
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Quiet Nature
+- Eruption
+- Flamethrower
+- Protect
+- Yawn
 
-Wingull
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ninetales @ Choice Specs
+Level: 58
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Fire Blast
+- Solar Beam
+- Flamethrower
+- Shadow Ball
+
+Arcanine @ Life Orb
+Level: 58
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Flare Blitz
+- Extreme Speed
+- Crunch
+- Close Combat
+
+Magcargo @ Leftovers
+Level: 58
+Ability: Flame Body
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Lava Plume
+- Earth Power
+- Ancient Power
+- Recover
+
+Houndoom @ Houndoominite
+Level: 58
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Fire Blast
+- Flamethrower
+- Sludge Bomb
+- Nasty Plot
+
+Camerupt @ Cameruptite
+Level: 58
+Ability: Solid Rock
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Eruption
+- Earth Power
+- Flamethrower
+- Ancient Power
 
 === TRAINER_BERNIE_2 ===
 Name: BERNIE
@@ -5634,13 +5990,71 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Slugma
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Torkoal @ Heat Rock
+Level: 58
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Quiet Nature
+- Eruption
+- Flamethrower
+- Protect
+- Yawn
 
-Wingull
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Ninetales @ Choice Specs
+Level: 58
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Fire Blast
+- Solar Beam
+- Flamethrower
+- Shadow Ball
+
+Arcanine @ Life Orb
+Level: 58
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Flare Blitz
+- Extreme Speed
+- Crunch
+- Close Combat
+
+Magcargo @ Leftovers
+Level: 58
+Ability: Flame Body
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Lava Plume
+- Earth Power
+- Ancient Power
+- Recover
+
+Houndoom @ Houndoominite
+Level: 58
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Fire Blast
+- Flamethrower
+- Sludge Bomb
+- Nasty Plot
+
+Camerupt @ Cameruptite
+Level: 58
+Ability: Solid Rock
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Eruption
+- Earth Power
+- Flamethrower
+- Ancient Power
 
 === TRAINER_BERNIE_3 ===
 Name: BERNIE
@@ -5651,13 +6065,71 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Slugma
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Torkoal @ Heat Rock
+Level: 58
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Quiet Nature
+- Eruption
+- Flamethrower
+- Protect
+- Yawn
 
-Pelipper
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Ninetales @ Choice Specs
+Level: 58
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Fire Blast
+- Solar Beam
+- Flamethrower
+- Shadow Ball
+
+Arcanine @ Life Orb
+Level: 58
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Flare Blitz
+- Extreme Speed
+- Crunch
+- Close Combat
+
+Magcargo @ Leftovers
+Level: 58
+Ability: Flame Body
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Lava Plume
+- Earth Power
+- Ancient Power
+- Recover
+
+Houndoom @ Houndoominite
+Level: 58
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Fire Blast
+- Flamethrower
+- Sludge Bomb
+- Nasty Plot
+
+Camerupt @ Cameruptite
+Level: 58
+Ability: Solid Rock
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Eruption
+- Earth Power
+- Flamethrower
+- Ancient Power
 
 === TRAINER_BERNIE_4 ===
 Name: BERNIE
@@ -5668,13 +6140,71 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Slugma
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Torkoal @ Heat Rock
+Level: 58
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Quiet Nature
+- Eruption
+- Flamethrower
+- Protect
+- Yawn
 
-Pelipper
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Ninetales @ Choice Specs
+Level: 58
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Fire Blast
+- Solar Beam
+- Flamethrower
+- Shadow Ball
+
+Arcanine @ Life Orb
+Level: 58
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Flare Blitz
+- Extreme Speed
+- Crunch
+- Close Combat
+
+Magcargo @ Leftovers
+Level: 58
+Ability: Flame Body
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Lava Plume
+- Earth Power
+- Ancient Power
+- Recover
+
+Houndoom @ Houndoominite
+Level: 58
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Fire Blast
+- Flamethrower
+- Sludge Bomb
+- Nasty Plot
+
+Camerupt @ Cameruptite
+Level: 58
+Ability: Solid Rock
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Eruption
+- Earth Power
+- Flamethrower
+- Ancient Power
 
 === TRAINER_BERNIE_5 ===
 Name: BERNIE
@@ -5685,13 +6215,71 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Magcargo
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Torkoal @ Heat Rock
+Level: 58
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Quiet Nature
+- Eruption
+- Flamethrower
+- Protect
+- Yawn
 
-Pelipper
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Ninetales @ Choice Specs
+Level: 58
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Fire Blast
+- Solar Beam
+- Flamethrower
+- Shadow Ball
+
+Arcanine @ Life Orb
+Level: 58
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Flare Blitz
+- Extreme Speed
+- Crunch
+- Close Combat
+
+Magcargo @ Leftovers
+Level: 58
+Ability: Flame Body
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Lava Plume
+- Earth Power
+- Ancient Power
+- Recover
+
+Houndoom @ Houndoominite
+Level: 58
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Fire Blast
+- Flamethrower
+- Sludge Bomb
+- Nasty Plot
+
+Camerupt @ Cameruptite
+Level: 58
+Ability: Solid Rock
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Eruption
+- Earth Power
+- Flamethrower
+- Ancient Power
 
 === TRAINER_DREW ===
 Name: BROCK
@@ -5925,13 +6513,71 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Sandshrew
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Excadrill @ Air Balloon
+Level: 58
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Rock Slide
+- Swords Dance
+- Brick Break
 
-Nuzleaf
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sandslash @ Rocky Helmet
+Level: 58
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Rock Slide
+- Swords Dance
+- Rapid Spin
+
+Shiftry @ Life Orb
+Level: 58
+Ability: Chlorophyll
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Rock Slide
+- Brick Break
+- Swords Dance
+- Return
+
+Breloom @ Toxic Orb
+Level: 58
+Ability: Poison Heal
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Spore
+- Mach Punch
+- Bullet Seed
+- Rock Tomb
+
+Donphan @ Leftovers
+Level: 58
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Ice Shard
+- Rapid Spin
+- Rock Slide
+
+Staraptor @ Choice Band
+Level: 58
+Ability: Reckless
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Brave Bird
+- Close Combat
+- Double-Edge
+- Quick Attack
 
 === TRAINER_JUSTIN ===
 Name: JUSTIN
@@ -10369,17 +11015,71 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Magikarp
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Gyarados @ Leftovers
+Level: 58
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Waterfall
+- Dragon Dance
+- Earthquake
+- Ice Fang
 
-Goldeen
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Seaking @ Life Orb
+Level: 58
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Waterfall
+- Megahorn
+- Return
+- Poison Jab
 
-Barboach
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Whiscash @ Leftovers
+Level: 58
+Ability: Oblivious
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Waterfall
+- Rock Slide
+- Dragon Dance
+
+Kingdra @ Choice Specs
+Level: 58
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hydro Pump
+- Dragon Pulse
+- Ice Beam
+- Surf
+
+Lanturn @ Leftovers
+Level: 58
+Ability: Volt Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Thunderbolt
+- Surf
+- Ice Beam
+- Confuse Ray
+
+Sharpedo @ Sharpedonite
+Level: 58
+Ability: Speed Boost
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Crunch
+- Earthquake
+- Psychic Fangs
+- Protect
 
 === TRAINER_ELLIOT_1 ===
 Name: ELLIOT
@@ -10549,9 +11249,71 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Barboach
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Cloyster @ Focus Sash
+Level: 58
+Ability: Skill Link
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Icicle Spear
+- Rock Blast
+- Protect
+- Waterfall
+
+Starmie @ Life Orb
+Level: 58
+Ability: Analytic
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Surf
+- Psychic
+- Thunderbolt
+- Ice Beam
+
+Crawdaunt @ Choice Band
+Level: 58
+Ability: Adaptability
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Crabhammer
+- Crunch
+- Aqua Jet
+- Swords Dance
+
+Wailord @ Leftovers
+Level: 58
+Ability: Water Veil
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Water Spout
+- Ice Beam
+- Hydro Pump
+- Rest
+
+Lapras @ Leftovers
+Level: 58
+Ability: Shell Armor
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Freeze-Dry
+- Surf
+- Thunderbolt
+- Ice Beam
+
+Whiscash @ Leftovers
+Level: 58
+Ability: Oblivious
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Waterfall
+- Rock Slide
+- Dragon Dance
 
 === TRAINER_BARNY ===
 Name: BARNY
@@ -11555,13 +12317,71 @@ Music: Intense
 Double Battle: No
 AI: Smart Trainer
 
-Altaria
-Level: 37
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Altaria @ Altarianite
+Level: 58
+Ability: Natural Cure
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dragon Dance
+- Return
+- Earthquake
+- Roost
 
-Altaria
-Level: 37
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Salamence @ Life Orb
+Level: 58
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Naive Nature
+- Dragon Claw
+- Fire Blast
+- Earthquake
+- Dragon Dance
+
+Dragonite @ Leftovers
+Level: 58
+Ability: Multiscale
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dragon Dance
+- Outrage
+- Earthquake
+- Extreme Speed
+
+Flygon @ Choice Scarf
+Level: 58
+Ability: Levitate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Rock Slide
+- Crunch
+- Fire Punch
+
+Kingdra @ Choice Specs
+Level: 58
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hydro Pump
+- Dragon Pulse
+- Ice Beam
+- Surf
+
+Haxorus @ Lum Berry
+Level: 58
+Ability: Mold Breaker
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Dragon Dance
+- Outrage
+- Earthquake
+- Rock Slide
 
 === TRAINER_NICOLAS_2 ===
 Name: NICOLAS
@@ -11572,13 +12392,71 @@ Music: Intense
 Double Battle: No
 AI: Smart Trainer
 
-Altaria
-Level: 41
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Altaria @ Altarianite
+Level: 58
+Ability: Natural Cure
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dragon Dance
+- Return
+- Earthquake
+- Roost
 
-Altaria
-Level: 41
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Salamence @ Life Orb
+Level: 58
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Naive Nature
+- Dragon Claw
+- Fire Blast
+- Earthquake
+- Dragon Dance
+
+Dragonite @ Leftovers
+Level: 58
+Ability: Multiscale
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dragon Dance
+- Outrage
+- Earthquake
+- Extreme Speed
+
+Flygon @ Choice Scarf
+Level: 58
+Ability: Levitate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Rock Slide
+- Crunch
+- Fire Punch
+
+Kingdra @ Choice Specs
+Level: 58
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hydro Pump
+- Dragon Pulse
+- Ice Beam
+- Surf
+
+Haxorus @ Lum Berry
+Level: 58
+Ability: Mold Breaker
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Dragon Dance
+- Outrage
+- Earthquake
+- Rock Slide
 
 === TRAINER_NICOLAS_3 ===
 Name: NICOLAS
@@ -11589,13 +12467,71 @@ Music: Intense
 Double Battle: No
 AI: Smart Trainer
 
-Altaria
-Level: 44
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Altaria @ Altarianite
+Level: 58
+Ability: Natural Cure
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dragon Dance
+- Return
+- Earthquake
+- Roost
 
-Altaria
-Level: 44
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Salamence @ Life Orb
+Level: 58
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Naive Nature
+- Dragon Claw
+- Fire Blast
+- Earthquake
+- Dragon Dance
+
+Dragonite @ Leftovers
+Level: 58
+Ability: Multiscale
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dragon Dance
+- Outrage
+- Earthquake
+- Extreme Speed
+
+Flygon @ Choice Scarf
+Level: 58
+Ability: Levitate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Rock Slide
+- Crunch
+- Fire Punch
+
+Kingdra @ Choice Specs
+Level: 58
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hydro Pump
+- Dragon Pulse
+- Ice Beam
+- Surf
+
+Haxorus @ Lum Berry
+Level: 58
+Ability: Mold Breaker
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Dragon Dance
+- Outrage
+- Earthquake
+- Rock Slide
 
 === TRAINER_NICOLAS_4 ===
 Name: NICOLAS
@@ -11606,17 +12542,71 @@ Music: Intense
 Double Battle: No
 AI: Smart Trainer
 
-Bagon
-Level: 46
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Altaria @ Altarianite
+Level: 58
+Ability: Natural Cure
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dragon Dance
+- Return
+- Earthquake
+- Roost
 
-Altaria
-Level: 46
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Salamence @ Life Orb
+Level: 58
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Naive Nature
+- Dragon Claw
+- Fire Blast
+- Earthquake
+- Dragon Dance
 
-Altaria
-Level: 46
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Dragonite @ Leftovers
+Level: 58
+Ability: Multiscale
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dragon Dance
+- Outrage
+- Earthquake
+- Extreme Speed
+
+Flygon @ Choice Scarf
+Level: 58
+Ability: Levitate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Rock Slide
+- Crunch
+- Fire Punch
+
+Kingdra @ Choice Specs
+Level: 58
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hydro Pump
+- Dragon Pulse
+- Ice Beam
+- Surf
+
+Haxorus @ Lum Berry
+Level: 58
+Ability: Mold Breaker
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Dragon Dance
+- Outrage
+- Earthquake
+- Rock Slide
 
 === TRAINER_NICOLAS_5 ===
 Name: NICOLAS
@@ -11627,17 +12617,71 @@ Music: Intense
 Double Battle: No
 AI: Smart Trainer
 
-Altaria
-Level: 49
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
+Altaria @ Altarianite
+Level: 58
+Ability: Natural Cure
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dragon Dance
+- Return
+- Earthquake
+- Roost
 
-Altaria
-Level: 49
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
+Salamence @ Life Orb
+Level: 58
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Naive Nature
+- Dragon Claw
+- Fire Blast
+- Earthquake
+- Dragon Dance
 
-Shelgon @ Dragon Fang
-Level: 49
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
+Dragonite @ Leftovers
+Level: 58
+Ability: Multiscale
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dragon Dance
+- Outrage
+- Earthquake
+- Extreme Speed
+
+Flygon @ Choice Scarf
+Level: 58
+Ability: Levitate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Rock Slide
+- Crunch
+- Fire Punch
+
+Kingdra @ Choice Specs
+Level: 58
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hydro Pump
+- Dragon Pulse
+- Ice Beam
+- Surf
+
+Haxorus @ Lum Berry
+Level: 58
+Ability: Mold Breaker
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Dragon Dance
+- Outrage
+- Earthquake
+- Rock Slide
 
 === TRAINER_AARON ===
 Name: AARON
@@ -13407,13 +14451,71 @@ Music: Girl
 Double Battle: No
 AI: Smart Trainer
 
-Marill
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Azumarill @ Choice Band
+Level: 58
+Ability: Huge Power
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Superpower
+- Waterfall
+- Aqua Jet
+- Ice Punch
 
-Lombre
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ludicolo @ Life Orb
+Level: 58
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hydro Pump
+- Giga Drain
+- Ice Beam
+- Surf
+
+Bellossom @ Leftovers
+Level: 58
+Ability: Chlorophyll
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Giga Drain
+- Solar Beam
+- Sludge Bomb
+- Protect
+
+Lilligant @ Life Orb
+Level: 58
+Ability: Own Tempo
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Petal Dance
+- Quiver Dance
+- Hidden Power
+- Sleep Powder
+
+Togekiss @ Leftovers
+Level: 58
+Ability: Serene Grace
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Air Slash
+- Flamethrower
+- Protect
+- Nasty Plot
+
+Sylveon @ Leftovers
+Level: 58
+Ability: Pixilate
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Psychic
+- Shadow Ball
+- Wish
+- Protect
 
 === TRAINER_MARTHA ===
 Name: MARTHA
@@ -18133,13 +19235,71 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Geodude
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Golem @ Focus Sash
+Level: 58
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Earthquake
+- Explosion
+- Protect
 
-Machop
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Machamp @ Life Orb
+Level: 58
+Ability: No Guard
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dynamic Punch
+- Earthquake
+- Knock Off
+- Bullet Punch
+
+Steelix @ Steelixite
+Level: 58
+Ability: Sturdy
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Impish Nature
+- Heavy Slam
+- Earthquake
+- Stone Edge
+- Stealth Rock
+
+Hariyama @ Assault Vest
+Level: 58
+Ability: Thick Fat
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Close Combat
+- Knock Off
+- Earthquake
+- Bullet Punch
+
+Gigalith @ Leftovers
+Level: 58
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Earthquake
+- Heavy Slam
+- Explosion
+
+Conkeldurr @ Flame Orb
+Level: 58
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Drain Punch
+- Mach Punch
+- Earthquake
+- Ice Punch
 
 === TRAINER_LUCAS_1 ===
 Name: LUCAS
@@ -18150,13 +19310,71 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Geodude
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Camerupt @ Leftovers
+Level: 58
+Ability: Solid Rock
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Lava Plume
+- Earth Power
+- Protect
+- Yawn
 
-Numel
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Mamoswine @ Life Orb
+Level: 58
+Ability: Thick Fat
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Icicle Crash
+- Ice Shard
+- Rock Slide
+
+Golurk @ Choice Band
+Level: 58
+Ability: No Guard
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dynamic Punch
+- Earthquake
+- Shadow Punch
+- Ice Punch
+
+Hippowdon @ Leftovers
+Level: 58
+Ability: Sand Stream
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Impish Nature
+- Earthquake
+- Slack Off
+- Protect
+- Whirlwind
+
+Coalossal @ Heavy-Duty Boots
+Level: 58
+Ability: Flame Body
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Overheat
+- Flamethrower
+- Stealth Rock
+- Rapid Spin
+
+Garganacl @ Leftovers
+Level: 58
+Ability: Purifying Salt
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Impish Nature
+- Salt Cure
+- Recover
+- Earthquake
+- Stealth Rock
 
 === TRAINER_ALAN ===
 Name: ALAN
@@ -19533,21 +20751,71 @@ Music: Twins
 Double Battle: Yes
 AI: Smart Trainer
 
-Roselia
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Growth
-- Stun Spore
-- Mega Drain
-- Leech Seed
+Tyranitar @ Assault Vest
+Level: 58
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Rock Slide
+- Crunch
+- Earthquake
+- Fire Punch
 
-Graveler
-Level: 20
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Defense Curl
-- Rollout
-- Mud Sport
-- Rock Throw
+Excadrill @ Life Orb
+Level: 58
+Ability: Sand Rush
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Rock Slide
+- Brick Break
+- Swords Dance
+
+Roserade @ Focus Sash
+Level: 58
+Ability: Natural Cure
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Giga Drain
+- Sludge Bomb
+- Shadow Ball
+- Sleep Powder
+
+Gardevoir @ Gardevoirite
+Level: 58
+Ability: Trace
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Ice Beam
+- Psychic
+- Thunderbolt
+- Protect
+
+Whimsicott @ Focus Sash
+Level: 58
+Ability: Prankster
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Psychic
+- Tailwind
+- Encore
+- Energy Ball
+
+Garchomp @ Choice Scarf
+Level: 58
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Dragon Claw
+- Rock Slide
+- Fire Fang
 
 === TRAINER_MEL_AND_PAUL ===
 Name: MEL & PAUL
@@ -19613,23 +20881,73 @@ Pic: Old Couple
 Gender: Male
 Music: Intense
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
-Medicham
-Level: 39
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Psychic
-- Fire Punch
-- Psych Up
-- Protect
+Medicham @ Medichamite
+Level: 58
+Ability: Pure Power
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Fake Out
+- High Jump Kick
+- Rock Slide
+- Bullet Punch
 
-Hariyama
-Level: 39
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Focus Punch
-- Rock Tomb
-- Rest
-- Belly Drum
+Hariyama @ Assault Vest
+Level: 58
+Ability: Thick Fat
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Fake Out
+- Close Combat
+- Knock Off
+- Earthquake
+
+Lucario @ Life Orb
+Level: 58
+Ability: Inner Focus
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Close Combat
+- Meteor Mash
+- Extreme Speed
+- Swords Dance
+
+Gallade @ Lum Berry
+Level: 58
+Ability: Justified
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Close Combat
+- Psycho Cut
+- Leaf Blade
+- Swords Dance
+
+Conkeldurr @ Flame Orb
+Level: 58
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Drain Punch
+- Mach Punch
+- Earthquake
+- Ice Punch
+
+Machamp @ Choice Scarf
+Level: 58
+Ability: No Guard
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dynamic Punch
+- Earthquake
+- Knock Off
+- Bullet Punch
 
 === TRAINER_JOHN_AND_JAY_2 ===
 Name: JOHN & JAY
@@ -19638,23 +20956,73 @@ Pic: Old Couple
 Gender: Male
 Music: Intense
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
-Medicham
-Level: 43
-IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
-- Psychic
-- Fire Punch
-- Psych Up
-- Protect
+Medicham @ Medichamite
+Level: 58
+Ability: Pure Power
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Fake Out
+- High Jump Kick
+- Rock Slide
+- Bullet Punch
 
-Hariyama
-Level: 43
-IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
-- Focus Punch
-- Rock Tomb
-- Rest
-- Belly Drum
+Hariyama @ Assault Vest
+Level: 58
+Ability: Thick Fat
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Fake Out
+- Close Combat
+- Knock Off
+- Earthquake
+
+Lucario @ Life Orb
+Level: 58
+Ability: Inner Focus
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Close Combat
+- Meteor Mash
+- Extreme Speed
+- Swords Dance
+
+Gallade @ Lum Berry
+Level: 58
+Ability: Justified
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Close Combat
+- Psycho Cut
+- Leaf Blade
+- Swords Dance
+
+Conkeldurr @ Flame Orb
+Level: 58
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Drain Punch
+- Mach Punch
+- Earthquake
+- Ice Punch
+
+Machamp @ Choice Scarf
+Level: 58
+Ability: No Guard
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dynamic Punch
+- Earthquake
+- Knock Off
+- Bullet Punch
 
 === TRAINER_JOHN_AND_JAY_3 ===
 Name: JOHN & JAY
@@ -19663,23 +21031,73 @@ Pic: Old Couple
 Gender: Male
 Music: Intense
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
-Medicham
-Level: 46
-IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
-- Psychic
-- Fire Punch
-- Psych Up
-- Protect
+Medicham @ Medichamite
+Level: 58
+Ability: Pure Power
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Fake Out
+- High Jump Kick
+- Rock Slide
+- Bullet Punch
 
-Hariyama
-Level: 46
-IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
-- Focus Punch
-- Rock Tomb
-- Rest
-- Belly Drum
+Hariyama @ Assault Vest
+Level: 58
+Ability: Thick Fat
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Fake Out
+- Close Combat
+- Knock Off
+- Earthquake
+
+Lucario @ Life Orb
+Level: 58
+Ability: Inner Focus
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Close Combat
+- Meteor Mash
+- Extreme Speed
+- Swords Dance
+
+Gallade @ Lum Berry
+Level: 58
+Ability: Justified
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Close Combat
+- Psycho Cut
+- Leaf Blade
+- Swords Dance
+
+Conkeldurr @ Flame Orb
+Level: 58
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Drain Punch
+- Mach Punch
+- Earthquake
+- Ice Punch
+
+Machamp @ Choice Scarf
+Level: 58
+Ability: No Guard
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dynamic Punch
+- Earthquake
+- Knock Off
+- Bullet Punch
 
 === TRAINER_JOHN_AND_JAY_4 ===
 Name: JOHN & JAY
@@ -19690,21 +21108,71 @@ Music: Intense
 Double Battle: Yes
 AI: Smart Trainer
 
-Medicham
-Level: 49
-IVs: 27 HP / 27 Atk / 27 Def / 27 SpA / 27 SpD / 27 Spe
-- Psychic
-- Fire Punch
-- Psych Up
-- Protect
+Medicham @ Medichamite
+Level: 58
+Ability: Pure Power
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Fake Out
+- High Jump Kick
+- Rock Slide
+- Bullet Punch
 
-Hariyama
-Level: 49
-IVs: 27 HP / 27 Atk / 27 Def / 27 SpA / 27 SpD / 27 Spe
-- Focus Punch
-- Rock Tomb
-- Rest
-- Belly Drum
+Hariyama @ Assault Vest
+Level: 58
+Ability: Thick Fat
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Fake Out
+- Close Combat
+- Knock Off
+- Earthquake
+
+Lucario @ Life Orb
+Level: 58
+Ability: Inner Focus
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Close Combat
+- Meteor Mash
+- Extreme Speed
+- Swords Dance
+
+Gallade @ Lum Berry
+Level: 58
+Ability: Justified
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Close Combat
+- Psycho Cut
+- Leaf Blade
+- Swords Dance
+
+Conkeldurr @ Flame Orb
+Level: 58
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Drain Punch
+- Mach Punch
+- Earthquake
+- Ice Punch
+
+Machamp @ Choice Scarf
+Level: 58
+Ability: No Guard
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dynamic Punch
+- Earthquake
+- Knock Off
+- Bullet Punch
 
 === TRAINER_JOHN_AND_JAY_5 ===
 Name: JOHN & JAY
@@ -19713,23 +21181,73 @@ Pic: Old Couple
 Gender: Male
 Music: Intense
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
-Medicham
-Level: 52
-IVs: 29 HP / 29 Atk / 29 Def / 29 SpA / 29 SpD / 29 Spe
-- Psychic
-- Fire Punch
-- Psych Up
-- Protect
+Medicham @ Medichamite
+Level: 58
+Ability: Pure Power
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Fake Out
+- High Jump Kick
+- Rock Slide
+- Bullet Punch
 
-Hariyama
-Level: 52
-IVs: 29 HP / 29 Atk / 29 Def / 29 SpA / 29 SpD / 29 Spe
-- Focus Punch
-- Rock Tomb
-- Rest
-- Belly Drum
+Hariyama @ Assault Vest
+Level: 58
+Ability: Thick Fat
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Fake Out
+- Close Combat
+- Knock Off
+- Earthquake
+
+Lucario @ Life Orb
+Level: 58
+Ability: Inner Focus
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Close Combat
+- Meteor Mash
+- Extreme Speed
+- Swords Dance
+
+Gallade @ Lum Berry
+Level: 58
+Ability: Justified
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Close Combat
+- Psycho Cut
+- Leaf Blade
+- Swords Dance
+
+Conkeldurr @ Flame Orb
+Level: 58
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Drain Punch
+- Mach Punch
+- Earthquake
+- Ice Punch
+
+Machamp @ Choice Scarf
+Level: 58
+Ability: No Guard
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dynamic Punch
+- Earthquake
+- Knock Off
+- Bullet Punch
 
 === TRAINER_RELI_AND_IAN ===
 Name: RELI & IAN
@@ -20838,13 +22356,71 @@ Music: Girl
 Double Battle: No
 AI: Smart Trainer
 
-Lombre
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ludicolo @ Leftovers
+Level: 58
+Ability: Rain Dish
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Giga Drain
+- Ice Beam
+- Rain Dance
 
-Marill
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Azumarill @ Sitrus Berry
+Level: 58
+Ability: Huge Power
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Superpower
+- Waterfall
+- Aqua Jet
+- Belly Drum
+
+Roserade @ Life Orb
+Level: 58
+Ability: Technician
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Leaf Storm
+- Sludge Bomb
+- Shadow Ball
+- Extrasensory
+
+Vileplume @ Black Sludge
+Level: 58
+Ability: Effect Spore
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Calm Nature
+- Giga Drain
+- Sludge Bomb
+- Solar Beam
+- Strength Sap
+
+Clefable @ Leftovers
+Level: 58
+Ability: Magic Guard
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Calm Nature
+- Ice Beam
+- Flamethrower
+- Calm Mind
+- Soft-Boiled
+
+Leavanny @ Focus Sash
+Level: 58
+Ability: Swarm
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Leaf Blade
+- X-Scissor
+- Swords Dance
+- Return
 
 === TRAINER_KAI ===
 Name: KAI
@@ -20855,9 +22431,71 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Barboach
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Swampert @ Swampertite
+Level: 58
+Ability: Torrent
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Waterfall
+- Earthquake
+- Ice Punch
+- Protect
+
+Quagsire @ Leftovers
+Level: 58
+Ability: Unaware
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Impish Nature
+- Earthquake
+- Waterfall
+- Recover
+- Toxic
+
+Walrein @ Leftovers
+Level: 58
+Ability: Thick Fat
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Protect
+- Toxic
+
+Seismitoad @ Life Orb
+Level: 58
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hydro Pump
+- Earth Power
+- Surf
+- Sludge Bomb
+
+Barraskewda @ Choice Band
+Level: 58
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Waterfall
+- Brick Break
+- Crunch
+
+Pelipper @ Damp Rock
+Level: 58
+Ability: Drizzle
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Hydro Pump
+- Ice Beam
+- Roost
 
 === TRAINER_CHARLOTTE ===
 Name: CHARLOTTE
@@ -20868,9 +22506,71 @@ Music: Girl
 Double Battle: No
 AI: Smart Trainer
 
-Nuzleaf
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Venusaur @ Venusaurite
+Level: 58
+Ability: Chlorophyll
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Giga Drain
+- Sludge Bomb
+- Solar Beam
+- Sleep Powder
+
+Shiftry @ Life Orb
+Level: 58
+Ability: Chlorophyll
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Rock Slide
+- Brick Break
+- Swords Dance
+- Return
+
+Breloom @ Toxic Orb
+Level: 58
+Ability: Poison Heal
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Spore
+- Mach Punch
+- Bullet Seed
+- Rock Tomb
+
+Jumpluff @ Leftovers
+Level: 58
+Ability: Chlorophyll
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Seed Bomb
+- Sleep Powder
+- Leech Seed
+- U-turn
+
+Whimsicott @ Focus Sash
+Level: 58
+Ability: Prankster
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Psychic
+- Energy Ball
+- Tailwind
+- Encore
+
+Tsareena @ Choice Band
+Level: 58
+Ability: Queenly Majesty
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Power Whip
+- High Jump Kick
+- Return
+- Facade
 
 === TRAINER_DEANDRE ===
 Name: DEANDRE
