@@ -1324,62 +1324,106 @@ u8 NewGameBirchSpeech_GetCharacterPage(void)
     return sBirchCharacterPageChosen ? sBirchCharacterPage : BIRCH_DEFAULT_CHARACTER_PAGE;
 }
 
-// Vorgeschichte vor dem Birk-Intro: weißer Text auf Schwarz, A blättert, B oder START überspringt
-static const u8 *const sIntroStoryPages[] =
+// Vorgeschichte vor dem Birk-Intro: Bilder oben, weißer Text darunter auf Schwarz.
+// A blättert, B oder START überspringt
+#define STORY_MON(species) ((species) | 0x8000) // a Pokémon picture instead of a trainer picture
+#define STORY_PICS_MAX 3
+
+struct IntroStoryPage
 {
-    COMPOUND_STRING("For years, TEAM AQUA and\n"
-                    "TEAM MAGMA fought each other.\n"
-                    "One wanted to grow the sea,\n"
-                    "the other to grow the land.\n"
-                    "\n"
-                    "Their feud kept HOENN\n"
-                    "in balance."),
-    COMPOUND_STRING("Then GIOVANNI came.\n"
-                    "\n"
-                    "The boss of TEAM ROCKET gave\n"
-                    "both teams what neither could\n"
-                    "get alone: money, machines\n"
-                    "and a common enemy."),
-    COMPOUND_STRING("AQUA, ROCKET and MAGMA\n"
-                    "became one: ARMA.\n"
-                    "\n"
-                    "At its head sits the TRIBUNAL:\n"
-                    "ARCHIE, MAXIE and GIOVANNI.\n"
-                    "In secret, it decides who\n"
-                    "shall rule HOENN."),
-    COMPOUND_STRING("Their goal lies deep below\n"
-                    "the FOSSIL RUINS.\n"
-                    "\n"
-                    "There, rifts open into a\n"
-                    "distorted world, where a\n"
-                    "POKéMON waits that defies\n"
-                    "space and time."),
-    COMPOUND_STRING("The GYM LEADERS sense that\n"
-                    "something is wrong.\n"
-                    "But ARMA has eyes everywhere.\n"
-                    "\n"
-                    "Then you move to LITTLEROOT\n"
-                    "TOWN: a newcomer nobody\n"
-                    "is watching."),
-    COMPOUND_STRING("For the brave, one harsh\n"
-                    "rule applies: whoever falls\n"
-                    "does not come back.\n"
-                    "Every POKéMON counts."),
-    COMPOUND_STRING("The TRIBUNAL has already\n"
-                    "passed its judgment on HOENN.\n"
-                    "\n"
-                    "Now it is up to you\n"
-                    "to break it."),
+    const u8 *text;
+    u16 pics[STORY_PICS_MAX];
+    u8 picCount;
 };
+
+static const struct IntroStoryPage sIntroStoryPages[] =
+{
+    {
+        COMPOUND_STRING("For years, TEAM AQUA and\n"
+                        "TEAM MAGMA fought each other.\n"
+                        "One wanted to grow the sea,\n"
+                        "the other to grow the land."),
+        {TRAINER_PIC_AQUA_LEADER_ARCHIE, TRAINER_PIC_MAGMA_LEADER_MAXIE}, 2
+    },
+    {
+        COMPOUND_STRING("Their feud kept HOENN\n"
+                        "in balance. Neither side\n"
+                        "would let the other win."),
+        {STORY_MON(SPECIES_KYOGRE), STORY_MON(SPECIES_GROUDON)}, 2
+    },
+    {
+        COMPOUND_STRING("Then GIOVANNI came.\n"
+                        "The boss of TEAM ROCKET gave\n"
+                        "both teams what neither could\n"
+                        "get alone: money, machines\n"
+                        "and a common enemy."),
+        {TRAINER_PIC_LEADER_GIOVANNI_FRLG}, 1
+    },
+    {
+        COMPOUND_STRING("AQUA, ROCKET and MAGMA\n"
+                        "became one: ARMA."),
+        {TRAINER_PIC_AQUA_GRUNT_M, TRAINER_PIC_ROCKET_GRUNT_M_FRLG, TRAINER_PIC_MAGMA_GRUNT_M}, 3
+    },
+    {
+        COMPOUND_STRING("At its head sits the TRIBUNAL:\n"
+                        "ARCHIE, MAXIE and GIOVANNI.\n"
+                        "In secret, it decides who\n"
+                        "shall rule HOENN."),
+        {TRAINER_PIC_AQUA_LEADER_ARCHIE, TRAINER_PIC_LEADER_GIOVANNI_FRLG, TRAINER_PIC_MAGMA_LEADER_MAXIE}, 3
+    },
+    {
+        COMPOUND_STRING("Their goal lies deep below\n"
+                        "the FOSSIL RUINS. There, rifts\n"
+                        "open into a distorted world,\n"
+                        "where a POKéMON waits that\n"
+                        "defies space and time."),
+        {STORY_MON(SPECIES_GIRATINA_ORIGIN)}, 1
+    },
+    {
+        COMPOUND_STRING("The GYM LEADERS sense that\n"
+                        "something is wrong.\n"
+                        "But ARMA has eyes everywhere."),
+        {TRAINER_PIC_LEADER_ROXANNE, TRAINER_PIC_LEADER_WATTSON, TRAINER_PIC_LEADER_WINONA}, 3
+    },
+    {
+        COMPOUND_STRING("Then you move to LITTLEROOT\n"
+                        "TOWN: a newcomer nobody\n"
+                        "is watching."),
+        {TRAINER_PIC_BRENDAN, TRAINER_PIC_MAY}, 2
+    },
+    {
+        COMPOUND_STRING("For the brave, one harsh\n"
+                        "rule applies: whoever falls\n"
+                        "does not come back.\n"
+                        "Every POKéMON counts."),
+        {STORY_MON(SPECIES_SHEDINJA)}, 1
+    },
+    {
+        COMPOUND_STRING("The TRIBUNAL has already\n"
+                        "passed its judgment on HOENN.\n"
+                        "Now it is up to you\n"
+                        "to break it."),
+        {TRAINER_PIC_AQUA_LEADER_ARCHIE, TRAINER_PIC_LEADER_GIOVANNI_FRLG, TRAINER_PIC_MAGMA_LEADER_MAXIE}, 3
+    },
+};
+
+// x positions of the pictures for one, two or three of them
+static const s16 sIntroStoryPicX[STORY_PICS_MAX][STORY_PICS_MAX] =
+{
+    {120},
+    {80, 160},
+    {48, 120, 192},
+};
+#define STORY_PIC_Y 38
 
 static const struct WindowTemplate sIntroStoryWindows[] =
 {
     {
         .bg = 0,
         .tilemapLeft = 2,
-        .tilemapTop = 2,
+        .tilemapTop = 9,
         .width = 26,
-        .height = 16,
+        .height = 11,
         .paletteNum = 15,
         .baseBlock = 1
     },
@@ -1387,12 +1431,75 @@ static const struct WindowTemplate sIntroStoryWindows[] =
 };
 
 static const u16 sIntroStoryTextPal[] = {RGB_BLACK, RGB_WHITE, RGB(10, 10, 12)};
+
+// Background on BG1 in the colours of the three teams: Aqua blue, Rocket black, Magma red.
+// Built from plain and checkered tiles, so it needs no graphics file
+#define STORY_BG_PAL     14
+#define STORY_BG_SHADES  3
+#define STORY_FADE_PALETTES (PALETTES_ALL & ~(1u << STORY_BG_PAL)) // the background stays while pages change
+
+static const u16 sIntroStoryBgPal[] =
+{
+    RGB_BLACK,
+    RGB(1, 2, 6),  RGB(2, 4, 9),  RGB(3, 6, 12), // Aqua: dark to light
+    RGB(2, 2, 3),  RGB(4, 4, 5),  RGB(6, 6, 7),  // Rocket
+    RGB(6, 1, 1),  RGB(9, 2, 2),  RGB(12, 3, 2), // Magma
+};
+
+// Shade of each tile row: darker at the top and bottom, lightest behind the pictures
+static const u8 sIntroStoryBgRowShade[DISPLAY_TILE_HEIGHT] = {0, 0, 1, 1, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0};
+
+static u32 IntroStory_BgColor(u32 team, u32 shade)
+{
+    return 1 + team * STORY_BG_SHADES + shade;
+}
+
+// Tile number of a plain tile, or of a checkered tile mixing two colours
+static u32 IntroStory_BgTile(u32 a, u32 b)
+{
+    u32 *tile = (u32 *)BG_CHAR_ADDR(0) + ((a << 4) | b) * 8;
+    u32 y;
+
+    for (y = 0; y < 8; y++)
+    {
+        u32 c0 = (y & 1) ? b : a, c1 = (y & 1) ? a : b;
+        u32 pair = c0 | (c1 << 4);
+        tile[y] = pair * 0x01010101;
+    }
+    return (a << 4) | b;
+}
+
+static void IntroStory_DrawBackground(void)
+{
+    u16 *map = (u16 *)BG_SCREEN_ADDR(7);
+    u32 x, y;
+
+    LoadPalette(sIntroStoryBgPal, BG_PLTT_ID(STORY_BG_PAL), sizeof(sIntroStoryBgPal));
+    for (y = 0; y < 32; y++)
+    {
+        u32 shade = sIntroStoryBgRowShade[y < DISPLAY_TILE_HEIGHT ? y : DISPLAY_TILE_HEIGHT - 1];
+        for (x = 0; x < 32; x++)
+        {
+            // Aqua in columns 0-9, Rocket 10-19, Magma 20-29, checkered where two meet
+            u32 team = x < 10 ? 0 : (x < 20 ? 1 : 2);
+            u32 tile;
+            if (x == 9 || x == 19)
+                tile = IntroStory_BgTile(IntroStory_BgColor(team, shade), IntroStory_BgColor(team + 1, shade));
+            else
+                tile = IntroStory_BgTile(IntroStory_BgColor(team, shade), IntroStory_BgColor(team, shade));
+            map[y * 32 + x] = tile | (STORY_BG_PAL << 12);
+        }
+    }
+    ChangeBgX(1, 0, BG_COORD_SET);
+    ChangeBgY(1, 0, BG_COORD_SET);
+}
 static const u8 sIntroStoryTextColors[] = {TEXT_COLOR_TRANSPARENT, 1, 2};
 
 #define tStoryPage data[0]
 #define tStoryEnd  data[1]
 #define tStoryABSpeedUp data[2]
 #define tStoryMidSpeed  data[3]
+#define tStoryPicIds    data + 4 // STORY_PICS_MAX sprite ids, used through a pointer
 
 static void Task_IntroStory_WaitInput(u8 taskId);
 static void Task_IntroStory_WaitFadeOut(u8 taskId);
@@ -1400,11 +1507,53 @@ static void Task_IntroStory_End(u8 taskId);
 
 #define INTRO_STORY_TEXT_SPEED 6 // with forced mid text speed: about 35 letters per second
 
-static void IntroStory_PrintPage(u32 page)
+static void IntroStory_DestroyPics(u8 taskId)
 {
+    s16 *ids = gTasks[taskId].tStoryPicIds;
+    u32 i;
+
+    for (i = 0; i < STORY_PICS_MAX; i++)
+    {
+        if (ids[i] == SPRITE_NONE)
+            continue;
+        if (gSprites[ids[i]].data[7]) // a Pokémon
+            FreeAndDestroyMonPicSprite(ids[i]);
+        else
+            FreeAndDestroyTrainerPicSprite(ids[i]);
+        ids[i] = SPRITE_NONE;
+    }
+}
+
+static void IntroStory_ShowPage(u8 taskId, u32 page)
+{
+    const struct IntroStoryPage *p = &sIntroStoryPages[page];
+    s16 *ids = gTasks[taskId].tStoryPicIds;
+    u32 i;
+
+    IntroStory_DestroyPics(taskId);
+    for (i = 0; i < p->picCount; i++)
+    {
+        s16 x = sIntroStoryPicX[p->picCount - 1][i];
+        u16 id;
+
+        if (p->pics[i] & 0x8000)
+            id = CreateMonPicSprite(p->pics[i] & 0x7FFF, FALSE, 0, TRUE, x, STORY_PIC_Y, i, TAG_NONE);
+        else
+            id = CreateTrainerPicSprite(p->pics[i], TRUE, x, STORY_PIC_Y, i, TAG_NONE);
+        if (id == 0xFFFF)
+            continue;
+        gSprites[id].data[7] = (p->pics[i] & 0x8000) != 0;
+        // two pictures face each other
+        if (p->picCount == 2 && i == 0)
+            gSprites[id].hFlip = TRUE;
+        ids[i] = id;
+    }
+
     FillWindowPixelBuffer(0, PIXEL_FILL(0));
     CopyWindowToVram(0, COPYWIN_GFX);
-    AddTextPrinterParameterized4(0, FONT_NORMAL, 4, 4, 0, 0, sIntroStoryTextColors, INTRO_STORY_TEXT_SPEED, sIntroStoryPages[page]);
+    AddTextPrinterParameterized4(0, FONT_NORMAL, 4, 2, 0, 0, sIntroStoryTextColors, INTRO_STORY_TEXT_SPEED, p->text);
+    // the new pictures start black like the rest of the screen
+    BlendPalettes(STORY_FADE_PALETTES, 16, RGB_BLACK);
 }
 
 static void Task_IntroStory_Init(u8 taskId)
@@ -1422,6 +1571,7 @@ static void Task_IntroStory_Init(u8 taskId)
     InitWindows(sIntroStoryWindows);
     DeactivateAllTextPrinters();
     LoadPalette(sIntroStoryTextPal, BG_PLTT_ID(15), sizeof(sIntroStoryTextPal));
+    IntroStory_DrawBackground();
     gPlttBufferUnfaded[0] = RGB_BLACK;
     gPlttBufferFaded[0] = RGB_BLACK;
     FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 32, 32);
@@ -1434,11 +1584,15 @@ static void Task_IntroStory_Init(u8 taskId)
     // The player's text speed may be instant, which would show each page at once
     gTasks[taskId].tStoryMidSpeed = gTextFlags.forceMidTextSpeed;
     gTextFlags.forceMidTextSpeed = TRUE;
-    IntroStory_PrintPage(0);
+    for (u32 i = 0; i < STORY_PICS_MAX; i++)
+        (gTasks[taskId].tStoryPicIds)[i] = SPRITE_NONE;
+    ResetAllPicSprites();
+    IntroStory_ShowPage(taskId, 0);
     BlendPalettes(PALETTES_ALL, 16, RGB_BLACK);
     BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
-    SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_1D_MAP | DISPCNT_BG0_ON);
+    SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_1D_MAP | DISPCNT_OBJ_ON | DISPCNT_BG0_ON | DISPCNT_BG1_ON);
     ShowBg(0);
+    ShowBg(1);
     PlayBGM(MUS_ABNORMAL_WEATHER);
     gTasks[taskId].func = Task_IntroStory_WaitInput;
 }
@@ -1461,7 +1615,7 @@ static void Task_IntroStory_WaitInput(u8 taskId)
         gTasks[taskId].tStoryEnd = (gTasks[taskId].tStoryPage + 1 >= (s32)ARRAY_COUNT(sIntroStoryPages));
     }
     PlaySE(SE_SELECT);
-    BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+    BeginNormalPaletteFade(gTasks[taskId].tStoryEnd ? PALETTES_ALL : STORY_FADE_PALETTES, 0, 0, 16, RGB_BLACK);
     gTasks[taskId].func = Task_IntroStory_WaitFadeOut;
 }
 
@@ -1472,13 +1626,14 @@ static void Task_IntroStory_WaitFadeOut(u8 taskId)
 
     if (!gTasks[taskId].tStoryEnd)
     {
-        IntroStory_PrintPage(++gTasks[taskId].tStoryPage);
-        BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
+        IntroStory_ShowPage(taskId, ++gTasks[taskId].tStoryPage);
+        BeginNormalPaletteFade(STORY_FADE_PALETTES, 0, 16, 0, RGB_BLACK);
         gTasks[taskId].func = Task_IntroStory_WaitInput;
         return;
     }
 
     // Leave a clean BG0 for the Birch intro, which sets up its own windows
+    IntroStory_DestroyPics(taskId);
     DeactivateAllTextPrinters();
     gTextFlags.canABSpeedUpPrint = gTasks[taskId].tStoryABSpeedUp;
     gTextFlags.forceMidTextSpeed = gTasks[taskId].tStoryMidSpeed;
@@ -1504,6 +1659,7 @@ static void Task_IntroStory_End(u8 taskId)
 #undef tStoryEnd
 #undef tStoryABSpeedUp
 #undef tStoryMidSpeed
+#undef tStoryPicIds
 
 static void Task_NewGameBirchSpeech_Init(u8 taskId)
 {
