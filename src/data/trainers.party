@@ -992,7 +992,7 @@ Tags: Weather Abuser
 - Sucker Punch
 - Memento
 
-Lycanroc @ Choice Band
+Lycanroc-Dusk @ Choice Band
 Ability: Tough Claws
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1170,7 +1170,7 @@ Tags: Weather Abuser
 - Sucker Punch
 - Memento
 
-Lycanroc @ Choice Band
+Lycanroc-Dusk @ Choice Band
 Ability: Tough Claws
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1290,7 +1290,7 @@ Tags: Weather Abuser
 - Sucker Punch
 - Memento
 
-Lycanroc @ Choice Band
+Lycanroc-Dusk @ Choice Band
 Ability: Tough Claws
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1410,7 +1410,7 @@ Tags: Weather Abuser
 - Sucker Punch
 - Memento
 
-Lycanroc @ Choice Band
+Lycanroc-Dusk @ Choice Band
 Ability: Tough Claws
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1530,7 +1530,7 @@ Tags: Weather Abuser
 - Sucker Punch
 - Memento
 
-Lycanroc @ Choice Band
+Lycanroc-Dusk @ Choice Band
 Ability: Tough Claws
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -6855,7 +6855,7 @@ Tags: Lead / Weather Setter
 - Crunch
 - Fire Punch
 
-Lycanroc @ Life Orb
+Lycanroc-Dusk @ Life Orb
 Ability: Tough Claws
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -8506,7 +8506,7 @@ Ability: Shields Down
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Adamant Nature
-- Floaty Fall
+- Acrobatics
 - Rock Slide
 - Earthquake
 - Shell Smash
@@ -23546,7 +23546,7 @@ Tags: Weather Abuser
 - Iron Head
 - Rock Slide
 
-Lycanroc @ Choice Band
+Lycanroc-Dusk @ Choice Band
 Ability: Tough Claws
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -25641,7 +25641,7 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer / Prediction
 
-Lycanroc @ Focus Sash
+Lycanroc-Dusk @ Focus Sash
 Ability: Tough Claws
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -29524,7 +29524,7 @@ Impish Nature
 - Earthquake
 - Aerial Ace
 
-Darmanitan @ Choice Scarf
+Darmanitan-Galar @ Choice Scarf
 Ability: Gorilla Tactics
 EVs: 252 Atk / 4 SpD / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -30272,9 +30272,9 @@ Ability: RKS System
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Jolly Nature
-- Extreme Speed
+- Crunch
 - Multi-Attack
-- Fire Punch
+- Fire Fang
 - Zen Headbutt
 
 === TRAINER_ROCKET_HIDEOUT_GIOVANNI ===
