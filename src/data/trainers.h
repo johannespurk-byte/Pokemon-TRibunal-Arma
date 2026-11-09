@@ -2524,7 +2524,7 @@
             },
             {
 #line 995
-            .species = SPECIES_LYCANROC,
+            .species = SPECIES_LYCANROC_DUSK,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 995
             .heldItem = ITEM_CHOICE_BAND,
@@ -2973,7 +2973,7 @@
             },
             {
 #line 1173
-            .species = SPECIES_LYCANROC,
+            .species = SPECIES_LYCANROC_DUSK,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 1173
             .heldItem = ITEM_CHOICE_BAND,
@@ -3279,7 +3279,7 @@
             },
             {
 #line 1293
-            .species = SPECIES_LYCANROC,
+            .species = SPECIES_LYCANROC_DUSK,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 1293
             .heldItem = ITEM_CHOICE_BAND,
@@ -3585,7 +3585,7 @@
             },
             {
 #line 1413
-            .species = SPECIES_LYCANROC,
+            .species = SPECIES_LYCANROC_DUSK,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 1413
             .heldItem = ITEM_CHOICE_BAND,
@@ -3891,7 +3891,7 @@
             },
             {
 #line 1533
-            .species = SPECIES_LYCANROC,
+            .species = SPECIES_LYCANROC_DUSK,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 1533
             .heldItem = ITEM_CHOICE_BAND,
@@ -17685,7 +17685,7 @@
             },
             {
 #line 6858
-            .species = SPECIES_LYCANROC,
+            .species = SPECIES_LYCANROC_DUSK,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 6858
             .heldItem = ITEM_LIFE_ORB,
@@ -22051,7 +22051,7 @@
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 8509
-                MOVE_FLOATY_FALL,
+                MOVE_ACROBATICS,
                 MOVE_ROCK_SLIDE,
                 MOVE_EARTHQUAKE,
                 MOVE_SHELL_SMASH,
@@ -61485,7 +61485,7 @@
             },
             {
 #line 23549
-            .species = SPECIES_LYCANROC,
+            .species = SPECIES_LYCANROC_DUSK,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 23549
             .heldItem = ITEM_CHOICE_BAND,
@@ -66792,7 +66792,7 @@
         {
             {
 #line 25644
-            .species = SPECIES_LYCANROC,
+            .species = SPECIES_LYCANROC_DUSK,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 25644
             .heldItem = ITEM_FOCUS_SASH,
@@ -76996,7 +76996,7 @@
             },
             {
 #line 29527
-            .species = SPECIES_DARMANITAN,
+            .species = SPECIES_DARMANITAN_GALAR,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 29527
             .heldItem = ITEM_CHOICE_SCARF,
@@ -78948,9 +78948,9 @@
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 30275
-                MOVE_EXTREME_SPEED,
+                MOVE_CRUNCH,
                 MOVE_MULTI_ATTACK,
-                MOVE_FIRE_PUNCH,
+                MOVE_FIRE_FANG,
                 MOVE_ZEN_HEADBUTT,
             },
             },
