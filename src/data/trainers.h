@@ -83769,3 +83769,183 @@
             },
         },
     },
+#line 32208
+    [DIFFICULTY_NORMAL][TRAINER_UNDINE] =
+    {
+#line 32209
+        .trainerName = _("Undine"),
+#line 32210
+        .trainerClass = TRAINER_CLASS_EXPERT,
+#line 32211
+        .trainerPic = TRAINER_PIC_EXPERT_F,
+#line 32212
+        .gender = TRAINER_GENDER_FEMALE,
+#line 32213
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+#line 32214
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 32215
+        .aiFlags = AI_FLAG_SMART_TRAINER,
+#line 0
+        .multiTeamSize = MULTI_TEAM_SIZE_FULL,
+        .partySize = 6,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 32217
+            .species = SPECIES_PELIPPER,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 32217
+            .heldItem = ITEM_DAMP_ROCK,
+#line 32220
+            .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 252, 4),
+#line 32221
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 32219
+            .ability = ABILITY_DRIZZLE,
+#line 32218
+            .lvl = 65,
+            .ball = POKEBALL_COUNT,
+#line 32222
+            .nature = NATURE_BOLD,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 32223
+                MOVE_SCALD,
+                MOVE_HURRICANE,
+                MOVE_U_TURN,
+                MOVE_ROOST,
+            },
+            },
+            {
+#line 32228
+            .species = SPECIES_BARRASKEWDA,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 32228
+            .heldItem = ITEM_CHOICE_BAND,
+#line 32231
+            .ev = TRAINER_PARTY_EVS(4, 252, 0, 252, 0, 0),
+#line 32232
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 32230
+            .ability = ABILITY_SWIFT_SWIM,
+#line 32229
+            .lvl = 65,
+            .ball = POKEBALL_COUNT,
+#line 32233
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 32234
+                MOVE_LIQUIDATION,
+                MOVE_CLOSE_COMBAT,
+                MOVE_PSYCHIC_FANGS,
+                MOVE_AQUA_JET,
+            },
+            },
+            {
+#line 32239
+            .species = SPECIES_LUDICOLO,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 32239
+            .heldItem = ITEM_LIFE_ORB,
+#line 32242
+            .ev = TRAINER_PARTY_EVS(4, 0, 0, 252, 252, 0),
+#line 32243
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 32241
+            .ability = ABILITY_SWIFT_SWIM,
+#line 32240
+            .lvl = 65,
+            .ball = POKEBALL_COUNT,
+#line 32244
+            .nature = NATURE_MODEST,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 32245
+                MOVE_HYDRO_PUMP,
+                MOVE_GIGA_DRAIN,
+                MOVE_ICE_BEAM,
+                MOVE_FOCUS_BLAST,
+            },
+            },
+            {
+#line 32250
+            .species = SPECIES_PRIMARINA,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 32250
+            .heldItem = ITEM_LEFTOVERS,
+#line 32253
+            .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 252, 4),
+#line 32254
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 32252
+            .ability = ABILITY_TORRENT,
+#line 32251
+            .lvl = 65,
+            .ball = POKEBALL_COUNT,
+#line 32255
+            .nature = NATURE_MODEST,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 32256
+                MOVE_MOONBLAST,
+                MOVE_SPARKLING_ARIA,
+                MOVE_ICE_BEAM,
+                MOVE_CALM_MIND,
+            },
+            },
+            {
+#line 32261
+            .species = SPECIES_SWAMPERT,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 32261
+            .heldItem = ITEM_SWAMPERTITE,
+#line 32264
+            .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 4),
+#line 32265
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 32263
+            .ability = ABILITY_DAMP,
+#line 32262
+            .lvl = 65,
+            .ball = POKEBALL_COUNT,
+#line 32266
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 32267
+                MOVE_LIQUIDATION,
+                MOVE_EARTHQUAKE,
+                MOVE_ICE_PUNCH,
+                MOVE_STEALTH_ROCK,
+            },
+            },
+            {
+#line 32272
+            .species = SPECIES_KINGDRA,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 32272
+            .heldItem = ITEM_WATERIUM_Z,
+#line 32275
+            .ev = TRAINER_PARTY_EVS(4, 0, 0, 252, 252, 0),
+#line 32276
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 32274
+            .ability = ABILITY_SWIFT_SWIM,
+#line 32273
+            .lvl = 65,
+            .ball = POKEBALL_COUNT,
+#line 32277
+            .nature = NATURE_MODEST,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 32278
+                MOVE_HYDRO_PUMP,
+                MOVE_DRACO_METEOR,
+                MOVE_ICE_BEAM,
+                MOVE_FLASH_CANNON,
+            },
+            },
+        },
+    },

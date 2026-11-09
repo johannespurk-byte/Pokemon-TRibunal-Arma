@@ -117,3 +117,73 @@ Fossil_Ruins_5_Text_GruntBDefeat:
 Fossil_Ruins_5_Text_GruntsAfterBattle:
 	.string "GRUNT: Fine, go on up!\n"
 	.string "ARCHIE will sink you for good!$"
+
+@ =========================================================
+@ EXPERTIN UNDINE: hands out the Z-Ring and the Waterium Z
+@ =========================================================
+Fossil_Ruins_5_EventScript_Undine::
+	trainerbattle_single TRAINER_UNDINE, Fossil_Ruins_5_Text_UndineIntro, Fossil_Ruins_5_Text_UndineDefeated, Fossil_Ruins_5_EventScript_UndineDefeated
+	@ Already beaten: hand over what the player is still missing
+	checkitem ITEM_Z_POWER_RING
+	goto_if_eq VAR_RESULT, FALSE, Fossil_Ruins_5_EventScript_UndineGiveLater
+	checkitem ITEM_WATERIUM_Z
+	goto_if_eq VAR_RESULT, FALSE, Fossil_Ruins_5_EventScript_UndineGiveLater
+	msgbox Fossil_Ruins_5_Text_UndinePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Fossil_Ruins_5_EventScript_UndineGiveLater::
+	lock
+	faceplayer
+	msgbox Fossil_Ruins_5_Text_UndineReward, MSGBOX_DEFAULT
+	checkitem ITEM_Z_POWER_RING
+	call_if_eq VAR_RESULT, FALSE, Fossil_Ruins_5_EventScript_UndineGiveRing
+	checkitem ITEM_WATERIUM_Z
+	call_if_eq VAR_RESULT, FALSE, Fossil_Ruins_5_EventScript_UndineGiveCrystal
+	release
+	end
+
+Fossil_Ruins_5_EventScript_UndineDefeated::
+	lock
+	faceplayer
+	msgbox Fossil_Ruins_5_Text_UndineReward, MSGBOX_DEFAULT
+	checkitem ITEM_Z_POWER_RING
+	call_if_eq VAR_RESULT, FALSE, Fossil_Ruins_5_EventScript_UndineGiveRing
+	call Fossil_Ruins_5_EventScript_UndineGiveCrystal
+	release
+	end
+
+Fossil_Ruins_5_EventScript_UndineGiveRing::
+	giveitem ITEM_Z_POWER_RING
+	msgbox Fossil_Ruins_5_Text_UndineExplainRing, MSGBOX_DEFAULT
+	return
+
+Fossil_Ruins_5_EventScript_UndineGiveCrystal::
+	giveitem ITEM_WATERIUM_Z
+	msgbox Fossil_Ruins_5_Text_UndineExplainCrystal, MSGBOX_DEFAULT
+	return
+
+Fossil_Ruins_5_Text_UndineIntro::
+	.string "Niemand findet den Weg auf meine Insel.\n"
+	.string "Du bist bis hierher gesurft? Respekt!\p"
+	.string "Aber gegen meine Flut im Dunkeln\n"
+	.string "hast du keine Chance!$"
+
+Fossil_Ruins_5_Text_UndineDefeated::
+	.string "Meine Flut... einfach versiegt!$"
+
+Fossil_Ruins_5_Text_UndineReward::
+	.string "Du beherrschst sogar das dunkle Wasser.\n"
+	.string "Nimm diesen Schatz aus dem See.$"
+
+Fossil_Ruins_5_Text_UndineExplainRing::
+	.string "Das ist ein Z-Ring. Ohne ihn kann\n"
+	.string "kein Pokemon eine Z-Attacke einsetzen.$"
+
+Fossil_Ruins_5_Text_UndineExplainCrystal::
+	.string "Und das ist das Aquarium Z.\n"
+	.string "Lass ein Wasser-Pokemon es tragen, um\l"
+	.string "eine gewaltige Z-Attacke zu entfesseln!$"
+
+Fossil_Ruins_5_Text_UndinePostBattle::
+	.string "Hier unten ist das Wasser so still...\n"
+	.string "Aber du hast es zum Kochen gebracht!$"

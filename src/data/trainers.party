@@ -32204,3 +32204,79 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Sludge Bomb
 - Ice Beam
 - Toxic
+
+=== TRAINER_UNDINE ===
+Name: Undine
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Smart Trainer
+
+Pelipper @ Damp Rock
+Level: 65
+Ability: Drizzle
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Bold Nature
+- Scald
+- Hurricane
+- U-turn
+- Roost
+
+Barraskewda @ Choice Band
+Level: 65
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Psychic Fangs
+- Aqua Jet
+
+Ludicolo @ Life Orb
+Level: 65
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hydro Pump
+- Giga Drain
+- Ice Beam
+- Focus Blast
+
+Primarina @ Leftovers
+Level: 65
+Ability: Torrent
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Moonblast
+- Sparkling Aria
+- Ice Beam
+- Calm Mind
+
+Swampert @ Swampertite
+Level: 65
+Ability: Damp
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Earthquake
+- Ice Punch
+- Stealth Rock
+
+Kingdra @ Waterium Z
+Level: 65
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hydro Pump
+- Draco Meteor
+- Ice Beam
+- Flash Cannon
+

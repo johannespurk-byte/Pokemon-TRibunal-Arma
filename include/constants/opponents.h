@@ -895,6 +895,7 @@
 #define TRAINER_GIOVANNI_FOSSIL_RUINS_5       888
 #define TRAINER_AQUA_GRUNT_FOSSIL_RUINS_5_A   889
 #define TRAINER_AQUA_GRUNT_FOSSIL_RUINS_5_B   890
+#define TRAINER_UNDINE                        891
 #
 #if !IS_FRLG
 // The Rocket Hideout under the Mauville Game Corner shares its scripts with FRLG,
