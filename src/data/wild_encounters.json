@@ -36785,7 +36785,7 @@
           "map": "MAP_MAMOR_CACE",
           "base_label": "gMamor_Cace",
           "land_mons": {
-            "encounter_rate": 7,
+            "encounter_rate": 10,
             "mons": [
               {
                 "min_level": 5,
