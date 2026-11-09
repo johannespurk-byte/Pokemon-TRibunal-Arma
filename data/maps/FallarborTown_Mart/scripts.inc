@@ -13,18 +13,31 @@ FallarborTown_Mart_EventScript_Clerk::
 
 	.align 2
 FallarborTown_Mart_Pokemart:
+	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_ESCAPE_ROPE
-	.2byte ITEM_SUPER_REPEL
-	.2byte ITEM_X_SP_ATK
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFENSE
-	.2byte ITEM_DIRE_HIT
-	.2byte ITEM_GUARD_SPEC
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_NEST_BALL
+	.2byte ITEM_REPEAT_BALL
+	.2byte ITEM_TIMER_BALL
+	.2byte ITEM_LUXURY_BALL
+	.2byte ITEM_DUSK_BALL
+	.2byte ITEM_HEAL_BALL
+	.2byte ITEM_QUICK_BALL
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_THUNDER_STONE
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_MOON_STONE
+	.2byte ITEM_SUN_STONE
+	.2byte ITEM_SHINY_STONE
+	.2byte ITEM_DUSK_STONE
+	.2byte ITEM_DAWN_STONE
+	.2byte ITEM_ICE_STONE
+	.2byte ITEM_GRISEOUS_ORB
+	.2byte ITEM_ADAMANT_ORB
+	.2byte ITEM_LUSTROUS_ORB
 	pokemartlistend
 
 FallarborTown_Mart_EventScript_Woman::
