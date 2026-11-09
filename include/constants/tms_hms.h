@@ -51,7 +51,57 @@
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(SNATCH) \
-    F(OVERHEAT)
+    F(OVERHEAT) \
+    F(BULLDOZE) \
+    F(U_TURN) \
+    F(ICE_PUNCH) \
+    F(KNOCK_OFF) \
+    F(SCALD) \
+    F(HEAVY_SLAM) \
+    F(POWER_GEM) \
+    F(ACROBATICS) \
+    F(DARK_PULSE) \
+    F(FLASH_CANNON) \
+    F(DRAGON_DANCE) \
+    F(SWORDS_DANCE) \
+    F(NASTY_PLOT) \
+    F(PSYCHO_CUT) \
+    F(X_SCISSOR) \
+    F(STONE_EDGE) \
+    F(STEALTH_ROCK) \
+    F(TRICK_ROOM) \
+    F(GRASS_KNOT) \
+    F(WILL_O_WISP) \
+    F(THUNDER_WAVE) \
+    F(ROOST) \
+    F(SLUDGE_WAVE) \
+    F(VOLT_SWITCH) \
+    F(LIQUIDATION) \
+    F(CLOSE_COMBAT) \
+    F(HYDRO_PUMP) \
+    F(HURRICANE) \
+    F(DRACO_METEOR) \
+    F(OUTRAGE) \
+    F(HYPER_VOICE) \
+    F(PLAY_ROUGH) \
+    F(DAZZLING_GLEAM) \
+    F(PSYCHIC_FANGS) \
+    F(DRAIN_PUNCH) \
+    F(EARTH_POWER) \
+    F(BODY_PRESS) \
+    F(MOONBLAST) \
+    F(DRAGON_PULSE) \
+    F(HEAT_WAVE) \
+    F(BUG_BUZZ) \
+    F(CRUNCH) \
+    F(SHADOW_CLAW) \
+    F(POISON_JAB) \
+    F(FOCUS_BLAST) \
+    F(IRON_HEAD) \
+    F(ZEN_HEADBUTT) \
+    F(LEAF_STORM) \
+    F(GUNK_SHOT) \
+    F(SOLAR_BLADE)
 
 #define FOREACH_HM(F) \
     F(CUT) \
