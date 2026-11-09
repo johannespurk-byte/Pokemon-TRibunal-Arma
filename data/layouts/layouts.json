@@ -10335,6 +10335,19 @@
       "border_height": 2,
       "border_width": 2,
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_FOSSIL_RUINS_5",
+      "name": "Fossil_Ruins_5_Layout",
+      "width": 30,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Fossil_Ruins_5/border.bin",
+      "blockdata_filepath": "data/layouts/Fossil_Ruins_5/map.bin",
+      "border_height": 2,
+      "border_width": 2,
+      "layout_version": "emerald"
     }
   ]
 }

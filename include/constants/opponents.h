@@ -891,6 +891,10 @@
 #define TRAINER_LORELEI_MAUVILLE              884
 #define TRAINER_MAXIE_FOSSIL_RUINS            885
 #define TRAINER_GIOVANNI_FOSSIL_RUINS         886
+#define TRAINER_ARCHIE_FOSSIL_RUINS           887
+#define TRAINER_GIOVANNI_FOSSIL_RUINS_5       888
+#define TRAINER_AQUA_GRUNT_FOSSIL_RUINS_5_A   889
+#define TRAINER_AQUA_GRUNT_FOSSIL_RUINS_5_B   890
 #
 #if !IS_FRLG
 // The Rocket Hideout under the Mauville Game Corner shares its scripts with FRLG,

@@ -1695,6 +1695,9 @@
 #define FLAG_ITEM_FOSSIL_RUINS_HARD_STONE                  FLAG_UNUSED_0x039 // Item ball in Fossil Ruins 1
 #define FLAG_ITEM_FOSSIL_RUINS_2_STAR_PIECE                FLAG_UNUSED_0x03A // Item ball in Fossil Ruins 2
 #define FLAG_ITEM_FOSSIL_RUINS_2_MAX_REVIVE                FLAG_UNUSED_0x03B // Item ball in Fossil Ruins 2
+#define FLAG_HIDE_FOSSIL_RUINS_5_ARCHIE                    FLAG_UNUSED_0x03C // Archie leaves after his fight in Fossil Ruins 5
+#define FLAG_HIDE_FOSSIL_RUINS_5_GIOVANNI                  FLAG_UNUSED_0x03D // Giovanni leaves after his fight in Fossil Ruins 5
+#define FLAG_HIDE_FOSSIL_RUINS_5_GRUNTS                    FLAG_UNUSED_0x03E // The two Aqua grunts leave after their double battle in Fossil Ruins 5
 #define FLAG_HIDE_TOWN_MAP                                 0
 #define FLAG_HIDE_POKEDEX                                  0
 #define FLAG_HIDE_CERULEAN_ROCKET                          0

@@ -1769,6 +1769,8 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 
 	.include "data/maps/Fossil_Ruins_4/scripts.inc"
 
+	.include "data/maps/Fossil_Ruins_5/scripts.inc"
+
     .global Common_EventScript_SaveGame
 Common_EventScript_SaveGame::
 	.byte 0x1d
