@@ -28002,3 +28002,292 @@ Adamant Nature
 - Close Combat
 - Swords Dance
 
+=== TRAINER_ARCHIE_FOSSIL_RUINS ===
+Name: ARCHIE
+Class: Aqua Leader
+Pic: Aqua Leader Archie
+Gender: Male
+Music: Aqua
+Double Battle: No
+Mugshot: Blue
+Party Size: 6
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Sharpedo @ Sharpedonite
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Crunch
+- Liquidation
+- Psychic Fangs
+- Protect
+
+Crobat @ Heavy-Duty Boots
+Ability: Infiltrator
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Brave Bird
+- Cross Poison
+- Zen Headbutt
+- Taunt
+
+Muk @ Black Sludge
+Ability: Poison Touch
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Gunk Shot
+- Shadow Sneak
+- Ice Punch
+- Fire Punch
+
+Pelipper @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+IVs: 0 Atk
+- Hurricane
+- Hydro Pump
+- Ice Beam
+- Roost
+
+Kingdra @ Choice Specs
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+IVs: 0 Atk
+- Hydro Pump
+- Dragon Pulse
+- Ice Beam
+- Surf
+
+Kyogre @ Blue Orb
+Tags: Ace
+Ability: Drizzle
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+IVs: 0 Atk
+- Water Spout
+- Origin Pulse
+- Ice Beam
+- Thunder
+
+Mightyena @ Choice Band
+Ability: Moxie
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Crunch
+- Play Rough
+- Sucker Punch
+- Fire Fang
+
+Gyarados @ Leftovers
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Waterfall
+- Dragon Dance
+- Earthquake
+- Ice Fang
+
+Walrein @ Leftovers
+Ability: Thick Fat
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+IVs: 0 Atk
+- Surf
+- Ice Beam
+- Protect
+- Toxic
+
+Milotic @ Leftovers
+Ability: Marvel Scale
+EVs: 252 HP / 4 SpA / 252 Def
+Bold Nature
+IVs: 0 Atk
+- Surf
+- Ice Beam
+- Recover
+- Toxic
+
+=== TRAINER_GIOVANNI_FOSSIL_RUINS_5 ===
+Name: GIOVANNI
+Class: Boss Frlg
+Pic: Leader Giovanni Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+Mugshot: Purple
+Party Size: 6
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Persian @ Life Orb
+Ability: Technician
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Fake Out
+- Play Rough
+- Aerial Ace
+- Night Slash
+
+Excadrill @ Focus Sash
+Ability: Mold Breaker
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Rock Slide
+- Brick Break
+- Swords Dance
+
+Nidoking @ Life Orb
+Ability: Sheer Force
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Earth Power
+- Sludge Wave
+- Ice Beam
+- Thunderbolt
+
+Rhyperior @ Weakness Policy
+Ability: Solid Rock
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Megahorn
+- Ice Punch
+
+Garchomp @ Rocky Helmet
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Earthquake
+- Dragon Claw
+- Fire Fang
+- Swords Dance
+
+Mewtwo @ Mewtwonite X
+Tags: Ace
+Ability: Pressure
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Psycho Cut
+- Brick Break
+- Ice Punch
+- Bulk Up
+
+Kangaskhan @ Kangaskhanite
+Ability: Scrappy
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Fake Out
+- Double-Edge
+- Earthquake
+- Sucker Punch
+
+Tyranitar @ Choice Band
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Stone Edge
+- Crunch
+- Earthquake
+- Fire Punch
+
+Marowak-Alola @ Thick Club
+Ability: Lightning Rod
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Flare Blitz
+- Shadow Bone
+- Bonemerang
+- Swords Dance
+
+Nidoqueen @ Black Sludge
+Ability: Sheer Force
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+IVs: 0 Atk
+- Earth Power
+- Sludge Wave
+- Ice Beam
+- Thunderbolt
+
+=== TRAINER_AQUA_GRUNT_FOSSIL_RUINS_5_A ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer
+
+Sharpedo @ Life Orb
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Crunch
+- Liquidation
+- Psychic Fangs
+- Protect
+
+Crawdaunt @ Choice Band
+Ability: Adaptability
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Crabhammer
+- Crunch
+- Aqua Jet
+- Swords Dance
+
+Mightyena @ Sitrus Berry
+Ability: Intimidate
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Crunch
+- Play Rough
+- Sucker Punch
+- Fire Fang
+
+=== TRAINER_AQUA_GRUNT_FOSSIL_RUINS_5_B ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Smart Trainer
+
+Pelipper @ Damp Rock
+Ability: Drizzle
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+IVs: 0 Atk
+- Hurricane
+- Hydro Pump
+- Ice Beam
+- Roost
+
+Lanturn @ Leftovers
+Ability: Volt Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+Modest Nature
+IVs: 0 Atk
+- Thunderbolt
+- Surf
+- Ice Beam
+- Confuse Ray
+
+Tentacruel @ Black Sludge
+Ability: Clear Body
+EVs: 252 HP / 4 SpA / 252 SpD
+Calm Nature
+IVs: 0 Atk
+- Surf
+- Sludge Bomb
+- Ice Beam
+- Toxic

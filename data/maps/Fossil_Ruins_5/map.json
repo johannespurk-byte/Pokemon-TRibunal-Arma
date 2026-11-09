@@ -1,0 +1,115 @@
+{
+  "id": "MAP_FOSSIL_RUINS_5",
+  "name": "Fossil_Ruins_5",
+  "layout": "LAYOUT_FOSSIL_RUINS_5",
+  "music": "MUS_HG_UNION_CAVE",
+  "region_map_section": "MAPSEC_FOSSIL_RUINS_5",
+  "requires_flash": true,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
+      "local_id": "LOCALID_FOSSIL_RUINS_5_ARCHIE",
+      "x": 13,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_FOSSIL_RUINS_5_ARCHIE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GIOVANNI",
+      "local_id": "LOCALID_FOSSIL_RUINS_5_GIOVANNI",
+      "x": 13,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_FOSSIL_RUINS_5_GIOVANNI"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "local_id": "LOCALID_FOSSIL_RUINS_5_GRUNT_A",
+      "x": 13,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Fossil_Ruins_5_EventScript_Grunts",
+      "flag": "FLAG_HIDE_FOSSIL_RUINS_5_GRUNTS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "local_id": "LOCALID_FOSSIL_RUINS_5_GRUNT_B",
+      "x": 14,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Fossil_Ruins_5_EventScript_Grunts",
+      "flag": "FLAG_HIDE_FOSSIL_RUINS_5_GRUNTS"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 8,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Fossil_Ruins_5_EventScript_Showdown"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 10,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "Fossil_Ruins_5_EventScript_Grunts"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 11,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "Fossil_Ruins_5_EventScript_Grunts"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 11,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "Fossil_Ruins_5_EventScript_Grunts"
+    }
+  ],
+  "bg_events": [],
+  "region": "REGION_HOENN"
+}
