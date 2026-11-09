@@ -8604,7 +8604,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ADAMANT_ORB] =
     {
         .name = ITEM_NAME("Adamant Orb"),
-        .price = (I_PRICE >= GEN_7) ? 0 : 10000,
+        .price = 10000, // sold in the Fallarbor Town Mart, so it needs a price
         .holdEffect = HOLD_EFFECT_ADAMANT_ORB,
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
@@ -8623,7 +8623,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LUSTROUS_ORB] =
     {
         .name = ITEM_NAME("Lustrous Orb"),
-        .price = (I_PRICE >= GEN_7) ? 0 : 10000,
+        .price = 10000, // sold in the Fallarbor Town Mart, so it needs a price
         .holdEffect = HOLD_EFFECT_LUSTROUS_ORB,
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
@@ -8642,7 +8642,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GRISEOUS_ORB] =
     {
         .name = ITEM_NAME("Griseous Orb"),
-        .price = (I_PRICE >= GEN_7) ? 0 : 10000,
+        .price = 10000, // sold in the Fallarbor Town Mart, so it needs a price
         .holdEffect = HOLD_EFFECT_GRISEOUS_ORB,
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
