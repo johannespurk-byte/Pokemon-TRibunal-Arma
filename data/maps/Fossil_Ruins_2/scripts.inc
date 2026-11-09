@@ -6,8 +6,34 @@ Fossil_Ruins_2_MapScripts::
 @ =========================================================
 Fossil_Ruins_2_Eventscript_Stoner::
 	trainerbattle_single TRAINER_STONER, Fossil_Ruins_2_Text_StonerIntro, Fossil_Ruins_2_Text_StonerDefeated, Fossil_Ruins_2_EventScript_StonerDefeatedScript
+	@ Already beaten: hand over the Z-Ring and Rockium Z if the player does not have them yet
+	checkitem ITEM_Z_POWER_RING
+	goto_if_eq VAR_RESULT, FALSE, Fossil_Ruins_2_EventScript_StonerGiveLater
+	checkitem ITEM_ROCKIUM_Z
+	goto_if_eq VAR_RESULT, FALSE, Fossil_Ruins_2_EventScript_StonerGiveLater
 	msgbox Fossil_Ruins_2_Text_StonerPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Fossil_Ruins_2_EventScript_StonerGiveLater::
+	lock
+	faceplayer
+	msgbox Fossil_Ruins_2_Text_StonerExplainReward, MSGBOX_DEFAULT
+	checkitem ITEM_Z_POWER_RING
+	call_if_eq VAR_RESULT, FALSE, Fossil_Ruins_2_EventScript_StonerGiveRing
+	checkitem ITEM_ROCKIUM_Z
+	call_if_eq VAR_RESULT, FALSE, Fossil_Ruins_2_EventScript_StonerGiveCrystal
+	release
+	end
+
+Fossil_Ruins_2_EventScript_StonerGiveRing::
+	giveitem ITEM_Z_POWER_RING
+	msgbox Fossil_Ruins_2_Text_ExplainZRing, MSGBOX_DEFAULT
+	return
+
+Fossil_Ruins_2_EventScript_StonerGiveCrystal::
+	giveitem ITEM_ROCKIUM_Z
+	msgbox Fossil_Ruins_2_Text_ExplainZCrystal, MSGBOX_DEFAULT
+	return
 
 Fossil_Ruins_2_EventScript_StonerDefeatedScript::
 	lock
