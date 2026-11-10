@@ -1698,6 +1698,7 @@
 #define FLAG_HIDE_FOSSIL_RUINS_5_ARCHIE                    FLAG_UNUSED_0x03C // Archie leaves after his fight in Fossil Ruins 5
 #define FLAG_HIDE_FOSSIL_RUINS_5_GIOVANNI                  FLAG_UNUSED_0x03D // Giovanni leaves after his fight in Fossil Ruins 5
 #define FLAG_HIDE_FOSSIL_RUINS_5_GRUNTS                    FLAG_UNUSED_0x03E // The two Aqua grunts leave after their double battle in Fossil Ruins 5
+#define FLAG_ROUTE_115_FIERY_PATH_CAVE_OPEN                FLAG_UNUSED_0x03F // The cave to the Fiery Path on Route 115 opens after leaving Meteor Falls
 #define FLAG_HIDE_TOWN_MAP                                 0
 #define FLAG_HIDE_POKEDEX                                  0
 #define FLAG_HIDE_CERULEAN_ROCKET                          0
