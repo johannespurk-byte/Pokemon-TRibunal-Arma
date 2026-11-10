@@ -10,6 +10,8 @@ Route115_OnLoad:
 	end
 
 Route115_OnTransition:
+	@ Saves that already went through Meteor Falls get the cave opened right away
+	call_if_ge VAR_METEOR_FALLS_STATE, 1, Route115_EventScript_SetFieryPathCaveOpen
 	call_if_eq VAR_SHOULD_END_ABNORMAL_WEATHER, 1, AbnormalWeather_EventScript_HideMapNamePopup
 	call_if_eq VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_115_WEST, AbnormalWeather_StartGroudonWeather
 	call_if_eq VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_115_EAST, AbnormalWeather_StartGroudonWeather
@@ -143,3 +145,25 @@ Route115_Text_MeteorFallsSign:
 	.string "METEOR FALLS\n"
 	.string "FALLARBOR TOWN THROUGH HERE$"
 
+@ =========================================================
+@ Cave to the Fiery Path: blocked by a boulder until the player
+@ has come out of Meteor Falls onto Route 115
+@ =========================================================
+Route115_EventScript_SetFieryPathCaveOpen::
+	setflag FLAG_ROUTE_115_FIERY_PATH_CAVE_OPEN
+	return
+
+Route115_EventScript_OpenFieryPathCave::
+	setflag FLAG_ROUTE_115_FIERY_PATH_CAVE_OPEN
+	setvar VAR_TEMP_9, 1
+	end
+
+Route115_EventScript_CaveBoulder::
+	msgbox Route115_Text_CaveBoulder, MSGBOX_SIGN
+	end
+
+Route115_Text_CaveBoulder:
+	.string "Ein schwerer Felsbrocken versperrt\n"
+	.string "den Hoehleneingang.\p"
+	.string "Vielleicht gibt es von den\n"
+	.string "Meteorfaellen aus einen anderen Weg...$"
