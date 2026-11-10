@@ -556,7 +556,6 @@ SlateportCity_EventScript_ComeBackWithSecretPower::
 SlateportCity_EventScript_DecorClerk::
 	lock
 	faceplayer
-	goto_if_unset FLAG_RECEIVED_SECRET_POWER, SlateportCity_EventScript_ComeBackWithSecretPower
 	message gText_HowMayIServeYou
 	waitmessage
 	pokemart SlateportCity_PokemartDecor
@@ -591,58 +590,58 @@ SlateportCity_EventScript_PowerTMClerk::
 	end
 
 	.align 2
-@ 🌟 TM-MASTER-PIPELINE: Fehlerfrei formatiert mitsamt ITEM_NONE-Abschluss!
+@ Power TM stall: the modern TMs 51 to 100
 SlateportCity_Pokemart_PowerTMs::
-	.2byte ITEM_TM01
-	.2byte ITEM_TM02
-	.2byte ITEM_TM03
-	.2byte ITEM_TM04
-	.2byte ITEM_TM05
-	.2byte ITEM_TM06
-	.2byte ITEM_TM07
-	.2byte ITEM_TM08
-	.2byte ITEM_TM09
-	.2byte ITEM_TM10
-	.2byte ITEM_TM11
-	.2byte ITEM_TM12
-	.2byte ITEM_TM13
-	.2byte ITEM_TM14
-	.2byte ITEM_TM15
-	.2byte ITEM_TM16
-	.2byte ITEM_TM17
-	.2byte ITEM_TM18
-	.2byte ITEM_TM19
-	.2byte ITEM_TM20
-	.2byte ITEM_TM21
-	.2byte ITEM_TM22
-	.2byte ITEM_TM23
-	.2byte ITEM_TM24
-	.2byte ITEM_TM25
-	.2byte ITEM_TM26
-	.2byte ITEM_TM27
-	.2byte ITEM_TM28
-	.2byte ITEM_TM29
-	.2byte ITEM_TM30
-	.2byte ITEM_TM31
-	.2byte ITEM_TM32
-	.2byte ITEM_TM33
-	.2byte ITEM_TM34
-	.2byte ITEM_TM35
-	.2byte ITEM_TM36
-	.2byte ITEM_TM37
-	.2byte ITEM_TM38
-	.2byte ITEM_TM39
-	.2byte ITEM_TM40
-	.2byte ITEM_TM41
-	.2byte ITEM_TM42
-	.2byte ITEM_TM43
-	.2byte ITEM_TM44
-	.2byte ITEM_TM45
-	.2byte ITEM_TM46
-	.2byte ITEM_TM47
-	.2byte ITEM_TM48
-	.2byte ITEM_TM49
-	.2byte ITEM_TM50
+	.2byte ITEM_TM51 @ Bulldoze
+	.2byte ITEM_TM52 @ U Turn
+	.2byte ITEM_TM53 @ Ice Punch
+	.2byte ITEM_TM54 @ Knock Off
+	.2byte ITEM_TM55 @ Scald
+	.2byte ITEM_TM56 @ Heavy Slam
+	.2byte ITEM_TM57 @ Power Gem
+	.2byte ITEM_TM58 @ Acrobatics
+	.2byte ITEM_TM59 @ Dark Pulse
+	.2byte ITEM_TM60 @ Flash Cannon
+	.2byte ITEM_TM61 @ Dragon Dance
+	.2byte ITEM_TM62 @ Swords Dance
+	.2byte ITEM_TM63 @ Nasty Plot
+	.2byte ITEM_TM64 @ Psycho Cut
+	.2byte ITEM_TM65 @ X Scissor
+	.2byte ITEM_TM66 @ Stone Edge
+	.2byte ITEM_TM67 @ Stealth Rock
+	.2byte ITEM_TM68 @ Trick Room
+	.2byte ITEM_TM69 @ Grass Knot
+	.2byte ITEM_TM70 @ Will O Wisp
+	.2byte ITEM_TM71 @ Thunder Wave
+	.2byte ITEM_TM72 @ Roost
+	.2byte ITEM_TM73 @ Sludge Wave
+	.2byte ITEM_TM74 @ Volt Switch
+	.2byte ITEM_TM75 @ Liquidation
+	.2byte ITEM_TM76 @ Close Combat
+	.2byte ITEM_TM77 @ Hydro Pump
+	.2byte ITEM_TM78 @ Hurricane
+	.2byte ITEM_TM79 @ Draco Meteor
+	.2byte ITEM_TM80 @ Outrage
+	.2byte ITEM_TM81 @ Hyper Voice
+	.2byte ITEM_TM82 @ Play Rough
+	.2byte ITEM_TM83 @ Dazzling Gleam
+	.2byte ITEM_TM84 @ Psychic Fangs
+	.2byte ITEM_TM85 @ Drain Punch
+	.2byte ITEM_TM86 @ Earth Power
+	.2byte ITEM_TM87 @ Body Press
+	.2byte ITEM_TM88 @ Moonblast
+	.2byte ITEM_TM89 @ Dragon Pulse
+	.2byte ITEM_TM90 @ Heat Wave
+	.2byte ITEM_TM91 @ Bug Buzz
+	.2byte ITEM_TM92 @ Crunch
+	.2byte ITEM_TM93 @ Shadow Claw
+	.2byte ITEM_TM94 @ Poison Jab
+	.2byte ITEM_TM95 @ Focus Blast
+	.2byte ITEM_TM96 @ Iron Head
+	.2byte ITEM_TM97 @ Zen Headbutt
+	.2byte ITEM_TM98 @ Leaf Storm
+	.2byte ITEM_TM99 @ Gunk Shot
+	.2byte ITEM_TM100 @ Solar Blade
 	.2byte ITEM_NONE
 
 
