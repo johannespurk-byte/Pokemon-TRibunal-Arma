@@ -640,3 +640,7 @@ gSpecials::
 	def_special StickerManGetBragFlags
 	def_special CheckAddCoins
 	def_special GetLevelCapForScript
+	def_special SetShadowChampionGfx
+	def_special RegionalTrade_CheckPartyMon
+	def_special RegionalTrade_RemovePartyMon
+	def_special ItemRefill_TryRefill
