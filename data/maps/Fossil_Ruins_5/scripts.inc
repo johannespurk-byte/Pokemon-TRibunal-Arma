@@ -7,8 +7,7 @@ Fossil_Ruins_5_EventScript_Showdown::
 	lockall
 	goto_if_not_defeated TRAINER_ARCHIE_FOSSIL_RUINS, Fossil_Ruins_5_EventScript_Archie
 	goto_if_not_defeated TRAINER_GIOVANNI_FOSSIL_RUINS_5, Fossil_Ruins_5_EventScript_Giovanni
-	setvar VAR_TEMP_1, 1
-	releaseall
+	goto Fossil_Ruins_5_EventScript_Rift
 	end
 
 Fossil_Ruins_5_EventScript_Archie::
@@ -36,9 +35,29 @@ Fossil_Ruins_5_EventScript_Giovanni::
 	setflag FLAG_HIDE_FOSSIL_RUINS_5_GIOVANNI
 	removeobject LOCALID_FOSSIL_RUINS_5_GIOVANNI
 	fadescreen FADE_FROM_BLACK
+	goto Fossil_Ruins_5_EventScript_Rift
+	end
+
+@ After GIOVANNI a rift in space opens in the hall and pulls the player into Fossil Ruins 6
+Fossil_Ruins_5_EventScript_Rift::
+	msgbox Fossil_Ruins_5_Text_Rift, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Fossil_Ruins_5_EventScript_RiftNo
+	closemessage
+	playse SE_WARP_IN
+	warp MAP_FOSSIL_RUINS_6, 5, 21
+	waitstate
+	releaseall
+	end
+
+Fossil_Ruins_5_EventScript_RiftNo::
 	setvar VAR_TEMP_1, 1
 	releaseall
 	end
+
+Fossil_Ruins_5_Text_Rift:
+	.string "Where GIOVANNI stood, a rift full of\n"
+	.string "stars tears open in the air…\p"
+	.string "Step into the rift?$"
 
 Fossil_Ruins_5_Movement_GiovanniStepForward:
 	walk_down

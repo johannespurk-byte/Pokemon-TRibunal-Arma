@@ -1553,3 +1553,14 @@ const struct Tileset gTileset_DistortionRuins =
     .metatileAttributes = gMetatileAttributes_DistortionRuins,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_SpaceRuins =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SpaceRuins,
+    .palettes = gTilesetPalettes_SpaceRuins,
+    .metatiles = gMetatiles_SpaceRuins,
+    .metatileAttributes = gMetatileAttributes_SpaceRuins,
+    .callback = NULL,
+};
