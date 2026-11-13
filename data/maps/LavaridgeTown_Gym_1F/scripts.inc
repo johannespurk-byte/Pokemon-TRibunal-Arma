@@ -44,7 +44,8 @@ LavaridgeTown_Gym_1F_EventScript_EndCheckBuryTrainers::
 	return
 
 LavaridgeTown_Gym_1F_EventScript_Flannery::
-	trainerbattle_single TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryIntro, LavaridgeTown_Gym_1F_Text_FlanneryDefeat, LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryIntro, LavaridgeTown_Gym_1F_Text_FlanneryDefeat, LavaridgeTown_Gym_1F_EventScript_SabrinaChallenge, NO_MUSIC
+	goto_if_not_defeated TRAINER_SABRINA_LAVARIDGE, LavaridgeTown_Gym_1F_EventScript_SabrinaChallenge
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_Gym_1F_EventScript_FlanneryRematch
 	goto_if_unset FLAG_RECEIVED_TM_OVERHEAT, LavaridgeTown_Gym_1F_EventScript_GiveOverheat2
@@ -52,7 +53,17 @@ LavaridgeTown_Gym_1F_EventScript_Flannery::
 	release
 	end
 
+@ After FLANNERY, her partner SABRINA challenges the player; the badge comes after both
+LavaridgeTown_Gym_1F_EventScript_SabrinaChallenge::
+	msgbox LavaridgeTown_Gym_1F_Text_FlanneryAfterBattle, MSGBOX_DEFAULT
+	special HealPlayerParty
+	msgbox LavaridgeTown_Gym_1F_Text_SabrinaAppears, MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_SABRINA_LAVARIDGE, LavaridgeTown_Gym_1F_Text_SabrinaIntro, LavaridgeTown_Gym_1F_Text_SabrinaDefeat, LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated, NO_MUSIC
+	release
+	end
+
 LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated::
+	msgbox LavaridgeTown_Gym_1F_Text_SabrinaAfterBattle, MSGBOX_DEFAULT
 	message LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -66,6 +77,7 @@ LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated::
 	call Common_EventScript_SetGymTrainers
 	setflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY
 	setvar VAR_LAVARIDGE_TOWN_STATE, 1
+	call LavaridgeTown_Gym_1F_EventScript_GiveMegaStone
 	call LavaridgeTown_Gym_1F_EventScript_GiveOverheat
 	closemessage
 	delay 30
@@ -91,6 +103,11 @@ LavaridgeTown_Gym_1F_EventScript_GiveOverheat::
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
 	msgbox LavaridgeTown_Gym_1F_Text_ExplainOverheat, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_OVERHEAT
+	return
+
+LavaridgeTown_Gym_1F_EventScript_GiveMegaStone::
+	msgbox LavaridgeTown_Gym_1F_Text_SabrinaGiveMegaStone, MSGBOX_DEFAULT
+	giveitem ITEM_ALAKAZITE, 1
 	return
 
 LavaridgeTown_Gym_1F_EventScript_FlanneryRematch::
@@ -397,3 +414,34 @@ LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons:
 	.string "that can battle?\p"
 	.string "I hate to say this, but when you come\n"
 	.string "see me, bring at least two POKéMON.$"
+
+LavaridgeTown_Gym_1F_Text_FlanneryAfterBattle:
+	.string "FLANNERY: But wait, it's not over yet!\p"
+	.string "A friend from KANTO came to train\n"
+	.string "in our hot springs. Let me heal\l"
+	.string "your POKéMON first!$"
+
+LavaridgeTown_Gym_1F_Text_SabrinaAppears:
+	.string "SABRINA: I saw you coming in a vision.\n"
+	.string "I also saw how this battle ends.\p"
+	.string "FLANNERY: SABRINA, the GYM LEADER of\n"
+	.string "SAFFRON CITY! Show them, SABRINA!$"
+
+LavaridgeTown_Gym_1F_Text_SabrinaIntro:
+	.string "SABRINA: Fire burns hot, but the mind\n"
+	.string "burns brighter.\p"
+	.string "Let us see if your will is strong\n"
+	.string "enough to resist mine.$"
+
+LavaridgeTown_Gym_1F_Text_SabrinaDefeat:
+	.string "SABRINA: …I did not foresee this.\n"
+	.string "Your future is stronger than my sight.$"
+
+LavaridgeTown_Gym_1F_Text_SabrinaAfterBattle:
+	.string "FLANNERY: You beat us both!\n"
+	.string "That really earns you my BADGE!$"
+
+LavaridgeTown_Gym_1F_Text_SabrinaGiveMegaStone:
+	.string "SABRINA: Take this as well.\p"
+	.string "A MEGA STONE that answers a strong\n"
+	.string "mind. Use its power wisely.$"

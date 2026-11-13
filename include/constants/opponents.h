@@ -898,6 +898,7 @@
 #define TRAINER_UNDINE                        891
 #define TRAINER_KOGA_ARENA                    892
 #define TRAINER_NORMAN_ARENA                  893
+#define TRAINER_SABRINA_LAVARIDGE             894
 #
 #if !IS_FRLG
 // The Rocket Hideout under the Mauville Game Corner shares its scripts with FRLG,

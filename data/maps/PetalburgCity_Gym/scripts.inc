@@ -43,10 +43,7 @@ PetalburgCity_Gym_EventScript_MomNoBadges:
 
 PetalburgCity_Gym_EventScript_MomAfterWin:
 	goto_if_set FLAG_BADGE05_GET, PetalburgCity_Gym_EventScript_MomPostBattle
-	msgbox PetalburgCity_Gym_Text_MomAskTeleport, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_SendToNorman
-	release
-	end
+	goto PetalburgCity_Gym_EventScript_SendToNorman
 
 PetalburgCity_Gym_EventScript_MomPostBattle:
 	msgbox PetalburgCity_Gym_Text_MomPostBattle, MSGBOX_DEFAULT
@@ -56,8 +53,10 @@ PetalburgCity_Gym_EventScript_MomPostBattle:
 PetalburgCity_Gym_EventScript_SendToNorman::
 	msgbox PetalburgCity_Gym_Text_MomNormanWaits, MSGBOX_DEFAULT
 	closemessage
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	playse SE_WARP_IN
-	warp MAP_LITTLEROOT_ARENA, 4, 12
+	@ straight in front of NORMAN (4,2)
+	warp MAP_LITTLEROOT_ARENA, 4, 3
 	waitstate
 	release
 	end
