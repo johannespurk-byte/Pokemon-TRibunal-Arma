@@ -31,9 +31,18 @@ LittlerootArena_EventScript_Leaders::
 	msgbox LittlerootArena_Text_KogaGivesStone, MSGBOX_DEFAULT
 	giveitem ITEM_GENGARITE
 	msgbox LittlerootArena_Text_KogaExplainStone, MSGBOX_DEFAULT
-	msgbox LittlerootArena_Text_NormanWallysDad, MSGBOX_DEFAULT
-	setvar VAR_PETALBURG_CITY_STATE, 4
+	@ NORMAN hands over SURF himself (instead of WALLY's dad) and sends the player to Fossil Ruins 5
+	msgbox LittlerootArena_Text_NormanGivesSurf, MSGBOX_DEFAULT
+	giveitem ITEM_HM_SURF
+	setflag FLAG_RECEIVED_HM_SURF
+	setvar VAR_PETALBURG_CITY_STATE, 5
 	clearflag FLAG_HIDE_PETALBURG_CITY_WALLYS_DAD
+	msgbox LittlerootArena_Text_NormanSendToRuins, MSGBOX_DEFAULT
+	closemessage
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	playse SE_WARP_IN
+	warp MAP_FOSSIL_RUINS_5, 14, 34
+	waitstate
 	release
 	end
 
@@ -77,11 +86,16 @@ LittlerootArena_Text_KogaExplainStone:
 	.string "KOGA: Das Gengarnit. Damit kann\n"
 	.string "Gengar Mega-evolvieren!$"
 
-LittlerootArena_Text_NormanWallysDad:
-	.string "NORMAN: Uebrigens, Wallys Vater hat\n"
-	.string "nach dir gefragt.\p"
-	.string "Besuch ihn doch in seinem Haus in\n"
-	.string "Bluetenburg City!$"
+LittlerootArena_Text_NormanGivesSurf:
+	.string "NORMAN: Wallys Vater hat mir das\n"
+	.string "hier fuer dich mitgegeben.\p"
+	.string "Damit kommst du uebers Wasser!$"
+
+LittlerootArena_Text_NormanSendToRuins:
+	.string "NORMAN: Team Aqua und Giovanni sind\n"
+	.string "in den Fossilruinen gesehen worden.\p"
+	.string "Ich schicke dich direkt hin.\n"
+	.string "Pass auf dich auf!$"
 
 LittlerootArena_Text_PostBattle:
 	.string "NORMAN: Du hast das Zeug zu einem\n"

@@ -1699,6 +1699,12 @@
 #define FLAG_HIDE_FOSSIL_RUINS_5_GIOVANNI                  FLAG_UNUSED_0x03D // Giovanni leaves after his fight in Fossil Ruins 5
 #define FLAG_HIDE_FOSSIL_RUINS_5_GRUNTS                    FLAG_UNUSED_0x03E // The two Aqua grunts leave after their double battle in Fossil Ruins 5
 #define FLAG_ROUTE_115_FIERY_PATH_CAVE_OPEN                FLAG_UNUSED_0x03F // The cave to the Fiery Path on Route 115 opens after leaving Meteor Falls
+#define FLAG_HIDE_FOSSIL_RUINS_6_GIOVANNI                  FLAG_UNUSED_0x040 // Giovanni leaves after his fight in Fossil Ruins 6
+#define FLAG_HIDE_FOSSIL_RUINS_6_MAXIE                     FLAG_UNUSED_0x041 // Maxie leaves after his fight in Fossil Ruins 6
+#define FLAG_HIDE_FOSSIL_RUINS_6_ARCHIE                    FLAG_UNUSED_0x042 // Archie leaves after his fight in Fossil Ruins 6
+#define FLAG_FOSSIL_RUINS_6_LEGEND_CHOSEN                  FLAG_UNUSED_0x043 // One of the six legendaries in Fossil Ruins 6 was taken
+#define FLAG_ITEM_FOSSIL_RUINS_6_COMET_SHARD               FLAG_UNUSED_0x044 // Item ball in Fossil Ruins 6
+#define FLAG_ITEM_FOSSIL_RUINS_6_STAR_PIECE                FLAG_UNUSED_0x045 // Item ball in Fossil Ruins 6
 #define FLAG_HIDE_TOWN_MAP                                 0
 #define FLAG_HIDE_POKEDEX                                  0
 #define FLAG_HIDE_CERULEAN_ROCKET                          0

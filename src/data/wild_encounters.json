@@ -37507,6 +37507,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_FOSSIL_RUINS_6",
+          "base_label": "gFossilRuins6_Space",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_LUNATONE"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_SOLROCK"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_ELGYEM"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 56,
+                "max_level": 59,
+                "species": "SPECIES_SIGILYPH"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 56,
+                "max_level": 59,
+                "species": "SPECIES_CHIMECHO"
+              },
+              {
+                "min_level": 58,
+                "max_level": 60,
+                "species": "SPECIES_BEHEEYEM"
+              },
+              {
+                "min_level": 58,
+                "max_level": 60,
+                "species": "SPECIES_CLEFABLE"
+              },
+              {
+                "min_level": 58,
+                "max_level": 60,
+                "species": "SPECIES_MINIOR"
+              },
+              {
+                "min_level": 60,
+                "max_level": 60,
+                "species": "SPECIES_COSMOG"
+              }
+            ]
+          }
         }
       ]
     },

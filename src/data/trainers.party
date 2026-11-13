@@ -35357,3 +35357,441 @@ Jolly Nature
 - Zen Headbutt
 - Ice Punch
 - Bullet Punch
+
+=== TRAINER_GIOVANNI_FOSSIL_RUINS_6 ===
+Name: GIOVANNI
+Class: Boss Frlg
+Pic: Leader Giovanni Frlg
+Gender: Male
+Music: Aqua
+Double Battle: No
+Mugshot: Purple
+Party Size: 6
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Mewtwo @ Mewtwonite Y
+Tags: Ace
+Level: 70
+Ability: Pressure
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Psystrike
+- Aura Sphere
+- Ice Beam
+- Fire Blast
+
+Nidoking @ Life Orb
+Level: 70
+Ability: Sheer Force
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Earth Power
+- Sludge Wave
+- Ice Beam
+- Flamethrower
+
+Nidoqueen @ Black Sludge
+Level: 70
+Ability: Sheer Force
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Earth Power
+- Sludge Wave
+- Ice Beam
+- Stealth Rock
+
+Rhyperior @ Weakness Policy
+Level: 70
+Ability: Solid Rock
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Megahorn
+- Ice Punch
+
+Excadrill @ Focus Sash
+Level: 70
+Ability: Mold Breaker
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Iron Head
+- Rock Slide
+- Rapid Spin
+
+Garchomp @ Rocky Helmet
+Level: 70
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Dragon Claw
+- Stone Edge
+- Swords Dance
+
+Landorus-Therian @ Choice Scarf
+Level: 70
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- U-turn
+- Stone Edge
+- Knock Off
+
+Hippowdon @ Leftovers
+Level: 70
+Ability: Sand Stream
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Impish Nature
+- Earthquake
+- Slack Off
+- Stealth Rock
+- Whirlwind
+
+Gliscor @ Toxic Orb
+Level: 70
+Ability: Poison Heal
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Impish Nature
+- Earthquake
+- Knock Off
+- Protect
+- Toxic
+
+Krookodile @ Life Orb
+Level: 70
+Ability: Moxie
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Knock Off
+- Close Combat
+- Stone Edge
+
+Tyranitar @ Assault Vest
+Level: 70
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Crunch
+- Earthquake
+- Fire Punch
+
+Ursaluna @ Flame Orb
+Level: 70
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Facade
+- Headlong Rush
+- Close Combat
+- Swords Dance
+
+=== TRAINER_MAXIE_FOSSIL_RUINS_6 ===
+Name: MAXIE
+Class: Magma Leader
+Pic: Magma Leader Maxie
+Gender: Male
+Music: Magma
+Double Battle: No
+Mugshot: Purple
+Party Size: 6
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Groudon @ Red Orb
+Tags: Ace
+Level: 70
+Ability: Drought
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Precipice Blades
+- Stone Edge
+- Fire Punch
+- Swords Dance
+
+Camerupt @ Cameruptite
+Level: 70
+Ability: Solid Rock
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Fire Blast
+- Earth Power
+- Ancient Power
+- Stealth Rock
+
+Torkoal @ Heat Rock
+Level: 70
+Ability: Drought
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Bold Nature
+- Lava Plume
+- Solar Beam
+- Rapid Spin
+- Yawn
+
+Heatran @ Leftovers
+Level: 70
+Ability: Flash Fire
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Magma Storm
+- Earth Power
+- Flash Cannon
+- Taunt
+
+Volcarona @ Heavy-Duty Boots
+Level: 70
+Ability: Flame Body
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Quiver Dance
+- Fiery Dance
+- Bug Buzz
+- Giga Drain
+
+Houndoom @ Life Orb
+Level: 70
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Fire Blast
+- Dark Pulse
+- Sludge Bomb
+- Nasty Plot
+
+Ninetales @ Choice Specs
+Level: 70
+Ability: Drought
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Fire Blast
+- Solar Beam
+- Extrasensory
+- Overheat
+
+Arcanine-Hisui @ Choice Band
+Level: 70
+Ability: Rock Head
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Flare Blitz
+- Head Smash
+- Extreme Speed
+- Close Combat
+
+Skeledirge @ Leftovers
+Level: 70
+Ability: Unaware
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Torch Song
+- Shadow Ball
+- Slack Off
+- Will-O-Wisp
+
+Infernape @ Life Orb
+Level: 70
+Ability: Iron Fist
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Flare Blitz
+- Close Combat
+- Mach Punch
+- Thunder Punch
+
+Flygon @ Choice Scarf
+Level: 70
+Ability: Levitate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Outrage
+- U-turn
+- Fire Punch
+
+Coalossal @ Heavy-Duty Boots
+Level: 70
+Ability: Flame Body
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Fire Punch
+- Rapid Spin
+- Stealth Rock
+
+=== TRAINER_ARCHIE_FOSSIL_RUINS_6 ===
+Name: ARCHIE
+Class: Aqua Leader
+Pic: Aqua Leader Archie
+Gender: Male
+Music: Aqua
+Double Battle: No
+Mugshot: Blue
+Party Size: 6
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Kyogre @ Blue Orb
+Tags: Ace
+Level: 70
+Ability: Drizzle
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Origin Pulse
+- Ice Beam
+- Thunder
+- Calm Mind
+
+Sharpedo @ Sharpedonite
+Level: 70
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Crunch
+- Liquidation
+- Psychic Fangs
+- Protect
+
+Gyarados @ Leftovers
+Level: 70
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Waterfall
+- Earthquake
+- Ice Fang
+- Dragon Dance
+
+Kingdra @ Choice Specs
+Level: 70
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hydro Pump
+- Draco Meteor
+- Ice Beam
+- Surf
+
+Pelipper @ Damp Rock
+Level: 70
+Ability: Drizzle
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Calm Nature
+- Hurricane
+- Scald
+- U-turn
+- Roost
+
+Swampert @ Leftovers
+Level: 70
+Ability: Torrent
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Waterfall
+- Earthquake
+- Ice Punch
+- Stealth Rock
+
+Toxapex @ Black Sludge
+Level: 70
+Ability: Regenerator
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Bold Nature
+- Scald
+- Toxic
+- Recover
+- Haze
+
+Walrein @ Leftovers
+Level: 70
+Ability: Thick Fat
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Calm Nature
+- Surf
+- Ice Beam
+- Protect
+- Toxic
+
+Barraskewda @ Choice Band
+Level: 70
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Close Combat
+- Psychic Fangs
+- Aqua Jet
+
+Milotic @ Leftovers
+Level: 70
+Ability: Marvel Scale
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Bold Nature
+- Scald
+- Ice Beam
+- Recover
+- Haze
+
+Ludicolo @ Life Orb
+Level: 70
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hydro Pump
+- Giga Drain
+- Ice Beam
+- Focus Blast
+
+Crawdaunt @ Life Orb
+Level: 70
+Ability: Adaptability
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Crabhammer
+- Knock Off
+- Aqua Jet
+- Swords Dance
