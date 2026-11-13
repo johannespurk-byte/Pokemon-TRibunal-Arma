@@ -9933,289 +9933,117 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 - Roar
 
 === TRAINER_SIDNEY ===
-Name: SIDNEY
+Name: RED
 Class: Elite Four
-Pic: Elite Four Sidney
+Pic: Red
 Gender: Male
 Music: Elite Four
-Double Battle: No
+Double Battle: Yes
 Mugshot: Purple
+Party Size: 3
+Pool Rules: Basic
+Pool Pick Functions: Default
 AI: Smart Trainer / Prediction / Ace Pokemon
 
-Weavile @ Choice Band
-Level: 100
-Ability: Pressure
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Knock Off
-- Icicle Crash
-- Ice Shard
-- Brick Break
-
-Hydreigon @ Choice Specs
-Level: 100
-Ability: Levitate
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Timid Nature
-- Dark Pulse
-- Draco Meteor
-- Flamethrower
-- U-turn
-
-Krookodile @ Life Orb
-Level: 100
-Ability: Moxie
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Earthquake
-- Knock Off
-- Close Combat
-- Stone Edge
-
-Kingambit @ Leftovers
-Level: 100
-Ability: Supreme Overlord
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Kowtow Cleave
-- Iron Head
-- Sucker Punch
-- Swords Dance
-
-Grimmsnarl @ Light Clay
-Level: 100
-Ability: Prankster
-EVs: 252 HP / 4 Atk / 252 Def
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Impish Nature
-- Spirit Break
-- Thunder Wave
-- Reflect
-- Light Screen
-
-Absol @ Absolite
+Charizard @ Charizardite X
 Tags: Ace
 Level: 100
-Ability: Super Luck
+Ability: Blaze
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Jolly Nature
-- Swords Dance
-- Knock Off
-- Sucker Punch
-- Play Rough
+- Dragon Dance
+- Flare Blitz
+- Dragon Claw
+- Earthquake
 
-=== TRAINER_PHOEBE ===
-Name: PHOEBE
-Class: Elite Four
-Pic: Elite Four Phoebe
-Gender: Female
-Music: Elite Four
-Double Battle: No
-Mugshot: Green
-AI: Smart Trainer / Prediction / Ace Pokemon
-
-Dusknoir @ Leftovers
+Pikachu @ Light Ball
 Level: 100
-Ability: Pressure
+Ability: Lightning Rod
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Thunder Punch
+- Thunderbolt
+- Surf
+- Fake Out
+
+Venusaur @ Leftovers
+Level: 100
+Ability: Chlorophyll
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Giga Drain
+- Sludge Bomb
+- Sleep Powder
+- Synthesis
+
+Blastoise @ Leftovers
+Level: 100
+Ability: Rain Dish
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hydro Pump
+- Ice Beam
+- Aura Sphere
+- Protect
+
+Snorlax @ Leftovers
+Level: 100
+Ability: Thick Fat
 EVs: 252 HP / 252 Atk / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Adamant Nature
-- Shadow Sneak
+- Body Slam
+- Heavy Slam
 - Earthquake
-- Ice Punch
-- Will-O-Wisp
+- Protect
 
-Dragapult @ Choice Specs
+Lapras @ Leftovers
 Level: 100
-Ability: Infiltrator
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Freeze-Dry
+- Surf
+- Thunderbolt
+- Ice Beam
+
+Espeon @ Life Orb
+Level: 100
+Ability: Magic Bounce
 EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Timid Nature
+- Psychic
+- Dazzling Gleam
 - Shadow Ball
-- Draco Meteor
-- Fire Blast
-- U-turn
+- Protect
 
-Mimikyu @ Life Orb
+Machamp @ Assault Vest
 Level: 100
-Ability: Disguise
-EVs: 4 HP / 252 Atk / 252 Spe
+Ability: No Guard
+EVs: 252 HP / 252 Atk / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Swords Dance
-- Play Rough
-- Shadow Claw
-- Shadow Sneak
+Adamant Nature
+- Dynamic Punch
+- Stone Edge
+- Knock Off
+- Bullet Punch
 
-Chandelure @ Life Orb
-Level: 100
-Ability: Flash Fire
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Timid Nature
-- Shadow Ball
-- Fire Blast
-- Calm Mind
-- Will-O-Wisp
-
-Froslass @ Focus Sash
+Gengar @ Focus Sash
 Level: 100
 Ability: Cursed Body
 EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Timid Nature
 - Shadow Ball
-- Ice Beam
-- Spikes
-- Destiny Bond
-
-Sableye @ Sablenite
-Tags: Ace
-Level: 100
-Ability: Prankster
-EVs: 252 HP / 4 Atk / 252 Def
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Bold Nature
-- Foul Play
-- Will-O-Wisp
-- Recover
-- Shadow Ball
-
-=== TRAINER_GLACIA ===
-Name: GLACIA
-Class: Elite Four
-Pic: Elite Four Glacia
-Gender: Female
-Music: Elite Four
-Double Battle: No
-Mugshot: Pink
-AI: Smart Trainer / Prediction / Ace Pokemon
-
-Walrein @ Leftovers
-Level: 100
-Ability: Thick Fat
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Calm Nature
-- Surf
-- Ice Beam
+- Sludge Bomb
+- Focus Blast
 - Protect
-- Toxic
-
-Mamoswine @ Life Orb
-Level: 100
-Ability: Thick Fat
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Earthquake
-- Icicle Crash
-- Ice Shard
-- Knock Off
-
-Baxcalibur @ Loaded Dice
-Level: 100
-Ability: Thermal Exchange
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Icicle Spear
-- Glaive Rush
-- Earthquake
-- Dragon Dance
-
-Ninetales-Alola @ Light Clay
-Level: 100
-Ability: Snow Warning
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Timid Nature
-- Aurora Veil
-- Blizzard
-- Moonblast
-- Freeze-Dry
-
-Kyurem @ Choice Specs
-Level: 100
-Ability: Pressure
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Ice Beam
-- Draco Meteor
-- Earth Power
-- Freeze-Dry
-
-Glalie @ Glalitite
-Tags: Ace
-Level: 100
-Ability: Inner Focus
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Return
-- Ice Shard
-- Earthquake
-- Explosion
-
-=== TRAINER_DRAKE ===
-Name: DRAKE
-Class: Elite Four
-Pic: Elite Four Drake
-Gender: Male
-Music: Elite Four
-Double Battle: No
-Mugshot: Blue
-AI: Smart Trainer / Prediction / Ace Pokemon
-
-Kingdra @ Choice Specs
-Level: 100
-Ability: Swift Swim
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Hydro Pump
-- Draco Meteor
-- Ice Beam
-- Surf
-
-Flygon @ Choice Scarf
-Level: 100
-Ability: Levitate
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Earthquake
-- Outrage
-- U-turn
-- Fire Punch
-
-Garchomp @ Rocky Helmet
-Level: 100
-Ability: Rough Skin
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Earthquake
-- Dragon Claw
-- Stone Edge
-- Swords Dance
-
-Haxorus @ Life Orb
-Level: 100
-Ability: Mold Breaker
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Dragon Dance
-- Outrage
-- Earthquake
-- Poison Jab
 
 Dragonite @ Heavy-Duty Boots
 Level: 100
@@ -10228,17 +10056,377 @@ Adamant Nature
 - Earthquake
 - Fire Punch
 
-Salamence @ Salamencite
+=== TRAINER_PHOEBE ===
+Name: ETHAN
+Class: Elite Four
+Pic: Ethan
+Gender: Male
+Music: Elite Four
+Double Battle: Yes
+Mugshot: Purple
+Party Size: 3
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Typhlosion @ Choice Specs
 Tags: Ace
+Level: 100
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Eruption
+- Heat Wave
+- Focus Blast
+- Shadow Ball
+
+Ampharos @ Ampharosite
+Level: 100
+Ability: Static
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Thunderbolt
+- Dragon Pulse
+- Focus Blast
+- Protect
+
+Heracross @ Flame Orb
+Level: 100
+Ability: Guts
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Close Combat
+- Megahorn
+- Facade
+- Protect
+
+Togekiss @ Leftovers
+Level: 100
+Ability: Serene Grace
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Air Slash
+- Dazzling Gleam
+- Follow Me
+- Protect
+
+Ho-Oh @ Leftovers
+Level: 100
+Ability: Regenerator
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Sacred Fire
+- Aerial Ace
+- Earthquake
+- Recover
+
+Ursaluna @ Flame Orb
+Level: 100
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Facade
+- Headlong Rush
+- Close Combat
+- Protect
+
+Steelix @ Leftovers
+Level: 100
+Ability: Sturdy
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Impish Nature
+- Heavy Slam
+- Earthquake
+- Stealth Rock
+- Protect
+
+Kingdra @ Choice Specs
+Level: 100
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hydro Pump
+- Draco Meteor
+- Ice Beam
+- Muddy Water
+
+Houndoom @ Life Orb
+Level: 100
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Heat Wave
+- Dark Pulse
+- Sludge Bomb
+- Protect
+
+Tyranitar @ Choice Band
+Level: 100
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Rock Slide
+- Crunch
+- Earthquake
+- Ice Punch
+
+=== TRAINER_GLACIA ===
+Name: BRENDAN
+Class: Elite Four
+Pic: Brendan
+Gender: Male
+Music: Elite Four
+Double Battle: Yes
+Mugshot: Purple
+Party Size: 3
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Swampert @ Swampertite
+Tags: Ace
+Level: 100
+Ability: Torrent
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Waterfall
+- Earthquake
+- Ice Punch
+- Protect
+
+Rayquaza @ Life Orb
+Level: 100
+Ability: Air Lock
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Dragon Ascent
+- Extreme Speed
+- Earthquake
+- Dragon Dance
+
+Salamence @ Choice Specs
+Level: 100
+Ability: Intimidate
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Draco Meteor
+- Hurricane
+- Fire Blast
+- Hydro Pump
+
+Metagross @ Life Orb
+Level: 100
+Ability: Clear Body
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Meteor Mash
+- Zen Headbutt
+- Bullet Punch
+- Protect
+
+Aggron @ Leftovers
+Level: 100
+Ability: Rock Head
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Head Smash
+- Heavy Slam
+- Earthquake
+- Protect
+
+Breloom @ Focus Sash
+Level: 100
+Ability: Technician
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Spore
+- Bullet Seed
+- Mach Punch
+- Protect
+
+Manectric @ Life Orb
+Level: 100
+Ability: Lightning Rod
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Thunderbolt
+- Overheat
+- Discharge
+- Protect
+
+Sceptile @ Life Orb
+Level: 100
+Ability: Overgrow
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Leaf Storm
+- Dragon Pulse
+- Focus Blast
+- Protect
+
+Walrein @ Leftovers
+Level: 100
+Ability: Thick Fat
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Calm Nature
+- Surf
+- Ice Beam
+- Protect
+- Toxic
+
+Crawdaunt @ Life Orb
+Level: 100
+Ability: Adaptability
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Crabhammer
+- Knock Off
+- Aqua Jet
+- Protect
+
+=== TRAINER_DRAKE ===
+Name: LUCAS
+Class: Elite Four
+Pic: Lucas
+Gender: Male
+Music: Elite Four
+Double Battle: Yes
+Mugshot: Purple
+Party Size: 3
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Garchomp @ Garchompite
+Tags: Ace
+Level: 100
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Dragon Claw
+- Rock Slide
+- Protect
+
+Empoleon @ Leftovers
+Level: 100
+Ability: Competitive
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hydro Pump
+- Flash Cannon
+- Ice Beam
+- Protect
+
+Infernape @ Life Orb
+Level: 100
+Ability: Iron Fist
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Close Combat
+- Flare Blitz
+- Fake Out
+- Mach Punch
+
+Torterra @ Leftovers
+Level: 100
+Ability: Shell Armor
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Wood Hammer
+- Earthquake
+- Stone Edge
+- Protect
+
+Luxray @ Life Orb
 Level: 100
 Ability: Intimidate
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Jolly Nature
-- Dragon Dance
+- Wild Charge
+- Crunch
+- Ice Fang
+- Protect
+
+Staraptor @ Choice Band
+Level: 100
+Ability: Reckless
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Brave Bird
+- Close Combat
 - Double-Edge
-- Earthquake
-- Roost
+- U-turn
+
+Dialga @ Adamant Crystal
+Level: 100
+Ability: Pressure
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Roar of Time
+- Flash Cannon
+- Earth Power
+- Protect
+
+Lucario @ Life Orb
+Level: 100
+Ability: Justified
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Aura Sphere
+- Flash Cannon
+- Vacuum Wave
+- Protect
+
+Gastrodon @ Leftovers
+Level: 100
+Ability: Storm Drain
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Calm Nature
+- Earth Power
+- Scald
+- Recover
+- Protect
+
+Roserade @ Focus Sash
+Level: 100
+Ability: Technician
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Leaf Storm
+- Sludge Bomb
+- Shadow Ball
+- Protect
 
 === TRAINER_ROXANNE_1 ===
 Name: ROXANNE
@@ -38841,3 +39029,499 @@ Adamant Nature
 - Spirit Shackle
 - Sucker Punch
 - Swords Dance
+
+=== TRAINER_LEAF_E4 ===
+Name: LEAF
+Class: Elite Four
+Pic: Leaf
+Gender: Female
+Music: Elite Four
+Double Battle: Yes
+Mugshot: Purple
+Party Size: 3
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Venusaur @ Venusaurite
+Tags: Ace
+Level: 100
+Ability: Chlorophyll
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Giga Drain
+- Sludge Bomb
+- Earth Power
+- Protect
+
+Clefable @ Leftovers
+Level: 100
+Ability: Magic Guard
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Calm Nature
+- Moonblast
+- Flamethrower
+- Follow Me
+- Protect
+
+Ninetales @ Heat Rock
+Level: 100
+Ability: Drought
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Heat Wave
+- Solar Beam
+- Extrasensory
+- Protect
+
+Vaporeon @ Leftovers
+Level: 100
+Ability: Water Absorb
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Bold Nature
+- Scald
+- Ice Beam
+- Wish
+- Protect
+
+Jolteon @ Life Orb
+Level: 100
+Ability: Volt Absorb
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Thunderbolt
+- Shadow Ball
+- Volt Switch
+- Protect
+
+Flareon @ Choice Band
+Level: 100
+Ability: Guts
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Flare Blitz
+- Double-Edge
+- Quick Attack
+- Facade
+
+Pidgeot @ Life Orb
+Level: 100
+Ability: Big Pecks
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Hurricane
+- Heat Wave
+- Tailwind
+- Protect
+
+Nidoqueen @ Black Sludge
+Level: 100
+Ability: Sheer Force
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Earth Power
+- Sludge Wave
+- Ice Beam
+- Protect
+
+Alakazam @ Focus Sash
+Level: 100
+Ability: Magic Guard
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Psychic
+- Focus Blast
+- Shadow Ball
+- Protect
+
+Gyarados @ Leftovers
+Level: 100
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Waterfall
+- Earthquake
+- Ice Fang
+- Dragon Dance
+
+=== TRAINER_LYRA_E4 ===
+Name: LYRA
+Class: Elite Four
+Pic: Lyra
+Gender: Female
+Music: Elite Four
+Double Battle: Yes
+Mugshot: Purple
+Party Size: 3
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Meganium @ Leftovers
+Tags: Ace
+Level: 100
+Ability: Overgrow
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Calm Nature
+- Giga Drain
+- Petal Blizzard
+- Leech Seed
+- Protect
+
+Feraligatr @ Life Orb
+Level: 100
+Ability: Torrent
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Ice Punch
+- Crunch
+- Dragon Dance
+
+Lugia @ Leftovers
+Level: 100
+Ability: Multiscale
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Bold Nature
+- Aeroblast
+- Psychic
+- Roost
+- Calm Mind
+
+Azumarill @ Sitrus Berry
+Level: 100
+Ability: Huge Power
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Play Rough
+- Liquidation
+- Aqua Jet
+- Protect
+
+Miltank @ Leftovers
+Level: 100
+Ability: Thick Fat
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Impish Nature
+- Body Slam
+- Milk Drink
+- Thunder Wave
+- Protect
+
+Umbreon @ Leftovers
+Level: 100
+Ability: Synchronize
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Calm Nature
+- Crunch
+- Moonlight
+- Helping Hand
+- Protect
+
+Xatu @ Heavy-Duty Boots
+Level: 100
+Ability: Magic Bounce
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Psychic
+- Heat Wave
+- Tailwind
+- Protect
+
+Donphan @ Leftovers
+Level: 100
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Ice Shard
+- Knock Off
+- Protect
+
+Scizor @ Scizorite
+Level: 100
+Ability: Technician
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Bullet Punch
+- U-turn
+- Swords Dance
+- Protect
+
+Skarmory @ Leftovers
+Level: 100
+Ability: Sturdy
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Impish Nature
+- Brave Bird
+- Swords Dance
+- Roost
+- Protect
+
+=== TRAINER_MAY_E4 ===
+Name: MAY
+Class: Elite Four
+Pic: May
+Gender: Female
+Music: Elite Four
+Double Battle: Yes
+Mugshot: Purple
+Party Size: 3
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Blaziken @ Blazikenite
+Tags: Ace
+Level: 100
+Ability: Speed Boost
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Flare Blitz
+- Close Combat
+- Knock Off
+- Protect
+
+Latias @ Leftovers
+Level: 100
+Ability: Levitate
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Draco Meteor
+- Psychic
+- Recover
+- Calm Mind
+
+Altaria @ Leftovers
+Level: 100
+Ability: Natural Cure
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Dragon Dance
+- Dragon Claw
+- Earthquake
+- Roost
+
+Gardevoir @ Choice Specs
+Level: 100
+Ability: Trace
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Moonblast
+- Psychic
+- Shadow Ball
+- Dazzling Gleam
+
+Milotic @ Leftovers
+Level: 100
+Ability: Marvel Scale
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Bold Nature
+- Scald
+- Ice Beam
+- Recover
+- Protect
+
+Ludicolo @ Life Orb
+Level: 100
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hydro Pump
+- Giga Drain
+- Ice Beam
+- Fake Out
+
+Absol @ Life Orb
+Level: 100
+Ability: Super Luck
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Knock Off
+- Sucker Punch
+- Play Rough
+- Protect
+
+Flygon @ Choice Scarf
+Level: 100
+Ability: Levitate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Outrage
+- U-turn
+- Rock Slide
+
+Torkoal @ Charcoal
+Level: 100
+Ability: Drought
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Quiet Nature
+- Eruption
+- Heat Wave
+- Earth Power
+- Protect
+
+Wailord @ Sitrus Berry
+Level: 100
+Ability: Water Veil
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Water Spout
+- Ice Beam
+- Hydro Pump
+- Protect
+
+=== TRAINER_DAWN_E4 ===
+Name: DAWN
+Class: Elite Four
+Pic: Dawn
+Gender: Female
+Music: Elite Four
+Double Battle: Yes
+Mugshot: Purple
+Party Size: 3
+Pool Rules: Basic
+Pool Pick Functions: Default
+AI: Smart Trainer / Prediction / Ace Pokemon
+
+Lopunny @ Lopunnite
+Tags: Ace
+Level: 100
+Ability: Limber
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Fake Out
+- Return
+- High Jump Kick
+- Ice Punch
+
+Togekiss @ Leftovers
+Level: 100
+Ability: Serene Grace
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Air Slash
+- Dazzling Gleam
+- Follow Me
+- Protect
+
+Palkia @ Lustrous Globe
+Level: 100
+Ability: Pressure
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Spacial Rend
+- Hydro Pump
+- Fire Blast
+- Protect
+
+Mamoswine @ Life Orb
+Level: 100
+Ability: Thick Fat
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Icicle Crash
+- Ice Shard
+- Protect
+
+Froslass @ Focus Sash
+Level: 100
+Ability: Cursed Body
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Shadow Ball
+- Blizzard
+- Icy Wind
+- Protect
+
+Gallade @ Life Orb
+Level: 100
+Ability: Sharpness
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Psycho Cut
+- Sacred Sword
+- Leaf Blade
+- Protect
+
+Rotom-Wash @ Sitrus Berry
+Level: 100
+Ability: Levitate
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Discharge
+- Thunderbolt
+- Will-O-Wisp
+- Protect
+
+Weavile @ Choice Band
+Level: 100
+Ability: Pressure
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Knock Off
+- Icicle Crash
+- Ice Shard
+- Brick Break
+
+Hippowdon @ Leftovers
+Level: 100
+Ability: Sand Stream
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Impish Nature
+- Earthquake
+- Slack Off
+- Stealth Rock
+- Protect
+
+Pachirisu @ Sitrus Berry
+Level: 100
+Ability: Volt Absorb
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Bold Nature
+- Nuzzle
+- Follow Me
+- Super Fang
+- Protect

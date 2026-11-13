@@ -42,7 +42,7 @@ EverGrandeCity_PhoebesRoom_EventScript_Phoebe::
 	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_PhoebesRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_PHOEBE, EverGrandeCity_PhoebesRoom_Text_Defeat
+	trainerbattle_two_trainers TRAINER_PHOEBE, EverGrandeCity_PhoebesRoom_Text_Defeat, TRAINER_LYRA_E4, EverGrandeCity_PhoebesRoom_Text_DefeatB
 	goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
 	end
 
@@ -59,26 +59,18 @@ EverGrandeCity_PhoebesRoom_EventScript_Defeated::
 	end
 
 EverGrandeCity_PhoebesRoom_Text_IntroSpeech:
-	.string "Ahahaha!\p"
-	.string "I'm PHOEBE of the ELITE FOUR.\n"
-	.string "I did my training on MT. PYRE.\p"
-	.string "While I trained, I gained the ability\n"
-	.string "to commune with GHOST-type POKéMON.\p"
-	.string "Yes, the bond I developed with POKéMON\n"
-	.string "is extremely tight.\p"
-	.string "So, come on, just try and see if you can\n"
-	.string "even inflict damage on my POKéMON!$"
+	.string "ETHAN: Yo! We came all the way from\n"
+	.string "NEW BARK TOWN for this!\p"
+	.string "LYRA: Two trainers from JOHTO against\n"
+	.string "one from HOENN. Ready?$"
 
 EverGrandeCity_PhoebesRoom_Text_Defeat:
-	.string "Oh, darn.\n"
-	.string "I've gone and lost.$"
+	.string "ETHAN: Whoa… you are the real deal!$"
 
 EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech:
-	.string "There's a definite bond between you\n"
-	.string "and your POKéMON, too.\p"
-	.string "I didn't recognize it, so it's only\n"
-	.string "natural that I lost.\p"
-	.string "Yup, I'd like to see how far your bond\n"
-	.string "will carry you.\p"
-	.string "Go ahead, move on to the next room.$"
+	.string "ETHAN: The next room is waiting.\n"
+	.string "LYRA: Do your best!$"
+
+EverGrandeCity_PhoebesRoom_Text_DefeatB:
+	.string "LYRA: We lost? Wow, you are strong!$"
 
