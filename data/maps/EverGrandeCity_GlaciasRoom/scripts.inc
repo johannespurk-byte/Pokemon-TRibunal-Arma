@@ -42,7 +42,7 @@ EverGrandeCity_GlaciasRoom_EventScript_Glacia::
 	goto_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_GlaciasRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_GLACIA, EverGrandeCity_GlaciasRoom_Text_Defeat
+	trainerbattle_two_trainers TRAINER_GLACIA, EverGrandeCity_GlaciasRoom_Text_Defeat, TRAINER_MAY_E4, EverGrandeCity_GlaciasRoom_Text_DefeatB
 	goto EverGrandeCity_GlaciasRoom_EventScript_Defeated
 	end
 
@@ -59,25 +59,18 @@ EverGrandeCity_GlaciasRoom_EventScript_Defeated::
 	end
 
 EverGrandeCity_GlaciasRoom_Text_IntroSpeech:
-	.string "Welcome, my name is GLACIA\n"
-	.string "of the ELITE FOUR.\p"
-	.string "I've traveled from afar to HOENN\n"
-	.string "so that I may hone my ice skills.\p"
-	.string "But all I have seen are challenges by\n"
-	.string "weak TRAINERS and their POKéMON.\p"
-	.string "What about you?\p"
-	.string "It would please me to no end if I could\n"
-	.string "go all out against you!$"
+	.string "BRENDAN: So you made it this far.\n"
+	.string "We know HOENN better than anyone.\p"
+	.string "MAY: Let us show you what two kids\n"
+	.string "from LITTLEROOT can do!$"
 
 EverGrandeCity_GlaciasRoom_Text_Defeat:
-	.string "You and your POKéMON…\n"
-	.string "How hot your spirits burn!\p"
-	.string "The all-consuming heat overwhelms.\p"
-	.string "It's no surprise that my icy skills\n"
-	.string "failed to harm you.$"
+	.string "BRENDAN: I can not believe it…$"
 
 EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech:
-	.string "Advance to the next room.\p"
-	.string "And there, confirm the truly fearsome\n"
-	.string "side of the POKéMON LEAGUE.$"
+	.string "MAY: Only one room left before the\n"
+	.string "CHAMPION. Go for it!$"
+
+EverGrandeCity_GlaciasRoom_Text_DefeatB:
+	.string "MAY: You beat us fair and square!$"
 

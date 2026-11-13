@@ -905,6 +905,10 @@
 #define TRAINER_BROCK_FORTREE                 898
 #define TRAINER_AGATHA_MOSSDEEP               899
 #define TRAINER_ERIKA_SOOTOPOLIS              900
+#define TRAINER_LEAF_E4                       901
+#define TRAINER_LYRA_E4                       902
+#define TRAINER_MAY_E4                        903
+#define TRAINER_DAWN_E4                       904
 #
 #if !IS_FRLG
 // The Rocket Hideout under the Mauville Game Corner shares its scripts with FRLG,

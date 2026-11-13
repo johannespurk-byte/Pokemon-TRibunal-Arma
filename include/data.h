@@ -321,10 +321,24 @@ static inline bool32 IsDrawnRivalTrainer(const struct Trainer *trainer)
         && (trainer->trainerPic == TRAINER_PIC_BRENDAN || trainer->trainerPic == TRAINER_PIC_MAY);
 }
 
+// The Champion is a shadow copy of the player (see shadow_champion.c): player's name and trainer picture.
+u16 TrainerCard_GetPlayerTrainerPic(u8 gender);
+
+static inline bool32 IsShadowChampion(u16 trainerId)
+{
+#if !IS_FRLG
+    return trainerId == TRAINER_WALLACE;
+#else
+    return FALSE;
+#endif
+}
+
 static inline const u8 *GetTrainerNameFromId(u16 trainerId)
 {
     const struct Trainer *trainer = GetTrainerStructFromId(trainerId);
 
+    if (IsShadowChampion(trainerId))
+        return gSaveBlock2Ptr->playerName;
     if (IsDrawnRivalTrainer(trainer))
         return TrainerCard_GetRivalName();
     return trainer->trainerName;
@@ -334,6 +348,8 @@ static inline const enum TrainerPicID GetTrainerPicFromId(u16 trainerId)
 {
     const struct Trainer *trainer = GetTrainerStructFromId(trainerId);
 
+    if (IsShadowChampion(trainerId))
+        return TrainerCard_GetPlayerTrainerPic(gSaveBlock2Ptr->playerGender);
     if (IsDrawnRivalTrainer(trainer))
         return TrainerCard_GetRivalTrainerPic();
     return trainer->trainerPic;
