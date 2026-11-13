@@ -15,14 +15,12 @@ FortreeCity_Mart_EventScript_Clerk::
 FortreeCity_Mart_Pokemart:
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_ULTRA_BALL
-	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_HYPER_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_REVIVE
-	.2byte ITEM_SUPER_REPEL
-	.2byte ITEM_WOOD_MAIL
+	.2byte ITEM_ROCKY_HELMET
+	.2byte ITEM_WEAKNESS_POLICY
+	.2byte ITEM_EXPERT_BELT
+	.2byte ITEM_MUSCLE_BAND
+	.2byte ITEM_WISE_GLASSES
+	.2byte ITEM_SCOPE_LENS
 	pokemartlistend
 
 FortreeCity_Mart_EventScript_Woman::

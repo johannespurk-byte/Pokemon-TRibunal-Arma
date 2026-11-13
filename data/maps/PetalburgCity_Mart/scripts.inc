@@ -31,8 +31,7 @@ PetalburgCity_Mart_Pokemart_Basic:
 	.align 2
 PetalburgCity_Mart_Pokemart_Expanded:
 	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_SUPER_POTION
-	.2byte ITEM_TM01                @ FIX: Synchronisiert mit der Basic-Liste
+	.2byte ITEM_TM01
 	.2byte ITEM_GRASS_GEM
 	.2byte ITEM_ELECTRIC_GEM
 	.2byte ITEM_FIGHTING_GEM
@@ -47,16 +46,15 @@ PetalburgCity_Mart_Pokemart_Expanded:
 	.2byte ITEM_DARK_GEM
 	.2byte ITEM_FAIRY_GEM
 	.2byte ITEM_ROTOM_CATALOG
-	.2byte ITEM_AUSPICIOUS_ARMOR 
+	.2byte ITEM_AUSPICIOUS_ARMOR
 	.2byte ITEM_MALICIOUS_ARMOR
 	.2byte ITEM_METAL_COAT
 	.2byte ITEM_PROTECTOR
 	.2byte ITEM_ELECTIRIZER
-	.2byte ITEM_MAGMARIZER	
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFENSE
-	.2byte ITEM_ORANGE_MAIL
+	.2byte ITEM_MAGMARIZER
+	.2byte ITEM_EXP_CANDY_S
+	.2byte ITEM_EXP_CANDY_M
+	.2byte ITEM_EVERSTONE
 	.2byte ITEM_NONE
 
 	pokemartlistend

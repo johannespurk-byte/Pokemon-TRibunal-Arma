@@ -18,8 +18,7 @@ RustboroCity_Mart_EventScript_PokemartBasic::
 
 	.align 2
 RustboroCity_Mart_Pokemart_Basic:
-	.2byte ITEM_GREAT_BALL       @ 🌟 KORREKTUR: Auf den echten internen Namen ITEM_GREAT_BALL angepasst!
-	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_RARE_CANDY
 	.2byte ITEM_QUICK_BALL
 	.2byte ITEM_WATER_STONE
@@ -33,6 +32,8 @@ RustboroCity_Mart_Pokemart_Basic:
 	.2byte ITEM_CHOICE_BAND
 	.2byte ITEM_CHOICE_SPECS
 	.2byte ITEM_WHITE_HERB
+	.2byte ITEM_EXP_CANDY_S
+	.2byte ITEM_EXP_CANDY_M
 	pokemartlistend
 
 RustboroCity_Mart_EventScript_PokemartExpanded::

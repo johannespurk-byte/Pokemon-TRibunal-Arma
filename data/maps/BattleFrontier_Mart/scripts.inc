@@ -14,18 +14,14 @@ BattleFrontier_Mart_EventScript_Clerk::
 	.align 2
 BattleFrontier_Mart_Pokemart:
 	.2byte ITEM_ULTRA_BALL
-	.2byte ITEM_HYPER_POTION
-	.2byte ITEM_MAX_POTION
-	.2byte ITEM_FULL_RESTORE
-	.2byte ITEM_FULL_HEAL
-	.2byte ITEM_REVIVE
-	.2byte ITEM_MAX_REPEL
 	.2byte ITEM_PROTEIN
 	.2byte ITEM_CALCIUM
 	.2byte ITEM_IRON
 	.2byte ITEM_ZINC
 	.2byte ITEM_CARBOS
 	.2byte ITEM_HP_UP
+	.2byte ITEM_PP_UP
+	.2byte ITEM_EXP_CANDY_XL
 	pokemartlistend
 
 BattleFrontier_Mart_EventScript_OldMan::
