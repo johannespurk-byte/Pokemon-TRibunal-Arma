@@ -6355,6 +6355,24 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_Glalitite,
     },
 
+    [ITEM_RAYQUAZANITE] =
+    {
+        .name = ITEM_NAME("Rayquazanite"),
+        .price = 10000,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING(
+            "This stone enables\n"
+            "Rayquaza to Mega\n"
+            "Evolve in battle."),
+        .pocket = POCKET_MEGA_STONES,
+        .sortType = ITEM_TYPE_MEGA_STONE,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_Salamencite,
+        .iconPalette = gItemIconPalette_Rayquazanite,
+    },
+
     [ITEM_SALAMENCITE] =
     {
         .name = ITEM_NAME("Salamencite"),

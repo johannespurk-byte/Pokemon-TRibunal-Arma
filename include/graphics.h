@@ -924,6 +924,7 @@ extern const u32 gItemIcon_Glalitite[];
 extern const u16 gItemIconPalette_Glalitite[];
 extern const u32 gItemIcon_Salamencite[];
 extern const u16 gItemIconPalette_Salamencite[];
+extern const u16 gItemIconPalette_Rayquazanite[];
 extern const u32 gItemIcon_Metagrossite[];
 extern const u16 gItemIconPalette_Metagrossite[];
 extern const u32 gItemIcon_Latiasite[];

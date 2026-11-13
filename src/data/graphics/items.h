@@ -845,6 +845,7 @@ const u16 gItemIconPalette_Glalitite[] = INCGFX_U16("graphics/items/icon_palette
 
 const u32 gItemIcon_Salamencite[] = INCGFX_U32("graphics/items/icons/salamencite.png", ".4bpp.smol");
 const u16 gItemIconPalette_Salamencite[] = INCGFX_U16("graphics/items/icon_palettes/salamencite.pal", ".gbapal");
+const u16 gItemIconPalette_Rayquazanite[] = INCGFX_U16("graphics/items/icon_palettes/rayquazanite.pal", ".gbapal");
 
 const u32 gItemIcon_Metagrossite[] = INCGFX_U32("graphics/items/icons/metagrossite.png", ".4bpp.smol");
 const u16 gItemIconPalette_Metagrossite[] = INCGFX_U16("graphics/items/icon_palettes/metagrossite.pal", ".gbapal");
