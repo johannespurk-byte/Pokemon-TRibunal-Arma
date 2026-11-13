@@ -663,3 +663,18 @@ void Script_GiveRandomBerry(struct ScriptContext *ctx)
 
     gSpecialVar_Result = BerryTypeToItemId(RandomUniform(RNG_RANDOM_BERRY, loBerry, hiBerry));
 }
+
+// Puts the move in gSpecialVar_0x8004 into the last move slot of the Pokemon created by setwildbattle
+// (e.g. Dragon Ascent for Rayquaza on Sky Pillar), unless it already knows that move.
+void SetScriptedWildMonLastMove(void)
+{
+    struct Pokemon *mon = &gParties[B_TRAINER_OPPONENT_A][0];
+    u32 i;
+
+    for (i = 0; i < MAX_MON_MOVES; i++)
+    {
+        if (GetMonData(mon, MON_DATA_MOVE1 + i) == gSpecialVar_0x8004)
+            return;
+    }
+    SetMonMoveSlot(mon, gSpecialVar_0x8004, MAX_MON_MOVES - 1);
+}

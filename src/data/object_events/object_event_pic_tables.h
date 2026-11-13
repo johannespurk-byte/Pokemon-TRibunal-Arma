@@ -1494,6 +1494,78 @@ static const struct SpriteFrameImage sPicTable_RayquazaStill[] = {
     obj_frame_tiles(gObjectEventPic_RayquazaStill),
 };
 
+static const struct SpriteFrameImage sPicTable_Fr6Dialga[] = {
+    obj_frame_tiles(gObjectEventPic_Fr6Dialga),
+    obj_frame_tiles(gObjectEventPic_Fr6Dialga),
+    obj_frame_tiles(gObjectEventPic_Fr6Dialga),
+    obj_frame_tiles(gObjectEventPic_Fr6Dialga),
+    obj_frame_tiles(gObjectEventPic_Fr6Dialga),
+    obj_frame_tiles(gObjectEventPic_Fr6Dialga),
+    obj_frame_tiles(gObjectEventPic_Fr6Dialga),
+    obj_frame_tiles(gObjectEventPic_Fr6Dialga),
+    obj_frame_tiles(gObjectEventPic_Fr6Dialga),
+};
+
+static const struct SpriteFrameImage sPicTable_Fr6Palkia[] = {
+    obj_frame_tiles(gObjectEventPic_Fr6Palkia),
+    obj_frame_tiles(gObjectEventPic_Fr6Palkia),
+    obj_frame_tiles(gObjectEventPic_Fr6Palkia),
+    obj_frame_tiles(gObjectEventPic_Fr6Palkia),
+    obj_frame_tiles(gObjectEventPic_Fr6Palkia),
+    obj_frame_tiles(gObjectEventPic_Fr6Palkia),
+    obj_frame_tiles(gObjectEventPic_Fr6Palkia),
+    obj_frame_tiles(gObjectEventPic_Fr6Palkia),
+    obj_frame_tiles(gObjectEventPic_Fr6Palkia),
+};
+
+static const struct SpriteFrameImage sPicTable_Fr6Solgaleo[] = {
+    obj_frame_tiles(gObjectEventPic_Fr6Solgaleo),
+    obj_frame_tiles(gObjectEventPic_Fr6Solgaleo),
+    obj_frame_tiles(gObjectEventPic_Fr6Solgaleo),
+    obj_frame_tiles(gObjectEventPic_Fr6Solgaleo),
+    obj_frame_tiles(gObjectEventPic_Fr6Solgaleo),
+    obj_frame_tiles(gObjectEventPic_Fr6Solgaleo),
+    obj_frame_tiles(gObjectEventPic_Fr6Solgaleo),
+    obj_frame_tiles(gObjectEventPic_Fr6Solgaleo),
+    obj_frame_tiles(gObjectEventPic_Fr6Solgaleo),
+};
+
+static const struct SpriteFrameImage sPicTable_Fr6Lunala[] = {
+    obj_frame_tiles(gObjectEventPic_Fr6Lunala),
+    obj_frame_tiles(gObjectEventPic_Fr6Lunala),
+    obj_frame_tiles(gObjectEventPic_Fr6Lunala),
+    obj_frame_tiles(gObjectEventPic_Fr6Lunala),
+    obj_frame_tiles(gObjectEventPic_Fr6Lunala),
+    obj_frame_tiles(gObjectEventPic_Fr6Lunala),
+    obj_frame_tiles(gObjectEventPic_Fr6Lunala),
+    obj_frame_tiles(gObjectEventPic_Fr6Lunala),
+    obj_frame_tiles(gObjectEventPic_Fr6Lunala),
+};
+
+static const struct SpriteFrameImage sPicTable_Fr6Necrozma[] = {
+    obj_frame_tiles(gObjectEventPic_Fr6Necrozma),
+    obj_frame_tiles(gObjectEventPic_Fr6Necrozma),
+    obj_frame_tiles(gObjectEventPic_Fr6Necrozma),
+    obj_frame_tiles(gObjectEventPic_Fr6Necrozma),
+    obj_frame_tiles(gObjectEventPic_Fr6Necrozma),
+    obj_frame_tiles(gObjectEventPic_Fr6Necrozma),
+    obj_frame_tiles(gObjectEventPic_Fr6Necrozma),
+    obj_frame_tiles(gObjectEventPic_Fr6Necrozma),
+    obj_frame_tiles(gObjectEventPic_Fr6Necrozma),
+};
+
+static const struct SpriteFrameImage sPicTable_Fr6Deoxys[] = {
+    obj_frame_tiles(gObjectEventPic_Fr6Deoxys),
+    obj_frame_tiles(gObjectEventPic_Fr6Deoxys),
+    obj_frame_tiles(gObjectEventPic_Fr6Deoxys),
+    obj_frame_tiles(gObjectEventPic_Fr6Deoxys),
+    obj_frame_tiles(gObjectEventPic_Fr6Deoxys),
+    obj_frame_tiles(gObjectEventPic_Fr6Deoxys),
+    obj_frame_tiles(gObjectEventPic_Fr6Deoxys),
+    obj_frame_tiles(gObjectEventPic_Fr6Deoxys),
+    obj_frame_tiles(gObjectEventPic_Fr6Deoxys),
+};
+
 static const struct SpriteFrameImage sPicTable_TuberMSwimming[] = {
     overworld_ascending_frames(gObjectEventPic_TuberMSwimming, 2, 2),
 };

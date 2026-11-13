@@ -83,6 +83,12 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GloriaAcroB
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GloriaSurfing;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GloriaFishing;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GloriaFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fr6Dialga;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fr6Palkia;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fr6Solgaleo;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fr6Lunala;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fr6Necrozma;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fr6Deoxys;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
@@ -963,6 +969,12 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_GLORIA_SURFING] = &gObjectEventGraphicsInfo_GloriaSurfing,
     [OBJ_EVENT_GFX_GLORIA_FISHING] = &gObjectEventGraphicsInfo_GloriaFishing,
     [OBJ_EVENT_GFX_GLORIA_FIELD_MOVE] = &gObjectEventGraphicsInfo_GloriaFieldMove,
+    [OBJ_EVENT_GFX_FR6_DIALGA] = &gObjectEventGraphicsInfo_Fr6Dialga,
+    [OBJ_EVENT_GFX_FR6_PALKIA] = &gObjectEventGraphicsInfo_Fr6Palkia,
+    [OBJ_EVENT_GFX_FR6_SOLGALEO] = &gObjectEventGraphicsInfo_Fr6Solgaleo,
+    [OBJ_EVENT_GFX_FR6_LUNALA] = &gObjectEventGraphicsInfo_Fr6Lunala,
+    [OBJ_EVENT_GFX_FR6_NECROZMA] = &gObjectEventGraphicsInfo_Fr6Necrozma,
+    [OBJ_EVENT_GFX_FR6_DEOXYS] = &gObjectEventGraphicsInfo_Fr6Deoxys,
 
 };
 

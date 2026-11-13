@@ -1062,6 +1062,7 @@ enum __attribute__((packed)) Item
     ITEM_WATERFALL_TOOL,
     ITEM_DIVE_TOOL,
     ITEM_REPEL_TOOL,
+    ITEM_RAYQUAZANITE,
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,
 };
