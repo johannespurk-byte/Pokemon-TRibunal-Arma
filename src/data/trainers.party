@@ -1149,21 +1149,71 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Sandshrew
-Level: 25
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
+Hippowdon @ Leftovers
+Level: 60
+Ability: Sand Stream
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Iron Head
+- Slack Off
 
-Sandslash
-Level: 25
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
+Flygon @ Life Orb
+Level: 60
+Ability: Levitate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Dragon Claw
+- Superpower
+- Dragon Dance
+
+Krookodile @ Life Orb
+Level: 60
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Foul Play
+- Close Combat
+- Bulk Up
+
+Rhyperior @ Leftovers
+Level: 60
+Ability: Lightning Rod
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Megahorn
+- Stealth Rock
+
+Golem @ Sitrus Berry
+Level: 60
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Earthquake
+- Hammer Arm
+- Stealth Rock
+
+Garganacl @ Sitrus Berry
+Level: 60
+Ability: Purifying Salt
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Earthquake
+- Hammer Arm
+- Recover
 
 === TRAINER_DUSTY_2 ===
 Name: LANCE
@@ -5407,9 +5457,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Carvanha
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Golduck @ Life Orb
+Level: 60
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Psychic
+- Ice Beam
+- Nasty Plot
+
+Huntail @ Life Orb
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Aqua Tail
+- Crunch
+- Double-Edge
+- Shell Smash
+
+Jellicent @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Water Spout
+- Shadow Ball
+- Sludge Wave
+- Recover
+
+Feraligatr @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Crunch
+- Superpower
+- Toxic
+
+Greninja @ Expert Belt
+Level: 60
+Ability: Water Absorb
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Surf
+- Dark Pulse
+- Sludge Wave
+- Nasty Plot
+
+Samurott @ Expert Belt
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Air Slash
+- Hydro Pump
 
 === TRAINER_DOMINIK ===
 Name: DOMINIK
@@ -5420,9 +5532,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Tentacool
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Samurott-Hisui @ Life Orb
+Level: 60
+Ability: Water Absorb
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Sucker Punch
+- Megahorn
+- Swords Dance
+
+Araquanid @ Leftovers
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- X-Scissor
+- Poison Jab
+- Toxic
+
+Carracosta @ Leftovers
+Level: 60
+Ability: Solid Rock
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Stone Edge
+- Earthquake
+- Stealth Rock
+
+Tentacruel @ Life Orb
+Level: 60
+Ability: Clear Body
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Surf
+- Sludge Wave
+- Ice Beam
+- Sludge Bomb
+
+Toxapex @ Sitrus Berry
+Level: 60
+Ability: Regenerator
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Gunk Shot
+- Liquidation
+- Knock Off
+- Recover
+
+Qwilfish @ Expert Belt
+Level: 60
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Gunk Shot
+- Crunch
+- Swords Dance
 
 === TRAINER_DOUGLAS ===
 Name: DOUGLAS
@@ -5433,13 +5607,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Tentacool
-Level: 24
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Kingler @ Life Orb
+Level: 60
+Ability: Tough Claws
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Crabhammer
+- Hammer Arm
+- X-Scissor
+- Swords Dance
 
-Tentacool
-Level: 24
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Octillery @ Life Orb
+Level: 60
+Ability: Sniper
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Earthquake
+- Gunk Shot
+- Roost
+
+Simipour @ Expert Belt
+Level: 60
+Ability: Water Absorb
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Gunk Shot
+- Crunch
+- Aqua Tail
+
+Tentacruel @ Expert Belt
+Level: 60
+Ability: Clear Body
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Surf
+- Sludge Wave
+- Ice Beam
+- Sludge Bomb
+
+Toxapex @ Leftovers
+Level: 60
+Ability: Regenerator
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Gunk Shot
+- Liquidation
+- Knock Off
+- Recover
+
+Qwilfish @ Expert Belt
+Level: 60
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Gunk Shot
+- Crunch
+- Swords Dance
 
 === TRAINER_DARRIN ===
 Name: DARRIN
@@ -5450,17 +5682,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Tentacool
-Level: 24
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Blastoise @ Leftovers
+Level: 60
+Ability: Filter
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Water Spout
+- Flash Cannon
+- Ice Beam
+- Toxic
 
-Wingull
-Level: 24
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Kingdra @ Life Orb
+Level: 60
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Wave Crash
+- Iron Head
+- Double-Edge
+- Dragon Dance
 
-Tentacool
-Level: 24
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Swampert @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Earthquake
+- Hammer Arm
+- Stealth Rock
+
+Swanna @ Life Orb
+Level: 60
+Ability: Keen Eye
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Brave Bird
+- Double-Edge
+- Roost
+
+Cramorant @ Expert Belt
+Level: 60
+Ability: Water Absorb
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Drill Peck
+- Liquidation
+- Steel Wing
+- Roost
+
+Gyarados @ Expert Belt
+Level: 60
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Aqua Tail
+- Earthquake
+- Stone Edge
+- Dragon Dance
 
 === TRAINER_TONY_1 ===
 Name: TONY
@@ -5471,9 +5757,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Carvanha
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Vaporeon @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Shadow Ball
+- Toxic
+
+Starmie @ Life Orb
+Level: 60
+Ability: Analytic
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Surf
+- Psychic
+- Thunderbolt
+- Recover
+
+Poliwrath @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Earthquake
+- Toxic
+
+Crawdaunt @ Life Orb
+Level: 60
+Ability: Adaptability
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Crabhammer
+- Crunch
+- Superpower
+- Swords Dance
+
+Huntail @ Expert Belt
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Aqua Tail
+- Crunch
+- Double-Edge
+- Shell Smash
+
+Sharpedo @ Expert Belt
+Level: 60
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Crunch
+- Close Combat
+- Waterfall
 
 === TRAINER_JEROME ===
 Name: JEROME
@@ -5484,9 +5832,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Tentacruel
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Carracosta @ Leftovers
+Level: 60
+Ability: Solid Rock
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Stone Edge
+- Earthquake
+- Stealth Rock
+
+Clawitzer @ Life Orb
+Level: 60
+Ability: Mega Launcher
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Sludge Wave
+- Ice Beam
+- Hydro Pump
+
+Dewgong @ Leftovers
+Level: 60
+Ability: Thick Fat
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Ice Shard
+- Play Rough
+- Toxic
+
+Drapion @ Life Orb
+Level: 60
+Ability: Sniper
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Poison Jab
+- Crunch
+- Earthquake
+- Swords Dance
+
+Garbodor @ Expert Belt
+Level: 60
+Ability: Stench
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Gunk Shot
+- Body Press
+- Body Slam
+- Poison Jab
+
+Grafaiai @ Expert Belt
+Level: 60
+Ability: Unburden
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Gunk Shot
+- Double-Edge
+- X-Scissor
+- Swords Dance
 
 === TRAINER_MATTHEW ===
 Name: MATTHEW
@@ -5497,9 +5907,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Carvanha
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Drednaw @ Life Orb
+Level: 60
+Ability: Strong Jaw
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Head Smash
+- Earthquake
+- Swords Dance
+
+Floatzel @ Life Orb
+Level: 60
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Wave Crash
+- Crunch
+- Iron Tail
+- Bulk Up
+
+Golduck @ Expert Belt
+Level: 60
+Ability: Swift Swim
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Psychic
+- Ice Beam
+- Nasty Plot
+
+Feraligatr @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Crunch
+- Superpower
+- Toxic
+
+Greninja @ Expert Belt
+Level: 60
+Ability: Water Absorb
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Surf
+- Dark Pulse
+- Sludge Wave
+- Nasty Plot
+
+Samurott @ Expert Belt
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Air Slash
+- Hydro Pump
 
 === TRAINER_DAVID ===
 Name: DAVID
@@ -5799,9 +6271,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Sharpedo
-Level: 30
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Vaporeon @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Shadow Ball
+- Toxic
+
+Starmie @ Life Orb
+Level: 60
+Ability: Analytic
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Surf
+- Psychic
+- Thunderbolt
+- Recover
+
+Poliwrath @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Earthquake
+- Toxic
+
+Crawdaunt @ Life Orb
+Level: 60
+Ability: Adaptability
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Crabhammer
+- Crunch
+- Superpower
+- Swords Dance
+
+Huntail @ Expert Belt
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Aqua Tail
+- Crunch
+- Double-Edge
+- Shell Smash
+
+Sharpedo @ Expert Belt
+Level: 60
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Crunch
+- Close Combat
+- Waterfall
 
 === TRAINER_TONY_3 ===
 Name: TONY
@@ -5812,9 +6346,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Sharpedo
-Level: 33
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Vaporeon @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Shadow Ball
+- Toxic
+
+Starmie @ Life Orb
+Level: 60
+Ability: Analytic
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Surf
+- Psychic
+- Thunderbolt
+- Recover
+
+Poliwrath @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Earthquake
+- Toxic
+
+Crawdaunt @ Life Orb
+Level: 60
+Ability: Adaptability
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Crabhammer
+- Crunch
+- Superpower
+- Swords Dance
+
+Huntail @ Expert Belt
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Aqua Tail
+- Crunch
+- Double-Edge
+- Shell Smash
+
+Sharpedo @ Expert Belt
+Level: 60
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Crunch
+- Close Combat
+- Waterfall
 
 === TRAINER_TONY_4 ===
 Name: TONY
@@ -5825,13 +6421,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Staryu
-Level: 34
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Vaporeon @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Shadow Ball
+- Toxic
 
-Sharpedo
-Level: 36
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Starmie @ Life Orb
+Level: 60
+Ability: Analytic
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Surf
+- Psychic
+- Thunderbolt
+- Recover
+
+Poliwrath @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Earthquake
+- Toxic
+
+Crawdaunt @ Life Orb
+Level: 60
+Ability: Adaptability
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Crabhammer
+- Crunch
+- Superpower
+- Swords Dance
+
+Huntail @ Expert Belt
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Aqua Tail
+- Crunch
+- Double-Edge
+- Shell Smash
+
+Sharpedo @ Expert Belt
+Level: 60
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Crunch
+- Close Combat
+- Waterfall
 
 === TRAINER_TONY_5 ===
 Name: TONY
@@ -5842,13 +6496,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Starmie
-Level: 37
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Vaporeon @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Shadow Ball
+- Toxic
 
-Sharpedo
-Level: 39
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Starmie @ Life Orb
+Level: 60
+Ability: Analytic
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Surf
+- Psychic
+- Thunderbolt
+- Recover
+
+Poliwrath @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Earthquake
+- Toxic
+
+Crawdaunt @ Life Orb
+Level: 60
+Ability: Adaptability
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Crabhammer
+- Crunch
+- Superpower
+- Swords Dance
+
+Huntail @ Expert Belt
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Aqua Tail
+- Crunch
+- Double-Edge
+- Shell Smash
+
+Sharpedo @ Expert Belt
+Level: 60
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Crunch
+- Close Combat
+- Waterfall
 
 === TRAINER_TAKAO ===
 Name: TAKAO
@@ -17210,13 +17922,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Wingull
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Blastoise @ Leftovers
+Level: 60
+Ability: Filter
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Water Spout
+- Flash Cannon
+- Ice Beam
+- Toxic
 
-Wailmer
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Dondozo @ Leftovers
+Level: 60
+Ability: Unaware
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Wave Crash
+- Earthquake
+- Order Up
+- Protect
+
+Samurott @ Life Orb
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Air Slash
+- Hydro Pump
+
+Gyarados @ Life Orb
+Level: 60
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Aqua Tail
+- Earthquake
+- Stone Edge
+- Dragon Dance
+
+Mantine @ Sitrus Berry
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Hurricane
+- Ice Beam
+- Roost
+
+Pelipper @ Sitrus Berry
+Level: 60
+Ability: Drizzle
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Hurricane
+- Ice Beam
+- Roost
 
 === TRAINER_IMANI ===
 Name: IMANI
@@ -17227,9 +17997,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Marill
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Clawitzer @ Life Orb
+Level: 60
+Ability: Mega Launcher
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Sludge Wave
+- Ice Beam
+- Hydro Pump
+
+Drednaw @ Life Orb
+Level: 60
+Ability: Strong Jaw
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Head Smash
+- Earthquake
+- Swords Dance
+
+Floatzel @ Expert Belt
+Level: 60
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Wave Crash
+- Crunch
+- Iron Tail
+- Bulk Up
+
+Milotic @ Expert Belt
+Level: 60
+Ability: Competitive
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Dragon Pulse
+- Recover
+
+Primarina @ Expert Belt
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Moonblast
+- Psychic
+- Calm Mind
+
+Azumarill @ Leftovers
+Level: 60
+Ability: Thick Fat
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Focus Blast
+- Toxic
 
 === TRAINER_KYLA ===
 Name: KYLA
@@ -17240,9 +18072,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Wailmer
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Walrein @ Leftovers
+Level: 60
+Ability: Thick Fat
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Ice Beam
+- Surf
+- Signal Beam
+- Toxic
+
+Relicanth @ Leftovers
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Head Smash
+- Earthquake
+- Stealth Rock
+
+Alomomola @ Sitrus Berry
+Level: 60
+Ability: Regenerator
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Play Rough
+- Zen Headbutt
+- Toxic
+
+Lapras @ Sitrus Berry
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Avalanche
+- Earthquake
+- Toxic
+
+Cloyster @ Sitrus Berry
+Level: 60
+Ability: Skill Link
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Icicle Crash
+- Poison Jab
+- Toxic
+
+Arctovish @ Sitrus Berry
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Icicle Crash
+- Psychic Fangs
+- Protect
 
 === TRAINER_DENISE ===
 Name: DENISE
@@ -17253,13 +18147,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Wingull
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Dondozo @ Leftovers
+Level: 60
+Ability: Unaware
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Wave Crash
+- Earthquake
+- Order Up
+- Protect
 
-Goldeen
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Empoleon @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Flash Cannon
+- Ice Beam
+- Roost
+
+Golisopod @ Sitrus Berry
+Level: 60
+Ability: Compound Eyes
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- First Impression
+- Liquidation
+- Close Combat
+- Toxic
+
+Araquanid @ Sitrus Berry
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- X-Scissor
+- Poison Jab
+- Toxic
+
+Ribombee @ Life Orb
+Level: 60
+Ability: Shield Dust
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Pollen Puff
+- Moonblast
+- Psychic
+- Calm Mind
+
+Spidops @ Sitrus Berry
+Level: 60
+Ability: Compound Eyes
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- First Impression
+- Throat Chop
+- Poison Jab
+- Taunt
 
 === TRAINER_BETH ===
 Name: BETH
@@ -17270,9 +18222,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Goldeen
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Bibarel @ Life Orb
+Level: 60
+Ability: Unaware
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Double-Edge
+- Liquidation
+- Superpower
+- Swords Dance
+
+Bruxish @ Life Orb
+Level: 60
+Ability: Strong Jaw
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Wave Crash
+- Psychic Fangs
+- Crunch
+- Swords Dance
+
+Corsola @ Leftovers
+Level: 60
+Ability: Hustle
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Power Gem
+- Psychic
+- Recover
+
+Greedent @ Leftovers
+Level: 60
+Ability: Adaptability
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Double-Edge
+- Earthquake
+- Psychic Fangs
+- Protect
+
+Gumshoos @ Expert Belt
+Level: 60
+Ability: Strong Jaw
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Double-Edge
+- Earthquake
+- Psychic Fangs
+- Body Slam
+
+Bouffalant @ Sitrus Berry
+Level: 60
+Ability: Reckless
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Head Charge
+- Close Combat
+- Megahorn
+- Toxic
 
 === TRAINER_TARA ===
 Name: TARA
@@ -17283,13 +18297,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Horsea
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Octillery @ Life Orb
+Level: 60
+Ability: Sniper
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Earthquake
+- Gunk Shot
+- Roost
 
-Marill
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Quagsire @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Earthquake
+- Stone Edge
+- Recover
+
+Seaking @ Life Orb
+Level: 60
+Ability: Lightning Rod
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Aqua Tail
+- Megahorn
+- Poison Jab
+- Swords Dance
+
+Kingdra @ Expert Belt
+Level: 60
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Wave Crash
+- Iron Head
+- Double-Edge
+- Dragon Dance
+
+Dracovish @ Expert Belt
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Dragon Rush
+- Earthquake
+- Fishious Rend
+
+Goodra-Hisui @ Leftovers
+Level: 60
+Ability: Sap Sipper
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Draco Meteor
+- Flash Cannon
+- Sludge Wave
+- Toxic
 
 === TRAINER_MISSY ===
 Name: MISSY
@@ -17300,9 +18372,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Goldeen
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Jellicent @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Water Spout
+- Shadow Ball
+- Sludge Wave
+- Recover
+
+Kingler @ Life Orb
+Level: 60
+Ability: Tough Claws
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Crabhammer
+- Hammer Arm
+- X-Scissor
+- Swords Dance
+
+Ludicolo @ Leftovers
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Leaf Storm
+- Ice Beam
+- Synthesis
+
+Lurantis @ Life Orb
+Level: 60
+Ability: Contrary
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Petal Blizzard
+- X-Scissor
+- Poison Jab
+- Swords Dance
+
+Shiinotic @ Sitrus Berry
+Level: 60
+Ability: Effect Spore
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Giga Drain
+- Moonblast
+- Sludge Bomb
+- Moonlight
+
+Carnivine @ Expert Belt
+Level: 60
+Ability: Levitate
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Power Whip
+- Crunch
+- Facade
+- Swords Dance
 
 === TRAINER_ALICE ===
 Name: ALICE
@@ -26017,13 +27151,71 @@ Music: Swimmer
 Double Battle: Yes
 AI: Smart Trainer
 
-Goldeen
-Level: 27
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Inteleon @ Life Orb
+Level: 60
+Ability: Water Absorb
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Surf
+- Ice Beam
+- Shadow Ball
+- Hydro Pump
 
-Tentacool
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Quaquaval @ Life Orb
+Level: 60
+Ability: Water Absorb
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Wave Crash
+- Close Combat
+- U-turn
+- Swords Dance
+
+Samurott-Hisui @ Expert Belt
+Level: 60
+Ability: Water Absorb
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Sucker Punch
+- Megahorn
+- Swords Dance
+
+Gorebyss @ Expert Belt
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Psychic
+- Ice Beam
+- Hydro Pump
+
+Lumineon @ Expert Belt
+Level: 60
+Ability: Water Absorb
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Aqua Tail
+- U-turn
+- Aerial Ace
+- Roost
+
+Politoed @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Psychic
+- Ice Beam
+- Toxic
 
 === TRAINER_CHRIS ===
 Name: CHRIS
@@ -27630,13 +28822,71 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Sandshrew
-Level: 25
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Armaldo @ Leftovers
+Level: 60
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- X-Scissor
+- Earthquake
+- Stealth Rock
 
-Sandshrew
-Level: 25
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Barbaracle @ Leftovers
+Level: 60
+Ability: Tough Claws
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Liquidation
+- Close Combat
+- Stealth Rock
+
+Carbink @ Sitrus Berry
+Level: 60
+Ability: Solid Rock
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Power Gem
+- Moonblast
+- Psychic
+- Stealth Rock
+
+Rhyperior @ Sitrus Berry
+Level: 60
+Ability: Lightning Rod
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Megahorn
+- Stealth Rock
+
+Golem @ Sitrus Berry
+Level: 60
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Earthquake
+- Hammer Arm
+- Stealth Rock
+
+Ursaluna @ Sitrus Berry
+Level: 60
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Headlong Rush
+- Double-Edge
+- Close Combat
+- Toxic
 
 === TRAINER_JOSUE ===
 Name: JOSUE
@@ -27647,13 +28897,71 @@ Music: Cool
 Double Battle: No
 AI: Smart Trainer
 
-Taillow
-Level: 25
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Braviary @ Life Orb
+Level: 60
+Ability: Sheer Force
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Double-Edge
+- Brave Bird
+- Superpower
+- Bulk Up
 
-Wingull
-Level: 25
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Corviknight @ Leftovers
+Level: 60
+Ability: Mirror Armor
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Brave Bird
+- Iron Head
+- Body Press
+- Roost
+
+Fearow @ Life Orb
+Level: 60
+Ability: Sniper
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Double-Edge
+- Drill Peck
+- Drill Run
+- Roost
+
+Pidgeot @ Expert Belt
+Level: 60
+Ability: Keen Eye
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Double-Edge
+- Brave Bird
+- U-turn
+- Roost
+
+Unfezant @ Expert Belt
+Level: 60
+Ability: Big Pecks
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Facade
+- Aerial Ace
+- U-turn
+- Roost
+
+Chatot @ Expert Belt
+Level: 60
+Ability: Punk Rock
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Boomburst
+- Hurricane
+- Heat Wave
+- Nasty Plot
 
 === TRAINER_CAMRON ===
 Name: CAMRON
@@ -27664,9 +28972,71 @@ Music: Swimmer
 Double Battle: No
 AI: Smart Trainer
 
-Staryu
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Veluza @ Life Orb
+Level: 60
+Ability: Mold Breaker
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Psychic Fangs
+- Crunch
+- Recover
+
+Golisopod @ Leftovers
+Level: 60
+Ability: Compound Eyes
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- First Impression
+- Liquidation
+- Close Combat
+- Toxic
+
+Omastar @ Leftovers
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Ancient Power
+- Surf
+- Ice Beam
+- Stealth Rock
+
+Bellibolt @ Sitrus Berry
+Level: 60
+Ability: Electromorphosis
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Thunderbolt
+- Muddy Water
+- Hyper Voice
+- Slack Off
+
+Lanturn @ Life Orb
+Level: 60
+Ability: Volt Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Thunderbolt
+- Ice Beam
+- Hydro Pump
+
+Heliolisk @ Expert Belt
+Level: 60
+Ability: Dry Skin
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Thunderbolt
+- Hyper Voice
+- Surf
+- Discharge
 
 === TRAINER_CORY_1 ===
 Name: CORY
@@ -27677,17 +29047,71 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Wingull
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Seismitoad @ Life Orb
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Earthquake
+- Poison Jab
+- Bulldoze
 
-Machop
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Dracovish @ Life Orb
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Dragon Rush
+- Earthquake
+- Fishious Rend
 
-Tentacool
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Barraskewda @ Expert Belt
+Level: 60
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Close Combat
+- Psychic Fangs
+- Waterfall
+
+Quaquaval @ Expert Belt
+Level: 60
+Ability: Water Absorb
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Wave Crash
+- Close Combat
+- U-turn
+- Swords Dance
+
+Poliwrath @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Earthquake
+- Toxic
+
+Annihilape @ Expert Belt
+Level: 60
+Ability: Defiant
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Close Combat
+- Shadow Claw
+- Earthquake
+- Bulk Up
 
 === TRAINER_CAROLINA ===
 Name: CAROLINA
@@ -27695,21 +29119,74 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
-Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
-Manectric
-Level: 24
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Manectric @ Life Orb
+Level: 60
+Ability: Lightning Rod
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Thunderbolt
+- Overheat
+- Hyper Voice
+- Discharge
 
-Swellow
-Level: 24
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Raichu @ Life Orb
+Level: 60
+Ability: Lightning Rod
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Thunder Punch
+- Play Rough
+- Iron Tail
+- Spark
 
-Manectric
-Level: 24
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Dedenne @ Expert Belt
+Level: 60
+Ability: Cheek Pouch
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Thunderbolt
+- Dazzling Gleam
+- Swift
+- Discharge
+
+Kilowattrel @ Expert Belt
+Level: 60
+Ability: Competitive
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Thunderbolt
+- Hurricane
+- Swift
+- Roost
+
+Emolga @ Expert Belt
+Level: 60
+Ability: Aerilate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Spark
+- Aerial Ace
+- Iron Tail
+- Roost
+
+Bombirdier @ Expert Belt
+Level: 60
+Ability: Big Pecks
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Wing Attack
+- Sucker Punch
+- Stone Edge
+- Roost
 
 === TRAINER_ELIJAH ===
 Name: ELIJAH
@@ -31011,13 +32488,71 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Sandshrew
-Level: 31
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Armaldo @ Leftovers
+Level: 60
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- X-Scissor
+- Earthquake
+- Stealth Rock
 
-Sandshrew
-Level: 31
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Barbaracle @ Leftovers
+Level: 60
+Ability: Tough Claws
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Liquidation
+- Close Combat
+- Stealth Rock
+
+Carbink @ Sitrus Berry
+Level: 60
+Ability: Solid Rock
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Power Gem
+- Moonblast
+- Psychic
+- Stealth Rock
+
+Rhyperior @ Sitrus Berry
+Level: 60
+Ability: Lightning Rod
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Megahorn
+- Stealth Rock
+
+Golem @ Sitrus Berry
+Level: 60
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Earthquake
+- Hammer Arm
+- Stealth Rock
+
+Ursaluna @ Sitrus Berry
+Level: 60
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Headlong Rush
+- Double-Edge
+- Close Combat
+- Toxic
 
 === TRAINER_ANDRES_3 ===
 Name: ANDRES
@@ -31028,17 +32563,71 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Nosepass
-Level: 33
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Armaldo @ Leftovers
+Level: 60
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- X-Scissor
+- Earthquake
+- Stealth Rock
 
-Sandshrew
-Level: 33
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Barbaracle @ Leftovers
+Level: 60
+Ability: Tough Claws
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Liquidation
+- Close Combat
+- Stealth Rock
 
-Sandshrew
-Level: 33
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Carbink @ Sitrus Berry
+Level: 60
+Ability: Solid Rock
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Power Gem
+- Moonblast
+- Psychic
+- Stealth Rock
+
+Rhyperior @ Sitrus Berry
+Level: 60
+Ability: Lightning Rod
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Megahorn
+- Stealth Rock
+
+Golem @ Sitrus Berry
+Level: 60
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Earthquake
+- Hammer Arm
+- Stealth Rock
+
+Ursaluna @ Sitrus Berry
+Level: 60
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Headlong Rush
+- Double-Edge
+- Close Combat
+- Toxic
 
 === TRAINER_ANDRES_4 ===
 Name: ANDRES
@@ -31049,17 +32638,71 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Nosepass
-Level: 35
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Armaldo @ Leftovers
+Level: 60
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- X-Scissor
+- Earthquake
+- Stealth Rock
 
-Sandshrew
-Level: 35
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Barbaracle @ Leftovers
+Level: 60
+Ability: Tough Claws
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Liquidation
+- Close Combat
+- Stealth Rock
 
-Sandshrew
-Level: 35
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Carbink @ Sitrus Berry
+Level: 60
+Ability: Solid Rock
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Power Gem
+- Moonblast
+- Psychic
+- Stealth Rock
+
+Rhyperior @ Sitrus Berry
+Level: 60
+Ability: Lightning Rod
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Megahorn
+- Stealth Rock
+
+Golem @ Sitrus Berry
+Level: 60
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Earthquake
+- Hammer Arm
+- Stealth Rock
+
+Ursaluna @ Sitrus Berry
+Level: 60
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Headlong Rush
+- Double-Edge
+- Close Combat
+- Toxic
 
 === TRAINER_ANDRES_5 ===
 Name: ANDRES
@@ -31070,17 +32713,71 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Nosepass
-Level: 37
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Armaldo @ Leftovers
+Level: 60
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- X-Scissor
+- Earthquake
+- Stealth Rock
 
-Sandslash
-Level: 37
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Barbaracle @ Leftovers
+Level: 60
+Ability: Tough Claws
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Liquidation
+- Close Combat
+- Stealth Rock
 
-Sandslash
-Level: 37
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Carbink @ Sitrus Berry
+Level: 60
+Ability: Solid Rock
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Power Gem
+- Moonblast
+- Psychic
+- Stealth Rock
+
+Rhyperior @ Sitrus Berry
+Level: 60
+Ability: Lightning Rod
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Earthquake
+- Stone Edge
+- Megahorn
+- Stealth Rock
+
+Golem @ Sitrus Berry
+Level: 60
+Ability: Sturdy
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Earthquake
+- Hammer Arm
+- Stealth Rock
+
+Ursaluna @ Sitrus Berry
+Level: 60
+Ability: Guts
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Headlong Rush
+- Double-Edge
+- Close Combat
+- Toxic
 
 === TRAINER_CORY_2 ===
 Name: CORY
@@ -31091,17 +32788,71 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Wingull
-Level: 30
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Seismitoad @ Life Orb
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Earthquake
+- Poison Jab
+- Bulldoze
 
-Machop
-Level: 30
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Dracovish @ Life Orb
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Dragon Rush
+- Earthquake
+- Fishious Rend
 
-Tentacool
-Level: 30
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Barraskewda @ Expert Belt
+Level: 60
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Close Combat
+- Psychic Fangs
+- Waterfall
+
+Quaquaval @ Expert Belt
+Level: 60
+Ability: Water Absorb
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Wave Crash
+- Close Combat
+- U-turn
+- Swords Dance
+
+Poliwrath @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Earthquake
+- Toxic
+
+Annihilape @ Expert Belt
+Level: 60
+Ability: Defiant
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Close Combat
+- Shadow Claw
+- Earthquake
+- Bulk Up
 
 === TRAINER_CORY_3 ===
 Name: CORY
@@ -31112,17 +32863,71 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Pelipper
-Level: 32
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Seismitoad @ Life Orb
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Earthquake
+- Poison Jab
+- Bulldoze
 
-Machop
-Level: 32
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Dracovish @ Life Orb
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Dragon Rush
+- Earthquake
+- Fishious Rend
 
-Tentacool
-Level: 32
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Barraskewda @ Expert Belt
+Level: 60
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Close Combat
+- Psychic Fangs
+- Waterfall
+
+Quaquaval @ Expert Belt
+Level: 60
+Ability: Water Absorb
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Wave Crash
+- Close Combat
+- U-turn
+- Swords Dance
+
+Poliwrath @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Earthquake
+- Toxic
+
+Annihilape @ Expert Belt
+Level: 60
+Ability: Defiant
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Close Combat
+- Shadow Claw
+- Earthquake
+- Bulk Up
 
 === TRAINER_CORY_4 ===
 Name: CORY
@@ -31133,17 +32938,71 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Pelipper
-Level: 34
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Seismitoad @ Life Orb
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Earthquake
+- Poison Jab
+- Bulldoze
 
-Machop
-Level: 34
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Dracovish @ Life Orb
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Dragon Rush
+- Earthquake
+- Fishious Rend
 
-Tentacruel
-Level: 34
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Barraskewda @ Expert Belt
+Level: 60
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Close Combat
+- Psychic Fangs
+- Waterfall
+
+Quaquaval @ Expert Belt
+Level: 60
+Ability: Water Absorb
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Wave Crash
+- Close Combat
+- U-turn
+- Swords Dance
+
+Poliwrath @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Earthquake
+- Toxic
+
+Annihilape @ Expert Belt
+Level: 60
+Ability: Defiant
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Close Combat
+- Shadow Claw
+- Earthquake
+- Bulk Up
 
 === TRAINER_CORY_5 ===
 Name: CORY
@@ -31154,17 +33013,71 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Pelipper
-Level: 36
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Seismitoad @ Life Orb
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Earthquake
+- Poison Jab
+- Bulldoze
 
-Machoke
-Level: 36
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Dracovish @ Life Orb
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Dragon Rush
+- Earthquake
+- Fishious Rend
 
-Tentacruel
-Level: 36
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Barraskewda @ Expert Belt
+Level: 60
+Ability: Swift Swim
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Close Combat
+- Psychic Fangs
+- Waterfall
+
+Quaquaval @ Expert Belt
+Level: 60
+Ability: Water Absorb
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Wave Crash
+- Close Combat
+- U-turn
+- Swords Dance
+
+Poliwrath @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Earthquake
+- Toxic
+
+Annihilape @ Expert Belt
+Level: 60
+Ability: Defiant
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Close Combat
+- Shadow Claw
+- Earthquake
+- Bulk Up
 
 === TRAINER_PABLO_2 ===
 Name: PABLO
