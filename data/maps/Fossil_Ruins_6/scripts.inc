@@ -192,14 +192,17 @@ Fossil_Ruins_6_EventScript_Release::
 	release
 	end
 
-@ The portal on the altar leads back to Petalburg City
+@ The portal on the altar leads to Route 118, east of Mauville City
 Fossil_Ruins_6_EventScript_Portal::
 	lockall
 	msgbox Fossil_Ruins_6_Text_Portal, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Fossil_Ruins_6_EventScript_PortalNo
 	closemessage
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	playse SE_WARP_IN
-	warp MAP_PETALBURG_CITY, 20, 17
+	@ Route 118 east of Mauville City, on the shore where the player has to surf on
+	@ (16,9): next to the water, outside the sight line of DALTON at (17,11)
+	warp MAP_ROUTE118, 16, 9
 	waitstate
 	releaseall
 	end
@@ -265,5 +268,6 @@ Fossil_Ruins_6_Text_OthersVanish:
 	.string "back into the stars…$"
 
 Fossil_Ruins_6_Text_Portal:
-	.string "A portal of starlight. It leads back\n"
-	.string "to PETALBURG CITY. Step through?$"
+	.string "A portal of starlight. It leads to\n"
+	.string "ROUTE 118, east of MAUVILLE CITY.\p"
+	.string "Step through?$"
