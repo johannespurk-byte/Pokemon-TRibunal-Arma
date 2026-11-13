@@ -11,12 +11,13 @@ Common_EventScript_RegionalTrader::
 Common_EventScript_RegionalTraderChooseRegion::
 	message Common_Text_RegionalTraderWhichRegion
 	waitmessage
-	dynmultichoice 18, 0, FALSE, 5, 0, DYN_MULTICHOICE_CB_NONE, Common_Text_RegionAlola, Common_Text_RegionGalar, Common_Text_RegionHisui, Common_Text_RegionPaldea, gText_Exit
+	dynmultichoice 18, 0, FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, Common_Text_RegionAlola, Common_Text_RegionGalar, Common_Text_RegionHisui, Common_Text_RegionPaldea, Common_Text_RegionParadox, gText_Exit
 	switch VAR_RESULT
 	case 0, Common_EventScript_RegionalTraderAlola
 	case 1, Common_EventScript_RegionalTraderGalar
 	case 2, Common_EventScript_RegionalTraderHisui
 	case 3, Common_EventScript_RegionalTraderPaldea
+	case 4, Common_EventScript_RegionalTraderParadox
 	goto Common_EventScript_RegionalTraderDecline
 
 Common_EventScript_RegionalTraderAlola::
@@ -279,6 +280,102 @@ Common_EventScript_RegionalTraderPick_TAUROS_PALDEA_AQUA::
 	setvar VAR_0x8005, SPECIES_TAUROS_PALDEA_AQUA
 	goto Common_EventScript_RegionalTraderChooseMon
 
+Common_EventScript_RegionalTraderParadox::
+	message Common_Text_RegionalTraderWhichMon
+	waitmessage
+	dynmultichoice 16, 0, FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, Common_Text_Rf_GREAT_TUSK, Common_Text_Rf_SCREAM_TAIL, Common_Text_Rf_BRUTE_BONNET, Common_Text_Rf_FLUTTER_MANE, Common_Text_Rf_SLITHER_WING, Common_Text_Rf_SANDY_SHOCKS, Common_Text_Rf_ROARING_MOON, Common_Text_Rf_WALKING_WAKE, Common_Text_Rf_GOUGING_FIRE, Common_Text_Rf_RAGING_BOLT, Common_Text_Rf_IRON_TREADS, Common_Text_Rf_IRON_BUNDLE, Common_Text_Rf_IRON_HANDS, Common_Text_Rf_IRON_JUGULIS, Common_Text_Rf_IRON_MOTH, Common_Text_Rf_IRON_THORNS, Common_Text_Rf_IRON_VALIANT, Common_Text_Rf_IRON_LEAVES, Common_Text_Rf_IRON_BOULDER, Common_Text_Rf_IRON_CROWN, Common_Text_Rf_KORAIDON, Common_Text_Rf_MIRAIDON, gText_Exit
+	switch VAR_RESULT
+	case 0, Common_EventScript_RegionalTraderPick_GREAT_TUSK
+	case 1, Common_EventScript_RegionalTraderPick_SCREAM_TAIL
+	case 2, Common_EventScript_RegionalTraderPick_BRUTE_BONNET
+	case 3, Common_EventScript_RegionalTraderPick_FLUTTER_MANE
+	case 4, Common_EventScript_RegionalTraderPick_SLITHER_WING
+	case 5, Common_EventScript_RegionalTraderPick_SANDY_SHOCKS
+	case 6, Common_EventScript_RegionalTraderPick_ROARING_MOON
+	case 7, Common_EventScript_RegionalTraderPick_WALKING_WAKE
+	case 8, Common_EventScript_RegionalTraderPick_GOUGING_FIRE
+	case 9, Common_EventScript_RegionalTraderPick_RAGING_BOLT
+	case 10, Common_EventScript_RegionalTraderPick_IRON_TREADS
+	case 11, Common_EventScript_RegionalTraderPick_IRON_BUNDLE
+	case 12, Common_EventScript_RegionalTraderPick_IRON_HANDS
+	case 13, Common_EventScript_RegionalTraderPick_IRON_JUGULIS
+	case 14, Common_EventScript_RegionalTraderPick_IRON_MOTH
+	case 15, Common_EventScript_RegionalTraderPick_IRON_THORNS
+	case 16, Common_EventScript_RegionalTraderPick_IRON_VALIANT
+	case 17, Common_EventScript_RegionalTraderPick_IRON_LEAVES
+	case 18, Common_EventScript_RegionalTraderPick_IRON_BOULDER
+	case 19, Common_EventScript_RegionalTraderPick_IRON_CROWN
+	case 20, Common_EventScript_RegionalTraderPick_KORAIDON
+	case 21, Common_EventScript_RegionalTraderPick_MIRAIDON
+	goto Common_EventScript_RegionalTraderChooseRegion
+
+Common_EventScript_RegionalTraderPick_GREAT_TUSK::
+	setvar VAR_0x8005, SPECIES_GREAT_TUSK
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_SCREAM_TAIL::
+	setvar VAR_0x8005, SPECIES_SCREAM_TAIL
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_BRUTE_BONNET::
+	setvar VAR_0x8005, SPECIES_BRUTE_BONNET
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_FLUTTER_MANE::
+	setvar VAR_0x8005, SPECIES_FLUTTER_MANE
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_SLITHER_WING::
+	setvar VAR_0x8005, SPECIES_SLITHER_WING
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_SANDY_SHOCKS::
+	setvar VAR_0x8005, SPECIES_SANDY_SHOCKS
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_ROARING_MOON::
+	setvar VAR_0x8005, SPECIES_ROARING_MOON
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_WALKING_WAKE::
+	setvar VAR_0x8005, SPECIES_WALKING_WAKE
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_GOUGING_FIRE::
+	setvar VAR_0x8005, SPECIES_GOUGING_FIRE
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_RAGING_BOLT::
+	setvar VAR_0x8005, SPECIES_RAGING_BOLT
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_IRON_TREADS::
+	setvar VAR_0x8005, SPECIES_IRON_TREADS
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_IRON_BUNDLE::
+	setvar VAR_0x8005, SPECIES_IRON_BUNDLE
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_IRON_HANDS::
+	setvar VAR_0x8005, SPECIES_IRON_HANDS
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_IRON_JUGULIS::
+	setvar VAR_0x8005, SPECIES_IRON_JUGULIS
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_IRON_MOTH::
+	setvar VAR_0x8005, SPECIES_IRON_MOTH
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_IRON_THORNS::
+	setvar VAR_0x8005, SPECIES_IRON_THORNS
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_IRON_VALIANT::
+	setvar VAR_0x8005, SPECIES_IRON_VALIANT
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_IRON_LEAVES::
+	setvar VAR_0x8005, SPECIES_IRON_LEAVES
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_IRON_BOULDER::
+	setvar VAR_0x8005, SPECIES_IRON_BOULDER
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_IRON_CROWN::
+	setvar VAR_0x8005, SPECIES_IRON_CROWN
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_KORAIDON::
+	setvar VAR_0x8005, SPECIES_KORAIDON
+	goto Common_EventScript_RegionalTraderChooseMon
+Common_EventScript_RegionalTraderPick_MIRAIDON::
+	setvar VAR_0x8005, SPECIES_MIRAIDON
+	goto Common_EventScript_RegionalTraderChooseMon
+
 Common_EventScript_RegionalTraderChooseMon::
 	bufferspeciesname STR_VAR_2, VAR_0x8005
 	msgbox Common_Text_RegionalTraderGiveWhich, MSGBOX_DEFAULT
@@ -362,11 +459,12 @@ Common_EventScript_ItemRefillerDecline::
 Common_Text_RegionalTraderIntro:
 	.string "I study POKéMON from far-off regions.\p"
 	.string "Give me any POKéMON you like and\n"
-	.string "I'll trade you a regional form!\p"
+	.string "I'll trade you a regional form\n"
+	.string "or a PARADOX POKéMON!\p"
 	.string "Want to make a trade?$"
 
 Common_Text_RegionalTraderWhichRegion:
-	.string "Which region interests you?$"
+	.string "Which kind interests you?$"
 
 Common_Text_RegionalTraderWhichMon:
 	.string "Which POKéMON would you like?$"
@@ -414,6 +512,9 @@ Common_Text_RegionHisui:
 
 Common_Text_RegionPaldea:
 	.string "PALDEA$"
+
+Common_Text_RegionParadox:
+	.string "PARADOX$"
 
 Common_Text_Rf_RATTATA_ALOLA:
 	.string "Rattata$"
@@ -585,6 +686,72 @@ Common_Text_Rf_TAUROS_PALDEA_BLAZE:
 
 Common_Text_Rf_TAUROS_PALDEA_AQUA:
 	.string "Tauros Aqua$"
+
+Common_Text_Rf_GREAT_TUSK:
+	.string "Great Tusk$"
+
+Common_Text_Rf_SCREAM_TAIL:
+	.string "Scream Tail$"
+
+Common_Text_Rf_BRUTE_BONNET:
+	.string "Brute Bonnet$"
+
+Common_Text_Rf_FLUTTER_MANE:
+	.string "Flutter Mane$"
+
+Common_Text_Rf_SLITHER_WING:
+	.string "Slither Wing$"
+
+Common_Text_Rf_SANDY_SHOCKS:
+	.string "Sandy Shocks$"
+
+Common_Text_Rf_ROARING_MOON:
+	.string "Roaring Moon$"
+
+Common_Text_Rf_WALKING_WAKE:
+	.string "Walking Wake$"
+
+Common_Text_Rf_GOUGING_FIRE:
+	.string "Gouging Fire$"
+
+Common_Text_Rf_RAGING_BOLT:
+	.string "Raging Bolt$"
+
+Common_Text_Rf_IRON_TREADS:
+	.string "Iron Treads$"
+
+Common_Text_Rf_IRON_BUNDLE:
+	.string "Iron Bundle$"
+
+Common_Text_Rf_IRON_HANDS:
+	.string "Iron Hands$"
+
+Common_Text_Rf_IRON_JUGULIS:
+	.string "Iron Jugulis$"
+
+Common_Text_Rf_IRON_MOTH:
+	.string "Iron Moth$"
+
+Common_Text_Rf_IRON_THORNS:
+	.string "Iron Thorns$"
+
+Common_Text_Rf_IRON_VALIANT:
+	.string "Iron Valiant$"
+
+Common_Text_Rf_IRON_LEAVES:
+	.string "Iron Leaves$"
+
+Common_Text_Rf_IRON_BOULDER:
+	.string "Iron Boulder$"
+
+Common_Text_Rf_IRON_CROWN:
+	.string "Iron Crown$"
+
+Common_Text_Rf_KORAIDON:
+	.string "Koraidon$"
+
+Common_Text_Rf_MIRAIDON:
+	.string "Miraidon$"
 
 Common_Text_ItemRefillerIntro:
 	.string "I'm the ITEM REFILLER!\p"
