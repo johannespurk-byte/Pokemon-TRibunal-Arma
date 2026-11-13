@@ -27,6 +27,22 @@ SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre::
 	waitmovement 0
 	msgbox SeafloorCavern_Room9_Text_ArchieYouMustDisappear, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_ARCHIE, SeafloorCavern_Room9_Text_ArchieDefeat
+	special HealPlayerParty
+	addobject LOCALID_SEAFLOOR_CAVERN_GIOVANNI
+	applymovement LOCALID_SEAFLOOR_CAVERN_GIOVANNI, SeafloorCavern_Room9_Movement_GiovanniApproach
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	playbgm MUS_RG_ENCOUNTER_ROCKET, FALSE
+	msgbox SeafloorCavern_Room9_Text_GiovanniIntro, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_GIOVANNI_SEAFLOOR_CAVERN, SeafloorCavern_Room9_Text_GiovanniDefeat
+	msgbox SeafloorCavern_Room9_Text_GiovanniAfterBattle, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_SEAFLOOR_CAVERN_GIOVANNI
+	fadescreen FADE_FROM_BLACK
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
 	msgbox SeafloorCavern_Room9_Text_ArchieWithThisRedOrb, MSGBOX_DEFAULT
 	setweather WEATHER_NONE
 	doweather
@@ -314,3 +330,29 @@ SeafloorCavern_Room9_Text_MaxieWeDontHaveTimeToArgue:
 SeafloorCavern_Room9_Text_MaxieComeOnPlayer:
 	.string "MAXIE: {PLAYER}, come on, you have\n"
 	.string "to get out of here, too!$"
+
+SeafloorCavern_Room9_Movement_GiovanniApproach:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	face_up
+	step_end
+
+SeafloorCavern_Room9_Text_GiovanniIntro:
+	.string "GIOVANNI: ARCHIE has failed, it seems.\p"
+	.string "TEAM ROCKET did not come all this way\n"
+	.string "to watch a child ruin our plans.\p"
+	.string "KYOGRE will awaken today.\n"
+	.string "Now, face me!$"
+
+SeafloorCavern_Room9_Text_GiovanniDefeat:
+	.string "GIOVANNI: …Again you stand in my way.$"
+
+SeafloorCavern_Room9_Text_GiovanniAfterBattle:
+	.string "GIOVANNI: Very well. KYOGRE wakes\n"
+	.string "regardless. TEAM ROCKET has seen\l"
+	.string "what it needed to see.$"
