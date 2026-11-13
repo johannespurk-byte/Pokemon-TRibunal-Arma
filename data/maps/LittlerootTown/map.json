@@ -164,6 +164,13 @@
       "elevation": 0,
       "dest_map": "MAP_MAMOR_CACE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_LITTLEROOT_ARENA",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
