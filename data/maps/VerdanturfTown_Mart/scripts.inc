@@ -14,16 +14,16 @@ VerdanturfTown_Mart_EventScript_Clerk::
 	.align 2
 VerdanturfTown_Mart_Pokemart:
 	.2byte ITEM_GREAT_BALL
-	.2byte  ITEM_MAGMARIZER
-	.2byte  ITEM_DUBIOUS_DISC
+	.2byte ITEM_MAGMARIZER
+	.2byte ITEM_DUBIOUS_DISC
 	.2byte ITEM_REAPER_CLOTH
 	.2byte ITEM_PRISM_SCALE
 	.2byte ITEM_WHIPPED_DREAM
 	.2byte ITEM_SACHET
-	.2byte  ITEM_OVAL_STONE
-	.2byte ITEM_REPEL
-	.2byte  ITEM_STRAWBERRY_SWEET 
-	.2byte   ITEM_LOVE_SWEET
+	.2byte ITEM_OVAL_STONE
+	.2byte ITEM_STRAWBERRY_SWEET
+	.2byte ITEM_LOVE_SWEET
+	.2byte ITEM_EXP_CANDY_M
 	pokemartlistend
 
 VerdanturfTown_Mart_EventScript_Boy::
