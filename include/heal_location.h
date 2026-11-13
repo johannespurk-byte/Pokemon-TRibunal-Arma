@@ -15,6 +15,7 @@ const struct HealLocation *GetHealLocationByMap(u16 mapGroup, u16 mapNum);
 const struct HealLocation *GetHealLocation(u32 index);
 bool32 IsLastHealLocationPlayerHouse();
 bool32 IsLastHealLocationOldLadysRestStop(void);
+bool32 IsLastHealLocationFossilRuins(void);
 void SetWhiteoutRespawnWarpAndHealerNPC(struct WarpData * warp);
 u32 GetHealNpcLocalId(u32 healLocationId);
 

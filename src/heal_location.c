@@ -82,6 +82,12 @@ bool32 IsLastHealLocationOldLadysRestStop(void)
     return IsLastHealLocation(HEAL_LOCATION_ROUTE111_OLD_LADYS_REST_STOP);
 }
 
+// Respawn right before the boss fights in Fossil Ruins 5 and 6
+bool32 IsLastHealLocationFossilRuins(void)
+{
+    return IsLastHealLocation(HEAL_LOCATION_FOSSIL_RUINS_5) || IsLastHealLocation(HEAL_LOCATION_FOSSIL_RUINS_6);
+}
+
 u32 GetHealNpcLocalId(u32 healLocationId)
 {
     if (healLocationId == HEAL_LOCATION_NONE || healLocationId >= NUM_HEAL_LOCATIONS)

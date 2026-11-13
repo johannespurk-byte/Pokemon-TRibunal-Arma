@@ -8,6 +8,7 @@ Fossil_Ruins_6_MapScripts::
 
 Fossil_Ruins_6_EventScript_Showdown::
 	lockall
+	setrespawn HEAL_LOCATION_FOSSIL_RUINS_6
 	turnobject LOCALID_PLAYER, DIR_NORTH
 	goto_if_not_defeated TRAINER_GIOVANNI_FOSSIL_RUINS_6, Fossil_Ruins_6_EventScript_Giovanni
 	goto_if_not_defeated TRAINER_MAXIE_FOSSIL_RUINS_6, Fossil_Ruins_6_EventScript_Maxie

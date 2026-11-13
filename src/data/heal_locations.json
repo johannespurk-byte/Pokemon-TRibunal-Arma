@@ -367,6 +367,18 @@
       "respawn_npc": "LOCALID_OLD_LADYS_REST_STOP_OLD_LADY",
       "respawn_x": 6,
       "respawn_y": 4
+    },
+    {
+      "id": "HEAL_LOCATION_FOSSIL_RUINS_5",
+      "map": "MAP_FOSSIL_RUINS_5",
+      "x": 11,
+      "y": 8
+    },
+    {
+      "id": "HEAL_LOCATION_FOSSIL_RUINS_6",
+      "map": "MAP_FOSSIL_RUINS_6",
+      "x": 16,
+      "y": 15
     }
   ]
 }

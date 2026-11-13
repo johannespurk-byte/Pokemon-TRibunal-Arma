@@ -5,6 +5,7 @@ Fossil_Ruins_5_MapScripts::
 @ The trigger sits at the top of the only stairs into the hall.
 Fossil_Ruins_5_EventScript_Showdown::
 	lockall
+	setrespawn HEAL_LOCATION_FOSSIL_RUINS_5
 	goto_if_not_defeated TRAINER_ARCHIE_FOSSIL_RUINS, Fossil_Ruins_5_EventScript_Archie
 	goto_if_not_defeated TRAINER_GIOVANNI_FOSSIL_RUINS_5, Fossil_Ruins_5_EventScript_Giovanni
 	goto Fossil_Ruins_5_EventScript_Rift
@@ -206,3 +207,15 @@ Fossil_Ruins_5_Text_UndineExplainCrystal::
 Fossil_Ruins_5_Text_UndinePostBattle::
 	.string "Hier unten ist das Wasser so still...\n"
 	.string "Aber du hast es zum Kochen gebracht!$"
+
+@ Used after a whiteout when the last respawn point was a boss hall in Fossil Ruins 5 or 6
+EventScript_AfterWhiteOutFossilRuins::
+	lockall
+	msgbox Fossil_Ruins_5_Text_WhiteOutRecovered, MSGBOX_DEFAULT
+	fadedefaultbgm
+	releaseall
+	end
+
+Fossil_Ruins_5_Text_WhiteOutRecovered:
+	.string "Your POKéMON have recovered.\n"
+	.string "The fight is still waiting ahead!$"

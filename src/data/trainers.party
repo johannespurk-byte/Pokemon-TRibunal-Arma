@@ -35394,17 +35394,6 @@ Timid Nature
 - Ice Beam
 - Flamethrower
 
-Nidoqueen @ Black Sludge
-Level: 70
-Ability: Sheer Force
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Earth Power
-- Sludge Wave
-- Ice Beam
-- Stealth Rock
-
 Rhyperior @ Weakness Policy
 Level: 70
 Ability: Solid Rock
@@ -35449,39 +35438,6 @@ Jolly Nature
 - Stone Edge
 - Knock Off
 
-Hippowdon @ Leftovers
-Level: 70
-Ability: Sand Stream
-EVs: 252 HP / 4 Atk / 252 Def
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Impish Nature
-- Earthquake
-- Slack Off
-- Stealth Rock
-- Whirlwind
-
-Gliscor @ Toxic Orb
-Level: 70
-Ability: Poison Heal
-EVs: 252 HP / 4 Atk / 252 Def
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Impish Nature
-- Earthquake
-- Knock Off
-- Protect
-- Toxic
-
-Krookodile @ Life Orb
-Level: 70
-Ability: Moxie
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Earthquake
-- Knock Off
-- Close Combat
-- Stone Edge
-
 Tyranitar @ Assault Vest
 Level: 70
 Ability: Sand Stream
@@ -35503,6 +35459,50 @@ Adamant Nature
 - Headlong Rush
 - Close Combat
 - Swords Dance
+
+Ting-Lu @ Leftovers
+Level: 70
+Ability: Vessel Of Ruin
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Impish Nature
+- Earthquake
+- Ruination
+- Stealth Rock
+- Whirlwind
+
+Great Tusk @ Booster Energy
+Level: 70
+Ability: Protosynthesis
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Headlong Rush
+- Close Combat
+- Stone Edge
+- Rapid Spin
+
+Iron Treads @ Booster Energy
+Level: 70
+Ability: Quark Drive
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Iron Head
+- Knock Off
+- Rapid Spin
+
+Sandy Shocks @ Booster Energy
+Level: 70
+Ability: Protosynthesis
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Earth Power
+- Thunderbolt
+- Volt Switch
+- Stealth Rock
 
 === TRAINER_MAXIE_FOSSIL_RUINS_6 ===
 Name: MAXIE
@@ -35540,17 +35540,6 @@ Modest Nature
 - Ancient Power
 - Stealth Rock
 
-Torkoal @ Heat Rock
-Level: 70
-Ability: Drought
-EVs: 252 HP / 4 Atk / 252 Def
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Bold Nature
-- Lava Plume
-- Solar Beam
-- Rapid Spin
-- Yawn
-
 Heatran @ Leftovers
 Level: 70
 Ability: Flash Fire
@@ -35584,28 +35573,6 @@ Timid Nature
 - Sludge Bomb
 - Nasty Plot
 
-Ninetales @ Choice Specs
-Level: 70
-Ability: Drought
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Timid Nature
-- Fire Blast
-- Solar Beam
-- Extrasensory
-- Overheat
-
-Arcanine-Hisui @ Choice Band
-Level: 70
-Ability: Rock Head
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Flare Blitz
-- Head Smash
-- Extreme Speed
-- Close Combat
-
 Skeledirge @ Leftovers
 Level: 70
 Ability: Unaware
@@ -35616,17 +35583,6 @@ Modest Nature
 - Shadow Ball
 - Slack Off
 - Will-O-Wisp
-
-Infernape @ Life Orb
-Level: 70
-Ability: Iron Fist
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Flare Blitz
-- Close Combat
-- Mach Punch
-- Thunder Punch
 
 Flygon @ Choice Scarf
 Level: 70
@@ -35639,16 +35595,60 @@ Jolly Nature
 - U-turn
 - Fire Punch
 
-Coalossal @ Heavy-Duty Boots
+Entei @ Choice Band
 Level: 70
-Ability: Flame Body
-EVs: 252 HP / 252 Atk / 4 SpD
+Ability: Inner Focus
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Sacred Fire
+- Extreme Speed
+- Stone Edge
+- Crunch
+
+Chi-Yu @ Choice Specs
+Level: 70
+Ability: Beads Of Ruin
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Overheat
+- Dark Pulse
+- Flamethrower
+- Psychic
+
+Gouging Fire @ Booster Energy
+Level: 70
+Ability: Protosynthesis
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Raging Fury
+- Outrage
+- Dragon Dance
+- Earthquake
+
+Iron Moth @ Booster Energy
+Level: 70
+Ability: Quark Drive
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Fiery Dance
+- Sludge Wave
+- Overheat
+- Dazzling Gleam
+
+Slither Wing @ Booster Energy
+Level: 70
+Ability: Protosynthesis
+EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Adamant Nature
-- Stone Edge
-- Fire Punch
-- Rapid Spin
-- Stealth Rock
+- First Impression
+- Close Combat
+- Superpower
+- U-turn
 
 === TRAINER_ARCHIE_FOSSIL_RUINS_6 ===
 Name: ARCHIE
@@ -35730,28 +35730,6 @@ Adamant Nature
 - Ice Punch
 - Stealth Rock
 
-Toxapex @ Black Sludge
-Level: 70
-Ability: Regenerator
-EVs: 252 HP / 4 Atk / 252 Def
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Bold Nature
-- Scald
-- Toxic
-- Recover
-- Haze
-
-Walrein @ Leftovers
-Level: 70
-Ability: Thick Fat
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Calm Nature
-- Surf
-- Ice Beam
-- Protect
-- Toxic
-
 Barraskewda @ Choice Band
 Level: 70
 Ability: Swift Swim
@@ -35763,35 +35741,58 @@ Jolly Nature
 - Psychic Fangs
 - Aqua Jet
 
-Milotic @ Leftovers
+Suicune @ Leftovers
 Level: 70
-Ability: Marvel Scale
+Ability: Pressure
 EVs: 252 HP / 4 Atk / 252 Def
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Bold Nature
 - Scald
+- Calm Mind
 - Ice Beam
-- Recover
-- Haze
+- Protect
 
-Ludicolo @ Life Orb
+Walking Wake @ Choice Specs
 Level: 70
-Ability: Swift Swim
+Ability: Protosynthesis
 EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
+Timid Nature
+- Hydro Steam
+- Draco Meteor
+- Flamethrower
 - Hydro Pump
-- Giga Drain
-- Ice Beam
-- Focus Blast
 
-Crawdaunt @ Life Orb
+Iron Bundle @ Booster Energy
 Level: 70
-Ability: Adaptability
+Ability: Quark Drive
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Hydro Pump
+- Freeze-Dry
+- Ice Beam
+- Flip Turn
+
+Tapu Fini @ Leftovers
+Level: 70
+Ability: Misty Surge
+EVs: 252 HP / 4 Atk / 252 Def
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Bold Nature
+- Scald
+- Moonblast
+- Calm Mind
+- Taunt
+
+Urshifu-Rapid-Strike @ Choice Band
+Level: 70
+Ability: Unseen Fist
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Crabhammer
-- Knock Off
+Jolly Nature
+- Surging Strikes
+- Close Combat
 - Aqua Jet
-- Swords Dance
+- U-turn
+
