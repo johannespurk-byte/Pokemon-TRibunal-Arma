@@ -909,6 +909,8 @@
 #define TRAINER_LYRA_E4                       902
 #define TRAINER_MAY_E4                        903
 #define TRAINER_DAWN_E4                       904
+#define TRAINER_GIOVANNI_MAGMA_HIDEOUT        905
+#define TRAINER_GIOVANNI_SEAFLOOR_CAVERN      906
 #
 #if !IS_FRLG
 // The Rocket Hideout under the Mauville Game Corner shares its scripts with FRLG,
@@ -942,7 +944,7 @@
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     905
+#define TRAINERS_COUNT_EMERALD     907
 #define MAX_TRAINERS_COUNT_EMERALD 910
 
 #if IS_FRLG

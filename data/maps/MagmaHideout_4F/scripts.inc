@@ -56,6 +56,16 @@ MagmaHideout_4F_EventScript_Maxie::
 	trainerbattle_no_intro TRAINER_MAXIE_MAGMA_HIDEOUT, MagmaHideout_4F_Text_MaxieDefeat
 	msgbox MagmaHideout_4F_Text_MaxieImGoingAfterGroudon, MSGBOX_DEFAULT
 	closemessage
+	special HealPlayerParty
+	applymovement LOCALID_MAGMA_HIDEOUT_4F_GIOVANNI, Common_Movement_FaceRight
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	playbgm MUS_RG_ENCOUNTER_ROCKET, FALSE
+	msgbox MagmaHideout_4F_Text_GiovanniIntro, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_GIOVANNI_MAGMA_HIDEOUT, MagmaHideout_4F_Text_GiovanniDefeat
+	msgbox MagmaHideout_4F_Text_GiovanniAfterBattle, MSGBOX_DEFAULT
+	closemessage
 	clearflag FLAG_HIDE_SLATEPORT_CITY_CAPTAIN_STERN
 	clearflag FLAG_HIDE_SLATEPORT_CITY_GABBY_AND_TY
 	setvar VAR_SLATEPORT_CITY_STATE, 1
@@ -67,6 +77,7 @@ MagmaHideout_4F_EventScript_Maxie::
 	removeobject LOCALID_MAGMA_HIDEOUT_4F_GRUNT_2
 	removeobject LOCALID_MAGMA_HIDEOUT_4F_GRUNT_3
 	removeobject LOCALID_MAGMA_HIDEOUT_4F_TABITHA
+	removeobject LOCALID_MAGMA_HIDEOUT_4F_GIOVANNI
 	setflag FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS
 	fadescreen FADE_FROM_BLACK
 	releaseall
@@ -221,3 +232,20 @@ MagmaHideout_4F_Text_MaxieImGoingAfterGroudon:
 	.string "any need for this blasted volcano.\p"
 	.string "I am going after GROUDON, so this\n"
 	.string "is where we part!$"
+
+MagmaHideout_4F_Text_GiovanniIntro:
+	.string "GIOVANNI: Hmph. So MAXIE could not\n"
+	.string "stop a mere child.\p"
+	.string "TEAM ROCKET paid good money to see\n"
+	.string "GROUDON awaken. Nothing will spoil\l"
+	.string "our deal. I will deal with you myself!$"
+
+MagmaHideout_4F_Text_GiovanniDefeat:
+	.string "GIOVANNI: …Impressive.\n"
+	.string "You are stronger than I thought.$"
+
+MagmaHideout_4F_Text_GiovanniAfterBattle:
+	.string "GIOVANNI: GROUDON is free now.\n"
+	.string "Whatever happens next, TEAM ROCKET\l"
+	.string "wins either way.\p"
+	.string "We will meet again, child.$"
