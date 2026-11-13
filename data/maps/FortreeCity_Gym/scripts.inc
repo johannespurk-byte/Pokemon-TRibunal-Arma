@@ -18,7 +18,8 @@ FortreeCity_Gym_EventScript_InitRotatingGates::
 	end
 
 FortreeCity_Gym_EventScript_Winona::
-	trainerbattle_single TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaIntro, FortreeCity_Gym_Text_WinonaDefeat, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaIntro, FortreeCity_Gym_Text_WinonaDefeat, FortreeCity_Gym_EventScript_BrockChallenge, NO_MUSIC
+	goto_if_not_defeated TRAINER_BROCK_FORTREE, FortreeCity_Gym_EventScript_BrockChallenge
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_WinonaRematch
 	goto_if_unset FLAG_RECEIVED_TM_AERIAL_ACE, FortreeCity_Gym_EventScript_GiveAerialAce2
@@ -26,7 +27,17 @@ FortreeCity_Gym_EventScript_Winona::
 	release
 	end
 
+@ After the leader, BROCK challenges the player; the badge comes after both
+FortreeCity_Gym_EventScript_BrockChallenge::
+	msgbox FortreeCity_Gym_Text_BrockLeaderAfter, MSGBOX_DEFAULT
+	special HealPlayerParty
+	msgbox FortreeCity_Gym_Text_BrockAppears, MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_BROCK_FORTREE, FortreeCity_Gym_Text_BrockIntro, FortreeCity_Gym_Text_BrockDefeat, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
+	release
+	end
+
 FortreeCity_Gym_EventScript_WinonaDefeated::
+	msgbox FortreeCity_Gym_Text_BrockAfterBattle, MSGBOX_DEFAULT
 	message FortreeCity_Gym_Text_ReceivedFeatherBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -35,6 +46,7 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	setflag FLAG_BADGE06_GET
 	setvar VAR_0x8008, 6
 	call Common_EventScript_SetGymTrainers
+	call FortreeCity_Gym_EventScript_GiveBrockStone
 	call FortreeCity_Gym_EventScript_GiveAerialAce
 	closemessage
 	delay 30
@@ -317,3 +329,37 @@ FortreeCity_Gym_Text_WinonaRematchNeedTwoMons:
 	.string "POKéMON with you?\p"
 	.string "Please return with two POKéMON\n"
 	.string "at the very least.$"
+
+FortreeCity_Gym_EventScript_GiveBrockStone::
+	msgbox FortreeCity_Gym_Text_BrockGiveStone, MSGBOX_DEFAULT
+	giveitem ITEM_AERODACTYLITE, 1
+	return
+
+FortreeCity_Gym_Text_BrockLeaderAfter:
+	.string "WINONA: Wait, it is not over yet!\p"
+	.string "An old friend from KANTO is visiting\n"
+	.string "my GYM. Let me heal your POKéMON first!$"
+
+FortreeCity_Gym_Text_BrockAppears:
+	.string "BROCK: Flying high, huh? Let us see how\n"
+	.string "you handle rock-solid defense!\p"
+	.string "WINONA: BROCK, the GYM LEADER of\n"
+	.string "PEWTER CITY! Show them, BROCK!$"
+
+FortreeCity_Gym_Text_BrockIntro:
+	.string "BROCK: My rock-hard willpower is\n"
+	.string "known even in HOENN!\p"
+	.string "Come on, show me your best!$"
+
+FortreeCity_Gym_Text_BrockDefeat:
+	.string "BROCK: I took you for granted…\n"
+	.string "You really are strong!$"
+
+FortreeCity_Gym_Text_BrockAfterBattle:
+	.string "WINONA: You beat us both!\n"
+	.string "That earns you my BADGE!$"
+
+FortreeCity_Gym_Text_BrockGiveStone:
+	.string "BROCK: Take this as well.\p"
+	.string "A MEGA STONE from the old fossil\n"
+	.string "pits near PEWTER. Use it well!$"

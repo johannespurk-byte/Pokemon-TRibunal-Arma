@@ -54,7 +54,8 @@ MossdeepCity_Gym_EventScript_SetSwitch4Metatiles::
 	end
 
 MossdeepCity_Gym_EventScript_TateAndLiza::
-	trainerbattle_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaIntro, MossdeepCity_Gym_Text_TateAndLizaDefeat, MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons, MossdeepCity_Gym_EventScript_TateAndLizaDefeated, NO_MUSIC
+	trainerbattle_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaIntro, MossdeepCity_Gym_Text_TateAndLizaDefeat, MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons, MossdeepCity_Gym_EventScript_AgathaChallenge, NO_MUSIC
+	goto_if_not_defeated TRAINER_AGATHA_MOSSDEEP, MossdeepCity_Gym_EventScript_AgathaChallenge
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_TateAndLizaRematch
 	goto_if_unset FLAG_RECEIVED_TM_CALM_MIND, MossdeepCity_Gym_EventScript_GiveCalmMind2
@@ -62,7 +63,17 @@ MossdeepCity_Gym_EventScript_TateAndLiza::
 	release
 	end
 
+@ After the leader, AGATHA challenges the player; the badge comes after both
+MossdeepCity_Gym_EventScript_AgathaChallenge::
+	msgbox MossdeepCity_Gym_Text_AgathaLeaderAfter, MSGBOX_DEFAULT
+	special HealPlayerParty
+	msgbox MossdeepCity_Gym_Text_AgathaAppears, MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_AGATHA_MOSSDEEP, MossdeepCity_Gym_Text_AgathaIntro, MossdeepCity_Gym_Text_AgathaDefeat, MossdeepCity_Gym_EventScript_TateAndLizaDefeated, NO_MUSIC
+	release
+	end
+
 MossdeepCity_Gym_EventScript_TateAndLizaDefeated::
+	msgbox MossdeepCity_Gym_Text_AgathaAfterBattle, MSGBOX_DEFAULT
 	message MossdeepCity_Gym_Text_ReceivedMindBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -82,6 +93,7 @@ MossdeepCity_Gym_EventScript_TateAndLizaDefeated::
 	setvar VAR_MOSSDEEP_CITY_STATE, 1
 	setflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_STEVEN
 	setvar VAR_MOSSDEEP_SPACE_CENTER_STATE, 1
+	call MossdeepCity_Gym_EventScript_GiveAgathaStone
 	call MossdeepCity_Gym_EventScript_GiveCalmMind
 	closemessage
 	delay 30
@@ -651,3 +663,38 @@ MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons:
 	.string "LIZA: You brought just one POKéMON!\p"
 	.string "TATE: We need you to bring at least…\n"
 	.string "LIZA: Two POKéMON when you come back.$"
+
+MossdeepCity_Gym_EventScript_GiveAgathaStone::
+	msgbox MossdeepCity_Gym_Text_AgathaGiveStone, MSGBOX_DEFAULT
+	giveitem ITEM_BANETTITE, 1
+	return
+
+MossdeepCity_Gym_Text_AgathaLeaderAfter:
+	.string "TATE: Hehehe… We are not done yet!\p"
+	.string "LIZA: A guest from KANTO wants to meet\n"
+	.string "you. We will heal your POKéMON first!$"
+
+MossdeepCity_Gym_Text_AgathaAppears:
+	.string "AGATHA: Hmph! So you beat the twins.\n"
+	.string "But ghosts do not care for that.\p"
+	.string "TATE: AGATHA of the KANTO ELITE FOUR!\n"
+	.string "LIZA: Show them, AGATHA!$"
+
+MossdeepCity_Gym_Text_AgathaIntro:
+	.string "AGATHA: I have been battling since\n"
+	.string "before your parents were born.\p"
+	.string "Let me show you what a real trainer\n"
+	.string "can do!$"
+
+MossdeepCity_Gym_Text_AgathaDefeat:
+	.string "AGATHA: Oh ho! You are something\n"
+	.string "special, child!$"
+
+MossdeepCity_Gym_Text_AgathaAfterBattle:
+	.string "TATE: You beat all of us!\n"
+	.string "LIZA: That earns you our BADGE!$"
+
+MossdeepCity_Gym_Text_AgathaGiveStone:
+	.string "AGATHA: Take this, too.\p"
+	.string "A MEGA STONE that whispers in the\n"
+	.string "dark. Use it wisely.$"
