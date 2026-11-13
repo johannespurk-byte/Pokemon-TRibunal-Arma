@@ -80,7 +80,8 @@ SootopolisCity_Gym_1F_Movement_FallThroughIce:
 	step_end
 
 SootopolisCity_Gym_1F_EventScript_Juan::
-	trainerbattle_single TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanIntro, SootopolisCity_Gym_1F_Text_JuanDefeat, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanIntro, SootopolisCity_Gym_1F_Text_JuanDefeat, SootopolisCity_Gym_1F_EventScript_ErikaChallenge, NO_MUSIC
+	goto_if_not_defeated TRAINER_ERIKA_SOOTOPOLIS, SootopolisCity_Gym_1F_EventScript_ErikaChallenge
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_JuanRematch
 	goto_if_unset FLAG_RECEIVED_TM_WATER_PULSE, SootopolisCity_Gym_1F_EventScript_GiveWaterPulse2
@@ -89,7 +90,17 @@ SootopolisCity_Gym_1F_EventScript_Juan::
 	release
 	end
 
+@ After the leader, ERIKA challenges the player; the badge comes after both
+SootopolisCity_Gym_1F_EventScript_ErikaChallenge::
+	msgbox SootopolisCity_Gym_1F_Text_ErikaLeaderAfter, MSGBOX_DEFAULT
+	special HealPlayerParty
+	msgbox SootopolisCity_Gym_1F_Text_ErikaAppears, MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_ERIKA_SOOTOPOLIS, SootopolisCity_Gym_1F_Text_ErikaIntro, SootopolisCity_Gym_1F_Text_ErikaDefeat, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
+	release
+	end
+
 SootopolisCity_Gym_1F_EventScript_JuanDefeated::
+	msgbox SootopolisCity_Gym_1F_Text_ErikaAfterBattle, MSGBOX_DEFAULT
 	message SootopolisCity_Gym_1F_Text_ReceivedRainBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -103,6 +114,7 @@ SootopolisCity_Gym_1F_EventScript_JuanDefeated::
 	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_MAN_1
 	setvar VAR_0x8008, 8
 	call Common_EventScript_SetGymTrainers
+	call SootopolisCity_Gym_1F_EventScript_GiveErikaStone
 	call SootopolisCity_Gym_1F_EventScript_GiveWaterPulse
 	closemessage
 	delay 30
@@ -317,3 +329,37 @@ SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons:
 	.string "I wish that you would return with\n"
 	.string "two, perhaps more, POKéMON, please.$"
 
+SootopolisCity_Gym_1F_EventScript_GiveErikaStone::
+	msgbox SootopolisCity_Gym_1F_Text_ErikaGiveStone, MSGBOX_DEFAULT
+	giveitem ITEM_SCEPTILITE, 1
+	return
+
+SootopolisCity_Gym_1F_Text_ErikaLeaderAfter:
+	.string "JUAN: Splendid… but the show is not\n"
+	.string "over yet.\p"
+	.string "A dear friend from KANTO wishes to\n"
+	.string "battle you. Let me heal your POKéMON.$"
+
+SootopolisCity_Gym_1F_Text_ErikaAppears:
+	.string "ERIKA: Oh my… what a lovely battle.\n"
+	.string "May I join in?\p"
+	.string "JUAN: ERIKA, the GYM LEADER of\n"
+	.string "CELADON CITY! The stage is yours.$"
+
+SootopolisCity_Gym_1F_Text_ErikaIntro:
+	.string "ERIKA: Water and grass go so well\n"
+	.string "together, do you not think?\p"
+	.string "Please, show me your strength.$"
+
+SootopolisCity_Gym_1F_Text_ErikaDefeat:
+	.string "ERIKA: Oh! I concede defeat…\n"
+	.string "You are remarkably strong.$"
+
+SootopolisCity_Gym_1F_Text_ErikaAfterBattle:
+	.string "JUAN: Magnificent! You beat us both.\n"
+	.string "This BADGE is yours!$"
+
+SootopolisCity_Gym_1F_Text_ErikaGiveStone:
+	.string "ERIKA: Please accept this as well.\p"
+	.string "A MEGA STONE grown in my garden of\n"
+	.string "light. Take good care of it.$"

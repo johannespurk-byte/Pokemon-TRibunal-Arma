@@ -902,6 +902,9 @@
 #define TRAINER_GIOVANNI_FOSSIL_RUINS_6       895
 #define TRAINER_MAXIE_FOSSIL_RUINS_6          896
 #define TRAINER_ARCHIE_FOSSIL_RUINS_6         897
+#define TRAINER_BROCK_FORTREE                 898
+#define TRAINER_AGATHA_MOSSDEEP               899
+#define TRAINER_ERIKA_SOOTOPOLIS              900
 #
 #if !IS_FRLG
 // The Rocket Hideout under the Mauville Game Corner shares its scripts with FRLG,
@@ -935,7 +938,7 @@
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     900
+#define TRAINERS_COUNT_EMERALD     905
 #define MAX_TRAINERS_COUNT_EMERALD 910
 
 #if IS_FRLG
