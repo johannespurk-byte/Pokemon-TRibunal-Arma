@@ -122,7 +122,7 @@ struct TrainerCardData
     u16 frontTilemap[600];
     u16 backTilemap[600];
     u16 bgTilemap[600];
-    u8 badgeTiles[0x80 * NUM_BADGES];
+    u8 badgeTiles[0x120 * NUM_BADGES]; // Hoenn badges are 24x24 (9 tiles each)
     u8 stickerTiles[0x200];
     u8 cardTiles[0x2300];
     u16 cardTilemapBuffer[0x1000];
@@ -147,6 +147,7 @@ static void CreateTrainerCardTrainerPic(void);
 static void DrawCardScreenBackground(u16 *);
 static void DrawCardFrontOrBack(u16 *);
 static void DrawStarsAndBadgesOnCard(void);
+#define HOENN_BADGE_TILES 426 // first BG3 tile of the 24x24 Hoenn badges (after the trainer pic window)
 static void PrintTimeOnCard(void);
 static void FlipTrainerCard(void);
 static bool8 IsCardFlipTaskActive(void);
@@ -1726,7 +1727,8 @@ static u8 SetCardBgsAndPals(void)
     switch (sData->bgPalLoadState)
     {
     case 0:
-        LoadBgTiles(3, sData->badgeTiles, ARRAY_COUNT(sData->badgeTiles), 0);
+        // Hoenn badges (24x24) go behind the trainer pic window tiles (0x150 + 9 * 10), Kanto ones stay at the start
+        LoadBgTiles(3, sData->badgeTiles, ARRAY_COUNT(sData->badgeTiles), sData->cardType != CARD_TYPE_FRLG ? HOENN_BADGE_TILES - 192 : 0);
         break;
     case 1:
         LoadBgTiles(0, sData->cardTiles, 0x1800, 0);
@@ -1818,7 +1820,22 @@ static void DrawStarsAndBadgesOnCard(void)
     u8 palNum = 3;
 
     FillBgTilemapBufferRect(3, 143, 15, yOffsets[sData->isHoenn], sData->trainerCard.stars, 1, 4);
-    if (!sData->isLink)
+    if (!sData->isLink && sData->cardType != CARD_TYPE_FRLG)
+    {
+        // 24x24 Hoenn badges: 3x3 tiles side by side in rows 14-16; the PNG holds 8 badges in a row (24 tiles per tile row)
+        x = 3;
+        y = 14;
+        for (i = 0; i < NUM_BADGES; i++, x += 3)
+        {
+            s16 r, c;
+            if (!sData->badgeCount[i])
+                continue;
+            for (r = 0; r < 3; r++)
+                for (c = 0; c < 3; c++)
+                    FillBgTilemapBufferRect(3, HOENN_BADGE_TILES + r * 24 + i * 3 + c, x + c, y + r, 1, 1, palNum);
+        }
+    }
+    else if (!sData->isLink)
     {
         x = 4;
         y = IS_FRLG ? 16 : 15;
