@@ -73,18 +73,20 @@ LavaridgeTown_EventScript_BrendanGiveGoGoggles::
 	goto LavaridgeTown_EventScript_RivalExit
 	end
 
+@ After the Heat Badge the rival takes the player along to Mauville City (in front of the Pokemon Center)
 LavaridgeTown_EventScript_RivalExit::
+	msgbox LavaridgeTown_Text_RivalRideToMauville, MSGBOX_DEFAULT
 	closemessage
-	removeobject LOCALID_LAVARIDGE_RIVAL
-	addobject LOCALID_LAVARIDGE_RIVAL_ON_BIKE
-	delay 30
-	call_if_eq VAR_0x8008, 9, LavaridgeTown_EventScript_RivalExit1
-	call_if_ne VAR_0x8008, 9, LavaridgeTown_EventScript_RivalExit2
-	removeobject LOCALID_LAVARIDGE_RIVAL_ON_BIKE
 	setvar VAR_LAVARIDGE_TOWN_STATE, 2
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	savebgm MUS_DUMMY
-	fadedefaultbgm
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_LAVARIDGE_RIVAL
+	playse SE_BIKE_BELL
+	waitse
+	delay 30
+	warp MAP_MAUVILLE_CITY, 22, 6
+	waitstate
 	releaseall
 	end
 
@@ -404,3 +406,7 @@ LavaridgeTown_Text_HerbShopSign:
 	.string "POKéMON HERB SHOP\n"
 	.string "“Bitter taste--better cure!”$"
 
+LavaridgeTown_Text_RivalRideToMauville:
+	.string "{RIVAL}: Hey, I'm heading back to\n"
+	.string "MAUVILLE CITY anyway.\p"
+	.string "Hop on, I'll give you a ride!$"
