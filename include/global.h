@@ -251,6 +251,12 @@ struct NPCFollower
 };
 
 #include "constants/items.h"
+struct ItemSlot
+{
+    enum Item itemId;
+    u16 quantity;
+};
+
 #define ITEM_FLAGS_COUNT ((ITEMS_COUNT / 8) + ((ITEMS_COUNT % 8) ? 1 : 0))
 
 struct SaveBlock3
@@ -271,6 +277,8 @@ struct SaveBlock3
 #if APRICORN_TREE_COUNT > 0
     u8 apricornTrees[NUM_APRICORN_TREE_BYTES];
 #endif
+    // Mega Stone pocket; kept at the end so older saves load it as empty
+    struct ItemSlot bagMegaStones[BAG_MEGA_STONES_COUNT];
 }; /* max size 1624 bytes */
 
 extern struct SaveBlock3 *gSaveBlock3Ptr;
@@ -671,12 +679,6 @@ struct WarpData
     s8 warpId;
     //u8 padding;
     s16 x, y;
-};
-
-struct ItemSlot
-{
-    enum Item itemId;
-    u16 quantity;
 };
 
 struct Pokeblock
@@ -1212,7 +1214,7 @@ struct SaveBlock1
 #endif
     u8 nuzlockeEncounters[32]; // Nuzlocke: ein Bit je Kartenabschnitt (MAPSEC), dessen Begegnung verbraucht ist
     // Extra bag pockets; kept at the end so older saves load unchanged (they read as empty)
-    struct ItemSlot bagMegaStones[BAG_MEGA_STONES_COUNT];
+    struct ItemSlot bagMegaStonesOld[BAG_MEGA_STONES_COUNT_OLD]; // moved to SaveBlock3, emptied on load
     struct ItemSlot bagEvoItems[BAG_EVO_ITEMS_COUNT];
     // sizeof: 0x3???
 };

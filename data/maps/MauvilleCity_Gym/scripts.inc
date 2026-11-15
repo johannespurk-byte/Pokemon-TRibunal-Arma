@@ -134,6 +134,7 @@ MauvilleCity_Gym_EventScript_GiveShockWave2::
 MauvilleCity_Gym_EventScript_GiveMegaStone::
 	msgbox MauvilleCity_Gym_Text_LoreleiGiveMegaStone, MSGBOX_DEFAULT
 	giveitem ITEM_GLALITITE, 1
+	call PartnerMega_EventScript_Ice
 	return
 
 MauvilleCity_Gym_EventScript_GiveShockWave::

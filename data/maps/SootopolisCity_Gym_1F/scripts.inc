@@ -332,6 +332,7 @@ SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons:
 SootopolisCity_Gym_1F_EventScript_GiveErikaStone::
 	msgbox SootopolisCity_Gym_1F_Text_ErikaGiveStone, MSGBOX_DEFAULT
 	giveitem ITEM_SCEPTILITE, 1
+	call PartnerMega_EventScript_Grass
 	return
 
 SootopolisCity_Gym_1F_Text_ErikaLeaderAfter:

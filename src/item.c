@@ -38,6 +38,7 @@ static bool32 DoesItemHavePluralName(enum Item);
 static void NONNULL BagPocket_CompactItems(struct BagPocket* pocket);
 static u16 SanitizeItemId(enum Item itemId);
 static u16 SanitizeBagItemId(enum Item itemId);
+static bool32 NONNULL BagPocket_AddItem(struct BagPocket *pocket, enum Item itemId, u16 count);
 
 EWRAM_DATA struct BagPocket gBagPockets[POCKETS_COUNT] = { 0 };
 
@@ -163,13 +164,34 @@ void SetBagItemsPointers(void)
     gBagPockets[POCKET_BERRIES].capacity = BAG_BERRIES_COUNT;
     gBagPockets[POCKET_BERRIES].id = POCKET_BERRIES;
 
-    gBagPockets[POCKET_MEGA_STONES].itemSlots = gSaveBlock1Ptr->bagMegaStones;
+    gBagPockets[POCKET_MEGA_STONES].itemSlots = gSaveBlock3Ptr->bagMegaStones;
     gBagPockets[POCKET_MEGA_STONES].capacity = BAG_MEGA_STONES_COUNT;
     gBagPockets[POCKET_MEGA_STONES].id = POCKET_MEGA_STONES;
 
     gBagPockets[POCKET_EVO_ITEMS].itemSlots = gSaveBlock1Ptr->bagEvoItems;
     gBagPockets[POCKET_EVO_ITEMS].capacity = BAG_EVO_ITEMS_COUNT;
     gBagPockets[POCKET_EVO_ITEMS].id = POCKET_EVO_ITEMS;
+
+}
+
+// Saves made before the Mega Stone pocket moved to SaveBlock3 still hold their stones in the
+// old 32 slots of SaveBlock1: move them into the new pocket and empty the old slots.
+void MoveOldMegaStonePocket(void)
+{
+    u32 i;
+    struct ItemSlot *old = gSaveBlock1Ptr->bagMegaStonesOld;
+
+    for (i = 0; i < BAG_MEGA_STONES_COUNT_OLD; i++)
+    {
+        if (old[i].itemId != ITEM_NONE && old[i].itemId < ITEMS_COUNT)
+        {
+            u16 quantity = old[i].quantity ^ gSaveBlock2Ptr->encryptionKey;
+            if (quantity != 0)
+                BagPocket_AddItem(&gBagPockets[POCKET_MEGA_STONES], old[i].itemId, quantity);
+        }
+        old[i].itemId = ITEM_NONE;
+        old[i].quantity = 0;
+    }
 }
 
 u8 *CopyItemName(enum Item itemId, u8 *dst)

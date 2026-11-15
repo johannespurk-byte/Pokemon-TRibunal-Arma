@@ -43,6 +43,7 @@ LittlerootArena_EventScript_Koga::
 	setflag FLAG_RECEIVED_TM_FACADE
 	msgbox LittlerootArena_Text_KogaGivesStone, MSGBOX_DEFAULT
 	giveitem ITEM_GENGARITE
+	call PartnerMega_EventScript_Poison
 	msgbox LittlerootArena_Text_KogaExplainStone, MSGBOX_DEFAULT
 	@ NORMAN hands over SURF himself (instead of WALLY's dad) and sends the player to Fossil Ruins 5
 	msgbox LittlerootArena_Text_NormanGivesSurf, MSGBOX_DEFAULT
@@ -54,7 +55,7 @@ LittlerootArena_EventScript_Koga::
 	closemessage
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	playse SE_WARP_IN
-	warp MAP_FOSSIL_RUINS_5, 14, 34
+	warp MAP_FOSSIL_RUINS_5, 17, 20
 	waitstate
 	release
 	end

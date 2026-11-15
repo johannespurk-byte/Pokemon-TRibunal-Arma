@@ -1756,6 +1756,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/apricorn_tree.inc"
 	.include "data/scripts/wild_encounter.inc"
 	.include "data/scripts/service_npcs.inc"
+	.include "data/scripts/partner_mega_stones.inc"
 
 	.include "data/maps/Mamor_Cace/scripts.inc"
 

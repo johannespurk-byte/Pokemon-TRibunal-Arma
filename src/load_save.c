@@ -131,6 +131,10 @@ void MoveSaveBlocks_ResetHeap(void)
     // heap was destroyed in the copying process, so reset it
     InitHeap(gHeap, HEAP_SIZE);
 
+    // older saves keep their Mega Stones in SaveBlock1: move them into the SaveBlock3 pocket
+    // (after InitHeap: adding to a pocket allocates)
+    MoveOldMegaStonePocket();
+
     // restore interrupt functions
     gMain.hblankCallback = hblankCB;
     gMain.vblankCallback = vblankCB;

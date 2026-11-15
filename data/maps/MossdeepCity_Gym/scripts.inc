@@ -667,6 +667,7 @@ MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons:
 MossdeepCity_Gym_EventScript_GiveAgathaStone::
 	msgbox MossdeepCity_Gym_Text_AgathaGiveStone, MSGBOX_DEFAULT
 	giveitem ITEM_BANETTITE, 1
+	call PartnerMega_EventScript_Ghost
 	return
 
 MossdeepCity_Gym_Text_AgathaLeaderAfter:

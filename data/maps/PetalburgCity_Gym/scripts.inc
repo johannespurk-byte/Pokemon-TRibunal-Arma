@@ -39,6 +39,7 @@ PetalburgCity_Gym_EventScript_Mom::
 	giveitem ITEM_TM01
 	msgbox PetalburgCity_Gym_Text_MistyGivesStone, MSGBOX_DEFAULT
 	giveitem ITEM_BLASTOISINITE
+	call PartnerMega_EventScript_Water
 	msgbox PetalburgCity_Gym_Text_MistyExplainStone, MSGBOX_DEFAULT
 	goto PetalburgCity_Gym_EventScript_SendToNorman
 
