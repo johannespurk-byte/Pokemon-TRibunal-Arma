@@ -29053,7 +29053,7 @@
 #line 11450
         .trainerClass = TRAINER_CLASS_LEADER,
 #line 11451
-        .trainerPic = TRAINER_PIC_LEADER_NORMAN,
+        .trainerPic = TRAINER_PIC_AROMA_LADY,
 #line 11452
         .gender = TRAINER_GENDER_FEMALE,
 #line 11453
@@ -88431,7 +88431,7 @@
 #line 34568
         .trainerClass = TRAINER_CLASS_LEADER,
 #line 34569
-        .trainerPic = TRAINER_PIC_COOLTRAINER_F,
+        .trainerPic = TRAINER_PIC_LEADER_MISTY_FRLG,
 #line 34570
         .gender = TRAINER_GENDER_FEMALE,
 #line 34571
