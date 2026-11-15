@@ -37680,8 +37680,8 @@ Class: Leader
 Pic: Leader Norman
 Gender: Male
 Music: Male
-Double Battle: Yes
-Party Size: 3
+Double Battle: No
+Party Size: 6
 Pool Rules: Basic
 Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
@@ -37803,8 +37803,8 @@ Class: Leader
 Pic: Leader Koga Frlg
 Gender: Male
 Music: Male
-Double Battle: Yes
-Party Size: 3
+Double Battle: No
+Party Size: 6
 Pool Rules: Basic
 Pool Pick Functions: Default
 AI: Smart Trainer / Prediction
