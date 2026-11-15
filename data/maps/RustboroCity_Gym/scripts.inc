@@ -59,6 +59,7 @@ RustboroCity_Gym_EventScript_GiveMegaStone::
 	giveitem ITEM_CHARIZARDITE_Y, 1
 	compare VAR_RESULT, 0
 	goto_if_eq RustboroCity_Gym_EventScript_BagIsFullForStone
+	call PartnerMega_EventScript_Fire
 	goto RustboroCity_Gym_EventScript_GiveRockTomb
 
 RustboroCity_Gym_EventScript_BagIsFullForStone::

@@ -333,6 +333,7 @@ FortreeCity_Gym_Text_WinonaRematchNeedTwoMons:
 FortreeCity_Gym_EventScript_GiveBrockStone::
 	msgbox FortreeCity_Gym_Text_BrockGiveStone, MSGBOX_DEFAULT
 	giveitem ITEM_AERODACTYLITE, 1
+	call PartnerMega_EventScript_Rock
 	return
 
 FortreeCity_Gym_Text_BrockLeaderAfter:

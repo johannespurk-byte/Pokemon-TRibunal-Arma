@@ -108,6 +108,7 @@ LavaridgeTown_Gym_1F_EventScript_GiveOverheat::
 LavaridgeTown_Gym_1F_EventScript_GiveMegaStone::
 	msgbox LavaridgeTown_Gym_1F_Text_SabrinaGiveMegaStone, MSGBOX_DEFAULT
 	giveitem ITEM_ALAKAZITE, 1
+	call PartnerMega_EventScript_Psychic
 	return
 
 LavaridgeTown_Gym_1F_EventScript_FlanneryRematch::

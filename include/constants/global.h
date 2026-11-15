@@ -115,7 +115,10 @@ enum Language
 #define BAG_POKEBALLS_COUNT 16
 #define BAG_TMHM_COUNT 64
 #define BAG_BERRIES_COUNT 46
-#define BAG_MEGA_STONES_COUNT 32
+// Mega Stone pocket: 100 slots in SaveBlock3 (every Mega Stone fits); the old 32 slots in
+// SaveBlock1 are only read once to move a save's stones over
+#define BAG_MEGA_STONES_COUNT 100
+#define BAG_MEGA_STONES_COUNT_OLD 32
 #define BAG_EVO_ITEMS_COUNT 32
 
 // Number of facilities for Ranking Hall.
