@@ -1705,6 +1705,7 @@
 #define FLAG_FOSSIL_RUINS_6_LEGEND_CHOSEN                  FLAG_UNUSED_0x043 // One of the six legendaries in Fossil Ruins 6 was taken
 #define FLAG_ITEM_FOSSIL_RUINS_6_COMET_SHARD               FLAG_UNUSED_0x044 // Item ball in Fossil Ruins 6
 #define FLAG_ITEM_FOSSIL_RUINS_6_STAR_PIECE                FLAG_UNUSED_0x045 // Item ball in Fossil Ruins 6
+#define FLAG_HIDE_FOSSIL_RUINS_5_NURSE                     FLAG_UNUSED_0x046 // Nurse Joy before the stairs in Fossil Ruins 5 waits until the grunts are gone
 #define FLAG_HIDE_TOWN_MAP                                 0
 #define FLAG_HIDE_POKEDEX                                  0
 #define FLAG_HIDE_CERULEAN_ROCKET                          0

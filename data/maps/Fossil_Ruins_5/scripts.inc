@@ -1,5 +1,36 @@
 Fossil_Ruins_5_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Fossil_Ruins_5_OnTransition
 	.byte 0
+
+@ NURSE JOY before the stairs only shows up once the two grunts are gone
+Fossil_Ruins_5_OnTransition:
+	setflag FLAG_HIDE_FOSSIL_RUINS_5_NURSE
+	goto_if_unset FLAG_HIDE_FOSSIL_RUINS_5_GRUNTS, Fossil_Ruins_5_OnTransition_End
+	clearflag FLAG_HIDE_FOSSIL_RUINS_5_NURSE
+Fossil_Ruins_5_OnTransition_End:
+	end
+
+@ NURSE JOY heals the team and sets the respawn point right before the stairs
+Fossil_Ruins_5_EventScript_Nurse::
+	lock
+	faceplayer
+	setrespawn HEAL_LOCATION_FOSSIL_RUINS_5
+	msgbox Fossil_Ruins_5_Text_NurseHeal, MSGBOX_DEFAULT
+	closemessage
+	call Common_EventScript_OutOfCenterPartyHeal
+	msgbox Fossil_Ruins_5_Text_NurseDone, MSGBOX_DEFAULT
+	release
+	end
+
+Fossil_Ruins_5_Text_NurseHeal:
+	.string "SCHWESTER JOY: Oben warten Archie\n"
+	.string "und Giovanni auf dich.\p"
+	.string "Ich kuemmere mich um deine Pokemon!$"
+
+Fossil_Ruins_5_Text_NurseDone:
+	.string "SCHWESTER JOY: Dein Team ist wieder\n"
+	.string "fit. Wenn du verlierst, wachst du\l"
+	.string "hier bei mir wieder auf!$"
 
 @ Back-to-back fight like in Fossil Ruins 3: ARCHIE first, then GIOVANNI steps forward.
 @ The trigger sits at the top of the only stairs into the hall.
@@ -111,6 +142,8 @@ Fossil_Ruins_5_EventScript_Grunts::
 	setflag FLAG_HIDE_FOSSIL_RUINS_5_GRUNTS
 	removeobject LOCALID_FOSSIL_RUINS_5_GRUNT_A
 	removeobject LOCALID_FOSSIL_RUINS_5_GRUNT_B
+	clearflag FLAG_HIDE_FOSSIL_RUINS_5_NURSE
+	addobject LOCALID_FOSSIL_RUINS_5_NURSE
 	fadescreen FADE_FROM_BLACK
 	setvar VAR_TEMP_2, 1
 	releaseall
