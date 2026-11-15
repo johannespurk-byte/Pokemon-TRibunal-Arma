@@ -96264,7 +96264,7 @@
 #line 37682
         .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 37683
-        .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37687
         .aiFlags = AI_FLAG_SMART_TRAINER | AI_FLAG_PREDICTION,
 #line 37685
@@ -96274,7 +96274,7 @@
 #line 0
         .multiTeamSize = MULTI_TEAM_SIZE_FULL,
 #line 37684
-        .partySize = 3,
+        .partySize = 6,
         .poolSize = 10,
         .party = (const struct TrainerMon[])
         {
@@ -96556,7 +96556,7 @@
 #line 37805
         .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 37806
-        .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37810
         .aiFlags = AI_FLAG_SMART_TRAINER | AI_FLAG_PREDICTION,
 #line 37808
@@ -96566,7 +96566,7 @@
 #line 0
         .multiTeamSize = MULTI_TEAM_SIZE_FULL,
 #line 37807
-        .partySize = 3,
+        .partySize = 6,
         .poolSize = 10,
         .party = (const struct TrainerMon[])
         {

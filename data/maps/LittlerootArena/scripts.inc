@@ -9,9 +9,22 @@ LittlerootArena_EventScript_Leaders::
 	lock
 	faceplayer
 	goto_if_set FLAG_BADGE05_GET, LittlerootArena_EventScript_PostBattle
+	@ back-to-back: Norman first, then the team is healed and Koga steps in;
+	@ after a loss against Koga the next try starts with Koga again
+	goto_if_defeated TRAINER_NORMAN_ARENA, LittlerootArena_EventScript_Koga
 	msgbox LittlerootArena_Text_Intro, MSGBOX_DEFAULT
 	closemessage
-	trainerbattle_two_trainers TRAINER_NORMAN_ARENA, LittlerootArena_Text_NormanDefeat, TRAINER_KOGA_ARENA, LittlerootArena_Text_KogaDefeat
+	trainerbattle_no_intro TRAINER_NORMAN_ARENA, LittlerootArena_Text_NormanDefeat
+	msgbox LittlerootArena_Text_NormanAfterBattle, MSGBOX_DEFAULT
+	closemessage
+	goto LittlerootArena_EventScript_Koga
+	end
+
+LittlerootArena_EventScript_Koga::
+	call Common_EventScript_OutOfCenterPartyHeal
+	msgbox LittlerootArena_Text_KogaIntro, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_KOGA_ARENA, LittlerootArena_Text_KogaDefeat
 	message LittlerootArena_Text_ReceivedBalanceBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -55,8 +68,17 @@ LittlerootArena_Text_Intro:
 	.string "NORMAN: Du hast Mom und Misty\n"
 	.string "besiegt? Ich bin stolz auf dich!\p"
 	.string "KOGA: Doch hier endet dein Weg.\n"
-	.string "Norman und ich kaempfen gemeinsam!\p"
+	.string "Erst Norman, dann ich!\p"
 	.string "NORMAN: Zeig uns, was du kannst!$"
+
+LittlerootArena_Text_NormanAfterBattle:
+	.string "NORMAN: Stark! Aber Koga wartet\n"
+	.string "schon auf dich.$"
+
+LittlerootArena_Text_KogaIntro:
+	.string "KOGA: Dein Team ist wieder fit.\n"
+	.string "Jetzt zeige ich dir die Kunst\l"
+	.string "der Ninja!$"
 
 LittlerootArena_Text_NormanDefeat:
 	.string "NORMAN: Du bist wirklich stark\n"
