@@ -22,7 +22,13 @@ PetalburgCity_Gym_EventScript_Mom::
 	lock
 	faceplayer
 	goto_if_set FLAG_FINISHED_HAUS_BATTLE, PetalburgCity_Gym_EventScript_MomAfterWin
-	goto_if_lt VAR_PETALBURG_GYM_STATE, 6, PetalburgCity_Gym_EventScript_MomNoBadges
+	@ the first four badges decide, not VAR_PETALBURG_GYM_STATE: that counter stays too low
+	@ when badges were won before the house was entered for the first time
+	goto_if_unset FLAG_BADGE01_GET, PetalburgCity_Gym_EventScript_MomNoBadges
+	goto_if_unset FLAG_BADGE02_GET, PetalburgCity_Gym_EventScript_MomNoBadges
+	goto_if_unset FLAG_BADGE03_GET, PetalburgCity_Gym_EventScript_MomNoBadges
+	goto_if_unset FLAG_BADGE04_GET, PetalburgCity_Gym_EventScript_MomNoBadges
+	call_if_lt VAR_PETALBURG_GYM_STATE, 6, PetalburgCity_Gym_EventScript_FixGymState
 	msgbox PetalburgCity_Gym_Text_MomWelcome, MSGBOX_DEFAULT
 	closemessage
 	msgbox PetalburgCity_Gym_Text_MistyInterrupts, MSGBOX_DEFAULT
@@ -35,6 +41,10 @@ PetalburgCity_Gym_EventScript_Mom::
 	giveitem ITEM_BLASTOISINITE
 	msgbox PetalburgCity_Gym_Text_MistyExplainStone, MSGBOX_DEFAULT
 	goto PetalburgCity_Gym_EventScript_SendToNorman
+
+PetalburgCity_Gym_EventScript_FixGymState::
+	setvar VAR_PETALBURG_GYM_STATE, 6
+	return
 
 PetalburgCity_Gym_EventScript_MomNoBadges:
 	msgbox PetalburgCity_Gym_Text_DadNoBadges, MSGBOX_DEFAULT
@@ -122,7 +132,8 @@ PetalburgCity_Gym_Text_MomAskTeleport:
 	.string "auf dich. Soll ich dich hinbringen?$"
 
 PetalburgCity_Gym_Text_DadNoBadges:
-	.string "MOM: Besiege erst alle Mitbewohner!$"
+	.string "MOM: Komm wieder, wenn du vier\n"
+	.string "Orden hast!$"
 
 PetalburgCity_Gym_Text_MomWelcome:
 	.string "MOM: Testen wir dein Team! Ich kaempfe aber nicht allein...$"
