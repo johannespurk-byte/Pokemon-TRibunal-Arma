@@ -90,7 +90,10 @@ bool32 IsLastHealLocationFossilRuins(void)
 
 u32 GetHealNpcLocalId(u32 healLocationId)
 {
-    if (healLocationId == HEAL_LOCATION_NONE || healLocationId >= NUM_HEAL_LOCATIONS)
+    // the generated respawn tables end at the last heal location that has a respawn NPC,
+    // so later ones (Fossil Ruins 5 and 6) must not read past their end
+    if (healLocationId == HEAL_LOCATION_NONE || healLocationId >= NUM_HEAL_LOCATIONS
+     || healLocationId > ARRAY_COUNT(sWhiteoutRespawnHealerNpcIds))
         return LOCALID_NONE;
 
     return sWhiteoutRespawnHealerNpcIds[healLocationId - 1];
