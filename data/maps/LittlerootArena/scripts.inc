@@ -52,6 +52,7 @@ LittlerootArena_EventScript_Koga::
 	setvar VAR_PETALBURG_CITY_STATE, 5
 	clearflag FLAG_HIDE_PETALBURG_CITY_WALLYS_DAD
 	msgbox LittlerootArena_Text_NormanSendToRuins, MSGBOX_DEFAULT
+LittlerootArena_EventScript_WarpToRuins:
 	closemessage
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	playse SE_WARP_IN
@@ -60,10 +61,10 @@ LittlerootArena_EventScript_Koga::
 	release
 	end
 
+@ after the badge NORMAN always sends the player to Fossil Ruins 5 again
 LittlerootArena_EventScript_PostBattle:
 	msgbox LittlerootArena_Text_PostBattle, MSGBOX_DEFAULT
-	release
-	end
+	goto LittlerootArena_EventScript_WarpToRuins
 
 LittlerootArena_Text_Intro:
 	.string "NORMAN: Du hast Mom und Misty\n"
@@ -122,4 +123,6 @@ LittlerootArena_Text_NormanSendToRuins:
 
 LittlerootArena_Text_PostBattle:
 	.string "NORMAN: Du hast das Zeug zu einem\n"
-	.string "Champion. Zieh weiter voran!$"
+	.string "Champion. Zieh weiter voran!\p"
+	.string "Ich bringe dich wieder zu den\n"
+	.string "Fossilruinen.$"

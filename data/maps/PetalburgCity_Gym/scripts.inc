@@ -52,14 +52,9 @@ PetalburgCity_Gym_EventScript_MomNoBadges:
 	release
 	end
 
+@ after the win MOM always sends the player to NORMAN, also once his badge is won
 PetalburgCity_Gym_EventScript_MomAfterWin:
-	goto_if_set FLAG_BADGE05_GET, PetalburgCity_Gym_EventScript_MomPostBattle
 	goto PetalburgCity_Gym_EventScript_SendToNorman
-
-PetalburgCity_Gym_EventScript_MomPostBattle:
-	msgbox PetalburgCity_Gym_Text_MomPostBattle, MSGBOX_DEFAULT
-	release
-	end
 
 PetalburgCity_Gym_EventScript_SendToNorman::
 	msgbox PetalburgCity_Gym_Text_MomNormanWaits, MSGBOX_DEFAULT
