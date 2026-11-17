@@ -1,6 +1,7 @@
 #include "global.h"
 #include "nuzlocke.h"
 #include "battle.h"
+#include "battle_setup.h"
 #include "field_player_avatar.h"
 #include "fieldmap.h"
 #include "overworld.h"
@@ -8,6 +9,7 @@
 #include "pokemon.h"
 #include "constants/battle.h"
 #include "constants/maps.h"
+#include "constants/opponents.h"
 #include "constants/region_map_sections.h"
 
 // Nuzlocke-Modus, im Optionsmenü an- und ausschaltbar (gSaveBlock2Ptr->optionsNuzlocke).
@@ -17,6 +19,10 @@
 //   Begegnungen zählen von Anfang an, nur Birchs Starter-Kampf und Wallys Fang-Tutorial nicht.
 // - Pokémon, die besiegt werden, sind tot: das Pokémon-Center und der PC heilen sie nicht mehr,
 //   und Items wirken auf besiegte Pokémon nicht. Ausgeschaltet heilt alles wieder normal.
+// - Ausnahme: Der finale Kampf in der Fossilruine 6 (Giovanni, Maxie, Archie) zählt nicht.
+//   Dort besiegte Pokémon bleiben am Leben, und im Kampf wirken Items auch auf sie.
+// - Zufalls-Eier von Trainern sind unabhängig: Sie verbrauchen keine Begegnung, und das
+//   geschlüpfte Pokémon ist ein normales Teammitglied. Nichts hier darf Eier anfassen.
 
 #define ROUTE_104_NORTH_MAX_Y 33 // oberes Stück bis y=30, unteres ab y=38
 #define ROUTE_112_NORTH_MAX_Y 17 // oberes Stück bis y=13, unteres ab y=23
@@ -30,6 +36,27 @@ static EWRAM_DATA bool8 sCatchAllowed = FALSE;
 bool32 Nuzlocke_IsActive(void)
 {
     return gSaveBlock2Ptr->optionsNuzlocke;
+}
+
+// Für Scripts: VAR_RESULT = 1, wenn der Nuzlocke-Modus an ist
+bool8 Nuzlocke_ScriptIsActive(void)
+{
+    return Nuzlocke_IsActive();
+}
+
+// Der finale Kampf in der Fossilruine 6 wird nicht gewertet
+static bool32 IsExemptBattle(void)
+{
+    if (!(gBattleTypeFlags & BATTLE_TYPE_TRAINER))
+        return FALSE;
+    switch (TRAINER_BATTLE_PARAM.opponentA)
+    {
+    case TRAINER_GIOVANNI_FOSSIL_RUINS_6:
+    case TRAINER_MAXIE_FOSSIL_RUINS_6:
+    case TRAINER_ARCHIE_FOSSIL_RUINS_6:
+        return TRUE;
+    }
+    return FALSE;
 }
 
 u32 Nuzlocke_GetEncounterArea(void)
@@ -95,6 +122,8 @@ void Nuzlocke_MarkFaintedPartyMonsDead(void)
 {
     u32 i;
 
+    if (IsExemptBattle())
+        return;
     for (i = 0; i < PARTY_SIZE; i++)
     {
         struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][i];
@@ -120,5 +149,7 @@ bool32 Nuzlocke_ShouldSkipHeal(struct BoxPokemon *boxMon)
 // Keine Items auf besiegte Pokémon (Beleber, Heilung, Sonderbonbon ...)
 bool32 Nuzlocke_IsItemBlocked(struct Pokemon *mon)
 {
+    if (gMain.inBattle && IsExemptBattle())
+        return FALSE;
     return Nuzlocke_IsActive() && GetMonData(mon, MON_DATA_HP) == 0;
 }
