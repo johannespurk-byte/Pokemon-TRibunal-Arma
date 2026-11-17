@@ -10,12 +10,18 @@ Fossil_Ruins_6_EventScript_Showdown::
 	lockall
 	setrespawn HEAL_LOCATION_FOSSIL_RUINS_6
 	turnobject LOCALID_PLAYER, DIR_NORTH
+	specialvar VAR_RESULT, Nuzlocke_ScriptIsActive
+	call_if_eq VAR_RESULT, TRUE, Fossil_Ruins_6_EventScript_NuzlockeNotice
 	goto_if_not_defeated TRAINER_GIOVANNI_FOSSIL_RUINS_6, Fossil_Ruins_6_EventScript_Giovanni
 	goto_if_not_defeated TRAINER_MAXIE_FOSSIL_RUINS_6, Fossil_Ruins_6_EventScript_Maxie
 	goto_if_not_defeated TRAINER_ARCHIE_FOSSIL_RUINS_6, Fossil_Ruins_6_EventScript_Archie
 	setvar VAR_TEMP_1, 1
 	releaseall
 	end
+
+Fossil_Ruins_6_EventScript_NuzlockeNotice::
+	msgbox Fossil_Ruins_6_Text_NuzlockeNotice, MSGBOX_DEFAULT
+	return
 
 Fossil_Ruins_6_EventScript_Giovanni::
 	playbgm MUS_RG_ENCOUNTER_ROCKET, FALSE
@@ -210,6 +216,13 @@ Fossil_Ruins_6_EventScript_Portal::
 Fossil_Ruins_6_EventScript_PortalNo::
 	releaseall
 	end
+
+Fossil_Ruins_6_Text_NuzlockeNotice:
+	.string "NUZLOCKE: The final battle against\n"
+	.string "GIOVANNI, MAXIE and ARCHIE does not\l"
+	.string "count for the NUZLOCKE rules.\p"
+	.string "POKéMON that faint here are not lost,\n"
+	.string "and items work on them in battle.$"
 
 Fossil_Ruins_6_Text_GiovanniIntro:
 	.string "GIOVANNI: So you followed me through\n"

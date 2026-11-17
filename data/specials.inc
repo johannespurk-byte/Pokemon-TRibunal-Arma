@@ -644,4 +644,5 @@ gSpecials::
 	def_special RegionalTrade_CheckPartyMon
 	def_special RegionalTrade_RemovePartyMon
 	def_special ItemRefill_TryRefill
+	def_special Nuzlocke_ScriptIsActive
 	def_special SetScriptedWildMonLastMove

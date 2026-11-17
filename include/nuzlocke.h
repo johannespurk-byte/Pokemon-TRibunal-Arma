@@ -7,6 +7,7 @@
 #define NUZLOCKE_AREA_ROUTE_112_NORTH 254
 
 bool32 Nuzlocke_IsActive(void);
+bool8 Nuzlocke_ScriptIsActive(void);
 bool32 Nuzlocke_IsAreaUsed(u32 area);
 u32 Nuzlocke_GetEncounterArea(void);
 void Nuzlocke_OnBattleStart(void);
