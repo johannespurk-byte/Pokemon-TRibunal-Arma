@@ -66,6 +66,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_StrengthBoulder",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "x": 29,
+      "y": 20,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Fossil_Ruins_4_EventScript_SealedPortal",
+      "flag": "FLAG_BADGE05_GET"
     }
   ],
   "warp_events": [
@@ -159,6 +172,13 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE111",
       "dest_warp_id": "5"
+    },
+    {
+      "x": 29,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_FOSSIL_RUINS_5",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

@@ -4,6 +4,7 @@ Route111_PokemonCenter_1F_MapScripts::
 
 Route111_PokemonCenter_1F_OnTransition:
 	setrespawn HEAL_LOCATION_ROUTE_111
+	setflag FLAG_VISITED_ROUTE111_POKEMON_CENTER
 	end
 
 Route111_PokemonCenter_1F_EventScript_Nurse::

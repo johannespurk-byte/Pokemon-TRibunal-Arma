@@ -352,9 +352,9 @@
     },
     {
       "id": "HEAL_LOCATION_ROUTE_111",
-      "map": "MAP_ROUTE111_POKEMON_CENTER_1F",
-      "x": 7,
-      "y": 4,
+      "map": "MAP_ROUTE111",
+      "x": 13,
+      "y": 137,
       "respawn_map": "MAP_ROUTE111_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_ROUTE111_NURSE"
     },

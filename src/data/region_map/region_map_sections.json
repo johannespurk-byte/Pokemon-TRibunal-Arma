@@ -1662,24 +1662,24 @@
     {
       "id": "MAPSEC_FOSSIL_RUINS_4",
       "name": "Fossil Ruins 4",
-      "x": 4,
-      "y": 7,
+      "x": 9,
+      "y": 5,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_FOSSIL_RUINS_5",
       "name": "Fossil Ruins 5",
-      "x": 3,
-      "y": 7,
+      "x": 9,
+      "y": 4,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_FOSSIL_RUINS_6",
       "name": "Fossil Ruins 6",
-      "x": 2,
-      "y": 7,
+      "x": 9,
+      "y": 3,
       "width": 1,
       "height": 1
     }
