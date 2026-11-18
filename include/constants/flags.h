@@ -1705,6 +1705,18 @@
 #define FLAG_FOSSIL_RUINS_6_LEGEND_CHOSEN                  FLAG_UNUSED_0x043 // One of the six legendaries in Fossil Ruins 6 was taken
 #define FLAG_ITEM_FOSSIL_RUINS_6_COMET_SHARD               FLAG_UNUSED_0x044 // Item ball in Fossil Ruins 6
 #define FLAG_ITEM_FOSSIL_RUINS_6_STAR_PIECE                FLAG_UNUSED_0x045 // Item ball in Fossil Ruins 6
+#define FLAG_ITEM_SEA_ROUTE_125_BIG_PEARL                  FLAG_UNUSED_0x047 // ARMA: item ball on the open sea
+#define FLAG_ITEM_SEA_ROUTE_125_TM_SCALD                   FLAG_UNUSED_0x2B1 // ARMA: item ball on the open sea
+#define FLAG_ITEM_SEA_ROUTE_126_HEART_SCALE                FLAG_UNUSED_0x2B2 // ARMA: item ball on the open sea
+#define FLAG_ITEM_SEA_ROUTE_126_PRISM_SCALE                FLAG_UNUSED_0x2B3 // ARMA: item ball on the open sea
+#define FLAG_ITEM_SEA_ROUTE_128_SHINY_STONE                FLAG_UNUSED_0x2B4 // ARMA: item ball on the open sea
+#define FLAG_ITEM_SEA_ROUTE_129_PEARL_STRING               FLAG_UNUSED_0x2B5 // ARMA: item ball on the open sea
+#define FLAG_ITEM_SEA_ROUTE_129_TM_LIQUIDATION             FLAG_UNUSED_0x2B6 // ARMA: item ball on the open sea
+#define FLAG_ITEM_SEA_ROUTE_130_PP_MAX                     FLAG_UNUSED_0x2B7 // ARMA: item ball on the open sea
+#define FLAG_ITEM_SEA_ROUTE_130_TM_HYDRO_PUMP              FLAG_UNUSED_0x2B8 // ARMA: item ball on the open sea
+#define FLAG_ITEM_SEA_ROUTE_131_BIG_NUGGET                 FLAG_UNUSED_0x2B9 // ARMA: item ball on the open sea
+#define FLAG_ITEM_SEA_ROUTE_131_DAWN_STONE                 FLAG_UNUSED_0x2BA // ARMA: item ball on the open sea
+#define FLAG_VISITED_ROUTE111_POKEMON_CENTER               FLAG_UNUSED_0x2BB // ARMA: Route 111 Pokemon Center visited (fly target)
 #define FLAG_HIDE_FOSSIL_RUINS_5_NURSE                     FLAG_UNUSED_0x046 // Nurse Joy before the stairs in Fossil Ruins 5 waits until the grunts are gone
 #define FLAG_HIDE_TOWN_MAP                                 0
 #define FLAG_HIDE_POKEDEX                                  0

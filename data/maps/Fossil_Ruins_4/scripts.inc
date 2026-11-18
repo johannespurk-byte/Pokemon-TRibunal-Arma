@@ -47,3 +47,13 @@ Fossil_Ruins_4_EventScript_RanFromGiratina::
 Fossil_Ruins_4_Text_Giratina:
 	.string "Something enormous is watching from\n"
 	.string "the far side of this broken world...$"
+
+@ A rock seals the portal down to Fossil Ruins 5 until the Balance Badge
+Fossil_Ruins_4_EventScript_SealedPortal::
+	msgbox Fossil_Ruins_4_Text_SealedPortal, MSGBOX_SIGN
+	end
+
+Fossil_Ruins_4_Text_SealedPortal:
+	.string "A strange rock seals a portal here.\n"
+	.string "It seems to lead even deeper down...\p"
+	.string "Maybe NORMAN knows more about it.$"
