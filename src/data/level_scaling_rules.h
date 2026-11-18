@@ -62,6 +62,8 @@
 #define ROUTE_115_SCALING { .mode = LEVEL_SCALING_TO_LEVEL_CAP }
 // Mt. Chimney, Jagged Pass and the Lavaridge gym: teams of six, scaled to the level cap
 #define MT_CHIMNEY_SCALING { .mode = LEVEL_SCALING_TO_LEVEL_CAP }
+// Route 118: themed teams of six, scaled to the level cap
+#define ROUTE_118_SCALING { .mode = LEVEL_SCALING_TO_LEVEL_CAP }
 // Routes 105-108: themed teams of six, scaled to the level cap
 #define ROUTES_105_108_SCALING { .mode = LEVEL_SCALING_TO_LEVEL_CAP }
 // Fossil Ruins 6: Giovanni, Maxie and Archie fight 3 levels above the level cap
@@ -246,6 +248,21 @@ const struct LevelScalingConfig gTrainerLevelScalingRules[TRAINERS_COUNT] =
     [TRAINER_MATTHEW] = ROUTES_105_108_SCALING,
     [TRAINER_MISSY] = ROUTES_105_108_SCALING,
     [TRAINER_TARA] = ROUTES_105_108_SCALING,
+    [TRAINER_ROSE_1] = ROUTE_118_SCALING,
+    [TRAINER_ROSE_2] = ROUTE_118_SCALING,
+    [TRAINER_ROSE_3] = ROUTE_118_SCALING,
+    [TRAINER_ROSE_4] = ROUTE_118_SCALING,
+    [TRAINER_ROSE_5] = ROUTE_118_SCALING,
+    [TRAINER_DALTON_1] = ROUTE_118_SCALING,
+    [TRAINER_DALTON_2] = ROUTE_118_SCALING,
+    [TRAINER_DALTON_3] = ROUTE_118_SCALING,
+    [TRAINER_DALTON_4] = ROUTE_118_SCALING,
+    [TRAINER_DALTON_5] = ROUTE_118_SCALING,
+    [TRAINER_BARNY] = ROUTE_118_SCALING,
+    [TRAINER_CHESTER] = ROUTE_118_SCALING,
+    [TRAINER_DEANDRE] = ROUTE_118_SCALING,
+    [TRAINER_PERRY] = ROUTE_118_SCALING,
+    [TRAINER_WADE] = ROUTE_118_SCALING,
     [TRAINER_FLANNERY_1]       = GYM_LEADER_SCALING, // Cap 60
     [TRAINER_NORMAN_1]         = GYM_LEADER_SCALING, // Cap 68
     [TRAINER_MISTY]            = GYM_LEADER_SCALING,
