@@ -665,22 +665,6 @@ static const struct OamData sOamData_GameFreakLetter =
     .paletteNum = 0,
     .affineParam = 0,
 };
-static const struct OamData sOamData_PresentsLetter =
-{
-    .y = DISPLAY_HEIGHT,
-    .affineMode = ST_OAM_AFFINE_OFF,
-    .objMode = ST_OAM_OBJ_NORMAL,
-    .mosaic = FALSE,
-    .bpp = ST_OAM_4BPP,
-    .shape = SPRITE_SHAPE(8x8),
-    .x = 0,
-    .matrixNum = 0,
-    .size = SPRITE_SIZE(8x8),
-    .tileNum = 0,
-    .priority = 0,
-    .paletteNum = 0,
-    .affineParam = 0,
-};
 static const struct OamData sOamData_GameFreakLogo =
 {
     .y = DISPLAY_HEIGHT,
@@ -697,69 +681,65 @@ static const struct OamData sOamData_GameFreakLogo =
     .paletteNum = 0,
     .affineParam = 0,
 };
-static const union AnimCmd sAnim_GameFreakLetter_G[] =
+// ARMA: the big logo letters (graphics/intro/scene_1/drops_logo.png), 16x16 each
+static const union AnimCmd sAnim_LogoLetter_G[] =
 {
     ANIMCMD_FRAME(80, 8),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_GameFreakLetter_A[] =
+static const union AnimCmd sAnim_LogoLetter_A[] =
 {
     ANIMCMD_FRAME(84, 8),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_GameFreakLetter_M[] =
+static const union AnimCmd sAnim_LogoLetter_W[] =
 {
     ANIMCMD_FRAME(88, 8),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_GameFreakLetter_E[] =
+static const union AnimCmd sAnim_LogoLetter_U[] =
 {
     ANIMCMD_FRAME(92, 8),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_GameFreakLetter_F[] =
+static const union AnimCmd sAnim_LogoLetter_N[] =
 {
     ANIMCMD_FRAME(96, 8),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_GameFreakLetter_R[] =
+static const union AnimCmd sAnim_LogoLetter_R[] =
 {
     ANIMCMD_FRAME(100, 8),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_GameFreakLetter_K[] =
+static const union AnimCmd sAnim_LogoLetter_K[] =
 {
     ANIMCMD_FRAME(104, 8),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_PresentsLetter_P[] =
+static const union AnimCmd sAnim_LogoLetter_P[] =
+{
+    ANIMCMD_FRAME(108, 8),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_LogoLetter_O[] =
 {
     ANIMCMD_FRAME(112, 8),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_PresentsLetter_R[] =
-{
-    ANIMCMD_FRAME(113, 8),
-    ANIMCMD_END,
-};
-static const union AnimCmd sAnim_PresentsLetter_E[] =
-{
-    ANIMCMD_FRAME(114, 8),
-    ANIMCMD_END,
-};
-static const union AnimCmd sAnim_PresentsLetter_S[] =
-{
-    ANIMCMD_FRAME(115, 8),
-    ANIMCMD_END,
-};
-static const union AnimCmd sAnim_PresentsLetter_N[] =
+static const union AnimCmd sAnim_LogoLetter_D[] =
 {
     ANIMCMD_FRAME(116, 8),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_PresentsLetter_T[] =
+static const union AnimCmd sAnim_LogoLetter_T[] =
 {
-    ANIMCMD_FRAME(117, 8),
+    ANIMCMD_FRAME(120, 8),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_LogoLetter_I[] =
+{
+    ANIMCMD_FRAME(124, 8),
     ANIMCMD_END,
 };
 static const union AnimCmd sAnim_GameFreakLogo[] =
@@ -769,70 +749,59 @@ static const union AnimCmd sAnim_GameFreakLogo[] =
 };
 
 enum {
-    GAMEFREAK_G,
-    GAMEFREAK_A,
-    GAMEFREAK_M,
-    GAMEFREAK_E,
-    GAMEFREAK_F,
-    GAMEFREAK_R,
-    GAMEFREAK_K,
-};
-enum {
-    PRESENTS_P,
-    PRESENTS_R,
-    PRESENTS_E,
-    PRESENTS_S,
-    PRESENTS_N,
-    PRESENTS_T,
+    LOGO_LETTER_G,
+    LOGO_LETTER_A,
+    LOGO_LETTER_W,
+    LOGO_LETTER_U,
+    LOGO_LETTER_N,
+    LOGO_LETTER_R,
+    LOGO_LETTER_K,
+    LOGO_LETTER_P,
+    LOGO_LETTER_O,
+    LOGO_LETTER_D,
+    LOGO_LETTER_T,
+    LOGO_LETTER_I,
 };
 static const union AnimCmd *const sAnims_GameFreakLetter[] =
 {
-    [GAMEFREAK_G] = sAnim_GameFreakLetter_G,
-    [GAMEFREAK_A] = sAnim_GameFreakLetter_A,
-    [GAMEFREAK_M] = sAnim_GameFreakLetter_M,
-    [GAMEFREAK_E] = sAnim_GameFreakLetter_E,
-    [GAMEFREAK_F] = sAnim_GameFreakLetter_F,
-    [GAMEFREAK_R] = sAnim_GameFreakLetter_R,
-    [GAMEFREAK_K] = sAnim_GameFreakLetter_K,
-};
-static const union AnimCmd *const sAnims_PresentsLetter[] =
-{
-    [PRESENTS_P] = sAnim_PresentsLetter_P,
-    [PRESENTS_R] = sAnim_PresentsLetter_R,
-    [PRESENTS_E] = sAnim_PresentsLetter_E,
-    [PRESENTS_S] = sAnim_PresentsLetter_S,
-    [PRESENTS_N] = sAnim_PresentsLetter_N,
-    [PRESENTS_T] = sAnim_PresentsLetter_T,
+    [LOGO_LETTER_G] = sAnim_LogoLetter_G,
+    [LOGO_LETTER_A] = sAnim_LogoLetter_A,
+    [LOGO_LETTER_W] = sAnim_LogoLetter_W,
+    [LOGO_LETTER_U] = sAnim_LogoLetter_U,
+    [LOGO_LETTER_N] = sAnim_LogoLetter_N,
+    [LOGO_LETTER_R] = sAnim_LogoLetter_R,
+    [LOGO_LETTER_K] = sAnim_LogoLetter_K,
+    [LOGO_LETTER_P] = sAnim_LogoLetter_P,
+    [LOGO_LETTER_O] = sAnim_LogoLetter_O,
+    [LOGO_LETTER_D] = sAnim_LogoLetter_D,
+    [LOGO_LETTER_T] = sAnim_LogoLetter_T,
+    [LOGO_LETTER_I] = sAnim_LogoLetter_I,
 };
 static const union AnimCmd *const sAnims_GameFreakLogo[] =
 {
     sAnim_GameFreakLogo,
 };
-#define NUM_GF_LETTERS 9 // Letters in "Game Freak"
-static const s16 sGameFreakLetterData[NUM_GF_LETTERS][2] =
+// ARMA: "WARGUN" over "PRODUKTION" instead of "GAME FREAK"
+#define NUM_GF_LETTERS 16
+static const s16 sGameFreakLetterData[NUM_GF_LETTERS][3] =
 {
-    // Letter,   x offset
-    {GAMEFREAK_G, -72},
-    {GAMEFREAK_A, -56},
-    {GAMEFREAK_M, -40},
-    {GAMEFREAK_E, -24},
-    {GAMEFREAK_F,   8},
-    {GAMEFREAK_R,  24},
-    {GAMEFREAK_E,  40},
-    {GAMEFREAK_A,  56},
-    {GAMEFREAK_K,  72},
-};
-static const s16 sPresentsLetterData[][2] =
-{
-    // Letter,   x offset
-    {PRESENTS_P, -28},
-    {PRESENTS_R, -20},
-    {PRESENTS_E, -12},
-    {PRESENTS_S,  -4},
-    {PRESENTS_E,   4},
-    {PRESENTS_N,  12},
-    {PRESENTS_T,  20},
-    {PRESENTS_S,  28},
+    // Letter,          x offset, y offset
+    {LOGO_LETTER_W,  -40, -14},
+    {LOGO_LETTER_A,  -24, -14},
+    {LOGO_LETTER_R,   -8, -14},
+    {LOGO_LETTER_G,    8, -14},
+    {LOGO_LETTER_U,   24, -14},
+    {LOGO_LETTER_N,   40, -14},
+    {LOGO_LETTER_P,  -72,   6},
+    {LOGO_LETTER_R,  -56,   6},
+    {LOGO_LETTER_O,  -40,   6},
+    {LOGO_LETTER_D,  -24,   6},
+    {LOGO_LETTER_U,   -8,   6},
+    {LOGO_LETTER_K,    8,   6},
+    {LOGO_LETTER_T,   24,   6},
+    {LOGO_LETTER_I,   38,   6},
+    {LOGO_LETTER_O,   52,   6},
+    {LOGO_LETTER_N,   68,   6},
 };
 static const union AffineAnimCmd sAffineAnim_GameFreak_Small[] =
 {
@@ -867,15 +836,22 @@ static const union AffineAnimCmd *const sAffineAnims_GameFreak[] =
 };
 static const u16 sGameFreakLettersMoveSpeed[NUM_GF_LETTERS] =
 {
-    256, // G
-    192, // A
-    128, // M
-     64, // E
-      0, // F
-     64, // R
-    128, // E
-    192, // A
-    256  // K
+    142, // W
+    85, // A
+    28, // R
+    28, // G
+    85, // U
+    142, // N
+    256, // P
+    199, // R
+    142, // O
+    85, // D
+    28, // U
+    28, // K
+    85, // T
+    142, // I
+    199, // O
+    256, // N
 };
 static const struct SpriteTemplate sSpriteTemplate_GameFreakLetter =
 {
@@ -884,15 +860,6 @@ static const struct SpriteTemplate sSpriteTemplate_GameFreakLetter =
     .oam = &sOamData_GameFreakLetter,
     .anims = sAnims_GameFreakLetter,
     .affineAnims = sAffineAnims_GameFreak,
-    .callback = SpriteCB_LogoLetter,
-};
-// Unused
-static const struct SpriteTemplate sSpriteTemplate_PresentsLetter =
-{
-    .tileTag = GFXTAG_DROPS_LOGO,
-    .paletteTag = PALTAG_LOGO,
-    .oam = &sOamData_PresentsLetter,
-    .anims = sAnims_PresentsLetter,
     .callback = SpriteCB_LogoLetter,
 };
 static const struct SpriteTemplate sSpriteTemplate_GameFreakLogo =
@@ -906,15 +873,22 @@ static const struct SpriteTemplate sSpriteTemplate_GameFreakLogo =
 };
 static const u8 sGameFreakLetterStartDelays[NUM_GF_LETTERS] =
 {
-    0,  // G
+    0, // W
     23, // A
-    23, // M
-    49, // E
-    62, // F
-    36, // R
-    36, // E
-    10, // A
-    10  // K
+    49, // R
+    62, // G
+    36, // U
+    10, // N
+    5, // P
+    28, // R
+    15, // O
+    40, // D
+    54, // U
+    58, // K
+    44, // T
+    20, // I
+    32, // O
+    8, // N
 };
 static const struct OamData sOamData_FlygonSilhouette =
 {
@@ -3165,8 +3139,7 @@ static void SpriteCB_Flygon(struct Sprite *sprite)
 
 #define COLOR_CHANGES 9 // Number of stages for changing the letter color
 
-// For the letters in "Game Freak"
-// Also intended for the letters in "Presents", which is never shown
+// For the logo letters ("WARGUN PRODUKTION")
 static void SpriteCB_LogoLetter(struct Sprite *sprite)
 {
     switch (sprite->sState)
@@ -3253,9 +3226,9 @@ static void SpriteCB_LogoLetter(struct Sprite *sprite)
         // Spread the letters out as they grow
         sprite->sLetterX += sGameFreakLettersMoveSpeed[sprite->sLetterId];
         sprite->x2 = (sprite->sLetterX & 0xFF00) >> 8;
-        if (sprite->sLetterId < 4)
+        if (sGameFreakLetterData[sprite->sLetterId][1] < 0)
         {
-            // Is in first 4 letters, i.e. "Game"
+            // Left half of its line: spread to the left
             s16 temp = sprite->x2;
             sprite->x2 = -temp;
         }
@@ -3299,7 +3272,7 @@ static u8 CreateGameFreakLogoSprites(s16 x, s16 y, s16 unused)
     // Create "Game Freak" letters
     for (i = 0; i < NUM_GF_LETTERS; i++)
     {
-        spriteId = CreateSprite(&sSpriteTemplate_GameFreakLetter, sGameFreakLetterData[i][1] + x, y - 4, 0);
+        spriteId = CreateSprite(&sSpriteTemplate_GameFreakLetter, sGameFreakLetterData[i][1] + x, sGameFreakLetterData[i][2] + y, 0);
         gSprites[spriteId].sState = 0;
         gSprites[spriteId].sTimer = sGameFreakLetterStartDelays[i];
         gSprites[spriteId].sLetterId = i;
