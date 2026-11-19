@@ -17,6 +17,15 @@ const struct PoolRules defaultPoolRules =
 };
 
 const struct PoolRules gPoolRulesetsList[] = {
+    // ARMA: each page of a rival pool is a finished team of six (see POOL_PRUNE_RIVAL_PAGE); take it unchanged
+    [POOL_RULESET_RIVAL] = {
+        .speciesClause = FALSE,
+        .excludeForms = FALSE,
+        .itemClause = FALSE,
+        .itemClauseExclusions = FALSE,
+        .megaStoneClause = FALSE,
+        .zCrystalClause = FALSE,
+    },
     [POOL_RULESET_BASIC] = {
         .speciesClause = B_POOL_RULE_SPECIES_CLAUSE,
         .excludeForms = B_POOL_RULE_EXCLUDE_FORMS,
