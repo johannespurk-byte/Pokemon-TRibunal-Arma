@@ -8679,71 +8679,71 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Araquanid @ Leftovers
+Bibarel @ Life Orb
 Level: 60
-Ability: Swift Swim
-EVs: 252 HP / 252 Atk / 4 SpD
+Ability: Unaware
+EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Adamant Nature
+- Double-Edge
 - Liquidation
-- X-Scissor
-- Poison Jab
-- Toxic
+- Superpower
+- Swords Dance
 
-Barraskewda @ Life Orb
+Kabutops @ Life Orb
 Level: 60
 Ability: Swift Swim
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Liquidation
-- Close Combat
-- Psychic Fangs
-- Waterfall
-
-Carracosta @ Leftovers
-Level: 60
-Ability: Solid Rock
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Adamant Nature
-- Liquidation
 - Stone Edge
-- Earthquake
-- Stealth Rock
-
-Kingler @ Life Orb
-Level: 60
-Ability: Tough Claws
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Crabhammer
-- Hammer Arm
+- Liquidation
 - X-Scissor
 - Swords Dance
 
-Mawile @ Sitrus Berry
+Omastar @ Leftovers
 Level: 60
-Ability: Intimidate
-EVs: 252 HP / 252 Atk / 4 SpD
+Ability: Swift Swim
+EVs: 252 HP / 252 SpA / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Iron Head
-- Play Rough
-- Psychic Fangs
+Modest Nature
+- Ancient Power
+- Surf
+- Ice Beam
 - Stealth Rock
 
-Orthworm @ Sitrus Berry
+Toxapex @ Leftovers
 Level: 60
-Ability: Earth Eater
+Ability: Regenerator
 EVs: 252 HP / 252 Atk / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Adamant Nature
-- Iron Head
+- Gunk Shot
+- Liquidation
+- Knock Off
+- Recover
+
+Blastoise @ Sitrus Berry
+Level: 60
+Ability: Filter
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Water Spout
+- Flash Cannon
+- Ice Beam
+- Toxic
+
+Gyarados @ Expert Belt
+Level: 60
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Aqua Tail
 - Earthquake
-- Body Press
-- Stealth Rock
+- Stone Edge
+- Dragon Dance
 
 === TRAINER_GRUNT_SPACE_CENTER_2 ===
 Name: GRUNT
@@ -8879,71 +8879,71 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Alomomola @ Leftovers
+Samurott @ Life Orb
 Level: 60
-Ability: Regenerator
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Liquidation
-- Play Rough
-- Zen Headbutt
-- Toxic
-
-Corsola @ Leftovers
-Level: 60
-Ability: Hustle
+Ability: Water Absorb
 EVs: 252 HP / 252 SpA / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Modest Nature
 - Surf
-- Power Gem
-- Psychic
-- Recover
+- Ice Beam
+- Air Slash
+- Hydro Pump
 
-Golisopod @ Sitrus Berry
+Samurott-Hisui @ Life Orb
 Level: 60
-Ability: Compound Eyes
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- First Impression
-- Liquidation
-- Close Combat
-- Toxic
-
-Slowking @ Sitrus Berry
-Level: 60
-Ability: Regenerator
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Surf
-- Psychic
-- Fire Blast
-- Slack Off
-
-Bruxish @ Life Orb
-Level: 60
-Ability: Strong Jaw
+Ability: Water Absorb
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Wave Crash
-- Psychic Fangs
-- Crunch
+Adamant Nature
+- Liquidation
+- Sucker Punch
+- Megahorn
 - Swords Dance
 
-Veluza @ Life Orb
+Cloyster @ Leftovers
 Level: 60
-Ability: Mold Breaker
+Ability: Skill Link
 EVs: 252 HP / 252 Atk / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Adamant Nature
 - Liquidation
-- Psychic Fangs
-- Crunch
-- Recover
+- Icicle Crash
+- Poison Jab
+- Toxic
+
+Vaporeon @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Shadow Ball
+- Toxic
+
+Tentacruel @ Expert Belt
+Level: 60
+Ability: Clear Body
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Surf
+- Sludge Wave
+- Ice Beam
+- Sludge Bomb
+
+Poliwrath @ Sitrus Berry
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Close Combat
+- Earthquake
+- Toxic
 
 === TRAINER_NAOMI ===
 Name: NAOMI
@@ -9529,71 +9529,71 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Bellibolt @ Leftovers
-Level: 60
-Ability: Electromorphosis
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Thunderbolt
-- Muddy Water
-- Hyper Voice
-- Slack Off
-
-Kabutops @ Life Orb
+Seismitoad @ Life Orb
 Level: 60
 Ability: Swift Swim
-EVs: 4 HP / 252 Atk / 252 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Adamant Nature
-- Stone Edge
+- Liquidation
+- Earthquake
+- Poison Jab
+- Bulldoze
+
+Arctovish @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Icicle Crash
+- Psychic Fangs
+- Protect
+
+Dracovish @ Life Orb
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Dragon Rush
+- Earthquake
+- Fishious Rend
+
+Araquanid @ Leftovers
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
 - Liquidation
 - X-Scissor
-- Swords Dance
-
-Omastar @ Leftovers
-Level: 60
-Ability: Swift Swim
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Ancient Power
-- Surf
-- Ice Beam
-- Stealth Rock
-
-Vanilluxe @ Life Orb
-Level: 60
-Ability: Snow Warning
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Ice Beam
-- Flash Cannon
-- Water Pulse
-- Blizzard
-
-Glaceon @ Sitrus Berry
-Level: 60
-Ability: Snow Cloak
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Ice Beam
-- Shadow Ball
-- Water Pulse
+- Poison Jab
 - Toxic
 
-Cetitan @ Expert Belt
+Azumarill @ Sitrus Berry
 Level: 60
 Ability: Thick Fat
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Focus Blast
+- Toxic
+
+Barraskewda @ Expert Belt
+Level: 60
+Ability: Swift Swim
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Ice Spinner
-- Superpower
-- Earthquake
-- Icicle Crash
+Jolly Nature
+- Liquidation
+- Close Combat
+- Psychic Fangs
+- Waterfall
 
 === TRAINER_BRIDGET ===
 Name: BRIDGET
@@ -9604,40 +9604,82 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Maractus @ Life Orb
+Carracosta @ Leftovers
 Level: 60
-Ability: Water Absorb
-EVs: 252 HP / 252 SpA / 4 SpD
+Ability: Solid Rock
+EVs: 252 HP / 252 Atk / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Leaf Storm
-- Hyper Voice
-- Synthesis
-- Giga Drain
+Adamant Nature
+- Liquidation
+- Stone Edge
+- Earthquake
+- Stealth Rock
 
-Sylveon @ Leftovers
+Clawitzer @ Life Orb
 Level: 60
-Ability: Pixilate
+Ability: Mega Launcher
 EVs: 252 HP / 252 SpA / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Modest Nature
-- Moonblast
-- Psychic
-- Shadow Ball
+- Surf
+- Sludge Wave
+- Ice Beam
+- Hydro Pump
+
+Crawdaunt @ Life Orb
+Level: 60
+Ability: Adaptability
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Crabhammer
+- Crunch
+- Superpower
+- Swords Dance
+
+Dewgong @ Leftovers
+Level: 60
+Ability: Thick Fat
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Ice Shard
+- Play Rough
 - Toxic
 
-Tinkaton @ Life Orb
+Drednaw @ Expert Belt
 Level: 60
-Ability: Mold Breaker
+Ability: Strong Jaw
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Head Smash
+- Earthquake
+- Swords Dance
+
+Floatzel @ Expert Belt
+Level: 60
+Ability: Swift Swim
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Jolly Nature
-- Play Rough
-- Gigaton Hammer
-- Ice Hammer
-- Swords Dance
+- Wave Crash
+- Crunch
+- Iron Tail
+- Bulk Up
 
-Gorebyss @ Expert Belt
+=== TRAINER_OLIVIA ===
+Name: OLIVIA
+Class: Beauty
+Pic: Beauty
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Smart Trainer
+
+Gorebyss @ Life Orb
 Level: 60
 Ability: Swift Swim
 EVs: 252 HP / 252 SpA / 4 SpD
@@ -9648,7 +9690,71 @@ Modest Nature
 - Ice Beam
 - Hydro Pump
 
-Lumineon @ Expert Belt
+Huntail @ Life Orb
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Aqua Tail
+- Crunch
+- Double-Edge
+- Shell Smash
+
+Jellicent @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Water Spout
+- Shadow Ball
+- Sludge Wave
+- Recover
+
+Kingler @ Expert Belt
+Level: 60
+Ability: Tough Claws
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Crabhammer
+- Hammer Arm
+- X-Scissor
+- Swords Dance
+
+Lanturn @ Expert Belt
+Level: 60
+Ability: Volt Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Thunderbolt
+- Ice Beam
+- Hydro Pump
+
+Ludicolo @ Leftovers
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Leaf Storm
+- Ice Beam
+- Synthesis
+
+=== TRAINER_TIFFANY ===
+Name: TIFFANY
+Class: Beauty
+Pic: Beauty
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Smart Trainer
+
+Lumineon @ Life Orb
 Level: 60
 Ability: Water Absorb
 EVs: 4 HP / 252 Atk / 252 Spe
@@ -9657,6 +9763,17 @@ Jolly Nature
 - Aqua Tail
 - U-turn
 - Aerial Ace
+- Roost
+
+Octillery @ Life Orb
+Level: 60
+Ability: Sniper
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Earthquake
+- Gunk Shot
 - Roost
 
 Politoed @ Leftovers
@@ -9670,91 +9787,7 @@ Modest Nature
 - Ice Beam
 - Toxic
 
-=== TRAINER_OLIVIA ===
-Name: OLIVIA
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Smart Trainer
-
-Blastoise @ Leftovers
-Level: 60
-Ability: Filter
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Water Spout
-- Flash Cannon
-- Ice Beam
-- Toxic
-
-Gyarados @ Life Orb
-Level: 60
-Ability: Intimidate
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Aqua Tail
-- Earthquake
-- Stone Edge
-- Dragon Dance
-
-Kingdra @ Life Orb
-Level: 60
-Ability: Swift Swim
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Wave Crash
-- Iron Head
-- Double-Edge
-- Dragon Dance
-
-Ludicolo @ Leftovers
-Level: 60
-Ability: Swift Swim
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Surf
-- Leaf Storm
-- Ice Beam
-- Synthesis
-
-Eldegoss @ Sitrus Berry
-Level: 60
-Ability: Regenerator
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Leaf Storm
-- Hyper Voice
-- Synthesis
-- Giga Drain
-
-Lurantis @ Expert Belt
-Level: 60
-Ability: Contrary
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Petal Blizzard
-- X-Scissor
-- Poison Jab
-- Swords Dance
-
-=== TRAINER_TIFFANY ===
-Name: TIFFANY
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Smart Trainer
-
-Swampert @ Leftovers
+Quagsire @ Leftovers
 Level: 60
 Ability: Water Absorb
 EVs: 252 HP / 252 Atk / 4 SpD
@@ -9762,63 +9795,30 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Adamant Nature
 - Liquidation
 - Earthquake
-- Hammer Arm
-- Stealth Rock
+- Stone Edge
+- Recover
 
-Dondozo @ Leftovers
+Seaking @ Expert Belt
 Level: 60
-Ability: Unaware
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Wave Crash
-- Earthquake
-- Order Up
-- Protect
-
-Empoleon @ Sitrus Berry
-Level: 60
-Ability: Water Absorb
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Surf
-- Flash Cannon
-- Ice Beam
-- Roost
-
-Raticate-Alola @ Life Orb
-Level: 60
-Ability: Guts
+Ability: Lightning Rod
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Adamant Nature
-- Crunch
-- Double-Edge
-- Iron Tail
+- Aqua Tail
+- Megahorn
+- Poison Jab
 - Swords Dance
 
-Scrafty @ Sitrus Berry
+Sharpedo @ Expert Belt
 Level: 60
-Ability: Moxie
-EVs: 252 HP / 252 Atk / 4 SpD
+Ability: Rough Skin
+EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
+Jolly Nature
+- Liquidation
 - Crunch
 - Close Combat
-- Head Smash
-- Toxic
-
-Thievul @ Life Orb
-Level: 60
-Ability: Unburden
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Timid Nature
-- Dark Pulse
-- Psychic
-- Shadow Ball
-- Nasty Plot
+- Waterfall
 
 === TRAINER_JESSICA_2 ===
 Name: JESSICA
@@ -17168,7 +17168,40 @@ Music: Intense
 Double Battle: No
 AI: Smart Trainer
 
-Gardevoir @ Life Orb
+Alakazam @ Life Orb
+Level: 60
+Ability: Magic Guard
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Psychic
+- Focus Blast
+- Shadow Ball
+- Nasty Plot
+
+Espeon @ Life Orb
+Level: 60
+Ability: Magic Bounce
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Psychic
+- Shadow Ball
+- Power Gem
+- Calm Mind
+
+Gallade @ Expert Belt
+Level: 60
+Ability: Sharpness
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Zen Headbutt
+- Close Combat
+- Earthquake
+- Swords Dance
+
+Gardevoir @ Expert Belt
 Level: 60
 Ability: Synchronize
 EVs: 4 HP / 252 SpA / 252 Spe
@@ -17179,7 +17212,18 @@ Modest Nature
 - Thunderbolt
 - Calm Mind
 
-Beheeyem @ Life Orb
+Hatterene @ Expert Belt
+Level: 60
+Ability: Magic Bounce
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Psychic
+- Dazzling Gleam
+- Shadow Ball
+- Calm Mind
+
+Beheeyem @ Expert Belt
 Level: 60
 Ability: Analytic
 EVs: 252 HP / 252 SpA / 4 SpD
@@ -17190,7 +17234,27 @@ Modest Nature
 - Shadow Ball
 - Nasty Plot
 
-Espathra @ Expert Belt
+=== TRAINER_VIRGIL ===
+Name: VIRGIL
+Class: Psychic
+Pic: Psychic M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Smart Trainer
+
+Chimecho @ Life Orb
+Level: 60
+Ability: Levitate
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Psychic
+- Dazzling Gleam
+- Shadow Ball
+- Calm Mind
+
+Espathra @ Life Orb
 Level: 60
 Ability: Speed Boost
 EVs: 4 HP / 252 SpA / 252 Spe
@@ -17200,48 +17264,6 @@ Timid Nature
 - Shadow Ball
 - Flash Cannon
 - Calm Mind
-
-Mr. Mime @ Expert Belt
-Level: 60
-Ability: Soundproof
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Psychic
-- Dazzling Gleam
-- Thunderbolt
-- Nasty Plot
-
-Rapidash-Galar @ Expert Belt
-Level: 60
-Ability: Pastel Veil
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Zen Headbutt
-- Play Rough
-- Megahorn
-- Swords Dance
-
-Reuniclus @ Expert Belt
-Level: 60
-Ability: Magic Guard
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Psychic
-- Focus Blast
-- Shadow Ball
-- Calm Mind
-
-=== TRAINER_VIRGIL ===
-Name: VIRGIL
-Class: Psychic
-Pic: Psychic M
-Gender: Male
-Music: Intense
-Double Battle: No
-AI: Smart Trainer
 
 Gothitelle @ Leftovers
 Level: 60
@@ -17254,6 +17276,17 @@ Modest Nature
 - Thunderbolt
 - Toxic
 
+Grumpig @ Expert Belt
+Level: 60
+Ability: Thick Fat
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Psychic
+- Dazzling Gleam
+- Earth Power
+- Nasty Plot
+
 Hypno @ Leftovers
 Level: 60
 Ability: Insomnia
@@ -17265,49 +17298,16 @@ Modest Nature
 - Shadow Ball
 - Toxic
 
-Medicham @ Life Orb
+Mr. Mime @ Expert Belt
 Level: 60
-Ability: Pure Power
-EVs: 4 HP / 252 Atk / 252 Spe
+Ability: Soundproof
+EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Close Combat
-- Zen Headbutt
-- Poison Jab
-- Bulk Up
-
-Gallade @ Life Orb
-Level: 60
-Ability: Sharpness
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Zen Headbutt
-- Close Combat
-- Earthquake
-- Swords Dance
-
-Hitmonlee @ Expert Belt
-Level: 60
-Ability: Reckless
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Close Combat
-- Earthquake
-- Stone Edge
-- Swords Dance
-
-Hitmontop @ Expert Belt
-Level: 60
-Ability: Intimidate
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Close Combat
-- Earthquake
-- Stone Edge
-- Bulk Up
+Modest Nature
+- Psychic
+- Dazzling Gleam
+- Thunderbolt
+- Nasty Plot
 
 === TRAINER_BLAKE ===
 Name: BLAKE
@@ -17329,38 +17329,49 @@ Modest Nature
 - Shadow Ball
 - Moonlight
 
-Swoobat @ Life Orb
+Rapidash-Galar @ Life Orb
 Level: 60
-Ability: Unaware
-EVs: 4 HP / 252 SpA / 252 Spe
+Ability: Pastel Veil
+EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Timid Nature
-- Psychic
-- Air Slash
-- Heat Wave
-- Nasty Plot
+Jolly Nature
+- Zen Headbutt
+- Play Rough
+- Megahorn
+- Swords Dance
 
-Xatu @ Life Orb
+Reuniclus @ Life Orb
 Level: 60
-Ability: Magic Bounce
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Timid Nature
-- Psychic
-- Air Slash
-- Heat Wave
-- Calm Mind
-
-Oranguru @ Leftovers
-Level: 60
-Ability: Inner Focus
+Ability: Magic Guard
 EVs: 252 HP / 252 SpA / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Modest Nature
-- Hyper Voice
+- Psychic
+- Focus Blast
+- Shadow Ball
+- Calm Mind
+
+Metagross @ Leftovers
+Level: 60
+Ability: Heavy Metal
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Meteor Mash
+- Psychic Fangs
+- Earthquake
+- Stealth Rock
+
+Magmortar @ Expert Belt
+Level: 60
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Overheat
 - Psychic
 - Thunderbolt
-- Toxic
+- Fire Blast
 
 Porygon-Z @ Expert Belt
 Level: 60
@@ -17372,17 +17383,6 @@ Timid Nature
 - Psychic
 - Thunderbolt
 - Nasty Plot
-
-Wyrdeer @ Expert Belt
-Level: 60
-Ability: Intimidate
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Swift
-- Psychic
-- Thunderbolt
-- Calm Mind
 
 === TRAINER_WILLIAM ===
 Name: WILLIAM
@@ -17988,16 +17988,16 @@ Music: Intense
 Double Battle: No
 AI: Smart Trainer
 
-Sigilyph @ Life Orb
+Delphox @ Life Orb
 Level: 60
-Ability: Magic Guard
+Ability: Flash Fire
 EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Timid Nature
+- Overheat
 - Psychic
-- Air Slash
-- Ice Beam
-- Calm Mind
+- Focus Blast
+- Nasty Plot
 
 Exeggutor @ Life Orb
 Level: 60
@@ -18021,38 +18021,38 @@ Modest Nature
 - Dragon Pulse
 - Calm Mind
 
-Cursola @ Expert Belt
+Wyrdeer @ Expert Belt
 Level: 60
-Ability: Levitate
+Ability: Intimidate
 EVs: 252 HP / 252 SpA / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Modest Nature
-- Shadow Ball
-- Power Gem
-- Surf
+- Swift
+- Psychic
+- Thunderbolt
 - Calm Mind
 
-Banette @ Expert Belt
+Farigiraf @ Expert Belt
 Level: 60
-Ability: Prankster
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Shadow Claw
-- Gunk Shot
-- Zen Headbutt
-- Swords Dance
-
-Cofagrigus @ Leftovers
-Level: 60
-Ability: Levitate
+Ability: Armor Tail
 EVs: 252 HP / 252 SpA / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Modest Nature
-- Shadow Ball
-- Dark Pulse
+- Hyper Voice
 - Psychic
-- Will-O-Wisp
+- Thunderbolt
+- Nasty Plot
+
+Mr. Rime @ Expert Belt
+Level: 60
+Ability: Tangled Feet
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Ice Beam
+- Psychic
+- Thunderbolt
+- Nasty Plot
 
 === TRAINER_SAMANTHA ===
 Name: SAMANTHA
@@ -18063,16 +18063,16 @@ Music: Intense
 Double Battle: No
 AI: Smart Trainer
 
-Mr. Rime @ Life Orb
+Starmie @ Life Orb
 Level: 60
-Ability: Tangled Feet
-EVs: 252 HP / 252 SpA / 4 SpD
+Ability: Analytic
+EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Ice Beam
+Timid Nature
+- Surf
 - Psychic
 - Thunderbolt
-- Nasty Plot
+- Recover
 
 Orbeetle @ Life Orb
 Level: 60
@@ -18085,6 +18085,17 @@ Modest Nature
 - Shadow Ball
 - Calm Mind
 
+Bronzong @ Leftovers
+Level: 60
+Ability: Levitate
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Flash Cannon
+- Psychic
+- Shadow Ball
+- Stealth Rock
+
 Butterfree @ Expert Belt
 Level: 60
 Ability: Compound Eyes
@@ -18096,49 +18107,18 @@ Modest Nature
 - Shadow Ball
 - Quiver Dance
 
-Braviary-Hisui @ Expert Belt
+Claydol @ Expert Belt
 Level: 60
-Ability: Sheer Force
-EVs: 252 HP / 252 SpA / 4 SpD
+Ability: Levitate
+EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Modest Nature
+- Earth Power
 - Psychic
-- Hurricane
-- Heat Wave
-- Calm Mind
-
-Swoobat @ Expert Belt
-Level: 60
-Ability: Unaware
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Timid Nature
-- Psychic
-- Air Slash
-- Heat Wave
+- Ice Beam
 - Nasty Plot
 
-Xatu @ Expert Belt
-Level: 60
-Ability: Magic Bounce
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Timid Nature
-- Psychic
-- Air Slash
-- Heat Wave
-- Calm Mind
-
-=== TRAINER_MAURA ===
-Name: MAURA
-Class: Psychic
-Pic: Psychic F
-Gender: Female
-Music: Intense
-Double Battle: No
-AI: Smart Trainer
-
-Golduck @ Life Orb
+Golduck @ Expert Belt
 Level: 60
 Ability: Swift Swim
 EVs: 4 HP / 252 SpA / 252 Spe
@@ -18149,6 +18129,15 @@ Modest Nature
 - Ice Beam
 - Nasty Plot
 
+=== TRAINER_MAURA ===
+Name: MAURA
+Class: Psychic
+Pic: Psychic F
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Smart Trainer
+
 Jynx @ Life Orb
 Level: 60
 Ability: Dry Skin
@@ -18158,6 +18147,39 @@ Timid Nature
 - Ice Beam
 - Psychic
 - Focus Blast
+- Nasty Plot
+
+Malamar @ Life Orb
+Level: 60
+Ability: Infiltrator
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Foul Play
+- Zen Headbutt
+- Superpower
+- Bulk Up
+
+Medicham @ Expert Belt
+Level: 60
+Ability: Pure Power
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Close Combat
+- Zen Headbutt
+- Poison Jab
+- Bulk Up
+
+Noctowl @ Expert Belt
+Level: 60
+Ability: Tinted Lens
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hyper Voice
+- Psychic
+- Moonblast
 - Nasty Plot
 
 Rabsca @ Expert Belt
@@ -18171,38 +18193,16 @@ Modest Nature
 - Sludge Bomb
 - Calm Mind
 
-Metagross @ Leftovers
+Raichu-Alola @ Expert Belt
 Level: 60
-Ability: Heavy Metal
-EVs: 252 HP / 252 Atk / 4 SpD
+Ability: Surge Surfer
+EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Meteor Mash
-- Psychic Fangs
-- Earthquake
-- Stealth Rock
-
-Bronzong @ Leftovers
-Level: 60
-Ability: Levitate
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Flash Cannon
+Timid Nature
+- Thunderbolt
 - Psychic
-- Shadow Ball
-- Stealth Rock
-
-Revavroom @ Expert Belt
-Level: 60
-Ability: Filter
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Spin Out
-- Gunk Shot
-- Zen Headbutt
-- Poison Jab
+- Surf
+- Nasty Plot
 
 === TRAINER_KAYLA ===
 Name: KAYLA
@@ -23471,71 +23471,71 @@ Music: Twins
 Double Battle: No
 AI: Smart Trainer
 
-Inteleon @ Life Orb
+Simipour @ Life Orb
 Level: 60
 Ability: Water Absorb
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Timid Nature
-- Surf
-- Ice Beam
-- Shadow Ball
-- Hydro Pump
-
-Quaquaval @ Life Orb
-Level: 60
-Ability: Water Absorb
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Wave Crash
-- Close Combat
-- U-turn
-- Swords Dance
-
-Vaporeon @ Leftovers
-Level: 60
-Ability: Water Absorb
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Surf
-- Ice Beam
-- Shadow Ball
-- Toxic
-
-Aromatisse @ Leftovers
-Level: 60
-Ability: Healer
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Moonblast
-- Thunderbolt
-- Psychic
-- Toxic
-
-Dachsbun @ Expert Belt
-Level: 60
-Ability: Well Baked Body
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Jolly Nature
-- Play Rough
-- Psychic Fangs
+- Liquidation
+- Gunk Shot
 - Crunch
-- Body Press
+- Aqua Tail
 
-Granbull @ Expert Belt
+Wailord @ Life Orb
 Level: 60
-Ability: Intimidate
+Ability: Water Veil
 EVs: 252 HP / 252 Atk / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Adamant Nature
-- Play Rough
-- Close Combat
+- Liquidation
 - Earthquake
-- Bulk Up
+- Iron Head
+- Waterfall
+
+Whiscash @ Leftovers
+Level: 60
+Ability: Oblivious
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Earthquake
+- Stone Edge
+- Stealth Rock
+
+Wugtrio @ Expert Belt
+Level: 60
+Ability: Gooey
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Throat Chop
+- Bulldoze
+- Sucker Punch
+
+Relicanth @ Leftovers
+Level: 60
+Ability: Swift Swim
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Head Smash
+- Earthquake
+- Stealth Rock
+
+Alomomola @ Sitrus Berry
+Level: 60
+Ability: Regenerator
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Play Rough
+- Zen Headbutt
+- Toxic
 
 === TRAINER_ISABEL_1 ===
 Name: ISABEL
@@ -29850,80 +29850,16 @@ Adamant Nature
 - Stone Edge
 - Roost
 
-Skarmory @ Leftovers
+Cramorant @ Expert Belt
 Level: 60
-Ability: Sturdy
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Iron Head
-- Brave Bird
-- X-Scissor
-- Roost
-
-Scizor @ Sitrus Berry
-Level: 60
-Ability: Technician
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- X-Scissor
-- Iron Head
-- Close Combat
-- Roost
-
-Durant @ Expert Belt
-Level: 60
-Ability: Hustle
+Ability: Water Absorb
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Jolly Nature
-- X-Scissor
-- Iron Head
-- Stone Edge
-- Bug Bite
-
-=== TRAINER_HUMBERTO ===
-Name: HUMBERTO
-Class: Bird Keeper
-Pic: Bird Keeper
-Gender: Male
-Music: Cool
-Double Battle: No
-AI: Smart Trainer
-
-Noivern @ Life Orb
-Level: 60
-Ability: Infiltrator
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Timid Nature
-- Draco Meteor
-- Hurricane
-- Psychic
+- Drill Peck
+- Liquidation
+- Steel Wing
 - Roost
-
-Aerodactyl @ Life Orb
-Level: 60
-Ability: Rock Head
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Stone Edge
-- Wing Attack
-- Earthquake
-- Dragon Dance
-
-Braviary-Hisui @ Expert Belt
-Level: 60
-Ability: Sheer Force
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Psychic
-- Hurricane
-- Heat Wave
-- Calm Mind
 
 Dragonite @ Leftovers
 Level: 60
@@ -29947,16 +29883,80 @@ Adamant Nature
 - Earthquake
 - Dragon Dance
 
-Flapple @ Expert Belt
+=== TRAINER_HUMBERTO ===
+Name: HUMBERTO
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Smart Trainer
+
+Ninjask @ Life Orb
 Level: 60
-Ability: Hustle
-EVs: 252 HP / 252 Atk / 4 SpD
+Ability: Speed Boost
+EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Grav Apple
-- Dragon Rush
+Jolly Nature
+- X-Scissor
+- Aerial Ace
+- Double-Edge
+- Swords Dance
+
+Pelipper @ Leftovers
+Level: 60
+Ability: Drizzle
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Hurricane
+- Ice Beam
+- Roost
+
+Pidgeot @ Life Orb
+Level: 60
+Ability: Keen Eye
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Double-Edge
+- Brave Bird
 - U-turn
-- Dragon Dance
+- Roost
+
+Staraptor @ Expert Belt
+Level: 60
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Double-Edge
+- Brave Bird
+- Close Combat
+- Roost
+
+Swanna @ Expert Belt
+Level: 60
+Ability: Keen Eye
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Liquidation
+- Brave Bird
+- Double-Edge
+- Roost
+
+Swellow @ Expert Belt
+Level: 60
+Ability: Guts
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Double-Edge
+- Brave Bird
+- U-turn
+- Roost
 
 === TRAINER_PRESLEY ===
 Name: PRESLEY
@@ -30042,7 +30042,62 @@ Music: Cool
 Double Battle: No
 AI: Smart Trainer
 
-Braviary @ Life Orb
+Togekiss @ Life Orb
+Level: 60
+Ability: Hustle
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Moonblast
+- Air Slash
+- Fire Blast
+- Nasty Plot
+
+Gyarados @ Life Orb
+Level: 60
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Aqua Tail
+- Earthquake
+- Stone Edge
+- Dragon Dance
+
+Crobat @ Expert Belt
+Level: 60
+Ability: Infiltrator
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Cross Poison
+- Brave Bird
+- X-Scissor
+- Roost
+
+Noivern @ Expert Belt
+Level: 60
+Ability: Infiltrator
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Draco Meteor
+- Hurricane
+- Psychic
+- Roost
+
+Aerodactyl @ Expert Belt
+Level: 60
+Ability: Rock Head
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Stone Edge
+- Wing Attack
+- Earthquake
+- Dragon Dance
+
+Braviary @ Expert Belt
 Level: 60
 Ability: Sheer Force
 EVs: 4 HP / 252 Atk / 252 Spe
@@ -30052,61 +30107,6 @@ Adamant Nature
 - Brave Bird
 - Superpower
 - Bulk Up
-
-Fearow @ Life Orb
-Level: 60
-Ability: Sniper
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Double-Edge
-- Drill Peck
-- Drill Run
-- Roost
-
-Pidgeot @ Expert Belt
-Level: 60
-Ability: Keen Eye
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Double-Edge
-- Brave Bird
-- U-turn
-- Roost
-
-Staraptor @ Expert Belt
-Level: 60
-Ability: Intimidate
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Double-Edge
-- Brave Bird
-- Close Combat
-- Roost
-
-Swellow @ Expert Belt
-Level: 60
-Ability: Guts
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Double-Edge
-- Brave Bird
-- U-turn
-- Roost
-
-Toucannon @ Expert Belt
-Level: 60
-Ability: Skill Link
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Facade
-- Brave Bird
-- Gunk Shot
-- Swords Dance
 
 === TRAINER_COLIN ===
 Name: COLIN
@@ -37036,71 +37036,71 @@ Music: Twins
 Double Battle: No
 AI: Smart Trainer
 
-Poliwrath @ Leftovers
+Corsola @ Leftovers
 Level: 60
-Ability: Water Absorb
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Liquidation
-- Close Combat
-- Earthquake
-- Toxic
-
-Seismitoad @ Life Orb
-Level: 60
-Ability: Swift Swim
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Liquidation
-- Earthquake
-- Poison Jab
-- Bulldoze
-
-Dracovish @ Life Orb
-Level: 60
-Ability: Water Absorb
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Liquidation
-- Dragon Rush
-- Earthquake
-- Fishious Rend
-
-Goodra @ Expert Belt
-Level: 60
-Ability: Sap Sipper
+Ability: Hustle
 EVs: 252 HP / 252 SpA / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Modest Nature
-- Draco Meteor
-- Sludge Wave
-- Fire Blast
-- Dragon Pulse
+- Surf
+- Power Gem
+- Psychic
+- Recover
 
-Goodra-Hisui @ Leftovers
+Qwilfish @ Life Orb
 Level: 60
-Ability: Sap Sipper
-EVs: 252 HP / 252 SpA / 4 SpD
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Draco Meteor
-- Flash Cannon
-- Sludge Wave
-- Toxic
-
-Kommo-o @ Expert Belt
-Level: 60
-Ability: Soundproof
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Dragon Claw
-- Close Combat
-- Earthquake
+Jolly Nature
+- Liquidation
+- Gunk Shot
+- Crunch
 - Swords Dance
+
+Golisopod @ Leftovers
+Level: 60
+Ability: Compound Eyes
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- First Impression
+- Liquidation
+- Close Combat
+- Toxic
+
+Walrein @ Sitrus Berry
+Level: 60
+Ability: Thick Fat
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Ice Beam
+- Surf
+- Signal Beam
+- Toxic
+
+Barbaracle @ Sitrus Berry
+Level: 60
+Ability: Tough Claws
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Stone Edge
+- Liquidation
+- Close Combat
+- Stealth Rock
+
+Bellibolt @ Sitrus Berry
+Level: 60
+Ability: Electromorphosis
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Thunderbolt
+- Muddy Water
+- Hyper Voice
+- Slack Off
 
 === TRAINER_JAZMYN ===
 Name: JAZMYN
@@ -42182,61 +42182,6 @@ Music: Suspicious
 Double Battle: No
 AI: Smart Trainer
 
-Passimian @ Life Orb
-Level: 60
-Ability: Guts
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Close Combat
-- Earthquake
-- Gunk Shot
-- Bulk Up
-
-Falinks @ Life Orb
-Level: 60
-Ability: Guts
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Close Combat
-- Megahorn
-- Poison Jab
-- Swords Dance
-
-Farfetch'd @ Expert Belt
-Level: 60
-Ability: Defiant
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Close Combat
-- Brave Bird
-- Leaf Blade
-- Swords Dance
-
-Medicham @ Expert Belt
-Level: 60
-Ability: Pure Power
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Close Combat
-- Zen Headbutt
-- Poison Jab
-- Bulk Up
-
-Raichu-Alola @ Expert Belt
-Level: 60
-Ability: Surge Surfer
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Timid Nature
-- Thunderbolt
-- Psychic
-- Surf
-- Nasty Plot
-
 Slowbro @ Leftovers
 Level: 60
 Ability: Regenerator
@@ -42247,6 +42192,61 @@ Modest Nature
 - Psychic
 - Fire Blast
 - Slack Off
+
+Slowbro-Galar @ Life Orb
+Level: 60
+Ability: Regenerator
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Sludge Wave
+- Psychic
+- Fire Blast
+- Nasty Plot
+
+Slowking @ Leftovers
+Level: 60
+Ability: Regenerator
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Psychic
+- Fire Blast
+- Slack Off
+
+Slowking-Galar @ Sitrus Berry
+Level: 60
+Ability: Regenerator
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Sludge Wave
+- Psychic
+- Fire Blast
+- Slack Off
+
+Venomoth @ Life Orb
+Level: 60
+Ability: Compound Eyes
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Bug Buzz
+- Psychic
+- Sludge Wave
+- Quiver Dance
+
+Oranguru @ Sitrus Berry
+Level: 60
+Ability: Inner Focus
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hyper Voice
+- Psychic
+- Thunderbolt
+- Toxic
 
 === TRAINER_LEONARDO ===
 Name: LEONARDO
@@ -42645,17 +42645,6 @@ Music: Rich
 Double Battle: No
 AI: Smart Trainer
 
-Slowking @ Leftovers
-Level: 60
-Ability: Regenerator
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Surf
-- Psychic
-- Fire Blast
-- Slack Off
-
 Bruxish @ Life Orb
 Level: 60
 Ability: Strong Jaw
@@ -42667,7 +42656,18 @@ Jolly Nature
 - Crunch
 - Swords Dance
 
-Veluza @ Life Orb
+Lunatone @ Life Orb
+Level: 60
+Ability: Levitate
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Power Gem
+- Psychic
+- Moonblast
+- Nasty Plot
+
+Veluza @ Expert Belt
 Level: 60
 Ability: Mold Breaker
 EVs: 252 HP / 252 Atk / 4 SpD
@@ -42678,38 +42678,38 @@ Adamant Nature
 - Crunch
 - Recover
 
-Starmie @ Expert Belt
+Alakazam @ Expert Belt
 Level: 60
-Ability: Analytic
+Ability: Magic Guard
 EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Timid Nature
-- Surf
 - Psychic
-- Thunderbolt
-- Recover
-
-Golduck @ Expert Belt
-Level: 60
-Ability: Swift Swim
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Surf
-- Psychic
-- Ice Beam
+- Focus Blast
+- Shadow Ball
 - Nasty Plot
 
-Slowbro @ Leftovers
+Espeon @ Expert Belt
 Level: 60
-Ability: Regenerator
-EVs: 252 HP / 252 SpA / 4 SpD
+Ability: Magic Bounce
+EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Surf
+Timid Nature
 - Psychic
-- Fire Blast
-- Slack Off
+- Shadow Ball
+- Power Gem
+- Calm Mind
+
+Gallade @ Expert Belt
+Level: 60
+Ability: Sharpness
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Zen Headbutt
+- Close Combat
+- Earthquake
+- Swords Dance
 
 === TRAINER_KATHLEEN ===
 Name: KATHLEEN
@@ -42720,16 +42720,80 @@ Music: Suspicious
 Double Battle: No
 AI: Smart Trainer
 
-Espathra @ Life Orb
+Porygon-Z @ Life Orb
 Level: 60
-Ability: Speed Boost
+Ability: Adaptability
 EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Timid Nature
+- Tri Attack
 - Psychic
-- Shadow Ball
-- Flash Cannon
+- Thunderbolt
+- Nasty Plot
+
+Delphox @ Life Orb
+Level: 60
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Overheat
+- Psychic
+- Focus Blast
+- Nasty Plot
+
+Exeggutor @ Expert Belt
+Level: 60
+Ability: Chlorophyll
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Leaf Storm
+- Psychic
+- Sludge Bomb
 - Calm Mind
+
+Armarouge @ Expert Belt
+Level: 60
+Ability: Flash Fire
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Armor Cannon
+- Psychic
+- Dragon Pulse
+- Calm Mind
+
+Wyrdeer @ Expert Belt
+Level: 60
+Ability: Intimidate
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Swift
+- Psychic
+- Thunderbolt
+- Calm Mind
+
+Farigiraf @ Expert Belt
+Level: 60
+Ability: Armor Tail
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Hyper Voice
+- Psychic
+- Thunderbolt
+- Nasty Plot
+
+=== TRAINER_CLIFFORD ===
+Name: CLIFFORD
+Class: Gentleman
+Pic: Gentleman
+Gender: Male
+Music: Rich
+Double Battle: No
+AI: Smart Trainer
 
 Gothitelle @ Leftovers
 Level: 60
@@ -42753,113 +42817,49 @@ Modest Nature
 - Earth Power
 - Nasty Plot
 
-Malamar @ Expert Belt
+Hypno @ Leftovers
 Level: 60
-Ability: Infiltrator
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Foul Play
-- Zen Headbutt
-- Superpower
-- Bulk Up
-
-Cacturne @ Expert Belt
-Level: 60
-Ability: Water Absorb
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Seed Bomb
-- Sucker Punch
-- Poison Jab
-- Swords Dance
-
-Lokix @ Expert Belt
-Level: 60
-Ability: Compound Eyes
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- First Impression
-- Throat Chop
-- Axe Kick
-- Swords Dance
-
-=== TRAINER_CLIFFORD ===
-Name: CLIFFORD
-Class: Gentleman
-Pic: Gentleman
-Gender: Male
-Music: Rich
-Double Battle: No
-AI: Smart Trainer
-
-Espeon @ Life Orb
-Level: 60
-Ability: Magic Bounce
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Timid Nature
-- Psychic
-- Shadow Ball
-- Power Gem
-- Calm Mind
-
-Gardevoir @ Life Orb
-Level: 60
-Ability: Synchronize
-EVs: 4 HP / 252 SpA / 252 Spe
+Ability: Insomnia
+EVs: 252 HP / 252 SpA / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Modest Nature
 - Psychic
-- Moonblast
-- Thunderbolt
-- Calm Mind
+- Focus Blast
+- Shadow Ball
+- Toxic
 
-Hatterene @ Expert Belt
+Mr. Mime @ Life Orb
 Level: 60
-Ability: Magic Bounce
-EVs: 252 HP / 252 SpA / 4 SpD
+Ability: Soundproof
+EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Modest Nature
 - Psychic
 - Dazzling Gleam
+- Thunderbolt
+- Nasty Plot
+
+Musharna @ Sitrus Berry
+Level: 60
+Ability: Synchronize
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Psychic
+- Moonblast
 - Shadow Ball
-- Calm Mind
+- Moonlight
 
-Drampa @ Expert Belt
+Rapidash-Galar @ Expert Belt
 Level: 60
-Ability: Sap Sipper
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Hyper Voice
-- Draco Meteor
-- Fire Blast
-- Calm Mind
-
-Tropius @ Leftovers
-Level: 60
-Ability: Chlorophyll
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Leaf Storm
-- Dragon Pulse
-- Hurricane
-- Roost
-
-Dragapult @ Expert Belt
-Level: 60
-Ability: Infiltrator
+Ability: Pastel Veil
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Jolly Nature
-- Dragon Claw
-- Psychic Fangs
-- Double-Edge
-- Dragon Dance
+- Zen Headbutt
+- Play Rough
+- Megahorn
+- Swords Dance
 
 === TRAINER_NICHOLAS ===
 Name: NICHOLAS
@@ -42870,71 +42870,71 @@ Music: Intense
 Double Battle: No
 AI: Smart Trainer
 
-Mr. Rime @ Life Orb
+Reuniclus @ Life Orb
 Level: 60
-Ability: Tangled Feet
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Ice Beam
-- Psychic
-- Thunderbolt
-- Nasty Plot
-
-Beheeyem @ Life Orb
-Level: 60
-Ability: Analytic
+Ability: Magic Guard
 EVs: 252 HP / 252 SpA / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Modest Nature
 - Psychic
-- Thunderbolt
-- Shadow Ball
-- Nasty Plot
-
-Chimecho @ Expert Belt
-Level: 60
-Ability: Levitate
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Psychic
-- Dazzling Gleam
+- Focus Blast
 - Shadow Ball
 - Calm Mind
 
-Jynx @ Expert Belt
+Swoobat @ Life Orb
 Level: 60
-Ability: Dry Skin
+Ability: Unaware
 EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Timid Nature
-- Ice Beam
 - Psychic
-- Focus Blast
+- Air Slash
+- Heat Wave
 - Nasty Plot
 
-Frosmoth @ Expert Belt
+Xatu @ Expert Belt
 Level: 60
-Ability: Ice Scales
-EVs: 252 HP / 252 SpA / 4 SpD
+Ability: Magic Bounce
+EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Ice Beam
-- Bug Buzz
-- Dazzling Gleam
+Timid Nature
+- Psychic
+- Air Slash
+- Heat Wave
 - Calm Mind
 
-Glalie @ Expert Belt
+Sigilyph @ Expert Belt
 Level: 60
-Ability: Refrigerate
-EVs: 4 HP / 252 Atk / 252 Spe
+Ability: Magic Guard
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Psychic
+- Air Slash
+- Ice Beam
+- Calm Mind
+
+Metagross @ Leftovers
+Level: 60
+Ability: Heavy Metal
+EVs: 252 HP / 252 Atk / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Adamant Nature
-- Ice Fang
+- Meteor Mash
+- Psychic Fangs
 - Earthquake
-- Iron Head
-- Avalanche
+- Stealth Rock
+
+Magmortar @ Expert Belt
+Level: 60
+Ability: Flash Fire
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Overheat
+- Psychic
+- Thunderbolt
+- Fire Blast
 
 === TRAINER_GRUNT_SPACE_CENTER_3 ===
 Name: GRUNT
@@ -43320,71 +43320,71 @@ Music: Intense
 Double Battle: No
 AI: Smart Trainer
 
-Venomoth @ Life Orb
+Gardevoir @ Life Orb
 Level: 60
-Ability: Compound Eyes
+Ability: Synchronize
 EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Timid Nature
-- Bug Buzz
+Modest Nature
 - Psychic
-- Sludge Wave
-- Quiver Dance
+- Moonblast
+- Thunderbolt
+- Calm Mind
 
-Lunatone @ Life Orb
+Braviary-Hisui @ Life Orb
+Level: 60
+Ability: Sheer Force
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Psychic
+- Hurricane
+- Heat Wave
+- Calm Mind
+
+Hatterene @ Expert Belt
+Level: 60
+Ability: Magic Bounce
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Psychic
+- Dazzling Gleam
+- Shadow Ball
+- Calm Mind
+
+Beheeyem @ Expert Belt
+Level: 60
+Ability: Analytic
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Psychic
+- Thunderbolt
+- Shadow Ball
+- Nasty Plot
+
+Chimecho @ Expert Belt
 Level: 60
 Ability: Levitate
 EVs: 252 HP / 252 SpA / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Modest Nature
-- Power Gem
 - Psychic
-- Moonblast
-- Nasty Plot
+- Dazzling Gleam
+- Shadow Ball
+- Calm Mind
 
-Alakazam @ Expert Belt
+Espathra @ Expert Belt
 Level: 60
-Ability: Magic Guard
+Ability: Speed Boost
 EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Timid Nature
 - Psychic
-- Focus Blast
 - Shadow Ball
-- Nasty Plot
-
-Exeggutor @ Expert Belt
-Level: 60
-Ability: Chlorophyll
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Leaf Storm
-- Psychic
-- Sludge Bomb
+- Flash Cannon
 - Calm Mind
-
-Abomasnow @ Expert Belt
-Level: 60
-Ability: Snow Warning
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Wood Hammer
-- Ice Punch
-- Earthquake
-- Swords Dance
-
-Bellossom @ Leftovers
-Level: 60
-Ability: Chlorophyll
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Leaf Storm
-- Moonblast
-- Sludge Bomb
-- Moonlight
 
 === TRAINER_BRENDAN_RUSTBORO_TREECKO ===
 Name: BRENDAN
@@ -44985,40 +44985,29 @@ Music: Female
 Double Battle: No
 AI: Smart Trainer
 
-Seaking @ Life Orb
+Blastoise @ Leftovers
 Level: 60
-Ability: Lightning Rod
+Ability: Filter
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Water Spout
+- Flash Cannon
+- Ice Beam
+- Toxic
+
+Kingdra @ Life Orb
+Level: 60
+Ability: Swift Swim
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Adamant Nature
-- Aqua Tail
-- Megahorn
-- Poison Jab
-- Swords Dance
-
-Simipour @ Life Orb
-Level: 60
-Ability: Water Absorb
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Liquidation
-- Gunk Shot
-- Crunch
-- Aqua Tail
-
-Swanna @ Expert Belt
-Level: 60
-Ability: Keen Eye
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Liquidation
-- Brave Bird
+- Wave Crash
+- Iron Head
 - Double-Edge
-- Roost
+- Dragon Dance
 
-Milotic @ Expert Belt
+Milotic @ Life Orb
 Level: 60
 Ability: Competitive
 EVs: 4 HP / 252 SpA / 252 Spe
@@ -45028,6 +45017,92 @@ Modest Nature
 - Ice Beam
 - Dragon Pulse
 - Recover
+
+Lapras @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Avalanche
+- Earthquake
+- Toxic
+
+Swampert @ Sitrus Berry
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Earthquake
+- Hammer Arm
+- Stealth Rock
+
+Dondozo @ Sitrus Berry
+Level: 60
+Ability: Unaware
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Wave Crash
+- Earthquake
+- Order Up
+- Protect
+
+=== TRAINER_CRISSY ===
+Name: CRISSY
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Smart Trainer
+
+Empoleon @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Flash Cannon
+- Ice Beam
+- Roost
+
+Feraligatr @ Leftovers
+Level: 60
+Ability: Water Absorb
+EVs: 252 HP / 252 Atk / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Liquidation
+- Crunch
+- Superpower
+- Toxic
+
+Greninja @ Life Orb
+Level: 60
+Ability: Water Absorb
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Surf
+- Dark Pulse
+- Sludge Wave
+- Nasty Plot
+
+Inteleon @ Life Orb
+Level: 60
+Ability: Water Absorb
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Surf
+- Ice Beam
+- Shadow Ball
+- Hydro Pump
 
 Primarina @ Expert Belt
 Level: 60
@@ -45040,91 +45115,16 @@ Modest Nature
 - Psychic
 - Calm Mind
 
-Azumarill @ Leftovers
+Quaquaval @ Expert Belt
 Level: 60
-Ability: Thick Fat
-EVs: 252 HP / 252 SpA / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Surf
-- Ice Beam
-- Focus Blast
-- Toxic
-
-=== TRAINER_CRISSY ===
-Name: CRISSY
-Class: Lass
-Pic: Lass
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Smart Trainer
-
-Wailord @ Life Orb
-Level: 60
-Ability: Water Veil
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Liquidation
-- Earthquake
-- Iron Head
-- Waterfall
-
-Wugtrio @ Life Orb
-Level: 60
-Ability: Gooey
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Liquidation
-- Throat Chop
-- Bulldoze
-- Sucker Punch
-
-Relicanth @ Leftovers
-Level: 60
-Ability: Swift Swim
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Liquidation
-- Head Smash
-- Earthquake
-- Stealth Rock
-
-Bibarel @ Expert Belt
-Level: 60
-Ability: Unaware
+Ability: Water Absorb
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Adamant Nature
-- Double-Edge
-- Liquidation
-- Superpower
-- Swords Dance
-
-Raticate @ Expert Belt
-Level: 60
-Ability: Guts
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Double-Edge
-- Crunch
-- Iron Tail
-- Swords Dance
-
-Bouffalant @ Leftovers
-Level: 60
-Ability: Reckless
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Head Charge
+- Wave Crash
 - Close Combat
-- Megahorn
-- Toxic
+- U-turn
+- Swords Dance
 
 === TRAINER_RICK ===
 Name: RICK
@@ -47712,71 +47712,71 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Talonflame @ Life Orb
+Braviary-Hisui @ Life Orb
 Level: 60
-Ability: Flash Fire
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Flare Blitz
-- Brave Bird
-- Double-Edge
-- Swords Dance
-
-Cramorant @ Life Orb
-Level: 60
-Ability: Water Absorb
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Drill Peck
-- Liquidation
-- Steel Wing
-- Roost
-
-Dragonite @ Leftovers
-Level: 60
-Ability: Mold Breaker
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Dragon Claw
-- Wing Attack
-- Earthquake
-- Roost
-
-Simisear @ Expert Belt
-Level: 60
-Ability: Flash Fire
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Flare Blitz
-- Gunk Shot
-- Crunch
-- Fire Punch
-
-Heatmor @ Expert Belt
-Level: 60
-Ability: Flash Fire
+Ability: Sheer Force
 EVs: 252 HP / 252 SpA / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Modest Nature
-- Overheat
-- Focus Blast
-- Giga Drain
-- Fire Blast
+- Psychic
+- Hurricane
+- Heat Wave
+- Calm Mind
 
-Torkoal @ Leftovers
+Gliscor @ Life Orb
 Level: 60
-Ability: Drought
+Ability: Poison Heal
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Earthquake
+- Wing Attack
+- Gunk Shot
+- Swords Dance
+
+Mandibuzz @ Expert Belt
+Level: 60
+Ability: Big Pecks
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Adamant Nature
+- Foul Play
+- Brave Bird
+- Double-Edge
+- Roost
+
+Honchkrow @ Expert Belt
+Level: 60
+Ability: Moxie
 EVs: 252 HP / 252 Atk / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Adamant Nature
-- Flame Wheel
-- Superpower
-- Earthquake
-- Stealth Rock
+- Foul Play
+- Brave Bird
+- Double-Edge
+- Roost
+
+Beautifly @ Expert Belt
+Level: 60
+Ability: Compound Eyes
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Bug Buzz
+- Air Cutter
+- Psychic
+- Quiver Dance
+
+Drifblim @ Expert Belt
+Level: 60
+Ability: Unburden
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Shadow Ball
+- Thunderbolt
+- Psychic
+- Calm Mind
 
 === TRAINER_ASHLEY ===
 Name: ASHLEY
@@ -47787,71 +47787,71 @@ Music: Girl
 Double Battle: No
 AI: Smart Trainer
 
-Togekiss @ Life Orb
+Fearow @ Life Orb
 Level: 60
-Ability: Hustle
-EVs: 4 HP / 252 SpA / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Moonblast
-- Air Slash
-- Fire Blast
-- Nasty Plot
-
-Salamence @ Life Orb
-Level: 60
-Ability: Intimidate
-EVs: 4 HP / 252 Atk / 252 Spe
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Dragon Claw
-- Aerial Ace
-- Earthquake
-- Dragon Dance
-
-Crobat @ Expert Belt
-Level: 60
-Ability: Infiltrator
+Ability: Sniper
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Jolly Nature
-- Cross Poison
-- Brave Bird
-- X-Scissor
+- Double-Edge
+- Drill Peck
+- Drill Run
 - Roost
 
-Leafeon @ Expert Belt
+Hawlucha @ Life Orb
+Level: 60
+Ability: Unburden
+EVs: 4 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Jolly Nature
+- Close Combat
+- Wing Attack
+- X-Scissor
+- Swords Dance
+
+Jumpluff @ Expert Belt
 Level: 60
 Ability: Chlorophyll
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Leaf Blade
-- X-Scissor
-- Iron Tail
+Jolly Nature
+- Seed Bomb
+- Aerial Ace
+- Double-Edge
 - Swords Dance
 
-Ninetales @ Expert Belt
+Kilowattrel @ Expert Belt
 Level: 60
-Ability: Flash Fire
+Ability: Competitive
 EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Timid Nature
-- Overheat
-- Shadow Ball
-- Extrasensory
-- Nasty Plot
+- Thunderbolt
+- Hurricane
+- Swift
+- Roost
 
-Lilligant @ Expert Belt
+Mantine @ Leftovers
 Level: 60
-Ability: Chlorophyll
+Ability: Swift Swim
+EVs: 252 HP / 252 SpA / 4 SpD
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Modest Nature
+- Surf
+- Hurricane
+- Ice Beam
+- Roost
+
+Masquerain @ Expert Belt
+Level: 60
+Ability: Intimidate
 EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Timid Nature
-- Leaf Storm
+Modest Nature
+- Bug Buzz
+- Hurricane
+- Surf
 - Quiver Dance
-- Energy Ball
-- Giga Drain
 
 === TRAINER_WALLY_MAUVILLE ===
 Name: WALLY
@@ -62706,71 +62706,71 @@ Music: Cool
 Double Battle: No
 AI: Smart Trainer
 
-Jumpluff @ Life Orb
+Swoobat @ Life Orb
 Level: 60
-Ability: Chlorophyll
+Ability: Unaware
+EVs: 4 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Timid Nature
+- Psychic
+- Air Slash
+- Heat Wave
+- Nasty Plot
+
+Talonflame @ Life Orb
+Level: 60
+Ability: Flash Fire
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Jolly Nature
-- Seed Bomb
-- Aerial Ace
+- Flare Blitz
+- Brave Bird
 - Double-Edge
 - Swords Dance
 
-Gliscor @ Life Orb
+Toucannon @ Expert Belt
 Level: 60
-Ability: Poison Heal
-EVs: 4 HP / 252 Atk / 252 Spe
+Ability: Skill Link
+EVs: 252 HP / 252 Atk / 4 SpD
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Jolly Nature
-- Earthquake
-- Wing Attack
+Adamant Nature
+- Facade
+- Brave Bird
 - Gunk Shot
 - Swords Dance
 
-Mandibuzz @ Expert Belt
+Unfezant @ Expert Belt
 Level: 60
 Ability: Big Pecks
 EVs: 4 HP / 252 Atk / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Foul Play
-- Brave Bird
-- Double-Edge
+Jolly Nature
+- Facade
+- Aerial Ace
+- U-turn
 - Roost
 
-Carnivine @ Expert Belt
+Xatu @ Expert Belt
 Level: 60
-Ability: Levitate
-EVs: 252 HP / 252 Atk / 4 SpD
+Ability: Magic Bounce
+EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Power Whip
-- Crunch
-- Facade
-- Swords Dance
+Timid Nature
+- Psychic
+- Air Slash
+- Heat Wave
+- Calm Mind
 
-Tangrowth @ Leftovers
+Sigilyph @ Expert Belt
 Level: 60
-Ability: Chlorophyll
-EVs: 252 HP / 252 SpA / 4 SpD
+Ability: Magic Guard
+EVs: 4 HP / 252 SpA / 252 Spe
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Modest Nature
-- Leaf Storm
-- Sludge Bomb
-- Focus Blast
-- Toxic
-
-Gogoat @ Leftovers
-Level: 60
-Ability: Sap Sipper
-EVs: 252 HP / 252 Atk / 4 SpD
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Adamant Nature
-- Leaf Blade
-- Earthquake
-- Play Rough
-- Synthesis
+Timid Nature
+- Psychic
+- Air Slash
+- Ice Beam
+- Calm Mind
 
 === TRAINER_STEVEN ===
 Name: STEVEN
