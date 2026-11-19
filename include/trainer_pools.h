@@ -17,6 +17,7 @@ enum PoolRulesets {
     POOL_RULESET_WEATHER_SINGLES,
     POOL_RULESET_WEATHER_DOUBLES,
     POOL_RULESET_SUPPORT_DOUBLES,
+    POOL_RULESET_RIVAL, // ARMA: rival teams per figure are written as complete teams; no clauses may drop members
 };
 
 enum PoolPickFunctions {
@@ -28,7 +29,10 @@ enum PoolPruneOptions {
     POOL_PRUNE_NONE,
     POOL_PRUNE_TEST,
     POOL_PRUNE_RANDOM_TAG,
+    POOL_PRUNE_RIVAL_PAGE, // ARMA: the pool holds one team of six per rival figure; only the drawn figure's team stays
 };
+
+#define RIVAL_POOL_TEAM_SIZE 6
 
 enum PoolTags {
     //  Lead and Ace has special handling, leave them be

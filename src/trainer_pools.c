@@ -5,6 +5,7 @@
 #include "pokemon.h"
 #include "random.h"
 #include "trainer_pools.h"
+#include "trainer_card.h"
 #include "constants/battle.h"
 #include "constants/battle_ai.h"
 #include "constants/items.h"
@@ -349,6 +350,19 @@ static void RandomTagPrune(const struct Trainer *trainer, u8 *poolIndexArray, co
             poolIndexArray[i] = POOL_SLOT_DISABLED;
 }
 
+// ARMA: the rival is a random hero of generations 1-8 (trainer card page). Its pool lists the teams page by page,
+// six entries each; everything outside the drawn page is disabled, so "Pool Pick Functions: Lowest" takes it in order.
+static void RivalPagePrune(const struct Trainer *trainer, u8 *poolIndexArray, const struct PoolRules *rules)
+{
+    u32 page = TrainerCard_GetRivalPage();
+
+    if ((page + 1) * RIVAL_POOL_TEAM_SIZE > trainer->poolSize)
+        page = 0;
+    for (u32 i = 0; i < trainer->poolSize; i++)
+        if (poolIndexArray[i] / RIVAL_POOL_TEAM_SIZE != page)
+            poolIndexArray[i] = POOL_SLOT_DISABLED;
+}
+
 static void PrunePool(const struct Trainer *trainer, u8 *poolIndexArray, const struct PoolRules *rules)
 {
     //  Use defined pruning functions go here
@@ -361,6 +375,9 @@ static void PrunePool(const struct Trainer *trainer, u8 *poolIndexArray, const s
         break;
     case POOL_PRUNE_RANDOM_TAG:
         RandomTagPrune(trainer, poolIndexArray, rules);
+        break;
+    case POOL_PRUNE_RIVAL_PAGE:
+        RivalPagePrune(trainer, poolIndexArray, rules);
         break;
     default:
         break;
