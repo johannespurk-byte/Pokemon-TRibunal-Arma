@@ -15086,7 +15086,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_EVO_ITEMS,
         .sortType = ITEM_TYPE_EVOLUTION_ITEM,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone, // ARMA: used on Bisharp / Gimmighoul
+        .effect = gItemEffect_EvoItem,
         .iconPic = gItemIcon_GimmighoulCoin,
         .iconPalette = gItemIconPalette_GimmighoulCoin,
     },
@@ -15102,7 +15103,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_EVO_ITEMS,
         .sortType = ITEM_TYPE_EVOLUTION_ITEM,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone, // ARMA: used on Bisharp / Gimmighoul
+        .effect = gItemEffect_EvoItem,
         .iconPic = gItemIcon_LeadersCrest,
         .iconPalette = gItemIconPalette_LeadersCrest,
     },

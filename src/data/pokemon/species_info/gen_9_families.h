@@ -1167,7 +1167,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         )
         .levelUpLearnset = sPawmoLevelUpLearnset,
         .teachableLearnset = sPawmoTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_PAWMOT, CONDITIONS({IF_MIN_OVERWORLD_STEPS, 1000})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_PAWMOT}), // ARMA: fixed level instead of 1000 steps in front (the step counter is not saved),
     },
 
     [SPECIES_PAWMOT] =
@@ -2998,7 +2998,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .levelUpLearnset = sBramblinLevelUpLearnset,
         .teachableLearnset = sBramblinTeachableLearnset,
         .eggMoveLearnset = sBramblinEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_BRAMBLEGHAST, CONDITIONS({IF_MIN_OVERWORLD_STEPS, 1000})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_BRAMBLEGHAST}), // ARMA: fixed level instead of 1000 steps in front,
     },
 
     [SPECIES_BRAMBLEGHAST] =
@@ -3518,7 +3518,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .levelUpLearnset = sRellorLevelUpLearnset,
         .teachableLearnset = sRellorTeachableLearnset,
         .eggMoveLearnset = sRellorEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_RABSCA, CONDITIONS({IF_MIN_OVERWORLD_STEPS, 1000})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_RABSCA}), // ARMA: fixed level instead of 1000 steps in front,
     },
 
     [SPECIES_RABSCA] =
@@ -6715,7 +6715,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .levelUpLearnset = sGimmighoulLevelUpLearnset,
         .teachableLearnset = sGimmighoulTeachableLearnset,
         .formSpeciesIdTable = sGimmighoulFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_GHOLDENGO, CONDITIONS({IF_BAG_ITEM_COUNT, ITEM_GIMMIGHOUL_COIN, 999})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_GIMMIGHOUL_COIN, SPECIES_GHOLDENGO}), // ARMA: use one Gimmighoul Coin from the bag instead of carrying 999
     },
 
     [SPECIES_GIMMIGHOUL_ROAMING] =
@@ -6771,7 +6771,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .levelUpLearnset = sGimmighoulLevelUpLearnset,
         .teachableLearnset = sGimmighoulTeachableLearnset,
         .formSpeciesIdTable = sGimmighoulFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_GHOLDENGO, CONDITIONS({IF_BAG_ITEM_COUNT, ITEM_GIMMIGHOUL_COIN, 999})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_GIMMIGHOUL_COIN, SPECIES_GHOLDENGO}), // ARMA: use one Gimmighoul Coin from the bag instead of carrying 999
     },
 
     [SPECIES_GHOLDENGO] =
