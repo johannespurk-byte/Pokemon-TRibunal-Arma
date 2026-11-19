@@ -20,7 +20,7 @@ const struct PoolRules gPoolRulesetsList[] = {
     // ARMA: each page of a rival pool is a finished team of six (see POOL_PRUNE_RIVAL_PAGE); take it unchanged
     [POOL_RULESET_RIVAL] = {
         .speciesClause = FALSE,
-        .excludeForms = FALSE,
+        .excludeForms = TRUE,  // TRUE keeps other forms of a picked species (Goodra + Goodra-Hisui)
         .itemClause = FALSE,
         .itemClauseExclusions = FALSE,
         .megaStoneClause = FALSE,

@@ -414,3 +414,18 @@ const u16 gMetatiles_DistortionRuins[] = INCBIN_U16("data/tilesets/secondary/dis
 const u16 gMetatileAttributes_DistortionRuins[] = INCBIN_U16("data/tilesets/secondary/distortion_ruins/metatile_attributes.bin");
 const u16 gMetatiles_SpaceRuins[] = INCBIN_U16("data/tilesets/secondary/space_ruins/metatiles.bin");
 const u16 gMetatileAttributes_SpaceRuins[] = INCBIN_U16("data/tilesets/secondary/space_ruins/metatile_attributes.bin");
+
+const u16 gMetatiles_EliteFourKanto[] = INCBIN_U16("data/tilesets/secondary/elite_four_kanto/metatiles.bin");
+const u16 gMetatileAttributes_EliteFourKanto[] = INCBIN_U16("data/tilesets/secondary/elite_four_kanto/metatile_attributes.bin");
+
+const u16 gMetatiles_EliteFourJohto[] = INCBIN_U16("data/tilesets/secondary/elite_four_johto/metatiles.bin");
+const u16 gMetatileAttributes_EliteFourJohto[] = INCBIN_U16("data/tilesets/secondary/elite_four_johto/metatile_attributes.bin");
+
+const u16 gMetatiles_EliteFourHoenn[] = INCBIN_U16("data/tilesets/secondary/elite_four_hoenn/metatiles.bin");
+const u16 gMetatileAttributes_EliteFourHoenn[] = INCBIN_U16("data/tilesets/secondary/elite_four_hoenn/metatile_attributes.bin");
+
+const u16 gMetatiles_EliteFourSinnoh[] = INCBIN_U16("data/tilesets/secondary/elite_four_sinnoh/metatiles.bin");
+const u16 gMetatileAttributes_EliteFourSinnoh[] = INCBIN_U16("data/tilesets/secondary/elite_four_sinnoh/metatile_attributes.bin");
+
+const u16 gMetatiles_EliteFourChampion[] = INCBIN_U16("data/tilesets/secondary/elite_four_champion/metatiles.bin");
+const u16 gMetatileAttributes_EliteFourChampion[] = INCBIN_U16("data/tilesets/secondary/elite_four_champion/metatile_attributes.bin");

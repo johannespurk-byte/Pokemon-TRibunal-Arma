@@ -1564,3 +1564,63 @@ const struct Tileset gTileset_SpaceRuins =
     .metatileAttributes = gMetatileAttributes_SpaceRuins,
     .callback = NULL,
 };
+
+// ARMA: own copy of the Elite Four tileset for a themed room
+const struct Tileset gTileset_EliteFourKanto =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EliteFourKanto,
+    .palettes = gTilesetPalettes_EliteFourKanto,
+    .metatiles = gMetatiles_EliteFourKanto,
+    .metatileAttributes = gMetatileAttributes_EliteFourKanto,
+    .callback = InitTilesetAnim_EliteFour,
+};
+
+// ARMA: own copy of the Elite Four tileset for a themed room
+const struct Tileset gTileset_EliteFourJohto =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EliteFourJohto,
+    .palettes = gTilesetPalettes_EliteFourJohto,
+    .metatiles = gMetatiles_EliteFourJohto,
+    .metatileAttributes = gMetatileAttributes_EliteFourJohto,
+    .callback = InitTilesetAnim_EliteFour,
+};
+
+// ARMA: own copy of the Elite Four tileset for a themed room
+const struct Tileset gTileset_EliteFourHoenn =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EliteFourHoenn,
+    .palettes = gTilesetPalettes_EliteFourHoenn,
+    .metatiles = gMetatiles_EliteFourHoenn,
+    .metatileAttributes = gMetatileAttributes_EliteFourHoenn,
+    .callback = InitTilesetAnim_EliteFour,
+};
+
+// ARMA: own copy of the Elite Four tileset for a themed room
+const struct Tileset gTileset_EliteFourSinnoh =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EliteFourSinnoh,
+    .palettes = gTilesetPalettes_EliteFourSinnoh,
+    .metatiles = gMetatiles_EliteFourSinnoh,
+    .metatileAttributes = gMetatileAttributes_EliteFourSinnoh,
+    .callback = InitTilesetAnim_EliteFour,
+};
+
+// ARMA: own copy of the Elite Four tileset for a themed room
+const struct Tileset gTileset_EliteFourChampion =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EliteFourChampion,
+    .palettes = gTilesetPalettes_EliteFourChampion,
+    .metatiles = gMetatiles_EliteFourChampion,
+    .metatileAttributes = gMetatileAttributes_EliteFourChampion,
+    .callback = InitTilesetAnim_EliteFour,
+};

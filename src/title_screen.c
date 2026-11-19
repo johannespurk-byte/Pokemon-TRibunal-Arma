@@ -77,6 +77,7 @@ static const u16 sUnusedUnknownPal[] = INCGFX_U16("graphics/title_screen/unused.
 static const u32 sArmaTitleBgGfx[] = INCGFX_U32("graphics/title_screen/arma_title_bg.png", ".4bpp.smol");
 static const u32 sArmaTitleBgTilemap[] = INCGFX_U32("graphics/title_screen/arma_title_bg.bin", ".smolTM");
 static const u16 sArmaTitleBgPal[] = INCGFX_U16("graphics/title_screen/arma_title_bg.pal", ".gbapal");
+static const u16 sArmaTitleBgAquaPal[] = INCGFX_U16("graphics/title_screen/arma_title_bg_aqua.pal", ".gbapal"); // Aqua panel (BG palette 14)
 static const u32 sTitleScreenLogoShineGfx[] = INCGFX_U32("graphics/title_screen/logo_shine.png", ".4bpp.smol");
 
 
@@ -823,6 +824,7 @@ void CB2_InitTitleScreen(void)
         DecompressDataWithHeaderVram(sArmaTitleBgGfx, (void *)(BG_CHAR_ADDR(2)));
         DecompressDataWithHeaderVram(sArmaTitleBgTilemap, (void *)(BG_SCREEN_ADDR(26)));
         LoadPalette(sArmaTitleBgPal, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+        LoadPalette(sArmaTitleBgAquaPal, BG_PLTT_ID(14), PLTT_SIZE_4BPP); // colour 15 of it pulses (UpdateLegendaryMarkingColor) and stays unused
         // bg1 (Wolken) - wird geladen, aber nicht mehr angezeigt (siehe DISPCNT weiter unten)
         
         
